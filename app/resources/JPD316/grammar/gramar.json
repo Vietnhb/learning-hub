@@ -1,0 +1,1113 @@
+{
+  "series": "Dekiru Nihongo Chukyu",
+  "lessons": [
+    {
+      "lesson": "1",
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "~において・における",
+          "usage": "N＋おいて；NにおけるN",
+          "meaning": "Ở / tại / vào / trong",
+          "description": "Địa điểm xảy ra hành động / khoảng thời gian không cụ thể / một không gian, lĩnh vực.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ウェルカムパーティーはさくら公園において行われる予定です。",
+              "vi": "Bữa tiệc chào mừng dự định sẽ được tổ chức tại công viên Sakura."
+            },
+            {
+              "index": 2,
+              "jp": "就職活動において、まず重要なことは自分を知ることだ。",
+              "vi": "Trong hoạt động tìm việc thì việc quan trọng đầu tiên là biết rõ bản thân mình."
+            },
+            {
+              "index": 3,
+              "jp": "海外における日本のアニメの評価は年々高まっている。",
+              "vi": "Đánh giá về anime của Nhật ở nước ngoài đang cao lên qua các năm."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "~上（で）",
+          "usage": "Vた／Nの＋上で (N thường là danh động từ)",
+          "meaning": "Sau khi",
+          "description": "Vế sau thường đi với ください hay các chỉ thị, sai khiến cho một việc như đăng kí, đọc, viết, gửi.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "電話または協会窓口でお申し込みの上、当日参加費をお支払いください。",
+              "vi": "Sau khi đăng ký ở phòng giao dịch của hiệp hội hoặc gọi điện thoại thì hãy trả phí tham gia vào ngày đó."
+            },
+            {
+              "index": 2,
+              "jp": "金額を確認した上で領収書にサインしてください。",
+              "vi": "Sau khi xác nhận số tiền thì xin hãy kí tên vào hóa đơn."
+            },
+            {
+              "index": 3,
+              "jp": "何回もテストした上での完成品ですから自信があります。",
+              "vi": "Vì là sản phẩm hoàn thành sau khi kiểm tra rất nhiều lần nên chúng tôi có sự tự tin."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "てほしい・てもらいたい",
+          "usage": "Vて／Vないで＋ほしい",
+          "meaning": "Mong muốn người khác V / không V",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "このイベントにはたくさんの人に来てほしいです。",
+              "vi": "Tôi mong muốn nhiều người sẽ đến sự kiện này."
+            },
+            {
+              "index": 2,
+              "jp": "国の料理を作ったので、クラスの友達にも食べてもらいたい。",
+              "vi": "Vì đã nấu món ăn của đất nước mình nên tôi mong muốn các bạn trong lớp cũng sẽ ăn."
+            },
+            {
+              "index": 3,
+              "jp": "明日から隣のビルの工事が始まるんだって。",
+              "vi": "Nghe nói là từ ngày mai, việc thi công tòa nhà bên cạnh sẽ bắt đầu."
+            },
+            {
+              "index": 4,
+              "jp": "ええ！あんまり大きな音を立てないでもらいたいね。",
+              "vi": "Ừ, mong là sẽ không tạo ra tiếng ồn quá to."
+            },
+            {
+              "index": 5,
+              "jp": "Ｂさん、このテーブルを運ぶのを手伝ってほしいんだけど。",
+              "vi": "B ơi, tớ muốn nhờ cậu giúp tớ bưng cái bàn này."
+            },
+            {
+              "index": 6,
+              "jp": "うん、いいよ。どこに運んだらいい？",
+              "vi": "Ừ, được thôi. Mang tới đâu thì được?"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "pattern": "~よね",
+          "usage": "Câu + よね",
+          "meaning": "Đúng không, phải không",
+          "description": "Kêu gọi sự đồng ý và xác nhận.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "確か、明日テストだよね。",
+              "vi": "Nếu không nhầm thì ngày mai kiểm tra phải không nhỉ?"
+            },
+            {
+              "index": 2,
+              "jp": "来週の飲み会には行けないんだよね。",
+              "vi": "Cậu không thể đi buổi nhậu tuần sau phải không?"
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "~とか～とか",
+          "usage": "普通形（N／Nだ）＋とか",
+          "meaning": "Nào là, nào là",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "プリンとかゼリーとか甘くて柔らかいものが好き。",
+              "vi": "Tớ thích những món ngọt và mềm như pudding hay thạch."
+            },
+            {
+              "index": 2,
+              "jp": "海へ行くとか、美術館へ行くとかしてみたら？",
+              "vi": "Sao không thử đi biển hoặc đi bảo tàng mỹ thuật?"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "~だけ・だけの",
+          "usage": "Aな／V普通形＋だけ",
+          "meaning": "Chỉ cần...",
+          "description": "V thường chỉ mong muốn, nguyện vọng hoặc khả năng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "好きなだけ食べてください。",
+              "vi": "Đừng ngại, cứ ăn bao nhiêu tùy thích."
+            },
+            {
+              "index": 2,
+              "jp": "やれるだけのことを全部しておきたいです。",
+              "vi": "Tôi muốn làm trước toàn bộ những gì mình có thể làm."
+            },
+            {
+              "index": 3,
+              "jp": "映画を見て泣きたいだけ泣いたら気分がすっきりした。",
+              "vi": "Xem phim rồi khóc thỏa thích xong thì tâm trạng thấy nhẹ nhõm."
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "~でしょう・だろう",
+          "usage": "普通形＋でしょう／だろう",
+          "meaning": "Có lẽ, chắc là",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "明日は雨が降るでしょう。",
+              "vi": "Ngày mai có lẽ trời sẽ mưa."
+            },
+            {
+              "index": 2,
+              "jp": "連休はどこも混んでいるでしょう。",
+              "vi": "Kỳ nghỉ dài thì có lẽ chỗ nào cũng đông."
+            },
+            {
+              "index": 3,
+              "jp": "公園で遊んでいる子供を迎えに来たのは、きっと父親だろう。",
+              "vi": "Người đến đón đứa trẻ đang chơi ở công viên chắc là bố của nó."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "~から～にかけて",
+          "usage": "NからNにかけて",
+          "meaning": "Từ ~ đến ~",
+          "description": "Mang tính tương đối, không dùng cho thời gian cụ thể.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "明日は東北地方から関東地方にかけて天気が崩れるでしょう。",
+              "vi": "Ngày mai thời tiết từ vùng Tohoku đến vùng Kanto có lẽ sẽ xấu."
+            },
+            {
+              "index": 2,
+              "jp": "９月から１０月にかけて、各地で祭りが行われます。",
+              "vi": "Từ tháng 9 đến tháng 10, các lễ hội được tổ chức ở khắp nơi."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "~と、A・V",
+          "usage": "Vると、A・V",
+          "meaning": "Hễ mà… thì…",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ここに荷物を置くと、迷惑になる。",
+              "vi": "Nếu đặt hành lý ở đây thì sẽ gây phiền phức."
+            },
+            {
+              "index": 2,
+              "jp": "手伝っていただけると、助かります。",
+              "vi": "Nếu được giúp thì tôi sẽ rất cảm kích."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "~がきっかけで",
+          "usage": "N／Vること＋がきっかけで",
+          "meaning": "Nhân dịp, lấy ~ làm nguyên cớ",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本のアニメがきっかけで日本語の勉強を始めました。",
+              "vi": "Nhờ anime Nhật Bản mà tôi bắt đầu học tiếng Nhật."
+            },
+            {
+              "index": 2,
+              "jp": "音楽がきっかけでイギリスに興味を持つようになりました。",
+              "vi": "Nhờ âm nhạc mà tôi bắt đầu quan tâm đến nước Anh."
+            },
+            {
+              "index": 3,
+              "jp": "オリンピックで試合を見たことがきっかけでテニスが好きになりました。",
+              "vi": "Nhờ xem thi đấu Olympic mà tôi trở nên thích tennis."
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "~っぽい",
+          "usage": "Vます／N＋っぽい",
+          "meaning": "Hay, dễ, có vẻ như",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "兄は気が短くて怒りっぽい性格です。",
+              "vi": "Anh tôi là người nóng tính, dễ nổi giận."
+            },
+            {
+              "index": 2,
+              "jp": "田中さんは行動が子供っぽい。",
+              "vi": "Hành động của anh Tanaka khá là trẻ con."
+            },
+            {
+              "index": 3,
+              "jp": "彼はいつも黒っぽい服を着ている。",
+              "vi": "Anh ấy lúc nào cũng mặc quần áo màu đen đậm."
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "~でも",
+          "usage": "N＋でも",
+          "meaning": "Ngay cả, thậm chí",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この料理は小さい子供でも作れます。",
+              "vi": "Món ăn này ngay cả trẻ nhỏ cũng có thể làm được."
+            },
+            {
+              "index": 2,
+              "jp": "誰にでも欠点はある。",
+              "vi": "Ai cũng có khuyết điểm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": "2",
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "～ている",
+          "usage": "来て・行って・帰って＋いる",
+          "meaning": "Đang đi / đang đến / đang về (trạng thái đang ở đâu đó)",
+          "description": "行って dùng khi nói về người thứ ba, 来て khi nói về bản thân, 帰っている dùng khi đã về rồi.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今日、私は駅前にできた新しいデパートに来ています。",
+              "vi": "Hôm nay tôi đang ở trung tâm thương mại mới được xây trước nhà ga."
+            },
+            {
+              "index": 2,
+              "jp": "兄は中国に行っています。",
+              "vi": "Anh trai tôi hiện đang đi Trung Quốc."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "～によって",
+          "usage": "N＋によって",
+          "meaning": "Tuỳ vào ~ mà khác nhau",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "人によって好みは様々です。",
+              "vi": "Tuỳ người mà sở thích đa dạng."
+            },
+            {
+              "index": 2,
+              "jp": "食事のマナーは国によって異なります。",
+              "vi": "Quy tắc ăn uống khác nhau tuỳ theo quốc gia."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "～うちに",
+          "usage": "Vる／Aい／Aな／Nの＋うちに",
+          "meaning": "Trong khi còn ~, nhân lúc còn ~",
+          "description": "Vない＋うちに: trước khi chưa V",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "溶けないうちに早くこのアイスクリームを食べましょう。",
+              "vi": "Hãy ăn cây kem này nhanh trước khi nó tan chảy."
+            },
+            {
+              "index": 2,
+              "jp": "祖父が元気なうちに、家族みんなで旅行をしたいと思っている。",
+              "vi": "Trong khi ông tôi còn khoẻ, tôi muốn đi du lịch cùng cả gia đình."
+            },
+            {
+              "index": 3,
+              "jp": "夜は寒くなるから、昼のうちに洗濯をしておこう。",
+              "vi": "Vì tối sẽ lạnh nên hãy giặt quần áo từ ban ngày."
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "pattern": "～わりに",
+          "usage": "普通形／Aな／Nの＋わりに",
+          "meaning": "Tuy ~ nhưng ~",
+          "description": "Diễn tả kết quả khác với dự đoán hoặc kỳ vọng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今日のテストは勉強しなかったわりによくできた。",
+              "vi": "Bài kiểm tra hôm nay dù không học nhưng lại làm khá tốt."
+            },
+            {
+              "index": 2,
+              "jp": "日曜日のわりに空いていた。",
+              "vi": "Dù là chủ nhật nhưng lại vắng."
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "（が）いいんじゃない",
+          "usage": "N＋が／なんか＋いいんじゃない",
+          "meaning": "Chẳng phải ~ cũng được sao?",
+          "description": "Người nói đưa ra đề xuất và hỏi ý kiến đối phương.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "果物がいいんじゃない？",
+              "vi": "Chẳng phải trái cây cũng được sao?"
+            },
+            {
+              "index": 2,
+              "jp": "写真立てなんかいいんじゃない。",
+              "vi": "Mấy thứ như khung ảnh chẳng phải cũng được sao?"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "～ようになっている",
+          "usage": "Vる／Vない＋ようになっている",
+          "meaning": "Được thiết kế để, tự động trở nên",
+          "description": "Nói về cơ chế, chức năng của máy móc, hệ thống.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "登録すると、情報がメールで送られてくるようになっている。",
+              "vi": "Nếu đăng ký thì thông tin sẽ tự động được gửi qua email."
+            },
+            {
+              "index": 2,
+              "jp": "このドアはボタンを押さないと開かないようになっています。",
+              "vi": "Cánh cửa này được thiết kế là phải bấm nút mới mở."
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "～に限り",
+          "usage": "N＋に限り",
+          "meaning": "Chỉ giới hạn cho ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "３０００円以上お買い上げのお客様に限り。",
+              "vi": "Chỉ áp dụng cho khách mua trên 3000 yên."
+            },
+            {
+              "index": 2,
+              "jp": "１８時前にご来店の方に限り。",
+              "vi": "Chỉ dành cho khách đến trước 18 giờ."
+            },
+            {
+              "index": 3,
+              "jp": "国内在住の方に限ります。",
+              "vi": "Chỉ dành cho người đang sinh sống trong nước."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "こそ・からこそ",
+          "usage": "N＋こそ／普通形＋からこそ",
+          "meaning": "Chính ~ / Chính vì ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今年の夏こそ海に行こう！",
+              "vi": "Chính mùa hè năm nay hãy đi biển nào!"
+            },
+            {
+              "index": 2,
+              "jp": "忙しいからこそ、時間を大切にしたい。",
+              "vi": "Chính vì bận rộn nên tôi muốn trân trọng thời gian."
+            },
+            {
+              "index": 3,
+              "jp": "留学したからこそ、自分の国の良さが分かる。",
+              "vi": "Chính vì du học nên tôi mới hiểu được cái hay của đất nước mình."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "～につき",
+          "usage": "N＋につき",
+          "meaning": "Vì ~ (văn viết, thông báo)",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "閉店につき、大セール。",
+              "vi": "Vì đóng cửa nên đại hạ giá."
+            },
+            {
+              "index": 2,
+              "jp": "出入り口につき、駐車禁止。",
+              "vi": "Vì là lối ra vào nên cấm đỗ xe."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "～ということだ",
+          "usage": "普通形＋ということだ",
+          "meaning": "Có nghĩa là, tức là",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今からでは予約できないということですね。",
+              "vi": "Tức là từ bây giờ không thể đặt trước được nữa."
+            },
+            {
+              "index": 2,
+              "jp": "雨が降ったら日曜日になるっていうこと？",
+              "vi": "Tức là nếu mưa thì sẽ dời sang chủ nhật phải không?"
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "～でしょうか",
+          "usage": "普通形＋でしょうか",
+          "meaning": "Có được không? (cách hỏi lịch sự)",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "どのくらい時間がかかるでしょうか。",
+              "vi": "Sẽ mất khoảng bao lâu ạ?"
+            },
+            {
+              "index": 2,
+              "jp": "道を教えてもらえないでしょうか。",
+              "vi": "Anh có thể chỉ đường cho tôi được không ạ?"
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "～はずだ",
+          "usage": "普通形＋はずだ",
+          "meaning": "Chắc chắn là ~ (dự đoán)",
+          "description": "Không dùng cho hành động của người nói.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "来るはずだよ。",
+              "vi": "Chắc chắn là sẽ đến."
+            },
+            {
+              "index": 2,
+              "jp": "上手なはずだよ。",
+              "vi": "Chắc chắn là giỏi."
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "pattern": "～向け",
+          "usage": "N＋向け",
+          "meaning": "Dành cho ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この辞書は小学生向けです。",
+              "vi": "Cuốn từ điển này dành cho học sinh tiểu học."
+            },
+            {
+              "index": 2,
+              "jp": "留学生向けに書かれています。",
+              "vi": "Cuốn sách này được viết dành cho du học sinh."
+            },
+            {
+              "index": 3,
+              "jp": "一人暮らし向けの家電。",
+              "vi": "Đồ gia dụng dành cho người sống một mình."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": "3",
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "～はずがない・はずはない",
+          "usage": "普通形（Aな／Aである／Nの／Nである）＋はずがない",
+          "meaning": "Chắc chắn không, không thể nào ~ được",
+          "description": "Diễn tả sự nghi ngờ, phủ định mạnh mẽ của người nói.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "中野さんは勉強も仕事も忙しいので、他のことはできるはずがない。",
+              "vi": "Anh Nakano học tập và công việc đều bận rộn nên không thể nào làm việc khác được."
+            },
+            {
+              "index": 2,
+              "jp": "中野さんは何回も来たことがあるから、この場所を知らないはずがない。",
+              "vi": "Anh Nakano đã đến đây nhiều lần nên không thể nào không biết chỗ này."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "～なんて",
+          "usage": "普通形（Aだ／Nだ）＋なんて",
+          "meaning": "Những thứ như ~, ba cái chuyện như ~",
+          "description": "Nhấn mạnh sự việc và thể hiện cảm xúc: ngạc nhiên, chán nản, ghét, không hứng thú.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "朝は寝ているだけだなんて、もったいないと思いませんか。",
+              "vi": "Buổi sáng chỉ ngủ không thôi thì không thấy lãng phí sao?"
+            },
+            {
+              "index": 2,
+              "jp": "初心者が一人で登山だなんて、危険すぎる。",
+              "vi": "Người mới mà leo núi một mình thì quá nguy hiểm."
+            },
+            {
+              "index": 3,
+              "jp": "私との約束を忘れるなんて！",
+              "vi": "Quên mất lời hẹn với tôi sao!"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "（ば）～ほど",
+          "usage": "Vえば／Aければ／Nならば ＋ ～ほど",
+          "meaning": "Càng ~ càng ~",
+          "description": "Vế ば có thể lược bỏ.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "朝は早ければ早いほど空気がきれいで、ジョギングが楽しめます。",
+              "vi": "Buổi sáng càng sớm thì không khí càng trong lành, chạy bộ càng thích."
+            },
+            {
+              "index": 2,
+              "jp": "山頂に近づけば近づくほど眺めがよくなります。",
+              "vi": "Càng gần đỉnh núi thì tầm nhìn càng đẹp."
+            },
+            {
+              "index": 3,
+              "jp": "旅行に行くときは、荷物は軽いほどいい。",
+              "vi": "Khi đi du lịch thì hành lý càng nhẹ càng tốt."
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "pattern": "～でも",
+          "usage": "N（助詞）＋でも",
+          "meaning": "Chẳng hạn như ~",
+          "description": "Dùng để gợi ý, rủ rê bằng cách đưa ra ví dụ.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "明日からでも自分に合った朝活を始めてみましょう。",
+              "vi": "Hãy thử bắt đầu hoạt động buổi sáng phù hợp với bản thân từ ngày mai chẳng hạn."
+            },
+            {
+              "index": 2,
+              "jp": "コーヒーでも飲みましょう。",
+              "vi": "Đi uống cà phê chẳng hạn nhé."
+            },
+            {
+              "index": 3,
+              "jp": "遊園地にでも行こうか。",
+              "vi": "Hay là đi công viên giải trí chẳng hạn?"
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "こんな・そんな・あんな・どんな",
+          "usage": "こんな／そんな／あんな／どんな＋N",
+          "meaning": "N như thế này / thế đó / thế kia / thế nào",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "こんな面白い本、今までに読んだことがない。",
+              "vi": "Một cuốn sách thú vị như thế này tôi chưa từng đọc bao giờ."
+            },
+            {
+              "index": 2,
+              "jp": "あんな美味しい料理、なかなか他では食べられない。",
+              "vi": "Món ăn ngon như thế kia thì khó mà ăn được ở nơi khác."
+            },
+            {
+              "index": 3,
+              "jp": "そんな名前の人、いた？",
+              "vi": "Có người tên như vậy sao?"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "～ふうに",
+          "usage": "こんな／そういう／どういう＋ふうに＋V",
+          "meaning": "Theo cách như ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "こんなふうにすればいいんですよ。",
+              "vi": "Làm theo cách như thế này là được."
+            },
+            {
+              "index": 2,
+              "jp": "どういうふうに説明すれば、子供にも分かりやすいだろう。",
+              "vi": "Không biết nên giải thích theo cách nào thì trẻ con dễ hiểu."
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "～ことで",
+          "usage": "V／Aい／Aな＋ことで",
+          "meaning": "Bằng việc ~",
+          "description": "Vế sau là kết quả đạt được thông qua hành động.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "家を出る時間を早くしたことで、気持ちに余裕ができた。",
+              "vi": "Bằng việc ra khỏi nhà sớm hơn, tôi cảm thấy thoải mái hơn."
+            },
+            {
+              "index": 2,
+              "jp": "日記を書くことで、生活を見直しています。",
+              "vi": "Bằng việc viết nhật ký, tôi nhìn lại cuộc sống mỗi ngày."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "～なあ",
+          "usage": "Câu bình thường ＋ なあ",
+          "meaning": "~ ghê / ~ thật",
+          "description": "Thể hiện cảm xúc mạnh của người nói.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お腹空いたなあ。",
+              "vi": "Đói bụng ghê."
+            },
+            {
+              "index": 2,
+              "jp": "いいなあ、絵が上手で。",
+              "vi": "Thích ghê, vẽ giỏi thật."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "～ことがある・こともある",
+          "usage": "Vる／Vない＋ことがある",
+          "meaning": "Thỉnh thoảng, có khi",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "最近手紙を書くことがありますか。",
+              "vi": "Gần đây bạn có thỉnh thoảng viết thư tay không?"
+            },
+            {
+              "index": 2,
+              "jp": "寝坊して見ないこともあります。",
+              "vi": "Thỉnh thoảng cũng có lúc ngủ quên không xem."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "～にとって",
+          "usage": "N＋にとって",
+          "meaning": "Đối với ~",
+          "description": "Vế sau thường là đánh giá.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "私にとって通勤時間は大切な時間です。",
+              "vi": "Đối với tôi, thời gian đi làm là khoảng thời gian quý giá."
+            },
+            {
+              "index": 2,
+              "jp": "忙しい人にとって２４時間スーパーは便利だ。",
+              "vi": "Đối với người bận rộn thì siêu thị 24 giờ rất tiện lợi."
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "～ことだし",
+          "usage": "普通形＋ことだし",
+          "meaning": "Vì ~ nên",
+          "description": "Đưa ra lý do rồi dẫn đến kết luận, đề xuất.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お天気もいいことだし、公園で食べない？",
+              "vi": "Vì thời tiết đẹp nên ăn ở công viên không?"
+            },
+            {
+              "index": 2,
+              "jp": "試験も終わったことだし。",
+              "vi": "Vì kỳ thi cũng đã kết thúc rồi."
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "～てくれない？・てくれる",
+          "usage": "Vて＋くれない／くれる",
+          "meaning": "Làm giùm tôi được không?",
+          "description": "Dùng trong hội thoại thân mật; lịch sự hơn là Vてもらえませんか。",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ペンを貸してくれない？",
+              "vi": "Cho tôi mượn cây bút được không?"
+            },
+            {
+              "index": 2,
+              "jp": "冷蔵庫に入れて冷やしておいてくれる？",
+              "vi": "Bỏ vào tủ lạnh làm mát giùm tôi nhé?"
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "pattern": "～じゃない・んじゃない",
+          "usage": "Aな／N＋じゃない？・Aい／V＋んじゃない？",
+          "meaning": "Không phải là ~ hay sao?",
+          "description": "Người nói nêu suy đoán và muốn xác nhận với người nghe.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今日は学校休むんじゃない？",
+              "vi": "Hôm nay không phải là nghỉ học hay sao?"
+            },
+            {
+              "index": 2,
+              "jp": "あそこにいる人、大川先生じゃない？",
+              "vi": "Người ở đằng kia không phải là thầy Okawa sao?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": "4",
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "～お・ご～です／お・ご～でしょう",
+          "usage": "お＋Vます＋です／ご＋Nする＋です",
+          "meaning": "Cách nói tôn kính, lịch sự",
+          "description": "Dùng trong hoàn cảnh trang trọng để nói lịch sự hơn về động từ hoặc danh từ.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "どのようなお部屋をお探しでしょうか。",
+              "vi": "Quý khách đang tìm căn phòng như thế nào ạ?"
+            },
+            {
+              "index": 2,
+              "jp": "お箸をご利用ですか。",
+              "vi": "Quý khách có dùng đũa không ạ?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "～場合",
+          "usage": "普通形（Aな／Nの）＋場合",
+          "meaning": "Trong trường hợp ~",
+          "description": "Giả định tình huống có khả năng xảy ra và nói hành động tiếp theo.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "パスワードを三回間違えた場合、新しいパスワードの登録が必要です。",
+              "vi": "Trong trường hợp nhập sai mật khẩu ba lần thì cần đăng ký mật khẩu mới."
+            },
+            {
+              "index": 2,
+              "jp": "雨の場合、運動会は中止になります。",
+              "vi": "Trường hợp trời mưa thì đại hội thể thao sẽ bị hủy."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "～ないことには～ない",
+          "usage": "Vない／Aく／Aで／Nで＋ないことには～ない",
+          "meaning": "Nếu không ~ thì sẽ không ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "実際にはいてみないことには、サイズが合うかどうかわかりません。",
+              "vi": "Nếu không thử mang thực tế thì sẽ không biết size có vừa hay không."
+            },
+            {
+              "index": 2,
+              "jp": "経験者でないことには、この仕事はうまくできないだろう。",
+              "vi": "Nếu không phải người có kinh nghiệm thì khó có thể làm tốt công việc này."
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "pattern": "～たいことがあるんですが",
+          "usage": "Vたいことがあるんですが",
+          "meaning": "Có việc muốn ~",
+          "description": "Dùng để mở đầu câu trước khi vào vấn đề chính, nhờ vả hoặc hỏi chuyện.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お願いしたいことがあるんですが。",
+              "vi": "Tôi có việc muốn nhờ ạ."
+            },
+            {
+              "index": 2,
+              "jp": "ちょっとお伺いしたいことがあるんですが。",
+              "vi": "Tôi có việc muốn hỏi một chút."
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "（よ）うとする",
+          "usage": "V（よ）うとする",
+          "meaning": "Định, đang cố, sắp ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今ちょうど電話しようとしてたんだ。",
+              "vi": "Tôi đang định gọi điện cho bạn."
+            },
+            {
+              "index": 2,
+              "jp": "部屋に入ろうとしたとき、声をかけられました。",
+              "vi": "Lúc định vào phòng thì bị gọi lại."
+            },
+            {
+              "index": 3,
+              "jp": "忘れようとしても忘れられない思い出がある。",
+              "vi": "Có những kỷ niệm dù cố quên vẫn không thể quên."
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "～みたいなんですが／ようなんですが",
+          "usage": "普通形＋みたいなんですが／ようなんですが",
+          "meaning": "Hình như ~",
+          "description": "Thể hiện phán đoán lịch sự, không chắc chắn; hoặc mở đầu trước khi vào vấn đề.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "二階の通路の電気が切れているみたいなんですが。",
+              "vi": "Hình như đèn hành lang tầng hai bị tắt."
+            },
+            {
+              "index": 2,
+              "jp": "午前中に来る予定の荷物が届いていないようなんですが。",
+              "vi": "Hình như hàng dự định đến buổi sáng vẫn chưa tới."
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "～ていただきたいんですが",
+          "usage": "Vていただきたいんですが",
+          "meaning": "Muốn nhờ ai đó ~ (cách nói rất lịch sự)",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "教えていただきたいんですが、今いいですか。",
+              "vi": "Tôi muốn nhờ chỉ giúp, bây giờ có được không ạ?"
+            },
+            {
+              "index": 2,
+              "jp": "遅れると伝えていただきたいんですが。",
+              "vi": "Tôi muốn nhờ truyền đạt giúp là tôi sẽ đến muộn."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "～には",
+          "usage": "Vる＋には",
+          "meaning": "Để ~ thì",
+          "description": "Vế sau là điều kiện cần thiết để thực hiện V1.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "トレーニングルームを利用するには講習を受けてください。",
+              "vi": "Để sử dụng phòng tập thì hãy tham gia khóa hướng dẫn."
+            },
+            {
+              "index": 2,
+              "jp": "本を借りるには図書館カードが必要です。",
+              "vi": "Để mượn sách thì cần thẻ thư viện."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "～にかかわらず／にかかわりなく",
+          "usage": "N／Vる・Vない／Aい・Aな（đối lập）＋にかかわらず",
+          "meaning": "Bất kể, không liên quan đến",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "経験の有無にかかわらず、講習を受けてください。",
+              "vi": "Bất kể có kinh nghiệm hay không, hãy tham gia khóa học."
+            },
+            {
+              "index": 2,
+              "jp": "年齢や性別にかかわらず参加できます。",
+              "vi": "Không phân biệt tuổi tác hay giới tính đều có thể tham gia."
+            },
+            {
+              "index": 3,
+              "jp": "出席するしないにかかわらず返事をください。",
+              "vi": "Dù có tham dự hay không cũng xin hãy hồi âm."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "～次第",
+          "usage": "Vます（bỏ ます）＋次第",
+          "meaning": "Ngay sau khi ~",
+          "description": "V1 là tự động từ; ngay khi hoàn thành V1 thì thực hiện V2.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "定員になり次第、受付を終了します。",
+              "vi": "Ngay khi đủ người thì sẽ kết thúc tiếp nhận."
+            },
+            {
+              "index": 2,
+              "jp": "予定が決まり次第、お知らせします。",
+              "vi": "Ngay khi quyết định xong lịch trình sẽ thông báo."
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "途中（で）・途中（に）",
+          "usage": "Vる／Nの＋途中で・途中に",
+          "meaning": "Giữa chừng, trên đường",
+          "description": "途中に dùng khi vế sau là vị trí hoặc có ある.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "バイトに行く途中で先生に会いました。",
+              "vi": "Trên đường đi làm thêm tôi gặp thầy."
+            },
+            {
+              "index": 2,
+              "jp": "家に帰る途中に図書館があります。",
+              "vi": "Trên đường về nhà có thư viện."
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "～を～として",
+          "usage": "N1をN2として",
+          "meaning": "Lấy N1 làm N2",
+          "description": "Mang tính văn viết.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "建物を公民館として利用しています。",
+              "vi": "Sử dụng tòa nhà làm nhà văn hóa."
+            },
+            {
+              "index": 2,
+              "jp": "合格を目標として勉強しました。",
+              "vi": "Học tập với mục tiêu là đỗ kỳ thi."
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "pattern": "～を背にして",
+          "usage": "N＋を背にして",
+          "meaning": "Lấy ~ làm mốc, quay lưng về phía ~",
+          "description": "",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "入口を背にして左に郵便局があります。",
+              "vi": "Lấy lối vào làm mốc thì bưu điện ở bên trái."
+            },
+            {
+              "index": 2,
+              "jp": "白い壁を背にして立ってください。",
+              "vi": "Hãy đứng quay lưng vào bức tường trắng."
+            }
+          ]
+        },
+        {
+          "id": "14",
+          "pattern": "～に沿って／に沿う／に沿った",
+          "usage": "N＋に沿って",
+          "meaning": "Dựa theo, men theo",
+          "description": "Dùng cho cả nghĩa đen (đường, sông) và nghĩa bóng (kế hoạch, phương châm).",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "線路に沿って桜の木があります。",
+              "vi": "Có cây hoa anh đào trồng dọc theo đường ray."
+            },
+            {
+              "index": 2,
+              "jp": "方針に沿って仕事を進めてください。",
+              "vi": "Hãy tiến hành công việc theo phương châm đã đề ra."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
