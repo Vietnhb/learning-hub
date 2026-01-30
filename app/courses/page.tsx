@@ -18,7 +18,7 @@ export default function CoursesPage() {
       title: "Lập trình Web với React & Next.js",
       description:
         "Học xây dựng ứng dụng web hiện đại với React và Next.js từ cơ bản đến nâng cao",
-      instructor: "Nguyễn Văn A",
+      instructor: "Nguyễn Văn Trung",
       duration: "40 giờ",
       students: 1250,
       level: "Trung cấp",
@@ -29,7 +29,7 @@ export default function CoursesPage() {
       title: "Python cho Data Science",
       description:
         "Khóa học Python dành cho phân tích dữ liệu và machine learning",
-      instructor: "Trần Thị B",
+      instructor: "Phùng Gia Đức",
       duration: "35 giờ",
       students: 890,
       level: "Cơ bản",
@@ -40,7 +40,7 @@ export default function CoursesPage() {
       title: "Tiếng Nhật N5-N3",
       description:
         "Lộ trình học tiếng Nhật từ N5 đến N3 với phương pháp hiện đại",
-      instructor: "Lê Văn C",
+      instructor: "Nguyễn Hoàng Bảo Việt",
       duration: "60 giờ",
       students: 2100,
       level: "Cơ bản",
@@ -50,7 +50,7 @@ export default function CoursesPage() {
       id: 4,
       title: "UI/UX Design Fundamentals",
       description: "Thiết kế giao diện người dùng chuyên nghiệp với Figma",
-      instructor: "Phạm Thị D",
+      instructor: "Nguyễn Lê Hoài Phúc",
       duration: "25 giờ",
       students: 650,
       level: "Cơ bản",
