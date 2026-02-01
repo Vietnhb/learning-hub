@@ -1,0 +1,1797 @@
+[
+  {
+    "term": "掲示板（けいじばん）",
+    "definition": "bảng thông báo",
+    "image": "https://o.quizlet.com/DMwvSZjzO-MOcY4wSKQkmA.png"
+  },
+  {
+    "term": "交流する（こうりゅうする）",
+    "definition": "giao lưu",
+    "image": "https://o.quizlet.com/5BtGKFUOcWlhYwRYpAlBrw.png"
+  },
+  {
+    "term": "交流会（こうりゅうかい）",
+    "definition": "buổi giao lưu",
+    "image": "https://o.quizlet.com/xRQy9EpWJA5lfLl736lR5g.jpg"
+  },
+  {
+    "term": "協会（きょうかい）",
+    "definition": "hiệp hội",
+    "image": "https://o.quizlet.com/7kgdmNTwyZejkkmqfG7voQ.jpg"
+  },
+  {
+    "term": "広場（ひろば）",
+    "definition": "quảng trường",
+    "image": "https://o.quizlet.com/j-VZbk.oNTz7DqWEO4qCsg.jpg"
+  },
+  {
+    "term": "当日（とうじつ）",
+    "definition": "ngày diễn ra, hôm đó",
+    "image": "https://o.quizlet.com/hZ3V-WorihIzgwXxLy4Avg.jpg"
+  },
+  {
+    "term": "支払う（しはらう）",
+    "definition": "thanh toán, trả tiền",
+    "image": "https://o.quizlet.com/UQpOjSSfZJoddCa.-OCbzg.jpg"
+  },
+  {
+    "term": "雨天（うてん）",
+    "definition": "trời mưa",
+    "image": "https://o.quizlet.com/QSLLFbWQyGW1hkIKlS0b3A.png"
+  },
+  {
+    "term": "就職活動（しゅうしょくかつどう）",
+    "definition": "hoạt động tìm việc",
+    "image": "https://o.quizlet.com/h0AVjuhsZmRFIY43-pE.dw.png"
+  },
+  {
+    "term": "重要な（じゅうような）",
+    "definition": "quan trọng",
+    "image": "https://o.quizlet.com/yWwzMjSrMN1CT7Sq3Ar5ng.jpg"
+  },
+  {
+    "term": "日時（にちじ）",
+    "definition": "ngày giờ",
+    "image": "https://o.quizlet.com/WR2MnaAcjZE39LhsfTUDtQ.png"
+  },
+  {
+    "term": "人数（にんずう）",
+    "definition": "số người",
+    "image": "https://o.quizlet.com/zYTz1FcKW2BlKto9JHWHWg.png"
+  },
+  {
+    "term": "先着（せんちゃく）",
+    "definition": "ai đến trước được trước",
+    "image": "https://o.quizlet.com/RNWipSbv3kEtltNQQsQW9Q.png"
+  },
+  {
+    "term": "金額（きんがく）",
+    "definition": "số tiền",
+    "image": "https://o.quizlet.com/qb.b1dqxFmI60sLzPJyMQg.jpg"
+  },
+  {
+    "term": "半額（はんがく）",
+    "definition": "nửa giá, giảm 50%",
+    "image": "https://o.quizlet.com/pZuCUo6XbQ8HAJX5Oj6Sbg.png"
+  },
+  {
+    "term": "評価する（ひょうかする）",
+    "definition": "đánh giá",
+    "image": "https://o.quizlet.com/hEtDsIodjnck-WImIChxHQ.jpg"
+  },
+  {
+    "term": "年々（ねんねん）",
+    "definition": "năm này qua năm khác",
+    "image": "https://o.quizlet.com/.1lo8TPsg1XZDSM6eag2fg.jpg"
+  },
+  {
+    "term": "高まる（たかまる）",
+    "definition": "tăng lên (mức độ, cảm xúc)",
+    "image": "https://o.quizlet.com/um7hB0UikDbGR6UqLqLeEQ.jpg"
+  },
+  {
+    "term": "以前（いぜん）",
+    "definition": "trước đây",
+    "image": "https://o.quizlet.com/ySKntjjkxxxnCYrUJzvvYg.jpg"
+  },
+  {
+    "term": "定員（ていいん）",
+    "definition": "số lượng cố định, chỉ tiêu",
+    "image": "https://o.quizlet.com/FdtzYSZO3Y1tUPVaTidqfw.png"
+  },
+  {
+    "term": "領収書（りょうしゅうしょ）",
+    "definition": "hóa đơn, biên lai",
+    "image": "https://o.quizlet.com/SETpZQ8gDg8mcMoiXj7g0A.png"
+  },
+  {
+    "term": "完成する（かんせいする）",
+    "definition": "hoàn thành",
+    "image": "https://o.quizlet.com/lfaC2UdgkRa5kyErpT0rkQ.png"
+  },
+  {
+    "term": "完成品（かんせいひん）",
+    "definition": "sản phẩm hoàn chỉnh",
+    "image": "https://o.quizlet.com/bET8S1-ExkD9iGfttmqIbw.jpg"
+  },
+  {
+    "term": "工事（こうじ）",
+    "definition": "công trình, thi công",
+    "image": "https://o.quizlet.com/8z4nRm6rq65tvrYwiFch2g.png"
+  },
+  {
+    "term": "音を立てる（おとをたてる）",
+    "definition": "gây tiếng động",
+    "image": "https://o.quizlet.com/ucZEQCsc5Zb6MYF.dQH0sw.jpg"
+  },
+  {
+    "term": "お知らせ（おしらせ）",
+    "definition": "thông báo",
+    "image": "https://o.quizlet.com/4km4HQf45NdeugMoch10pg.jpg"
+  },
+  {
+    "term": "確か（たしか）",
+    "definition": "chắc là, hình như",
+    "image": "https://o.quizlet.com/5h98dvowuHyPPpL342NISQ.jpg"
+  },
+  {
+    "term": "ラッキー",
+    "definition": "may mắn",
+    "image": "https://o.quizlet.com/cuwxxvnKaW15OUCvOktopA.png"
+  },
+  {
+    "term": "プリン",
+    "definition": "bánh pudding",
+    "image": "https://o.quizlet.com/oCpVj6Hfjlu4rU82UiPz9w.jpg"
+  },
+  {
+    "term": "サインする",
+    "definition": "ký tên",
+    "image": "https://o.quizlet.com/3BObd2fZmq1wRkrcf2N47w.png"
+  },
+  {
+    "term": "すっきり",
+    "definition": "gọn gàng, thoải mái",
+    "image": "https://o.quizlet.com/qrsjwGrR2.ohkDstOANEZw.jpg"
+  },
+  {
+    "term": "ウェルカム",
+    "definition": "chào mừng",
+    "image": "https://o.quizlet.com/i/gkGxWQdJBJiR5UcyCwA_4g.jpg"
+  },
+  {
+    "term": "締め切り（しめきり）",
+    "definition": "hạn chót",
+    "image": "https://o.quizlet.com/SSOlnM7934N3iVVJL-5yEQ.png"
+  },
+  {
+    "term": "事前予約（じぜんよやく）",
+    "definition": "đặt trước",
+    "image": "https://o.quizlet.com/E2mIKWYXu6xyJgpd99YVgg.jpg"
+  },
+  {
+    "term": "窓口（まどぐち）",
+    "definition": "quầy tiếp nhận",
+    "image": "https://o.quizlet.com/bF7kd52wrP4VURvcWN9wGQ.png"
+  },
+  {
+    "term": "持参する（じさんする）",
+    "definition": "mang theo",
+    "image": "https://o.quizlet.com/i/tpHkw2JlfcWGagBeEFeY8A.jpg"
+  },
+  {
+    "term": "主催する（しゅさいする）",
+    "definition": "tổ chức",
+    "image": "https://o.quizlet.com/hEtDsIodjnck-WImIChxHQ.jpg"
+  },
+  {
+    "term": "行う（おこなう）",
+    "definition": "tiến hành, tổ chức",
+    "image": "https://o.quizlet.com/h4cUFkuXocJMHVKOHSdEMg.jpg"
+  },
+  {
+    "term": "隣（となり）",
+    "definition": "bên cạnh",
+    "image": "https://o.quizlet.com/yN2Ja4b5WFVKoFZy2GwbRA.png"
+  },
+  {
+    "term": "参加費（さんかひ）",
+    "definition": "phí tham gia",
+    "image": "https://o.quizlet.com/j4QHwqdvRAwKUiA5cxqHUQ.png"
+  },
+  {
+    "term": "新たな（あらたな）",
+    "definition": "mới (trang trọng)",
+    "image": "https://o.quizlet.com/RQAkf.NTitX6.SYajEckjA.png"
+  },
+  {
+    "term": "家賃（やちん）",
+    "definition": "tiền thuê nhà",
+    "image": "https://o.quizlet.com/rjSFwQGrXTPYC2GAlEq.ug.png"
+  },
+  {
+    "term": "以上（いじょう）",
+    "definition": "trở lên, nhiều hơn",
+    "image": "https://o.quizlet.com/jiKDiwJZJnweQkrUSATvyg.jpg"
+  },
+  {
+    "term": "以下（いか）",
+    "definition": "trở xuống, không quá",
+    "image": "https://o.quizlet.com/upSRQCpBOuhaEcyc1uENAQ.png"
+  },
+  {
+    "term": "以降（いこう）",
+    "definition": "kể từ sau..., từ ... trở đi",
+    "image": "https://o.quizlet.com/m5aMQdDgKGhzZiybMF-aSA.jpg"
+  },
+  {
+    "term": "気分（きぶん）",
+    "definition": "tâm trạng, cảm giác",
+    "image": "https://o.quizlet.com/CjxLVk422CTn5ferA8phsQ.png"
+  },
+  {
+    "term": "機会（きかい）",
+    "definition": "cơ hội",
+    "image": "https://o.quizlet.com/QhuTh9gbYgpOBO3XGy0hbQ.png"
+  },
+  {
+    "term": "機械（きかい）",
+    "definition": "máy móc",
+    "image": "https://o.quizlet.com/kYjfZkkdVU3FPt.s0V5UdQ.png"
+  },
+  {
+    "term": "役に立つ（やくにたつ）",
+    "definition": "có ích, hữu ích",
+    "image": "https://o.quizlet.com/ua750-Ng3S48.RoBSuSkWg.png"
+  },
+  {
+    "term": "情報（じょうほう）",
+    "definition": "thông tin",
+    "image": "https://o.quizlet.com/YvI-3KnIiwBON3Dnd7Lxjw.jpg"
+  },
+  {
+    "term": "残念（ざんねん）",
+    "definition": "đáng tiếc",
+    "image": "https://o.quizlet.com/-mbtrwXQEdL8Vol0JI2N7A.png"
+  },
+  {
+    "term": "美術館（びじゅつかん）",
+    "definition": "bảo tàng mỹ thuật",
+    "image": "https://o.quizlet.com/M-4MglZ3tfkwebqJKMGwSA.jpg"
+  },
+  {
+    "term": "誘う（さそう）",
+    "definition": "rủ, mời",
+    "image": "https://o.quizlet.com/l7qyB99A32reElbQs.s8Cw.png"
+  },
+  {
+    "term": "遠慮（えんりょ）",
+    "definition": "ngại, kiêng, giữ ý",
+    "image": "https://o.quizlet.com/jKyGufpLoSK2BL4UgUlqGg.png"
+  },
+  {
+    "term": "勝つ（かつ）",
+    "definition": "thắng",
+    "image": "https://o.quizlet.com/SrRHC0eThsU390yG39.tUQ.png"
+  },
+  {
+    "term": "負ける（まける）",
+    "definition": "thua",
+    "image": "https://o.quizlet.com/D3WeIxYFePvZifWlZEgyyA.png"
+  },
+  {
+    "term": "興味（きょうみ）",
+    "definition": "hứng thú, quan tâm",
+    "image": "https://o.quizlet.com/.sIZps9yC3xpnGsv4dD9gg.jpg"
+  },
+  {
+    "term": "探す（さがす）",
+    "definition": "tìm kiếm",
+    "image": "https://o.quizlet.com/lSsTjd8zsQHgloCk7Os8ig.png"
+  },
+  {
+    "term": "天気予報（てんきよほう）",
+    "definition": "dự báo thời tiết",
+    "image": "https://o.quizlet.com/wpVYNJ5hANO-3KNVD7EnAw.jpg"
+  },
+  {
+    "term": "気象（きしょう）",
+    "definition": "khí tượng",
+    "image": "https://o.quizlet.com/9z8K2fr6QwiAJ5JhRhLk8A.jpg"
+  },
+  {
+    "term": "気象予報士（きしょうよほうし）",
+    "definition": "nhà dự báo thời tiết",
+    "image": "https://o.quizlet.com/wEegyjN1Vm08Vugr6.lQdA.png"
+  },
+  {
+    "term": "青空（あおぞら）",
+    "definition": "bầu trời xanh",
+    "image": "https://o.quizlet.com/7sx0ILvJWE21JlnNz2EkqQ.jpg"
+  },
+  {
+    "term": "広がる（ひろがる）",
+    "definition": "lan rộng, trải ra",
+    "image": "https://o.quizlet.com/LgvtZzhJdzX8Xg8YIqI2kw.jpg"
+  },
+  {
+    "term": "日中（にっちゅう）",
+    "definition": "ban ngày, trong ngày",
+    "image": "https://o.quizlet.com/i/A1z2nj26-5jP6cztHLHfeQ.jpg"
+  },
+  {
+    "term": "最高（さいこう）",
+    "definition": "cao nhất",
+    "image": "https://o.quizlet.com/bVjUpGBnoh.UMfySg1HZuA.png"
+  },
+  {
+    "term": "最低（さいてい）",
+    "definition": "thấp nhất",
+    "image": "https://o.quizlet.com/i/eGuVid9vsSNo96jxgKag_w.jpg"
+  },
+  {
+    "term": "見込み（みこみ）",
+    "definition": "dự kiến, khả năng",
+    "image": "https://o.quizlet.com/ePkUV0cXSWcPxJYcjmwhgg.png"
+  },
+  {
+    "term": "汗ばむ（あせばむ）",
+    "definition": "toát mồ hôi nhẹ",
+    "image": "https://o.quizlet.com/6nHn8mLfMROiiBN1pskkWQ.png"
+  },
+  {
+    "term": "陽気（ようき）",
+    "definition": "thời tiết ấm áp, dễ chịu",
+    "image": "https://o.quizlet.com/Hd1inYPn7bqtGl6A4kCdTg.png"
+  },
+  {
+    "term": "洗濯日和（せんたくびより）",
+    "definition": "thời tiết thích hợp để giặt đồ",
+    "image": "https://o.quizlet.com/PKvClKq48dwHxwzWISBpMw.jpg"
+  },
+  {
+    "term": "星空（ほしぞら）",
+    "definition": "bầu trời đầy sao",
+    "image": "https://o.quizlet.com/0oWmcoXNlup6MRbCOLMmDQ.jpg"
+  },
+  {
+    "term": "後（のち）",
+    "definition": "sau đó, về sau",
+    "image": "https://o.quizlet.com/5YZPCc9FEBuV4pvethODaw.jpg"
+  },
+  {
+    "term": "前日（ぜんじつ）",
+    "definition": "ngày hôm trước",
+    "image": "https://o.quizlet.com/9Ndvm6UmN5oxJL6hrWB4sA.jpg"
+  },
+  {
+    "term": "午前中（ごぜんちゅう）",
+    "definition": "buổi sáng, trong buổi sáng",
+    "image": "https://o.quizlet.com/yWB.K3otzoFRTBthjmU4kA.png"
+  },
+  {
+    "term": "続く（つづく）",
+    "definition": "tiếp tục, kéo dài",
+    "image": "https://o.quizlet.com/4ji1IBL-dJ5V73wvybZU5w.png"
+  },
+  {
+    "term": "続ける（つづける）",
+    "definition": "tiếp tục làm",
+    "image": "https://o.quizlet.com/jEBj8NATaHmTYqTvET3yRA.jpg"
+  },
+  {
+    "term": "折り畳み傘（おりたたみがさ）",
+    "definition": "ô gấp",
+    "image": "https://o.quizlet.com/OhnR-Yzw1fO3Akj7pIjePg.png"
+  },
+  {
+    "term": "折る（おる）",
+    "definition": "gấp, bẻ",
+    "image": "https://o.quizlet.com/ExJ7JWcNJC-4mz1V02wNUA.png"
+  },
+  {
+    "term": "平年（へいねん）",
+    "definition": "năm trung bình, mức trung bình nhiều năm",
+    "image": "https://o.quizlet.com/i70N3Qu5etyWXsfK9VYVKA.png"
+  },
+  {
+    "term": "平年並み（へいねんなみ）",
+    "definition": "ngang mức trung bình",
+    "image": "https://o.quizlet.com/ZAlPdApjscx6irL3urPFog.png"
+  },
+  {
+    "term": "予想する（よそうする）",
+    "definition": "dự đoán",
+    "image": "https://o.quizlet.com/L1Rcbl3rXm4oEHKUCGyY2w.png"
+  },
+  {
+    "term": "肌寒い（はだざむい）",
+    "definition": "se lạnh",
+    "image": "https://o.quizlet.com/BTbxEH-Duuu3JGcfdMZf4A.png"
+  },
+  {
+    "term": "感じる（かんじる）",
+    "definition": "cảm thấy",
+    "image": "https://o.quizlet.com/XMtvQwx6OJGKxJcs1pc7Xw.png"
+  },
+  {
+    "term": "連休（れんきゅう）",
+    "definition": "kỳ nghỉ dài (nhiều ngày liên tiếp)",
+    "image": "https://o.quizlet.com/O2wTW9k8v8VMdpXCdKScyg.jpg"
+  },
+  {
+    "term": "畳む（たたむ）",
+    "definition": "gấp lại",
+    "image": "https://o.quizlet.com/VRRxlItwSqIbjlDMT9lTCQ.jpg"
+  },
+  {
+    "term": "～地方（～ちほう）",
+    "definition": "khu vực ~, vùng ~",
+    "image": "https://o.quizlet.com/8.c0QmhUzcbqeZYZrx6d1Q.png"
+  },
+  {
+    "term": "関東（かんとう）",
+    "definition": "vùng Kanto",
+    "image": "https://o.quizlet.com/qkISec-3Cd0WccN9CznvZA.png"
+  },
+  {
+    "term": "崩れる（くずれる）",
+    "definition": "sụp đổ, xấu đi",
+    "image": "https://o.quizlet.com/DpPfzB14s.DYhqUkRzjr3Q.jpg"
+  },
+  {
+    "term": "崩す（くずす）",
+    "definition": "làm hỏng, phá vỡ",
+    "image": "https://o.quizlet.com/rkn6Uh1XF94UZDdRDqKgag.png"
+  },
+  {
+    "term": "天気が崩れる（てんきがくずれる）",
+    "definition": "thời tiết xấu đi",
+    "image": "https://o.quizlet.com/t.iGT4IKd0e-3DkXttKyAw.jpg"
+  },
+  {
+    "term": "天気が回復する（てんきがかいふくする）",
+    "definition": "thời tiết hồi phục, tốt lên",
+    "image": "https://o.quizlet.com/IhBRnFrODMDF.mYsgzBsYQ.jpg"
+  },
+  {
+    "term": "各地（かくち）",
+    "definition": "các nơi, mỗi địa phương",
+    "image": "https://o.quizlet.com/S70pxAz5Udp1uSEI59vb2g.jpg"
+  },
+  {
+    "term": "助かる（たすかる）",
+    "definition": "được giúp, đỡ khổ",
+    "image": "https://o.quizlet.com/W-McpqJPTzI.WWQg3fDL8Q.png"
+  },
+  {
+    "term": "助ける（たすける）",
+    "definition": "giúp đỡ",
+    "image": "https://o.quizlet.com/i/Kpz_LX9L1BflAZcITE48Gw.jpg"
+  },
+  {
+    "term": "気温（きおん）",
+    "definition": "nhiệt độ",
+    "image": "https://o.quizlet.com/9fAk.2Mm6aHyjgysS.OlWw.png"
+  },
+  {
+    "term": "洗濯（せんたく）",
+    "definition": "giặt giũ",
+    "image": "https://o.quizlet.com/AWj-5-EuJxC7xfdeEPhZOw.png"
+  },
+  {
+    "term": "選択（せんたく）",
+    "definition": "lựa chọn",
+    "image": "https://o.quizlet.com/J3VpH.Bi0ByWTG9o2xY3Xw.png"
+  },
+  {
+    "term": "上着（うわぎ）",
+    "definition": "áo khoác ngoài",
+    "image": "https://o.quizlet.com/YaslWszuxQjBpokRFrRSlQ.png"
+  },
+  {
+    "term": "下着（したぎ）",
+    "definition": "đồ lót",
+    "image": "https://o.quizlet.com/dE-PA3r-HX2Yz0zAJfFZ8A.png"
+  },
+  {
+    "term": "混む（こむ）",
+    "definition": "đông đúc",
+    "image": "https://o.quizlet.com/OKAvBot0-Ru1A297JtAsVQ.jpg"
+  },
+  {
+    "term": "込む（こむ）",
+    "definition": "đông, chật (mức độ sâu hơn)",
+    "image": "https://o.quizlet.com/aP0uoOMraxIMvIzDPkgvGg.png"
+  },
+  {
+    "term": "迷惑（めいわく）",
+    "definition": "làm phiền, gây rắc rối",
+    "image": "https://o.quizlet.com/Xo.rJziDXG1wLGBLZaveZA.png"
+  },
+  {
+    "term": "置く（おく）",
+    "definition": "đặt, để",
+    "image": "https://o.quizlet.com/JFu2tSbG1DTNjj0Qx.R58w.png"
+  },
+  {
+    "term": "迎える（むかえる）",
+    "definition": "đón/chào đón",
+    "image": "https://o.quizlet.com/Qyf6ZxppN6GZvsL4futYJw.png"
+  },
+  {
+    "term": "冷え込む（ひえこむ）",
+    "definition": "lạnh hẳn, nhiệt độ giảm mạnh",
+    "image": "https://o.quizlet.com/E7tNj7jXRW3mgyTDN4O-rg.jpg"
+  },
+  {
+    "term": "梅雨（つゆ）",
+    "definition": "mùa mưa",
+    "image": "https://o.quizlet.com/-BtauGSk36k8FAM06Cj3zA.jpg"
+  },
+  {
+    "term": "夏日（なつび）",
+    "definition": "ngày hè nóng",
+    "image": "https://o.quizlet.com/ckhMLoXHbC1-YE-xdAbI4A.png"
+  },
+  {
+    "term": "熱帯夜（ねったいや）",
+    "definition": "đêm nhiệt đới (đêm nóng)",
+    "image": "https://o.quizlet.com/F0FW4KjY.vbJz0LIFUdJww.png"
+  },
+  {
+    "term": "秋晴れ（あきばれ）",
+    "definition": "trời thu quang đãng",
+    "image": "https://o.quizlet.com/tcL7ASf.BP1YTa7jBZLP4g.jpg"
+  },
+  {
+    "term": "蒸し暑い（むしあつい）",
+    "definition": "nóng oi bức",
+    "image": "https://o.quizlet.com/a8hIDaOK68BVI5mcgEzyzg.png"
+  },
+  {
+    "term": "日差しが強い（ひざしがつよい）",
+    "definition": "nắng gắt",
+    "image": "https://o.quizlet.com/VVN3g7Bomds1VJhTnGAETQ.png"
+  },
+  {
+    "term": "行楽日和（こうらくびより）",
+    "definition": "thời tiết thích hợp đi chơi",
+    "image": "https://o.quizlet.com/cqMnV6PucyHxSYKHNntBCg.jpg"
+  },
+  {
+    "term": "ぽかぽか",
+    "definition": "ấm áp (nắng ấm dễ chịu)",
+    "image": "https://o.quizlet.com/VDHWCv.Sx74bVoEtCr.bzA.png"
+  },
+  {
+    "term": "じめじめ",
+    "definition": "ẩm ướt, nồm, oi ẩm",
+    "image": "https://o.quizlet.com/LX5p3jfE3AykrwUG2cYFig.jpg"
+  },
+  {
+    "term": "からっと",
+    "definition": "khô ráo, thoáng, không ẩm",
+    "image": "https://o.quizlet.com/7DvMTIw9bIqfDaom4AtkYw.jpg"
+  },
+  {
+    "term": "実は（じつは）",
+    "definition": "Thật ra / thực ra",
+    "image": "https://o.quizlet.com/iHnX67LSFjsvh5d2sWOSag.png"
+  },
+  {
+    "term": "実際（じっさい）",
+    "definition": "Thực tế / trên thực tế",
+    "image": "https://o.quizlet.com/ywDrzNn6NDNBBicqPtKCpw.png"
+  },
+  {
+    "term": "性格（せいかく）",
+    "definition": "Tính cách",
+    "image": "https://o.quizlet.com/ntxYZ8hb5X8ngnk4Fkm7vw.jpg"
+  },
+  {
+    "term": "怒る（おこる）",
+    "definition": "Nổi giận / tức giận",
+    "image": "https://o.quizlet.com/RMng6H95SndmGq20SWkq5Q.jpg"
+  },
+  {
+    "term": "気が短い（きがみじかい）",
+    "definition": "Nóng tính / thiếu kiên nhẫn",
+    "image": "https://o.quizlet.com/L2ad--EAGzXyRjA1BxFdUg.png"
+  },
+  {
+    "term": "行動（こうどう）",
+    "definition": "Hành động",
+    "image": "https://o.quizlet.com/eHTrqKURQtaAXni8Z0YRcw.png"
+  },
+  {
+    "term": "欠点（けってん）",
+    "definition": "Khuyết điểm",
+    "image": "https://o.quizlet.com/1m404UYbq7d0zTopyx6V8Q.png"
+  },
+  {
+    "term": "欠く（かく）",
+    "definition": "Thiếu / không có",
+    "image": "https://o.quizlet.com/XmQ7Dm4KUEx48saRn76KSA.jpg"
+  },
+  {
+    "term": "周り・周囲（まわり・しゅうい）",
+    "definition": "Xung quanh",
+    "image": "https://o.quizlet.com/TF8-LH11A6E3iMi3XERFZg.jpg"
+  },
+  {
+    "term": "交換する（こうかんする）",
+    "definition": "Trao đổi",
+    "image": "https://o.quizlet.com/y9laLFAuegrglBBickpYNw.png"
+  },
+  {
+    "term": "優しい（やさしい）",
+    "definition": "hiền, tốt bụng",
+    "image": "https://o.quizlet.com/bHaNmiNO0j.iTJxFLv1MTg.png"
+  },
+  {
+    "term": "素直（すなお）",
+    "definition": "thẳng thắn, thật thà",
+    "image": "https://o.quizlet.com/yL5PLFQxPmFdsyvqv18feQ.png"
+  },
+  {
+    "term": "活発（かっぱつ）",
+    "definition": "năng động, hoạt bát",
+    "image": "https://o.quizlet.com/lGc32PYtAk6r.FUX5r0aag.png"
+  },
+  {
+    "term": "積極的（せっきょくてき）",
+    "definition": "tích cực, chủ động",
+    "image": "https://o.quizlet.com/vJSpDeSuLOnpewid8DfqdQ.png"
+  },
+  {
+    "term": "消極的（しょうきょくてき）",
+    "definition": "thụ động, tiêu cực",
+    "image": "https://o.quizlet.com/dRkR1jC5d4YasN8bDlHalQ.jpg"
+  },
+  {
+    "term": "几帳面（きちょうめん）",
+    "definition": "cẩn thận, tỉ mỉ",
+    "image": "https://o.quizlet.com/m61K2OCOGfiWUXCRQjs.6A.jpg"
+  },
+  {
+    "term": "慎重（しんちょう）",
+    "definition": "thận trọng",
+    "image": "https://o.quizlet.com/T-uQ.C0lVjM7WYj0mmlv.g.png"
+  },
+  {
+    "term": "努力家（どりょくか）",
+    "definition": "người chăm chỉ, hay cố gắng",
+    "image": "https://o.quizlet.com/68V2RFLGE2GTPloWI4hrcg.jpg"
+  },
+  {
+    "term": "我慢強い（がまんづよい）",
+    "definition": "kiên nhẫn, chịu đựng giỏi",
+    "image": "https://o.quizlet.com/v..zzxI-sA38FiovWwfpfg.jpg"
+  },
+  {
+    "term": "楽天的（らくてんてき）",
+    "definition": "lạc quan",
+    "image": "https://o.quizlet.com/klORyGnhpEkRnTwaeKFSrQ.png"
+  },
+  {
+    "term": "思いやりがある（おもいやりがある）",
+    "definition": "biết quan tâm, biết nghĩ cho người khác",
+    "image": "https://o.quizlet.com/i/rfSqm9TQUAPzdplTZHchjw.jpg"
+  },
+  {
+    "term": "責任感がある（せきにんかんがある）",
+    "definition": "có tinh thần trách nhiệm",
+    "image": "https://o.quizlet.com/b5qlC8YAPix25XZCsyhLfA.png"
+  },
+  {
+    "term": "しっかりしている",
+    "definition": "chín chắn, vững vàng",
+    "image": "https://o.quizlet.com/rWqyQuAjUgRs7LpvMAwsAQ.jpg"
+  },
+  {
+    "term": "大人しい（おとなしい）",
+    "definition": "hiền, trầm tính",
+    "image": "https://o.quizlet.com/G5a4thNctmcnkP9ZAaUZGg.jpg"
+  },
+  {
+    "term": "負けず嫌い（まけずぎらい）",
+    "definition": "ghét thua, không chịu thua",
+    "image": "https://o.quizlet.com/bDBgZij916iwg.QO4oajOw.png"
+  },
+  {
+    "term": "恥ずかしがり屋（はずかしがりや）",
+    "definition": "người hay ngại, hay xấu hổ",
+    "image": "https://o.quizlet.com/5.-kQb1Mg0m36HlLSybegQ.png"
+  },
+  {
+    "term": "寂しがり屋（さびしがりや）",
+    "definition": "người hay thấy cô đơn",
+    "image": "https://o.quizlet.com/WbPneYeTfyDByZ3fAQ3zGA.jpg"
+  },
+  {
+    "term": "のんびりしている",
+    "definition": "thong thả, thoải mái",
+    "image": "https://o.quizlet.com/HaGaVBFA16zXabW6TfRM5g.jpg"
+  },
+  {
+    "term": "クール",
+    "definition": "lạnh lùng, cool",
+    "image": "https://o.quizlet.com/i/mYuI_EDOj2UMKgHdLsDOlQ.jpg"
+  },
+  {
+    "term": "頑固（がんこ）",
+    "definition": "cứng đầu, bướng bỉnh",
+    "image": "https://o.quizlet.com/i0M7wGDLqy6ZCnZ8AKwPDQ.png"
+  },
+  {
+    "term": "おせっかい",
+    "definition": "hay lo chuyện người khác, hay xen vào",
+    "image": "https://o.quizlet.com/n.WUXq3lHCDvCQbY..zM4Q.jpg"
+  },
+  {
+    "term": "わがまま",
+    "definition": "ích kỷ, chỉ biết mình",
+    "image": "https://o.quizlet.com/Is2jgc8hS34mwkGtVNARYQ.jpg"
+  },
+  {
+    "term": "おっちょこちょい",
+    "definition": "hậu đậu, hay làm sai vì bất cẩn",
+    "image": "https://o.quizlet.com/BpLt5tb4lX0r4rt48SHQ6Q.jpg"
+  },
+  {
+    "term": "飽きっぽい（あきっぽい）",
+    "definition": "nhanh chán",
+    "image": "https://o.quizlet.com/9ue3kGpIU16VubA-NmKeuw.png"
+  },
+  {
+    "term": "神経質（しんけいしつ）",
+    "definition": "quá nhạy cảm, khó tính",
+    "image": "https://o.quizlet.com/s1jeUpZXpeINWkh.6xV9zA.png"
+  },
+  {
+    "term": "おおざっぱ",
+    "definition": "cẩu thả, không chi tiết",
+    "image": "https://o.quizlet.com/Z7czjjIbMvFHFp1gUMI9-w.jpg"
+  },
+  {
+    "term": "せっかち",
+    "definition": "hấp tấp, nóng vội",
+    "image": "https://o.quizlet.com/EwZK.lal3-PTYu-Dag0JfA.png"
+  },
+  {
+    "term": "怒りっぽい（おこりっぽい）",
+    "definition": "hay giận",
+    "image": "https://o.quizlet.com/yEkFvZr9.WFF7CSrGVF0yQ.png"
+  },
+  {
+    "term": "悲観的（ひかんてき）",
+    "definition": "bi quan",
+    "image": "https://o.quizlet.com/jWA.YzPj8mRZkPTt0DWnhQ.jpg"
+  },
+  {
+    "term": "楽観的（らっかんてき）",
+    "definition": "lạc quan",
+    "image": "https://o.quizlet.com/5PO4LODk7BrKKTY1Eib.Kg.jpg"
+  },
+  {
+    "term": "立場（たちば）",
+    "definition": "lập trường, vị trí, quan điểm",
+    "image": "https://o.quizlet.com/mZ3Yk9Di2Ldi5Nj.QrEVoQ.png"
+  },
+  {
+    "term": "試す（ためす）",
+    "definition": "thử",
+    "image": "https://o.quizlet.com/RkzeWlUhEqJEbGROjO4H-g.png"
+  },
+  {
+    "term": "旅する（たびする）",
+    "definition": "du lịch, đi đây đó",
+    "image": "https://o.quizlet.com/KpKL95QTET-i259LecFoiw.png"
+  },
+  {
+    "term": "動物（どうぶつ）",
+    "definition": "động vật",
+    "image": "https://o.quizlet.com/QTJ7JVeM3QliBCYh9Ld7tg.png"
+  },
+  {
+    "term": "羊（ひつじ）",
+    "definition": "con cừu",
+    "image": "https://o.quizlet.com/Rv3sAye.AX8Fm21TP.qgkQ.png"
+  },
+  {
+    "term": "馬（うま）",
+    "definition": "con ngựa",
+    "image": "https://o.quizlet.com/Cj8SBxhW7SFVnE-lcMfdww.png"
+  },
+  {
+    "term": "牛（うし）",
+    "definition": "con bò",
+    "image": "https://o.quizlet.com/YSIUVxi7bdDl.IdHAvAxSw.jpg"
+  },
+  {
+    "term": "協力する（きょうりょくする）",
+    "definition": "hợp tác",
+    "image": "https://o.quizlet.com/rWCCjU2O1m17Xh7mTyzO9w.jpg"
+  },
+  {
+    "term": "順に（じゅんに）",
+    "definition": "theo thứ tự",
+    "image": "https://o.quizlet.com/i/a2T-BPnAViQ9RmpTd8bCoQ.jpg"
+  },
+  {
+    "term": "順番（じゅんばん）",
+    "definition": "thứ tự, lượt",
+    "image": "https://o.quizlet.com/ZAmialBaXMEV9guYRRzF.A.jpg"
+  },
+  {
+    "term": "手放す（てばなす）",
+    "definition": "buông tay, từ bỏ",
+    "image": "https://o.quizlet.com/7wm6UBBG9CuGgM2jGHyurA.png"
+  },
+  {
+    "term": "放す（はなす）",
+    "definition": "thả ra, buông ra",
+    "image": "https://o.quizlet.com/ZKsyGTw3dJQzGDHH7Mxiew.png"
+  },
+  {
+    "term": "番号（ばんごう）",
+    "definition": "số, số thứ tự",
+    "image": "https://o.quizlet.com/BvvH2yUrxqUrPfcPclsQyg.png"
+  },
+  {
+    "term": "象徴する（しょうちょうする）",
+    "definition": "tượng trưng",
+    "image": "https://o.quizlet.com/ZZ85iY6RPbPpD-eCYFFqbA.jpg"
+  },
+  {
+    "term": "財産（ざいさん）",
+    "definition": "tài sản",
+    "image": "https://o.quizlet.com/zPMM81RZj8gPeeD.q7abIQ.png"
+  },
+  {
+    "term": "柔らか（やわらか）",
+    "definition": "mềm, mềm mại",
+    "image": "https://o.quizlet.com/Z.N5g2hu6xZgJXpOQMs9GA.jpg"
+  },
+  {
+    "term": "移動する（いどうする）",
+    "definition": "di chuyển",
+    "image": "https://o.quizlet.com/72BaIG34tD68cGUA37qxVQ.png"
+  },
+  {
+    "term": "手段（しゅだん）",
+    "definition": "phương tiện, phương pháp",
+    "image": "https://o.quizlet.com/NGyzzawz3viJkZVJKAy43A.jpg"
+  },
+  {
+    "term": "表す（あらわす）",
+    "definition": "biểu hiện, thể hiện",
+    "image": "https://o.quizlet.com/AHhlkgAy8zQTMqV7qIXWZg.png"
+  },
+  {
+    "term": "困難（こんなん）",
+    "definition": "khó khăn",
+    "image": "https://o.quizlet.com/Ka2thk7JVo9mTZPxeEP8kA.png"
+  },
+  {
+    "term": "守る（まもる）",
+    "definition": "bảo vệ, giữ gìn",
+    "image": "https://o.quizlet.com/z9B.yX71S7qIuWzLNZOLRA.jpg"
+  },
+  {
+    "term": "与える（あたえる）",
+    "definition": "cho, trao",
+    "image": "https://o.quizlet.com/26J8OO3FDBUl0L5ET8hBGQ.jpg"
+  },
+  {
+    "term": "自然（しぜん）",
+    "definition": "tự nhiên",
+    "image": "https://o.quizlet.com/bvjV1TjR-MVmdDNhtazG4w.jpg"
+  },
+  {
+    "term": "昔話（むかしばなし）",
+    "definition": "truyện cổ tích",
+    "image": "https://o.quizlet.com/sAjaj.uZz4k9sjYiFzVN9g.jpg"
+  },
+  {
+    "term": "連れる（つれる）",
+    "definition": "dẫn theo, dắt theo",
+    "image": "https://o.quizlet.com/jq.DD60HKI78JiwxaOfUhw.jpg"
+  },
+  {
+    "term": "鬼退治（おにたいじ）",
+    "definition": "diệt quỷ",
+    "image": "https://o.quizlet.com/Z4CAUg-VQsUtVJZtAU8p6A.png"
+  },
+  {
+    "term": "重大（じゅうだい）",
+    "definition": "trọng đại, nghiêm trọng",
+    "image": "https://o.quizlet.com/ewKa36jsIt3umFfd3HErQg.png"
+  },
+  {
+    "term": "種（たね）",
+    "definition": "hạt giống, chủng loại",
+    "image": "https://o.quizlet.com/.vCTj4WyDgY6S.rhllPdEg.jpg"
+  },
+  {
+    "term": "種明かし（たねあかし）",
+    "definition": "bật mí, tiết lộ bí mật",
+    "image": "https://o.quizlet.com/yepgIa8XdtZqsWdrx544WA.jpg"
+  },
+  {
+    "term": "たっぷり",
+    "definition": "nhiều, đầy đủ",
+    "image": "https://o.quizlet.com/cMwapSgjrIpq8ZaymjlNSQ.jpg"
+  },
+  {
+    "term": "並ぶ（ならぶ）",
+    "definition": "xếp hàng, đứng thành hàng",
+    "image": "https://o.quizlet.com/Tm5q24jHyXmAjMrvV6Zxsg.jpg"
+  },
+  {
+    "term": "紹介（しょうかい）",
+    "definition": "giới thiệu",
+    "image": "https://o.quizlet.com/WrJ1Jn51k2t8ijUPd3VptA.jpg"
+  },
+  {
+    "term": "量（りょう）",
+    "definition": "lượng, số lượng",
+    "image": "https://o.quizlet.com/2dc2VBP5Y.G9rrWUzsW9Ag.png"
+  },
+  {
+    "term": "鶏肉（とりにく）",
+    "definition": "thịt gà",
+    "image": "https://o.quizlet.com/s0W3WPrqlGn4kW7AsPGukQ.png"
+  },
+  {
+    "term": "新鮮（しんせん）",
+    "definition": "tươi, tươi mới",
+    "image": "https://o.quizlet.com/3ZXFvMW4kwsdViL0Zm9HEg.png"
+  },
+  {
+    "term": "代わる（かわる）",
+    "definition": "thay thế, thay đổi",
+    "image": "https://o.quizlet.com/w-dy9IXhvF9SwQOYRbA48g.png"
+  },
+  {
+    "term": "値段（ねだん）",
+    "definition": "giá cả",
+    "image": "https://o.quizlet.com/6a340KL5YSWAGmzjP0cxOQ.png"
+  },
+  {
+    "term": "お得",
+    "definition": "có lợi, hời",
+    "image": "https://o.quizlet.com/TFRkmON8sKdrwfxhHfLtug.png"
+  },
+  {
+    "term": "得意（とくい）",
+    "definition": "giỏi",
+    "image": "https://o.quizlet.com/-SfDC1mL0sZbvUQnSF.xlg.png"
+  },
+  {
+    "term": "苦手（にがて）",
+    "definition": "kém, không giỏi",
+    "image": "https://o.quizlet.com/KJnEJXGDYxEyFNg75GekmQ.jpg"
+  },
+  {
+    "term": "好み（このみ）",
+    "definition": "sở thích, khẩu vị",
+    "image": "https://o.quizlet.com/aXHT85n5NJftomrUDQWjDA.png"
+  },
+  {
+    "term": "好む（このむ）",
+    "definition": "thích",
+    "image": "https://o.quizlet.com/Ss2wnAgBrQGTp3KscRxXVQ.png"
+  },
+  {
+    "term": "異なる（ことなる）",
+    "definition": "khác nhau",
+    "image": "https://o.quizlet.com/w4NdBmWRxsVmHSntAq2ueQ.png"
+  },
+  {
+    "term": "溶ける（とける）",
+    "definition": "tan, chảy ra",
+    "image": "https://o.quizlet.com/k9RIYn.IYEReGA80n-3QFw.jpg"
+  },
+  {
+    "term": "日替わり（ひがわり）",
+    "definition": "thay đổi theo ngày",
+    "image": "https://o.quizlet.com/FxpPrxcS3XtsDvuErIvvxQ.jpg"
+  },
+  {
+    "term": "大盛り（おおもり）",
+    "definition": "phần lớn, nhiều",
+    "image": "https://o.quizlet.com/mbKrbIvBXaadlMImhcgkMQ.jpg"
+  },
+  {
+    "term": "飲食店（いんしょくてん）",
+    "definition": "quán ăn, nhà hàng",
+    "image": "https://o.quizlet.com/YXO3tDPOXkuZv7AfUVs0wA.jpg"
+  },
+  {
+    "term": "表現（ひょうげん）",
+    "definition": "biểu hiện, cách diễn đạt",
+    "image": "https://o.quizlet.com/GhV83BrsShmairg7etQGmw.png"
+  },
+  {
+    "term": "特徴（とくちょう）",
+    "definition": "đặc điểm",
+    "image": "https://o.quizlet.com/ePf4OgmxSvoOxcu6RX3YRQ.png"
+  },
+  {
+    "term": "番組（ばんぐみ）",
+    "definition": "chương trình (TV, radio)",
+    "image": "https://o.quizlet.com/i/MLV7yxZ4nyGGVy-eCy6mOA.jpg"
+  },
+  {
+    "term": "建築家（けんちくか）",
+    "definition": "kiến trúc sư",
+    "image": "https://o.quizlet.com/DEV8QpC17d1wqLeIkrACqA.png"
+  },
+  {
+    "term": "役立つ（やくだつ）",
+    "definition": "giúp ích, có tác dụng",
+    "image": "https://o.quizlet.com/ijHqzghHBnhQvtCkVq9BGg.jpg"
+  },
+  {
+    "term": "予算（よさん）",
+    "definition": "ngân sách",
+    "image": "https://o.quizlet.com/wBrTCljdEQCpuAWYWJzErw.png"
+  },
+  {
+    "term": "計算（けいさん）",
+    "definition": "tính toán",
+    "image": "https://o.quizlet.com/PDaVRiiH6Qy3InXPcHeE8w.jpg"
+  },
+  {
+    "term": "検索する（けんさくする）",
+    "definition": "tìm kiếm (search)",
+    "image": "https://o.quizlet.com/IGl9h7tKHWmAxpveMOuqfQ.png"
+  },
+  {
+    "term": "検査（けんさ）",
+    "definition": "kiểm tra, xét nghiệm",
+    "image": "https://o.quizlet.com/9N4.YAJhvnFVSZCSJlF2ew.png"
+  },
+  {
+    "term": "感想（かんそう）",
+    "definition": "cảm nghĩ, cảm tưởng",
+    "image": "https://o.quizlet.com/O7c1TBtuuxpwrVp1nBtGtQ.png"
+  },
+  {
+    "term": "予想（よそう）",
+    "definition": "dự đoán",
+    "image": "https://o.quizlet.com/L1Rcbl3rXm4oEHKUCGyY2w.png"
+  },
+  {
+    "term": "想像（そうぞう）",
+    "definition": "tưởng tượng",
+    "image": "https://o.quizlet.com/1zDTmxyYH5Lv.UtjubBIlQ.jpg"
+  },
+  {
+    "term": "比較（ひかく）",
+    "definition": "so sánh",
+    "image": "https://o.quizlet.com/pRhE1JyTaAAjkrnuV2qpzw.png"
+  },
+  {
+    "term": "参考（さんこう）",
+    "definition": "tham khảo",
+    "image": "https://o.quizlet.com/gsRKCZPCU1lNI1x5faZfcg.png"
+  },
+  {
+    "term": "写真立て（しゃしんたて）",
+    "definition": "khung ảnh",
+    "image": "https://o.quizlet.com/Efeo1mwo03qIwzqW.eTnsA.png"
+  },
+  {
+    "term": "登録（とうろく）",
+    "definition": "đăng ký",
+    "image": "https://o.quizlet.com/JPSFSZITFHMQRxwfDpB7Dg.jpg"
+  },
+  {
+    "term": "記録（きろく）",
+    "definition": "ghi chép, ghi lại",
+    "image": "https://o.quizlet.com/a5C729-Oa2H1fx6Sl7QBZQ.png"
+  },
+  {
+    "term": "アドレス",
+    "definition": "địa chỉ",
+    "image": "https://o.quizlet.com/VsYtYZAbspg7AhRWF0Fn8A.png"
+  },
+  {
+    "term": "バーゲン",
+    "definition": "đợt giảm giá, sale",
+    "image": "https://o.quizlet.com/a1d5LWI-Uw5DTjoEZPhNew.jpg"
+  },
+  {
+    "term": "クーポン",
+    "definition": "phiếu giảm giá",
+    "image": "https://o.quizlet.com/8Lumc9YYQ9SJPfxTkaRQkQ.jpg"
+  },
+  {
+    "term": "口コミ",
+    "definition": "đánh giá truyền miệng, review",
+    "image": "https://o.quizlet.com/R43EwKat3z2Ht5IxyK9ZlA.jpg"
+  },
+  {
+    "term": "コメント",
+    "definition": "bình luận",
+    "image": "https://o.quizlet.com/7jxuwhhaRmO0feZXGWgqnw.jpg"
+  },
+  {
+    "term": "サイト",
+    "definition": "trang web",
+    "image": "https://o.quizlet.com/SLr5ENgU7K.7N3MZlNFNtQ.png"
+  },
+  {
+    "term": "品物",
+    "definition": "（しなもの）hàng hóa, đồ vật",
+    "image": "https://o.quizlet.com/THAEG8x2BVJ0Z5q-2tiOiA.png"
+  },
+  {
+    "term": "品",
+    "definition": "（しな）món hàng",
+    "image": "https://o.quizlet.com/i/OIvl8oaCjYkaZPCYL34VPQ.jpg"
+  },
+  {
+    "term": "手に入れる",
+    "definition": "（てにいれる）có được, kiếm được",
+    "image": "https://o.quizlet.com/mmkNFm2pV1xB.cXbBIuGjw.png"
+  },
+  {
+    "term": "お買い得",
+    "definition": "（おかいどく）mua hời, giá tốt",
+    "image": "https://o.quizlet.com/-ZnW6Nj6MkO-zT42ao5l0g.jpg"
+  },
+  {
+    "term": "お買い上げ",
+    "definition": "（おかいあげ）mua (kính ngữ, dùng trong cửa hàng)",
+    "image": "https://o.quizlet.com/Cbr3h5ynU00L3PhC47YvJQ.png"
+  },
+  {
+    "term": "次回",
+    "definition": "（じかい）lần sau",
+    "image": "https://o.quizlet.com/TQ4sIYxPwfCpCcMVGtZf9g.jpg"
+  },
+  {
+    "term": "来店",
+    "definition": "（らいてん）đến cửa hàng",
+    "image": "https://o.quizlet.com/eK4oNSw74sRj32DhZeGYfQ.jpg"
+  },
+  {
+    "term": "開店",
+    "definition": "（かいてん）mở cửa hàng",
+    "image": "https://o.quizlet.com/T3Cgja1jyCTBrhuYv29ctA.png"
+  },
+  {
+    "term": "閉店",
+    "definition": "（へいてん）đóng cửa hàng",
+    "image": "https://o.quizlet.com/KeAhHJk4uFqYZE3ZDk7HbQ.jpg"
+  },
+  {
+    "term": "応募する",
+    "definition": "（おうぼする）ứng tuyển, đăng ký",
+    "image": "https://o.quizlet.com/5m8eUPznbJex0IF121tb5g.png"
+  },
+  {
+    "term": "国内",
+    "definition": "（こくない）trong nước",
+    "image": "https://o.quizlet.com/vZMeHEp49x.dgPZ..EHA7A.jpg"
+  },
+  {
+    "term": "国外",
+    "definition": "（こくがい）nước ngoài",
+    "image": "https://o.quizlet.com/3Nolmh7jlrMp5kpCVwOl-Q.jpg"
+  },
+  {
+    "term": "在住する",
+    "definition": "（ざいじゅうする）cư trú, sinh sống",
+    "image": "https://o.quizlet.com/L0BW-GGtAGt0o-CaZmaMRQ.jpg"
+  },
+  {
+    "term": "駐車",
+    "definition": "（ちゅうしゃ）đỗ xe",
+    "image": "https://o.quizlet.com/OGhdiYOO5j8fX5Gv8mlvjw.jpg"
+  },
+  {
+    "term": "看板",
+    "definition": "（かんばん）bảng hiệu, biển hiệu",
+    "image": "https://o.quizlet.com/ePoq11DksOuADtqFl3K3VQ.jpg"
+  },
+  {
+    "term": "試着 (しちゃく)",
+    "definition": "mặc thử",
+    "image": "https://o.quizlet.com/ioVS.osKhEscqc.qoyo8VQ.png"
+  },
+  {
+    "term": "到着 (とうちゃく)",
+    "definition": "đến nơi",
+    "image": "https://o.quizlet.com/33Wdf56B5zhaRAxy2AOP7A.png"
+  },
+  {
+    "term": "先着 (せんちゃく)",
+    "definition": "đến trước, ưu tiên cho người đến trước",
+    "image": "https://o.quizlet.com/vdi-oiR2mFVQdz2LGmoHTQ.png"
+  },
+  {
+    "term": "着る (きる)",
+    "definition": "mặc (quần áo, áo khoác...)",
+    "image": "https://o.quizlet.com/i/p4Sb1cqLAFlZBwcCO4vD7w.jpg"
+  },
+  {
+    "term": "着く (つく)",
+    "definition": "đến nơi",
+    "image": "https://o.quizlet.com/HeyhqzxH57mSCaa72inzMQ.jpg"
+  },
+  {
+    "term": "裾 (すそ)",
+    "definition": "gấu áo, gấu quần",
+    "image": "https://o.quizlet.com/Srv.ItOZ4Fi4.9eYF4vilA.jpg"
+  },
+  {
+    "term": "袖 (そで)",
+    "definition": "tay áo",
+    "image": "https://o.quizlet.com/rH9Ppx7AGNIydaVfo137Rw.jpg"
+  },
+  {
+    "term": "受け取る (うけとる)",
+    "definition": "nhận, tiếp nhận",
+    "image": "https://o.quizlet.com/qZSyUmwBK4rKOP57nuCg9A.png"
+  },
+  {
+    "term": "以降 (いこう)",
+    "definition": "kể từ..., trở đi",
+    "image": "https://o.quizlet.com/p341PdGMVPXVmXioHEm1cQ.jpg"
+  },
+  {
+    "term": "家具 (かぐ)",
+    "definition": "đồ nội thất",
+    "image": "https://o.quizlet.com/T1z1HK.gPOsvMLiq--UPTg.jpg"
+  },
+  {
+    "term": "組み立てる (くみたてる)",
+    "definition": "lắp ráp, lắp đặt",
+    "image": "https://o.quizlet.com/rT-tvdE3XtxCR.XTeK6qAg.jpg"
+  },
+  {
+    "term": "組合 (くみあい)",
+    "definition": "tổ hợp, hiệp hội, liên minh",
+    "image": "https://o.quizlet.com/FVN1.DQpyOJBpIzxA2eKtQ.png"
+  },
+  {
+    "term": "番組 (ばんぐみ)",
+    "definition": "chương trình (TV, radio)",
+    "image": "https://o.quizlet.com/Qf4MB7B8ukXlr0Uz.hVZMA.jpg"
+  },
+  {
+    "term": "延期する (えんきする)",
+    "definition": "hoãn lại",
+    "image": "https://o.quizlet.com/CJCcs7qCL6HuAy4uhGBtfg.jpg"
+  },
+  {
+    "term": "延長する (えんちょうする)",
+    "definition": "kéo dài, gia hạn",
+    "image": "https://o.quizlet.com/Bx6XF.GZXpRBayBCSljbOQ.jpg"
+  },
+  {
+    "term": "靴 (くつ)",
+    "definition": "giày",
+    "image": "https://o.quizlet.com/xCP9bCsbz.sJi-EW6gs1UA.jpg"
+  },
+  {
+    "term": "あいにく",
+    "definition": "đáng tiếc là, không may là",
+    "image": "https://o.quizlet.com/8rSzDDXcmqhIN-RmgWgEyQ.png"
+  },
+  {
+    "term": "キャンセルする",
+    "definition": "hủy (đặt chỗ, đơn hàng...)",
+    "image": "https://o.quizlet.com/xoQtUg4VJgieW2Nki3s1dg.jpg"
+  },
+  {
+    "term": "取り消す (とりけす)",
+    "definition": "hủy bỏ, xóa bỏ",
+    "image": "https://o.quizlet.com/i/IiVcbL6prPdFxBQhllMY1g.jpg"
+  },
+  {
+    "term": "中止する (ちゅうしする)",
+    "definition": "ngừng, đình chỉ",
+    "image": "https://o.quizlet.com/8wEvnJRDKKbr51YkNatrIA.png"
+  },
+  {
+    "term": "特別料金 (とくべつりょうきん)",
+    "definition": "phí đặc biệt",
+    "image": "https://o.quizlet.com/NSLgHgips3EsBS-CrGF2dA.jpg"
+  },
+  {
+    "term": "修理 (しゅうり)",
+    "definition": "sửa chữa",
+    "image": "https://o.quizlet.com/pHhR3TZxgyh6t55yK8SmcA.png"
+  },
+  {
+    "term": "失敗(しっぱい)",
+    "definition": "thất bại",
+    "image": "https://o.quizlet.com/J6J6H5rYsk5.yU3ltW1gCA.png"
+  },
+  {
+    "term": "袋(ふくろ)",
+    "definition": "túi",
+    "image": "https://o.quizlet.com/NFkxiKP0D2m.cBG0ovpIIg.jpg"
+  },
+  {
+    "term": "手袋(てぶくろ)",
+    "definition": "găng tay",
+    "image": "https://o.quizlet.com/iw1vQX2esH0rmugl5aQxxQ.jpg"
+  },
+  {
+    "term": "福袋(ふくぶくろ)",
+    "definition": "túi may mắn (bán dịp năm mới)",
+    "image": "https://o.quizlet.com/LE5aPxl-FaSXkKtWxVIC7A.png"
+  },
+  {
+    "term": "品物(しなもの)",
+    "definition": "hàng hóa, sản phẩm",
+    "image": "https://o.quizlet.com/hY4eLLztUrXh6.MnlQ-iqg.jpg"
+  },
+  {
+    "term": "中身(なかみ)",
+    "definition": "bên trong, nội dung",
+    "image": "https://o.quizlet.com/r9Q6WTk5-6q9BurnjOuOwA.png"
+  },
+  {
+    "term": "振り仮名(ふりがな)",
+    "definition": "chữ kana ghi cách đọc cho kanji",
+    "image": "https://o.quizlet.com/IUo6dYI1hmzBj0.pAQGJVw.png"
+  },
+  {
+    "term": "家電(かでん)",
+    "definition": "đồ điện gia dụng",
+    "image": "https://o.quizlet.com/UpiPEfZ1Lj0TZ8M.ibxSog.jpg"
+  },
+  {
+    "term": "エピソード集",
+    "definition": "tập các câu chuyện / tập các tình tiết",
+    "image": "https://o.quizlet.com/zWX23rru0j79zupvcQAKZg.jpg"
+  },
+  {
+    "term": "ブランド",
+    "definition": "thương hiệu",
+    "image": "https://o.quizlet.com/uXXbtamt2It3hSbSllxYxg.jpg"
+  },
+  {
+    "term": "フリーサイズ",
+    "definition": "size tự do, một cỡ",
+    "image": "https://o.quizlet.com/i/pDJ-cSnA7fG1hArcqtEJ-g.jpg"
+  },
+  {
+    "term": "雑誌(ざっし)",
+    "definition": "tạp chí",
+    "image": "https://o.quizlet.com/VfsmVveCtAeA35YsWFyBwQ.png"
+  },
+  {
+    "term": "全然(ぜんぜん)",
+    "definition": "hoàn toàn không",
+    "image": "https://o.quizlet.com/50VbQCYCzKOVuCYChmeX8g.png"
+  },
+  {
+    "term": "交換(こうかん)",
+    "definition": "trao đổi",
+    "image": "https://o.quizlet.com/H4wjXjLK7ogW-44eI0Wh9w.png"
+  },
+  {
+    "term": "並ぶ(ならぶ)",
+    "definition": "xếp hàng, đứng thành hàng",
+    "image": "https://o.quizlet.com/IawFR.6WHqndbjmUi0u0Kg.jpg"
+  },
+  {
+    "term": "描く(えがく)",
+    "definition": "vẽ",
+    "image": "https://o.quizlet.com/jHUkfB25xGKr-SwWrazj3A.png"
+  },
+  {
+    "term": "種類(しゅるい)",
+    "definition": "loại, chủng loại",
+    "image": "https://o.quizlet.com/2hV2sU5PUuH5C4DiRPCEGw.jpg"
+  },
+  {
+    "term": "暮らす(くらす)",
+    "definition": "sinh sống, sống",
+    "image": "https://o.quizlet.com/gpSCJ3DqC1F9iq-OaBuV-w.jpg"
+  },
+  {
+    "term": "一人暮らし(ひとりぐらし)",
+    "definition": "sống một mình",
+    "image": "https://o.quizlet.com/SLqCL9Gbrm9hTIt4H8r5Xg.jpg"
+  },
+  {
+    "term": "経験(けいけん)",
+    "definition": "kinh nghiệm",
+    "image": "https://o.quizlet.com/SOKmlh-Ka55Ke7Gn4WmKVA.jpg"
+  },
+  {
+    "term": "行列（ぎょうれつ）",
+    "definition": "xếp hàng, hàng người",
+    "image": "https://o.quizlet.com/i/fbLb__IR6TkleBvrjtVm9g.jpg"
+  },
+  {
+    "term": "評判（ひょうばん）",
+    "definition": "đánh giá, danh tiếng",
+    "image": "https://o.quizlet.com/kTWpXeH4kogAWLd5sivvNA.png"
+  },
+  {
+    "term": "加わる（くわわる）",
+    "definition": "tham gia, được thêm vào",
+    "image": "https://o.quizlet.com/Zqvxf3vz2c7muW0ylh67aA.jpg"
+  },
+  {
+    "term": "加える（くわえる）",
+    "definition": "thêm vào",
+    "image": "https://o.quizlet.com/52AAir8Px-bAfxuEpSKIoA.png"
+  },
+  {
+    "term": "追加する（ついかする）",
+    "definition": "bổ sung, thêm vào",
+    "image": "https://o.quizlet.com/9-OstRa8Dpcrrwyvqx4.UA.jpg"
+  },
+  {
+    "term": "安心感（あんしんかん）",
+    "definition": "cảm giác an tâm",
+    "image": "https://o.quizlet.com/QnPFEGNN-Uovbm26bOVtVw.jpg"
+  },
+  {
+    "term": "繋がる（つながる）",
+    "definition": "kết nối, liên kết",
+    "image": "https://o.quizlet.com/CR-g9VhDj67f8bo8lOdowQ.png"
+  },
+  {
+    "term": "関西（かんさい）",
+    "definition": "vùng Kansai",
+    "image": "https://o.quizlet.com/bJr7F6FZDJ.Ax.N7p5pXeQ.png"
+  },
+  {
+    "term": "印象（いんしょう）",
+    "definition": "ấn tượng",
+    "image": "https://o.quizlet.com/RZkM7q6T6Bl1YvjWg1xsCQ.jpg"
+  },
+  {
+    "term": "拒否する（きょひする）",
+    "definition": "từ chối",
+    "image": "https://o.quizlet.com/UZstnrsFuxn2fH9YbbX4dg.png"
+  },
+  {
+    "term": "舌（した）",
+    "definition": "lưỡi",
+    "image": "https://o.quizlet.com/udiecSxTtM7ZrxwRxt0wRg.png"
+  },
+  {
+    "term": "アナウンサー",
+    "definition": "phát thanh viên, MC",
+    "image": "https://o.quizlet.com/49RD7z5zsHcmpyopkuys6g.jpg"
+  },
+  {
+    "term": "マナー",
+    "definition": "phép lịch sự, quy tắc ứng xử",
+    "image": "https://o.quizlet.com/ugygwp0k0AeDIJvXk2RQ.g.jpg"
+  },
+  {
+    "term": "シェフ",
+    "definition": "đầu bếp",
+    "image": "https://o.quizlet.com/y40P5dKk8vSbz-44XjVuAw.png"
+  },
+  {
+    "term": "リポーター",
+    "definition": "phóng viên",
+    "image": "https://o.quizlet.com/6KhvOD1v1vBRftIwB5FRRQ.jpg"
+  },
+  {
+    "term": "メイン",
+    "definition": "chính, chủ đạo",
+    "image": "https://o.quizlet.com/NgqmIHDj1poeWKPwTD1JYw.png"
+  },
+  {
+    "term": "有効（ゆうこう）",
+    "definition": "có hiệu lực, hữu hiệu",
+    "image": "https://o.quizlet.com/IsPDnzYFPUh0F6ZsiLgZMQ.jpg"
+  },
+  {
+    "term": "記事（きじ）",
+    "definition": "bài báo, bài viết",
+    "image": "https://o.quizlet.com/RoM.yMnmqJskFOADyMMvHQ.jpg"
+  },
+  {
+    "term": "朝活（あさかつ）",
+    "definition": "hoạt động buổi sáng (dậy sớm làm việc/học tập)",
+    "image": "https://o.quizlet.com/XKdQ2N87NzegjLBAB1ib5A.jpg"
+  },
+  {
+    "term": "解消する（かいしょうする）",
+    "definition": "giải quyết, xóa bỏ",
+    "image": "https://o.quizlet.com/JPSFSZITFHMQRxwfDpB7Dg.jpg"
+  },
+  {
+    "term": "早起き（はやおき）",
+    "definition": "dậy sớm",
+    "image": "https://o.quizlet.com/JtoFOtxSiXaRMzne8w7vQg.png"
+  },
+  {
+    "term": "早朝（そうちょう）",
+    "definition": "sáng sớm",
+    "image": "https://o.quizlet.com/nPrCnZT8NiR04pW3whEoZw.png"
+  },
+  {
+    "term": "出勤（しゅっきん）",
+    "definition": "đi làm",
+    "image": "https://o.quizlet.com/22ohfTHvu2rghWTrC9t8ng.png"
+  },
+  {
+    "term": "通勤（つうきん）",
+    "definition": "đi làm (quá trình đi lại)",
+    "image": "https://o.quizlet.com/7E0Amj963RRKzrBST0DY6w.png"
+  },
+  {
+    "term": "欠勤（けっきん）",
+    "definition": "nghỉ làm, vắng mặt",
+    "image": "https://o.quizlet.com/ukZrikTXKrQV5SqfSVW8ng.png"
+  },
+  {
+    "term": "講座（こうざ）",
+    "definition": "khóa học",
+    "image": "https://o.quizlet.com/6xU.c3lx5fGh.W9hEyNbqQ.jpg"
+  },
+  {
+    "term": "一口座（ひとくちざ）",
+    "definition": "một suất / một phần đăng ký",
+    "image": "https://o.quizlet.com/-HkcZLjoZurVQDq5Y5hwsg.jpg"
+  },
+  {
+    "term": "集中（しゅうちゅう）",
+    "definition": "tập trung",
+    "image": "https://o.quizlet.com/FyrvMvgK6hHNW9EbAcGW8Q.png"
+  },
+  {
+    "term": "筆者（ひっしゃ）",
+    "definition": "tác giả, người viết",
+    "image": "https://o.quizlet.com/V6w51x20LN1eVgZ-toDsMw.png"
+  },
+  {
+    "term": "初心者（しょしんしゃ）",
+    "definition": "người mới bắt đầu",
+    "image": "https://o.quizlet.com/.TVCEUVKtCxrNVEkoSRY0g.png"
+  },
+  {
+    "term": "信じる（しんじる）",
+    "definition": "tin tưởng",
+    "image": "https://o.quizlet.com/ympfYOztnlhPQjkV6CyQFw.png"
+  },
+  {
+    "term": "信頼（しんらい）",
+    "definition": "sự tin cậy, tín nhiệm",
+    "image": "https://o.quizlet.com/.hV7QqDIzBiK3PZ6WzCD9A.png"
+  },
+  {
+    "term": "頼む（たのむ）",
+    "definition": "nhờ, yêu cầu",
+    "image": "https://o.quizlet.com/nGSy8Ca1PozayFlDZpyWww.png"
+  },
+  {
+    "term": "頼る（たよる）",
+    "definition": "dựa vào, nhờ cậy",
+    "image": "https://o.quizlet.com/gGbBokQz.Zjw6lUCBh9LIg.png"
+  },
+  {
+    "term": "山頂（さんちょう）",
+    "definition": "đỉnh núi",
+    "image": "https://o.quizlet.com/b3X-600vmtx3y9K6pYakcQ.png"
+  },
+  {
+    "term": "頂上（ちょうじょう）",
+    "definition": "đỉnh (trên cùng)",
+    "image": "https://o.quizlet.com/KOvBqQf9da7WwZ.I7KjjFg.jpg"
+  },
+  {
+    "term": "眺める（ながめる）",
+    "definition": "ngắm nhìn",
+    "image": "https://o.quizlet.com/AQtjW8MW5-Eaw1bdYvNeXw.png"
+  },
+  {
+    "term": "一休み（ひとやすみ）",
+    "definition": "nghỉ ngơi một lát",
+    "image": "https://o.quizlet.com/tdM8yOHm7eLf2ZbNls2p0A.png"
+  },
+  {
+    "term": "近づく（ちかづく）",
+    "definition": "đến gần",
+    "image": "https://o.quizlet.com/wATEGbTm5md7hRxhn8iNYg.png"
+  },
+  {
+    "term": "ぴったり",
+    "definition": "vừa khít, vừa đúng",
+    "image": "https://o.quizlet.com/g0ygNUSoidcRSwdrWoX-zw.jpg"
+  },
+  {
+    "term": "もったいない",
+    "definition": "lãng phí, tiếc quá",
+    "image": "https://o.quizlet.com/jA1MDUyQ.iXcK8e9YEDcIA.jpg"
+  },
+  {
+    "term": "無駄（むだ）",
+    "definition": "vô ích, lãng phí",
+    "image": "https://o.quizlet.com/DTH6cywgYFnTYbVy-1vOYg.png"
+  },
+  {
+    "term": "断る（ことわる）",
+    "definition": "từ chối",
+    "image": "https://o.quizlet.com/IhHEwL9X4ENaW4rmvPJWJw.jpg"
+  },
+  {
+    "term": "危険（きけん）",
+    "definition": "nguy hiểm",
+    "image": "https://o.quizlet.com/j-w8FMYgncojADw65peEbQ.jpg"
+  },
+  {
+    "term": "遊園地（ゆうえんち）",
+    "definition": "công viên giải trí",
+    "image": "https://o.quizlet.com/nxiGQZKD7T61MeGpHH6q1g.jpg"
+  },
+  {
+    "term": "登山（とざん）",
+    "definition": "leo núi",
+    "image": "https://o.quizlet.com/lH9ptumh8ZlDMQX2j5kwcg.jpg"
+  },
+  {
+    "term": "転勤（てんきん）",
+    "definition": "chuyển công tác",
+    "image": "https://o.quizlet.com/-RU3rQ88xuBFl7LddehH8A.png"
+  },
+  {
+    "term": "転校（てんこう）",
+    "definition": "chuyển trường",
+    "image": "https://o.quizlet.com/EjtcXNJovp.u-d6UTi1lGw.png"
+  },
+  {
+    "term": "節約する（せつやくする）",
+    "definition": "tiết kiệm",
+    "image": "https://o.quizlet.com/Gvs0xsKW9UWxI08Gu5AiQQ.png"
+  },
+  {
+    "term": "調節する（ちょうせつする）",
+    "definition": "điều chỉnh",
+    "image": "https://o.quizlet.com/nWdCABZETn.6bAYOO83iLw.jpg"
+  },
+  {
+    "term": "生かす（いかす）",
+    "definition": "tận dụng, phát huy",
+    "image": "https://o.quizlet.com/fwVsKSTLBATNyw2nLRMK4Q.jpg"
+  },
+  {
+    "term": "浪費する（ろうひする）",
+    "definition": "lãng phí",
+    "image": "https://o.quizlet.com/WR55IoRoAzkFRdedl3C01g.jpg"
+  },
+  {
+    "term": "過ぎる（すぎる）",
+    "definition": "quá mức, quá",
+    "image": "https://o.quizlet.com/jAXWFoDqfwRZNrKBV9t1Fg.png"
+  },
+  {
+    "term": "過ごす（すごす）",
+    "definition": "trải qua (thời gian), sống",
+    "image": "https://o.quizlet.com/kpYXUPFnWcMcY7Tu9Ir-Gw.png"
+  },
+  {
+    "term": "勤める（つとめる）",
+    "definition": "khuyên, đề nghị",
+    "image": "https://o.quizlet.com/HfjtfgYpZOriqKJbhYOadA.png"
+  },
+  {
+    "term": "努める（つとめる）",
+    "definition": "cố gắng, nỗ lực",
+    "image": "https://o.quizlet.com/CyEpzor2xyKaP1RtgCfO5g.png"
+  },
+  {
+    "term": "振り返る（ふりかえる）",
+    "definition": "nhìn lại, hồi tưởng",
+    "image": "https://o.quizlet.com/OIpHHEXLzLEb6wkVxIPKmg.jpg"
+  },
+  {
+    "term": "結構（けっこう）",
+    "definition": "khá, ổn; đủ rồi",
+    "image": "https://o.quizlet.com/i/AVSwADc4M13pEr-w8WWNAA.jpg"
+  },
+  {
+    "term": "浮かぶ（うかぶ）",
+    "definition": "nổi lên, hiện ra",
+    "image": "https://o.quizlet.com/yKYOCbmmJ6hLiYNi-VG6LA.png"
+  },
+  {
+    "term": "浮く（うく）",
+    "definition": "nổi, lơ lửng",
+    "image": "https://o.quizlet.com/IDHLGVtyEPTIqEWnqTu1JQ.jpg"
+  },
+  {
+    "term": "手帳（てちょう）",
+    "definition": "sổ tay",
+    "image": "https://o.quizlet.com/4j.UBRJcz3KzGLmn-nTTEA.jpg"
+  },
+  {
+    "term": "落ち着く（おちつく）",
+    "definition": "bình tĩnh, ổn định",
+    "image": "https://o.quizlet.com/JwUTQaFO.fHyPPWIW5UZUg.png"
+  },
+  {
+    "term": "冷静（れいせい）",
+    "definition": "bình tĩnh, điềm tĩnh",
+    "image": "https://o.quizlet.com/E-oYLK8O2orfXqyaaFVJ5g.png"
+  },
+  {
+    "term": "慌てる（あわてる）",
+    "definition": "hoảng hốt, cuống lên",
+    "image": "https://o.quizlet.com/P7jX-p42YlLopaCRq8DT-Q.png"
+  },
+  {
+    "term": "余裕（よゆう）",
+    "definition": "dư dả, thong thả",
+    "image": "https://o.quizlet.com/dVXOHtFGKEwQ7zc0m89jiA.png"
+  },
+  {
+    "term": "見直す（みなおす）",
+    "definition": "xem lại, đánh giá lại",
+    "image": "https://o.quizlet.com/VERxIB2yJgsHm3CcCrJS8w.png"
+  },
+  {
+    "term": "だらだら",
+    "definition": "lề mề, kéo dài, uể oải",
+    "image": "https://o.quizlet.com/hbj80ESy0vghz0COzaFh2A.jpg"
+  },
+  {
+    "term": "あっという間に",
+    "definition": "trong chớp mắt, thoáng cái",
+    "image": "https://o.quizlet.com/CZS-8OWVo4NRgZoVk39Byg.png"
+  },
+  {
+    "term": "リズム",
+    "definition": "nhịp điệu",
+    "image": "https://o.quizlet.com/WguaX.yKiVSMcIztUMt7EQ.png"
+  },
+  {
+    "term": "頑張る（がんばる）",
+    "definition": "cố gắng",
+    "image": "https://o.quizlet.com/pymASIMu0ABJ4Au8yqb6zA.png"
+  },
+  {
+    "term": "技術（ぎじゅつ）",
+    "definition": "kỹ thuật",
+    "image": "https://o.quizlet.com/A.J.99jqgoqRN3eP8MbiVg.png"
+  },
+  {
+    "term": "知識（ちしき）",
+    "definition": "kiến thức",
+    "image": "https://o.quizlet.com/.zX.3448cKPbIFB-ugWuqw.png"
+  },
+  {
+    "term": "残る（のこる）",
+    "definition": "còn lại",
+    "image": "https://o.quizlet.com/GPy8QDVmTLxFt-nCMZJI1g.jpg"
+  },
+  {
+    "term": "残す（のこす）",
+    "definition": "để lại",
+    "image": "https://o.quizlet.com/KINjDQt7LEfSvSlq1U9kEg.jpg"
+  },
+  {
+    "term": "理解（りかい）",
+    "definition": "hiểu, sự hiểu biết",
+    "image": "https://o.quizlet.com/1fVz-gM6KrjqrtruPU9tAA.png"
+  },
+  {
+    "term": "勝手（かって）",
+    "definition": "tùy tiện, ích kỷ",
+    "image": "https://o.quizlet.com/SIejZlKYlf-mI0gfxIulUg.png"
+  },
+  {
+    "term": "剥く（むく）",
+    "definition": "gọt, bóc (vỏ)",
+    "image": "https://o.quizlet.com/wNlrPvfArxeWMqV2yDNwnw.jpg"
+  }
+]
