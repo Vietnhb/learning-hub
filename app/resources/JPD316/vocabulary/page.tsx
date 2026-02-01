@@ -188,9 +188,9 @@ export default function VocabularyPage() {
 
                   {!isFlipped ? (
                     // Front - Japanese term with traditional styling
-                    <div className="text-center space-y-8 relative z-10">
+                    <div className="text-center space-y-6 relative z-10">
                       {currentCard.image && (
-                        <div className="relative w-56 h-56 mx-auto mb-6 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
+                        <div className="relative w-48 h-48 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
                           <Image
                             src={currentCard.image}
                             alt={currentCard.term}
@@ -202,13 +202,13 @@ export default function VocabularyPage() {
                       )}
                       <div className="relative">
                         <div className="absolute inset-0 bg-japan-indigo/5 blur-3xl"></div>
-                        <h2 className="text-7xl font-black font-japanese-serif text-japan-charcoal leading-tight relative">
+                        <h2 className="text-5xl font-black font-japanese-serif text-japan-charcoal leading-tight relative">
                           {currentCard.term}
                         </h2>
                       </div>
-                      <div className="flex items-center justify-center gap-3 text-japan-indigo mt-8">
+                      <div className="flex items-center justify-center gap-3 text-japan-indigo mt-6">
                         <div className="w-2 h-2 bg-japan-indigo rounded-full animate-pulse"></div>
-                        <p className="text-lg font-medium font-japanese">
+                        <p className="text-base font-medium font-japanese">
                           Nhấn để xem nghĩa tiếng Việt
                         </p>
                         <div className="w-2 h-2 bg-japan-indigo rounded-full animate-pulse"></div>
@@ -216,9 +216,9 @@ export default function VocabularyPage() {
                     </div>
                   ) : (
                     // Back - Vietnamese definition with traditional style
-                    <div className="text-center space-y-8 relative z-10">
+                    <div className="text-center space-y-6 relative z-10">
                       {currentCard.image && (
-                        <div className="relative w-56 h-56 mx-auto mb-6 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
+                        <div className="relative w-48 h-48 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
                           <Image
                             src={currentCard.image}
                             alt={currentCard.term}
@@ -228,12 +228,12 @@ export default function VocabularyPage() {
                           />
                         </div>
                       )}
-                      <div className="bg-japan-cream border-4 border-japan-green rounded-2xl p-8 shadow-inner">
-                        <h2 className="text-5xl font-bold text-japan-green leading-relaxed font-japanese mb-6">
+                      <div className="bg-japan-cream border-4 border-japan-green rounded-2xl p-6 shadow-inner">
+                        <h2 className="text-3xl font-bold text-japan-green leading-relaxed font-japanese mb-4">
                           {currentCard.definition}
                         </h2>
-                        <div className="pt-6 border-t-2 border-japan-gold/50">
-                          <p className="text-4xl text-japan-charcoal font-bold font-japanese-serif">
+                        <div className="pt-4 border-t-2 border-japan-gold/50">
+                          <p className="text-2xl text-japan-charcoal font-bold font-japanese-serif">
                             {currentCard.term}
                           </p>
                         </div>
@@ -384,7 +384,7 @@ export default function VocabularyPage() {
 
                     {/* Image */}
                     {card.image && (
-                      <div className="relative w-28 h-28 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-2 border-japan-gold/30">
+                      <div className="relative w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-2 border-japan-gold/30">
                         <Image
                           src={card.image}
                           alt={card.term}
@@ -397,10 +397,10 @@ export default function VocabularyPage() {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-2xl font-bold text-japan-charcoal mb-2 leading-tight font-japanese-serif">
+                      <h3 className="text-xl font-bold text-japan-charcoal mb-1 leading-tight font-japanese-serif">
                         {card.term}
                       </h3>
-                      <p className="text-xl text-japan-charcoal/80 font-medium font-japanese">
+                      <p className="text-lg text-japan-charcoal/80 font-medium font-japanese">
                         {card.definition}
                       </p>
                     </div>

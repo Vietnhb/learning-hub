@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
@@ -9,6 +9,7 @@ import {
   Shuffle,
   ArrowLeft,
   BookOpen,
+  ArrowDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -26,9 +27,34 @@ export default function KanjiPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [cards, setCards] = useState<KanjiCard[]>(kanjiData);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const currentCard = cards[currentIndex];
   const progress = ((currentIndex + 1) / cards.length) * 100;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToCurrentCard = () => {
+    const cardElement = cardRefs.current[currentIndex];
+    if (cardElement) {
+      const offset = 100;
+      const elementPosition = cardElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleNext = () => {
     if (currentIndex < cards.length - 1) {
@@ -331,6 +357,9 @@ export default function KanjiPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.005 }}
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
                 onClick={() => {
                   setCurrentIndex(index);
                   setIsFlipped(false);
@@ -398,6 +427,31 @@ export default function KanjiPage() {
           </div>
         </motion.div>
       </div>
+
+      {/* Floating scroll to current card button */}
+      <AnimatePresence>
+        {showScrollButton && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-8 right-8 z-50"
+          >
+            <Button
+              onClick={scrollToCurrentCard}
+              size="lg"
+              className="rounded-full w-16 h-16 shadow-2xl bg-red-500 hover:bg-red-600 border-4 border-white group relative"
+              title="Cuộn đến kanji đang học"
+            >
+              <ArrowDown className="w-7 h-7 text-white animate-bounce" />
+              <span className="absolute -top-12 right-0 bg-japan-charcoal text-white px-3 py-1 rounded-lg text-sm font-japanese opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+                Cuộn đến kanji đang học
+              </span>
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
