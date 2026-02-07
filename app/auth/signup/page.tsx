@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import {
+  validateEmail,
+  validatePassword,
+  validateFullName,
+} from "@/lib/validation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -43,15 +48,24 @@ export default function SignUpPage() {
     setError("");
     setLoading(true);
 
-    // Validation
-    if (!email || !password || !fullName) {
-      setError("Vui lòng điền đầy đủ thông tin");
+    // Validation chi tiết
+    const emailError = validateEmail(email);
+    if (emailError) {
+      setError(emailError);
       setLoading(false);
       return;
     }
 
-    if (password.length < 6) {
-      setError("Mật khẩu phải có ít nhất 6 ký tự");
+    const fullNameError = validateFullName(fullName);
+    if (fullNameError) {
+      setError(fullNameError);
+      setLoading(false);
+      return;
+    }
+
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      setError(passwordError);
       setLoading(false);
       return;
     }
@@ -63,6 +77,10 @@ export default function SignUpPage() {
     }
 
     try {
+      // Check email tồn tại bằng cách query bảng auth.users (thông qua RPC hoặc admin API)
+      // Vì RLS không cho phép query trực tiếp auth.users, ta sử dụng signInWithPassword để check
+      // Nếu email đã tồn tại và chưa verify, Supabase sẽ cho phép đăng ký lại
+
       // Đăng ký user
       const { data, error: signUpError } = await supabase.auth.signUp({
         email,
@@ -75,9 +93,34 @@ export default function SignUpPage() {
         },
       });
 
-      if (signUpError) throw signUpError;
+      if (signUpError) {
+        // Xử lý các loại lỗi cụ thể
+        if (signUpError.message.includes("User already registered")) {
+          throw new Error(
+            "Email này đã được đăng ký. Vui lòng đăng nhập hoặc sử dụng email khác.",
+          );
+        } else if (
+          signUpError.message.includes("already registered") ||
+          signUpError.message.includes("already exists")
+        ) {
+          throw new Error(
+            "Email này đã tồn tại trong hệ thống. Vui lòng đăng nhập.",
+          );
+        } else if (signUpError.message.includes("Invalid email")) {
+          throw new Error("Email không hợp lệ. Vui lòng kiểm tra lại.");
+        } else {
+          throw signUpError;
+        }
+      }
 
       if (data.user) {
+        // Kiểm tra nếu user đã tồn tại nhưng chưa verify
+        if (data.user.identities && data.user.identities.length === 0) {
+          throw new Error(
+            "Email này đã được đăng ký nhưng chưa xác thực. Vui lòng kiểm tra email để xác thực tài khoản.",
+          );
+        }
+
         // Bắt đầu cooldown
         startCooldown();
         setSuccess(true);

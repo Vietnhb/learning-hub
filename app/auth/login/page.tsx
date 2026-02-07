@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { validateEmail, validatePassword } from "@/lib/validation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -35,6 +36,21 @@ export default function LoginPage() {
     setLoading(true);
     setNeedsVerification(false);
 
+    // Validation
+    const emailError = validateEmail(email);
+    if (emailError) {
+      setError(emailError);
+      setLoading(false);
+      return;
+    }
+
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      setError(passwordError);
+      setLoading(false);
+      return;
+    }
+
     try {
       const { data, error: signInError } =
         await supabase.auth.signInWithPassword({
@@ -48,6 +64,12 @@ export default function LoginPage() {
           setNeedsVerification(true);
           setError(
             "Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.",
+          );
+        } else if (signInError.message.includes("Invalid login credentials")) {
+          setError("Email hoặc mật khẩu không đúng. Vui lòng thử lại.");
+        } else if (signInError.message.includes("Email not found")) {
+          setError(
+            "Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.",
           );
         } else {
           setError(signInError.message || "Đăng nhập thất bại");

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { validatePassword } from "@/lib/validation";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
@@ -54,8 +55,9 @@ export default function ResetPasswordPage() {
     setLoading(true);
 
     // Validation
-    if (password.length < 6) {
-      setError("Mật khẩu phải có ít nhất 6 ký tự");
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      setError(passwordError);
       setLoading(false);
       return;
     }

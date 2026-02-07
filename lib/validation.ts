@@ -1,3 +1,38 @@
+export const validateEmail = (email: string): string | null => {
+  if (!email || email.trim().length === 0) {
+    return "Email không được để trống";
+  }
+
+  // Regex kiểm tra email cơ bản
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return "Email không đúng định dạng";
+  }
+
+  // Kiểm tra độ dài
+  if (email.length > 254) {
+    return "Email quá dài (tối đa 254 ký tự)";
+  }
+
+  return null;
+};
+
+export const validatePassword = (password: string): string | null => {
+  if (!password || password.length === 0) {
+    return "Mật khẩu không được để trống";
+  }
+
+  if (password.length < 6) {
+    return "Mật khẩu phải có ít nhất 6 ký tự";
+  }
+
+  if (password.length > 72) {
+    return "Mật khẩu quá dài (tối đa 72 ký tự)";
+  }
+
+  return null;
+};
+
 export const validateFullName = (name: string): string | null => {
   if (!name || name.trim().length === 0) {
     return "Họ và tên không được để trống";

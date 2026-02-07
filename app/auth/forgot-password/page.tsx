@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { validateEmail } from "@/lib/validation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -37,6 +38,14 @@ export default function ForgotPasswordPage() {
     setError("");
     setLoading(true);
 
+    // Validation
+    const emailError = validateEmail(email);
+    if (emailError) {
+      setError(emailError);
+      setLoading(false);
+      return;
+    }
+
     try {
       const { error: resetError } = await supabase.auth.resetPasswordForEmail(
         email,
@@ -45,7 +54,15 @@ export default function ForgotPasswordPage() {
         },
       );
 
-      if (resetError) throw resetError;
+      if (resetError) {
+        if (
+          resetError.message.includes("User not found") ||
+          resetError.message.includes("not found")
+        ) {
+          throw new Error("Email này chưa được đăng ký trong hệ thống.");
+        }
+        throw resetError;
+      }
 
       startCooldown();
       setSuccess(true);
