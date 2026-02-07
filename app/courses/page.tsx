@@ -59,7 +59,7 @@ export default function CoursesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -67,8 +67,8 @@ export default function CoursesPage() {
           animate={{ y: 0, opacity: 1 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Khóa Học</h1>
-          <p className="text-gray-600 text-lg">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Khóa Học</h1>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Khám phá các khóa học chất lượng cao được thiết kế cho mọi trình độ
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function CoursesPage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="hover:shadow-xl transition-all hover:scale-[1.02] cursor-pointer">
+              <Card className="hover:shadow-xl transition-all hover:scale-[1.02] cursor-pointer dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <div className="flex items-start gap-4">
                     <div className="text-6xl">{course.image}</div>
@@ -101,7 +101,7 @@ export default function CoursesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
                         {course.students} học viên
@@ -111,8 +111,8 @@ export default function CoursesPage() {
                         {course.duration}
                       </span>
                     </div>
-                    <div className="flex items-center justify-between pt-3 border-t">
-                      <span className="text-sm text-gray-600">
+                    <div className="flex items-center justify-between pt-3 border-t dark:border-gray-700">
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
                         <BookOpen className="w-4 h-4 inline mr-1" />
                         {course.instructor}
                       </span>

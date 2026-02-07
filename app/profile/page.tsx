@@ -110,8 +110,8 @@ export default function ProfilePage() {
 
   if (authLoading || loadingProfile) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center">
-        <Loader2 className="w-12 h-12 animate-spin text-pink-500" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+        <Loader2 className="w-12 h-12 animate-spin text-blue-600 dark:text-blue-400" />
       </div>
     );
   }
@@ -119,7 +119,7 @@ export default function ProfilePage() {
   if (!authUser || !profile) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Back Button */}
         <motion.div
@@ -140,12 +140,12 @@ export default function ProfilePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <Card className="border-2 border-pink-200 shadow-xl">
+          <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <CardHeader className="text-center">
-              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-4">
+              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4">
                 <User className="w-12 h-12 text-white" />
               </div>
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
                 Thông tin cá nhân
               </CardTitle>
               <CardDescription className="text-base mt-2">
@@ -159,7 +159,7 @@ export default function ProfilePage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />
                     Email
@@ -169,9 +169,9 @@ export default function ProfilePage() {
                     type="email"
                     value={profile.email}
                     readOnly
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-gray-50 text-gray-500 cursor-not-allowed"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                   />
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     Email không thể thay đổi
                   </p>
                 </div>
@@ -180,7 +180,7 @@ export default function ProfilePage() {
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
                   >
                     <User className="w-4 h-4" />
                     Họ và tên <span className="text-red-500">*</span>
@@ -190,10 +190,10 @@ export default function ProfilePage() {
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.full_name
-                        ? "border-red-300 focus:border-red-400"
-                        : "border-gray-200 focus:border-pink-400"
+                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
+                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
                     placeholder="Nguyễn Văn A"
                     required
@@ -209,7 +209,7 @@ export default function ProfilePage() {
                 <div>
                   <label
                     htmlFor="dateOfBirth"
-                    className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
                   >
                     <Calendar className="w-4 h-4" />
                     Ngày sinh <span className="text-red-500">*</span>
@@ -219,10 +219,10 @@ export default function ProfilePage() {
                     type="date"
                     value={dateOfBirth}
                     onChange={(e) => setDateOfBirth(e.target.value)}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.date_of_birth
-                        ? "border-red-300 focus:border-red-400"
-                        : "border-gray-200 focus:border-pink-400"
+                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
+                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
                     required
                   />
@@ -235,16 +235,16 @@ export default function ProfilePage() {
 
                 {/* Role (Read-only) */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                     <Shield className="w-4 h-4" />
                     Vai trò
                   </label>
-                  <div className="px-4 py-3 border-2 border-gray-200 rounded-lg bg-gray-50">
-                    <span className="text-gray-700 font-medium">
+                  <div className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">
                       {profile.role_id === 1 ? "👑 Admin" : "👤 User"}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     Vai trò do quản trị viên quản lý
                   </p>
                 </div>
@@ -269,7 +269,7 @@ export default function ProfilePage() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white py-6 text-lg font-semibold"
+                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 text-lg font-semibold shadow-md transition-all"
                 >
                   {loading ? (
                     <>
@@ -286,12 +286,12 @@ export default function ProfilePage() {
               </form>
 
               {/* Info Section */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-900 mb-2">
+              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
                     ℹ️ Thông tin tài khoản
                   </h4>
-                  <ul className="text-sm text-blue-800 space-y-1">
+                  <ul className="text-sm text-blue-800 dark:text-blue-300 space-y-1">
                     <li>• Email không thể thay đổi sau khi đăng ký</li>
                     <li>• Vai trò của bạn do quản trị viên quản lý</li>
                     <li>• Thông tin cá nhân được bảo mật theo chính sách</li>
@@ -309,12 +309,12 @@ export default function ProfilePage() {
           transition={{ delay: 0.2 }}
           className="mt-6"
         >
-          <Card className="border border-gray-200">
+          <Card className="border dark:bg-gray-800 dark:border-gray-700">
             <CardContent className="pt-6">
-              <h3 className="font-semibold text-gray-900 mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
                 Thông tin tài khoản
               </h3>
-              <div className="space-y-3 text-sm text-gray-600">
+              <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex justify-between">
                   <span>Ngày tạo:</span>
                   <span className="font-medium">

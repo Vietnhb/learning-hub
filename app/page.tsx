@@ -41,9 +41,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 dark:from-purple-800 dark:via-pink-800 dark:to-red-800 text-white py-20">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -123,7 +123,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-center text-gray-900 mb-4"
+            className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-4"
           >
             Danh Mục Tài Nguyên
           </motion.h2>
@@ -131,7 +131,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center text-gray-600 mb-12 text-lg"
+            className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg"
           ></motion.p>
           <motion.div
             variants={containerVariants}
@@ -204,16 +204,16 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 border-2 border-orange-300 bg-orange-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 border-2 border-orange-300 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <Languages className="w-12 h-12 text-orange-500" />
+                    <Languages className="w-12 h-12 text-orange-500 dark:text-orange-400" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     Ngoại Ngữ - JPD316
                   </CardTitle>
                   <CardDescription>
@@ -221,7 +221,7 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm font-semibold text-orange-600">
+                  <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
                     ✓ Đang có sẵn
                   </span>
                 </CardContent>

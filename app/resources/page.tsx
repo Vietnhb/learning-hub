@@ -28,7 +28,7 @@ export default function ResourcesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -36,10 +36,10 @@ export default function ResourcesPage() {
           animate={{ y: 0, opacity: 1 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Tài Nguyên Học Tập
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Hiện tại: Giáo trình Tiếng Nhật JPD316
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ export default function ResourcesPage() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="bg-white rounded-lg shadow-md p-6 mb-8"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8 border dark:border-gray-700"
         >
           <div className="flex gap-4 flex-wrap">
             <div className="flex-1 min-w-[300px]">
@@ -58,7 +58,7 @@ export default function ResourcesPage() {
                 <input
                   type="text"
                   placeholder="Tìm kiếm tài liệu..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function ResourcesPage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="hover:shadow-xl transition-shadow">
+              <Card className="hover:shadow-xl transition-shadow dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <span className="flex items-center gap-1">
                         <Download className="w-4 h-4" />
                         {resource.downloads}
