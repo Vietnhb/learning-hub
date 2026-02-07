@@ -23,13 +23,26 @@ interface KanjiCard {
   image: string | null;
 }
 
+interface Lesson {
+  lesson: number;
+  kanji: KanjiCard[];
+}
+
+interface KanjiData {
+  series: string;
+  lessons: Lesson[];
+}
+
 export default function KanjiPage() {
+  const [selectedLesson, setSelectedLesson] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [cards, setCards] = useState<KanjiCard[]>(kanjiData);
   const [showScrollButton, setShowScrollButton] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  const data: KanjiData = kanjiData;
+  const lessons = data.lessons;
+  const cards = lessons[selectedLesson].kanji;
   const currentCard = cards[currentIndex];
   const progress = ((currentIndex + 1) / cards.length) * 100;
 
@@ -77,12 +90,17 @@ export default function KanjiPage() {
   const handleReset = () => {
     setCurrentIndex(0);
     setIsFlipped(false);
-    setCards(kanjiData);
   };
 
   const handleShuffle = () => {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    setCards(shuffled);
+    // Note: Shuffle functionality removed as it conflicts with lesson-based organization
+    // Cards are now organized by lessons
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  };
+
+  const handleLessonChange = (lessonIndex: number) => {
+    setSelectedLesson(lessonIndex);
     setCurrentIndex(0);
     setIsFlipped(false);
   };
@@ -111,15 +129,26 @@ export default function KanjiPage() {
             >
               <RotateCcw className="w-4 h-4" />
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={handleShuffle}
-              title="Xáo trộn"
-              className="shadow-md hover:shadow-lg transition-all bg-white border-japan-red hover:bg-japan-cream"
-            >
-              <Shuffle className="w-4 h-4" />
-            </Button>
+          </div>
+        </div>
+
+        {/* Lesson Selector */}
+        <div className="mb-6 bg-white rounded-lg p-4 shadow-md border-2 border-japan-red/20">
+          <div className="flex gap-2 flex-wrap justify-center">
+            {lessons.map((lesson, index) => (
+              <Button
+                key={index}
+                onClick={() => handleLessonChange(index)}
+                variant={selectedLesson === index ? "default" : "outline"}
+                className={`font-bold font-japanese ${
+                  selectedLesson === index
+                    ? "bg-japan-red hover:bg-japan-red text-white"
+                    : "border-japan-red text-japan-red hover:bg-japan-cream"
+                }`}
+              >
+                Bài {lesson.lesson}
+              </Button>
+            ))}
           </div>
         </div>
 
@@ -144,6 +173,9 @@ export default function KanjiPage() {
                   <span className="text-2xl text-white font-bold">日</span>
                 </div>
               </div>
+              <p className="text-lg text-japan-red font-bold font-japanese mb-1">
+                Bài {lessons[selectedLesson].lesson}
+              </p>
               <p className="text-base text-japan-charcoal font-medium font-japanese">
                 Chữ số {currentIndex + 1} / {cards.length}
               </p>
