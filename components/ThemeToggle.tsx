@@ -28,7 +28,9 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="w-9 h-9"
-      title={theme === "dark" ? "Chuyển sang theme sáng" : "Chuyển sang theme tối"}
+      title={
+        theme === "dark" ? "Chuyển sang theme sáng" : "Chuyển sang theme tối"
+      }
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-500 transition-all" />
