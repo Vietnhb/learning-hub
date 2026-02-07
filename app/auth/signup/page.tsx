@@ -165,13 +165,13 @@ export default function SignUpPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 flex items-center justify-center p-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-md w-full"
         >
-          <Card className="border-2 border-green-200 shadow-xl">
+          <Card className="border border-green-300 shadow-lg">
             <CardHeader className="text-center">
               <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-10 h-10 text-green-600" />
@@ -221,7 +221,7 @@ export default function SignUpPage() {
               <div className="text-center pt-4">
                 <Link
                   href="/auth/login"
-                  className="text-pink-600 hover:text-pink-700 font-medium"
+                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
                 >
                   Quay lại trang đăng nhập →
                 </Link>
@@ -234,18 +234,18 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-md w-full"
       >
-        <Card className="border-2 border-pink-200 shadow-xl">
+        <Card className="border shadow-lg">
           <CardHeader className="text-center">
-            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4">
               <User className="w-10 h-10 text-white" />
             </div>
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+            <CardTitle className="text-3xl font-bold text-gray-900">
               Đăng ký tài khoản
             </CardTitle>
             <CardDescription className="text-base mt-2">
@@ -266,7 +266,7 @@ export default function SignUpPage() {
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-pink-400 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
                     placeholder="Nguyễn Văn A"
                     required
                   />
@@ -284,7 +284,7 @@ export default function SignUpPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-pink-400 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
                     placeholder="email@example.com"
                     required
                   />
@@ -302,7 +302,7 @@ export default function SignUpPage() {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-pink-400 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
                     placeholder="••••••••"
                     minLength={6}
                     required
@@ -322,7 +322,7 @@ export default function SignUpPage() {
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-pink-400 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
                     placeholder="••••••••"
                     required
                   />
@@ -341,7 +341,7 @@ export default function SignUpPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white py-6 text-lg font-semibold"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 text-lg font-semibold shadow-md transition-all"
               >
                 {loading ? (
                   <>
@@ -360,7 +360,7 @@ export default function SignUpPage() {
                 Đã có tài khoản?{" "}
                 <Link
                   href="/auth/login"
-                  className="text-pink-600 hover:text-pink-700 font-semibold"
+                  className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                 >
                   Đăng nhập ngay
                 </Link>
