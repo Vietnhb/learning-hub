@@ -38,12 +38,13 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="flex flex-col min-h-screen font-japanese bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+      <body className="flex flex-col min-h-screen font-japanese bg-background text-foreground transition-colors">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark", "catppuccin"]}
         >
           <AuthProvider>
             <Navbar />

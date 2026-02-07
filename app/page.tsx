@@ -141,7 +141,7 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
@@ -150,7 +150,7 @@ export default function Home() {
                   >
                     <BookOpen className="w-12 h-12 text-gray-400" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Sách & Giáo trình
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>

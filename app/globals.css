@@ -56,6 +56,33 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .catppuccin {
+    --background: 228 24% 12%;
+    --foreground: 227 68% 88%;
+    --card: 232 23% 18%;
+    --card-foreground: 227 68% 88%;
+    --popover: 232 23% 18%;
+    --popover-foreground: 227 68% 88%;
+    --primary: 217 92% 76%;
+    --primary-foreground: 228 24% 12%;
+    --secondary: 233 12% 39%;
+    --secondary-foreground: 227 68% 88%;
+    --muted: 233 12% 39%;
+    --muted-foreground: 226 64% 88%;
+    --accent: 267 84% 81%;
+    --accent-foreground: 228 24% 12%;
+    --destructive: 343 81% 75%;
+    --destructive-foreground: 227 68% 88%;
+    --border: 233 12% 39%;
+    --input: 233 12% 39%;
+    --ring: 267 84% 81%;
+    --chart-1: 217 92% 76%;
+    --chart-2: 197 97% 75%;
+    --chart-3: 115 54% 76%;
+    --chart-4: 31 77% 75%;
+    --chart-5: 350 79% 80%;
+  }
 }
 
 @layer base {
