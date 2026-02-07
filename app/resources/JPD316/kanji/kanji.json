@@ -718,7 +718,245 @@
     },
     {
       "lesson": 3,
-      "kanji": []
+      "kanji": [
+        {
+          "term": "活動",
+          "definition": "（かつどう）hoạt động",
+          "image": null
+        },
+        {
+          "term": "活発",
+          "definition": "（かっぱつ）sôi nổi, năng động",
+          "image": null
+        },
+        {
+          "term": "活気",
+          "definition": "（かっき）sinh khí, sức sống",
+          "image": null
+        },
+        {
+          "term": "活用",
+          "definition": "（かつよう）ứng dụng, vận dụng",
+          "image": null
+        },
+        {
+          "term": "生活",
+          "definition": "（せいかつ）cuộc sống",
+          "image": null
+        },
+
+        { "term": "他国", "definition": "（たこく）nước khác", "image": null },
+        {
+          "term": "他方",
+          "definition": "（たほう）phía khác, mặt khác",
+          "image": null
+        },
+        { "term": "他人", "definition": "（たにん）người khác", "image": null },
+        { "term": "他用", "definition": "（たよう）việc khác", "image": null },
+
+        { "term": "効果", "definition": "（こうか）hiệu quả", "image": null },
+        {
+          "term": "効力",
+          "definition": "（こうりょく）hiệu lực",
+          "image": null
+        },
+        {
+          "term": "効験",
+          "definition": "（こうけん）hiệu nghiệm",
+          "image": null
+        },
+        {
+          "term": "有効",
+          "definition": "（ゆうこう）có hiệu quả",
+          "image": null
+        },
+        { "term": "無効", "definition": "（むこう）vô hiệu", "image": null },
+        {
+          "term": "発効",
+          "definition": "（はっこう）có hiệu lực",
+          "image": null
+        },
+
+        { "term": "準備", "definition": "（じゅんび）chuẩn bị", "image": null },
+        {
+          "term": "水準",
+          "definition": "（すいじゅん）tiêu chuẩn, mức độ",
+          "image": null
+        },
+        { "term": "備考", "definition": "（びこう）ghi chú", "image": null },
+        { "term": "予備", "definition": "（よび）dự bị", "image": null },
+
+        {
+          "term": "解決",
+          "definition": "（かいけつ）giải quyết",
+          "image": null
+        },
+        {
+          "term": "解放",
+          "definition": "（かいほう）giải phóng",
+          "image": null
+        },
+        {
+          "term": "解答",
+          "definition": "（かいとう）câu trả lời",
+          "image": null
+        },
+        {
+          "term": "解消",
+          "definition": "（かいしょう）giải tỏa",
+          "image": null
+        },
+        {
+          "term": "解説",
+          "definition": "（かいせつ）giải thích",
+          "image": null
+        },
+        {
+          "term": "正解",
+          "definition": "（せいかい）đáp án đúng",
+          "image": null
+        },
+        { "term": "読解", "definition": "（どっかい）đọc hiểu", "image": null },
+        { "term": "理解", "definition": "（りかい）hiểu", "image": null },
+
+        {
+          "term": "勤勉",
+          "definition": "（きんべん）siêng năng, chăm chỉ",
+          "image": null
+        },
+        { "term": "通勤", "definition": "（つうきん）đi làm", "image": null },
+        {
+          "term": "出勤",
+          "definition": "（しゅっきん）đi làm (đến chỗ làm)",
+          "image": null
+        },
+        { "term": "欠勤", "definition": "（けっきん）nghỉ làm", "image": null },
+        { "term": "勤務", "definition": "（きんむ）công việc", "image": null },
+        {
+          "term": "事務所",
+          "definition": "（じむしょ）văn phòng",
+          "image": null
+        },
+        {
+          "term": "公務員",
+          "definition": "（こうむいん）công chức",
+          "image": null
+        },
+
+        {
+          "term": "性別",
+          "definition": "（せいべつ）giới tính",
+          "image": null
+        },
+        {
+          "term": "性格",
+          "definition": "（せいかく）tính cách",
+          "image": null
+        },
+        {
+          "term": "性質",
+          "definition": "（せいしつ）tính chất",
+          "image": null
+        },
+        { "term": "男性", "definition": "（だんせい）nam giới", "image": null },
+        { "term": "女性", "definition": "（じょせい）nữ giới", "image": null },
+
+        {
+          "term": "活性",
+          "definition": "（かっせい）hoạt tính",
+          "image": null
+        },
+        {
+          "term": "終結",
+          "definition": "（しゅうけつ）kết thúc",
+          "image": null
+        },
+        {
+          "term": "結局",
+          "definition": "（けっきょく）kết cục, cuối cùng",
+          "image": null
+        },
+        { "term": "結合", "definition": "（けつごう）kết hợp", "image": null },
+        { "term": "結果", "definition": "（けっか）kết quả", "image": null },
+
+        {
+          "term": "将来",
+          "definition": "（しょうらい）tương lai",
+          "image": null
+        },
+        {
+          "term": "大将",
+          "definition": "（たいしょう）đại tướng",
+          "image": null
+        },
+        {
+          "term": "主将",
+          "definition": "（しゅしょう）chủ tướng, đội trưởng",
+          "image": null
+        },
+
+        {
+          "term": "信用",
+          "definition": "（しんよう）tín dụng, tin tưởng",
+          "image": null
+        },
+        {
+          "term": "返信",
+          "definition": "（へんしん）trả lời (thư/tin nhắn)",
+          "image": null
+        },
+        {
+          "term": "通信",
+          "definition": "（つうしん）thông tin liên lạc",
+          "image": null
+        },
+        {
+          "term": "過信",
+          "definition": "（かしん）quá tin tưởng",
+          "image": null
+        },
+
+        { "term": "末っ子", "definition": "（すえっこ）con út", "image": null },
+        {
+          "term": "週末",
+          "definition": "（しゅうまつ）cuối tuần",
+          "image": null
+        },
+        {
+          "term": "月末",
+          "definition": "（げつまつ）cuối tháng",
+          "image": null
+        },
+        { "term": "年末", "definition": "（ねんまつ）cuối năm", "image": null },
+
+        { "term": "記事", "definition": "（きじ）bài báo", "image": null },
+        { "term": "記者", "definition": "（きしゃ）phóng viên", "image": null },
+        { "term": "記入", "definition": "（きにゅう）điền vào", "image": null },
+        { "term": "日記", "definition": "（にっき）nhật ký", "image": null },
+        {
+          "term": "暗記",
+          "definition": "（あんき）học thuộc lòng",
+          "image": null
+        },
+
+        { "term": "段落", "definition": "（だんらく）đoạn văn", "image": null },
+        { "term": "落石", "definition": "（らくせき）đá rơi", "image": null },
+        { "term": "落下", "definition": "（らっか）rơi xuống", "image": null },
+        {
+          "term": "落後",
+          "definition": "（らくご）lạc hậu, tụt lại",
+          "image": null
+        },
+
+        { "term": "器具", "definition": "（きぐ）dụng cụ", "image": null },
+        { "term": "器用", "definition": "（きよう）khéo léo", "image": null },
+        { "term": "楽器", "definition": "（がっき）nhạc cụ", "image": null },
+        {
+          "term": "機器",
+          "definition": "（きき）thiết bị, máy móc",
+          "image": null
+        }
+      ]
     }
   ]
 }
