@@ -2,7 +2,9 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Contact Us</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          Contact Us
+        </h1>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 border dark:border-gray-700">
           <form className="space-y-6">
             <div>

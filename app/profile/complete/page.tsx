@@ -100,8 +100,8 @@ export default function CompleteProfilePage() {
 
   if (authLoading || checking) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center">
-        <Loader2 className="w-12 h-12 animate-spin text-pink-500" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+        <Loader2 className="w-12 h-12 animate-spin text-blue-600 dark:text-blue-400" />
       </div>
     );
   }
@@ -109,18 +109,18 @@ export default function CompleteProfilePage() {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-md w-full"
       >
-        <Card className="border-2 border-pink-200 shadow-xl">
+        <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
           <CardHeader className="text-center">
-            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4">
               <User className="w-10 h-10 text-white" />
             </div>
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+            <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
               Hoàn thiện thông tin
             </CardTitle>
             <CardDescription className="text-base mt-2">
@@ -134,7 +134,7 @@ export default function CompleteProfilePage() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email
                 </label>
@@ -143,7 +143,7 @@ export default function CompleteProfilePage() {
                   type="email"
                   value={user.email || ""}
                   readOnly
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-gray-50 text-gray-500 cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                 />
               </div>
 
@@ -151,21 +151,21 @@ export default function CompleteProfilePage() {
               <div>
                 <label
                   htmlFor="fullName"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Họ và tên <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
                   <input
                     id="fullName"
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className={`w-full pl-10 pr-4 py-3 border-2 rounded-lg focus:outline-none transition-colors ${
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.full_name
-                        ? "border-red-300 focus:border-red-400"
-                        : "border-gray-200 focus:border-pink-400"
+                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
+                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
                     placeholder="Nguyễn Văn A"
                     required
@@ -182,21 +182,21 @@ export default function CompleteProfilePage() {
               <div>
                 <label
                   htmlFor="dateOfBirth"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Ngày sinh <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
-                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
                   <input
                     id="dateOfBirth"
                     type="date"
                     value={dateOfBirth}
                     onChange={(e) => setDateOfBirth(e.target.value)}
-                    className={`w-full pl-10 pr-4 py-3 border-2 rounded-lg focus:outline-none transition-colors ${
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.date_of_birth
-                        ? "border-red-300 focus:border-red-400"
-                        : "border-gray-200 focus:border-pink-400"
+                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
+                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
                     required
                   />
@@ -206,7 +206,7 @@ export default function CompleteProfilePage() {
                     {errors.date_of_birth}
                   </p>
                 )}
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                   Bạn phải từ 13 tuổi trở lên
                 </p>
               </div>
@@ -223,7 +223,7 @@ export default function CompleteProfilePage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white py-6 text-lg font-semibold"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 text-lg font-semibold shadow-md transition-all"
               >
                 {loading ? (
                   <>
@@ -240,8 +240,8 @@ export default function CompleteProfilePage() {
             </form>
 
             {/* Info Note */}
-            <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <p className="text-sm text-blue-800">
+            <div className="mt-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+              <p className="text-sm text-blue-800 dark:text-blue-300">
                 ℹ️ Thông tin này sẽ được sử dụng để cá nhân hóa trải nghiệm học
                 tập của bạn.
               </p>

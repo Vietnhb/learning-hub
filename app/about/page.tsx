@@ -1,14 +1,14 @@
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Giới Thiệu</h1>
-        <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Giới Thiệu</h1>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 space-y-6 border dark:border-gray-700">
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-3">
               Về Learning Hub
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Learning Hub là nền tảng quản lý tài nguyên học tập được thiết kế
               để giúp bạn tổ chức, lưu trữ và truy cập các tài liệu học tập một
               cách hiệu quả nhất.
@@ -16,8 +16,8 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">Sứ Mệnh</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-3">Sứ Mệnh</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Chúng tôi tin rằng việc học tập sẽ trở nên hiệu quả hơn khi tài
               liệu được tổ chức khoa học và dễ dàng tiếp cận. Sứ mệnh của chúng
               tôi là cung cấp một không gian học tập tối ưu cho mọi người.
@@ -25,10 +25,10 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-3">
               Tính Năng Nổi Bật
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
+            <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 dark:text-gray-300">
               <li>Quản lý tài liệu đa dạng: PDF, Video, Code, Notes</li>
               <li>Phân loại theo chủ đề và môn học</li>
               <li>Tìm kiếm nhanh chóng và chính xác</li>
