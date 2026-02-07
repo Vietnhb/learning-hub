@@ -162,43 +162,47 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <Video className="w-12 h-12 text-gray-400" />
+                    <Video className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Video Bài Giảng
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <FileText className="w-12 h-12 text-gray-400" />
+                    <FileText className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Tài Liệu & Notes
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
@@ -229,106 +233,116 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <BookOpen className="w-12 h-12 text-gray-400" />
+                    <BookOpen className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Sách & Giáo trình
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <Video className="w-12 h-12 text-gray-400" />
+                    <Video className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Video Bài Giảng
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <FileText className="w-12 h-12 text-gray-400" />
+                    <FileText className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Tài Liệu & Notes
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <Code className="w-12 h-12 text-gray-400" />
+                    <Code className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Code & Projects
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50">
+              <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 opacity-50 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block"
                   >
-                    <Brain className="w-12 h-12 text-gray-400" />
+                    <Brain className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                   </motion.div>
-                  <CardTitle className="group-hover:text-blue-600 transition-colors text-gray-500">
+                  <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-gray-500 dark:text-gray-600">
                     Kỹ Năng Mềm
                   </CardTitle>
                   <CardDescription>Sẽ cập nhật trong tương lai</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <span className="text-sm text-gray-400">Sắp có</span>
+                  <span className="text-sm text-gray-400 dark:text-gray-600">
+                    Sắp có
+                  </span>
                 </CardContent>
               </Card>
             </motion.div>

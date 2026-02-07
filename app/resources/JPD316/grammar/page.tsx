@@ -46,7 +46,7 @@ export default function GrammarPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -58,10 +58,12 @@ export default function GrammarPage() {
           </Link>
 
           <div className="text-center mb-6">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2 font-japanese-serif">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2 font-japanese-serif">
               文法 Ngữ Pháp JPD316
             </h1>
-            <p className="text-gray-600 font-japanese">{data.series}</p>
+            <p className="text-gray-600 dark:text-gray-400 font-japanese">
+              {data.series}
+            </p>
           </div>
 
           {/* Lesson Selector */}
@@ -87,12 +89,12 @@ export default function GrammarPage() {
         </div>
 
         {/* Current Lesson Info */}
-        <div className="bg-white rounded-lg p-4 mb-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 mb-6 shadow-sm border border-gray-200 dark:border-gray-700">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-gray-900 font-japanese">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-japanese">
               Bài {currentLesson.lesson}
             </h2>
-            <span className="text-gray-600 font-japanese">
+            <span className="text-gray-600 dark:text-gray-400 font-japanese">
               {currentLesson.grammar.length} mẫu ngữ pháp
             </span>
           </div>
@@ -107,9 +109,9 @@ export default function GrammarPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.03 }}
             >
-              <Card className="bg-white shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+              <Card className="bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
                 {/* Pattern Header - Always Visible */}
-                <div className="p-6 border-b border-gray-100">
+                <div className="p-6 border-b border-gray-100 dark:border-gray-700">
                   {/* Pattern Number */}
                   <div className="flex items-start gap-4 mb-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-lg flex items-center justify-center font-bold">
@@ -117,7 +119,7 @@ export default function GrammarPage() {
                     </div>
                     <div className="flex-1">
                       {/* Pattern */}
-                      <h3 className="text-3xl font-bold text-red-600 mb-3 font-japanese-serif leading-tight">
+                      <h3 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-3 font-japanese-serif leading-tight">
                         {pattern.pattern}
                       </h3>
 
@@ -126,7 +128,7 @@ export default function GrammarPage() {
                         <span className="text-sm text-gray-500 font-medium font-japanese">
                           Cấu trúc:{" "}
                         </span>
-                        <span className="text-lg font-bold text-gray-900 font-japanese">
+                        <span className="text-lg font-bold text-gray-900 dark:text-white font-japanese">
                           {pattern.usage}
                         </span>
                       </div>
@@ -136,14 +138,14 @@ export default function GrammarPage() {
                         <span className="text-sm text-gray-500 font-medium font-japanese">
                           Nghĩa:{" "}
                         </span>
-                        <span className="text-xl font-bold text-green-700 font-japanese">
+                        <span className="text-xl font-bold text-green-700 dark:text-green-400 font-japanese">
                           {pattern.meaning}
                         </span>
                       </div>
 
                       {/* Description */}
                       {pattern.description && (
-                        <p className="text-base text-gray-700 font-japanese mt-2 bg-blue-50 p-3 rounded">
+                        <p className="text-base text-gray-700 dark:text-gray-300 font-japanese mt-2 bg-blue-50 dark:bg-blue-900/30 p-3 rounded">
                           {pattern.description}
                         </p>
                       )}
@@ -153,7 +155,7 @@ export default function GrammarPage() {
                   {/* Toggle Button */}
                   <button
                     onClick={() => togglePattern(pattern.id)}
-                    className="w-full mt-4 py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center gap-2 transition-colors font-japanese text-gray-700"
+                    className="w-full mt-4 py-2 px-4 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg flex items-center justify-center gap-2 transition-colors font-japanese text-gray-700 dark:text-gray-300"
                   >
                     {expandedPattern === pattern.id ? (
                       <>
@@ -175,13 +177,13 @@ export default function GrammarPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.2 }}
-                    className="bg-gray-50"
+                    className="bg-gray-50 dark:bg-gray-900"
                   >
                     <div className="p-6 space-y-4">
                       {pattern.examples.map((example) => (
                         <div
                           key={example.index}
-                          className="bg-white rounded-lg p-5 shadow-sm border border-gray-200"
+                          className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm border border-gray-200 dark:border-gray-700"
                         >
                           <div className="flex items-start gap-3">
                             <span className="flex-shrink-0 w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
@@ -193,7 +195,7 @@ export default function GrammarPage() {
                                 <p className="text-sm text-gray-500 font-medium mb-1 font-japanese">
                                   🇯🇵 Tiếng Nhật:
                                 </p>
-                                <p className="text-xl font-bold text-gray-900 leading-relaxed font-japanese-serif">
+                                <p className="text-xl font-bold text-gray-900 dark:text-white leading-relaxed font-japanese-serif">
                                   {example.jp}
                                 </p>
                               </div>
@@ -203,7 +205,7 @@ export default function GrammarPage() {
                                 <p className="text-sm text-gray-500 font-medium mb-1 font-japanese">
                                   🇻🇳 Tiếng Việt:
                                 </p>
-                                <p className="text-lg text-gray-700 font-japanese leading-relaxed">
+                                <p className="text-lg text-gray-700 dark:text-gray-300 font-japanese leading-relaxed">
                                   {example.vi}
                                 </p>
                               </div>
@@ -221,26 +223,32 @@ export default function GrammarPage() {
 
         {/* Quick Stats */}
         <div className="mt-8 grid grid-cols-3 gap-4">
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
             <p className="text-3xl font-bold text-green-600 mb-1 font-japanese-serif">
               {lessons.length}
             </p>
-            <p className="text-sm text-gray-600 font-japanese">Bài học</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-japanese">
+              Bài học
+            </p>
           </div>
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
             <p className="text-3xl font-bold text-red-600 mb-1 font-japanese-serif">
               {currentLesson.grammar.length}
             </p>
-            <p className="text-sm text-gray-600 font-japanese">Mẫu ngữ pháp</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-japanese">
+              Mẫu ngữ pháp
+            </p>
           </div>
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
             <p className="text-3xl font-bold text-blue-600 mb-1 font-japanese-serif">
               {currentLesson.grammar.reduce(
                 (sum, p) => sum + p.examples.length,
                 0,
               )}
             </p>
-            <p className="text-sm text-gray-600 font-japanese">Ví dụ</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-japanese">
+              Ví dụ
+            </p>
           </div>
         </div>
       </div>

@@ -84,14 +84,14 @@ export default function VocabularyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-japan-cream bg-seigaiha py-8 px-4">
+    <div className="min-h-screen bg-japan-cream dark:bg-gray-900 bg-seigaiha py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <Link href="/resources/JPD316">
             <Button
               variant="outline"
-              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white border-japan-indigo hover:border-japan-indigo hover:bg-japan-cream font-japanese"
+              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:border-japan-indigo dark:hover:border-indigo-600 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
             >
               <ArrowLeft className="w-4 h-4" />
               Quay lại
@@ -103,7 +103,7 @@ export default function VocabularyPage() {
               size="icon"
               onClick={handleReset}
               title="Bắt đầu lại"
-              className="shadow-md hover:shadow-lg transition-all bg-white border-japan-indigo hover:bg-japan-cream"
+              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
             >
               <RotateCcw className="w-4 h-4" />
             </Button>
@@ -112,7 +112,7 @@ export default function VocabularyPage() {
               size="icon"
               onClick={handleShuffle}
               title="Xáo trộn"
-              className="shadow-md hover:shadow-lg transition-all bg-white border-japan-indigo hover:bg-japan-cream"
+              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
             >
               <Shuffle className="w-4 h-4" />
             </Button>
@@ -128,19 +128,19 @@ export default function VocabularyPage() {
           <div className="inline-block relative">
             {/* Japanese stamp/seal style background */}
             <div className="absolute inset-0 bg-japan-indigo opacity-10 rounded-full blur-2xl"></div>
-            <div className="relative bg-white border-4 border-japan-indigo rounded-2xl px-8 py-6 shadow-2xl">
+            <div className="relative bg-white dark:bg-gray-800 border-4 border-japan-indigo dark:border-indigo-700 rounded-2xl px-8 py-6 shadow-2xl">
               <div className="flex items-center justify-center gap-4 mb-2">
                 <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
                   <BookOpen className="w-7 h-7 text-white" />
                 </div>
-                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal tracking-wider">
+                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white tracking-wider">
                   語彙 JPD316
                 </h1>
                 <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
                   <span className="text-2xl text-white font-bold">語</span>
                 </div>
               </div>
-              <p className="text-base text-japan-charcoal font-medium font-japanese">
+              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese">
                 Từ số {currentIndex + 1} / {cards.length}
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function VocabularyPage() {
         </motion.div>
 
         {/* Progress Bar - Traditional Japanese style */}
-        <div className="w-full bg-white rounded-full h-4 mb-8 shadow-inner border-2 border-japan-indigo/20">
+        <div className="w-full bg-white dark:bg-gray-800 rounded-full h-4 mb-8 shadow-inner border-2 border-japan-indigo/20 dark:border-indigo-700/20">
           <motion.div
             className="bg-gradient-to-r from-japan-indigo to-japan-green h-full rounded-full shadow-md relative overflow-hidden"
             initial={{ width: 0 }}
@@ -177,7 +177,7 @@ export default function VocabularyPage() {
                 className="absolute inset-0"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-indigo relative overflow-hidden">
+                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white dark:bg-gray-800 shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-indigo dark:border-indigo-700 relative overflow-hidden">
                   {/* Washi paper texture overlay */}
                   <div className="absolute inset-0 bg-seigaiha opacity-5"></div>
                   <div className="absolute top-4 right-4 w-16 h-16 bg-japan-indigo rounded-full flex items-center justify-center shadow-lg">
@@ -202,7 +202,7 @@ export default function VocabularyPage() {
                       )}
                       <div className="relative">
                         <div className="absolute inset-0 bg-japan-indigo/5 blur-3xl"></div>
-                        <h2 className="text-5xl font-black font-japanese-serif text-japan-charcoal leading-tight relative">
+                        <h2 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-tight relative">
                           {currentCard.term}
                         </h2>
                       </div>
@@ -228,12 +228,12 @@ export default function VocabularyPage() {
                           />
                         </div>
                       )}
-                      <div className="bg-japan-cream border-4 border-japan-green rounded-2xl p-6 shadow-inner">
+                      <div className="bg-japan-cream dark:bg-gray-700 border-4 border-japan-green dark:border-green-700 rounded-2xl p-6 shadow-inner">
                         <h2 className="text-3xl font-bold text-japan-green leading-relaxed font-japanese mb-4">
                           {currentCard.definition}
                         </h2>
-                        <div className="pt-4 border-t-2 border-japan-gold/50">
-                          <p className="text-2xl text-japan-charcoal font-bold font-japanese-serif">
+                        <div className="pt-4 border-t-2 border-japan-gold/50 dark:border-yellow-700/50">
+                          <p className="text-2xl text-japan-charcoal dark:text-white font-bold font-japanese-serif">
                             {currentCard.term}
                           </p>
                         </div>
@@ -259,8 +259,8 @@ export default function VocabularyPage() {
             Trước
           </Button>
 
-          <div className="text-center bg-white px-6 py-3 rounded-lg shadow-md border-2 border-japan-gold/30">
-            <p className="text-base font-semibold text-japan-charcoal font-japanese">
+          <div className="text-center bg-white dark:bg-gray-800 px-6 py-3 rounded-lg shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30">
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
               {isFlipped ? "🇻🇳 Nghĩa tiếng Việt" : "🇯🇵 Từ tiếng Nhật"}
             </p>
           </div>
@@ -270,7 +270,7 @@ export default function VocabularyPage() {
             disabled={currentIndex === cards.length - 1}
             size="lg"
             variant="outline"
-            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white border-japan-indigo hover:bg-japan-cream font-japanese"
+            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
           >
             Sau
             <ChevronRight className="w-6 h-6" />
@@ -279,9 +279,9 @@ export default function VocabularyPage() {
 
         {/* Keyboard Hints */}
         <div className="mt-6 text-center">
-          <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-md border-2 border-japan-gold/30">
+          <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30">
             <span className="text-2xl">💡</span>
-            <p className="text-base font-medium text-japan-charcoal font-japanese">
+            <p className="text-base font-medium text-japan-charcoal dark:text-gray-300 font-japanese">
               Nhấn vào thẻ để lật • Dùng nút mũi tên để chuyển thẻ
             </p>
           </div>
@@ -294,27 +294,27 @@ export default function VocabularyPage() {
           transition={{ delay: 0.5 }}
           className="mt-8 grid grid-cols-3 gap-6 mb-16"
         >
-          <Card className="p-6 text-center bg-gradient-to-br from-japan-indigo/10 to-japan-indigo/20 border-2 border-japan-indigo shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-japan-indigo/10 to-japan-indigo/20 dark:from-indigo-950/30 dark:to-indigo-900/30 border-2 border-japan-indigo dark:border-indigo-700 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-japan-indigo mb-2 font-japanese-serif">
               {cards.length}
             </p>
-            <p className="text-base font-semibold text-japan-charcoal font-japanese">
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
               Tổng từ
             </p>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 border-2 border-japan-green shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 border-2 border-japan-green dark:border-green-700 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-japan-green mb-2 font-japanese-serif">
               {currentIndex + 1}
             </p>
-            <p className="text-base font-semibold text-japan-charcoal font-japanese">
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
               Đang học
             </p>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-japan-gold shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/30 dark:to-orange-900/30 border-2 border-japan-gold dark:border-orange-700 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-japan-gold mb-2 font-japanese-serif">
               {cards.length - currentIndex - 1}
             </p>
-            <p className="text-base font-semibold text-japan-charcoal font-japanese">
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
               Còn lại
             </p>
           </Card>
@@ -323,10 +323,10 @@ export default function VocabularyPage() {
         {/* Divider */}
         <div className="relative mb-12">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t-2 border-japan-gold/30"></div>
+            <div className="w-full border-t-2 border-japan-gold/30 dark:border-yellow-700/30"></div>
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-japan-cream px-6 py-2 text-xl font-bold text-japan-charcoal rounded-full shadow-md border-2 border-japan-gold/30 font-japanese">
+            <span className="bg-japan-cream dark:bg-gray-800 px-6 py-2 text-xl font-bold text-japan-charcoal dark:text-gray-300 rounded-full shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
               📖 Danh sách đầy đủ
             </span>
           </div>
@@ -339,10 +339,10 @@ export default function VocabularyPage() {
           transition={{ delay: 0.7 }}
         >
           <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-3xl font-bold text-japan-charcoal font-japanese-serif">
+            <h2 className="text-3xl font-bold text-japan-charcoal dark:text-white font-japanese-serif">
               📚 Danh sách từ vựng
             </h2>
-            <span className="text-lg font-semibold text-japan-charcoal bg-white px-4 py-2 rounded-lg shadow-md border-2 border-japan-gold/30 font-japanese">
+            <span className="text-lg font-semibold text-japan-charcoal dark:text-gray-300 bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
               {cards.length} từ
             </span>
           </div>
@@ -364,10 +364,10 @@ export default function VocabularyPage() {
                 }}
               >
                 <Card
-                  className={`p-6 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white ${
+                  className={`p-6 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white dark:bg-gray-800 ${
                     index === currentIndex
-                      ? "border-3 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 shadow-lg"
-                      : "border border-gray-200 hover:border-japan-indigo/50"
+                      ? "border-3 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 dark:from-indigo-950/50 dark:to-green-950/50 shadow-lg"
+                      : "border border-gray-200 dark:border-gray-700 hover:border-japan-indigo/50 dark:hover:border-indigo-700"
                   }`}
                 >
                   <div className="flex items-center gap-6">
@@ -397,10 +397,10 @@ export default function VocabularyPage() {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-bold text-japan-charcoal mb-1 leading-tight font-japanese-serif">
+                      <h3 className="text-xl font-bold text-japan-charcoal dark:text-white mb-1 leading-tight font-japanese-serif">
                         {card.term}
                       </h3>
-                      <p className="text-lg text-japan-charcoal/80 font-medium font-japanese">
+                      <p className="text-lg text-japan-charcoal/80 dark:text-gray-300 font-medium font-japanese">
                         {card.definition}
                       </p>
                     </div>

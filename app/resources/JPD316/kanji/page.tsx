@@ -106,14 +106,14 @@ export default function KanjiPage() {
   };
 
   return (
-    <div className="min-h-screen bg-japan-cream bg-seigaiha py-8 px-4">
+    <div className="min-h-screen bg-japan-cream dark:bg-gray-900 bg-seigaiha py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <Link href="/resources/JPD316">
             <Button
               variant="outline"
-              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white border-japan-red hover:border-japan-red hover:bg-japan-cream font-japanese"
+              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 border-japan-red dark:border-red-700 hover:border-japan-red dark:hover:border-red-600 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
             >
               <ArrowLeft className="w-4 h-4" />
               Quay lại
@@ -125,7 +125,7 @@ export default function KanjiPage() {
               size="icon"
               onClick={handleReset}
               title="Bắt đầu lại"
-              className="shadow-md hover:shadow-lg transition-all bg-white border-japan-red hover:bg-japan-cream"
+              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-red dark:border-red-700 hover:bg-japan-cream dark:hover:bg-gray-700"
             >
               <RotateCcw className="w-4 h-4" />
             </Button>
@@ -133,7 +133,7 @@ export default function KanjiPage() {
         </div>
 
         {/* Lesson Selector */}
-        <div className="mb-6 bg-white rounded-lg p-4 shadow-md border-2 border-japan-red/20">
+        <div className="mb-6 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border-2 border-japan-red/20 dark:border-red-700/20">
           <div className="flex gap-2 flex-wrap justify-center">
             {lessons.map((lesson, index) => (
               <Button
@@ -161,12 +161,12 @@ export default function KanjiPage() {
           <div className="inline-block relative">
             {/* Japanese stamp/seal style background */}
             <div className="absolute inset-0 bg-japan-red opacity-10 rounded-full blur-2xl"></div>
-            <div className="relative bg-white border-4 border-japan-red rounded-2xl px-8 py-6 shadow-2xl">
+            <div className="relative bg-white dark:bg-gray-800 border-4 border-japan-red dark:border-red-700 rounded-2xl px-8 py-6 shadow-2xl">
               <div className="flex items-center justify-center gap-4 mb-2">
                 <div className="w-12 h-12 bg-japan-red rounded-full flex items-center justify-center">
                   <BookOpen className="w-7 h-7 text-white" />
                 </div>
-                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal tracking-wider">
+                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white tracking-wider">
                   漢字 JPD316
                 </h1>
                 <div className="w-12 h-12 bg-japan-red rounded-full flex items-center justify-center">
@@ -176,7 +176,7 @@ export default function KanjiPage() {
               <p className="text-lg text-japan-red font-bold font-japanese mb-1">
                 Bài {lessons[selectedLesson].lesson}
               </p>
-              <p className="text-base text-japan-charcoal font-medium font-japanese">
+              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese">
                 Chữ số {currentIndex + 1} / {cards.length}
               </p>
             </div>
@@ -184,7 +184,7 @@ export default function KanjiPage() {
         </motion.div>
 
         {/* Progress Bar - Traditional Japanese style */}
-        <div className="w-full bg-white rounded-full h-4 mb-8 shadow-inner border-2 border-japan-red/20">
+        <div className="w-full bg-white dark:bg-gray-800 rounded-full h-4 mb-8 shadow-inner border-2 border-japan-red/20 dark:border-red-700/20">
           <motion.div
             className="bg-gradient-to-r from-japan-red to-japan-gold h-full rounded-full shadow-md relative overflow-hidden"
             initial={{ width: 0 }}
@@ -213,7 +213,7 @@ export default function KanjiPage() {
                 className="absolute inset-0"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-red relative overflow-hidden">
+                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white dark:bg-gray-800 shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-red dark:border-red-700 relative overflow-hidden">
                   {/* Washi paper texture overlay */}
                   <div className="absolute inset-0 bg-seigaiha opacity-5"></div>
                   <div className="absolute top-4 right-4 w-16 h-16 bg-japan-red rounded-full flex items-center justify-center shadow-lg">
@@ -238,7 +238,7 @@ export default function KanjiPage() {
                       )}
                       <div className="relative">
                         <div className="absolute inset-0 bg-japan-red/5 blur-3xl"></div>
-                        <h2 className="text-9xl font-black font-japanese-serif text-japan-charcoal leading-none relative">
+                        <h2 className="text-9xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-none relative">
                           {currentCard.term}
                         </h2>
                       </div>
@@ -264,18 +264,18 @@ export default function KanjiPage() {
                           />
                         </div>
                       )}
-                      <div className="bg-japan-cream border-4 border-japan-gold rounded-2xl p-8 shadow-inner">
+                      <div className="bg-japan-cream dark:bg-gray-700 border-4 border-japan-gold dark:border-yellow-700 rounded-2xl p-8 shadow-inner">
                         <h2 className="text-4xl font-bold text-japan-red leading-relaxed font-japanese mb-6">
                           {currentCard.definition}
                         </h2>
-                        <div className="pt-6 border-t-2 border-japan-gold/50">
-                          <p className="text-7xl text-japan-charcoal font-black font-japanese-serif">
+                        <div className="pt-6 border-t-2 border-japan-gold/50 dark:border-yellow-700/50">
+                          <p className="text-7xl text-japan-charcoal dark:text-white font-black font-japanese-serif">
                             {currentCard.term}
                           </p>
                         </div>
                       </div>
-                      <div className="pt-4 border-t-2 border-gray-200">
-                        <p className="text-6xl text-gray-700 font-bold">
+                      <div className="pt-4 border-t-2 border-gray-200 dark:border-gray-700">
+                        <p className="text-6xl text-gray-700 dark:text-gray-300 font-bold">
                           {currentCard.term}
                         </p>
                       </div>
@@ -300,8 +300,8 @@ export default function KanjiPage() {
             Trước
           </Button>
 
-          <div className="text-center bg-white px-6 py-3 rounded-lg shadow-md">
-            <p className="text-base font-semibold text-gray-700">
+          <div className="text-center bg-white dark:bg-gray-800 px-6 py-3 rounded-lg shadow-md">
+            <p className="text-base font-semibold text-gray-700 dark:text-gray-300">
               {isFlipped ? "📖 Nghĩa và Cách đọc" : "🇯🇵 Chữ Kanji"}
             </p>
           </div>
@@ -320,9 +320,9 @@ export default function KanjiPage() {
 
         {/* Keyboard Hints */}
         <div className="mt-6 text-center">
-          <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-md">
+          <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-md">
             <span className="text-2xl">💡</span>
-            <p className="text-base font-medium text-gray-700">
+            <p className="text-base font-medium text-gray-700 dark:text-gray-300">
               Nhấn vào thẻ để lật • Dùng nút mũi tên để chuyển thẻ
             </p>
           </div>
@@ -335,33 +335,39 @@ export default function KanjiPage() {
           transition={{ delay: 0.5 }}
           className="mt-8 grid grid-cols-3 gap-6 mb-16"
         >
-          <Card className="p-6 text-center bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/30 dark:to-red-900/30 border-2 border-red-200 dark:border-red-800 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-red-600 mb-2">
               {cards.length}
             </p>
-            <p className="text-base font-semibold text-gray-700">Tổng chữ</p>
+            <p className="text-base font-semibold text-gray-700 dark:text-gray-300">
+              Tổng chữ
+            </p>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 border-2 border-green-200 dark:border-green-800 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-green-600 mb-2">
               {currentIndex + 1}
             </p>
-            <p className="text-base font-semibold text-gray-700">Đang học</p>
+            <p className="text-base font-semibold text-gray-700 dark:text-gray-300">
+              Đang học
+            </p>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-200 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/30 dark:to-orange-900/30 border-2 border-orange-200 dark:border-orange-800 shadow-lg hover:shadow-xl transition-shadow">
             <p className="text-4xl font-bold text-orange-600 mb-2">
               {cards.length - currentIndex - 1}
             </p>
-            <p className="text-base font-semibold text-gray-700">Còn lại</p>
+            <p className="text-base font-semibold text-gray-700 dark:text-gray-300">
+              Còn lại
+            </p>
           </Card>
         </motion.div>
 
         {/* Divider */}
         <div className="relative mb-12">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t-2 border-gray-300"></div>
+            <div className="w-full border-t-2 border-gray-300 dark:border-gray-700"></div>
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 px-6 py-2 text-xl font-bold text-gray-700 rounded-full shadow-md">
+            <span className="bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 px-6 py-2 text-xl font-bold text-gray-700 dark:text-gray-300 rounded-full shadow-md">
               📖 Danh sách đầy đủ
             </span>
           </div>
@@ -374,10 +380,10 @@ export default function KanjiPage() {
           transition={{ delay: 0.7 }}
         >
           <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               📚 Danh sách Kanji
             </h2>
-            <span className="text-lg font-semibold text-gray-600 bg-white px-4 py-2 rounded-lg shadow-md">
+            <span className="text-lg font-semibold text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-md">
               {cards.length} chữ
             </span>
           </div>
@@ -401,8 +407,8 @@ export default function KanjiPage() {
                 <Card
                   className={`p-6 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 ${
                     index === currentIndex
-                      ? "border-3 border-red-500 bg-gradient-to-r from-red-50 to-pink-50 shadow-lg"
-                      : "border border-gray-200 hover:border-red-300"
+                      ? "border-3 border-red-500 bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-950/50 dark:to-pink-950/50 shadow-lg"
+                      : "border border-gray-200 dark:border-gray-700 hover:border-red-300 dark:hover:border-red-700 dark:bg-gray-800"
                   }`}
                 >
                   <div className="flex items-center gap-6">
@@ -418,8 +424,8 @@ export default function KanjiPage() {
                     </div>
 
                     {/* Kanji Character */}
-                    <div className="flex-shrink-0 w-28 h-28 flex items-center justify-center bg-white rounded-xl shadow-lg border-2 border-gray-200">
-                      <span className="text-6xl font-bold text-gray-900">
+                    <div className="flex-shrink-0 w-28 h-28 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700">
+                      <span className="text-6xl font-bold text-gray-900 dark:text-white">
                         {card.term}
                       </span>
                     </div>
@@ -439,7 +445,7 @@ export default function KanjiPage() {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <p className="text-xl text-gray-700 font-medium leading-relaxed">
+                      <p className="text-xl text-gray-700 dark:text-gray-300 font-medium leading-relaxed">
                         {card.definition}
                       </p>
                     </div>

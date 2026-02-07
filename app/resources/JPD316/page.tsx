@@ -91,7 +91,7 @@ export default function JPD316Page() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 py-12 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4 relative overflow-hidden">
       {/* Floating cherry blossoms animation */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-10 left-10 text-4xl animate-[float_10s_ease-in-out_infinite]">
@@ -124,7 +124,7 @@ export default function JPD316Page() {
           <Link href="/resources">
             <Button
               variant="outline"
-              className="gap-2 bg-white/90 backdrop-blur border-pink-300 hover:border-pink-500 hover:bg-pink-50 shadow-md font-japanese"
+              className="gap-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur border-pink-300 dark:border-pink-700 hover:border-pink-500 dark:hover:border-pink-600 hover:bg-pink-50 dark:hover:bg-gray-700 shadow-md font-japanese"
             >
               <ArrowLeft className="w-4 h-4" />
               Quay lại Tài nguyên
@@ -155,7 +155,7 @@ export default function JPD316Page() {
             </div>
 
             {/* Main header card */}
-            <div className="relative bg-white/95 backdrop-blur border-4 border-pink-400 rounded-3xl px-12 py-8 shadow-2xl">
+            <div className="relative bg-white/95 dark:bg-gray-800/95 backdrop-blur border-4 border-pink-400 dark:border-pink-700 rounded-3xl px-12 py-8 shadow-2xl">
               {/* Cherry blossom decoration top */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex gap-3">
                 <span className="text-4xl">🌸</span>
@@ -186,14 +186,14 @@ export default function JPD316Page() {
                   </div>
                   <div className="h-1 w-20 bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
                 </div>
-                <p className="text-lg text-gray-700 font-medium font-japanese">
+                <p className="text-lg text-gray-700 dark:text-gray-300 font-medium font-japanese">
                   Giáo trình Tiếng Nhật Trung Cấp
                 </p>
               </div>
 
               {/* Subtitle */}
-              <div className="mt-6 inline-block bg-pink-50 px-6 py-2 rounded-full border-2 border-pink-300">
-                <p className="text-base text-gray-700 font-japanese font-semibold">
+              <div className="mt-6 inline-block bg-pink-50 dark:bg-gray-700 px-6 py-2 rounded-full border-2 border-pink-300 dark:border-pink-700">
+                <p className="text-base text-gray-700 dark:text-gray-300 font-japanese font-semibold">
                   🌸 Chọn danh mục để bắt đầu học tập 🌸
                 </p>
               </div>
@@ -224,7 +224,7 @@ export default function JPD316Page() {
             >
               <Link href={category.link}>
                 <Card
-                  className={`h-full border-4 ${category.borderColor} bg-white/95 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group relative overflow-visible rounded-3xl`}
+                  className={`h-full border-4 ${category.borderColor} bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group relative overflow-visible rounded-3xl`}
                 >
                   {/* Number badge in corner */}
                   <div
