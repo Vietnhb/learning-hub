@@ -17,7 +17,10 @@ import grammarData from "./grammar/gramar.json";
 
 export default function JPD316Page() {
   const vocabularyCount = kotobaData.length;
-  const kanjiCount = kanjiData.length;
+  const kanjiCount = kanjiData.lessons.reduce(
+    (sum: number, lesson: any) => sum + lesson.kanji.length,
+    0,
+  );
   const grammarCount = grammarData.lessons.reduce(
     (sum: number, lesson: any) => sum + lesson.grammar.length,
     0,
