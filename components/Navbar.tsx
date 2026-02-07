@@ -8,9 +8,16 @@ import {
   Library,
   FolderOpen,
   GraduationCap,
+  User,
+  LogOut,
+  LogIn,
 } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
+  const { user, loading, signOut } = useAuth();
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -57,6 +64,45 @@ export default function Navbar() {
               <FolderOpen className="w-4 h-4" />
               Giới thiệu
             </Link>
+
+            {/* Auth Section */}
+            <div className="ml-4 pl-4 border-l border-gray-300">
+              {loading ? (
+                <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse"></div>
+              ) : user ? (
+                <div className="flex items-center gap-3">
+                  <Link
+                    href="/profile"
+                    className="flex items-center gap-2 text-sm hover:text-pink-600 transition-colors"
+                  >
+                    <User className="w-4 h-4 text-pink-600" />
+                    <span className="text-gray-700 font-medium hover:text-pink-600">
+                      {user.user_metadata?.full_name || user.email}
+                    </span>
+                  </Link>
+                  <Button
+                    onClick={signOut}
+                    variant="outline"
+                    size="sm"
+                    className="gap-1 hover:bg-red-50 hover:border-red-300 hover:text-red-600"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    Đăng xuất
+                  </Button>
+                </div>
+              ) : (
+                <Link href="/auth/login">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-1 hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600"
+                  >
+                    <LogIn className="w-4 h-4" />
+                    Đăng nhập
+                  </Button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
