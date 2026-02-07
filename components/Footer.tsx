@@ -15,7 +15,7 @@ export default function Footer() {
             className="flex items-center gap-6"
           >
             <motion.a
-              href="#"
+              href="https://github.com/Vietnhb"
               whileHover={{ scale: 1.2, rotate: 5 }}
               className="text-gray-400 hover:text-white transition-colors"
             >
@@ -26,10 +26,10 @@ export default function Footer() {
               whileHover={{ scale: 1.2, rotate: -5 }}
               className="text-gray-400 hover:text-white transition-colors"
             >
-              <Twitter className="w-5 h-5" />
+              <Twitter className="w-5 h-5"></Twitter>
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/hoang-bao-viet-nguyen/"
               whileHover={{ scale: 1.2, rotate: 5 }}
               className="text-gray-400 hover:text-white transition-colors"
             >
