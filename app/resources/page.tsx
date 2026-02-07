@@ -117,9 +117,15 @@ export default function ResourcesPage() {
                           Xem
                         </Button>
                       </Link>
-                      <Button size="sm" className="gap-2">
-                        <Download className="w-4 h-4" />
-                        Tải về
+                      <Button size="sm" className="gap-2" asChild>
+                        <a
+                          href="https://drive.google.com/drive/folders/10djG7_z2QVRr6_wx_yVBrFhZcCPaDD-O?usp=drive_link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Download className="w-4 h-4" />
+                          Tải về
+                        </a>
                       </Button>
                     </div>
                   </div>
