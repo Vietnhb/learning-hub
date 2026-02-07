@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { getAuthRedirectUrls } from "@/lib/auth-config";
 import { validateEmail, validatePassword } from "@/lib/validation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -103,11 +104,13 @@ export default function LoginPage() {
     setError("");
 
     try {
+      const { signupCallback } = getAuthRedirectUrls();
+
       const { error: resendError } = await supabase.auth.resend({
         type: "signup",
         email,
         options: {
-          emailRedirectTo: "https://baovietweb.site/auth/callback",
+          emailRedirectTo: signupCallback,
         },
       });
 

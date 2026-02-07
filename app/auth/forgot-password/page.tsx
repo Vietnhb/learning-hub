@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { getAuthRedirectUrls } from "@/lib/auth-config";
 import { validateEmail } from "@/lib/validation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -47,10 +48,12 @@ export default function ForgotPasswordPage() {
     }
 
     try {
+      const { resetPasswordCallback } = getAuthRedirectUrls();
+
       const { error: resetError } = await supabase.auth.resetPasswordForEmail(
         email,
         {
-          redirectTo: "https://baovietweb.site/auth/reset-password",
+          redirectTo: resetPasswordCallback,
         },
       );
 

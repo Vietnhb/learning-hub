@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { getAuthRedirectUrls } from "@/lib/auth-config";
 import {
   validateEmail,
   validatePassword,
@@ -81,12 +82,14 @@ export default function SignUpPage() {
       // Vì RLS không cho phép query trực tiếp auth.users, ta sử dụng signInWithPassword để check
       // Nếu email đã tồn tại và chưa verify, Supabase sẽ cho phép đăng ký lại
 
+      const { signupCallback } = getAuthRedirectUrls();
+
       // Đăng ký user
       const { data, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: "https://baovietweb.site/auth/callback",
+          emailRedirectTo: signupCallback,
           data: {
             full_name: fullName,
           },
@@ -139,11 +142,13 @@ export default function SignUpPage() {
     setLoading(true);
 
     try {
+      const { signupCallback } = getAuthRedirectUrls();
+
       const { error: resendError } = await supabase.auth.resend({
         type: "signup",
         email,
         options: {
-          emailRedirectTo: "https://baovietweb.site/auth/callback",
+          emailRedirectTo: signupCallback,
         },
       });
 
