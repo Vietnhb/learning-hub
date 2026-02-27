@@ -173,7 +173,7 @@ export default function VocabularyPage() {
                 initial={{ rotateY: isFlipped ? -180 : 0, opacity: 0 }}
                 animate={{ rotateY: 0, opacity: 1 }}
                 exit={{ rotateY: isFlipped ? 180 : -180, opacity: 0 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.1 }}
                 className="absolute inset-0"
                 style={{ transformStyle: "preserve-3d" }}
               >
@@ -190,7 +190,7 @@ export default function VocabularyPage() {
                     // Front - Japanese term with traditional styling
                     <div className="text-center space-y-6 relative z-10">
                       {currentCard.image && (
-                        <div className="relative w-48 h-48 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
+                        <div className="relative w-72 h-72 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
                           <Image
                             src={currentCard.image}
                             alt={currentCard.term}
@@ -202,40 +202,37 @@ export default function VocabularyPage() {
                       )}
                       <div className="relative">
                         <div className="absolute inset-0 bg-japan-indigo/5 blur-3xl"></div>
-                        <h2 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-tight relative">
+                        <h2 className="text-7xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-tight relative">
                           {currentCard.term}
                         </h2>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-japan-indigo mt-6">
-                        <div className="w-2 h-2 bg-japan-indigo rounded-full animate-pulse"></div>
-                        <p className="text-base font-medium font-japanese">
-                          Nhấn để xem nghĩa tiếng Việt
-                        </p>
-                        <div className="w-2 h-2 bg-japan-indigo rounded-full animate-pulse"></div>
                       </div>
                     </div>
                   ) : (
                     // Back - Vietnamese definition with traditional style
                     <div className="text-center space-y-6 relative z-10">
-                      {currentCard.image && (
-                        <div className="relative w-48 h-48 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
-                          <Image
-                            src={currentCard.image}
-                            alt={currentCard.term}
-                            fill
-                            className="object-cover opacity-30"
-                            unoptimized
-                          />
+                      <div className="bg-gradient-to-br from-japan-green/20 via-japan-cream to-japan-green/10 dark:from-green-900/40 dark:via-gray-700 dark:to-green-900/20 border-4 border-japan-green dark:border-green-600 rounded-3xl p-10 shadow-2xl">
+                        {/* Vietnamese meaning - highlighted */}
+                        <div className="mb-6 bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-japan-green/40">
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <span className="text-4xl">🇻🇳</span>
+                            <div className="h-1 flex-1 bg-gradient-to-r from-transparent via-japan-green to-transparent rounded"></div>
+                            <span className="text-4xl">📖</span>
+                          </div>
+                          <h2 className="text-6xl font-black text-japan-green dark:text-green-400 leading-relaxed font-japanese text-center">
+                            {currentCard.definition}
+                          </h2>
                         </div>
-                      )}
-                      <div className="bg-japan-cream dark:bg-gray-700 border-4 border-japan-green dark:border-green-700 rounded-2xl p-6 shadow-inner">
-                        <h2 className="text-3xl font-bold text-japan-green leading-relaxed font-japanese mb-4">
-                          {currentCard.definition}
-                        </h2>
-                        <div className="pt-4 border-t-2 border-japan-gold/50 dark:border-yellow-700/50">
-                          <p className="text-2xl text-japan-charcoal dark:text-white font-bold font-japanese-serif">
-                            {currentCard.term}
-                          </p>
+
+                        {/* Japanese term - reference */}
+                        <div className="pt-6 border-t-4 border-japan-gold/50 dark:border-yellow-600/50">
+                          <div className="bg-japan-indigo/10 dark:bg-indigo-900/30 rounded-xl p-6 border-2 border-japan-indigo/30">
+                            <p className="text-sm font-semibold text-japan-charcoal/60 dark:text-gray-400 mb-2 text-center font-japanese">
+                              Từ tiếng Nhật
+                            </p>
+                            <p className="text-5xl text-japan-charcoal dark:text-white font-black font-japanese-serif text-center tracking-wider">
+                              {currentCard.term}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -364,19 +361,19 @@ export default function VocabularyPage() {
                 }}
               >
                 <Card
-                  className={`p-6 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white dark:bg-gray-800 ${
+                  className={`p-8 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white dark:bg-gray-800 ${
                     index === currentIndex
-                      ? "border-3 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 dark:from-indigo-950/50 dark:to-green-950/50 shadow-lg"
-                      : "border border-gray-200 dark:border-gray-700 hover:border-japan-indigo/50 dark:hover:border-indigo-700"
+                      ? "border-4 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 dark:from-indigo-950/50 dark:to-green-950/50 shadow-lg"
+                      : "border-2 border-gray-200 dark:border-gray-700 hover:border-japan-indigo/50 dark:hover:border-indigo-700"
                   }`}
                 >
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-8">
                     {/* Number Badge */}
                     <div
-                      className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-md ${
+                      className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl shadow-lg ${
                         index === currentIndex
                           ? "bg-japan-indigo text-white"
-                          : "bg-gray-100 text-gray-600"
+                          : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
                       }`}
                     >
                       {index + 1}
@@ -384,7 +381,7 @@ export default function VocabularyPage() {
 
                     {/* Image */}
                     {card.image && (
-                      <div className="relative w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-2 border-japan-gold/30">
+                      <div className="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-3 border-japan-gold/40">
                         <Image
                           src={card.image}
                           alt={card.term}
@@ -397,10 +394,10 @@ export default function VocabularyPage() {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-bold text-japan-charcoal dark:text-white mb-1 leading-tight font-japanese-serif">
+                      <h3 className="text-4xl font-black text-japan-charcoal dark:text-white mb-2 leading-tight font-japanese-serif tracking-wide">
                         {card.term}
                       </h3>
-                      <p className="text-lg text-japan-charcoal/80 dark:text-gray-300 font-medium font-japanese">
+                      <p className="text-2xl text-japan-charcoal/90 dark:text-gray-300 font-semibold font-japanese leading-relaxed">
                         {card.definition}
                       </p>
                     </div>
