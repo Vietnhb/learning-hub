@@ -957,6 +957,301 @@
           "image": null
         }
       ]
+    },
+    {
+      "lesson": 4,
+      "kanji": [
+        { "term": "例題", "definition": "（れいだい）đề mẫu", "image": null },
+        {
+          "term": "例文",
+          "definition": "（れいぶん）câu ví dụ",
+          "image": null
+        },
+        { "term": "例外", "definition": "（れいがい）ngoại lệ", "image": null },
+        {
+          "term": "用例",
+          "definition": "（ようれい）ví dụ sử dụng",
+          "image": null
+        },
+        { "term": "前例", "definition": "（ぜんれい）tiền lệ", "image": null },
+
+        { "term": "自宅", "definition": "（じたく）nhà riêng", "image": null },
+        { "term": "帰宅", "definition": "（きたく）về nhà", "image": null },
+        { "term": "宅地", "definition": "（たくち）đất ở", "image": null },
+        { "term": "住宅", "definition": "（じゅうたく）nhà ở", "image": null },
+
+        {
+          "term": "当時",
+          "definition": "（とうじ）lúc đó, thời đó",
+          "image": null
+        },
+        { "term": "当事", "definition": "（とうじ）đương sự", "image": null },
+        {
+          "term": "当日",
+          "definition": "（とうじつ）ngày hôm đó",
+          "image": null
+        },
+        { "term": "本当", "definition": "（ほんとう）thật sự", "image": null },
+        {
+          "term": "正当",
+          "definition": "（せいとう）chính đáng",
+          "image": null
+        },
+        {
+          "term": "相当",
+          "definition": "（そうとう）tương đương",
+          "image": null
+        },
+        { "term": "当駅", "definition": "（とうえき）ga này", "image": null },
+
+        { "term": "管理", "definition": "（かんり）quản lý", "image": null },
+        {
+          "term": "食管",
+          "definition": "（しょっかん）thực quản",
+          "image": null
+        },
+        {
+          "term": "管区",
+          "definition": "（かんく）khu vực quản lý",
+          "image": null
+        },
+
+        {
+          "term": "決定",
+          "definition": "（けってい）quyết định",
+          "image": null
+        },
+        { "term": "決意", "definition": "（けつい）quyết tâm", "image": null },
+        {
+          "term": "決心",
+          "definition": "（けっしん）quyết tâm",
+          "image": null
+        },
+        {
+          "term": "解決",
+          "definition": "（かいけつ）giải quyết",
+          "image": null
+        },
+        { "term": "可決", "definition": "（かけつ）thông qua", "image": null },
+        {
+          "term": "先決",
+          "definition": "（せんけつ）ưu tiên trước",
+          "image": null
+        },
+
+        {
+          "term": "路線",
+          "definition": "（ろせん）tuyến đường",
+          "image": null
+        },
+        { "term": "線路", "definition": "（せんろ）đường ray", "image": null },
+        { "term": "道路", "definition": "（どうろ）đường", "image": null },
+        { "term": "活路", "definition": "（かつろ）lối thoát", "image": null },
+        { "term": "通路", "definition": "（つうろ）lối đi", "image": null },
+
+        {
+          "term": "植物",
+          "definition": "（しょくぶつ）thực vật",
+          "image": null
+        },
+        {
+          "term": "植民",
+          "definition": "（しょくみん）thực dân",
+          "image": null
+        },
+
+        {
+          "term": "指導",
+          "definition": "（しどう）chỉ đạo, hướng dẫn",
+          "image": null
+        },
+        { "term": "指定", "definition": "（してい）chỉ định", "image": null },
+        {
+          "term": "指名",
+          "definition": "（しめい）chỉ đích danh",
+          "image": null
+        },
+
+        { "term": "導管", "definition": "（どうかん）ống dẫn", "image": null },
+        {
+          "term": "導入",
+          "definition": "（どうにゅう）đưa vào, giới thiệu",
+          "image": null
+        },
+        {
+          "term": "半導体",
+          "definition": "（はんどうたい）chất bán dẫn",
+          "image": null
+        },
+
+        {
+          "term": "面白い",
+          "definition": "（おもしろい）thú vị",
+          "image": null
+        },
+        {
+          "term": "直面",
+          "definition": "（ちょくめん）đối mặt",
+          "image": null
+        },
+        {
+          "term": "正面",
+          "definition": "（しょうめん）mặt trước",
+          "image": null
+        },
+        { "term": "面会", "definition": "（めんかい）gặp mặt", "image": null },
+
+        { "term": "針路", "definition": "（しんろ）hướng đi", "image": null },
+        {
+          "term": "長針",
+          "definition": "（ちょうしん）kim dài (đồng hồ)",
+          "image": null
+        },
+        {
+          "term": "短針",
+          "definition": "（たんしん）kim ngắn (đồng hồ)",
+          "image": null
+        },
+        {
+          "term": "方針",
+          "definition": "（ほうしん）phương châm",
+          "image": null
+        },
+
+        { "term": "絵本", "definition": "（えほん）sách tranh", "image": null },
+        {
+          "term": "絵葉書",
+          "definition": "（えはがき）bưu thiếp có tranh",
+          "image": null
+        },
+        {
+          "term": "絵文字",
+          "definition": "（えもじ）biểu tượng cảm xúc",
+          "image": null
+        },
+        {
+          "term": "油絵",
+          "definition": "（あぶらえ）tranh sơn dầu",
+          "image": null
+        },
+        {
+          "term": "絵画",
+          "definition": "（かいが）hội họa, bức tranh",
+          "image": null
+        },
+        {
+          "term": "絵図",
+          "definition": "（えず）bản vẽ, sơ đồ",
+          "image": null
+        },
+
+        {
+          "term": "格好",
+          "definition": "（かっこう）dáng vẻ, hình dáng",
+          "image": null
+        },
+        {
+          "term": "格段",
+          "definition": "（かくだん）đặc biệt, vượt trội",
+          "image": null
+        },
+        {
+          "term": "格調",
+          "definition": "（かくちょう）phong cách, cách điệu",
+          "image": null
+        },
+        { "term": "格安", "definition": "（かくやす）giá rẻ", "image": null },
+        {
+          "term": "格言",
+          "definition": "（かくげん）cách ngôn, châm ngôn",
+          "image": null
+        },
+        { "term": "合格", "definition": "（ごうかく）đỗ, đạt", "image": null },
+
+        {
+          "term": "性格",
+          "definition": "（せいかく）tính cách",
+          "image": null
+        },
+        {
+          "term": "資格",
+          "definition": "（しかく）tư cách, bằng cấp",
+          "image": null
+        },
+
+        {
+          "term": "識別",
+          "definition": "（しきべつ）phân biệt",
+          "image": null
+        },
+        {
+          "term": "識者",
+          "definition": "（しきしゃ）người có hiểu biết",
+          "image": null
+        },
+        { "term": "知識", "definition": "（ちしき）kiến thức", "image": null },
+        {
+          "term": "見識",
+          "definition": "（けんしき）kiến thức, nhận thức",
+          "image": null
+        },
+        { "term": "意識", "definition": "（いしき）ý thức", "image": null },
+
+        {
+          "term": "全身",
+          "definition": "（ぜんしん）toàn thân",
+          "image": null
+        },
+        {
+          "term": "下半身",
+          "definition": "（かはんしん）nửa thân dưới",
+          "image": null
+        },
+        {
+          "term": "終身",
+          "definition": "（しゅうしん）suốt đời",
+          "image": null
+        },
+        {
+          "term": "中身",
+          "definition": "（なかみ）nội dung, ruột",
+          "image": null
+        },
+        { "term": "心身", "definition": "（しんしん）thân tâm", "image": null },
+        {
+          "term": "身長",
+          "definition": "（しんちょう）chiều cao",
+          "image": null
+        },
+        { "term": "身分", "definition": "（みぶん）thân phận", "image": null },
+        {
+          "term": "身元",
+          "definition": "（みもと）lai lịch, thân thế",
+          "image": null
+        },
+
+        {
+          "term": "専門",
+          "definition": "（せんもん）chuyên môn",
+          "image": null
+        },
+        {
+          "term": "専用",
+          "definition": "（せんよう）chuyên dụng",
+          "image": null
+        },
+        {
+          "term": "専務",
+          "definition": "（せんむ）giám đốc điều hành",
+          "image": null
+        },
+        {
+          "term": "専有",
+          "definition": "（せんゆう）sở hữu riêng",
+          "image": null
+        },
+        { "term": "専科", "definition": "（せんか）chuyên khoa", "image": null }
+      ]
     }
   ]
 }
