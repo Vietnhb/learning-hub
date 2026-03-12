@@ -1111,7 +1111,498 @@
     },
     {
       "lesson": 5,
-      "grammar": []
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "～によって",
+          "usage": "N＋によって／N＋により／N＋による＋N",
+          "meaning": "Bởi / do / tùy vào / nhờ vào (tùy ngữ cảnh)",
+          "description": "① Diễn tả tác nhân trong câu bị động (bởi). ② Diễn tả sự khác biệt tùy theo đối tượng. ③ Diễn tả phương tiện/cách thức. ④ Diễn tả nguyên nhân.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この建物はベトナムの有名な建築家によって設計されたそうです。",
+              "vi": "Nghe nói tòa nhà này được thiết kế bởi một kiến trúc sư nổi tiếng của Việt Nam."
+            },
+            {
+              "index": 2,
+              "jp": "人によって考え方が違います。",
+              "vi": "Tùy người mà cách suy nghĩ khác nhau."
+            },
+            {
+              "index": 3,
+              "jp": "友人の紹介によって、ついに私も仕事を得ることができた。",
+              "vi": "Nhờ sự giới thiệu của bạn bè, cuối cùng tôi cũng tìm được việc."
+            },
+            {
+              "index": 4,
+              "jp": "地震によって、ビルが壊れました。",
+              "vi": "Do động đất mà tòa nhà bị hư hỏng."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "～おそれがある",
+          "usage": "V普通形／Nの＋おそれがある",
+          "meaning": "Có e là / có khả năng (xấu) sẽ ~",
+          "description": "Diễn tả khả năng xảy ra điều không tốt; cách nói mang tính trang trọng, thường dùng trong văn viết, thông báo, tin tức.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "戦争が起こるおそれがあります。",
+              "vi": "Có khả năng chiến tranh sẽ xảy ra."
+            },
+            {
+              "index": 2,
+              "jp": "大きい地震が来たら、この建物は倒れるおそれがある。",
+              "vi": "Nếu có động đất lớn thì tòa nhà này có nguy cơ bị đổ."
+            },
+            {
+              "index": 3,
+              "jp": "こんな赤字が続くと、この会社は倒産のおそれがある。",
+              "vi": "Nếu thua lỗ như thế này tiếp tục thì công ty có nguy cơ phá sản."
+            },
+            {
+              "index": 4,
+              "jp": "明日は台風のおそれがあるので、注意してください。",
+              "vi": "Ngày mai có khả năng có bão nên hãy chú ý."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "～そうにない",
+          "usage": "Vます(bỏます)／V可能形＋そうにない",
+          "meaning": "Không nghĩ là ~ / Khó có thể ~",
+          "description": "Diễn tả phán đoán rằng khả năng xảy ra rất thấp; thường dựa trên tình hình hiện tại.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この仕事は明日までに終わりそうにない。",
+              "vi": "Công việc này có vẻ khó hoàn thành trước ngày mai."
+            },
+            {
+              "index": 2,
+              "jp": "この仕事は一人の力ではできそうにない。",
+              "vi": "Công việc này một mình thì có vẻ khó làm được."
+            },
+            {
+              "index": 3,
+              "jp": "すみません、今日中に終わりそうにないんですが、明日でもよろしいでしょうか。",
+              "vi": "Xin lỗi, có vẻ hôm nay tôi không thể xong, để ngày mai có được không ạ?"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "pattern": "～とか（で）",
+          "usage": "V普通形／Aい／Aな／Nだ＋とか（で）",
+          "meaning": "Nghe nói là / hình như",
+          "description": "Dùng để truyền đạt thông tin nghe được; dùng khi không chắc hoặc không muốn nói rõ.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "風邪を引いたとかで、佐藤さんは今日仕事を休んだ。",
+              "vi": "Nghe nói bị cảm nên anh Sato hôm nay nghỉ làm."
+            },
+            {
+              "index": 2,
+              "jp": "今度の試験はかなり難しいとかで。",
+              "vi": "Nghe nói kỳ thi lần này khá khó."
+            },
+            {
+              "index": 3,
+              "jp": "雨だとかで、夕べの花火大会は中止された。",
+              "vi": "Nghe nói do mưa nên lễ hội pháo hoa tối qua bị hủy."
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "～てしまったようなんです",
+          "usage": "Vて＋しまったようなんです",
+          "meaning": "Hình như đã ~ mất rồi / có lẽ đã ~ rồi",
+          "description": "Cách nói suy đoán mơ hồ, nhẹ nhàng hơn 「～てしまったんです」; dùng khi không chắc chắn và không muốn nói quá khẳng định.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "足首を痛めてしまったようなんです。",
+              "vi": "Hình như tôi đã bị đau mắt cá chân."
+            },
+            {
+              "index": 2,
+              "jp": "すみません、赤いマフラーを忘れてしまったようなんですが……。",
+              "vi": "Xin lỗi, hình như tôi đã quên chiếc khăn quàng đỏ."
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "～ところ",
+          "usage": "①Vる／Vている／Vた＋ところ ②V普通形＋ところに／へ ③V普通形＋ところを ④Vた＋ところ ⑤ところが／ところで",
+          "meaning": "Chuẩn bị / đang / vừa / đúng lúc / suýt / khi thì / nhưng mà / tiện đây",
+          "description": "①Vるところ: sắp làm; Vているところ: đang làm; Vたところ: vừa làm xong; Vる/ないところだった: suýt nữa. ②～ところに/へ: đúng lúc đang làm thì có việc xảy ra. ③～ところを: đang lúc thì bị tác động. ④Vたところ: làm thử rồi có kết quả bất ngờ. ⑤ところが: nhưng; ところで: tiện thể đổi chủ đề.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "これから出かけるところだ。",
+              "vi": "Tôi đang chuẩn bị ra ngoài."
+            },
+            {
+              "index": 2,
+              "jp": "今あの事件のことを調べているところだ。",
+              "vi": "Tôi đang điều tra vụ việc đó."
+            },
+            {
+              "index": 3,
+              "jp": "仕事を終わったところだ。",
+              "vi": "Tôi vừa mới xong việc."
+            },
+            {
+              "index": 4,
+              "jp": "もうちょっとで信じるところだった。",
+              "vi": "Suýt nữa thì tôi đã tin rồi."
+            },
+            {
+              "index": 5,
+              "jp": "出かけようとしたところに、客がやってきた。",
+              "vi": "Đúng lúc định ra ngoài thì có khách đến."
+            },
+            {
+              "index": 6,
+              "jp": "お花見をしているところに、雷がなりだした。",
+              "vi": "Đúng lúc đang ngắm hoa thì sấm bắt đầu vang."
+            },
+            {
+              "index": 7,
+              "jp": "こっそりたばこを吸っているところを、父に見つかった。",
+              "vi": "Đang lén hút thuốc thì bị bố phát hiện."
+            },
+            {
+              "index": 8,
+              "jp": "夜道を歩いていたところを、誰かに頭を殴られた。",
+              "vi": "Đang đi đường đêm thì bị ai đó đánh vào đầu."
+            },
+            {
+              "index": 9,
+              "jp": "昔、勤めていた会社を訪ねたところ、もう会社はなかった。",
+              "vi": "Khi tôi đến công ty cũ thì nó đã không còn."
+            },
+            {
+              "index": 10,
+              "jp": "レシピどおりに作ってみたところ、おいしくできた。",
+              "vi": "Làm theo công thức thì ra rất ngon."
+            },
+            {
+              "index": 11,
+              "jp": "田中さんは私より若いと思っていた。ところが、私より５歳も年上だった。",
+              "vi": "Tôi nghĩ Tanaka trẻ hơn, nhưng hóa ra lớn hơn tôi 5 tuổi."
+            },
+            {
+              "index": 12,
+              "jp": "もうすぐ今年も終わりですね。ところで、お正月はどうなさいますか。",
+              "vi": "Sắp hết năm rồi nhỉ. Nhân tiện, Tết bạn định làm gì?"
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "～につれて",
+          "usage": "Vる／N＋につれて",
+          "meaning": "Cùng với… / Càng… càng…",
+          "description": "Diễn tả hai sự thay đổi diễn ra song song; khi A thay đổi thì B cũng dần thay đổi theo. Vế sau không dùng ý chí như ～つもりだ、～たい、～ましょう。",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お金持ちになるにつれて、彼はますます欲深くなった。",
+              "vi": "Càng trở nên giàu có, anh ta càng tham lam hơn."
+            },
+            {
+              "index": 2,
+              "jp": "温度が上がるにつれて、売り上げも上がった。",
+              "vi": "Nhiệt độ càng tăng thì doanh số cũng tăng."
+            },
+            {
+              "index": 3,
+              "jp": "時代の変化につれて、結婚の形も変わってきた。",
+              "vi": "Cùng với sự thay đổi của thời đại, hình thức hôn nhân cũng thay đổi."
+            },
+            {
+              "index": 4,
+              "jp": "町の発展につれて、自然が少なくなった。",
+              "vi": "Cùng với sự phát triển của thành phố, thiên nhiên giảm đi."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "～ものだ／～ものではない",
+          "usage": "Vる／Vない／Aい／Aな＋ものだ／ものではない",
+          "meaning": "① Thường là, vốn là ② Nên / không nên",
+          "description": "① Diễn tả điều vốn dĩ, mang tính tự nhiên hoặc phổ biến. ② Dùng để khuyên răn, nhắc nhở: nên làm hoặc không nên làm.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "砂糖は甘いものだ。",
+              "vi": "Đường vốn dĩ là ngọt."
+            },
+            {
+              "index": 2,
+              "jp": "地震や火事の時は誰でも慌てるものだ。",
+              "vi": "Khi có động đất hay cháy thì ai cũng hoảng."
+            },
+            {
+              "index": 3,
+              "jp": "ご飯を食べるときにはひじをテーブルにつかないものだ。",
+              "vi": "Khi ăn cơm thì không nên chống khuỷu tay lên bàn."
+            },
+            {
+              "index": 4,
+              "jp": "電車では足を組んで座るものではない。",
+              "vi": "Trên tàu thì không nên ngồi vắt chân."
+            },
+            {
+              "index": 5,
+              "jp": "若い人はお年寄りに席を譲るものだ。",
+              "vi": "Người trẻ nên nhường chỗ cho người già."
+            },
+            {
+              "index": 6,
+              "jp": "人の悪口は言うものじゃない。",
+              "vi": "Không nên nói xấu người khác."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "～ものだ",
+          "usage": "①Vた＋ものだ ②V普通形／Aい／Aな＋ものだ",
+          "meaning": "① Hồi tưởng quá khứ ② Cảm thán / mong muốn",
+          "description": "① Dùng để hồi tưởng về trạng thái quá khứ hoặc những việc thường xảy ra trong quá khứ. ② Dùng để bày tỏ cảm xúc mạnh như cảm thán, ngạc nhiên, xúc động hoặc mong muốn.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この辺は、昔は静かだったものだ。",
+              "vi": "Khu này ngày xưa vốn yên tĩnh."
+            },
+            {
+              "index": 2,
+              "jp": "子供のころ、いたずらをして、よく父に叱られたものだ。",
+              "vi": "Hồi nhỏ hay nghịch ngợm nên thường bị bố mắng."
+            },
+            {
+              "index": 3,
+              "jp": "人生は素晴らしいものだ。",
+              "vi": "Cuộc đời thật tuyệt vời."
+            },
+            {
+              "index": 4,
+              "jp": "いつか京都へ行きたいものだ。",
+              "vi": "Tôi rất muốn một lần được đi Kyoto."
+            },
+            {
+              "index": 5,
+              "jp": "あなたの国へ行ってみたいものだ。",
+              "vi": "Tôi muốn thử đến đất nước của bạn."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "～とおり（に）",
+          "usage": "Vる／Vた／Nの／N＋とおり（に）",
+          "meaning": "Theo như… / đúng như…",
+          "description": "Diễn tả hành động hoặc kết quả giống với điều đã nói, đã nghĩ hoặc đã dự đoán.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "彼は言われたとおりにした。",
+              "vi": "Anh ấy làm đúng như đã được nói."
+            },
+            {
+              "index": 2,
+              "jp": "先生が書くとおりに、一緒に漢字を書いてください。",
+              "vi": "Hãy viết chữ Hán theo như thầy viết."
+            },
+            {
+              "index": 3,
+              "jp": "予想どおり、日本チームが優勝した。",
+              "vi": "Đúng như dự đoán, đội Nhật đã vô địch."
+            },
+            {
+              "index": 4,
+              "jp": "指示どおり、すみやかに行動してください。",
+              "vi": "Hãy hành động nhanh chóng theo chỉ thị."
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "～際",
+          "usage": "Vる／Vた／Nの＋際",
+          "meaning": "Khi / lúc / trong trường hợp",
+          "description": "Cách nói trang trọng, thường dùng trong thông báo, hướng dẫn hoặc văn viết; dùng cho thời điểm đặc biệt.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お寿司を召し上がる際、お箸をお使いください。",
+              "vi": "Khi ăn sushi, xin hãy dùng đũa."
+            },
+            {
+              "index": 2,
+              "jp": "クレジットカードを紛失した際は、サポートセンターまでご連絡ください。",
+              "vi": "Khi bị mất thẻ tín dụng, hãy liên hệ trung tâm hỗ trợ."
+            },
+            {
+              "index": 3,
+              "jp": "受験の際に、写真が必要です。",
+              "vi": "Khi thi cần có ảnh."
+            },
+            {
+              "index": 4,
+              "jp": "避難の際は決してエレベーターを使用しないでください。",
+              "vi": "Khi sơ tán tuyệt đối không dùng thang máy."
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "～こと／ことだ",
+          "usage": "①Vる／Vない／Aい／Aな／Nの＋こと／ことだ ②Vる／Vない＋ことだ ③Vた／Aい／Aな＋ことだ",
+          "meaning": "① Quy định / mệnh lệnh ② Lời khuyên ③ Cảm thán",
+          "description": "① Dùng trong nội quy, hướng dẫn, quy định (mang tính mệnh lệnh nhẹ). ② Dùng để đưa lời khuyên (＝～たほうがいい). ③ Dùng để bày tỏ cảm xúc mạnh như tiếc nuối, ngạc nhiên, khó chịu.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "病院では静かにすることだ。",
+              "vi": "Ở bệnh viện phải giữ yên lặng."
+            },
+            {
+              "index": 2,
+              "jp": "お世話になった人にはちゃんと感謝を伝えることだ。",
+              "vi": "Phải nói lời cảm ơn đàng hoàng với người đã giúp mình."
+            },
+            {
+              "index": 3,
+              "jp": "風邪ぎみなら、早く寝ることです。",
+              "vi": "Nếu bị cảm thì nên ngủ sớm."
+            },
+            {
+              "index": 4,
+              "jp": "無理をしないことだよ。",
+              "vi": "Đừng cố quá nhé."
+            },
+            {
+              "index": 5,
+              "jp": "そんな良いチャンスを逃すのはとてももったいないことだ。",
+              "vi": "Bỏ lỡ cơ hội tốt như vậy thật đáng tiếc."
+            },
+            {
+              "index": 6,
+              "jp": "いくら電話しても出ない。本当に困ったことだ。",
+              "vi": "Gọi bao nhiêu cũng không nghe. Thật là rắc rối."
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "pattern": "～まま",
+          "usage": "①Vない／Vた／Aい／Aな／Nの＋まま ②Vる／Vられる＋まま",
+          "meaning": "① Cứ giữ nguyên trạng thái ② Theo như cảm nhận / suy nghĩ",
+          "description": "① Diễn tả trạng thái không thay đổi vẫn tiếp tục. ② Diễn tả hành động đúng theo cảm nhận, suy nghĩ hoặc những gì thấy được.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "彼は濡れている子どもを助けるため、服を着たまま川に飛び込んだ。",
+              "vi": "Anh ấy mặc nguyên quần áo nhảy xuống sông để cứu đứa trẻ."
+            },
+            {
+              "index": 2,
+              "jp": "この弁当箱なら、昼になってもご飯は温かいまま食べられます。",
+              "vi": "Hộp cơm này thì đến trưa vẫn ăn cơm nóng."
+            },
+            {
+              "index": 3,
+              "jp": "この地域はいつまでたっても交通が不便なままだ。",
+              "vi": "Khu vực này mãi vẫn bất tiện giao thông."
+            },
+            {
+              "index": 4,
+              "jp": "日本では、靴のまま家に入ってはいけません。",
+              "vi": "Ở Nhật không được vào nhà khi vẫn mang giày."
+            },
+            {
+              "index": 5,
+              "jp": "思ったままの気持ちや感想をお伝えします。",
+              "vi": "Tôi sẽ nói đúng theo cảm xúc và suy nghĩ của mình."
+            },
+            {
+              "index": 6,
+              "jp": "見たまま感じたままに描く。",
+              "vi": "Vẽ đúng như những gì thấy và cảm nhận."
+            },
+            {
+              "index": 7,
+              "jp": "自分の思うままに振る舞うな。",
+              "vi": "Đừng hành xử theo ý mình."
+            },
+            {
+              "index": 8,
+              "jp": "人生に迷ったら気の向くままに進めばいい。",
+              "vi": "Nếu lạc lối thì cứ tiến theo điều mình muốn."
+            }
+          ]
+        },
+        {
+          "id": "14",
+          "pattern": "N＋だらけ",
+          "usage": "N＋だらけ",
+          "meaning": "Đầy toàn là / toàn những (thường mang nghĩa tiêu cực)",
+          "description": "Diễn tả có rất nhiều thứ bẩn, không tốt hoặc không mong muốn bám trên bề mặt hoặc tồn tại khắp nơi.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "世界中を旅した彼のかばんは傷だらけだった。",
+              "vi": "Chiếc túi của anh ấy đi khắp thế giới nên đầy vết xước."
+            },
+            {
+              "index": 2,
+              "jp": "長い間誰も入らなかったので、倉庫の中はほこりだらけだった。",
+              "vi": "Vì lâu không ai vào nên trong kho đầy bụi."
+            },
+            {
+              "index": 3,
+              "jp": "このレポートは字が間違いだらけで読みにくい。",
+              "vi": "Bài báo cáo này toàn lỗi chữ nên khó đọc."
+            },
+            {
+              "index": 4,
+              "jp": "やっぱり女の人の部屋ですね。かみだらけ。",
+              "vi": "Đúng là phòng con gái, toàn tóc."
+            }
+          ],
+          "note": {
+            "comparison": [
+              {
+                "pattern": "N＋まみれ",
+                "meaning": "Bị phủ đầy (thường chất lỏng/bẩn)",
+                "example": "息子が泥まみれになって帰ってきた。"
+              },
+              {
+                "pattern": "N＋でいっぱい",
+                "meaning": "Đầy (trung tính)",
+                "example": "人生はつらいことでいっぱいだ。"
+              },
+              {
+                "pattern": "N＋ばかり／Vてばかり",
+                "meaning": "Toàn làm / toàn là (thiên về hành động lặp lại)",
+                "example": "弟はゲームをしてばかりいる。"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
