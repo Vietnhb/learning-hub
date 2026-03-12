@@ -12,6 +12,7 @@ import {
   CheckCircle,
   ArrowLeft,
   Shield,
+  Key,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,6 +26,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { getUserProfile, updateUserProfile } from "@/lib/userService";
 import { validateUserProfile } from "@/lib/validation";
 import { User as UserType } from "@/types/user";
+import { ChangePasswordModal } from "@/components/ChangePasswordModal";
 import Link from "next/link";
 
 export default function ProfilePage() {
@@ -38,6 +40,7 @@ export default function ProfilePage() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [generalError, setGeneralError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
 
   useEffect(() => {
     if (!authLoading && !authUser) {
@@ -329,7 +332,74 @@ export default function ProfilePage() {
             </CardContent>
           </Card>
         </motion.div>
+
+        {/* Security Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6"
+        >
+          <Card className="border dark:bg-gray-800 dark:border-gray-700">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="w-5 h-5" />
+                Bảo mật
+              </CardTitle>
+              <CardDescription>
+                Quản lý mật khẩu và cài đặt bảo mật tài khoản
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                      <Key className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                        Mật khẩu
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Thay đổi mật khẩu đăng nhập của bạn
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setShowPasswordModal(true)}
+                    variant="outline"
+                    className="gap-2"
+                  >
+                    <Key className="w-4 h-4" />
+                    Đổi mật khẩu
+                  </Button>
+                </div>
+
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2 flex items-center gap-2">
+                    🔒 Bảo mật mật khẩu
+                  </h4>
+                  <ul className="text-sm text-blue-800 dark:text-blue-300 space-y-1">
+                    <li>✓ Mật khẩu được mã hóa tự động bởi Supabase Auth</li>
+                    <li>
+                      ✓ Không bao giờ lưu mật khẩu dưới dạng văn bản thường
+                    </li>
+                    <li>✓ Sử dụng mật khẩu mạnh ít nhất 6 ký tự</li>
+                    <li>✓ Không chia sẻ mật khẩu với bất kỳ ai</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
+
+      {/* Change Password Modal */}
+      <ChangePasswordModal
+        show={showPasswordModal}
+        onClose={() => setShowPasswordModal(false)}
+      />
     </div>
   );
 }
