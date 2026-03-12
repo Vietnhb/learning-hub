@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   BookOpen,
@@ -19,6 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home() {
   const containerVariants = {
@@ -207,7 +208,13 @@ export default function Home() {
               </Card>
             </motion.div>
 
-            <motion.div variants={itemVariants}>
+            <motion.div
+              onClick={() =>
+                window.open("https://baovietweb.site/resources/JPD316", "_self")
+              }
+              variants={itemVariants}
+            >
+              {/* <Link href="https://baovietweb.site/resources/JPD316"> */}
               <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 border-2 border-orange-300 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20">
                 <CardHeader>
                   <motion.div

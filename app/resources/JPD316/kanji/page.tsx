@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import kanjiData from "./kanji.json";
 
 interface KanjiCard {
@@ -34,6 +36,7 @@ interface KanjiData {
 }
 
 export default function KanjiPage() {
+  const { user, loading } = useAuth();
   const [selectedLesson, setSelectedLesson] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -98,6 +101,21 @@ export default function KanjiPage() {
     setCurrentIndex(0);
     setIsFlipped(false);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-japan-indigo mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
 
   const handleLessonChange = (lessonIndex: number) => {
     setSelectedLesson(lessonIndex);

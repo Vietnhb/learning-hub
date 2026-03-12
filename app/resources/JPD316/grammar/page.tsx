@@ -6,6 +6,8 @@ import { ArrowLeft, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import grammarData from "./gramar.json";
 
 interface Example {
@@ -34,6 +36,7 @@ interface GrammarData {
 }
 
 export default function GrammarPage() {
+  const { user, loading } = useAuth();
   const [selectedLesson, setSelectedLesson] = useState<number>(0);
   const [expandedPattern, setExpandedPattern] = useState<string | null>(null);
 
@@ -44,6 +47,21 @@ export default function GrammarPage() {
   const togglePattern = (id: string) => {
     setExpandedPattern(expandedPattern === id ? null : id);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">

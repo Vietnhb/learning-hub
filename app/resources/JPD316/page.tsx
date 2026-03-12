@@ -11,11 +11,29 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import kotobaData from "./vocabulary/kotoba.json";
 import kanjiData from "./kanji/kanji.json";
 import grammarData from "./grammar/gramar.json";
 
 export default function JPD316Page() {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
   const vocabularyCount = kotobaData.length;
   const kanjiCount = kanjiData.lessons.reduce(
     (sum: number, lesson: any) => sum + lesson.kanji.length,

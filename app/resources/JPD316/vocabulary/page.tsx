@@ -15,9 +15,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import vocabularyData from "./kotoba.json";
 
 export default function VocabularyPage() {
+  const { user, loading } = useAuth();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [shuffled, setShuffled] = useState(false);
@@ -27,6 +30,40 @@ export default function VocabularyPage() {
 
   const currentCard = cards[currentIndex];
   const progress = ((currentIndex + 1) / cards.length) * 100;
+
+  // Khôi phục trạng thái từ localStorage khi component mount
+  useEffect(() => {
+    const savedIndex = localStorage.getItem("vocabulary-current-index");
+    const savedShuffled = localStorage.getItem("vocabulary-shuffled");
+    const savedCards = localStorage.getItem("vocabulary-cards");
+
+    if (savedIndex) {
+      setCurrentIndex(parseInt(savedIndex, 10));
+    }
+    if (savedShuffled === "true" && savedCards) {
+      try {
+        const parsedCards = JSON.parse(savedCards);
+        setCards(parsedCards);
+        setShuffled(true);
+      } catch (e) {
+        console.error("Error parsing saved cards:", e);
+      }
+    }
+  }, []);
+
+  // Lưu trạng thái vào localStorage mỗi khi thay đổi
+  useEffect(() => {
+    localStorage.setItem("vocabulary-current-index", currentIndex.toString());
+  }, [currentIndex]);
+
+  useEffect(() => {
+    localStorage.setItem("vocabulary-shuffled", shuffled.toString());
+    if (shuffled) {
+      localStorage.setItem("vocabulary-cards", JSON.stringify(cards));
+    } else {
+      localStorage.removeItem("vocabulary-cards");
+    }
+  }, [shuffled, cards]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +110,12 @@ export default function VocabularyPage() {
   const handleReset = () => {
     setCurrentIndex(0);
     setIsFlipped(false);
+    setCards(vocabularyData);
+    setShuffled(false);
+    // Xóa dữ liệu đã lưu trong localStorage
+    localStorage.removeItem("vocabulary-current-index");
+    localStorage.removeItem("vocabulary-shuffled");
+    localStorage.removeItem("vocabulary-cards");
   };
 
   const handleShuffle = () => {
@@ -82,6 +125,21 @@ export default function VocabularyPage() {
     setIsFlipped(false);
     setShuffled(true);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-japan-cream dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-japan-indigo mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
 
   return (
     <div className="min-h-screen bg-japan-cream dark:bg-gray-900 bg-seigaiha py-8 px-4">
