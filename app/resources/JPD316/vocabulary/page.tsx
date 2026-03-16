@@ -308,7 +308,7 @@ export default function VocabularyPage() {
             disabled={currentIndex === 0}
             size="lg"
             variant="outline"
-            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white border-japan-indigo hover:bg-japan-cream font-japanese"
+            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
           >
             <ChevronLeft className="w-6 h-6" />
             Trước
