@@ -19,44 +19,48 @@ import { useAuth } from "@/contexts/AuthContext";
 import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import vocabularyData from "./kotoba.json";
 
+interface VocabCard {
+  term: string;
+  definition: string;
+  image: string | null;
+}
+
 export default function VocabularyPage() {
   const { user, loading } = useAuth();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    if (typeof window === "undefined") return 0;
+    const saved = localStorage.getItem("vocabulary-current-index");
+    return saved ? parseInt(saved, 10) : 0;
+  });
   const [isFlipped, setIsFlipped] = useState(false);
   const [shuffled, setShuffled] = useState(false);
-  const [cards, setCards] = useState(vocabularyData);
+  const [cards, setCards] = useState(() => {
+    if (typeof window === "undefined") return vocabularyData;
+    const savedShuffled = localStorage.getItem("vocabulary-shuffled");
+    const savedCards = localStorage.getItem("vocabulary-cards");
+    if (savedShuffled === "true" && savedCards) {
+      try { return JSON.parse(savedCards); } catch { return vocabularyData; }
+    }
+    return vocabularyData;
+  });
+  const [shuffledInit] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem("vocabulary-shuffled") === "true";
+  });
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [indexInput, setIndexInput] = useState("");
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const isMounted = useRef(false);
+
+  // Sync shuffled state from lazy init
+  useEffect(() => {
+    if (shuffledInit) setShuffled(true);
+  }, []);
 
   const currentCard = cards[currentIndex];
   const progress = ((currentIndex + 1) / cards.length) * 100;
 
-  // Khôi phục trạng thái từ localStorage khi component mount
-  useEffect(() => {
-    const savedIndex = localStorage.getItem("vocabulary-current-index");
-    const savedShuffled = localStorage.getItem("vocabulary-shuffled");
-    const savedCards = localStorage.getItem("vocabulary-cards");
-
-    if (savedIndex) {
-      setCurrentIndex(parseInt(savedIndex, 10));
-    }
-    if (savedShuffled === "true" && savedCards) {
-      try {
-        const parsedCards = JSON.parse(savedCards);
-        setCards(parsedCards);
-        setShuffled(true);
-      } catch (e) {
-        console.error("Error parsing saved cards:", e);
-      }
-    }
-    isMounted.current = true;
-  }, []);
-
   // Lưu trạng thái vào localStorage mỗi khi thay đổi
   useEffect(() => {
-    if (!isMounted.current) return;
     localStorage.setItem("vocabulary-current-index", currentIndex.toString());
   }, [currentIndex]);
 
@@ -447,7 +451,7 @@ export default function VocabularyPage() {
           </div>
 
           <div className="space-y-4">
-            {cards.map((card, index) => (
+            {cards.map((card: VocabCard, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
