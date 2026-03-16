@@ -26,7 +26,9 @@ export default function VocabularyPage() {
   const [shuffled, setShuffled] = useState(false);
   const [cards, setCards] = useState(vocabularyData);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [indexInput, setIndexInput] = useState("");
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const isMounted = useRef(false);
 
   const currentCard = cards[currentIndex];
   const progress = ((currentIndex + 1) / cards.length) * 100;
@@ -49,10 +51,12 @@ export default function VocabularyPage() {
         console.error("Error parsing saved cards:", e);
       }
     }
+    isMounted.current = true;
   }, []);
 
   // Lưu trạng thái vào localStorage mỗi khi thay đổi
   useEffect(() => {
+    if (!isMounted.current) return;
     localStorage.setItem("vocabulary-current-index", currentIndex.toString());
   }, [currentIndex]);
 
@@ -215,8 +219,31 @@ export default function VocabularyPage() {
                   <span className="text-2xl text-white font-bold">語</span>
                 </div>
               </div>
-              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese">
-                Từ số {currentIndex + 1} / {cards.length}
+              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese flex items-center justify-center gap-1">
+                Từ số{" "}
+                <input
+                  type="number"
+                  min={1}
+                  max={cards.length}
+                  title="Nhập số thẻ"
+                  aria-label="Số thẻ hiện tại"
+                  value={indexInput !== "" ? indexInput : currentIndex + 1}
+                  onChange={(e) => setIndexInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      const val = parseInt(indexInput, 10);
+                      if (!isNaN(val) && val >= 1 && val <= cards.length) {
+                        setCurrentIndex(val - 1);
+                        setIsFlipped(false);
+                      }
+                      setIndexInput("");
+                      e.currentTarget.blur();
+                    }
+                  }}
+                  onBlur={() => setIndexInput("")}
+                  className="w-14 text-center border-b-2 border-japan-indigo dark:border-indigo-400 bg-transparent outline-none font-bold text-japan-indigo dark:text-indigo-300"
+                />
+                {" "}/ {cards.length}
               </p>
             </div>
           </div>
