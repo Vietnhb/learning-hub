@@ -75,6 +75,23 @@ export default function VocabularyPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        handlePrevious();
+      } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        handleFlip();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentIndex, cards.length]);
+
   const scrollToCurrentCard = () => {
     const cardElement = cardRefs.current[currentIndex];
     if (cardElement) {
@@ -104,7 +121,7 @@ export default function VocabularyPage() {
   };
 
   const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+    setIsFlipped((prev) => !prev);
   };
 
   const handleReset = () => {
@@ -314,11 +331,21 @@ export default function VocabularyPage() {
             Trước
           </Button>
 
-          <div className="text-center bg-white dark:bg-gray-800 px-6 py-3 rounded-lg shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30">
-            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
-              {isFlipped ? "🇻🇳 Nghĩa tiếng Việt" : "🇯🇵 Từ tiếng Nhật"}
-            </p>
-          </div>
+          {/* Mazii lookup */}
+          <a
+            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(currentCard.term)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2 px-6 py-5 text-base font-semibold shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-green dark:border-green-700 hover:bg-japan-cream dark:hover:bg-gray-700 text-japan-green dark:text-green-400 font-japanese"
+            >
+              <BookOpen className="w-5 h-5" />
+              Giải nghĩa trên Mazii
+            </Button>
+          </a>
 
           <Button
             onClick={handleNext}
@@ -330,16 +357,6 @@ export default function VocabularyPage() {
             Sau
             <ChevronRight className="w-6 h-6" />
           </Button>
-        </div>
-
-        {/* Keyboard Hints */}
-        <div className="mt-6 text-center">
-          <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30">
-            <span className="text-2xl">💡</span>
-            <p className="text-base font-medium text-japan-charcoal dark:text-gray-300 font-japanese">
-              Nhấn vào thẻ để lật • Dùng nút mũi tên để chuyển thẻ
-            </p>
-          </div>
         </div>
 
         {/* Stats */}

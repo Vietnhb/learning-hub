@@ -58,6 +58,16 @@ export default function KanjiPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); handleNext(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); handlePrevious(); }
+      else if (e.key === "ArrowUp" || e.key === "ArrowDown") { e.preventDefault(); handleFlip(); }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentIndex, cards.length]);
+
   const scrollToCurrentCard = () => {
     const cardElement = cardRefs.current[currentIndex];
     if (cardElement) {
@@ -87,7 +97,7 @@ export default function KanjiPage() {
   };
 
   const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+    setIsFlipped((prev) => !prev);
   };
 
   const handleReset = () => {
@@ -334,6 +344,24 @@ export default function KanjiPage() {
             Sau
             <ChevronRight className="w-6 h-6" />
           </Button>
+        </div>
+
+        {/* Mazii lookup */}
+        <div className="flex justify-center mb-6">
+          <a
+            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(currentCard.term)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2 px-6 py-5 text-base font-semibold shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-green dark:border-green-700 hover:bg-japan-cream dark:hover:bg-gray-700 text-japan-green dark:text-green-400 font-japanese"
+            >
+              <BookOpen className="w-5 h-5" />
+              Giải nghĩa trên Mazii
+            </Button>
+          </a>
         </div>
 
         {/* Keyboard Hints */}
