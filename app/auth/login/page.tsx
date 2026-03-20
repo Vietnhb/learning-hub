@@ -89,6 +89,7 @@ export default function LoginPage() {
       }
 
       // Đăng nhập thành công
+      setLoading(false);
       router.push("/");
       router.refresh();
     } catch (err: any) {
