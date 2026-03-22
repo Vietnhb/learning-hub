@@ -1257,8 +1257,423 @@
       "lesson": 5,
       "kanji": [
         {
-          "term": "Comming Soon",
-          "definition": "Hope u passing",
+          "term": "確",
+          "definition": "XÁC （カク）たし・かめる",
+          "image": null
+        },
+        {
+          "term": "確認",
+          "definition": "（かくにん）xác nhận, kiểm tra lại",
+          "image": null
+        },
+        {
+          "term": "確定",
+          "definition": "（かくてい）xác định, quyết định chắc chắn",
+          "image": null
+        },
+        {
+          "term": "確立",
+          "definition": "（かくりつ）xác lập, thiết lập vững chắc",
+          "image": null
+        },
+        {
+          "term": "正確",
+          "definition": "（せいかく）chính xác",
+          "image": null
+        },
+        {
+          "term": "認",
+          "definition": "NHẬN （ニン）みと・める",
+          "image": null
+        },
+        {
+          "term": "認定",
+          "definition": "（にんてい）công nhận, chứng nhận",
+          "image": null
+        },
+        {
+          "term": "認識",
+          "definition": "（にんしき）nhận thức",
+          "image": null
+        },
+        {
+          "term": "確認",
+          "definition": "（かくにん）xác nhận, kiểm tra lại",
+          "image": null
+        },
+        {
+          "term": "保",
+          "definition": "BẢO （ホ）たも・つ",
+          "image": null
+        },
+        {
+          "term": "保管",
+          "definition": "（ほかん）bảo quản, lưu giữ",
+          "image": null
+        },
+        {
+          "term": "保証",
+          "definition": "（ほしょう）bảo đảm, bảo hành",
+          "image": null
+        },
+        {
+          "term": "保留",
+          "definition": "（ほりゅう）bảo lưu, tạm hoãn",
+          "image": null
+        },
+        {
+          "term": "確保",
+          "definition": "（かくほ）đảm bảo, bảo đảm",
+          "image": null
+        },
+        {
+          "term": "深",
+          "definition": "THÂM （シン）ふか・い",
+          "image": null
+        },
+        {
+          "term": "深度",
+          "definition": "（しんど）độ sâu",
+          "image": null
+        },
+        {
+          "term": "深窓",
+          "definition": "（しんそう）thâm khuê, khuê các",
+          "image": null
+        },
+        {
+          "term": "深夜",
+          "definition": "（しんや）đêm khuya",
+          "image": null
+        },
+        {
+          "term": "録",
+          "definition": "LỤC （ロク）",
+          "image": null
+        },
+        {
+          "term": "録音",
+          "definition": "（ろくおん）ghi âm",
+          "image": null
+        },
+        {
+          "term": "録画",
+          "definition": "（ろくが）ghi hình",
+          "image": null
+        },
+        {
+          "term": "登録",
+          "definition": "（とうろく）đăng ký",
+          "image": null
+        },
+        {
+          "term": "記録",
+          "definition": "（きろく）ghi chép, kỷ lục",
+          "image": null
+        },
+        {
+          "term": "接",
+          "definition": "TIẾP （セツ）",
+          "image": null
+        },
+        {
+          "term": "接待",
+          "definition": "（せったい）tiếp đãi",
+          "image": null
+        },
+        {
+          "term": "接近",
+          "definition": "（せっきん）tiếp cận",
+          "image": null
+        },
+        {
+          "term": "接着",
+          "definition": "（せっちゃく）kết dính, dán",
+          "image": null
+        },
+        {
+          "term": "面接",
+          "definition": "（めんせつ）phỏng vấn",
+          "image": null
+        },
+        {
+          "term": "直接",
+          "definition": "（ちょくせつ）trực tiếp",
+          "image": null
+        },
+        {
+          "term": "変",
+          "definition": "BIẾN （ヘン）か・わる か・える",
+          "image": null
+        },
+        {
+          "term": "変動",
+          "definition": "（へんどう）biến động",
+          "image": null
+        },
+        {
+          "term": "変化",
+          "definition": "（へんか）thay đổi, biến hóa",
+          "image": null
+        },
+        {
+          "term": "変体",
+          "definition": "（へんたい）biến thể",
+          "image": null
+        },
+        {
+          "term": "大変",
+          "definition": "（たいへん）rất, vất vả, nghiêm trọng",
+          "image": null
+        },
+        {
+          "term": "不変",
+          "definition": "（ふへん）bất biến, không đổi",
+          "image": null
+        },
+        {
+          "term": "議",
+          "definition": "NGHỊ （ギ）",
+          "image": null
+        },
+        {
+          "term": "議題",
+          "definition": "（ぎだい）chủ đề nghị sự",
+          "image": null
+        },
+        {
+          "term": "議院",
+          "definition": "（ぎいん）nghị viện",
+          "image": null
+        },
+        {
+          "term": "会議",
+          "definition": "（かいぎ）hội nghị, cuộc họp",
+          "image": null
+        },
+        {
+          "term": "協議",
+          "definition": "（きょうぎ）hiệp nghị, bàn bạc",
+          "image": null
+        },
+        {
+          "term": "決議",
+          "definition": "（けつぎ）nghị quyết",
+          "image": null
+        },
+        {
+          "term": "示",
+          "definition": "THỊ （ジ）しめ・す",
+          "image": null
+        },
+        {
+          "term": "指示",
+          "definition": "（しじ）chỉ thị, hướng dẫn",
+          "image": null
+        },
+        {
+          "term": "教示",
+          "definition": "（きょうじ）chỉ dạy, chỉ giáo",
+          "image": null
+        },
+        {
+          "term": "公示",
+          "definition": "（こうじ）công bố",
+          "image": null
+        },
+        {
+          "term": "例示",
+          "definition": "（れいじ）nêu ví dụ, minh họa",
+          "image": null
+        },
+        {
+          "term": "番",
+          "definition": "PHIÊN （バン）",
+          "image": null
+        },
+        {
+          "term": "番号",
+          "definition": "（ばんごう）số, số hiệu",
+          "image": null
+        },
+        {
+          "term": "当番",
+          "definition": "（とうばん）trực ban, phiên trực",
+          "image": null
+        },
+        {
+          "term": "交番",
+          "definition": "（こうばん）đồn cảnh sát",
+          "image": null
+        },
+        {
+          "term": "号",
+          "definition": "HIỆU （ゴウ）",
+          "image": null
+        },
+        {
+          "term": "番号",
+          "definition": "（ばんごう）số, số hiệu",
+          "image": null
+        },
+        {
+          "term": "記号",
+          "definition": "（きごう）ký hiệu",
+          "image": null
+        },
+        {
+          "term": "年号",
+          "definition": "（ねんごう）niên hiệu",
+          "image": null
+        },
+        {
+          "term": "組",
+          "definition": "TỔ （ソ）く・む",
+          "image": null
+        },
+        {
+          "term": "組合",
+          "definition": "（くみあい）công đoàn, tổ hợp",
+          "image": null
+        },
+        {
+          "term": "番組",
+          "definition": "（ばんぐみ）chương trình",
+          "image": null
+        },
+        {
+          "term": "共",
+          "definition": "CỘNG （キョウ）とも",
+          "image": null
+        },
+        {
+          "term": "共生",
+          "definition": "（きょうせい）cộng sinh",
+          "image": null
+        },
+        {
+          "term": "共通",
+          "definition": "（きょうつう）chung, thông dụng",
+          "image": null
+        },
+        {
+          "term": "共有",
+          "definition": "（きょうゆう）chia sẻ, cùng sở hữu",
+          "image": null
+        },
+        {
+          "term": "共同",
+          "definition": "（きょうどう）cùng nhau, hợp tác",
+          "image": null
+        },
+        {
+          "term": "共産",
+          "definition": "（きょうさん）cộng sản",
+          "image": null
+        },
+        {
+          "term": "防",
+          "definition": "PHÒNG （ボウ）ふせ・ぐ",
+          "image": null
+        },
+        {
+          "term": "防水",
+          "definition": "（ぼうすい）chống nước",
+          "image": null
+        },
+        {
+          "term": "防火",
+          "definition": "（ぼうか）phòng cháy",
+          "image": null
+        },
+        {
+          "term": "防音",
+          "definition": "（ぼうおん）cách âm",
+          "image": null
+        },
+        {
+          "term": "消防",
+          "definition": "（しょうぼう）cứu hỏa, phòng cháy chữa cháy",
+          "image": null
+        },
+        {
+          "term": "予防",
+          "definition": "（よぼう）phòng ngừa",
+          "image": null
+        },
+        {
+          "term": "国防",
+          "definition": "（こくぼう）quốc phòng",
+          "image": null
+        },
+        {
+          "term": "数",
+          "definition": "SỐ （スウ）かず かぞ・える",
+          "image": null
+        },
+        {
+          "term": "数字",
+          "definition": "（すうじ）chữ số",
+          "image": null
+        },
+        {
+          "term": "数値",
+          "definition": "（すうち）giá trị số",
+          "image": null
+        },
+        {
+          "term": "数学",
+          "definition": "（すうがく）toán học",
+          "image": null
+        },
+        {
+          "term": "算数",
+          "definition": "（さんすう）số học",
+          "image": null
+        },
+        {
+          "term": "多数",
+          "definition": "（たすう）số nhiều, đông",
+          "image": null
+        },
+        {
+          "term": "人数",
+          "definition": "（にんずう）số người",
+          "image": null
+        },
+        {
+          "term": "設",
+          "definition": "THIẾT （セツ）もう・ける",
+          "image": null
+        },
+        {
+          "term": "設備",
+          "definition": "（せつび）thiết bị, cơ sở vật chất",
+          "image": null
+        },
+        {
+          "term": "設計",
+          "definition": "（せっけい）thiết kế",
+          "image": null
+        },
+        {
+          "term": "設立",
+          "definition": "（せつりつ）thành lập",
+          "image": null
+        },
+        {
+          "term": "建設",
+          "definition": "（けんせつ）xây dựng",
+          "image": null
+        },
+        {
+          "term": "増設",
+          "definition": "（ぞうせつ）mở rộng, lắp đặt thêm",
+          "image": null
+        },
+        {
+          "term": "新設",
+          "definition": "（しんせつ）xây mới, thành lập mới",
           "image": null
         }
       ]
