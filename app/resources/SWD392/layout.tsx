@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SWD392 - System Architecture Quiz",
+  title: "Learning Hub",
   description:
     "SWD392 practice page for software architecture, UML, design strategy, PIM/PSM and system design review.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/resources/SWD392",
   },
   openGraph: {
-    title: "SWD392 - System Architecture Quiz",
+    title: "Learning Hub",
     description:
       "SWD392 practice page for software architecture, UML, design strategy, PIM/PSM and system design review.",
     url: "/resources/SWD392",

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     canonical: "/resources",
   },
   openGraph: {
-    title: "Tai nguyen hoc tap: FPT Source, JPD316, JPD326, SWD392",
+    title: "Learning Hub",
     description:
       "Resource hub for FPT Source (FPT SRC), JPD316, JPD326 and SWD392 practice content.",
     url: "/resources",

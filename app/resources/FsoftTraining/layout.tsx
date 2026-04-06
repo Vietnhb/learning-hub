@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "/resources/FsoftTraining",
   },
   openGraph: {
-    title: "FPT Source - FPT Software Training",
+    title: "Learning Hub",
     description:
       "FPT Source (FPT SRC) learning materials: vocabulary, grammar and kanji for FPT Software Training.",
     url: "/resources/FsoftTraining",

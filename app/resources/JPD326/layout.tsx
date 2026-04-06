@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JPD326 - Japanese Learning Materials",
+  title: "Learning Hub",
   description:
     "JPD326 learning hub with Japanese study resources and progressive updates.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/resources/JPD326",
   },
   openGraph: {
-    title: "JPD326 - Japanese Learning Materials",
+    title: "Learning Hub",
     description:
       "JPD326 learning hub with Japanese study resources and progressive updates.",
     url: "/resources/JPD326",

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/resources/JPD316",
   },
   openGraph: {
-    title: "JPD316 - Japanese Learning Materials",
+    title: "Learning Hub",
     description:
       "JPD316 learning hub with vocabulary, grammar and kanji resources for Japanese practice.",
     url: "/resources/JPD316",

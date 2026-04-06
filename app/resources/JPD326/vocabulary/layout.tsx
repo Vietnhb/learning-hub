@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JPD326 Vocabulary - Coming soon",
+  title: "Learning Hub",
   description: "JPD326 vocabulary content is being updated.",
   robots: {
     index: false,
