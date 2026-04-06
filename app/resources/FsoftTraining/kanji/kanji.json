@@ -1,0 +1,171 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Cây cối và Thực vật",
+      "kanji": [
+        {
+          "character": "実",
+          "meaning": "Thực, quả",
+          "onyomi": "ジツ",
+          "kunyomi": "み",
+          "examples": [
+            { "word": "事実", "reading": "じじつ", "meaning": "Sự thực" },
+            { "word": "実家", "reading": "じっか", "meaning": "Nhà ở quê" }
+          ]
+        },
+        {
+          "character": "根",
+          "meaning": "Rễ, căn",
+          "onyomi": "コン",
+          "kunyomi": "ね",
+          "examples": [
+            {
+              "word": "大根",
+              "reading": "だいこん",
+              "meaning": "Củ cải trắng"
+            },
+            { "word": "屋根", "reading": "やね", "meaning": "Mái nhà" }
+          ]
+        },
+        {
+          "character": "葉",
+          "meaning": "Lá",
+          "onyomi": "ヨウ",
+          "kunyomi": "は",
+          "examples": [
+            { "word": "落ち葉", "reading": "おちば", "meaning": "Lá rơi" },
+            { "word": "紅葉", "reading": "こうよう", "meaning": "Lá đỏ" },
+            {
+              "word": "千葉",
+              "reading": "ちば",
+              "meaning": "Chiba (tên địa phương)"
+            }
+          ]
+        },
+        {
+          "character": "植",
+          "meaning": "Trồng",
+          "onyomi": "ショク",
+          "kunyomi": "う-える",
+          "examples": [
+            { "word": "植える", "reading": "うえる", "meaning": "Trồng" },
+            { "word": "植物", "reading": "しょくぶつ", "meaning": "Thực vật" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tầng lầu và Cửa",
+      "kanji": [
+        {
+          "character": "階",
+          "meaning": "Tầng",
+          "onyomi": "カイ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "階段", "reading": "かいだん", "meaning": "Cầu thang" },
+            { "word": "段階", "reading": "だんかい", "meaning": "Giai đoạn" },
+            { "word": "何階", "reading": "なんかい", "meaning": "Tầng mấy?" },
+            { "word": "３階", "reading": "さんがい", "meaning": "Tầng 3" }
+          ]
+        },
+        {
+          "character": "段",
+          "meaning": "Bậc, đoạn",
+          "onyomi": "ダン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "階段", "reading": "かいだん", "meaning": "Cầu thang" },
+            { "word": "段階", "reading": "だんかい", "meaning": "Giai đoạn" },
+            { "word": "値段", "reading": "ねだん", "meaning": "Giá cả" },
+            { "word": "手段", "reading": "しゅだん", "meaning": "Phương tiện" }
+          ]
+        },
+        {
+          "character": "窓",
+          "meaning": "Cửa sổ",
+          "onyomi": "ソウ",
+          "kunyomi": "まど",
+          "examples": [
+            { "word": "窓", "reading": "まど", "meaning": "Cửa sổ" },
+            { "word": "窓口", "reading": "まどぐち", "meaning": "Quầy" },
+            {
+              "word": "同窓会",
+              "reading": "どうそうかい",
+              "meaning": "Hội đồng học cũ"
+            }
+          ]
+        },
+        {
+          "character": "戸",
+          "meaning": "Cửa",
+          "onyomi": "コ",
+          "kunyomi": "と",
+          "examples": [
+            {
+              "word": "一戸建て",
+              "reading": "いっこだて",
+              "meaning": "Nhà riêng lẻ"
+            },
+            { "word": "門戸", "reading": "もんこ", "meaning": "Cổng, lối vào" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Xây dựng và Kiến trúc",
+      "kanji": [
+        {
+          "character": "築",
+          "meaning": "Xây",
+          "onyomi": "チク",
+          "kunyomi": "きず-く",
+          "examples": [
+            { "word": "築く", "reading": "きずく", "meaning": "Xây dựng" },
+            { "word": "建築", "reading": "けんちく", "meaning": "Kiến trúc" }
+          ]
+        },
+        {
+          "character": "構",
+          "meaning": "Cấu, dựng",
+          "onyomi": "コウ",
+          "kunyomi": "かま-える",
+          "examples": [
+            { "word": "構造", "reading": "こうぞう", "meaning": "Cấu trúc" },
+            { "word": "構成", "reading": "こうせい", "meaning": "Cấu thành" }
+          ]
+        },
+        {
+          "character": "造",
+          "meaning": "Tạo, chế tạo",
+          "onyomi": "ゾウ",
+          "kunyomi": "つく-る",
+          "examples": [
+            {
+              "word": "造る",
+              "reading": "つくる",
+              "meaning": "Tạo ra, chế tạo"
+            },
+            { "word": "構造", "reading": "こうぞう", "meaning": "Cấu trúc" },
+            { "word": "創造", "reading": "そうぞう", "meaning": "Sáng tạo" }
+          ]
+        },
+        {
+          "character": "建",
+          "meaning": "Xây, dựng",
+          "onyomi": "ケン",
+          "kunyomi": "た-てる、た-つ",
+          "examples": [
+            { "word": "建てる", "reading": "たてる", "meaning": "Xây" },
+            { "word": "建つ", "reading": "たつ", "meaning": "Được xây" },
+            { "word": "建設", "reading": "けんせつ", "meaning": "Xây dựng" },
+            { "word": "建築", "reading": "けんちく", "meaning": "Kiến trúc" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Search, Filter, Download, Eye, Star } from "lucide-react";
@@ -19,11 +19,22 @@ export default function ResourcesPage() {
       title: "JPD316 - Giáo trình Tiếng Nhật",
       category: "Ngoại ngữ",
       type: "Folder",
-      size: "Đang cập nhật",
+      size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
       description: "Giáo trình học tiếng Nhật toàn diện",
       link: "/resources/JPD316",
+    },
+    {
+      id: 2,
+      title: "JPD326 - Giáo trình Tiếng Nhật",
+      category: "Ngoại ngữ",
+      type: "Folder",
+      size: "Đang cập nhật",
+      downloads: 0,
+      rating: 5.0,
+      description: "Giáo trình Tiếng Nhật Trung Cấp (N4-N3)",
+      link: "/resources/JPD326",
     },
   ];
 
@@ -40,7 +51,7 @@ export default function ResourcesPage() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Hiện tại: Giáo trình Tiếng Nhật JPD316
+            Giáo trình Tiếng Nhật JPD316 và JPD326
           </p>
         </motion.div>
 
@@ -111,7 +122,7 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                     <div className="flex gap-2">
-                      <Link href="/resources/JPD316">
+                      <Link href={resource.link}>
                         <Button size="sm" variant="outline" className="gap-2">
                           <Eye className="w-4 h-4" />
                           Xem

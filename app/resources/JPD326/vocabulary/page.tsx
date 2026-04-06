@@ -1,0 +1,553 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
+  RotateCcw,
+  Shuffle,
+  BookOpen,
+  ArrowDown,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import vocabularyData from "./kotoba.json";
+
+interface VocabCard {
+  term: string;
+  definition: string;
+  image: string | null;
+}
+
+export default function VocabularyPage() {
+  const { user, loading } = useAuth();
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    if (typeof window === "undefined") return 0;
+    const saved = localStorage.getItem("vocabulary-current-index");
+    return saved ? parseInt(saved, 10) : 0;
+  });
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [shuffled, setShuffled] = useState(false);
+  const [cards, setCards] = useState(() => {
+    if (typeof window === "undefined") return vocabularyData;
+    const savedShuffled = localStorage.getItem("vocabulary-shuffled");
+    const savedCards = localStorage.getItem("vocabulary-cards");
+    if (savedShuffled === "true" && savedCards) {
+      try { return JSON.parse(savedCards); } catch { return vocabularyData; }
+    }
+    return vocabularyData;
+  });
+  const [shuffledInit] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem("vocabulary-shuffled") === "true";
+  });
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [indexInput, setIndexInput] = useState("");
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Sync shuffled state from lazy init
+  useEffect(() => {
+    if (shuffledInit) setShuffled(true);
+  }, []);
+
+  const currentCard = cards[currentIndex];
+  const progress = ((currentIndex + 1) / cards.length) * 100;
+
+  // Lưu trạng thái vào localStorage mỗi khi thay đổi
+  useEffect(() => {
+    localStorage.setItem("vocabulary-current-index", currentIndex.toString());
+  }, [currentIndex]);
+
+  useEffect(() => {
+    localStorage.setItem("vocabulary-shuffled", shuffled.toString());
+    if (shuffled) {
+      localStorage.setItem("vocabulary-cards", JSON.stringify(cards));
+    } else {
+      localStorage.removeItem("vocabulary-cards");
+    }
+  }, [shuffled, cards]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button when scrolled down more than 200px
+      setShowScrollButton(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        handlePrevious();
+      } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        handleFlip();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentIndex, cards.length]);
+
+  const scrollToCurrentCard = () => {
+    const cardElement = cardRefs.current[currentIndex];
+    if (cardElement) {
+      const offset = 100; // Offset from top
+      const elementPosition = cardElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < cards.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setIsFlipped(false);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setIsFlipped(false);
+    }
+  };
+
+  const handleFlip = () => {
+    setIsFlipped((prev) => !prev);
+  };
+
+  const handleReset = () => {
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setCards(vocabularyData);
+    setShuffled(false);
+    // Xóa dữ liệu đã lưu trong localStorage
+    localStorage.removeItem("vocabulary-current-index");
+    localStorage.removeItem("vocabulary-shuffled");
+    localStorage.removeItem("vocabulary-cards");
+  };
+
+  const handleShuffle = () => {
+    const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffledCards);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setShuffled(true);
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-japan-cream dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-japan-indigo mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
+
+  return (
+    <div className="min-h-screen bg-japan-cream dark:bg-gray-900 bg-seigaiha py-8 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6">
+          <Link href="/resources/JPD326">
+            <Button
+              variant="outline"
+              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:border-japan-indigo dark:hover:border-indigo-600 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Quay lại
+            </Button>
+          </Link>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={handleReset}
+              title="Bắt đầu lại"
+              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={handleShuffle}
+              title="Xáo trộn"
+              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
+            >
+              <Shuffle className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Title with Japanese aesthetic */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="text-center mb-6 relative"
+        >
+          <div className="inline-block relative">
+            {/* Japanese stamp/seal style background */}
+            <div className="absolute inset-0 bg-japan-indigo opacity-10 rounded-full blur-2xl"></div>
+            <div className="relative bg-white dark:bg-gray-800 border-4 border-japan-indigo dark:border-indigo-700 rounded-2xl px-8 py-6 shadow-2xl">
+              <div className="flex items-center justify-center gap-4 mb-2">
+                <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
+                  <BookOpen className="w-7 h-7 text-white" />
+                </div>
+                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white tracking-wider">
+                  語彙 JPD326
+                </h1>
+                <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
+                  <span className="text-2xl text-white font-bold">語</span>
+                </div>
+              </div>
+              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese flex items-center justify-center gap-1">
+                Từ số{" "}
+                <input
+                  type="number"
+                  min={1}
+                  max={cards.length}
+                  title="Nhập số thẻ"
+                  aria-label="Số thẻ hiện tại"
+                  value={indexInput !== "" ? indexInput : currentIndex + 1}
+                  onChange={(e) => setIndexInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      const val = parseInt(indexInput, 10);
+                      if (!isNaN(val) && val >= 1 && val <= cards.length) {
+                        setCurrentIndex(val - 1);
+                        setIsFlipped(false);
+                      }
+                      setIndexInput("");
+                      e.currentTarget.blur();
+                    }
+                  }}
+                  onBlur={() => setIndexInput("")}
+                  className="w-14 text-center border-b-2 border-japan-indigo dark:border-indigo-400 bg-transparent outline-none font-bold text-japan-indigo dark:text-indigo-300"
+                />
+                {" "}/ {cards.length}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Progress Bar - Traditional Japanese style */}
+        <div className="w-full bg-white dark:bg-gray-800 rounded-full h-4 mb-8 shadow-inner border-2 border-japan-indigo/20 dark:border-indigo-700/20">
+          <motion.div
+            className="bg-gradient-to-r from-japan-indigo to-japan-green h-full rounded-full shadow-md relative overflow-hidden"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="absolute inset-0 bg-seigaiha opacity-20"></div>
+          </motion.div>
+        </div>
+
+        {/* Flashcard - Washi paper style */}
+        <div className="mb-10 perspective-1000">
+          <motion.div
+            className="relative w-full h-[500px] cursor-pointer"
+            onClick={handleFlip}
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.2 }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex + (isFlipped ? "-back" : "-front")}
+                initial={{ rotateY: isFlipped ? -180 : 0, opacity: 0 }}
+                animate={{ rotateY: 0, opacity: 1 }}
+                exit={{ rotateY: isFlipped ? 180 : -180, opacity: 0 }}
+                transition={{ duration: 0.1 }}
+                className="absolute inset-0"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white dark:bg-gray-800 shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-indigo dark:border-indigo-700 relative overflow-hidden">
+                  {/* Washi paper texture overlay */}
+                  <div className="absolute inset-0 bg-seigaiha opacity-5"></div>
+                  <div className="absolute top-4 right-4 w-16 h-16 bg-japan-indigo rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold font-japanese-serif text-2xl">
+                      語
+                    </span>
+                  </div>
+
+                  {!isFlipped ? (
+                    // Front - Japanese term with traditional styling
+                    <div className="text-center space-y-6 relative z-10">
+                      {currentCard.image && (
+                        <div className="relative w-72 h-72 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
+                          <Image
+                            src={currentCard.image}
+                            alt={currentCard.term}
+                            fill
+                            className="object-cover"
+                            unoptimized
+                          />
+                        </div>
+                      )}
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-japan-indigo/5 blur-3xl"></div>
+                        <h2 className="text-7xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-tight relative">
+                          {currentCard.term}
+                        </h2>
+                      </div>
+                    </div>
+                  ) : (
+                    // Back - Vietnamese definition with traditional style
+                    <div className="text-center space-y-6 relative z-10">
+                      <div className="bg-gradient-to-br from-japan-green/20 via-japan-cream to-japan-green/10 dark:from-green-900/40 dark:via-gray-700 dark:to-green-900/20 border-4 border-japan-green dark:border-green-600 rounded-3xl p-10 shadow-2xl">
+                        {/* Vietnamese meaning - highlighted */}
+                        <div className="mb-6 bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-japan-green/40">
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <span className="text-4xl">🇻🇳</span>
+                            <div className="h-1 flex-1 bg-gradient-to-r from-transparent via-japan-green to-transparent rounded"></div>
+                            <span className="text-4xl">📖</span>
+                          </div>
+                          <h2 className="text-6xl font-black text-japan-green dark:text-green-400 leading-relaxed font-japanese text-center">
+                            {currentCard.definition}
+                          </h2>
+                        </div>
+
+                        {/* Japanese term - reference */}
+                        <div className="pt-6 border-t-4 border-japan-gold/50 dark:border-yellow-600/50">
+                          <div className="bg-japan-indigo/10 dark:bg-indigo-900/30 rounded-xl p-6 border-2 border-japan-indigo/30">
+                            <p className="text-sm font-semibold text-japan-charcoal/60 dark:text-gray-400 mb-2 text-center font-japanese">
+                              Từ tiếng Nhật
+                            </p>
+                            <p className="text-5xl text-japan-charcoal dark:text-white font-black font-japanese-serif text-center tracking-wider">
+                              {currentCard.term}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </Card>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex justify-between items-center mb-10">
+          <Button
+            onClick={handlePrevious}
+            disabled={currentIndex === 0}
+            size="lg"
+            variant="outline"
+            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
+          >
+            <ChevronLeft className="w-6 h-6" />
+            Trước
+          </Button>
+
+          {/* Mazii lookup */}
+          <a
+            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(currentCard.term)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2 px-6 py-5 text-base font-semibold shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-green dark:border-green-700 hover:bg-japan-cream dark:hover:bg-gray-700 text-japan-green dark:text-green-400 font-japanese"
+            >
+              <BookOpen className="w-5 h-5" />
+              Giải nghĩa trên Mazii
+            </Button>
+          </a>
+
+          <Button
+            onClick={handleNext}
+            disabled={currentIndex === cards.length - 1}
+            size="lg"
+            variant="outline"
+            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
+          >
+            Sau
+            <ChevronRight className="w-6 h-6" />
+          </Button>
+        </div>
+
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-8 grid grid-cols-3 gap-6 mb-16"
+        >
+          <Card className="p-6 text-center bg-gradient-to-br from-japan-indigo/10 to-japan-indigo/20 dark:from-indigo-950/30 dark:to-indigo-900/30 border-2 border-japan-indigo dark:border-indigo-700 shadow-lg hover:shadow-xl transition-shadow">
+            <p className="text-4xl font-bold text-japan-indigo mb-2 font-japanese-serif">
+              {cards.length}
+            </p>
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
+              Tổng từ
+            </p>
+          </Card>
+          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 border-2 border-japan-green dark:border-green-700 shadow-lg hover:shadow-xl transition-shadow">
+            <p className="text-4xl font-bold text-japan-green mb-2 font-japanese-serif">
+              {currentIndex + 1}
+            </p>
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
+              Đang học
+            </p>
+          </Card>
+          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/30 dark:to-orange-900/30 border-2 border-japan-gold dark:border-orange-700 shadow-lg hover:shadow-xl transition-shadow">
+            <p className="text-4xl font-bold text-japan-gold mb-2 font-japanese-serif">
+              {cards.length - currentIndex - 1}
+            </p>
+            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
+              Còn lại
+            </p>
+          </Card>
+        </motion.div>
+
+        {/* Divider */}
+        <div className="relative mb-12">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t-2 border-japan-gold/30 dark:border-yellow-700/30"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-japan-cream dark:bg-gray-800 px-6 py-2 text-xl font-bold text-japan-charcoal dark:text-gray-300 rounded-full shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
+              📖 Danh sách đầy đủ
+            </span>
+          </div>
+        </div>
+
+        {/* Vocabulary List */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+        >
+          <div className="mb-6 flex items-center justify-between">
+            <h2 className="text-3xl font-bold text-japan-charcoal dark:text-white font-japanese-serif">
+              📚 Danh sách từ vựng
+            </h2>
+            <span className="text-lg font-semibold text-japan-charcoal dark:text-gray-300 bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
+              {cards.length} từ
+            </span>
+          </div>
+
+          <div className="space-y-4">
+            {cards.map((card: VocabCard, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.005 }}
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setIsFlipped(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <Card
+                  className={`p-8 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white dark:bg-gray-800 ${
+                    index === currentIndex
+                      ? "border-4 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 dark:from-indigo-950/50 dark:to-green-950/50 shadow-lg"
+                      : "border-2 border-gray-200 dark:border-gray-700 hover:border-japan-indigo/50 dark:hover:border-indigo-700"
+                  }`}
+                >
+                  <div className="flex items-center gap-8">
+                    {/* Number Badge */}
+                    <div
+                      className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl shadow-lg ${
+                        index === currentIndex
+                          ? "bg-japan-indigo text-white"
+                          : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+                      }`}
+                    >
+                      {index + 1}
+                    </div>
+
+                    {/* Image */}
+                    {card.image && (
+                      <div className="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-3 border-japan-gold/40">
+                        <Image
+                          src={card.image}
+                          alt={card.term}
+                          fill
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </div>
+                    )}
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-4xl font-black text-japan-charcoal dark:text-white mb-2 leading-tight font-japanese-serif tracking-wide">
+                        {card.term}
+                      </h3>
+                      <p className="text-2xl text-japan-charcoal/90 dark:text-gray-300 font-semibold font-japanese leading-relaxed">
+                        {card.definition}
+                      </p>
+                    </div>
+
+                    {/* Arrow Indicator */}
+                    {index === currentIndex && (
+                      <div className="flex-shrink-0">
+                        <div className="bg-japan-indigo text-white p-2 rounded-full">
+                          <ChevronRight className="w-6 h-6" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Floating scroll to current card button */}
+      <AnimatePresence>
+        {showScrollButton && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-8 right-8 z-50"
+          >
+            <Button
+              onClick={scrollToCurrentCard}
+              size="lg"
+              className="rounded-full w-16 h-16 shadow-2xl bg-japan-indigo hover:bg-japan-indigo/90 border-4 border-white group relative"
+              title="Cuộn đến từ đang học"
+            >
+              <ArrowDown className="w-7 h-7 text-white animate-bounce" />
+              <span className="absolute -top-12 right-0 bg-japan-charcoal text-white px-3 py-1 rounded-lg text-sm font-japanese opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+                Cuộn đến từ đang học
+              </span>
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
