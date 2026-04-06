@@ -5,9 +5,50 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Learning Hub - Trang học tập",
-  description: "Hệ thống quản lý tài nguyên học tập tiếng Nhật",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Learning Hub - Trang học tập",
+    template: "%s | Learning Hub",
+  },
+  description:
+    "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+  applicationName: "Learning Hub",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    url: "/",
+    siteName: "Learning Hub",
+    title: "Learning Hub - Trang học tập",
+    description:
+      "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learning Hub - Trang học tập",
+    description:
+      "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
