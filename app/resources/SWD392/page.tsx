@@ -4,8 +4,10 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
+  BookOpen,
   Building2,
   CheckCircle2,
+  ClipboardCheck,
   Layers,
   Network,
   RefreshCw,
@@ -65,6 +67,7 @@ function detectTopic(question: string): string {
 
 export default function SWD392Page() {
   const { user, loading } = useAuth();
+  const [mode, setMode] = useState<"review" | "quiz">("review");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>(
     {},
@@ -160,6 +163,13 @@ export default function SWD392Page() {
     setCurrentIndex(0);
   };
 
+  const handleStartQuiz = () => {
+    setMode("quiz");
+    setSelectedAnswers({});
+    setSubmitted(false);
+    setCurrentIndex(0);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 py-10 px-4">
       <div className="max-w-7xl mx-auto">
@@ -229,9 +239,42 @@ export default function SWD392Page() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
+              <CardContent className="pt-6">
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    variant="outline"
+                    onClick={() => setMode("review")}
+                    className={
+                      mode === "review"
+                        ? "border-cyan-400 bg-cyan-900/40 text-cyan-100 hover:bg-cyan-900/60"
+                        : "border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
+                    }
+                  >
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Ôn tập trước
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => setMode("quiz")}
+                    className={
+                      mode === "quiz"
+                        ? "border-cyan-400 bg-cyan-900/40 text-cyan-100 hover:bg-cyan-900/60"
+                        : "border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
+                    }
+                  >
+                    <ClipboardCheck className="w-4 h-4 mr-2" />
+                    Làm quiz
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
                 <CardTitle className="text-xl">
-                  Câu {currentIndex + 1}/{totalQuestions}
+                  {mode === "review"
+                    ? `Ôn tập câu ${currentIndex + 1}/${totalQuestions}`
+                    : `Câu ${currentIndex + 1}/${totalQuestions}`}
                 </CardTitle>
                 <CardDescription className="text-slate-300">
                   Chủ đề: {currentQuestion.topic}
@@ -249,21 +292,30 @@ export default function SWD392Page() {
                     const isWrongSelected =
                       submitted && isSelected && !isCorrect;
 
-                    const choiceClass = submitted
-                      ? isCorrect
-                        ? "border-emerald-500 bg-emerald-900/40 text-emerald-100"
-                        : isWrongSelected
-                          ? "border-rose-500 bg-rose-900/40 text-rose-100"
+                    const choiceClass =
+                      mode === "review"
+                        ? isCorrect
+                          ? "border-emerald-500 bg-emerald-900/40 text-emerald-100"
                           : "border-slate-700 bg-slate-900 text-slate-300"
-                      : isSelected
-                        ? "border-cyan-400 bg-cyan-900/30 text-cyan-100"
-                        : "border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-600";
+                        : submitted
+                          ? isCorrect
+                            ? "border-emerald-500 bg-emerald-900/40 text-emerald-100"
+                            : isWrongSelected
+                              ? "border-rose-500 bg-rose-900/40 text-rose-100"
+                              : "border-slate-700 bg-slate-900 text-slate-300"
+                          : isSelected
+                            ? "border-cyan-400 bg-cyan-900/30 text-cyan-100"
+                            : "border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-600";
 
                     return (
                       <button
                         type="button"
                         key={choice.id}
-                        onClick={() => handleSelectAnswer(choice.id)}
+                        onClick={() => {
+                          if (mode === "quiz") {
+                            handleSelectAnswer(choice.id);
+                          }
+                        }}
                         className={`w-full text-left rounded-xl border p-4 transition ${choiceClass}`}
                       >
                         <div className="flex items-start gap-3">
@@ -275,7 +327,22 @@ export default function SWD392Page() {
                   })}
                 </div>
 
-                {submitted && (
+                {mode === "review" && (
+                  <div className="rounded-lg border border-emerald-700/60 bg-emerald-950/30 p-4">
+                    <p className="text-sm text-emerald-200">
+                      Đáp án đúng:{" "}
+                      <span className="font-bold">
+                        {currentQuestion.correctChoiceId}
+                      </span>
+                    </p>
+                    <p className="text-xs text-emerald-300/90 mt-1">
+                      Gợi ý: đọc kỹ khái niệm chính trong câu rồi đối chiếu các lựa
+                      chọn gần nghĩa.
+                    </p>
+                  </div>
+                )}
+
+                {mode === "quiz" && submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-4">
                     <p className="text-sm text-slate-300">
                       Đáp án đúng:{" "}
@@ -309,7 +376,14 @@ export default function SWD392Page() {
                   >
                     Câu tiếp
                   </Button>
-                  {!submitted ? (
+                  {mode === "review" ? (
+                    <Button
+                      onClick={handleStartQuiz}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
+                    >
+                      Bắt đầu làm quiz
+                    </Button>
+                  ) : !submitted ? (
                     <Button
                       onClick={() => setSubmitted(true)}
                       disabled={answeredCount === 0}
@@ -345,9 +419,11 @@ export default function SWD392Page() {
                   />
                 </div>
                 <p className="text-sm text-slate-300">
-                  Đã làm {answeredCount}/{totalQuestions} câu ({progress}%)
+                  {mode === "review"
+                    ? `Đang ôn câu ${currentIndex + 1}/${totalQuestions}`
+                    : `Đã làm ${answeredCount}/${totalQuestions} câu (${progress}%)`}
                 </p>
-                {submitted && (
+                {mode === "quiz" && submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-3">
                     <p className="font-semibold text-slate-100">
                       Kết quả: {score}/{totalQuestions}
@@ -392,19 +468,25 @@ export default function SWD392Page() {
                 <CardTitle>Đánh giá nhanh</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
-                {!submitted && (
+                {mode === "review" && (
+                  <p className="text-slate-300">
+                    Đây là chế độ ôn tập. Mỗi câu sẽ hiển thị đáp án đúng để bạn
+                    nắm chắc lý thuyết trước khi làm bài.
+                  </p>
+                )}
+                {mode === "quiz" && !submitted && (
                   <p className="text-slate-300">
                     Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm kiến
                     thức kiến trúc hệ thống.
                   </p>
                 )}
-                {submitted && score / totalQuestions >= 0.8 && (
+                {mode === "quiz" && submitted && score / totalQuestions >= 0.8 && (
                   <p className="flex items-center gap-2 text-emerald-300">
                     <CheckCircle2 className="w-4 h-4" />
                     Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
                   </p>
                 )}
-                {submitted && score / totalQuestions < 0.8 && (
+                {mode === "quiz" && submitted && score / totalQuestions < 0.8 && (
                   <p className="flex items-center gap-2 text-amber-300">
                     <XCircle className="w-4 h-4" />
                     Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu tư

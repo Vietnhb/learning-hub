@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { Search, Filter, Download, Eye, Star } from "lucide-react";
+import { Search, Filter, Download, Eye, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
@@ -11,8 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useState, useMemo } from "react";
 
 export default function ResourcesPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedType, setSelectedType] = useState<string>("all");
+  
   const resources = [
     {
       id: 1,
@@ -52,7 +57,7 @@ export default function ResourcesPage() {
       title: "SWD392 - Kiến trúc hệ thống",
       category: "Kỹ thuật phần mềm",
       type: "Quiz",
-      size: "Sẵn sàng học",
+      size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
       description:
@@ -60,6 +65,39 @@ export default function ResourcesPage() {
       link: "/resources/SWD392",
     },
   ];
+
+  // Get unique categories and types
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(resources.map(r => r.category)));
+    return ["all", ...cats];
+  }, []);
+
+  const types = useMemo(() => {
+    const typeList = Array.from(new Set(resources.map(r => r.type)));
+    return ["all", ...typeList];
+  }, []);
+
+  // Filter resources based on search and filters
+  const filteredResources = useMemo(() => {
+    return resources.filter(resource => {
+      const matchesSearch = searchQuery === "" || 
+        resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        resource.description.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      const matchesCategory = selectedCategory === "all" || resource.category === selectedCategory;
+      const matchesType = selectedType === "all" || resource.type === selectedType;
+      
+      return matchesSearch && matchesCategory && matchesType;
+    });
+  }, [searchQuery, selectedCategory, selectedType]);
+
+  const clearFilters = () => {
+    setSearchQuery("");
+    setSelectedCategory("all");
+    setSelectedType("all");
+  };
+
+  const hasActiveFilters = searchQuery !== "" || selectedCategory !== "all" || selectedType !== "all";
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
@@ -85,27 +123,114 @@ export default function ResourcesPage() {
           transition={{ delay: 0.1 }}
           className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8 border dark:border-gray-700"
         >
-          <div className="flex gap-4 flex-wrap">
-            <div className="flex-1 min-w-[300px]">
-              <div className="relative">
-                <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Tìm kiếm tài liệu..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                />
+          <div className="space-y-4">
+            {/* Search Bar */}
+            <div className="flex gap-4 flex-wrap">
+              <div className="flex-1 min-w-[300px]">
+                <div className="relative">
+                  <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Tìm kiếm theo tên, mô tả..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-10 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3 top-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
-            <Button variant="outline" className="gap-2">
-              <Filter className="w-4 h-4" />
-              Lọc
-            </Button>
+
+            {/* Filter Tags */}
+            <div className="flex gap-3 flex-wrap items-center">
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 text-gray-500" />
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Lọc:</span>
+              </div>
+              
+              {/* Category Filter */}
+              <div className="flex gap-2">
+                {categories.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                      selectedCategory === cat
+                        ? "bg-blue-500 text-white shadow-md"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                    }`}
+                  >
+                    {cat === "all" ? "Tất cả" : cat}
+                  </button>
+                ))}
+              </div>
+
+              <div className="h-6 w-px bg-gray-300 dark:bg-gray-600" />
+
+              {/* Type Filter */}
+              <div className="flex gap-2">
+                {types.map(type => (
+                  <button
+                    key={type}
+                    onClick={() => setSelectedType(type)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                      selectedType === type
+                        ? "bg-green-500 text-white shadow-md"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                    }`}
+                  >
+                    {type === "all" ? "Tất cả" : type}
+                  </button>
+                ))}
+              </div>
+
+              {/* Clear Filters Button */}
+              {hasActiveFilters && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="ml-auto gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <X className="w-4 h-4" />
+                  Xóa bộ lọc
+                </Button>
+              )}
+            </div>
+
+            {/* Results Count */}
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              Hiển thị <span className="font-semibold text-gray-900 dark:text-white">{filteredResources.length}</span> / {resources.length} tài liệu
+            </div>
           </div>
         </motion.div>
 
         {/* Resources Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resources.map((resource, index) => (
+        {filteredResources.length === 0 ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-16"
+          >
+            <div className="text-gray-400 dark:text-gray-500 mb-4">
+              <Search className="w-16 h-16 mx-auto mb-4 opacity-50" />
+              <p className="text-lg font-medium">Không tìm thấy tài liệu nào</p>
+              <p className="text-sm mt-2">Thử thay đổi từ khóa hoặc bộ lọc</p>
+            </div>
+            <Button variant="outline" onClick={clearFilters} className="mt-4">
+              Xóa tất cả bộ lọc
+            </Button>
+          </motion.div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredResources.map((resource, index) => (
             <motion.div
               key={resource.id}
               initial={{ y: 50, opacity: 0 }}
@@ -166,8 +291,9 @@ export default function ResourcesPage() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
