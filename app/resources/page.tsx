@@ -138,6 +138,9 @@ export default function ResourcesPage() {
                   />
                   {searchQuery && (
                     <button
+                      type="button"
+                      aria-label="Xóa từ khóa tìm kiếm"
+                      title="Xóa từ khóa tìm kiếm"
                       onClick={() => setSearchQuery("")}
                       className="absolute right-3 top-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                     >
@@ -159,6 +162,7 @@ export default function ResourcesPage() {
               <div className="flex gap-2">
                 {categories.map(cat => (
                   <button
+                    type="button"
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
@@ -178,6 +182,7 @@ export default function ResourcesPage() {
               <div className="flex gap-2">
                 {types.map(type => (
                   <button
+                    type="button"
                     key={type}
                     onClick={() => setSelectedType(type)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
@@ -252,7 +257,13 @@ export default function ResourcesPage() {
                         <span className="text-gray-500">• {resource.size}</span>
                       </CardDescription>
                     </div>
-                    <Button variant="ghost" size="icon">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon"
+                      aria-label="Đánh dấu yêu thích"
+                      title="Đánh dấu yêu thích"
+                    >
                       <Star className="w-5 h-5 text-yellow-500" />
                     </Button>
                   </div>

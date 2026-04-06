@@ -69,9 +69,9 @@ export default function SWD392Page() {
   const { user, loading } = useAuth();
   const [mode, setMode] = useState<"review" | "quiz">("review");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>(
-    {},
-  );
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<number, string>
+  >({});
   const [submitted, setSubmitted] = useState(false);
 
   if (loading) {
@@ -113,7 +113,7 @@ export default function SWD392Page() {
       return {
         question: item.question,
         choices,
-        correctChoiceId: hasCorrectId ? correctId : choices[0]?.id ?? "A",
+        correctChoiceId: hasCorrectId ? correctId : (choices[0]?.id ?? "A"),
         topic: detectTopic(item.question),
       };
     });
@@ -127,7 +127,9 @@ export default function SWD392Page() {
 
   const score = useMemo(() => {
     return questions.reduce((acc, question, index) => {
-      return selectedAnswers[index] === question.correctChoiceId ? acc + 1 : acc;
+      return selectedAnswers[index] === question.correctChoiceId
+        ? acc + 1
+        : acc;
     }, 0);
   }, [questions, selectedAnswers]);
 
@@ -180,6 +182,7 @@ export default function SWD392Page() {
         >
           <Link href="/resources">
             <Button
+              type="button"
               variant="outline"
               className="gap-2 bg-slate-900/80 border-slate-700 text-slate-100 hover:bg-slate-800"
             >
@@ -200,8 +203,8 @@ export default function SWD392Page() {
                 SWD392 - Kiến trúc hệ thống
               </CardTitle>
               <CardDescription className="text-slate-300 text-base">
-                Học theo hướng kiến trúc hệ thống: nền tảng mô hình hóa, thiết kế
-                thành phần, và tư duy triển khai.
+                Học theo hướng kiến trúc hệ thống: nền tảng mô hình hóa, thiết
+                kế thành phần, và tư duy triển khai.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -242,6 +245,7 @@ export default function SWD392Page() {
               <CardContent className="pt-6">
                 <div className="flex flex-wrap gap-3">
                   <Button
+                    type="button"
                     variant="outline"
                     onClick={() => setMode("review")}
                     className={
@@ -254,6 +258,7 @@ export default function SWD392Page() {
                     Ôn tập trước
                   </Button>
                   <Button
+                    type="button"
                     variant="outline"
                     onClick={() => setMode("quiz")}
                     className={
@@ -288,7 +293,8 @@ export default function SWD392Page() {
                 <div className="space-y-3">
                   {currentQuestion.choices.map((choice) => {
                     const isSelected = selectedForCurrent === choice.id;
-                    const isCorrect = currentQuestion.correctChoiceId === choice.id;
+                    const isCorrect =
+                      currentQuestion.correctChoiceId === choice.id;
                     const isWrongSelected =
                       submitted && isSelected && !isCorrect;
 
@@ -336,8 +342,8 @@ export default function SWD392Page() {
                       </span>
                     </p>
                     <p className="text-xs text-emerald-300/90 mt-1">
-                      Gợi ý: đọc kỹ khái niệm chính trong câu rồi đối chiếu các lựa
-                      chọn gần nghĩa.
+                      Gợi ý: đọc kỹ khái niệm chính trong câu rồi đối chiếu các
+                      lựa chọn gần nghĩa.
                     </p>
                   </div>
                 )}
@@ -355,6 +361,7 @@ export default function SWD392Page() {
 
                 <div className="flex flex-wrap gap-3 pt-2">
                   <Button
+                    type="button"
                     variant="outline"
                     onClick={() =>
                       setCurrentIndex((prev) => Math.max(prev - 1, 0))
@@ -365,6 +372,7 @@ export default function SWD392Page() {
                     Câu trước
                   </Button>
                   <Button
+                    type="button"
                     variant="outline"
                     onClick={() =>
                       setCurrentIndex((prev) =>
@@ -378,6 +386,7 @@ export default function SWD392Page() {
                   </Button>
                   {mode === "review" ? (
                     <Button
+                      type="button"
                       onClick={handleStartQuiz}
                       className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
                     >
@@ -385,6 +394,7 @@ export default function SWD392Page() {
                     </Button>
                   ) : !submitted ? (
                     <Button
+                      type="button"
                       onClick={() => setSubmitted(true)}
                       disabled={answeredCount === 0}
                       className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
@@ -393,6 +403,7 @@ export default function SWD392Page() {
                     </Button>
                   ) : (
                     <Button
+                      type="button"
                       onClick={handleReset}
                       variant="outline"
                       className="border-cyan-400 bg-slate-900 text-cyan-100 hover:bg-cyan-900/40 hover:text-cyan-50 dark:border-cyan-300 dark:bg-slate-900 dark:text-cyan-100 dark:hover:bg-cyan-900/50 dark:hover:text-cyan-50"
@@ -441,25 +452,27 @@ export default function SWD392Page() {
                 <CardTitle>Phân bố chủ đề</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                {Object.entries(topicStats.totalByTopic).map(([topic, total]) => {
-                  const wrong = topicStats.wrongByTopic[topic] ?? 0;
-                  return (
-                    <div
-                      key={topic}
-                      className="rounded-lg border border-slate-700 px-3 py-2 bg-slate-950/40"
-                    >
-                      <div className="flex items-center justify-between text-sm">
-                        <span>{topic}</span>
-                        <span className="text-slate-400">{total} câu</span>
+                {Object.entries(topicStats.totalByTopic).map(
+                  ([topic, total]) => {
+                    const wrong = topicStats.wrongByTopic[topic] ?? 0;
+                    return (
+                      <div
+                        key={topic}
+                        className="rounded-lg border border-slate-700 px-3 py-2 bg-slate-950/40"
+                      >
+                        <div className="flex items-center justify-between text-sm">
+                          <span>{topic}</span>
+                          <span className="text-slate-400">{total} câu</span>
+                        </div>
+                        {submitted && wrong > 0 && (
+                          <p className="text-xs text-rose-300 mt-1">
+                            Sai {wrong} câu, cần ôn tập thêm
+                          </p>
+                        )}
                       </div>
-                      {submitted && wrong > 0 && (
-                        <p className="text-xs text-rose-300 mt-1">
-                          Sai {wrong} câu, cần ôn tập thêm
-                        </p>
-                      )}
-                    </div>
-                  );
-                })}
+                    );
+                  },
+                )}
               </CardContent>
             </Card>
 
@@ -471,28 +484,37 @@ export default function SWD392Page() {
                 {mode === "review" && (
                   <p className="text-slate-300">
                     Đây là chế độ ôn tập. Mỗi câu sẽ hiển thị đáp án đúng để bạn
-                    nắm chắc lý thuyết trước khi làm bài.
+                    nắm chắc lý thuyết trước khi làm bài. (Tất cả đều lấy từ
+                    sách giáo trình 100% nhưng từ 2025 sẽ có thêm câu hỏi được
+                    custom dựa trên nội dung này nên yêu cầu đọc hiểu kỹ hơn
+                    nhé!)
                   </p>
                 )}
                 {mode === "quiz" && !submitted && (
                   <p className="text-slate-300">
-                    Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm kiến
-                    thức kiến trúc hệ thống.
+                    Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm
+                    kiến thức kiến trúc hệ thống. (Tất cả đều lấy từ sách giáo
+                    trình 100% nhưng từ 2025 sẽ có thêm câu hỏi được custom dựa
+                    trên nội dung này nên yêu cầu đọc hiểu kỹ hơn nhé!)
                   </p>
                 )}
-                {mode === "quiz" && submitted && score / totalQuestions >= 0.8 && (
-                  <p className="flex items-center gap-2 text-emerald-300">
-                    <CheckCircle2 className="w-4 h-4" />
-                    Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
-                  </p>
-                )}
-                {mode === "quiz" && submitted && score / totalQuestions < 0.8 && (
-                  <p className="flex items-center gap-2 text-amber-300">
-                    <XCircle className="w-4 h-4" />
-                    Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu tư
-                    duy hệ thống.
-                  </p>
-                )}
+                {mode === "quiz" &&
+                  submitted &&
+                  score / totalQuestions >= 0.8 && (
+                    <p className="flex items-center gap-2 text-emerald-300">
+                      <CheckCircle2 className="w-4 h-4" />
+                      Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
+                    </p>
+                  )}
+                {mode === "quiz" &&
+                  submitted &&
+                  score / totalQuestions < 0.8 && (
+                    <p className="flex items-center gap-2 text-amber-300">
+                      <XCircle className="w-4 h-4" />
+                      Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu
+                      tư duy hệ thống.
+                    </p>
+                  )}
               </CardContent>
             </Card>
           </div>
