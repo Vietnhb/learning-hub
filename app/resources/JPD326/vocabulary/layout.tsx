@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Learning Hub",
-  description: "Nội dung ngữ pháp FsoftTraining đang được cập nhật.",
+  title: "JPD326 Vocabulary - Coming soon",
+  description: "JPD326 vocabulary content is being updated.",
   robots: {
     index: false,
     follow: false,
   },
 };
 
-export default function FsoftTrainingGrammarLayout({
+export default function JPD326VocabularyLayout({
   children,
 }: {
   children: React.ReactNode;

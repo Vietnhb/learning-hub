@@ -1,25 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SWD392 - Kiến trúc hệ thống",
+  title: "SWD392 - System Architecture Quiz",
   description:
-    "Ôn tập và làm quiz SWD392 về software architecture, UML, design strategy, PIM/PSM.",
+    "SWD392 practice page for software architecture, UML, design strategy, PIM/PSM and system design review.",
   keywords: [
-    "SWD392",
-    "kiến trúc hệ thống",
+    "swd392",
+    "swd 392",
+    "swd-392",
+    "system architecture",
     "software architecture",
-    "UML",
-    "PIM",
-    "PSM",
-    "quiz SWD392",
+    "uml",
+    "pim",
+    "psm",
+    "quiz swd392",
+    "fpt swd392",
   ],
   alternates: {
     canonical: "/resources/SWD392",
   },
   openGraph: {
-    title: "SWD392 - Kiến trúc hệ thống",
+    title: "SWD392 - System Architecture Quiz",
     description:
-      "Ôn tập và làm quiz SWD392 về software architecture, UML, design strategy, PIM/PSM.",
+      "SWD392 practice page for software architecture, UML, design strategy, PIM/PSM and system design review.",
     url: "/resources/SWD392",
     type: "website",
   },

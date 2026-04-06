@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FsoftTraining Vocabulary - Coming soon",
+  title: "Learning Hub",
   description: "Nội dung từ vựng FsoftTraining đang được cập nhật.",
   robots: {
     index: false,

@@ -13,12 +13,26 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: "Learning Hub - Trang học tập",
-    template: "%s | Learning Hub",
-  },
+  title: "Learning Hub",
   description:
-    "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+    "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
+  keywords: [
+    "fpt source",
+    "fpt src",
+    "fpt",
+    "fpt software training",
+    "learning hub",
+    "jpd316",
+    "jpd 316",
+    "jpd-316",
+    "jpd326",
+    "jpd 326",
+    "jpd-326",
+    "swd392",
+    "swd 392",
+    "swd-392",
+    "software architecture quiz",
+  ],
   applicationName: "Learning Hub",
   alternates: {
     canonical: "/",
@@ -28,15 +42,15 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     url: "/",
     siteName: "Learning Hub",
-    title: "Learning Hub - Trang học tập",
+    title: "Learning Hub",
     description:
-      "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+      "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Learning Hub - Trang học tập",
+    title: "Learning Hub",
     description:
-      "Hệ thống học tập và quản lý tài nguyên dành cho tiếng Nhật và kiến trúc hệ thống.",
+      "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
   },
   robots: {
     index: true,
