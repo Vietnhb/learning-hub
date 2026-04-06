@@ -543,12 +543,13 @@
         }
       ]
     }
-  ]
-}
+   {
+      "id": 7,
+      "title": "Nhiệt độ và Thời tiết",
       "kanji": [
         {
           "character": "熱",
-          "meaning": "Nóng, nhiệt",
+"meaning": "Nóng, nhiệt",
           "onyomi": "ネツ",
           "kunyomi": "あつ-い",
           "examples": [
@@ -685,7 +686,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Nguyên liệu và Loại hình",
       "kanji": [
         {
@@ -858,7 +859,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "Trứng, Sữa và Bột",
       "kanji": [
         {

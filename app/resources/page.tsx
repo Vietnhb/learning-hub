@@ -47,6 +47,18 @@ export default function ResourcesPage() {
       description: "Giáo trình Tiếng Nhật của FPT Software",
       link: "/resources/FsoftTraining",
     },
+    {
+      id: 4,
+      title: "SWD392 - Kiến trúc hệ thống",
+      category: "Kỹ thuật phần mềm",
+      type: "Quiz",
+      size: "Sẵn sàng học",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Luyện tập kiến thức Software Architecture, UML, design strategy, PIM/PSM",
+      link: "/resources/SWD392",
+    },
   ];
 
   return (
@@ -62,7 +74,7 @@ export default function ResourcesPage() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật: JPD316, JPD326, FPT Software Training
+            Giáo trình Tiếng Nhật và SWD392 (Kiến trúc hệ thống)
           </p>
         </motion.div>
 
