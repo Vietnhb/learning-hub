@@ -36,6 +36,17 @@ export default function ResourcesPage() {
       description: "Giáo trình Tiếng Nhật Trung Cấp (N4-N3)",
       link: "/resources/JPD326",
     },
+    {
+      id: 3,
+      title: "FPT Software Training - Tiếng Nhật",
+      category: "Ngoại ngữ",
+      type: "Folder",
+      size: "Đang cập nhật",
+      downloads: 0,
+      rating: 5.0,
+      description: "Giáo trình Tiếng Nhật của FPT Software",
+      link: "/resources/FsoftTraining",
+    },
   ];
 
   return (
@@ -51,7 +62,7 @@ export default function ResourcesPage() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật JPD316 và JPD326
+            Giáo trình Tiếng Nhật: JPD316, JPD326, FPT Software Training
           </p>
         </motion.div>
 
