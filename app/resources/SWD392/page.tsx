@@ -76,7 +76,7 @@ export default function SWD392Page() {
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-          <p className="text-slate-300">Dang tai...</p>
+          <p className="text-slate-300">Đang tải...</p>
         </div>
       </div>
     );
@@ -174,7 +174,7 @@ export default function SWD392Page() {
               className="gap-2 bg-slate-900/80 border-slate-700 text-slate-100 hover:bg-slate-800"
             >
               <ArrowLeft className="w-4 h-4" />
-              Quay lai Tai nguyen
+              Quay lại Tài nguyên
             </Button>
           </Link>
         </motion.div>
@@ -187,39 +187,39 @@ export default function SWD392Page() {
           <Card className="border-slate-700 bg-slate-900/70 text-slate-100 shadow-xl">
             <CardHeader>
               <CardTitle className="text-3xl md:text-4xl font-black bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">
-                SWD392 - Kien truc he thong
+                SWD392 - Kiến trúc hệ thống
               </CardTitle>
               <CardDescription className="text-slate-300 text-base">
-                Hoc theo huong kien truc he thong: nen tang mo hinh hoa, thiet
-                ke thanh phan, va tu duy trien khai.
+                Học theo hướng kiến trúc hệ thống: nền tảng mô hình hóa, thiết kế
+                thành phần, và tư duy triển khai.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="rounded-xl border border-cyan-700/60 bg-cyan-950/30 p-4">
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold mb-2">
                   <Building2 className="w-4 h-4" />
-                  Nhan dien kien truc
+                  Nhận diện kiến trúc
                 </div>
                 <p className="text-sm text-slate-300">
-                  Hieu cau truc tong the, thanh phan va moi lien ket.
+                  Hiểu cấu trúc tổng thể, thành phần và mối liên kết.
                 </p>
               </div>
               <div className="rounded-xl border border-blue-700/60 bg-blue-950/30 p-4">
                 <div className="flex items-center gap-2 text-blue-300 font-semibold mb-2">
                   <Layers className="w-4 h-4" />
-                  Tu duy thiet ke
+                  Tư duy thiết kế
                 </div>
                 <p className="text-sm text-slate-300">
-                  Ap dung design concept, strategy, method de phan ra module.
+                  Áp dụng design concept, strategy, method để phân rã module.
                 </p>
               </div>
               <div className="rounded-xl border border-indigo-700/60 bg-indigo-950/30 p-4">
                 <div className="flex items-center gap-2 text-indigo-300 font-semibold mb-2">
                   <Network className="w-4 h-4" />
-                  Mo hinh hoa UML
+                  Mô hình hóa UML
                 </div>
                 <p className="text-sm text-slate-300">
-                  Luyen use case, actor, va model PIM/PSM gan voi he thong web.
+                  Luyện use case, actor, và model PIM/PSM gắn với hệ thống web.
                 </p>
               </div>
             </CardContent>
@@ -231,10 +231,10 @@ export default function SWD392Page() {
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
                 <CardTitle className="text-xl">
-                  Cau {currentIndex + 1}/{totalQuestions}
+                  Câu {currentIndex + 1}/{totalQuestions}
                 </CardTitle>
                 <CardDescription className="text-slate-300">
-                  Chu de: {currentQuestion.topic}
+                  Chủ đề: {currentQuestion.topic}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -278,7 +278,7 @@ export default function SWD392Page() {
                 {submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-4">
                     <p className="text-sm text-slate-300">
-                      Dap an dung:{" "}
+                      Đáp án đúng:{" "}
                       <span className="font-bold text-emerald-300">
                         {currentQuestion.correctChoiceId}
                       </span>
@@ -295,7 +295,7 @@ export default function SWD392Page() {
                     disabled={currentIndex === 0}
                     className="border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
                   >
-                    Cau truoc
+                    Câu trước
                   </Button>
                   <Button
                     variant="outline"
@@ -307,7 +307,7 @@ export default function SWD392Page() {
                     disabled={currentIndex === totalQuestions - 1}
                     className="border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
                   >
-                    Cau tiep
+                    Câu tiếp
                   </Button>
                   {!submitted ? (
                     <Button
@@ -315,16 +315,16 @@ export default function SWD392Page() {
                       disabled={answeredCount === 0}
                       className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
                     >
-                      Nop bai
+                      Nộp bài
                     </Button>
                   ) : (
                     <Button
                       onClick={handleReset}
                       variant="outline"
-                      className="border-cyan-500 text-cyan-200 hover:bg-cyan-900/30"
+                      className="border-cyan-400 bg-slate-900 text-cyan-100 hover:bg-cyan-900/40 hover:text-cyan-50 dark:border-cyan-300 dark:bg-slate-900 dark:text-cyan-100 dark:hover:bg-cyan-900/50 dark:hover:text-cyan-50"
                     >
                       <RefreshCw className="w-4 h-4 mr-2" />
-                      Lam lai
+                      Làm lại
                     </Button>
                   )}
                 </div>
@@ -335,7 +335,7 @@ export default function SWD392Page() {
           <div className="space-y-6">
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Tien do</CardTitle>
+                <CardTitle>Tiến độ</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
@@ -345,15 +345,15 @@ export default function SWD392Page() {
                   />
                 </div>
                 <p className="text-sm text-slate-300">
-                  Da lam {answeredCount}/{totalQuestions} cau ({progress}%)
+                  Đã làm {answeredCount}/{totalQuestions} câu ({progress}%)
                 </p>
                 {submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-3">
                     <p className="font-semibold text-slate-100">
-                      Ket qua: {score}/{totalQuestions}
+                      Kết quả: {score}/{totalQuestions}
                     </p>
                     <p className="text-sm text-slate-300">
-                      {Math.round((score / totalQuestions) * 100)}% do chinh xac
+                      {Math.round((score / totalQuestions) * 100)}% độ chính xác
                     </p>
                   </div>
                 )}
@@ -362,7 +362,7 @@ export default function SWD392Page() {
 
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Phan bo chu de</CardTitle>
+                <CardTitle>Phân bố chủ đề</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {Object.entries(topicStats.totalByTopic).map(([topic, total]) => {
@@ -374,13 +374,11 @@ export default function SWD392Page() {
                     >
                       <div className="flex items-center justify-between text-sm">
                         <span>{topic}</span>
-                        <span className="text-slate-400">
-                          {total} cau
-                        </span>
+                        <span className="text-slate-400">{total} câu</span>
                       </div>
                       {submitted && wrong > 0 && (
                         <p className="text-xs text-rose-300 mt-1">
-                          Sai {wrong} cau, can on tap them
+                          Sai {wrong} câu, cần ôn tập thêm
                         </p>
                       )}
                     </div>
@@ -391,26 +389,26 @@ export default function SWD392Page() {
 
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Danh gia nhanh</CardTitle>
+                <CardTitle>Đánh giá nhanh</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
                 {!submitted && (
                   <p className="text-slate-300">
-                    Hoan thanh quiz de nhan duoc goi y on tap theo tung nhom
-                    kien thuc kien truc he thong.
+                    Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm kiến
+                    thức kiến trúc hệ thống.
                   </p>
                 )}
                 {submitted && score / totalQuestions >= 0.8 && (
                   <p className="flex items-center gap-2 text-emerald-300">
                     <CheckCircle2 className="w-4 h-4" />
-                    Nhanh va chac. Ban da nam kha vung nen tang kien truc.
+                    Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
                   </p>
                 )}
                 {submitted && score / totalQuestions < 0.8 && (
                   <p className="flex items-center gap-2 text-amber-300">
                     <XCircle className="w-4 h-4" />
-                    Nen on lai nhom UML, design strategy va PIM/PSM de toi uu tu
-                    duy he thong.
+                    Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu tư
+                    duy hệ thống.
                   </p>
                 )}
               </CardContent>

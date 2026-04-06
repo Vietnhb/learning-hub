@@ -1212,6 +1212,190 @@
           ]
         }
       ]
+    },
+    {
+      "id": 10,
+      "title": "Đếm và Đo lường",
+      "kanji": [
+        {
+          "character": "杯",
+          "meaning": "Cốc, chén (bộ đếm)",
+          "onyomi": "ハイ",
+          "kunyomi": "さかずき",
+          "examples": [
+            { "word": "一杯", "reading": "いっぱい", "meaning": "Một cốc" },
+            { "word": "乾杯", "reading": "かんぱい", "meaning": "Cạn ly" }
+          ]
+        },
+        {
+          "character": "乾",
+          "meaning": "Khô",
+          "onyomi": "カン",
+          "kunyomi": "かわ-く",
+          "examples": [
+            { "word": "乾杯", "reading": "かんぱい", "meaning": "Cạn ly" }
+          ]
+        },
+        {
+          "character": "枚",
+          "meaning": "Tấm (bộ đếm)",
+          "onyomi": "マイ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "一枚", "reading": "いちまい", "meaning": "Một tấm" },
+            { "word": "何枚", "reading": "なんまい", "meaning": "Bao nhiêu tấm" },
+            { "word": "三枚目", "reading": "さんまいめ", "meaning": "Tấm thứ ba" }
+          ]
+        },
+        {
+          "character": "数",
+          "meaning": "Số",
+          "onyomi": "スウ、ス",
+          "kunyomi": "かず、かぞ-える",
+          "examples": [
+            { "word": "枚数", "reading": "まいすう", "meaning": "Số lượng tấm" }
+          ]
+        },
+        {
+          "character": "匹",
+          "meaning": "Con (bộ đếm)",
+          "onyomi": "ヒキ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "一匹", "reading": "いっぴき", "meaning": "Một con" },
+            { "word": "二匹", "reading": "にひき", "meaning": "Hai con" },
+            { "word": "匹敵", "reading": "ひってき", "meaning": "Sánh ngang" }
+          ]
+        },
+        {
+          "character": "敵",
+          "meaning": "Kẻ địch",
+          "onyomi": "テキ",
+          "kunyomi": "かたき",
+          "examples": [
+            { "word": "匹敵", "reading": "ひってき", "meaning": "Sánh ngang" }
+          ]
+        },
+        {
+          "character": "用",
+          "meaning": "Dùng",
+          "onyomi": "ヨウ",
+          "kunyomi": "もち-いる",
+          "examples": [
+            { "word": "用事", "reading": "ようじ", "meaning": "Việc bận" }
+          ]
+        },
+        {
+          "character": "量",
+          "meaning": "Lượng",
+          "onyomi": "リョウ",
+          "kunyomi": "はか-る",
+          "examples": [
+            { "word": "量る", "reading": "はかる", "meaning": "Đo lường" },
+            { "word": "計量", "reading": "けいりょう", "meaning": "Đo lường" },
+            { "word": "分量", "reading": "ぶんりょう", "meaning": "Khối lượng" },
+            { "word": "重量", "reading": "じゅうりょう", "meaning": "Trọng lượng" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Rau củ và Thực phẩm",
+      "kanji": [
+        {
+          "character": "菜",
+          "meaning": "Rau",
+          "onyomi": "サイ",
+          "kunyomi": "な",
+          "examples": [
+            { "word": "菜の花", "reading": "なのはな", "meaning": "Hoa cải" },
+            { "word": "水菜", "reading": "みずな", "meaning": "Rau mizuna" },
+            { "word": "野菜", "reading": "やさい", "meaning": "Rau củ" }
+          ]
+        },
+        {
+          "character": "野",
+          "meaning": "Đồng, dã",
+          "onyomi": "ヤ",
+          "kunyomi": "の",
+          "examples": [
+            { "word": "野菜", "reading": "やさい", "meaning": "Rau củ" }
+          ]
+        },
+        {
+          "character": "果",
+          "meaning": "Quả",
+          "onyomi": "カ",
+          "kunyomi": "は-たす、は-てる",
+          "examples": [
+            { "word": "果たす", "reading": "はたす", "meaning": "Hoàn thành" },
+            { "word": "果てる", "reading": "はてる", "meaning": "Kết thúc" },
+            { "word": "成果", "reading": "せいか", "meaning": "Thành quả" },
+            { "word": "結果", "reading": "けっか", "meaning": "Kết quả" },
+            { "word": "果物", "reading": "くだもの", "meaning": "Trái cây" }
+          ]
+        },
+        {
+          "character": "豆",
+          "meaning": "Đậu",
+          "onyomi": "トウ、ズ",
+          "kunyomi": "まめ",
+          "examples": [
+            { "word": "豆", "reading": "まめ", "meaning": "Đậu" },
+            { "word": "枝豆", "reading": "えだまめ", "meaning": "Đậu nành non" },
+            { "word": "豆腐", "reading": "とうふ", "meaning": "Đậu phụ" },
+            { "word": "大豆", "reading": "だいず", "meaning": "Đậu nành" },
+            { "word": "納豆", "reading": "なっとう", "meaning": "Đậu nành lên men" }
+          ]
+        },
+        {
+          "character": "枝",
+          "meaning": "Cành",
+          "onyomi": "シ",
+          "kunyomi": "えだ",
+          "examples": [
+            { "word": "枝豆", "reading": "えだまめ", "meaning": "Đậu nành non" }
+          ]
+        },
+        {
+          "character": "腐",
+          "meaning": "Thối, hư",
+          "onyomi": "フ",
+          "kunyomi": "くさ-る",
+          "examples": [
+            { "word": "豆腐", "reading": "とうふ", "meaning": "Đậu phụ" }
+          ]
+        },
+        {
+          "character": "納",
+          "meaning": "Nộp",
+          "onyomi": "ノウ、ナッ",
+          "kunyomi": "おさ-める",
+          "examples": [
+            { "word": "納豆", "reading": "なっとう", "meaning": "Đậu nành lên men" }
+          ]
+        },
+        {
+          "character": "缶",
+          "meaning": "Lon, hộp",
+          "onyomi": "カン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "空き缶", "reading": "あきかん", "meaning": "Lon rỗng" },
+            { "word": "缶詰", "reading": "かんづめ", "meaning": "Đồ hộp" }
+          ]
+        },
+        {
+          "character": "詰",
+          "meaning": "Nhét, đóng gói",
+          "onyomi": "キツ",
+          "kunyomi": "つ-める、つ-まる",
+          "examples": [
+            { "word": "缶詰", "reading": "かんづめ", "meaning": "Đồ hộp" }
+          ]
+        }
+      ]
     }
   ]
 }
