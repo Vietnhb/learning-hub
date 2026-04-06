@@ -20,7 +20,11 @@
           "onyomi": "コン",
           "kunyomi": "ね",
           "examples": [
-            { "word": "大根", "reading": "だいこん", "meaning": "Củ cải trắng" },
+            {
+              "word": "大根",
+              "reading": "だいこん",
+              "meaning": "Củ cải trắng"
+            },
             { "word": "屋根", "reading": "やね", "meaning": "Mái nhà" }
           ]
         },
@@ -32,7 +36,11 @@
           "examples": [
             { "word": "落ち葉", "reading": "おちば", "meaning": "Lá rơi" },
             { "word": "紅葉", "reading": "こうよう", "meaning": "Lá đỏ" },
-            { "word": "千葉", "reading": "ちば", "meaning": "Chiba (tên địa phương)" }
+            {
+              "word": "千葉",
+              "reading": "ちば",
+              "meaning": "Chiba (tên địa phương)"
+            }
           ]
         },
         {
@@ -83,7 +91,11 @@
           "examples": [
             { "word": "窓", "reading": "まど", "meaning": "Cửa sổ" },
             { "word": "窓口", "reading": "まどぐち", "meaning": "Quầy" },
-            { "word": "同窓会", "reading": "どうそうかい", "meaning": "Hội đồng học cũ" }
+            {
+              "word": "同窓会",
+              "reading": "どうそうかい",
+              "meaning": "Hội đồng học cũ"
+            }
           ]
         },
         {
@@ -92,7 +104,11 @@
           "onyomi": "コ",
           "kunyomi": "と",
           "examples": [
-            { "word": "一戸建て", "reading": "いっこだて", "meaning": "Nhà riêng lẻ" },
+            {
+              "word": "一戸建て",
+              "reading": "いっこだて",
+              "meaning": "Nhà riêng lẻ"
+            },
             { "word": "門戸", "reading": "もんこ", "meaning": "Cổng, lối vào" }
           ]
         }
@@ -128,7 +144,11 @@
           "onyomi": "ゾウ",
           "kunyomi": "つく-る",
           "examples": [
-            { "word": "造る", "reading": "つくる", "meaning": "Tạo ra, chế tạo" },
+            {
+              "word": "造る",
+              "reading": "つくる",
+              "meaning": "Tạo ra, chế tạo"
+            },
             { "word": "構造", "reading": "こうぞう", "meaning": "Cấu trúc" },
             { "word": "創造", "reading": "そうぞう", "meaning": "Sáng tạo" }
           ]
@@ -179,7 +199,11 @@
           "onyomi": "セツ",
           "kunyomi": "もう-ける",
           "examples": [
-            { "word": "設ける", "reading": "もうける", "meaning": "Thiết lập, lập ra" },
+            {
+              "word": "設ける",
+              "reading": "もうける",
+              "meaning": "Thiết lập, lập ra"
+            },
             { "word": "設備", "reading": "せつび", "meaning": "Thiết bị" },
             { "word": "設計", "reading": "せっけい", "meaning": "Thiết kế" }
           ]
@@ -192,7 +216,11 @@
           "examples": [
             { "word": "向く", "reading": "むく", "meaning": "Hướng về" },
             { "word": "向かう", "reading": "むかう", "meaning": "Đi về phía" },
-            { "word": "向こう", "reading": "むこう", "meaning": "Phía bên kia" },
+            {
+              "word": "向こう",
+              "reading": "むこう",
+              "meaning": "Phía bên kia"
+            },
             { "word": "方向", "reading": "ほうこう", "meaning": "Phương hướng" }
           ]
         },
@@ -202,7 +230,11 @@
           "onyomi": "ホウ",
           "kunyomi": "かた",
           "examples": [
-            { "word": "方向", "reading": "ほうこう", "meaning": "Phương hướng" },
+            {
+              "word": "方向",
+              "reading": "ほうこう",
+              "meaning": "Phương hướng"
+            },
             { "word": "方法", "reading": "ほうほう", "meaning": "Phương pháp" },
             { "word": "仕方", "reading": "しかた", "meaning": "Cách thức" }
           ]
@@ -296,7 +328,11 @@
           "onyomi": "ニチ、ジツ",
           "kunyomi": "ひ、か",
           "examples": [
-            { "word": "日曜日", "reading": "にちようび", "meaning": "Chủ nhật" },
+            {
+              "word": "日曜日",
+              "reading": "にちようび",
+              "meaning": "Chủ nhật"
+            },
             { "word": "昨日", "reading": "きのう", "meaning": "Hôm qua" },
             { "word": "翌日", "reading": "よくじつ", "meaning": "Ngày hôm sau" }
           ]
@@ -307,8 +343,16 @@
           "onyomi": "ヨウ",
           "kunyomi": "",
           "examples": [
-            { "word": "日曜日", "reading": "にちようび", "meaning": "Chủ nhật" },
-            { "word": "何曜日", "reading": "なんようび", "meaning": "Thứ mấy?" },
+            {
+              "word": "日曜日",
+              "reading": "にちようび",
+              "meaning": "Chủ nhật"
+            },
+            {
+              "word": "何曜日",
+              "reading": "なんようび",
+              "meaning": "Thứ mấy?"
+            },
             { "word": "月曜日", "reading": "げつようび", "meaning": "Thứ hai" }
           ]
         },
@@ -318,7 +362,11 @@
           "onyomi": "カ",
           "kunyomi": "なに、なん",
           "examples": [
-            { "word": "何曜日", "reading": "なんようび", "meaning": "Thứ mấy?" },
+            {
+              "word": "何曜日",
+              "reading": "なんようび",
+              "meaning": "Thứ mấy?"
+            },
             { "word": "何", "reading": "なに", "meaning": "Cái gì?" },
             { "word": "何時", "reading": "なんじ", "meaning": "Mấy giờ?" }
           ]
@@ -353,7 +401,11 @@
           "kunyomi": "",
           "examples": [
             { "word": "週末", "reading": "しゅうまつ", "meaning": "Cuối tuần" },
-            { "word": "先週", "reading": "せんしゅう", "meaning": "Tuần trước" },
+            {
+              "word": "先週",
+              "reading": "せんしゅう",
+              "meaning": "Tuần trước"
+            },
             { "word": "毎週", "reading": "まいしゅう", "meaning": "Hàng tuần" }
           ]
         },
@@ -407,8 +459,16 @@
           "onyomi": "ヨク",
           "kunyomi": "",
           "examples": [
-            { "word": "翌日", "reading": "よくじつ", "meaning": "Ngày hôm sau" },
-            { "word": "翌朝", "reading": "よくあさ", "meaning": "Sáng hôm sau" },
+            {
+              "word": "翌日",
+              "reading": "よくじつ",
+              "meaning": "Ngày hôm sau"
+            },
+            {
+              "word": "翌朝",
+              "reading": "よくあさ",
+              "meaning": "Sáng hôm sau"
+            },
             { "word": "翌年", "reading": "よくねん", "meaning": "Năm sau" }
           ]
         },
@@ -418,7 +478,11 @@
           "onyomi": "チョウ",
           "kunyomi": "あさ",
           "examples": [
-            { "word": "翌朝", "reading": "よくあさ", "meaning": "Sáng hôm sau" },
+            {
+              "word": "翌朝",
+              "reading": "よくあさ",
+              "meaning": "Sáng hôm sau"
+            },
             { "word": "朝", "reading": "あさ", "meaning": "Buổi sáng" },
             { "word": "毎朝", "reading": "まいあさ", "meaning": "Mỗi sáng" }
           ]
@@ -436,8 +500,16 @@
           "kunyomi": "お-す、おさ-える",
           "examples": [
             { "word": "押す", "reading": "おす", "meaning": "Đẩy, ấn" },
-            { "word": "押さえる", "reading": "おさえる", "meaning": "Giữ chặt, kiềm chế" },
-            { "word": "押入れ", "reading": "おしいれ", "meaning": "Tủ âm tường" }
+            {
+              "word": "押さえる",
+              "reading": "おさえる",
+              "meaning": "Giữ chặt, kiềm chế"
+            },
+            {
+              "word": "押入れ",
+              "reading": "おしいれ",
+              "meaning": "Tủ âm tường"
+            }
           ]
         },
         {
@@ -449,7 +521,11 @@
             { "word": "消す", "reading": "けす", "meaning": "Tắt, xóa" },
             { "word": "消える", "reading": "きえる", "meaning": "Biến mất" },
             { "word": "消しゴム", "reading": "けしごむ", "meaning": "Cục tẩy" },
-            { "word": "解消", "reading": "かいしょう", "meaning": "Giải quyết" },
+            {
+              "word": "解消",
+              "reading": "かいしょう",
+              "meaning": "Giải quyết"
+            },
             { "word": "消化", "reading": "しょうか", "meaning": "Tiêu hóa" }
           ]
         },
@@ -460,7 +536,11 @@
           "kunyomi": "ひ-く",
           "examples": [
             { "word": "引く", "reading": "ひく", "meaning": "Kéo, rút" },
-            { "word": "引率者", "reading": "いんそつしゃ", "meaning": "Người dẫn đoàn" },
+            {
+              "word": "引率者",
+              "reading": "いんそつしゃ",
+              "meaning": "Người dẫn đoàn"
+            },
             { "word": "引退", "reading": "いんたい", "meaning": "Nghỉ hưu" }
           ]
         },
@@ -470,7 +550,11 @@
           "onyomi": "カイ、ゲ",
           "kunyomi": "と-く",
           "examples": [
-            { "word": "解消", "reading": "かいしょう", "meaning": "Giải quyết" },
+            {
+              "word": "解消",
+              "reading": "かいしょう",
+              "meaning": "Giải quyết"
+            },
             { "word": "理解", "reading": "りかい", "meaning": "Hiểu" },
             { "word": "解く", "reading": "とく", "meaning": "Giải (bài toán)" }
           ]
@@ -492,8 +576,16 @@
           "onyomi": "シュ",
           "kunyomi": "と-る",
           "examples": [
-            { "word": "取得", "reading": "しゅとく", "meaning": "Lấy được, thu được" },
-            { "word": "受け取る", "reading": "うけとる", "meaning": "Nhận lấy" },
+            {
+              "word": "取得",
+              "reading": "しゅとく",
+              "meaning": "Lấy được, thu được"
+            },
+            {
+              "word": "受け取る",
+              "reading": "うけとる",
+              "meaning": "Nhận lấy"
+            },
             { "word": "取る", "reading": "とる", "meaning": "Lấy" }
           ]
         },
@@ -503,7 +595,11 @@
           "onyomi": "トク",
           "kunyomi": "え-る、う-る",
           "examples": [
-            { "word": "取得", "reading": "しゅとく", "meaning": "Lấy được, thu được" },
+            {
+              "word": "取得",
+              "reading": "しゅとく",
+              "meaning": "Lấy được, thu được"
+            },
             { "word": "得る", "reading": "える", "meaning": "Có được" },
             { "word": "習得", "reading": "しゅうとく", "meaning": "Học được" }
           ]
@@ -514,7 +610,11 @@
           "onyomi": "ジュ",
           "kunyomi": "う-ける、う-かる",
           "examples": [
-            { "word": "受け取る", "reading": "うけとる", "meaning": "Nhận lấy" },
+            {
+              "word": "受け取る",
+              "reading": "うけとる",
+              "meaning": "Nhận lấy"
+            },
             { "word": "受ける", "reading": "うける", "meaning": "Nhận, chịu" },
             { "word": "受験", "reading": "じゅけん", "meaning": "Thi cử" }
           ]
@@ -525,7 +625,11 @@
           "onyomi": "ソツ、リツ",
           "kunyomi": "ひき-いる",
           "examples": [
-            { "word": "引率者", "reading": "いんそつしゃ", "meaning": "Người dẫn đoàn" },
+            {
+              "word": "引率者",
+              "reading": "いんそつしゃ",
+              "meaning": "Người dẫn đoàn"
+            },
             { "word": "率いる", "reading": "ひきいる", "meaning": "Dẫn đầu" },
             { "word": "確率", "reading": "かくりつ", "meaning": "Xác suất" }
           ]
@@ -536,20 +640,24 @@
           "onyomi": "シャ",
           "kunyomi": "もの",
           "examples": [
-            { "word": "引率者", "reading": "いんそつしゃ", "meaning": "Người dẫn đoàn" },
+            {
+              "word": "引率者",
+              "reading": "いんそつしゃ",
+              "meaning": "Người dẫn đoàn"
+            },
             { "word": "学者", "reading": "がくしゃ", "meaning": "Học giả" },
             { "word": "若者", "reading": "わかもの", "meaning": "Người trẻ" }
           ]
         }
       ]
-    }
-   {
+    },
+    {
       "id": 7,
       "title": "Nhiệt độ và Thời tiết",
       "kanji": [
         {
           "character": "熱",
-"meaning": "Nóng, nhiệt",
+          "meaning": "Nóng, nhiệt",
           "onyomi": "ネツ",
           "kunyomi": "あつ-い",
           "examples": [
@@ -575,7 +683,11 @@
           "kunyomi": "こころ",
           "examples": [
             { "word": "熱心", "reading": "ねっしん", "meaning": "Nhiệt tâm" },
-            { "word": "心", "reading": "こころ", "meaning": "Trái tim, tâm hồn" }
+            {
+              "word": "心",
+              "reading": "こころ",
+              "meaning": "Trái tim, tâm hồn"
+            }
           ]
         },
         {
@@ -585,7 +697,11 @@
           "kunyomi": "つめ-たい、ひ-える、さ-める",
           "examples": [
             { "word": "冷たい", "reading": "つめたい", "meaning": "Lạnh" },
-            { "word": "冷える", "reading": "ひえる", "meaning": "Trở nên lạnh" },
+            {
+              "word": "冷える",
+              "reading": "ひえる",
+              "meaning": "Trở nên lạnh"
+            },
             { "word": "冷める", "reading": "さめる", "meaning": "Nguội đi" },
             { "word": "冷蔵庫", "reading": "れいぞうこ", "meaning": "Tủ lạnh" },
             { "word": "冷静", "reading": "れいせい", "meaning": "Bình tĩnh" },
@@ -638,7 +754,11 @@
           "examples": [
             { "word": "温かい", "reading": "あたたかい", "meaning": "Ấm áp" },
             { "word": "温まる", "reading": "あたたまる", "meaning": "Ấm lên" },
-            { "word": "温暖化", "reading": "おんだんか", "meaning": "Sự nóng lên toàn cầu" },
+            {
+              "word": "温暖化",
+              "reading": "おんだんか",
+              "meaning": "Sự nóng lên toàn cầu"
+            },
             { "word": "温度", "reading": "おんど", "meaning": "Nhiệt độ" }
           ]
         },
@@ -648,7 +768,11 @@
           "onyomi": "ダン",
           "kunyomi": "あたた-かい",
           "examples": [
-            { "word": "温暖化", "reading": "おんだんか", "meaning": "Sự nóng lên toàn cầu" },
+            {
+              "word": "温暖化",
+              "reading": "おんだんか",
+              "meaning": "Sự nóng lên toàn cầu"
+            },
             { "word": "暖かい", "reading": "あたたかい", "meaning": "Ấm" }
           ]
         },
@@ -658,7 +782,11 @@
           "onyomi": "カ、ケ",
           "kunyomi": "ば-ける",
           "examples": [
-            { "word": "温暖化", "reading": "おんだんか", "meaning": "Sự nóng lên toàn cầu" },
+            {
+              "word": "温暖化",
+              "reading": "おんだんか",
+              "meaning": "Sự nóng lên toàn cầu"
+            },
             { "word": "文化", "reading": "ぶんか", "meaning": "Văn hóa" }
           ]
         },
@@ -695,7 +823,11 @@
           "onyomi": "ショク",
           "kunyomi": "た-べる",
           "examples": [
-            { "word": "食材", "reading": "しょくざい", "meaning": "Nguyên liệu thực phẩm" },
+            {
+              "word": "食材",
+              "reading": "しょくざい",
+              "meaning": "Nguyên liệu thực phẩm"
+            },
             { "word": "食器", "reading": "しょっき", "meaning": "Đồ ăn" }
           ]
         },
@@ -705,8 +837,16 @@
           "onyomi": "ザイ",
           "kunyomi": "",
           "examples": [
-            { "word": "食材", "reading": "しょくざい", "meaning": "Nguyên liệu thực phẩm" },
-            { "word": "材料", "reading": "ざいりょう", "meaning": "Nguyên liệu" },
+            {
+              "word": "食材",
+              "reading": "しょくざい",
+              "meaning": "Nguyên liệu thực phẩm"
+            },
+            {
+              "word": "材料",
+              "reading": "ざいりょう",
+              "meaning": "Nguyên liệu"
+            },
             { "word": "木材", "reading": "もくざい", "meaning": "Gỗ" }
           ]
         },
@@ -716,7 +856,11 @@
           "onyomi": "リョウ",
           "kunyomi": "",
           "examples": [
-            { "word": "材料", "reading": "ざいりょう", "meaning": "Nguyên liệu" },
+            {
+              "word": "材料",
+              "reading": "ざいりょう",
+              "meaning": "Nguyên liệu"
+            },
             { "word": "料理", "reading": "りょうり", "meaning": "Nấu ăn" }
           ]
         },
@@ -737,9 +881,17 @@
           "kunyomi": "かた",
           "examples": [
             { "word": "型", "reading": "かた", "meaning": "Khuôn, loại" },
-            { "word": "血液型", "reading": "けつえきがた", "meaning": "Nhóm máu" },
+            {
+              "word": "血液型",
+              "reading": "けつえきがた",
+              "meaning": "Nhóm máu"
+            },
             { "word": "文型", "reading": "ぶんけい", "meaning": "Mẫu câu" },
-            { "word": "典型的", "reading": "てんけいてき", "meaning": "Điển hình" }
+            {
+              "word": "典型的",
+              "reading": "てんけいてき",
+              "meaning": "Điển hình"
+            }
           ]
         },
         {
@@ -748,7 +900,11 @@
           "onyomi": "ケツ",
           "kunyomi": "ち",
           "examples": [
-            { "word": "血液型", "reading": "けつえきがた", "meaning": "Nhóm máu" },
+            {
+              "word": "血液型",
+              "reading": "けつえきがた",
+              "meaning": "Nhóm máu"
+            },
             { "word": "血", "reading": "ち", "meaning": "Máu" }
           ]
         },
@@ -758,7 +914,11 @@
           "onyomi": "エキ",
           "kunyomi": "",
           "examples": [
-            { "word": "血液型", "reading": "けつえきがた", "meaning": "Nhóm máu" },
+            {
+              "word": "血液型",
+              "reading": "けつえきがた",
+              "meaning": "Nhóm máu"
+            },
             { "word": "液体", "reading": "えきたい", "meaning": "Chất lỏng" }
           ]
         },
@@ -778,7 +938,11 @@
           "onyomi": "テン",
           "kunyomi": "",
           "examples": [
-            { "word": "典型的", "reading": "てんけいてき", "meaning": "Điển hình" },
+            {
+              "word": "典型的",
+              "reading": "てんけいてき",
+              "meaning": "Điển hình"
+            },
             { "word": "辞典", "reading": "じてん", "meaning": "Từ điển" }
           ]
         },
@@ -788,7 +952,11 @@
           "onyomi": "テキ",
           "kunyomi": "まと",
           "examples": [
-            { "word": "典型的", "reading": "てんけいてき", "meaning": "Điển hình" },
+            {
+              "word": "典型的",
+              "reading": "てんけいてき",
+              "meaning": "Điển hình"
+            },
             { "word": "的", "reading": "まと", "meaning": "Đích" }
           ]
         },
@@ -830,9 +998,17 @@
           "onyomi": "キ",
           "kunyomi": "うつわ",
           "examples": [
-            { "word": "器", "reading": "うつわ", "meaning": "Đồ dùng, bát đĩa" },
+            {
+              "word": "器",
+              "reading": "うつわ",
+              "meaning": "Đồ dùng, bát đĩa"
+            },
             { "word": "食器", "reading": "しょっき", "meaning": "Đồ ăn" },
-            { "word": "機器", "reading": "きき", "meaning": "Máy móc, thiết bị" },
+            {
+              "word": "機器",
+              "reading": "きき",
+              "meaning": "Máy móc, thiết bị"
+            },
             { "word": "楽器", "reading": "がっき", "meaning": "Nhạc cụ" }
           ]
         },
@@ -842,7 +1018,11 @@
           "onyomi": "キ",
           "kunyomi": "",
           "examples": [
-            { "word": "機器", "reading": "きき", "meaning": "Máy móc, thiết bị" },
+            {
+              "word": "機器",
+              "reading": "きき",
+              "meaning": "Máy móc, thiết bị"
+            },
             { "word": "飛行機", "reading": "ひこうき", "meaning": "Máy bay" }
           ]
         },
@@ -869,8 +1049,16 @@
           "kunyomi": "たまご",
           "examples": [
             { "word": "卵", "reading": "たまご", "meaning": "Trứng" },
-            { "word": "卵白", "reading": "らんぱく", "meaning": "Lòng trắng trứng" },
-            { "word": "卵黄", "reading": "らんおう", "meaning": "Lòng đỏ trứng" }
+            {
+              "word": "卵白",
+              "reading": "らんぱく",
+              "meaning": "Lòng trắng trứng"
+            },
+            {
+              "word": "卵黄",
+              "reading": "らんおう",
+              "meaning": "Lòng đỏ trứng"
+            }
           ]
         },
         {
@@ -879,7 +1067,11 @@
           "onyomi": "ハク、ビャク",
           "kunyomi": "しろ、しろ-い",
           "examples": [
-            { "word": "卵白", "reading": "らんぱく", "meaning": "Lòng trắng trứng" },
+            {
+              "word": "卵白",
+              "reading": "らんぱく",
+              "meaning": "Lòng trắng trứng"
+            },
             { "word": "白い", "reading": "しろい", "meaning": "Màu trắng" }
           ]
         },
@@ -889,7 +1081,11 @@
           "onyomi": "コウ、オウ",
           "kunyomi": "き",
           "examples": [
-            { "word": "卵黄", "reading": "らんおう", "meaning": "Lòng đỏ trứng" },
+            {
+              "word": "卵黄",
+              "reading": "らんおう",
+              "meaning": "Lòng đỏ trứng"
+            },
             { "word": "黄色", "reading": "きいろ", "meaning": "Màu vàng" }
           ]
         },
@@ -933,7 +1129,11 @@
             { "word": "粉", "reading": "こな", "meaning": "Bột" },
             { "word": "小麦粉", "reading": "こむぎこ", "meaning": "Bột mì" },
             { "word": "花粉", "reading": "かふん", "meaning": "Phấn hoa" },
-            { "word": "粉末", "reading": "ふんまつ", "meaning": "Bột, dạng bột" }
+            {
+              "word": "粉末",
+              "reading": "ふんまつ",
+              "meaning": "Bột, dạng bột"
+            }
           ]
         },
         {
@@ -972,7 +1172,11 @@
           "onyomi": "マツ",
           "kunyomi": "すえ",
           "examples": [
-            { "word": "粉末", "reading": "ふんまつ", "meaning": "Bột, dạng bột" },
+            {
+              "word": "粉末",
+              "reading": "ふんまつ",
+              "meaning": "Bột, dạng bột"
+            },
             { "word": "週末", "reading": "しゅうまつ", "meaning": "Cuối tuần" }
           ]
         },
