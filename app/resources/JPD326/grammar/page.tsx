@@ -31,7 +31,7 @@ interface Lesson {
 }
 
 interface GrammarData {
-  series: string;
+  series?: string;
   lessons: Lesson[];
 }
 
@@ -42,7 +42,6 @@ export default function GrammarPage() {
 
   const data: GrammarData = grammarData;
   const lessons = data.lessons;
-  const currentLesson = lessons[selectedLesson];
 
   const togglePattern = (id: string) => {
     setExpandedPattern(expandedPattern === id ? null : id);
@@ -63,6 +62,29 @@ export default function GrammarPage() {
     return <AuthRequiredModal show={true} />;
   }
 
+  if (!Array.isArray(lessons) || lessons.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <Link href="/resources/JPD326">
+            <Button variant="outline" className="gap-2 mb-6 font-japanese">
+              <ArrowLeft className="w-4 h-4" />
+              Quay lại
+            </Button>
+          </Link>
+          <Card className="p-10 text-center border-2 border-dashed border-amber-400 bg-white dark:bg-gray-800">
+            <h1 className="text-3xl font-bold text-amber-600 mb-3">Coming soon</h1>
+            <p className="text-gray-700 dark:text-gray-300 font-japanese">
+              Dữ liệu ngữ pháp đang được cập nhật. Vui lòng quay lại sau.
+            </p>
+          </Card>
+        </div>
+      </div>
+    );
+  }
+
+  const currentLesson = lessons[selectedLesson];
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
       <div className="max-w-5xl mx-auto">
@@ -80,7 +102,7 @@ export default function GrammarPage() {
               文法 Ngữ Pháp JPD326
             </h1>
             <p className="text-gray-600 dark:text-gray-400 font-japanese">
-              {data.series}
+              {data.series ?? "JPD326"}
             </p>
           </div>
 

@@ -56,8 +56,9 @@ export default function VocabularyPage() {
     if (shuffledInit) setShuffled(true);
   }, []);
 
-  const currentCard = cards[currentIndex];
-  const progress = ((currentIndex + 1) / cards.length) * 100;
+  const hasCards = cards.length > 0;
+  const currentCard = hasCards ? cards[currentIndex] : null;
+  const progress = hasCards ? ((currentIndex + 1) / cards.length) * 100 : 0;
 
   // Lưu trạng thái vào localStorage mỗi khi thay đổi
   useEffect(() => {
@@ -164,6 +165,28 @@ export default function VocabularyPage() {
 
   if (!user) {
     return <AuthRequiredModal show={true} />;
+  }
+
+  if (!hasCards) {
+    return (
+      <div className="min-h-screen bg-japan-cream dark:bg-gray-900 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link href="/resources/JPD326">
+            <Button variant="outline" className="gap-2 mb-6 font-japanese">
+              <ArrowLeft className="w-4 h-4" />
+              Quay lại
+            </Button>
+          </Link>
+
+          <Card className="p-10 text-center border-2 border-dashed border-amber-400 bg-white/90 dark:bg-gray-800/90">
+            <h1 className="text-3xl font-bold text-amber-600 mb-3">Coming soon</h1>
+            <p className="text-gray-700 dark:text-gray-300 font-japanese">
+              Dữ liệu từ vựng đang được cập nhật. Vui lòng quay lại sau.
+            </p>
+          </Card>
+        </div>
+      </div>
+    );
   }
 
   return (
