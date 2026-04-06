@@ -69,25 +69,10 @@ export default function SWD392Page() {
   const { user, loading } = useAuth();
   const [mode, setMode] = useState<"review" | "quiz">("review");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<
-    Record<number, string>
-  >({});
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>(
+    {},
+  );
   const [submitted, setSubmitted] = useState(false);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-          <p className="text-slate-300">Đang tải...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return <AuthRequiredModal show={true} />;
-  }
 
   const quizData = rawQuiz as QuizQuestion[];
 
@@ -172,6 +157,21 @@ export default function SWD392Page() {
     setCurrentIndex(0);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+          <p className="text-slate-300">Đang tải...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthRequiredModal show={true} />;
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 py-10 px-4">
       <div className="max-w-7xl mx-auto">
@@ -203,8 +203,8 @@ export default function SWD392Page() {
                 SWD392 - Kiến trúc hệ thống
               </CardTitle>
               <CardDescription className="text-slate-300 text-base">
-                Học theo hướng kiến trúc hệ thống: nền tảng mô hình hóa, thiết
-                kế thành phần, và tư duy triển khai.
+                Học theo hướng kiến trúc hệ thống: nền tảng mô hình hóa, thiết kế
+                thành phần và tư duy triển khai.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -232,7 +232,7 @@ export default function SWD392Page() {
                   Mô hình hóa UML
                 </div>
                 <p className="text-sm text-slate-300">
-                  Luyện use case, actor, và model PIM/PSM gắn với hệ thống web.
+                  Luyện use case, actor và model PIM/PSM gắn với hệ thống web.
                 </p>
               </div>
             </CardContent>
@@ -293,8 +293,7 @@ export default function SWD392Page() {
                 <div className="space-y-3">
                   {currentQuestion.choices.map((choice) => {
                     const isSelected = selectedForCurrent === choice.id;
-                    const isCorrect =
-                      currentQuestion.correctChoiceId === choice.id;
+                    const isCorrect = currentQuestion.correctChoiceId === choice.id;
                     const isWrongSelected =
                       submitted && isSelected && !isCorrect;
 
@@ -342,8 +341,8 @@ export default function SWD392Page() {
                       </span>
                     </p>
                     <p className="text-xs text-emerald-300/90 mt-1">
-                      Gợi ý: đọc kỹ khái niệm chính trong câu rồi đối chiếu các
-                      lựa chọn gần nghĩa.
+                      Gợi ý: đọc kỹ khái niệm chính trong câu rồi đối chiếu các lựa
+                      chọn gần nghĩa.
                     </p>
                   </div>
                 )}
@@ -384,6 +383,7 @@ export default function SWD392Page() {
                   >
                     Câu tiếp
                   </Button>
+
                   {mode === "review" ? (
                     <Button
                       type="button"
@@ -452,27 +452,25 @@ export default function SWD392Page() {
                 <CardTitle>Phân bố chủ đề</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                {Object.entries(topicStats.totalByTopic).map(
-                  ([topic, total]) => {
-                    const wrong = topicStats.wrongByTopic[topic] ?? 0;
-                    return (
-                      <div
-                        key={topic}
-                        className="rounded-lg border border-slate-700 px-3 py-2 bg-slate-950/40"
-                      >
-                        <div className="flex items-center justify-between text-sm">
-                          <span>{topic}</span>
-                          <span className="text-slate-400">{total} câu</span>
-                        </div>
-                        {submitted && wrong > 0 && (
-                          <p className="text-xs text-rose-300 mt-1">
-                            Sai {wrong} câu, cần ôn tập thêm
-                          </p>
-                        )}
+                {Object.entries(topicStats.totalByTopic).map(([topic, total]) => {
+                  const wrong = topicStats.wrongByTopic[topic] ?? 0;
+                  return (
+                    <div
+                      key={topic}
+                      className="rounded-lg border border-slate-700 px-3 py-2 bg-slate-950/40"
+                    >
+                      <div className="flex items-center justify-between text-sm">
+                        <span>{topic}</span>
+                        <span className="text-slate-400">{total} câu</span>
                       </div>
-                    );
-                  },
-                )}
+                      {mode === "quiz" && submitted && wrong > 0 && (
+                        <p className="text-xs text-rose-300 mt-1">
+                          Sai {wrong} câu, cần ôn tập thêm
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </CardContent>
             </Card>
 
@@ -484,37 +482,36 @@ export default function SWD392Page() {
                 {mode === "review" && (
                   <p className="text-slate-300">
                     Đây là chế độ ôn tập. Mỗi câu sẽ hiển thị đáp án đúng để bạn
-                    nắm chắc lý thuyết trước khi làm bài. (Tất cả đều lấy từ
-                    sách giáo trình 100% nhưng từ 2025 sẽ có thêm câu hỏi được
-                    custom dựa trên nội dung này nên yêu cầu đọc hiểu kỹ hơn
-                    nhé!)
+                    nắm chắc lý thuyết trước khi làm bài.
                   </p>
                 )}
                 {mode === "quiz" && !submitted && (
                   <p className="text-slate-300">
-                    Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm
-                    kiến thức kiến trúc hệ thống. (Tất cả đều lấy từ sách giáo
-                    trình 100% nhưng từ 2025 sẽ có thêm câu hỏi được custom dựa
-                    trên nội dung này nên yêu cầu đọc hiểu kỹ hơn nhé!)
+                    Hoàn thành quiz để nhận được gợi ý ôn tập theo từng nhóm kiến
+                    thức kiến trúc hệ thống.
                   </p>
                 )}
-                {mode === "quiz" &&
-                  submitted &&
-                  score / totalQuestions >= 0.8 && (
-                    <p className="flex items-center gap-2 text-emerald-300">
-                      <CheckCircle2 className="w-4 h-4" />
-                      Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
-                    </p>
-                  )}
-                {mode === "quiz" &&
-                  submitted &&
-                  score / totalQuestions < 0.8 && (
-                    <p className="flex items-center gap-2 text-amber-300">
-                      <XCircle className="w-4 h-4" />
-                      Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu
-                      tư duy hệ thống.
-                    </p>
-                  )}
+                {mode === "quiz" && submitted && score / totalQuestions >= 0.8 && (
+                  <p className="flex items-center gap-2 text-emerald-300">
+                    <CheckCircle2 className="w-4 h-4" />
+                    Nhanh và chắc. Bạn đã nắm khá vững nền tảng kiến trúc.
+                  </p>
+                )}
+                {mode === "quiz" && submitted && score / totalQuestions < 0.8 && (
+                  <p className="flex items-center gap-2 text-amber-300">
+                    <XCircle className="w-4 h-4" />
+                    Nên ôn lại nhóm UML, design strategy và PIM/PSM để tối ưu tư
+                    duy hệ thống.
+                  </p>
+                )}
+                <div className="mt-3 rounded-lg border border-cyan-800/60 bg-cyan-950/30 p-3 text-cyan-100">
+                  <p className="font-semibold">Lưu ý:</p>
+                  <p>
+                    100% câu hỏi lấy từ sách giáo trình. Từ năm 2025, các câu hỏi
+                    sẽ được custom thêm nhưng vẫn dựa trên nội dung này, nên yêu
+                    cầu các bạn đọc hiểu kỹ câu hỏi.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
