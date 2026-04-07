@@ -2180,7 +2180,7 @@
     "reading": "お",
     "definition": "đánh thức, dựng lên, gây ra",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/1qs.TeNP6oh3hnIy.0aWfQ.png"
   },
   {
@@ -2284,7 +2284,7 @@
     "reading": "かわ",
     "definition": "làm khô",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/YHY7odo.qH8GbA1VBbxJoA.jpg"
   },
   {
@@ -2323,7 +2323,7 @@
     "reading": null,
     "definition": "khao, chiêu đãi",
     "pos": "verb",
-    "transitivity": "intransitive",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/Gt3dSB2dbwIsFUWZnLMeNw.jpg"
   },
   {
@@ -2349,7 +2349,7 @@
     "reading": "あず",
     "definition": "gửi tiền, giao phó",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/gzgR-VZ9lXk7LcRizropqQ.jpg"
   },
   {
@@ -2453,7 +2453,7 @@
     "reading": "ことわ",
     "definition": "từ chối",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/IhHEwL9X4ENaW4rmvPJWJw.jpg"
   },
   {
@@ -2544,7 +2544,7 @@
     "reading": "おお",
     "definition": "xuống (tàu, xe, núi), nhận được(cấp phép, chứng chỉ, lương hưu…)",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/-TW0Kkm2dgqAlT5JWtOGmQ.jpg"
   },
   {
@@ -2609,7 +2609,7 @@
     "reading": "なお",
     "definition": "chữa trị, phục hồi",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/OAHr.pxGPE9SzBd2DNL-qw.jpg"
   },
   {
@@ -2674,7 +2674,7 @@
     "reading": "であ",
     "definition": "gặp gỡ, hội ngộ",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/PQAhcE41bIIOW2v4qNPAUw.jpg"
   },
   {
@@ -2739,7 +2739,7 @@
     "reading": "た",
     "definition": "trải qua, trôi qua",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/X5A4KxptALSf4iWJuqnQZg.gif"
   },
   {
@@ -2765,7 +2765,7 @@
     "reading": "まあ",
     "definition": "làm cho kịp",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/JwBIXt.wLaCVhIKJHYCAJg.jpg"
   },
   {
@@ -2804,7 +2804,7 @@
     "reading": "ちが",
     "definition": "đi ngang qua, lướt qua, lỡ",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/krJr5S3gJONNghmlI3lLlQ.jpg"
   },
   {
@@ -2869,7 +2869,7 @@
     "reading": "はな",
     "definition": "tránh xa, cách xa",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/ld1JlF2i4ypHoKKRPG.pHw.jpg"
   },
   {
@@ -2934,7 +2934,7 @@
     "reading": null,
     "definition": "làm đổ, làm tràn",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/QM.9zVbnyYZn1idbLH-3kA.png"
   },
   {
@@ -3025,7 +3025,7 @@
     "reading": "な",
     "definition": "làm mất",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/DDmbzz7aFxmcor4piNdJhw.png"
   },
   {
@@ -3220,7 +3220,7 @@
     "reading": "ひ",
     "definition": "làm lạnh, hạ nhiệt",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/i/tVH7BOqSAuOnUa-iVUuZFw.jpg"
   },
   {
@@ -3285,7 +3285,7 @@
     "reading": "わ",
     "definition": "sôi, (bồn tắm) sẵn sàng, sôi động lên",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/A3lN08Wx8j.1N4TYrRvxrQ.jpg"
   },
   {
@@ -3362,8 +3362,8 @@
     "term": "暖まる/温まる",
     "reading": "あたたあたた",
     "definition": "ấm lên",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/vnAi0IAJbGSej4tDoifQYg.jpg"
   },
   {
@@ -3375,8 +3375,8 @@
     "term": "暖める/温める",
     "reading": "あたたあたた",
     "definition": "làm ấm, hâm nóng",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/BRoWaH6L7-XzCo2ZdKuuGQ.jpg"
   },
   {
@@ -3388,8 +3388,8 @@
     "term": "高まる",
     "reading": "たか",
     "definition": "tăng lên, tăng cao",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/Nv4SpEa7UIEHAjSntabKMg.jpg"
   },
   {
@@ -3401,8 +3401,8 @@
     "term": "高める",
     "reading": "たか",
     "definition": "làm cho tăng lên",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/MIhKII-ueUOn6-UlttXWnw.png"
   },
   {
@@ -3414,8 +3414,8 @@
     "term": "強まる",
     "reading": "つよ",
     "definition": "mạnh lên",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/HjqId.C9mMt9.XqjOML2gQ.png"
   },
   {
@@ -3427,8 +3427,8 @@
     "term": "強める",
     "reading": "つよ",
     "definition": "làm mạnh, tăng cường",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/r6PhCJWmPreRgMLTZtCtuw.jpg"
   },
   {
@@ -3440,8 +3440,8 @@
     "term": "弱まる",
     "reading": "よわ",
     "definition": "yếu đi, suy giảm",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/rWEyT4.wrdKmVEKAP-uHZQ.jpg"
   },
   {
@@ -3453,8 +3453,8 @@
     "term": "弱める",
     "reading": "よわ",
     "definition": "làm suy yếu",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/3jv6CQIQ6paMv7TJxBz.Cw.png"
   },
   {
@@ -3466,8 +3466,8 @@
     "term": "広まる",
     "reading": "ひろ",
     "definition": "lan rá»™ng",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/9dxuJJZM2NZ9Ct81.tGs1w.png"
   },
   {
@@ -3479,8 +3479,8 @@
     "term": "広める",
     "reading": "ひろ",
     "definition": "mở rộng, truyền bá",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/V9r62Y5lw2oLr2MJYJnmNA.jpg"
   },
   {
@@ -3492,8 +3492,8 @@
     "term": "深まる",
     "reading": "ふか",
     "definition": "trở nên sâu hơn; tăng lên (mức độ, quan hệ, hiểu biết)",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/xG4mbC9rvCasAA0OBeFmog.png"
   },
   {
@@ -3505,8 +3505,8 @@
     "term": "深める",
     "reading": "ふか",
     "definition": "tăng cường(kiến thức, giao lưu…), thắt chặt (mối quan hệ)",
-    "pos": "adjective",
-    "transitivity": null,
+    "pos": "verb",
+    "transitivity": "transitive",
     "image": "https://o.quizlet.com/AZx37qEmHk7SdUhZAmJkXA.jpg"
   },
   {
@@ -10045,7 +10045,7 @@
     "reading": null,
     "definition": "tổng hợp, thống nhất",
     "pos": "verb",
-    "transitivity": "unknown",
+    "transitivity": "intransitive",
     "image": "https://o.quizlet.com/LHRjC21gt.noQhDBUqH1cw.jpg"
   },
   {
