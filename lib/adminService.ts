@@ -8,6 +8,38 @@ import {
   FeedbackStatus,
 } from "@/types";
 
+type UserLite = {
+  id: string;
+  full_name: string;
+  email: string;
+};
+
+async function getUsersMapByIds(userIds: string[]): Promise<Map<string, UserLite>> {
+  const uniqueIds = Array.from(new Set(userIds.filter(Boolean)));
+  if (uniqueIds.length === 0) {
+    return new Map();
+  }
+
+  const { data, error } = await getAllUsers();
+  if (error || !data) {
+    if (error) {
+      console.error("Get all users for feedback mapping error:", error);
+    }
+    return new Map();
+  }
+
+  const idSet = new Set(uniqueIds);
+  const users = data
+    .filter((u) => idSet.has(u.id))
+    .map((u) => ({
+      id: u.id,
+      full_name: u.full_name || "Người dùng",
+      email: u.email || "N/A",
+    }));
+
+  return new Map(users.map((u) => [u.id, u]));
+}
+
 /**
  * Get all users (Admin only)
  */
@@ -148,35 +180,57 @@ export async function setUserBanStatus(
 /**
  * Get all feedback (Admin only)
  */
+/**
+ * Get all feedback (Admin only)
+ */
 export async function getAllFeedback(): Promise<{
   data: FeedbackWithUser[] | null;
   error: string | null;
 }> {
   try {
-    const { data, error } = await supabase
+    // First get all feedback
+    const { data: feedbackData, error: feedbackError } = await supabase
       .from("feedback")
-      .select(
-        `
-        *,
-        user:users!feedback_user_id_fkey (
-          id,
-          full_name,
-          email
-        ),
-        admin:users!feedback_admin_id_fkey (
-          id,
-          full_name
-        )
-      `,
-      )
+      .select("*")
       .order("created_at", { ascending: false });
 
-    if (error) {
-      console.error("Get all feedback error:", error);
-      return { data: null, error: error.message };
+    if (feedbackError) {
+      console.error("Get all feedback error:", feedbackError);
+      return { data: null, error: feedbackError.message };
     }
 
-    return { data: data as FeedbackWithUser[], error: null };
+    if (!feedbackData || feedbackData.length === 0) {
+      return { data: [], error: null };
+    }
+
+    // Get unique user IDs
+    const userIds = Array.from(
+      new Set([
+        ...feedbackData.map((f) => f.user_id),
+        ...feedbackData.map((f) => f.admin_id).filter(Boolean),
+      ]),
+    );
+
+    const usersMap = await getUsersMapByIds(userIds as string[]);
+
+    const feedbackWithUser: FeedbackWithUser[] = feedbackData.map((f) => ({
+      ...f,
+      user: usersMap.get(f.user_id) || {
+        id: f.user_id,
+        full_name: "Người dùng",
+        email: `ID: ${f.user_id.slice(0, 8)}...`,
+      },
+      admin: f.admin_id
+        ? (() => {
+            const admin = usersMap.get(f.admin_id);
+            return admin
+              ? { id: admin.id, full_name: admin.full_name }
+              : undefined;
+          })()
+        : undefined,
+    }));
+
+    return { data: feedbackWithUser, error: null };
   } catch (err) {
     console.error("Get all feedback exception:", err);
     return {
@@ -189,36 +243,58 @@ export async function getAllFeedback(): Promise<{
 /**
  * Get feedback by status (Admin only)
  */
+/**
+ * Get feedback by status (Admin only)
+ */
 export async function getFeedbackByStatus(status: FeedbackStatus): Promise<{
   data: FeedbackWithUser[] | null;
   error: string | null;
 }> {
   try {
-    const { data, error } = await supabase
+    // First get feedback by status
+    const { data: feedbackData, error: feedbackError } = await supabase
       .from("feedback")
-      .select(
-        `
-        *,
-        user:users!feedback_user_id_fkey (
-          id,
-          full_name,
-          email
-        ),
-        admin:users!feedback_admin_id_fkey (
-          id,
-          full_name
-        )
-      `,
-      )
+      .select("*")
       .eq("status", status)
       .order("created_at", { ascending: false });
 
-    if (error) {
-      console.error("Get feedback by status error:", error);
-      return { data: null, error: error.message };
+    if (feedbackError) {
+      console.error("Get feedback by status error:", feedbackError);
+      return { data: null, error: feedbackError.message };
     }
 
-    return { data: data as FeedbackWithUser[], error: null };
+    if (!feedbackData || feedbackData.length === 0) {
+      return { data: [], error: null };
+    }
+
+    // Get unique user IDs
+    const userIds = Array.from(
+      new Set([
+        ...feedbackData.map((f) => f.user_id),
+        ...feedbackData.map((f) => f.admin_id).filter(Boolean),
+      ]),
+    );
+
+    const usersMap = await getUsersMapByIds(userIds as string[]);
+
+    const feedbackWithUser: FeedbackWithUser[] = feedbackData.map((f) => ({
+      ...f,
+      user: usersMap.get(f.user_id) || {
+        id: f.user_id,
+        full_name: "Người dùng",
+        email: `ID: ${f.user_id.slice(0, 8)}...`,
+      },
+      admin: f.admin_id
+        ? (() => {
+            const admin = usersMap.get(f.admin_id);
+            return admin
+              ? { id: admin.id, full_name: admin.full_name }
+              : undefined;
+          })()
+        : undefined,
+    }));
+
+    return { data: feedbackWithUser, error: null };
   } catch (err) {
     console.error("Get feedback by status exception:", err);
     return {

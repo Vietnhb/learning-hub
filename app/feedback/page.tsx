@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -16,13 +16,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { createFeedback } from "@/lib/feedbackService";
-import { useMyFeedback } from "@/hooks/useMyFeedback";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Send, CheckCircle2 } from "lucide-react";
+import { useMyFeedback } from "@/hooks/useMyFeedback";
+import {
+  MessageSquare,
+  Send,
+  CheckCircle2,
+  MessagesSquare,
+} from "lucide-react";
 import { FeedbackCategory } from "@/types";
 
 export default function FeedbackPage() {
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const router = useRouter();
   const { feedback, loading: loadingFeedback, refetch } = useMyFeedback();
 
@@ -78,6 +84,16 @@ export default function FeedbackPage() {
     setSubmitting(false);
   };
 
+  if (authLoading) {
+    return (
+      <div className="container max-w-4xl mx-auto py-12 px-4">
+        <div className="flex justify-center py-12">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
+        </div>
+      </div>
+    );
+  }
+
   if (!user) {
     return (
       <div className="container max-w-4xl mx-auto py-12 px-4">
@@ -103,6 +119,24 @@ export default function FeedbackPage() {
           cải thiện.
         </p>
       </div>
+
+      <Link href="/messages" className="block">
+        <Card className="bg-blue-50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/20 transition-colors cursor-pointer">
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-4">
+              <MessagesSquare className="h-8 w-8 text-blue-600" />
+              <div>
+                <h3 className="font-semibold text-blue-900 dark:text-blue-100">
+                  Nhắn tin
+                </h3>
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  Nhắn tin trực tiếp với đội ngũ hỗ trợ
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </Link>
 
       <Card>
         <CardHeader>

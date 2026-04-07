@@ -39,9 +39,14 @@ export default function FeedbackCard({ feedback, onClick }: FeedbackCardProps) {
             <h3 className="font-semibold text-lg truncate">
               {feedback.subject}
             </h3>
-            <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
-              <User className="h-4 w-4" />
-              <span>{feedback.user?.full_name || feedback.user?.email}</span>
+            <div className="flex flex-col gap-1 mt-1 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4 flex-shrink-0" />
+                <span className="truncate">{feedback.user?.full_name}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs truncate ml-6">{feedback.user?.email}</span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-2 items-end">

@@ -18,8 +18,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { updateFeedback } from "@/lib/adminService";
 import { RefreshCw } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { UpdateFeedbackData } from "@/types";
 
 export default function AdminFeedbackPage() {
+  const { user } = useAuth();
   const [statusFilter, setStatusFilter] = useState<FeedbackStatus | "all">(
     "all",
   );
@@ -36,7 +39,10 @@ export default function AdminFeedbackPage() {
     newStatus: FeedbackStatus,
   ) => {
     setUpdating(true);
-    const { success } = await updateFeedback(feedbackId, { status: newStatus });
+    const payload = user?.id
+      ? { status: newStatus, admin_id: user.id }
+      : { status: newStatus };
+    const { success } = await updateFeedback(feedbackId, payload);
     if (success) {
       refetch();
       if (selectedFeedback?.id === feedbackId) {
@@ -50,10 +56,12 @@ export default function AdminFeedbackPage() {
     if (!selectedFeedback || !reply.trim()) return;
 
     setUpdating(true);
-    const { success } = await updateFeedback(selectedFeedback.id, {
+    const payload: UpdateFeedbackData = {
       admin_reply: reply.trim(),
       status: "resolved",
-    });
+      ...(user?.id ? { admin_id: user.id } : {}),
+    };
+    const { success } = await updateFeedback(selectedFeedback.id, payload);
 
     if (success) {
       setReply("");
@@ -185,24 +193,30 @@ export default function AdminFeedbackPage() {
           <DialogHeader>
             <DialogTitle>{selectedFeedback?.subject}</DialogTitle>
             <DialogDescription>
-              <div className="flex items-center gap-2 mt-2">
-                <span>
-                  From:{" "}
-                  {selectedFeedback?.user?.full_name ||
-                    selectedFeedback?.user?.email}
-                </span>
-                <Badge variant="outline">{selectedFeedback?.category}</Badge>
-                <Badge
-                  variant={
-                    selectedFeedback?.status === "pending"
-                      ? "warning"
-                      : selectedFeedback?.status === "resolved"
-                        ? "success"
-                        : "info"
-                  }
-                >
-                  {selectedFeedback?.status}
-                </Badge>
+              <div className="space-y-2 mt-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-medium">From:</span>
+                  <span>{selectedFeedback?.user?.full_name}</span>
+                  <span className="text-xs">({selectedFeedback?.user?.email})</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Badge variant="outline">{selectedFeedback?.category}</Badge>
+                  <Badge
+                    variant={
+                      selectedFeedback?.status === "pending"
+                        ? "warning"
+                        : selectedFeedback?.status === "resolved"
+                          ? "success"
+                          : "info"
+                    }
+                  >
+                    {selectedFeedback?.status}
+                  </Badge>
+                  <span className="text-xs text-muted-foreground">
+                    {selectedFeedback?.created_at &&
+                      new Date(selectedFeedback.created_at).toLocaleString()}
+                  </span>
+                </div>
               </div>
             </DialogDescription>
           </DialogHeader>

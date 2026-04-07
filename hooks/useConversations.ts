@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ConversationWithDetails } from "@/types";
-import { getAllConversations } from "@/lib/chatService";
+import {
+  getAllConversations,
+  subscribeToConversations,
+  subscribeToMessageChanges,
+} from "@/lib/chatService";
 
 export function useConversations() {
   const [conversations, setConversations] = useState<ConversationWithDetails[]>(
@@ -10,6 +14,7 @@ export function useConversations() {
   );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchConversations = async () => {
     setLoading(true);
@@ -29,6 +34,34 @@ export function useConversations() {
 
   useEffect(() => {
     fetchConversations();
+  }, []);
+
+  useEffect(() => {
+    const scheduleRefresh = () => {
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+
+      debounceRef.current = setTimeout(() => {
+        fetchConversations();
+      }, 250);
+    };
+
+    const convChannel = subscribeToConversations(() => {
+      scheduleRefresh();
+    });
+
+    const messageChannel = subscribeToMessageChanges(() => {
+      scheduleRefresh();
+    });
+
+    return () => {
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+      convChannel.unsubscribe();
+      messageChannel.unsubscribe();
+    };
   }, []);
 
   return {

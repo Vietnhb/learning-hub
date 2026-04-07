@@ -6,6 +6,33 @@ import {
   SendMessageData,
 } from "@/types";
 
+async function getFallbackAdminId(excludeUserId?: string): Promise<string | null> {
+  try {
+    let query = supabase
+      .from("users")
+      .select("id, roles!inner(name)")
+      .eq("roles.name", "admin")
+      .order("created_at", { ascending: true })
+      .limit(1);
+
+    if (excludeUserId) {
+      query = query.neq("id", excludeUserId);
+    }
+
+    const { data, error } = await query.maybeSingle();
+
+    if (error) {
+      console.error("Get fallback admin error:", error);
+      return null;
+    }
+
+    return (data as { id: string } | null)?.id || null;
+  } catch (err) {
+    console.error("Get fallback admin exception:", err);
+    return null;
+  }
+}
+
 /**
  * Get or create conversation for current user
  */
@@ -22,26 +49,25 @@ export async function getOrCreateConversation(): Promise<{
       return { data: null, error: "User not authenticated" };
     }
 
-    const { data: fallbackAdmin } = await supabase
-      .from("users")
-      .select("id")
-      .eq("role_id", 1)
-      .order("created_at", { ascending: true })
-      .limit(1)
-      .maybeSingle();
+    const fallbackAdminId = await getFallbackAdminId(user.id);
 
     // Try to get existing conversation
     const { data: existing, error: fetchError } = await supabase
       .from("conversations")
       .select("*")
       .eq("user_id", user.id)
-      .single();
+      .maybeSingle();
+
+    if (fetchError) {
+      console.error("Get existing conversation error:", fetchError);
+      return { data: null, error: fetchError.message };
+    }
 
     if (existing) {
-      if (!existing.admin_id && fallbackAdmin?.id) {
+      if (!existing.admin_id && fallbackAdminId) {
         const { data: updatedConv } = await supabase
           .from("conversations")
-          .update({ admin_id: fallbackAdmin.id })
+          .update({ admin_id: fallbackAdminId })
           .eq("id", existing.id)
           .select("*")
           .single();
@@ -57,7 +83,7 @@ export async function getOrCreateConversation(): Promise<{
       .from("conversations")
       .insert({
         user_id: user.id,
-        admin_id: fallbackAdmin?.id || null,
+        admin_id: fallbackAdminId || null,
       })
       .select()
       .single();
@@ -78,6 +104,108 @@ export async function getOrCreateConversation(): Promise<{
 }
 
 /**
+ * Ensure conversation has an admin assigned
+ */
+export async function ensureConversationAdmin(
+  conversationId: string,
+): Promise<{ adminId: string | null; error: string | null }> {
+  try {
+    const { data: conv, error: convError } = await supabase
+      .from("conversations")
+      .select("id, user_id, admin_id")
+      .eq("id", conversationId)
+      .single();
+
+    if (convError) {
+      console.error("Get conversation error:", convError);
+      return { adminId: null, error: convError.message };
+    }
+
+    if (conv.admin_id) {
+      return { adminId: conv.admin_id, error: null };
+    }
+
+    const fallbackAdminId = await getFallbackAdminId(conv.user_id);
+    if (!fallbackAdminId) {
+      return { adminId: null, error: "No admin available" };
+    }
+
+    const { data: updated, error: updateError } = await supabase
+      .from("conversations")
+      .update({ admin_id: fallbackAdminId })
+      .eq("id", conversationId)
+      .select("admin_id")
+      .single();
+
+    if (updateError) {
+      console.error("Assign admin to conversation error:", updateError);
+      return { adminId: null, error: updateError.message };
+    }
+
+    return { adminId: updated.admin_id, error: null };
+  } catch (err) {
+    console.error("Ensure conversation admin exception:", err);
+    return {
+      adminId: null,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+/**
+ * Assign current admin to conversation (for "Start Chat" action)
+ */
+export async function assignConversationToCurrentAdmin(
+  conversationId: string,
+): Promise<{ success: boolean; adminId: string | null; error: string | null }> {
+  try {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      return { success: false, adminId: null, error: "User not authenticated" };
+    }
+
+    const { data: conv, error: convError } = await supabase
+      .from("conversations")
+      .select("id, admin_id")
+      .eq("id", conversationId)
+      .single();
+
+    if (convError) {
+      console.error("Get conversation for assign error:", convError);
+      return { success: false, adminId: null, error: convError.message };
+    }
+
+    if (conv.admin_id && conv.admin_id !== user.id) {
+      return { success: true, adminId: conv.admin_id, error: null };
+    }
+
+    const { data: updated, error: updateError } = await supabase
+      .from("conversations")
+      .update({ admin_id: user.id })
+      .eq("id", conversationId)
+      .select("admin_id")
+      .single();
+
+    if (updateError) {
+      console.error("Assign conversation to current admin error:", updateError);
+      return { success: false, adminId: null, error: updateError.message };
+    }
+
+    return { success: true, adminId: updated.admin_id, error: null };
+  } catch (err) {
+    console.error("Assign conversation to current admin exception:", err);
+    return {
+      success: false,
+      adminId: null,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+/**
  * Get all conversations (Admin only)
  */
 export async function getAllConversations(): Promise<{
@@ -87,22 +215,39 @@ export async function getAllConversations(): Promise<{
   try {
     const { data, error } = await supabase
       .from("conversations")
-      .select(
-        `
-        *,
-        user:users!conversations_user_id_fkey (
-          id,
-          full_name,
-          email
-        )
-      `,
-      )
+      .select("*")
       .order("last_message_at", { ascending: false });
 
     if (error) {
       console.error("Get all conversations error:", error);
       return { data: null, error: error.message };
     }
+
+    if (!data || data.length === 0) {
+      return { data: [], error: null };
+    }
+
+    const userIds = Array.from(new Set(data.map((conv) => conv.user_id)));
+    const { data: usersData, error: usersError } = await supabase.rpc(
+      "get_all_users",
+    );
+
+    if (usersError) {
+      console.error("Get users for conversations error:", usersError);
+    }
+
+    const usersMap = new Map(
+      ((usersData as { id: string; full_name: string; email: string }[] | null) || [])
+        .filter((u) => userIds.includes(u.id))
+        .map((u) => [
+          u.id,
+          {
+            id: u.id,
+            full_name: u.full_name || "Người dùng",
+            email: u.email || "N/A",
+          },
+        ]),
+    );
 
     // Get unread count for each conversation
     const conversationsWithUnread = await Promise.all(
@@ -112,10 +257,15 @@ export async function getAllConversations(): Promise<{
           .select("*", { count: "exact", head: true })
           .eq("conversation_id", conv.id)
           .eq("is_read", false)
-          .not("sender_id", "eq", conv.user_id); // Messages from admin
+          .eq("sender_id", conv.user_id); // Messages from user
 
         return {
           ...conv,
+          user: usersMap.get(conv.user_id) || {
+            id: conv.user_id,
+            full_name: "Người dùng",
+            email: `ID: ${conv.user_id.slice(0, 8)}...`,
+          },
           unread_count: count || 0,
         } as ConversationWithDetails;
       }),
@@ -220,7 +370,7 @@ export async function markMessagesAsRead(
       .from("messages")
       .update({ is_read: true })
       .eq("conversation_id", conversationId)
-      .eq("receiver_id", user.id)
+      .neq("sender_id", user.id)
       .eq("is_read", false);
 
     if (error) {
@@ -282,6 +432,26 @@ export function subscribeToMessages(
       },
       (payload) => {
         callback(payload.new as Message);
+      },
+    )
+    .subscribe();
+}
+
+/**
+ * Subscribe to all message changes
+ */
+export function subscribeToMessageChanges(callback: () => void) {
+  return supabase
+    .channel("messages:all")
+    .on(
+      "postgres_changes",
+      {
+        event: "*",
+        schema: "public",
+        table: "messages",
+      },
+      () => {
+        callback();
       },
     )
     .subscribe();

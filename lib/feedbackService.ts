@@ -16,10 +16,19 @@ export async function createFeedback(
       return { success: false, error: "User not authenticated" };
     }
 
+    const { data: fallbackAdmin } = await supabase
+      .from("users")
+      .select("id")
+      .eq("role_id", 1)
+      .order("created_at", { ascending: true })
+      .limit(1)
+      .maybeSingle();
+
     const { data: feedback, error } = await supabase
       .from("feedback")
       .insert({
         user_id: user.id,
+        admin_id: fallbackAdmin?.id || null,
         subject: data.subject,
         message: data.message,
         category: data.category || "general",
@@ -92,12 +101,12 @@ export async function getFeedbackById(feedbackId: string): Promise<{
       .select(
         `
         *,
-        user:users!feedback_user_id_fkey (
+        user:user_id (
           id,
           full_name,
           email
         ),
-        admin:users!feedback_admin_id_fkey (
+        admin:admin_id (
           id,
           full_name
         )

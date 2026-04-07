@@ -13,7 +13,6 @@ import {
   LogIn,
   LayoutDashboard,
   MessageSquare,
-  MessagesSquare,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -100,13 +99,6 @@ export default function Navbar() {
                 >
                   <MessageSquare className="w-4 h-4" />
                   Feedback
-                </Link>
-                <Link
-                  href="/messages"
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
-                >
-                  <MessagesSquare className="w-4 h-4" />
-                  Nhắn tin
                 </Link>
               </>
             )}
