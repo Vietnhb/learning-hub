@@ -1,1 +1,3582 @@
-[]
+[
+  {
+    "term": "男性",
+    "definition": "nam giới, đàn ông, giới tính nam",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%B7%E6%80%A7"
+  },
+  {
+    "term": "女性",
+    "definition": "nữ giới, phụ nữ, giới tính nữ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A5%B3%E6%80%A7"
+  },
+  {
+    "term": "高齢",
+    "definition": "tuổi cao",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%AB%98%E9%BD%A2"
+  },
+  {
+    "term": "年上",
+    "definition": "lớn tuổi hơn, hơn tuổi",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B4%E4%B8%8A"
+  },
+  {
+    "term": "目上",
+    "definition": "cấp trên, bề trên",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%AE%E4%B8%8A"
+  },
+  {
+    "term": "先輩",
+    "definition": "người đi trước",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%88%E8%BC%A9"
+  },
+  {
+    "term": "後輩",
+    "definition": "người đi sau",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%8C%E8%BC%A9"
+  },
+  {
+    "term": "上司",
+    "definition": "cấp trên",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8A%E5%8F%B8"
+  },
+  {
+    "term": "相手",
+    "definition": "đối phương",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B8%E6%89%8B"
+  },
+  {
+    "term": "知り合い",
+    "definition": "người quen",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9F%A5+%E3%82%8A+%E5%90%88+%E3%81%84"
+  },
+  {
+    "term": "友人",
+    "definition": "bạn, người bạn",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%8B%E4%BA%BA"
+  },
+  {
+    "term": "仲",
+    "definition": "quan hệ, mối quan hệ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%B2"
+  },
+  {
+    "term": "生年月日",
+    "definition": "ngày tháng năm sinh",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F%E5%B9%B4+%E6%9C%88%E6%97%A5"
+  },
+  {
+    "term": "誕生",
+    "definition": "ra đời",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%95%E7%94%9F"
+  },
+  {
+    "term": "年",
+    "definition": "năm, tuổi",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B4"
+  },
+  {
+    "term": "出身",
+    "definition": "xuất thân, gốc gác",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E8%BA%AB"
+  },
+  {
+    "term": "故郷",
+    "definition": "quê hương",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%85%E9%83%B7"
+  },
+  {
+    "term": "成長",
+    "definition": "sinh trưởng, phát triển, trưởng thành",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%90%E9%95%B7"
+  },
+  {
+    "term": "成人",
+    "definition": "người trưởng thành",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%90%E4%BA%BA"
+  },
+  {
+    "term": "合格",
+    "definition": "thi đỗ, trúng tuyển",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88%E6%A0%BC"
+  },
+  {
+    "term": "進学",
+    "definition": "học lên",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2%E5%AD%A6"
+  },
+  {
+    "term": "退学",
+    "definition": "thôi học",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%80%E5%AD%A6"
+  },
+  {
+    "term": "就職",
+    "definition": "tìm việc",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%B1%E8%81%B7"
+  },
+  {
+    "term": "退職",
+    "definition": "nghỉ việc",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%80%E8%81%B7"
+  },
+  {
+    "term": "失業",
+    "definition": "thất nghiệp",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%B1%E6%A5%AD"
+  },
+  {
+    "term": "残業",
+    "definition": "làm thêm giờ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%8B%E6%A5%AD"
+  },
+  {
+    "term": "生活",
+    "definition": "sinh hoạt, cuộc sống",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F%E6%B4%BB"
+  },
+  {
+    "term": "通勤",
+    "definition": "đi làm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A%E5%8B%A4"
+  },
+  {
+    "term": "学歴",
+    "definition": "bằng cấp, quá trình học tập",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AD%A6%E6%AD%B4"
+  },
+  {
+    "term": "給料",
+    "definition": "tiền lương",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%A6%E6%96%99"
+  },
+  {
+    "term": "面接",
+    "definition": "phỏng vấn",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9D%A2%E6%8E%A5"
+  },
+  {
+    "term": "休憩",
+    "definition": "nghỉ giải lao",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%91%E6%86%A9"
+  },
+  {
+    "term": "観光",
+    "definition": "tham quan, du lịch",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%B3%E5%85%89"
+  },
+  {
+    "term": "帰国",
+    "definition": "về nước",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B8%B0%E5%9B%BD"
+  },
+  {
+    "term": "帰省",
+    "definition": "về quê",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B8%B0%E7%9C%81"
+  },
+  {
+    "term": "帰宅",
+    "definition": "về nhà",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B8%B0%E5%AE%85"
+  },
+  {
+    "term": "参加",
+    "definition": "tham gia",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%82%E5%8A%A0"
+  },
+  {
+    "term": "出席",
+    "definition": "tham gia, có mặt",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E5%B8%AD"
+  },
+  {
+    "term": "欠席",
+    "definition": "vắng mặt",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AC%A0%E5%B8%AD"
+  },
+  {
+    "term": "遅刻",
+    "definition": "đến muộn",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%85%E5%88%BB"
+  },
+  {
+    "term": "化粧",
+    "definition": "trang điểm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8C%96%E7%B2%A7"
+  },
+  {
+    "term": "計算",
+    "definition": "tính toán",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%88%E7%AE%97"
+  },
+  {
+    "term": "計画",
+    "definition": "kế hoạch",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%88%E7%94%BB"
+  },
+  {
+    "term": "成功",
+    "definition": "thành công",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%90%E5%8A%9F"
+  },
+  {
+    "term": "失敗",
+    "definition": "thất bại",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%B1%E6%95%97"
+  },
+  {
+    "term": "準備",
+    "definition": "chuẩn bị",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BA%96%E5%82%99"
+  },
+  {
+    "term": "整理",
+    "definition": "sắp xếp, vứt bỏ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%B4%E7%90%86"
+  },
+  {
+    "term": "注文",
+    "definition": "đặt hàng, gọi đồ, yêu cầu",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B3%A8%E6%96%87"
+  },
+  {
+    "term": "貯金",
+    "definition": "tiền tiết kiệm, gửi tiết kiệm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B2%AF%E9%87%91"
+  },
+  {
+    "term": "徹夜",
+    "definition": "thức suốt đêm, thức trắng đêm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%B9%E5%A4%9C"
+  },
+  {
+    "term": "引っ越し",
+    "definition": "chuyển nhà",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%95+%E3%81%A3+%E8%B6%8A+%E3%81%97"
+  },
+  {
+    "term": "身長",
+    "definition": "chiều cao cơ thể",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BA%AB%E9%95%B7"
+  },
+  {
+    "term": "体重",
+    "definition": "cân nặng, trọng lượng",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BD%93%E9%87%8D"
+  },
+  {
+    "term": "けが",
+    "definition": "vết thương",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%91%E3%81%8C"
+  },
+  {
+    "term": "会",
+    "definition": "buổi họp / buổi gặp / hội / tiệc",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9A"
+  },
+  {
+    "term": "趣味",
+    "definition": "sở thích",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%A3%E5%91%B3"
+  },
+  {
+    "term": "興味",
+    "definition": "hứng thú",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%88%88%E5%91%B3"
+  },
+  {
+    "term": "思い出",
+    "definition": "kỷ niệm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84+%E5%87%BA"
+  },
+  {
+    "term": "冗談",
+    "definition": "nói đùa",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%97%E8%AB%87"
+  },
+  {
+    "term": "目的",
+    "definition": "mục đích",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%AE%E7%9A%84"
+  },
+  {
+    "term": "約束",
+    "definition": "hứa, hứa hẹn",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B4%84%E6%9D%9F"
+  },
+  {
+    "term": "おしゃべり",
+    "definition": "nói chuyện, tán gẫu",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%97%E3%82%83%E3%81%B9%E3%82%8A"
+  },
+  {
+    "term": "遠慮",
+    "definition": "khách khí, ngại ngần",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%A0%E6%85%AE"
+  },
+  {
+    "term": "我慢",
+    "definition": "chịu đựng, nhẫn nại",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%91%E6%85%A2"
+  },
+  {
+    "term": "迷惑",
+    "definition": "làm phiền, quấy rầy",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%B7%E6%83%91"
+  },
+  {
+    "term": "希望",
+    "definition": "hy vọng, kỳ vọng, khao khát",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B8%8C%E6%9C%9B"
+  },
+  {
+    "term": "夢",
+    "definition": "giấc mơ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A2"
+  },
+  {
+    "term": "賛成",
+    "definition": "tán thành, đồng ý",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%9B%E6%88%90"
+  },
+  {
+    "term": "反対",
+    "definition": "đối ngược, phản đối",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%8D%E5%AF%BE"
+  },
+  {
+    "term": "想像",
+    "definition": "tưởng tượng",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%83%B3%E5%83%8F"
+  },
+  {
+    "term": "努力",
+    "definition": "nỗ lực, sự cố gắng",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%AA%E5%8A%9B"
+  },
+  {
+    "term": "太陽",
+    "definition": "mặt trời, ánh mặt trời",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%AA%E9%99%BD"
+  },
+  {
+    "term": "地球",
+    "definition": "trái đất, địa cầu",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9C%B0%E7%90%83"
+  },
+  {
+    "term": "温度",
+    "definition": "nhiệt độ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%A9%E5%BA%A6"
+  },
+  {
+    "term": "湿度",
+    "definition": "độ ẩm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B9%BF%E5%BA%A6"
+  },
+  {
+    "term": "湿気",
+    "definition": "hơi ẩm, sự ẩm ướt",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B9%BF%E6%B0%97"
+  },
+  {
+    "term": "梅雨",
+    "definition": "mùa mưa",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A2%85%E9%9B%A8"
+  },
+  {
+    "term": "かび",
+    "definition": "nấm mốc",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%B3"
+  },
+  {
+    "term": "暖房",
+    "definition": "điều hòa chế độ làm ấm, máy sưởi ấm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9A%96%E6%88%BF"
+  },
+  {
+    "term": "皮",
+    "definition": "da, vỏ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9A%AE"
+  },
+  {
+    "term": "缶",
+    "definition": "lon",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%BC%B6"
+  },
+  {
+    "term": "画面",
+    "definition": "màn hình, màn ảnh",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%BB%E9%9D%A2"
+  },
+  {
+    "term": "番組",
+    "definition": "chương trình (TV/radio)",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%95%AA%E7%B5%84"
+  },
+  {
+    "term": "記事",
+    "definition": "bài viết, phóng sự",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%98%E4%BA%8B"
+  },
+  {
+    "term": "近所",
+    "definition": "hàng xóm, vùng lân cận",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91%E6%89%80"
+  },
+  {
+    "term": "警察",
+    "definition": "cảnh sát, ngành cảnh sát",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AD%A6%E5%AF%9F"
+  },
+  {
+    "term": "犯人",
+    "definition": "tội phạm, thủ phạm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8A%AF%E4%BA%BA"
+  },
+  {
+    "term": "小銭",
+    "definition": "tiền lẻ, đồng lẻ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%8F%E9%8A%AD"
+  },
+  {
+    "term": "ごちそう",
+    "definition": "chiêu đãi, khao",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%94%E3%81%A1%E3%81%9D%E3%81%86"
+  },
+  {
+    "term": "作者",
+    "definition": "tác giả",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BD%9C%E8%80%85"
+  },
+  {
+    "term": "作品",
+    "definition": "tác phẩm",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BD%9C%E5%93%81"
+  },
+  {
+    "term": "制服",
+    "definition": "đồng phục",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%B6%E6%9C%8D"
+  },
+  {
+    "term": "洗剤",
+    "definition": "chất tẩy rửa",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B4%97%E5%89%A4"
+  },
+  {
+    "term": "底",
+    "definition": "đế, đáy",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%95"
+  },
+  {
+    "term": "地下",
+    "definition": "ngầm, dưới mặt đất",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9C%B0%E4%B8%8B"
+  },
+  {
+    "term": "寺",
+    "definition": "chùa",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AF%BA"
+  },
+  {
+    "term": "道路",
+    "definition": "đại lộ",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%93%E8%B7%AF"
+  },
+  {
+    "term": "坂",
+    "definition": "dốc",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9D%82"
+  },
+  {
+    "term": "煙",
+    "definition": "khói",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%85%99"
+  },
+  {
+    "term": "灰",
+    "definition": "Tàn thuốc lá.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%81%B0"
+  },
+  {
+    "term": "判",
+    "definition": "Đóng dấu vào tài liệu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A4"
+  },
+  {
+    "term": "名刺",
+    "definition": "Trao đổi danh thiếp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%8D%E5%88%BA"
+  },
+  {
+    "term": "免許",
+    "definition": "Để mở nhà hàng cần có chứng chỉ hành nghề đầu bếp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%8D%E8%A8%B1"
+  },
+  {
+    "term": "多く",
+    "definition": "Nhiều quốc gia đã tham gia Thế vận hội.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%9A+%E3%81%8F"
+  },
+  {
+    "term": "前半",
+    "definition": "Phần đầu phim chán lắm nhưng phần sau thì thú vị.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%8D%E5%8D%8A"
+  },
+  {
+    "term": "後半",
+    "definition": "Phần đầu phim chán lắm nhưng phần sau thì thú vị.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%8C%E5%8D%8A"
+  },
+  {
+    "term": "最高",
+    "definition": "Nhiệt độ cao nhất.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%80%E9%AB%98"
+  },
+  {
+    "term": "最低",
+    "definition": "Nhiệt độ thấp nhất .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%80%E4%BD%8E"
+  },
+  {
+    "term": "最初",
+    "definition": "Đầu tiên tôi học Hiragana và sau đó là Katakana.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%80%E5%88%9D"
+  },
+  {
+    "term": "最後",
+    "definition": "\"Những người đến sau hãy đứng phía cuối hàng.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%80%E5%BE%8C"
+  },
+  {
+    "term": "自動",
+    "definition": "Cửa này là tự động nên không cần phải mở bằng tay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E5%8B%95"
+  },
+  {
+    "term": "種類",
+    "definition": "Trong công viên có rất nhiều loại hoa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A8%AE%E9%A1%9E"
+  },
+  {
+    "term": "性格",
+    "definition": "Người ấy có tính cách tốt nên được mọi người yêu quý.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%A7%E6%A0%BC"
+  },
+  {
+    "term": "性質",
+    "definition": "Vải này có tính chất chống cháy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%A7%E8%B3%AA"
+  },
+  {
+    "term": "順番",
+    "definition": "Quyết định thứ tự thuyết trình.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A0%86%E7%95%AA"
+  },
+  {
+    "term": "番",
+    "definition": "Tiếp theo đến lượt của tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%95%AA"
+  },
+  {
+    "term": "方法",
+    "definition": "Tìm kiếm phương pháp hiệu quả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%B9%E6%B3%95"
+  },
+  {
+    "term": "製品",
+    "definition": "Kiểm tra sản phẩm đã hoàn thành.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A3%BD%E5%93%81"
+  },
+  {
+    "term": "値上がり",
+    "definition": "Thực phẩm tăng giá.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%A4%E4%B8%8A+%E3%81%8C%E3%82%8A"
+  },
+  {
+    "term": "生",
+    "definition": "Cá tươi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F"
+  },
+  {
+    "term": "渇く",
+    "definition": "Khát nước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%87+%E3%81%8F"
+  },
+  {
+    "term": "嗅ぐ",
+    "definition": "Ngửi thấy mùi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%97%85+%E3%81%90"
+  },
+  {
+    "term": "叩く",
+    "definition": "Đánh vào mông đứa trẻ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%A9+%E3%81%8F"
+  },
+  {
+    "term": "殴る",
+    "definition": "Đang có vấn đề bởi giáo viên đấm học sinh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%B4+%E3%82%8B"
+  },
+  {
+    "term": "ける",
+    "definition": "Đá bóng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "抱く",
+    "definition": "Ẫm đứa bé bằng hai tay một cách cẩn thận.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%B1+%E3%81%8F"
+  },
+  {
+    "term": "倒れる",
+    "definition": "Do bão nên cây đổ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%92+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "倒す",
+    "definition": "Tôi làm đổ bình hoa và nó vỡ mất rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%92+%E3%81%99"
+  },
+  {
+    "term": "起きる／起こる",
+    "definition": "Hôm nay tôi thức dậy lúc 8 giờ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B5%B7+%E3%81%8D%E3%82%8B%EF%BC%8F+%E8%B5%B7+%E3%81%93%E3%82%8B"
+  },
+  {
+    "term": "起こす",
+    "definition": "Bọn trẻ nhà tôi, sáng có đánh thức chúng thì mãi chúng cũng không dậy cho ngay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B5%B7+%E3%81%93%E3%81%99"
+  },
+  {
+    "term": "尋ねる",
+    "definition": "Hỏi đường đến tòa thị chính với viên cảnh sát tại bốt cảnh sát.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%8B+%E3%81%AD%E3%82%8B"
+  },
+  {
+    "term": "呼ぶ",
+    "definition": "\"Vui lòng trả lời khi được gọi tên\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%91%BC+%E3%81%B6"
+  },
+  {
+    "term": "叫ぶ",
+    "definition": "Dù đã gào thét lớn tiếng nhưng đối phương vẫn đi mất mà không hề biết gì.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%AB+%E3%81%B6"
+  },
+  {
+    "term": "黙る",
+    "definition": "Thầy giáo đặt câu hỏi nhưng tất cả đều im lặng không trả lời.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%BB%99+%E3%82%8B"
+  },
+  {
+    "term": "飼う",
+    "definition": "Tôi muốn nuôi một con vật gì nào đó.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%BC+%E3%81%86"
+  },
+  {
+    "term": "数える",
+    "definition": "Đếm số.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%B0+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "乾く",
+    "definition": "Gió mạnh nên đồ phơi ở ngoài nhanh khô.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B9%BE+%E3%81%8F"
+  },
+  {
+    "term": "乾かす",
+    "definition": "Tôi sấy khô tóc ướt bằng máy sấy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B9%BE+%E3%81%8B%E3%81%99"
+  },
+  {
+    "term": "畳む",
+    "definition": "Gấp đồ đã giặt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%95%B3+%E3%82%80"
+  },
+  {
+    "term": "誘う",
+    "definition": "Tôi đã rủ bạn đi xem phim.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%98+%E3%81%86"
+  },
+  {
+    "term": "おごる",
+    "definition": "Hôm qua tôi đã khao đàn em một bữa thịt nướng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%94%E3%82%8B"
+  },
+  {
+    "term": "預かる",
+    "definition": "Tôi sẽ chăm sóc cho chú chó từ người bạn đi du lịch.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A0%90+%E3%81%8B%E3%82%8B"
+  },
+  {
+    "term": "預ける",
+    "definition": "Gởi tiền vào ngân hàng sẽ sinh lãi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A0%90+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "決まる",
+    "definition": "Ngày về nước đã được quyết định.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%BA+%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "決める",
+    "definition": "\"Nên quyết định sớm học lên hay đi làm.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%BA+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "写る",
+    "definition": "Chiếc máy ảnh này chụp tốt cả những nơi tối.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%99+%E3%82%8B"
+  },
+  {
+    "term": "写す",
+    "definition": "Chụp ảnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%99+%E3%81%99"
+  },
+  {
+    "term": "思い出す",
+    "definition": "Mỗi năm khi mùa xuân đến, tôi lại hồi tưởng về buổi lễ nhập học THPT.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84+%E5%87%BA+%E3%81%99"
+  },
+  {
+    "term": "教わる",
+    "definition": "Tôi được mẹ dạy cách làm món ăn này.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%99+%E3%82%8F%E3%82%8B"
+  },
+  {
+    "term": "申し込む",
+    "definition": "Đăng kí tham gia bữa tiệc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%B3+%E3%81%97+%E8%BE%BC+%E3%82%80"
+  },
+  {
+    "term": "断る",
+    "definition": "Tôi đã từ chối công việc được nhờ vả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%AD+%E3%82%8B"
+  },
+  {
+    "term": "見つかる",
+    "definition": "Đã tìm thấy chiếc nhẫn cứ ngỡ đã mất ở dưới ghế Sofa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%8B+%E3%81%A4%E3%81%8B%E3%82%8B"
+  },
+  {
+    "term": "見つける",
+    "definition": "Đã tìm ra chiếc nhẫn cứ ngỡ đã mất ở dưới ghế Sofa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%8B+%E3%81%A4%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "捕まる",
+    "definition": "Phạm nhân đã bị cảnh sát bắt giữ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8D%95+%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "捕まえる",
+    "definition": "Cảnh sát tóm lấy tên trộm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8D%95+%E3%81%BE%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "乗る",
+    "definition": "Sáng nào tôi cũng lên tàu điện đi đến trường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B9%97+%E3%82%8B"
+  },
+  {
+    "term": "乗せる",
+    "definition": "Cho bọn trẻ lên xe rồi đưa đến trường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B9%97+%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "降りる／下りる",
+    "definition": "Xuống tàu điện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%99%8D+%E3%82%8A%E3%82%8B%EF%BC%8F+%E4%B8%8B+%E3%82%8A%E3%82%8B"
+  },
+  {
+    "term": "降ろす／下ろす",
+    "definition": "(Khách đi Taxi) \"Xin hãy cho tôi xuống trước ngân hàng kia\".",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%99%8D+%E3%82%8D%E3%81%99%EF%BC%8F+%E4%B8%8B+%E3%82%8D%E3%81%99"
+  },
+  {
+    "term": "直る",
+    "definition": "Máy tính cá nhân bị hỏng đã được sửa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B4+%E3%82%8B"
+  },
+  {
+    "term": "直す",
+    "definition": "Sửa đồng hồ bị hỏng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B4+%E3%81%99"
+  },
+  {
+    "term": "治る",
+    "definition": "Mãi mà không khỏi đau đầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%BB+%E3%82%8B"
+  },
+  {
+    "term": "治す",
+    "definition": "\"Hãy nghỉ ngơi thư thái cho nhanh khỏi cảm nhé.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%BB+%E3%81%99"
+  },
+  {
+    "term": "亡くなる",
+    "definition": "Giám đốc mất vào năm 90 tuổi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%A1+%E3%81%8F%E3%81%AA%E3%82%8B"
+  },
+  {
+    "term": "亡くす",
+    "definition": "Anh ấy mất bố khi còn nhỏ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%A1+%E3%81%8F%E3%81%99"
+  },
+  {
+    "term": "生まれる",
+    "definition": "Đứa trẻ được sinh ra vào tháng trước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F+%E3%81%BE%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "産む生む",
+    "definition": "Cách đây vài ngày, vợ tôi đã sinh ra một bé gái khỏe mạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%A3+%E3%82%80+%E7%94%9F+%E3%82%80"
+  },
+  {
+    "term": "出会う",
+    "definition": "Ở nhà ga, tôi tình cờ gặp người bạn thời đại học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E4%BC%9A+%E3%81%86"
+  },
+  {
+    "term": "訪ねる",
+    "definition": "Đến thăm nhà bạn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%AA+%E3%81%AD%E3%82%8B"
+  },
+  {
+    "term": "付き合う",
+    "definition": "Giữ mối quan hệ thân thiết với nhà bên cạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%98+%E3%81%8D+%E5%90%88+%E3%81%86"
+  },
+  {
+    "term": "効く",
+    "definition": "Thuốc này rất hiệu quả cho người bị đau đầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%B9+%E3%81%8F"
+  },
+  {
+    "term": "はやる",
+    "definition": "Mùa đông này màu đỏ rất thịnh hành.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AF%E3%82%84%E3%82%8B"
+  },
+  {
+    "term": "経つ",
+    "definition": "Đã đến Nhật được 10 năm rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%8C+%E3%81%A4"
+  },
+  {
+    "term": "間に合う",
+    "definition": "Xe điện đến muộn, nhưng mà chạy từ ga nên vừa kịp giờ học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93+%E3%81%AB+%E5%90%88+%E3%81%86"
+  },
+  {
+    "term": "間に合わせる",
+    "definition": "Tôi đã cố gắng hoàn thành bản báo cáo đúng thời hạn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93+%E3%81%AB+%E5%90%88+%E3%82%8F%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "通う",
+    "definition": "Đi học / đi làm / đi viện…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%81%86"
+  },
+  {
+    "term": "込む",
+    "definition": "{ Xe điện / cửa hàng / đường ...} đông đúc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BE%BC+%E3%82%80"
+  },
+  {
+    "term": "すれ違う",
+    "definition": "Con đường này hẹp nên ô tô ngược hướng khó đi ngang qua nhau.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%82%8C+%E9%81%95+%E3%81%86"
+  },
+  {
+    "term": "掛かる",
+    "definition": "Hình như món rau trộn này không cho bất kỳ cái gì lên trên cả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8E%9B+%E3%81%8B%E3%82%8B"
+  },
+  {
+    "term": "掛ける",
+    "definition": "Cho vài giọt nước tương lên món ăn rồi ăn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8E%9B+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "動く",
+    "definition": "\"Tôi sẽ chụp ảnh nên đừng cử động.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%95+%E3%81%8F"
+  },
+  {
+    "term": "動かす",
+    "definition": "Bị thương rất nặng nên việc cử động cơ thể cũng không thể làm được.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%95+%E3%81%8B%E3%81%99"
+  },
+  {
+    "term": "離れる",
+    "definition": "\"Vì nguy hiểm nên hãy chơi tranh xa khu vực lò sưởi ra!\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9B%A2+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "離す",
+    "definition": "Khi kiểm tra thì xếp bàn cách xa nhau.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9B%A2+%E3%81%99"
+  },
+  {
+    "term": "ぶつかる",
+    "definition": "Tôi bị thương bởi va chạm với chiếc xe đạp trên đường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B6%E3%81%A4%E3%81%8B%E3%82%8B"
+  },
+  {
+    "term": "ぶつける",
+    "definition": "Đang lái xe thì ô tô tông chạm mạnh vào cột điện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B6%E3%81%A4%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "こぼれる",
+    "definition": "Tay run rẩy nên nước trà tràn ra ngoài.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%93%E3%81%BC%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "こぼす",
+    "definition": "Làm đổ cốc nên làm nước tràn ra ngoài.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%93%E3%81%BC%E3%81%99"
+  },
+  {
+    "term": "ふく",
+    "definition": "Lau mồ hôi .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B5%E3%81%8F"
+  },
+  {
+    "term": "片付く",
+    "definition": "Sau khi tổng vệ sinh, cuối cùng phòng ốc căn cũng được dọn dẹp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%87%E4%BB%98+%E3%81%8F"
+  },
+  {
+    "term": "片付ける",
+    "definition": "Dọn dẹp phía trên mặt bàn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%87%E4%BB%98+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "包む",
+    "definition": "Gói quà bằng giấy đẹp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8C%85+%E3%82%80"
+  },
+  {
+    "term": "張る",
+    "definition": "Dán áp phích lên tường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%B5+%E3%82%8B"
+  },
+  {
+    "term": "無くなる",
+    "definition": "Chìa khóa căn phòng đã bị mất rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%84%A1+%E3%81%8F%E3%81%AA%E3%82%8B"
+  },
+  {
+    "term": "無くす",
+    "definition": "Tôi đã làm mất hộ chiếu nên giờ không biết phải làm sao nữa đây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%84%A1+%E3%81%8F%E3%81%99"
+  },
+  {
+    "term": "足りる",
+    "definition": "Với thu nhập này thì hoàn toàn không đủ sống.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%B3+%E3%82%8A%E3%82%8B"
+  },
+  {
+    "term": "残る",
+    "definition": "Làm quá nhiều đồ ăn nên vẫn còn lại khá nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%8B+%E3%82%8B"
+  },
+  {
+    "term": "残す",
+    "definition": "Tôi đã để thừa cơm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%8B+%E3%81%99"
+  },
+  {
+    "term": "腐る",
+    "definition": "Ăn phải đồ thiu nên bị đau bụng mất rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%85%90+%E3%82%8B"
+  },
+  {
+    "term": "むける",
+    "definition": "Da ở lưng bị bong tróc do bị cháy nắng ở biển.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%80%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "むく",
+    "definition": "Bóc vỏ trái cây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%80%E3%81%8F"
+  },
+  {
+    "term": "滑る",
+    "definition": "Sân trượt băng mới thật sạch đẹp, có thể trượt băng vui vẻ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BB%91+%E3%82%8B"
+  },
+  {
+    "term": "積もる",
+    "definition": "Tuyết rơi vào hôm qua tích lại nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%8D+%E3%82%82%E3%82%8B"
+  },
+  {
+    "term": "積む",
+    "definition": "Có rất nhiều sách chồng chất lên nhau trên bàn làm việc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%8D+%E3%82%80"
+  },
+  {
+    "term": "空く",
+    "definition": "Có lỗ hổng ở tất.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%BA+%E3%81%8F"
+  },
+  {
+    "term": "空ける",
+    "definition": "Khoan lỗ trên tường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%BA+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "下がる",
+    "definition": "Hạ sốt / nhiệt độ giảm / giá giảm / thành tích đi xuống…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8B+%E3%81%8C%E3%82%8B"
+  },
+  {
+    "term": "下げる",
+    "definition": "Hạ sốt / hạ nhiệt độ / hạ giá / hạ thành tích…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8B+%E3%81%92%E3%82%8B"
+  },
+  {
+    "term": "冷える",
+    "definition": "Ở chỗ lạnh lâu nên chân tay lạnh ngắt luôn rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%B7+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "冷やす",
+    "definition": "Trái cây này thì làm lạnh ăn sẽ ngon hơn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%B7+%E3%82%84%E3%81%99"
+  },
+  {
+    "term": "冷める",
+    "definition": "Món ăn này mà nguội đi sẽ không ngon.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%B7+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "冷ます",
+    "definition": "Nước nóng trong bồn tắm nóng quá. Hãy để nguội một chút rồi vào tắm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%B7+%E3%81%BE%E3%81%99"
+  },
+  {
+    "term": "燃える",
+    "definition": "{ Lửa / giấy ...} cháy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%87%83+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "燃やす",
+    "definition": "Đốt lửa / đốt giấy…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%87%83+%E3%82%84%E3%81%99"
+  },
+  {
+    "term": "沸く",
+    "definition": "Nước sôi / bồn tắm sẵn sàng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%B8+%E3%81%8F"
+  },
+  {
+    "term": "沸かす",
+    "definition": "Đun sôi nước / chuẩn bị bồn tắm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%B8+%E3%81%8B%E3%81%99"
+  },
+  {
+    "term": "鳴る",
+    "definition": "Tiếng sấm vang vọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%B3%B4+%E3%82%8B"
+  },
+  {
+    "term": "鳴らす",
+    "definition": "Bấm chuông điện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%B3%B4+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "役立つ/役に立つ",
+    "definition": "Thông tin trên Internet rất hữu ích cho học tập cũng như công việc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%B9%E7%AB%8B+%E3%81%A4%2F+%E5%BD%B9+%E3%81%AB+%E7%AB%8B+%E3%81%A4"
+  },
+  {
+    "term": "役立てる/役に立てる",
+    "definition": "Sử dụng thông tin trên Internet để giúp ích cho học tập cũng như công việc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%B9%E7%AB%8B+%E3%81%A6%E3%82%8B%2F+%E5%BD%B9+%E3%81%AB+%E7%AB%8B+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "幸せな",
+    "definition": "Sống hạnh phúc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B8+%E3%81%9B%E3%81%AA"
+  },
+  {
+    "term": "得意な",
+    "definition": "Cô ấy giỏi về {đàn guitar / viết văn / nấu ăn...}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%97%E6%84%8F+%E3%81%AA"
+  },
+  {
+    "term": "苦手な",
+    "definition": "Cô ấy không giỏi { đàn guitar / viết văn / nấu ăn ...}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%8B%A6%E6%89%8B+%E3%81%AA"
+  },
+  {
+    "term": "熱心な",
+    "definition": "Được ghi nhận sự nhiệt tình trong công việc và được thăng chức.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%86%B1%E5%BF%83+%E3%81%AA"
+  },
+  {
+    "term": "夢中な",
+    "definition": "Hồi còn nhỏ, tôi say mê truyện tranh SF.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A2%E4%B8%AD+%E3%81%AA"
+  },
+  {
+    "term": "退屈な",
+    "definition": "Các khán giả khác vừa xem vừa cười, nhưng đó là một bộ phim nhàm chán đối với tôi .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%80%E5%B1%88+%E3%81%AA"
+  },
+  {
+    "term": "健康な",
+    "definition": "Tôi muốn nuôi dạy con khỏe mạnh cả thể chất lẫn tinh thần.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%81%A5%E5%BA%B7+%E3%81%AA"
+  },
+  {
+    "term": "苦しい",
+    "definition": "Hơi thở khó nhọc/ tức ngực/ khó chịu ở tim/ cuộc sống khổ cực…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%8B%A6+%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "平気な",
+    "definition": "Dù cho bị nói xấu đến mức nào thì, cô ấy vẫn luôn tỏ ra khuôn mặt bình tĩnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B3%E6%B0%97+%E3%81%AA"
+  },
+  {
+    "term": "悔しい",
+    "definition": "Cảm thấy tiếc nuối vì dù luyện tập bao nhiêu vẫn không giỏi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%82%94+%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "うらやましい",
+    "definition": "Ghen tị với người có nhiều tài năng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%82%89%E3%82%84%E3%81%BE%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "かゆい",
+    "definition": "Cổ tôi bị ngứa do muỗi cắn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%82%86%E3%81%84"
+  },
+  {
+    "term": "おとなしい",
+    "definition": "Anh ấy là một người trầm tính.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%A8%E3%81%AA%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "我慢強い",
+    "definition": "Tiính cách nhẫn nạn, chịu đựng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%91%E6%85%A2%E5%BC%B7+%E3%81%84"
+  },
+  {
+    "term": "正直な",
+    "definition": "Anh ấy là người trung thực nên anh ấy không biết nói dối đâu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AD%A3%E7%9B%B4+%E3%81%AA"
+  },
+  {
+    "term": "けちな",
+    "definition": "Người đó rất keo kiệt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%91%E3%81%A1%E3%81%AA"
+  },
+  {
+    "term": "わがままな",
+    "definition": "Người ích kỷ, tính cách ích kỷ, hành động ích kỷ…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%8F%E3%81%8C%E3%81%BE%E3%81%BE%E3%81%AA"
+  },
+  {
+    "term": "積極的な",
+    "definition": "{Người / cá tính / hành vi ...} mang tính tích cực.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%8D%E6%A5%B5%E7%9A%84+%E3%81%AA"
+  },
+  {
+    "term": "消極的な",
+    "definition": "Con người thụ động/ tính cách tiêu cực…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B6%88%E6%A5%B5%E7%9A%84+%E3%81%AA"
+  },
+  {
+    "term": "満足な",
+    "definition": "Chỉ làm thêm thôi thì không thể nhận mức lương ưng ý được.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BA%80%E8%B6%B3+%E3%81%AA"
+  },
+  {
+    "term": "不満な",
+    "definition": "Tôi không có điểm nào để chê về công việc này cả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E6%BA%80+%E3%81%AA"
+  },
+  {
+    "term": "不安な",
+    "definition": "Thời gian gần đây, tình trạng cơ thể không tốt. Tôi đang lo không biết có bệnh gì xấu không.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E5%AE%89+%E3%81%AA"
+  },
+  {
+    "term": "大変な",
+    "definition": "Người mẹ vất vả trong quá trình nuôi dạy con cái.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E5%A4%89+%E3%81%AA"
+  },
+  {
+    "term": "無理な",
+    "definition": "Xây nhà chỉ với 100 vạn yên thật là câu chuyện vô lý.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%84%A1%E7%90%86+%E3%81%AA"
+  },
+  {
+    "term": "不注意な",
+    "definition": "Người cẩu thả (mất tập trung).",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E6%B3%A8%E6%84%8F+%E3%81%AA"
+  },
+  {
+    "term": "楽な",
+    "definition": "Muốn sống một cuộc sống an nhàn hơn chút nữa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A5%BD+%E3%81%AA"
+  },
+  {
+    "term": "面倒な",
+    "definition": "\"Khi nhập hội thì không cần làm mấy thủ tục rắc rối đâu\" .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9D%A2%E5%80%92+%E3%81%AA"
+  },
+  {
+    "term": "失礼な",
+    "definition": "Chào hỏi rồi mà không thèm trả lời. Đúng là người vô lễ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%B1%E7%A4%BC+%E3%81%AA"
+  },
+  {
+    "term": "当然な",
+    "definition": "Nếu mượn tiền thì đương nhiên phải trả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93%E7%84%B6+%E3%81%AA"
+  },
+  {
+    "term": "意外な",
+    "definition": "Trong khi điều tra vụ tai nạn tôi đã biết sự thật bất ngờ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%8F%E5%A4%96+%E3%81%AA"
+  },
+  {
+    "term": "結構な",
+    "definition": "\"Mùi vị thế nào\" \"Rất ngon.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%90%E6%A7%8B+%E3%81%AA"
+  },
+  {
+    "term": "派手な",
+    "definition": "{người / tính cách / quần áo / trang điểm / thiết kế / cuộc sống ...} đồng bóng, màu mè, phong cách, hào nhoáng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B4%BE%E6%89%8B+%E3%81%AA"
+  },
+  {
+    "term": "地味な",
+    "definition": "{người / cá / quần áo / trang điểm / thiết kế / cuộc sống ...} giản dị.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9C%B0%E5%91%B3+%E3%81%AA"
+  },
+  {
+    "term": "おしゃれな",
+    "definition": "Cô ấy ăn mặc rất thời trang.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%97%E3%82%83%E3%82%8C%E3%81%AA"
+  },
+  {
+    "term": "変な",
+    "definition": "Có mail lạ gửi đến nên tôi đã xóa ngay rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89+%E3%81%AA"
+  },
+  {
+    "term": "不思議な",
+    "definition": "Ở làng này truyền tai nhau một câu chuyện kì lạ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E6%80%9D%E8%AD%B0+%E3%81%AA"
+  },
+  {
+    "term": "ましな",
+    "definition": "Ho nhiều nhưng khi súc miệng thì đã đỡ hơn trước rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%97%E3%81%AA"
+  },
+  {
+    "term": "むだな",
+    "definition": "Dù biết là trượt mà vẫn dự thi thì thật là vô ích.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%80%E3%81%A0%E3%81%AA"
+  },
+  {
+    "term": "自由な",
+    "definition": "Vì có em bé nên hầu như không có thời gian rảnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E7%94%B1+%E3%81%AA"
+  },
+  {
+    "term": "不自由な",
+    "definition": "Người {khiếm thị/khiếm thính/tàn tật chân/tàn tật…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E8%87%AA%E7%94%B1+%E3%81%AA"
+  },
+  {
+    "term": "世話",
+    "definition": "Ở nhà việc chăm sóc thú nuôi là công việc của tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%96%E8%A9%B1"
+  },
+  {
+    "term": "家庭",
+    "definition": "Trưởng phòng Tanaka là một người nghiêm khắc khi làm việc nhưng nghe nói ở nhà ngài ấy lại là một người cha dễ tính.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%B6%E5%BA%AD"
+  },
+  {
+    "term": "協力",
+    "definition": "Gia đình cùng đồng lòng chăm sóc bà.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8D%94%E5%8A%9B"
+  },
+  {
+    "term": "感謝",
+    "definition": "Tôi rất biết ơn tiền bối đã cho tôi lời khuyên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E8%AC%9D"
+  },
+  {
+    "term": "（お）礼",
+    "definition": "Tôi đã tạ ơn người đã giúp đỡ tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89+%E7%A4%BC"
+  },
+  {
+    "term": "（お）詫び",
+    "definition": "Tôi đã xin lỗi người mà tôi gây rắc rối.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89+%E8%A9%AB+%E3%81%B3"
+  },
+  {
+    "term": "（お）じぎ",
+    "definition": "\"Hãy lễ phép cúi chào khách hàng.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89%E3%81%98%E3%81%8E"
+  },
+  {
+    "term": "握手",
+    "definition": "Tôi đã bắt tay với ca sĩ ở buổi hòa nhạc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%A1%E6%89%8B"
+  },
+  {
+    "term": "意地悪",
+    "definition": "Tôi đã lỡ làm đứa bé tôi thích giận mất rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%8F%E5%9C%B0%E6%82%AA"
+  },
+  {
+    "term": "いたずら",
+    "definition": "Tôi nghịch ngợm và bị thầy mắng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%9F%E3%81%9A%E3%82%89"
+  },
+  {
+    "term": "節約",
+    "definition": "Tiết kiệm phí sinh hoạt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AF%80%E7%B4%84"
+  },
+  {
+    "term": "経営",
+    "definition": "Bố tôi đang quản lí một siêu thị.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%8C%E5%96%B6"
+  },
+  {
+    "term": "反省",
+    "definition": "Tôi viết nhật kí xem sét lại những việc đã làm trong 1 ngày.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%8D%E7%9C%81"
+  },
+  {
+    "term": "実行",
+    "definition": "Kế hoạch này thực hiện rất khó.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F%E8%A1%8C"
+  },
+  {
+    "term": "進歩",
+    "definition": "Tôi đang học tiếng Anh nhưng không tiến bộ mấy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2%E6%AD%A9"
+  },
+  {
+    "term": "変化",
+    "definition": "Sự thay đổi lớn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89%E5%8C%96"
+  },
+  {
+    "term": "通訳",
+    "definition": "Phiên dịch tiếng Anh sang tiếng Nhật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A%E8%A8%B3"
+  },
+  {
+    "term": "翻訳",
+    "definition": "Dịch tiểu thuyết tiếng Nhật sang tiếng Anh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%BF%BB%E8%A8%B3"
+  },
+  {
+    "term": "伝言",
+    "definition": "Để lại lời nhắn trong hộp thư thoại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D%E8%A8%80"
+  },
+  {
+    "term": "報告",
+    "definition": "Báo cáo công tác.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A0%B1%E5%91%8A"
+  },
+  {
+    "term": "録画",
+    "definition": "Ghi lại thành video chương trình trên tivi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%8C%B2%E7%94%BB"
+  },
+  {
+    "term": "混雑",
+    "definition": "Cửa hàng bách hóa tổng hợp đang hỗn loạn vì đám đông.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7%E9%9B%91"
+  },
+  {
+    "term": "渋滞",
+    "definition": "Vì tắc đường nên tôi đến trễ cuộc họp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%8B%E6%BB%9E"
+  },
+  {
+    "term": "衝突",
+    "definition": "Tôi đã chứng kiến cảnh va chạm của xe điện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%9D%E7%AA%81"
+  },
+  {
+    "term": "被害",
+    "definition": "Thiệt hại do bão.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A2%AB%E5%AE%B3"
+  },
+  {
+    "term": "事故",
+    "definition": "Điều tra nguyên nhân của tai nạn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%8B%E6%95%85"
+  },
+  {
+    "term": "事件",
+    "definition": "Khu vực gần đây liên tục xảy ra các vụ mất tích trẻ con.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%8B%E4%BB%B6"
+  },
+  {
+    "term": "故障",
+    "definition": "Vì máy giặt bị hỏng nên mang đồ đi giặt ở tiệm giặt tự động.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%85%E9%9A%9C"
+  },
+  {
+    "term": "修理",
+    "definition": "Máy tính bị hỏng nên tôi mang đi sửa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%AE%E7%90%86"
+  },
+  {
+    "term": "停電",
+    "definition": "Sét đánh xuống rồi mất điện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%81%9C%E9%9B%BB"
+  },
+  {
+    "term": "調子",
+    "definition": "{Tình trạng cơ thể/ máy móc... } tốt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%BF%E5%AD%90"
+  },
+  {
+    "term": "緊張",
+    "definition": "Lúc phỏng vấn vì căng thẳng nên tôi không thể trả lời trôi chảy được.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B7%8A%E5%BC%B5"
+  },
+  {
+    "term": "自信",
+    "definition": "Tự tin vào thể lực.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E4%BF%A1"
+  },
+  {
+    "term": "自慢",
+    "definition": "Làm món tủ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E6%85%A2"
+  },
+  {
+    "term": "感心",
+    "definition": "Tôi ngưỡng mộ sự tiến bộ nhanh chóng của Chin.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E5%BF%83"
+  },
+  {
+    "term": "感動",
+    "definition": "Xem Paralymic, tôi đã rất xúc động/ làm tôi thấy xúc động (paralympic là đại hôi thể thao người khuyết tật).",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E5%8B%95"
+  },
+  {
+    "term": "興奮",
+    "definition": "Khán giả xem trận đấu hưng phấn và reo hò ầm ĩ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%88%88%E5%A5%AE"
+  },
+  {
+    "term": "感想",
+    "definition": "Bạn cảm thấy thế nào? Rất tuyệt vời.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E6%83%B3"
+  },
+  {
+    "term": "予想",
+    "definition": "Dự đoán kết quả bầu cử.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%88%E6%83%B3"
+  },
+  {
+    "term": "専門",
+    "definition": "Chuyên môn của tôi là ngôn ngữ học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%82%E9%96%80"
+  },
+  {
+    "term": "研究",
+    "definition": "Tôi đang nghiên cứu chính trị Nhật Bản ở trường đại học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%94%E7%A9%B6"
+  },
+  {
+    "term": "調査",
+    "definition": "Tiến hành điều tra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%BF%E6%9F%BB"
+  },
+  {
+    "term": "原因",
+    "definition": "Bây giờ cảnh sát đang điều tra nguyên nhân của vụ tai nạn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8E%9F%E5%9B%A0"
+  },
+  {
+    "term": "結果",
+    "definition": "Tôi muốn vị trí số 1 nhưng kết quả đạt được vị trí thứ 3.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%90%E6%9E%9C"
+  },
+  {
+    "term": "解決",
+    "definition": "Vấn đề lớn được giải quyết.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3%E6%B1%BA"
+  },
+  {
+    "term": "確認",
+    "definition": "Kiểm tra lại xem có lỗi sai không.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA%E8%AA%8D"
+  },
+  {
+    "term": "利用",
+    "definition": "Vì thiếu nước nên phải giảm thiểu việc sử dụng nước sinh hoạt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A9%E7%94%A8"
+  },
+  {
+    "term": "理解",
+    "definition": "Hiểu rõ ý nghĩa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%90%86%E8%A7%A3"
+  },
+  {
+    "term": "発見",
+    "definition": "Phát kiến lớn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%BA%E8%A6%8B"
+  },
+  {
+    "term": "発明",
+    "definition": "Bell đã phát minh ra điện thoại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%BA%E6%98%8E"
+  },
+  {
+    "term": "関係",
+    "definition": "Quan hệ của hai người là (cha/ con; anh/ em…).",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%A2%E4%BF%82"
+  },
+  {
+    "term": "団体",
+    "definition": "Tôi mua vé theo nhóm vào tham quan viện bảo tàng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%A3%E4%BD%93"
+  },
+  {
+    "term": "選挙",
+    "definition": "Tháng 1 bầu cử sẽ được tiến hành.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%B8%E6%8C%99"
+  },
+  {
+    "term": "税金",
+    "definition": "Trả tiền thuế vào cuối năm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A8%8E%E9%87%91"
+  },
+  {
+    "term": "責任",
+    "definition": "\"Thất bại này không phải là trách nhiệm của bạn.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B2%AC%E4%BB%BB"
+  },
+  {
+    "term": "書類",
+    "definition": "Chuẩn bị giấy tờ cần thiết để làm thủ tục du học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B8%E9%A1%9E"
+  },
+  {
+    "term": "題名",
+    "definition": "Đặt tên cho tác phẩm tham gia cuộc thi âm nhạc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A1%8C%E5%90%8D"
+  },
+  {
+    "term": "条件",
+    "definition": "Điều kiện tuyển dụng là phải có bằng lái xe.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9D%A1%E4%BB%B6"
+  },
+  {
+    "term": "締め切り",
+    "definition": "Ngày 30 là hạn cuối nộp báo cáo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B7%A0+%E3%82%81+%E5%88%87+%E3%82%8A"
+  },
+  {
+    "term": "期間",
+    "definition": "Thời hạn đăng kí/ đóng cửa/ thicông xây dựng... là ngày 1 đến ngày 3 tháng 12.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%9F%E9%96%93"
+  },
+  {
+    "term": "倍",
+    "definition": "Giá tăng lên gấp đôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%8D"
+  },
+  {
+    "term": "くじ",
+    "definition": "Đi mua đồ ở siêu thị, sau khi rút thăm trúng thưởng thì đã trúng được cái tivi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8F%E3%81%98"
+  },
+  {
+    "term": "近道",
+    "definition": "Đến nhà ga thông qua đường tắt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91%E9%81%93"
+  },
+  {
+    "term": "中心",
+    "definition": "Trung tâm thành phố.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%AD%E5%BF%83"
+  },
+  {
+    "term": "辺り",
+    "definition": "Nhìn xung quanh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BE%BA+%E3%82%8A"
+  },
+  {
+    "term": "周り/回り",
+    "definition": "Đi bộ xung quanh ao.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%91%A8+%E3%82%8A%2F+%E5%9B%9E+%E3%82%8A"
+  },
+  {
+    "term": "穴",
+    "definition": "Đào một cái lỗ trên mặt đất.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%B4"
+  },
+  {
+    "term": "列",
+    "definition": "Có một hàng dài trước cổng vào.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%97"
+  },
+  {
+    "term": "幅",
+    "definition": "Chiều rộng của con đường này rộng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%85"
+  },
+  {
+    "term": "範囲",
+    "definition": "Phạm vi bài thi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AF%84%E5%9B%B2"
+  },
+  {
+    "term": "内容",
+    "definition": "Nội dung {cuộc nói chuyện / bài giảng/ sách/ bảng tin…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%85%E5%AE%B9"
+  },
+  {
+    "term": "中身",
+    "definition": "Mở hộp xem bên trong.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%AD%E8%BA%AB"
+  },
+  {
+    "term": "特徴",
+    "definition": "Kiểm định lại những đặc tính của sản phẩm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%B9%E5%BE%B4"
+  },
+  {
+    "term": "普通",
+    "definition": "Việc xin hộ chiếu thông thường mất một tuần.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%99%AE%E9%80%9A"
+  },
+  {
+    "term": "当たり前",
+    "definition": "Nếu bị chơi xấu như thế thì nổi giận là chuyện đương nhiên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%9F%E3%82%8A+%E5%89%8D"
+  },
+  {
+    "term": "偽",
+    "definition": "Bị nhân viên ngân hàng giả mạo lừa lấy hết tiền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%81%BD"
+  },
+  {
+    "term": "別",
+    "definition": "Gạo khác với cơm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A5"
+  },
+  {
+    "term": "国籍",
+    "definition": "Tôi cư trú ở Mỹ nhưng quốc tịch Nhật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E7%B1%8D"
+  },
+  {
+    "term": "東洋",
+    "definition": "So sánh văn hóa phương Đông và phương Tây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9D%B1%E6%B4%8B"
+  },
+  {
+    "term": "西洋",
+    "definition": "So sánh văn hóa phương Đông và văn hóa phương Tây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A5%BF%E6%B4%8B"
+  },
+  {
+    "term": "国際",
+    "definition": "Vấn đề ở chi nhánh nước ngoài của xí nghiệp Nhật Bản đã phát triển thành vấn đề quốc tế.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E9%9A%9B"
+  },
+  {
+    "term": "自然",
+    "definition": "Đi núi đi biển để hòa mình trong thiên nhiên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E7%84%B6"
+  },
+  {
+    "term": "景色",
+    "definition": "Lần đầu tiên đi chơi núi của Nhật Bản, phong cảnh đẹp tuyệt vời.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%99%AF%E8%89%B2"
+  },
+  {
+    "term": "宗教",
+    "definition": "Trên thế giới có rất nhiều tôn giáo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%97%E6%95%99"
+  },
+  {
+    "term": "愛",
+    "definition": "Tôi yêu {gia đình/ tự nhiên/ đất nước…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9B"
+  },
+  {
+    "term": "届く",
+    "definition": "Bức thư của bố được giao đến.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B1%8A+%E3%81%8F"
+  },
+  {
+    "term": "届ける",
+    "definition": "Giao quà du lịch đến nhà bên cạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B1%8A+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "かく",
+    "definition": "Gãi đầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%8F"
+  },
+  {
+    "term": "つかむ",
+    "definition": "Ở trên tàu bỗng nhiên tay bị ai đó nắm cánh tay, giật hết cả mình.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%8B%E3%82%80"
+  },
+  {
+    "term": "握る",
+    "definition": "Đứa trẻ tỏ vẻ sợ hãi nắm chặt lấy tay mẹ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%A1+%E3%82%8B"
+  },
+  {
+    "term": "押さえる",
+    "definition": "Người kia cứ ngồi ôm bụng. Chắc có vẻ đau bụng thì phải.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%BC+%E3%81%95%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "近づく",
+    "definition": "Dần tiến gần địa điểm đích.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91+%E3%81%A5%E3%81%8F"
+  },
+  {
+    "term": "近づける",
+    "definition": "Lái xe tiến vào gần đoạn rẽ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91+%E3%81%A5%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "合う",
+    "definition": "Bất chợt ngẩng mặt lên thì gặp ánh mắt giáo viên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88+%E3%81%86"
+  },
+  {
+    "term": "合わせる",
+    "definition": "Mọi người cùng chung sức cố gắng nhé.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88+%E3%82%8F%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "当たる",
+    "definition": "Quả bóng này đập vào cái cửa sổ thế là kính vỡ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%9F%E3%82%8B"
+  },
+  {
+    "term": "当てる",
+    "definition": "Vì bóng của đối phương rất nhanh nên đỡ trúng là rất khó.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "比べる",
+    "definition": "So sánh diện tích của Tokyo và Osaka.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AF%94+%E3%81%B9%E3%82%8B"
+  },
+  {
+    "term": "似合う",
+    "definition": "Cô ấy rất hợp với kimono.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC%E5%90%88+%E3%81%86"
+  },
+  {
+    "term": "似る",
+    "definition": "Cô ấy rất giống mẹ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC+%E3%82%8B"
+  },
+  {
+    "term": "似せる",
+    "definition": "Bắt chước kiểu tóc của thần tượng .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC+%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "分かれる",
+    "definition": "Vệ sinh của nam và nữ thì được phân chia tách biệt ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%86+%E3%81%8B%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "分ける",
+    "definition": "Phân chia tài sản cho ba người con.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%86+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "足す",
+    "definition": "Món ăn này hơi nhạt nên cho thêm muối vào.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%B3+%E3%81%99"
+  },
+  {
+    "term": "引く",
+    "definition": "Mở cửa này không phải đẩy vào mà kéo ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%95+%E3%81%8F"
+  },
+  {
+    "term": "増える",
+    "definition": "{Tiền tiết kiệm/ cân nặng/ số dân…} tăng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A2%97+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "増やす",
+    "definition": "Tăng {tiền tiết kiệm/ cân nặng / dân số…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A2%97+%E3%82%84%E3%81%99"
+  },
+  {
+    "term": "減る",
+    "definition": "Giảm {tiền tiết kiệm/ cân nặng/ dân số…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%9B+%E3%82%8B"
+  },
+  {
+    "term": "減らす",
+    "definition": "Làm giảm {tiền tiêt kiệm/ cân nặng/ dân số…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%9B+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "変わる",
+    "definition": "{Thời tiết/ thời đại/ địa điểm/ luật pháp/ tính cách…} thay đổi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89+%E3%82%8F%E3%82%8B"
+  },
+  {
+    "term": "変える",
+    "definition": "Thay đổi {kiểu tóc/ thời gian/ địa điểm/ luật pháp…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "替わる/代わる/換わる",
+    "definition": "Thay quản lí mới vào tháng 4.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%BF+%E3%82%8F%E3%82%8B%2F+%E4%BB%A3+%E3%82%8F%E3%82%8B%2F+%E6%8F%9B+%E3%82%8F%E3%82%8B"
+  },
+  {
+    "term": "替える/代える/換える",
+    "definition": "Tôi muốn đổi tờ nghìn yên qua đồng xu 100 yên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%BF+%E3%81%88%E3%82%8B%2F+%E4%BB%A3+%E3%81%88%E3%82%8B%2F+%E6%8F%9B+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "返る",
+    "definition": "Tiền cho bạn vay đã được trả lại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%94+%E3%82%8B"
+  },
+  {
+    "term": "返す",
+    "definition": "Trong vòng hai tuần phải trả lại sách cho thư viện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%94+%E3%81%99"
+  },
+  {
+    "term": "譲る",
+    "definition": "Trong xe điện tôi đã nhường ghế cho cụ già.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AD%B2+%E3%82%8B"
+  },
+  {
+    "term": "助かる",
+    "definition": "Máy bay rơi, có ba người sống sót.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%A9+%E3%81%8B%E3%82%8B"
+  },
+  {
+    "term": "助ける",
+    "definition": "Cứu đứa trẻ bị rơi xuống sông.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%A9+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "いじめる",
+    "definition": "Bắt nạt em, bắt nạt con mèo….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%98%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "だます",
+    "definition": "Anh ta nói dối rằng độc thân và cặp kè cùng lúc 5 cô gái.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A0%E3%81%BE%E3%81%99"
+  },
+  {
+    "term": "盗む",
+    "definition": "Khi vắng nhà thì bị kẻ trộm lẻn vào, lấy cắp mất tiền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%97+%E3%82%80"
+  },
+  {
+    "term": "刺さる",
+    "definition": "Gai đâm vào ngón tay đau quá.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%BA+%E3%81%95%E3%82%8B"
+  },
+  {
+    "term": "刺す",
+    "definition": "Đâm gai vào ngón tay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%BA+%E3%81%99"
+  },
+  {
+    "term": "殺す",
+    "definition": "Dùng dép đập chết con gián.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%BA+%E3%81%99"
+  },
+  {
+    "term": "隠れる",
+    "definition": "Tên tội phạm bỏ chạy đang ẩn núp trong ngôi nhà hoang.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9A%A0+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "隠す",
+    "definition": "Giấu tiền sâu bên trong ngăn kéo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9A%A0+%E3%81%99"
+  },
+  {
+    "term": "埋まる",
+    "definition": "Núi lở, nhà cửa bị chôn vùi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%8B+%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "埋める",
+    "definition": "Đào lỗ rồi chôn rác.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%8B+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "囲む",
+    "definition": "Ngồi quanh bàn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%B2+%E3%82%80"
+  },
+  {
+    "term": "詰まる",
+    "definition": "Hành lí chất đầy trong cặp nặng thật .",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B0+%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "詰める",
+    "definition": "Nhét đầy đồ vào cặp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B0+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "開く",
+    "definition": "Mở cửa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%8B+%E3%81%8F"
+  },
+  {
+    "term": "閉じる",
+    "definition": "Đóng cửa thang máy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%89+%E3%81%98%E3%82%8B"
+  },
+  {
+    "term": "飛ぶ",
+    "definition": "Chim đang bay trên bầu trời.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%9B+%E3%81%B6"
+  },
+  {
+    "term": "飛ばす",
+    "definition": "Phóng máy bay giấy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%9B+%E3%81%B0%E3%81%99"
+  },
+  {
+    "term": "振る",
+    "definition": "Vẫy tay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8C%AF+%E3%82%8B"
+  },
+  {
+    "term": "めくる",
+    "definition": "Lật {card/ trang/ lịch…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%81%E3%81%8F%E3%82%8B"
+  },
+  {
+    "term": "見かける",
+    "definition": "Tình cờ gặp bạn cũ trên phố.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%8B+%E3%81%8B%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "確かめる",
+    "definition": "Tôi gọi điện xác nhận với đối tác xem là fax đã gửi đến chưa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA+%E3%81%8B%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "試す",
+    "definition": "Tôi đã mặc thử xem có hợp với bộ Tây phục không.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%A6+%E3%81%99"
+  },
+  {
+    "term": "繰り返す",
+    "definition": "\"Không được lặp lại cùng một sai lầm.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B9%B0+%E3%82%8A+%E8%BF%94+%E3%81%99"
+  },
+  {
+    "term": "訳す",
+    "definition": "Dịch tiếng Anh sang tiếng Nhật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B3+%E3%81%99"
+  },
+  {
+    "term": "行う",
+    "definition": "Tổ chức {kì thi/ cuộc hop/ thuyết trình/ sự kiện…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%8C+%E3%81%86"
+  },
+  {
+    "term": "間違う",
+    "definition": "Tính toán này bị sai.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93%E9%81%95+%E3%81%86"
+  },
+  {
+    "term": "間違える",
+    "definition": "Trả lời sai câu hỏi kiểm tra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93%E9%81%95+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "許す",
+    "definition": "Bị nói những lời tồi tệ nên đã cải nhau nhưng đối phương đã xin lỗi nên tôi đã tha thứ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B1+%E3%81%99"
+  },
+  {
+    "term": "慣れる",
+    "definition": "Tôi đến Nhật Bản nửa năm, cũng đã quen cuộc sống ở đây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%A3+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "慣らす",
+    "definition": "Nên chuẩn bị vận động cho quen cơ thể rồi xuống hồ bơi thì tốt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%A3+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "立つ",
+    "definition": "Sau khi được gọi tên thì hãy đứng dậy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B+%E3%81%A4"
+  },
+  {
+    "term": "立てる",
+    "definition": "Dựng ăng ten trên mái nhà.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "建つ",
+    "definition": "Chung cư lớn được xây trước nhà.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%BA+%E3%81%A4"
+  },
+  {
+    "term": "建てる",
+    "definition": "Xây nhà ở trung tâm thành phố rất vất vả.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%BA+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "育つ",
+    "definition": "Năm nay mưa nhiều lúa phát triển tốt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%82%B2+%E3%81%A4"
+  },
+  {
+    "term": "育てる",
+    "definition": "Mẹ tôi đã nuôi nấng 5 đứa con.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%82%B2+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "生える",
+    "definition": "{Tóc, râu ,răng, mốc…} mọc lên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "生やす",
+    "definition": "Mọc râu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F+%E3%82%84%E3%81%99"
+  },
+  {
+    "term": "汚れる",
+    "definition": "Tôi không muốn sống trong một nơi ô nhiễm không khí.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%9A+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "汚す",
+    "definition": "Nghịch bùn làm bẩn quần áo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%9A+%E3%81%99"
+  },
+  {
+    "term": "壊れる",
+    "definition": "{Nhà/ đồ đạc/ đồ điện…} bị hư hỏng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A3%8A+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "壊す",
+    "definition": "Làm hỏng {nhà/ đồ đạc/ đồ điện…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A3%8A+%E3%81%99"
+  },
+  {
+    "term": "割れる",
+    "definition": "{Kính( thủy tinh)/ đĩa/ cóc…} bị vỡ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "割る",
+    "definition": "Làm {kính / đĩa/ cốc…} vỡ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2+%E3%82%8B"
+  },
+  {
+    "term": "折れる",
+    "definition": "Cành cây bị gãy vì gió mạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%98+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "折る",
+    "definition": "Tôi trượt tuyết và bị gãy chân.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%98+%E3%82%8B"
+  },
+  {
+    "term": "破れる",
+    "definition": "{Giấy/ sách/ vải/ áo…} bị rách.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%B4+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "破る",
+    "definition": "Làm rách {giấy/ vở/ vải/ áo…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%B4+%E3%82%8B"
+  },
+  {
+    "term": "曲がる",
+    "definition": "Khúc đường cong.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B2+%E3%81%8C%E3%82%8B"
+  },
+  {
+    "term": "曲げる",
+    "definition": "Bẻ cong, gập dây kim loại, đầu gối…",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B2+%E3%81%92%E3%82%8B"
+  },
+  {
+    "term": "外れる",
+    "definition": "Nút rớt ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%96+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "外す",
+    "definition": "Tháo {kính/ đồng hồ đeo tay/ nút…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%96+%E3%81%99"
+  },
+  {
+    "term": "揺れる",
+    "definition": "Lá cây lay động trong gió.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%BA+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "揺らす",
+    "definition": "Cái xích đu mà đứa trẻ leo lên được đu qua đu lại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%BA+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "流れる",
+    "definition": "Giữa thành phố có con sông rất lớn chảy qua.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%81+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "流す",
+    "definition": "Không được cho nước bẩn lan ra ngoài sông.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%81+%E3%81%99"
+  },
+  {
+    "term": "濡れる",
+    "definition": "Tôi ướt mưa và bị cảm lạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%A1+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "濡らす",
+    "definition": "Tôi làm đổ nước nên ướt áo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%A1+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "迷う",
+    "definition": "Lạc đường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%B7+%E3%81%86"
+  },
+  {
+    "term": "悩む",
+    "definition": "Tôi lo lắng về việc tìm việc hay học lên tiếp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%82%A9+%E3%82%80"
+  },
+  {
+    "term": "慌てる",
+    "definition": "Sắp muộn học nên tôi vội vàng phi nhanh ra khỏi nhà.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%8C+%E3%81%A6%E3%82%8B"
+  },
+  {
+    "term": "覚める",
+    "definition": "Đêm qua rất nóng nên giữa đêm tôi đã tỉnh dậy không biết bao nhiêu lần.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%9A+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "覚ます",
+    "definition": "Khi mở mắt thì đã 10 giờ rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%9A+%E3%81%BE%E3%81%99"
+  },
+  {
+    "term": "眠る",
+    "definition": "Hôm trước ngày thi tôi rất căng thẳng và ngủ không ngon.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9C%A0+%E3%82%8B"
+  },
+  {
+    "term": "祈る",
+    "definition": "Tôi cầu sức khỏe cho gia đình với các thánh thần.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A5%88+%E3%82%8B"
+  },
+  {
+    "term": "祝う",
+    "definition": "Chúc mừng {năm mới/ sinh nhật/ thành công…} cạn li!",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A5%9D+%E3%81%86"
+  },
+  {
+    "term": "感じる",
+    "definition": "Cảm giác {lạnh/ đau / đói/ rung…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F+%E3%81%98%E3%82%8B"
+  },
+  {
+    "term": "濃い",
+    "definition": "Màu/ vị / cà phê/ trà/ trang điểm đậm/ râu dày….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%83+%E3%81%84"
+  },
+  {
+    "term": "薄い",
+    "definition": "Quyển sách mỏng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%96%84+%E3%81%84"
+  },
+  {
+    "term": "酸っぱい",
+    "definition": "Chanh thì chua.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%85%B8+%E3%81%A3%E3%81%B1%E3%81%84"
+  },
+  {
+    "term": "臭い",
+    "definition": "Có nhiều người Nhật ghét Natto vì nó có mùi thối.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AD+%E3%81%84"
+  },
+  {
+    "term": "おかしい",
+    "definition": "Bạn Yamamoto ở trong lớp lúc nào cũng nói mấy câu hài hài làm mọi người phá lên cười.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%8B%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "かっこいい",
+    "definition": "Thầy giáo đó bảnh bao nên được hâm mộ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%A3%E3%81%93%E3%81%84%E3%81%84"
+  },
+  {
+    "term": "うまい",
+    "definition": "Mẹ rất giỏi nấu ăn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%81%BE%E3%81%84"
+  },
+  {
+    "term": "親しい",
+    "definition": "Tôi thân với anh Tanaka.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%AA+%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "詳しい",
+    "definition": "Cái bản đồ này rất chi tiết.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B3+%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "細かい",
+    "definition": "Chữ của tờ báo rất nhỏ nên đối với người già thì khó đọc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B4%B0+%E3%81%8B%E3%81%84"
+  },
+  {
+    "term": "浅い",
+    "definition": "Con sông này nông nên dù bọn trẻ bơi cũng không nguy hiểm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%85+%E3%81%84"
+  },
+  {
+    "term": "硬い/固い",
+    "definition": "Cái bánh này rất cứng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A1%AC+%E3%81%84%2F+%E5%9B%BA+%E3%81%84"
+  },
+  {
+    "term": "ぬるい",
+    "definition": "Cà phê nguội thì không ngon.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AC%E3%82%8B%E3%81%84"
+  },
+  {
+    "term": "まぶしい",
+    "definition": "Khi mở rèm thì thấy mặt trời khá chói.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%B6%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "蒸し暑い",
+    "definition": "Mùa hè ở Nhật thì oi bức.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%92%B8+%E3%81%97+%E6%9A%91+%E3%81%84"
+  },
+  {
+    "term": "清潔な",
+    "definition": "Mặc lên người bộ áo quần sạch sẽ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%85%E6%BD%94+%E3%81%AA"
+  },
+  {
+    "term": "新鮮な",
+    "definition": "Cá tươi thì ngon.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%B0%E9%AE%AE+%E3%81%AA"
+  },
+  {
+    "term": "豊かな",
+    "definition": "Trù phú, nhiều tài nguyên, {thiên nhiên, cây cối, tài sản, cuộc sống} đa dạng, trái tim, tài năng, cá tính, biểu cảm….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B1%8A+%E3%81%8B%E3%81%AA"
+  },
+  {
+    "term": "立派な",
+    "definition": "Người, công việc, thành tích, tòa nhà … tuyệt vời.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B%E6%B4%BE+%E3%81%AA"
+  },
+  {
+    "term": "正確な",
+    "definition": "Tôi không biết con số chính xác nhưng ở đây có khoảng 5000 khách.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AD%A3%E7%A2%BA+%E3%81%AA"
+  },
+  {
+    "term": "確かな",
+    "definition": "Báo chí nên đưa những tin đúng sự thật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA+%E3%81%8B%E3%81%AA"
+  },
+  {
+    "term": "重要な",
+    "definition": "Hôm nay, từ chiều sẽ có cuộc họp quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D%E8%A6%81+%E3%81%AA"
+  },
+  {
+    "term": "必要な",
+    "definition": "Việc cần thiết đối với con cái là tình cảm ấm áp từ bố mẹ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BF%85%E8%A6%81+%E3%81%AA"
+  },
+  {
+    "term": "もったいない",
+    "definition": "Dù có lỗi mốt mà vứt bỏ quần áo vẫn có thể mặc được thì thật lãng phí.",
+    "image": "https://o.quizlet.com/jA1MDUyQ.iXcK8e9YEDcIA.jpg"
+  },
+  {
+    "term": "すごい",
+    "definition": "Cơn bão hôm qua thật là kinh khủng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%94%E3%81%84"
+  },
+  {
+    "term": "ひどい",
+    "definition": "Nhiều người bắt nạt một người thì thật là tồi tệ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B2%E3%81%A9%E3%81%84"
+  },
+  {
+    "term": "激しい",
+    "definition": "{Mưa, gió, đánh nhau, cơn đau…} mãnh liệt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%80+%E3%81%97%E3%81%84"
+  },
+  {
+    "term": "そっくりな",
+    "definition": "Anh với bố có giọng với mặt rất giống nhau.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%AA"
+  },
+  {
+    "term": "急な",
+    "definition": "Tự nhiên bị đau răng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%A5+%E3%81%AA"
+  },
+  {
+    "term": "適当な",
+    "definition": "Đang tìm giáo viên dạy tại nhà nhưng mà mãi chưa có người thích hợp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%A9%E5%BD%93+%E3%81%AA"
+  },
+  {
+    "term": "特別な",
+    "definition": "Cô ấy có một tài năng đặc biệt của một nhạc gia.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%B9%E5%88%A5+%E3%81%AA"
+  },
+  {
+    "term": "完全な",
+    "definition": "Một cái bát cổ tròn nguyên vẹn hình dáng lấy lên từ trong lòng đất.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%8C%E5%85%A8+%E3%81%AA"
+  },
+  {
+    "term": "盛んな",
+    "definition": "Quê tôi nông nghiệp phát triển.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%9B+%E3%82%93%E3%81%AA"
+  },
+  {
+    "term": "様々な",
+    "definition": "Có thể tiếp cận được thông tin đa dạng từ Internet.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A7%98%E3%80%85+%E3%81%AA"
+  },
+  {
+    "term": "可能な",
+    "definition": "Khoa học tiến bộ, những điều không thể từ trước đến giờ cũng đã trở thành có thể.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%AF%E8%83%BD+%E3%81%AA"
+  },
+  {
+    "term": "不可能な",
+    "definition": "Những kế hoạch không khả thi thì ngay từ đầu không nên vạch ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E5%8F%AF%E8%83%BD+%E3%81%AA"
+  },
+  {
+    "term": "基本的な",
+    "definition": "Cách sử dụng máy tính cơ bản được viết trong sách hướng dẫn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%BA%E6%9C%AC%E7%9A%84+%E3%81%AA"
+  },
+  {
+    "term": "国際的な",
+    "definition": "Ở Tokyo tổ chức một liên hoan Anime Quốc tế.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E9%9A%9B%E7%9A%84+%E3%81%AA"
+  },
+  {
+    "term": "ばらばらな",
+    "definition": "Ý kiến mọi người phân tán, mãi mà không đưa ra được quyết định.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B0%E3%82%89%E3%81%B0%E3%82%89%E3%81%AA"
+  },
+  {
+    "term": "ぼろぼろな",
+    "definition": "Áo rách, nhà tồi tàn….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BC%E3%82%8D%E3%81%BC%E3%82%8D%E3%81%AA"
+  },
+  {
+    "term": "非常に",
+    "definition": "Vì là đồ đặc biệt, đắt tiền nên hãy vận chuyển cẩn thận nhé.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9D%9E%E5%B8%B8+%E3%81%AB"
+  },
+  {
+    "term": "大変（に）",
+    "definition": "Tàu điện lúc nào cũng đông nên mệt mỏi vô cùng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E5%A4%89+%EF%BC%88%E3%81%AB%EF%BC%89"
+  },
+  {
+    "term": "ほとんど",
+    "definition": "Việc chuẩn bị gần như đã xong.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9"
+  },
+  {
+    "term": "大体",
+    "definition": "Bài kiểm tra hôm nay làm được đại khái rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E4%BD%93"
+  },
+  {
+    "term": "かなり",
+    "definition": "Sau khi uống thuốc đau đầu khoảng 30 phút thì đỡ hơn rất nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%AA%E3%82%8A"
+  },
+  {
+    "term": "ずいぶん",
+    "definition": "Chỉ trong khoảng thời gian ngắn không gặp mà tiếng Nhật của Chin đã tiến bộ đáng kể.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9A%E3%81%84%E3%81%B6%E3%82%93"
+  },
+  {
+    "term": "けっこう",
+    "definition": "Vì chủ nhật nên tôi nghĩ là sẽ đông nhưng cuối cùng thì cũng rất vắng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%91%E3%81%A3%E3%81%93%E3%81%86"
+  },
+  {
+    "term": "大分",
+    "definition": "Bệnh cũng đã khá hơn nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E5%88%86"
+  },
+  {
+    "term": "もっと",
+    "definition": "So với táo thì tôi thích dâu hơn nhưng mà so với quả dưa gang thì tôi còn thích hơn nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "すっかり",
+    "definition": "Hoa anh đào đã rụng hết rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%A3%E3%81%8B%E3%82%8A"
+  },
+  {
+    "term": "いっぱい",
+    "definition": "Hội trường đầy trẻ con, rất là náo nhiệt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84"
+  },
+  {
+    "term": "ぎりぎり",
+    "definition": "Nếu chạy thì có thể vừa kịp chuyến tàu lúc 9 giờ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A"
+  },
+  {
+    "term": "ぴったり（と）",
+    "definition": "Tôi đã cài đặt đồng hồ báo thức vào 7 giờ đúng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B4%E3%81%A3%E3%81%9F%E3%82%8A%EF%BC%88%E3%81%A8%EF%BC%89"
+  },
+  {
+    "term": "たいてい",
+    "definition": "Chủ nhật thường thì tôi ở nhà.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%84%E3%81%A6%E3%81%84"
+  },
+  {
+    "term": "同時に",
+    "definition": "Hai ngươi về đích (ghi điểm) cùng lúc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%8C%E6%99%82+%E3%81%AB"
+  },
+  {
+    "term": "前もって",
+    "definition": "\"Trong trường hợp vắng mặt thì tôi sẽ báo trước.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%8D+%E3%82%82%E3%81%A3%E3%81%A6"
+  },
+  {
+    "term": "すぐ（に）",
+    "definition": "Chuông cửa vừa reo thì ngay lập tức cửa mở.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%90%EF%BC%88%E3%81%AB%EF%BC%89"
+  },
+  {
+    "term": "もうすぐ",
+    "definition": "Tôi đến Nhật sắp được 3 năm rồi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%86%E3%81%99%E3%81%90"
+  },
+  {
+    "term": "突然",
+    "definition": "Vì đứa trẻ đột nhiên lao ra nên tôi đã phanh gấp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AA%81%E7%84%B6"
+  },
+  {
+    "term": "あっと言う間（に）",
+    "definition": "Con tôi lớn nhanh quá, loáng cái đã thành học sinh tiểu học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%82%E3%81%A3%E3%81%A8+%E8%A8%80+%E3%81%86+%E9%96%93+%EF%BC%88%E3%81%AB%EF%BC%89"
+  },
+  {
+    "term": "いつの間にか",
+    "definition": "Trời tối từ lúc nào không biết.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%A4%E3%81%AE+%E9%96%93+%E3%81%AB%E3%81%8B"
+  },
+  {
+    "term": "しばらく",
+    "definition": "\"Hiện tại thì cửa hàng đang đông, xin hãy đợi thêm chút nữa.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F"
+  },
+  {
+    "term": "ずっと",
+    "definition": "So với xe buýt thì rõ ràng đi tàu điện ngầm sẽ nhanh hơn nhiều.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9A%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "相変わらず",
+    "definition": "Nữ diễn viên ấy dù cho có tuổi thì vẫn đẹp như thường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B8%E5%A4%89+%E3%82%8F%E3%82%89%E3%81%9A"
+  },
+  {
+    "term": "次々に",
+    "definition": "Những loại mì tôm mới đang được lần lượt bán ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AC%A1%E3%80%85+%E3%81%AB"
+  },
+  {
+    "term": "どんどん",
+    "definition": "Hôm nay thể trạng tốt, công việc thì tiến triển thành công.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93"
+  },
+  {
+    "term": "ますます",
+    "definition": "Cơn mua buổi sáng càng về chiều càng nặng hạt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%99%E3%81%BE%E3%81%99"
+  },
+  {
+    "term": "やっと",
+    "definition": "Đợi 30 phút và cuối cùng xe bus cũng tới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "とうとう",
+    "definition": "Sau một thời gian dài sử dụng thì cuối cùng cái máy giặt cũng hỏng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A8%E3%81%86%E3%81%A8%E3%81%86"
+  },
+  {
+    "term": "ついに",
+    "definition": "Cuối cùng tôi đã có thể thực hiện được giấc mơ thời trẻ của mình.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%84%E3%81%AB"
+  },
+  {
+    "term": "もちろん",
+    "definition": "Đã mua căn chung cư, tất nhiên là trả góp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%A1%E3%82%8D%E3%82%93"
+  },
+  {
+    "term": "やはり",
+    "definition": "Đôi A là đội chiến thắng quả đúng như theo dự đoán.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%81%AF%E3%82%8A"
+  },
+  {
+    "term": "きっと",
+    "definition": "Anh Tanaka lúc nào cũng muộn giờ nên chắc chắn hôm nay cũng sẽ đến muộn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8D%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "ぜひ",
+    "definition": "Khi còn trẻ tôi nhất định sẽ đi du học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9C%E3%81%B2"
+  },
+  {
+    "term": "なるべく",
+    "definition": "\"Hãy đọc thử cuốn sách này mà cố gắng không nhìn từ điển.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F"
+  },
+  {
+    "term": "案外",
+    "definition": "Trời hôm nay có nhiều mây nhưng lại nóng không ngờ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A1%88%E5%A4%96"
+  },
+  {
+    "term": "もしかすると/もしかしたら/もしかして",
+    "definition": "Sức khỏe của tôi không tốt lắm, có lẽ ngày mai tôi sẽ nghỉ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%97%E3%81%8B%E3%81%99%E3%82%8B%E3%81%A8%2F%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%9F%E3%82%89%2F%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%A6"
+  },
+  {
+    "term": "まさか",
+    "definition": "\"Nghe nói hai người kia sắp li hôn đó.\" -\"Không thể nào, họ rất gắn bó với nhau cơ mà.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%95%E3%81%8B"
+  },
+  {
+    "term": "うっかり",
+    "definition": "Lơ đãng một chút tôi đã vô ý nhầm muối với đường.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%81%A3%E3%81%8B%E3%82%8A"
+  },
+  {
+    "term": "つい",
+    "definition": "Tôi định là bỏ thuốc mà vẫn lỡ hút sau giờ cơm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%84"
+  },
+  {
+    "term": "思わず",
+    "definition": "Trong lúc đi bộ vào ban đêm, bất chợt bị đập vào vai, tôi đã hét toáng lên (theo bản năng).",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%82%8F%E3%81%9A"
+  },
+  {
+    "term": "ほっと",
+    "definition": "Hoàn thành kì thi/ biết không phải là ung thư… thở phào nhẹ nhõm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BB%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "いらいら",
+    "definition": "Đang vội mà xe bus mãi không đến, cảm thấy rất nóng lòng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%82%89%E3%81%84%E3%82%89"
+  },
+  {
+    "term": "のんびり",
+    "definition": "Khoảng nữa năm bận vô cùng nên muốn đi suối nước nóng thong thả nghỉ ngơi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AE%E3%82%93%E3%81%B3%E3%82%8A"
+  },
+  {
+    "term": "実は",
+    "definition": "\"Chuyện tôi nói ngày hôm qua thực ra là nói phét đấy.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F+%E3%81%AF"
+  },
+  {
+    "term": "読書",
+    "definition": "Sở thích là đọc sách.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%AD%E6%9B%B8"
+  },
+  {
+    "term": "演奏",
+    "definition": "Biểu diễn nhạc cụ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BC%94%E5%A5%8F"
+  },
+  {
+    "term": "芸術",
+    "definition": "Mỹ thuật, âm nhạc, văn học, kịch…tất cả có thể nói là một loại hình nghệ thuật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%8A%B8%E8%A1%93"
+  },
+  {
+    "term": "検査",
+    "definition": "Kiểm tra dạ dày, sản phẩm..",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A4%9C%E6%9F%BB"
+  },
+  {
+    "term": "血液",
+    "definition": "Máu chảy trong cơ thể.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%80%E6%B6%B2"
+  },
+  {
+    "term": "治療",
+    "definition": "Đã chữa bệnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%BB%E7%99%82"
+  },
+  {
+    "term": "症状",
+    "definition": "Triệu chứng khi ốm là ho, sốt, nước mũi..",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%97%87%E7%8A%B6"
+  },
+  {
+    "term": "予防",
+    "definition": "Đề phòng ốm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%88%E9%98%B2"
+  },
+  {
+    "term": "栄養",
+    "definition": "Đồ ăn dinh dưỡng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A0%84%E9%A4%8A"
+  },
+  {
+    "term": "手術",
+    "definition": "Phẫu thuật dạ dày.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%89%8B%E8%A1%93"
+  },
+  {
+    "term": "死亡",
+    "definition": "Tìm hiểu nguyên nhân chết.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AD%BB%E4%BA%A1"
+  },
+  {
+    "term": "命",
+    "definition": "Đối với sinh mạng thì phải thận trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%91%BD"
+  },
+  {
+    "term": "一生",
+    "definition": "Tìm hiểu cuộc đời của Picaso.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%80%E7%94%9F"
+  },
+  {
+    "term": "誤解",
+    "definition": "Để cho mọi người không hiểu nhầm nên việc bàn bạc thảo luận rất quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%A4%E8%A7%A3"
+  },
+  {
+    "term": "後悔",
+    "definition": "Tôi đã rất hối hận thi không học đến nơi đến chốn khi còn trẻ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%8C%E6%82%94"
+  },
+  {
+    "term": "訳",
+    "definition": "Bạn hãy nói nguyên nhân đến muộn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B3"
+  },
+  {
+    "term": "態度",
+    "definition": "Học sinh kia có thái độ không tốt trong giờ học.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%8B%E5%BA%A6"
+  },
+  {
+    "term": "癖",
+    "definition": "Thói quen của tôi là mỗi khi có việc khó khăn thì tôi hay gãi đầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%96"
+  },
+  {
+    "term": "礼儀",
+    "definition": "Chào hỏi cấp trên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A4%BC%E5%84%80"
+  },
+  {
+    "term": "文句",
+    "definition": "Tôi có phàn nàn về tiền lương.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%87%E5%8F%A5"
+  },
+  {
+    "term": "表情",
+    "definition": "Biểu cảm khuôn mặt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8%E6%83%85"
+  },
+  {
+    "term": "表面",
+    "definition": "Bề mặt nước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8%E9%9D%A2"
+  },
+  {
+    "term": "禁煙",
+    "definition": "\"Phòng này cấm hút thuốc.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A6%81%E7%85%99"
+  },
+  {
+    "term": "禁止",
+    "definition": "Ở trong bảo tàng nghệ thuật thì bị cấm chụp ảnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A6%81%E6%AD%A2"
+  },
+  {
+    "term": "完成",
+    "definition": "{Tòa nhà/ tác phẩm…} đã hoàn thành.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%8C%E6%88%90"
+  },
+  {
+    "term": "課題",
+    "definition": "Nhật Bản lúc này đang gặp những vấn đề như rác, dân số già hóa..",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%B2%E9%A1%8C"
+  },
+  {
+    "term": "例外",
+    "definition": "Quy tắc nào cũng có ngoại lệ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BE%8B%E5%A4%96"
+  },
+  {
+    "term": "基本",
+    "definition": "Dù có luyện tập cái gì đi nữa thì cái cơ bản rất là quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%BA%E6%9C%AC"
+  },
+  {
+    "term": "記録",
+    "definition": "Tôi đã đọc ghi chép của hội nghị tuần trước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%98%E9%8C%B2"
+  },
+  {
+    "term": "状態",
+    "definition": "Công ty đó trạng thái kinh doanh không tốt lắm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8A%B6%E6%85%8B"
+  },
+  {
+    "term": "出来事",
+    "definition": "Sự kiện lớn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E6%9D%A5%E4%BA%8B"
+  },
+  {
+    "term": "場面",
+    "definition": "Xe tải và xe bus đã va chạm trước mắt tôi. Cảnh đó đã xuất hiện trong giấc mơ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A0%B4%E9%9D%A2"
+  },
+  {
+    "term": "機会",
+    "definition": "Tôi muốn nói chuyện hai người với cô ấy nhưng mãi mà không có cơ hội.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A9%9F%E4%BC%9A"
+  },
+  {
+    "term": "距離",
+    "definition": "Đo khoảng cách từ nhà ga.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B7%9D%E9%9B%A2"
+  },
+  {
+    "term": "提案",
+    "definition": "Đề xuất dự án trong cuộc họp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%90%E6%A1%88"
+  },
+  {
+    "term": "やり取り",
+    "definition": "Trao đổi mail với bạn bè.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%82%8A+%E5%8F%96+%E3%82%8A"
+  },
+  {
+    "term": "知識",
+    "definition": "Đọc sách để tích lũy kiến thức.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9F%A5%E8%AD%98"
+  },
+  {
+    "term": "実力",
+    "definition": "Thể hiện thực lực trong trận đấu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F%E5%8A%9B"
+  },
+  {
+    "term": "手段",
+    "definition": "Áp dụng những biện pháp cần thiết để giải quyết vấn đề.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%89%8B%E6%AE%B5"
+  },
+  {
+    "term": "代表",
+    "definition": "Tôi tham gia họp với tư cách là đại diện lớp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%A3%E8%A1%A8"
+  },
+  {
+    "term": "影響",
+    "definition": "Do ảnh hưởng của bố mẹ tôi cũng đã bắt đầu vẽ tranh từ khi còn nhỏ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%B1%E9%9F%BF"
+  },
+  {
+    "term": "効果",
+    "definition": "Uống thuốc này xong, đã có hiệu quả ngay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%B9%E6%9E%9C"
+  },
+  {
+    "term": "印象",
+    "definition": "Lần đầu khi tôi gặp cô ấy, tôi đã có ấn tượng rằng cô ấy là người hiền lành.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8D%B0%E8%B1%A1"
+  },
+  {
+    "term": "印",
+    "definition": "Đánh dấu địa điểm cần đến trên bản đồ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8D%B0"
+  },
+  {
+    "term": "合図",
+    "definition": "Ra hiệu bằng mắt với bạn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88%E5%9B%B3"
+  },
+  {
+    "term": "共通",
+    "definition": "Điểm chung của hai người là sở thích nghe nhạc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%B1%E9%80%9A"
+  },
+  {
+    "term": "強調",
+    "definition": "Nhấn mạnh và giải thích điểm quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%B7%E8%AA%BF"
+  },
+  {
+    "term": "省略",
+    "definition": "Lược bớt những chi tiết hãy nói thật đơn giản.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9C%81%E7%95%A5"
+  },
+  {
+    "term": "挑戦",
+    "definition": "Thử thách {vấn đề khó/ nhà vô địch…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8C%91%E6%88%A6"
+  },
+  {
+    "term": "やる気",
+    "definition": "Người có động lực.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%82%8B+%E6%B0%97"
+  },
+  {
+    "term": "勇気",
+    "definition": "Dũng cảm đối đầu với khó khăn.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%87%E6%B0%97"
+  },
+  {
+    "term": "資格",
+    "definition": "Lấy bằng luật sư.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%87%E6%A0%BC"
+  },
+  {
+    "term": "申請",
+    "definition": "Thủ tục/nộp đơn xin hộ chiếu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%B3%E8%AB%8B"
+  },
+  {
+    "term": "本人",
+    "definition": "seq id vidukey vidu viduruby nghia 2356 688 合 ＿書類、＿書 ＿<ruby>書類<rp>（</rp><rt>しょるい</rt><rp>）</rp></ruby>、＿<ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby> Hồ sơ xin cấp / đơn xin cấp Đương sự phải đứng tên mở sổ tiết kiệm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%AC%E4%BA%BA"
+  },
+  {
+    "term": "契約",
+    "definition": "Đã làm hợp đồng thuê nhà hai năm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A5%91%E7%B4%84"
+  },
+  {
+    "term": "証明",
+    "definition": "Khi mở tài khoản ngân hàng thì cần có vật để chứng minh danh tính.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%BC%E6%98%8E"
+  },
+  {
+    "term": "変更",
+    "definition": "Tiến hành thay đổi {dự định/ kế hoạch / lộ trình…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89%E6%9B%B4"
+  },
+  {
+    "term": "保存",
+    "definition": "Bảo quản thực phẩm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%9D%E5%AD%98"
+  },
+  {
+    "term": "保護",
+    "definition": "Bảo tồn thiên nhiên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%9D%E8%AD%B7"
+  },
+  {
+    "term": "環境",
+    "definition": "Tôi muốn sống ngoại ô có môi trường trong lành hơn là trung tâm thành phố.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%92%B0%E5%A2%83"
+  },
+  {
+    "term": "資源",
+    "definition": "Sử dụng hiệu quả nguồn tài nguyên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%87%E6%BA%90"
+  },
+  {
+    "term": "不足",
+    "definition": "Bữa ăn thiếu rau.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E8%B6%B3"
+  },
+  {
+    "term": "平均",
+    "definition": "Tính bình quân điểm kiểm tra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B3%E5%9D%87"
+  },
+  {
+    "term": "割合",
+    "definition": "Khách hàng của cửa hàng bách hóa này tỉ lệ nữ giới cao.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2%E5%90%88"
+  },
+  {
+    "term": "商売",
+    "definition": "Bố tôi đang kinh doanh may mặc.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%95%86%E5%A3%B2"
+  },
+  {
+    "term": "商品",
+    "definition": "Xếp sản phẩm vào cửa hàng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%95%86%E5%93%81"
+  },
+  {
+    "term": "質",
+    "definition": "Sản phẩm của nhà sản suất này có chất lượng tốt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%AA"
+  },
+  {
+    "term": "型",
+    "definition": "Mua máy tính kiểu mới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9E%8B"
+  },
+  {
+    "term": "生産",
+    "definition": "Nhật Bản ít sản xuất ra những mặt hàng nông nghiệp.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F%E7%94%A3"
+  },
+  {
+    "term": "消費",
+    "definition": "Tiêu dùng sữa đang giảm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B6%88%E8%B2%BB"
+  },
+  {
+    "term": "物価",
+    "definition": "Tokyo giá cả đắt đỏ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%A9%E4%BE%A1"
+  },
+  {
+    "term": "倒産",
+    "definition": "Công ty phá sản.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%92%E7%94%A3"
+  },
+  {
+    "term": "携帯",
+    "definition": "Người ngoại quốc luôn luôn phải mang theo thẻ đăng kí nước ngoài.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%90%BA%E5%B8%AF"
+  },
+  {
+    "term": "現代",
+    "definition": "Ngày nay được nói là thời đại của thông tin.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE%E4%BB%A3"
+  },
+  {
+    "term": "世紀",
+    "definition": "Thế kỉ 21 đã bắt đầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%96%E7%B4%80"
+  },
+  {
+    "term": "文化",
+    "definition": "Văn hóa Nhật Bản.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%87%E5%8C%96"
+  },
+  {
+    "term": "都市",
+    "definition": "Dân số tập trung chủ yếu ở các đô thị.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%83%BD%E5%B8%82"
+  },
+  {
+    "term": "地方",
+    "definition": "Ở địa phương có mưa nhiều thì thực vật phát triển.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9C%B0%E6%96%B9"
+  },
+  {
+    "term": "戦争",
+    "definition": "Đã xảy ra chiến tranh giữa hai nước A và B.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%A6%E4%BA%89"
+  },
+  {
+    "term": "平和",
+    "definition": "Giữ gìn hòa bình thế giới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B3%E5%92%8C"
+  },
+  {
+    "term": "上る",
+    "definition": "Leo {cầu thang/ dốc} ngược dòng sông….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8A+%E3%82%8B"
+  },
+  {
+    "term": "下る",
+    "definition": "Xuống {dốc/ sông/ núi…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8B+%E3%82%8B"
+  },
+  {
+    "term": "進む",
+    "definition": "Tiến lên hướng về lối ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2+%E3%82%80"
+  },
+  {
+    "term": "進める",
+    "definition": "Hãy tiến xe ô tô lên một chút nữa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "通る",
+    "definition": "Con đường này nhiều xe ô tô qua lại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%82%8B"
+  },
+  {
+    "term": "通す",
+    "definition": "Ánh sáng xuyên qua rèm cửa vào trong phòng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%81%99"
+  },
+  {
+    "term": "超える/越える",
+    "definition": "Vượt qua {con sông/ núi…} này là đến tỉnh bên cạnh.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%85+%E3%81%88%E3%82%8B%2F+%E8%B6%8A+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "過ぎる",
+    "definition": "Tàu đã đi qua Hiroshima.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%8E+%E3%81%8E%E3%82%8B"
+  },
+  {
+    "term": "過ごす",
+    "definition": "Tôi đã trải qua thờ sinh viên ở Tokyo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%8E+%E3%81%94%E3%81%99"
+  },
+  {
+    "term": "移る",
+    "definition": "Vì khó nhìn chữ trên bảng nên đã chuyển chỗ lên trên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A7%BB+%E3%82%8B"
+  },
+  {
+    "term": "移す",
+    "definition": "Chuyển trụ sở từ Osaka về Tokyo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A7%BB+%E3%81%99"
+  },
+  {
+    "term": "連れる",
+    "definition": "Dẫn con đi chơi sở thú.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%A3+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "寄る",
+    "definition": "Ghé sát vào cửa sổ nhìn ra bên ngoài.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AF%84+%E3%82%8B"
+  },
+  {
+    "term": "寄せる",
+    "definition": "Khi có động đất oto phải tạt vào bên trái đường rồi dừng lại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AF%84+%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "与える",
+    "definition": "Tặng học bổng cho học sinh có thành tích tốt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8E+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "得る",
+    "definition": "Có {thu nhập/ thông tin/ kiến thức…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%97+%E3%82%8B"
+  },
+  {
+    "term": "向く",
+    "definition": "Phòng tôi hướng về phía đông nam.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%91+%E3%81%8F"
+  },
+  {
+    "term": "向ける",
+    "definition": "Quay mặt sang phải.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%91+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "勧める",
+    "definition": "Tôi đã gợi ý đứa bạn thân đang giảm cân cùng đi bộ với tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%A7+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "薦める",
+    "definition": "Đã mua quyển sách mà thầy giới thiệu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%96%A6+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "任せる",
+    "definition": "Thử giao trách nhiệm công việc nặng nề cho người mới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%BB+%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "守る",
+    "definition": "Tuân thủ {pháp luật/ quy tắc/ luật lệ/ lời hứa…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%88+%E3%82%8B"
+  },
+  {
+    "term": "争う",
+    "definition": "Anh em nhà kia lúc nào cũng cãi nhau vì mấy chuyện nhỏ nhặt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%89+%E3%81%86"
+  },
+  {
+    "term": "望む",
+    "definition": "Sau khi tốt nghiệp tôi mong muốn trở thành giáo viên.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%9B+%E3%82%80"
+  },
+  {
+    "term": "信じる",
+    "definition": "\"Ngày hôm qua tôi đã nhìn thấy ma đó.\" -\"Điêu! Thật là không thể tin nỗi.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%A1+%E3%81%98%E3%82%8B"
+  },
+  {
+    "term": "通じる",
+    "definition": "Khi đến Nhật tôi lo lắng mọi người không hiểu tiếng Nhật của tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%81%98%E3%82%8B"
+  },
+  {
+    "term": "飽きる",
+    "definition": "Dù là đồ mình thích nhưng ngày nào cũng ăn sẽ rất chán.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%BD+%E3%81%8D%E3%82%8B"
+  },
+  {
+    "term": "思いつく",
+    "definition": "Nghĩ ra {ý tưởng/ suy nghĩ/ phương pháp…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84%E3%81%A4%E3%81%8F"
+  },
+  {
+    "term": "思いやる",
+    "definition": "Lời nói của bố mẹ rất nghiêm khắc nhưng những lời đó là biểu hiện sự quan tâm đến con cái.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84%E3%82%84%E3%82%8B"
+  },
+  {
+    "term": "熱中する",
+    "definition": "Mẹ tôi bây giờ đang rất mải mê hát Karaoke.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%86%B1%E4%B8%AD+%E3%81%99%E3%82%8B"
+  },
+  {
+    "term": "暮らす",
+    "definition": "Sống ở thành phố rất tiện lợi nhưng tốn tiền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9A%AE+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "巻く",
+    "definition": "Quàng khăn vào cổ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B7%BB+%E3%81%8F"
+  },
+  {
+    "term": "結ぶ",
+    "definition": "Buộc dây giày.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%90+%E3%81%B6"
+  },
+  {
+    "term": "済む",
+    "definition": "Sau khi hoàn thành công việc tôi về ngay.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%88+%E3%82%80"
+  },
+  {
+    "term": "済ませる/済ます",
+    "definition": "Hoàn thành việc trả tiền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%88+%E3%81%BE%E3%81%9B%E3%82%8B%2F+%E6%B8%88+%E3%81%BE%E3%81%99"
+  },
+  {
+    "term": "出来る",
+    "definition": "Trước ga vừa có/mới mở một siêu thị mới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E6%9D%A5+%E3%82%8B"
+  },
+  {
+    "term": "切れる",
+    "definition": "Cái kéo này cắt ngọt (lẹ) thật.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%87+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "切らす",
+    "definition": "Không để ý là đã dùng hết {đường / bột giặt/ giấy vệ sinh…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%87+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "伝わる",
+    "definition": "Tin đồn anh ấy kết hôn đã được lan truyền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D+%E3%82%8F%E3%82%8B"
+  },
+  {
+    "term": "伝える",
+    "definition": "Truyền đạt việc bận qua điện thoại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D+%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "続く",
+    "definition": "Tiếp tục những ngày mưa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B6%9A+%E3%81%8F"
+  },
+  {
+    "term": "続ける",
+    "definition": "Cuộc họp đã kéo dài 3 tiếng vẫn tiếp tục.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B6%9A+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "つながる",
+    "definition": "Honshuu và Shikoku được nối với nhau bằng cầu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B"
+  },
+  {
+    "term": "つなぐ",
+    "definition": "Cây cầu này nối hai đảo là Honshu và Shinkoku.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%90"
+  },
+  {
+    "term": "つなげる",
+    "definition": "Tôi muốn nắm chắc thành công ở cơ hội này.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%92%E3%82%8B"
+  },
+  {
+    "term": "伸びる",
+    "definition": "{Lưng/ tóc/ râu…} dài ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%B8+%E3%81%B3%E3%82%8B"
+  },
+  {
+    "term": "伸ばす",
+    "definition": "Nuôi {tóc/ râu/ chiều cao…} dài ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%B8+%E3%81%B0%E3%81%99"
+  },
+  {
+    "term": "延びる",
+    "definition": "Hạn chót của báo cáo được trì hoãn thật may.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%B6+%E3%81%B3%E3%82%8B"
+  },
+  {
+    "term": "延ばす",
+    "definition": "Vì không lấy được vé, nên hoãn ngày về nước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%B6+%E3%81%B0%E3%81%99"
+  },
+  {
+    "term": "重なる",
+    "definition": "Khi in, giấy chồng hai tờ lên nhau chui ra.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D+%E3%81%AA%E3%82%8B"
+  },
+  {
+    "term": "重ねる",
+    "definition": "Chồng đĩa sẵn lên nhau.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D+%E3%81%AD%E3%82%8B"
+  },
+  {
+    "term": "広がる",
+    "definition": "Con đường rất rộng nên đi bộ thoải mái.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%83+%E3%81%8C%E3%82%8B"
+  },
+  {
+    "term": "広げる",
+    "definition": "Vì khách đang tăng lên nên muốn mở rộng quán hơn nữa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%83+%E3%81%92%E3%82%8B"
+  },
+  {
+    "term": "載る",
+    "definition": "Kiện đồ này to quá, chắc không thể chất lên xe tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BC%89+%E3%82%8B"
+  },
+  {
+    "term": "載せる",
+    "definition": "Cho hành lí lên giá.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BC%89+%E3%81%9B%E3%82%8B"
+  },
+  {
+    "term": "そろう",
+    "definition": "Khi tụ tập đủ nhân viên sẽ xuất phát.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8D%E3%81%86"
+  },
+  {
+    "term": "そろえる",
+    "definition": "Tập hợp thành viên để chơi mạt chược.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B"
+  },
+  {
+    "term": "まとまる",
+    "definition": "Cuối cùng đã thống nhất được ý kiến của lớp sau 3 tiếng thảo luận.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%A8%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "まとめる",
+    "definition": "Trước khi chuyển nhà đã tập hợp lại đồ không dùng nữa đem đi vứt.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "付く",
+    "definition": "Bị thương nên máu dính vào áo.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%98+%E3%81%8F"
+  },
+  {
+    "term": "付ける",
+    "definition": "Thêm mứt vào bánh mì.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%98+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "たまる",
+    "definition": "Tích {tiền/ nước/ rác/ stress…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%BE%E3%82%8B"
+  },
+  {
+    "term": "ためる",
+    "definition": "Tích {tiền/ nước/ rác/ stress…} lại.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "混じる/交じる",
+    "definition": "Cả con trai lẫn con gái đang chơi đá bóng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%98%E3%82%8B%2F+%E4%BA%A4+%E3%81%98%E3%82%8B"
+  },
+  {
+    "term": "混ざる/交ざる",
+    "definition": "Cả nam nữ hòa vào nhau chơi đá bóng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%96%E3%82%8B%2F+%E4%BA%A4+%E3%81%96%E3%82%8B"
+  },
+  {
+    "term": "混ぜる/交ぜる",
+    "definition": "Trộn gạo lẫn với đậu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%9C%E3%82%8B%2F+%E4%BA%A4+%E3%81%9C%E3%82%8B"
+  },
+  {
+    "term": "解ける/溶ける",
+    "definition": "Mất 3 tiếng cuối cùng cũng giải quyết xong vấn đề.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3+%E3%81%91%E3%82%8B%2F+%E6%BA%B6+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "解く/溶く/溶かす",
+    "definition": "Giải quyết vấn đề của bài toán.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3+%E3%81%8F%2F+%E6%BA%B6+%E3%81%8F%2F+%E6%BA%B6+%E3%81%8B%E3%81%99"
+  },
+  {
+    "term": "含む",
+    "definition": "Chanh chứa nhiều vitamin C.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%AB+%E3%82%80"
+  },
+  {
+    "term": "含める",
+    "definition": "Gia đình tôi bao gồm cả tôi là 5 người.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%AB+%E3%82%81%E3%82%8B"
+  },
+  {
+    "term": "抜ける",
+    "definition": "Tóc rụng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%9C+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "抜く",
+    "definition": "Nhổ răng sâu.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%9C+%E3%81%8F"
+  },
+  {
+    "term": "現れる",
+    "definition": "Tên phạm nhân bị bắt ngay lúc hắn xuất hiện để lấy tiền.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "現す",
+    "definition": "Hiện ra hình dạng núi Phú Sĩ khi trời quang mây.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE+%E3%81%99"
+  },
+  {
+    "term": "表れる",
+    "definition": "Mặt anh ấy hiện ra niềm vui khi đã đỗ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8+%E3%82%8C%E3%82%8B"
+  },
+  {
+    "term": "表す",
+    "definition": "Biểu thị cảm xúc bằng {từ ngữ/ tranh/ thái độ…}.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8+%E3%81%99"
+  },
+  {
+    "term": "散る",
+    "definition": "Hoa anh đào rụng vì gió.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%A3+%E3%82%8B"
+  },
+  {
+    "term": "散らす",
+    "definition": "Hoa anh đào bị rụng vì gió.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%A3+%E3%82%89%E3%81%99"
+  },
+  {
+    "term": "明ける",
+    "definition": "Đến đêm/ bắt đầu năm mới/ hết( cuối) mùa mưa.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%98%8E+%E3%81%91%E3%82%8B"
+  },
+  {
+    "term": "差す",
+    "definition": "Hết cơn mưa trời lại sáng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B7%AE+%E3%81%99"
+  },
+  {
+    "term": "ぐっすり",
+    "definition": "Đứa bé đang ngủ say, dù đánh thức thì vẫn không chịu dậy.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%90%E3%81%A3%E3%81%99%E3%82%8A"
+  },
+  {
+    "term": "きちんと",
+    "definition": "\"Hãy thẳng lưng lên và ngồi nghiêm chỉnh.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8D%E3%81%A1%E3%82%93%E3%81%A8"
+  },
+  {
+    "term": "しっかり",
+    "definition": "Việc nắm những cái cơ bản đầu tiên là việc rất quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%97%E3%81%A3%E3%81%8B%E3%82%8A"
+  },
+  {
+    "term": "はっきり",
+    "definition": "Có thể nhìn thấy núi Phú Sĩ một cách rõ ràng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A"
+  },
+  {
+    "term": "じっと",
+    "definition": "Nhìn chằm chằm/ lặng lẽ suy nghĩ/ kiên nhẫn chịu đựng….",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%98%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "そっと",
+    "definition": "Ra khỏi phòng lặng lẽ sao cho không đánh thức những người đang ngủ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%A3%E3%81%A8"
+  },
+  {
+    "term": "別々に",
+    "definition": "\"Hãy gói riêng sô cô la với bánh Cookie cho tôi\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A5%E3%80%85+%E3%81%AB"
+  },
+  {
+    "term": "それぞれ",
+    "definition": "Mỗi người đều đã nói ý kiến của mình.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C"
+  },
+  {
+    "term": "互いに",
+    "definition": "Các anh ấy vừa cổ vũ lẫn nhau vừa tập luyện.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%92+%E3%81%84%E3%81%AB"
+  },
+  {
+    "term": "直接",
+    "definition": "Đối với kí giả làm báo thì việc trực tiếp nghe câu chuyện từ những người liên quan là rất quan trọng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B4%E6%8E%A5"
+  },
+  {
+    "term": "本当に",
+    "definition": "Giành được chức vô địch, thực sự là rất vui.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%AC%E5%BD%93+%E3%81%AB"
+  },
+  {
+    "term": "必ず",
+    "definition": "Tài liệu này ngày mai chắc chắn phải nộp cho tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BF%85+%E3%81%9A"
+  },
+  {
+    "term": "絶対に",
+    "definition": "Năm nay nhất định tôi( sẽ, muốn, phải..) đỗ.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%B6%E5%AF%BE+%E3%81%AB"
+  },
+  {
+    "term": "特に",
+    "definition": "Hoa quả thì thứ gì tôi cũng thích, nhưng đặc biệt thích dưa lưới.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%B9+%E3%81%AB"
+  },
+  {
+    "term": "ただ",
+    "definition": "Đứa trẻ dù có hỏi gì đi nữa thì vẫn chỉ khóc thôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%A0"
+  },
+  {
+    "term": "少なくとも",
+    "definition": "Từ đây đến ga tàu nếu mà đi bộ thì ít nhất cũng phải mất 30 phút.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%91+%E3%81%AA%E3%81%8F%E3%81%A8%E3%82%82"
+  },
+  {
+    "term": "決して",
+    "definition": "\"Chuyện này, tôi quyết sẽ không bao giờ nói cho một người nào khác.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%BA+%E3%81%97%E3%81%A6"
+  },
+  {
+    "term": "少しも",
+    "definition": "Ngày nào tôi cũng vận động vậy mà một chút cân nặng cũng không giảm.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%91+%E3%81%97%E3%82%82"
+  },
+  {
+    "term": "ちっとも",
+    "definition": "\"Hai người kia có vẻ đang hẹn hò đó.\" -\"Ế, tao chẳng biết 1 tí gì luôn.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A1%E3%81%A3%E3%81%A8%E3%82%82"
+  },
+  {
+    "term": "全く",
+    "definition": "Tôi hoàn toàn không biết chuyện Tuấn đã về nước.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%A8+%E3%81%8F"
+  },
+  {
+    "term": "とても",
+    "definition": "Bài báo cáo này viết được quá.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A8%E3%81%A6%E3%82%82"
+  },
+  {
+    "term": "どんなに",
+    "definition": "\"Tại sao lại không liên lạc về hả thằng kia?\"-\"Mày có biết tao đã lo lắng bao nhiêu không hả.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A9%E3%82%93%E3%81%AA%E3%81%AB"
+  },
+  {
+    "term": "また",
+    "definition": "Anh ấy là nhân viên ngân hàng, lại còn là một nhà văn nổi tiếng.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%9F"
+  },
+  {
+    "term": "または",
+    "definition": "\"Tài liệu này thì viết bằng bút mực đen hoặc mực xanh.\"",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%9F%E3%81%AF"
+  },
+  {
+    "term": "それとも",
+    "definition": "\"Ngài uống cà phê hay là uống hồng trà?\".",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8C%E3%81%A8%E3%82%82"
+  },
+  {
+    "term": "つまり",
+    "definition": "Anh ta là con trai của chị gái của bố tôi, nói cách khác là anh em họ của tôi.",
+    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%BE%E3%82%8A"
+  }
+]
