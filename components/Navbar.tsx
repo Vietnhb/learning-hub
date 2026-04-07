@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -144,66 +144,64 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"
+      className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 shadow-md backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/80"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="flex shrink-0 items-center gap-2 whitespace-nowrap text-xl font-bold text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400 lg:text-2xl"
           >
-            <GraduationCap className="w-7 h-7" />
+            <GraduationCap className="h-7 w-7" />
             Learning Hub
           </Link>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 lg:gap-3">
             <Link
               href="/"
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
             >
-              <Home className="w-4 h-4" />
+              <Home className="h-4 w-4" />
               Trang chủ
             </Link>
             <Link
               href="/resources"
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
             >
-              <Library className="w-4 h-4" />
+              <Library className="h-4 w-4" />
               Tài nguyên
             </Link>
             <Link
               href="/courses"
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
             >
-              <BookOpen className="w-4 h-4" />
+              <BookOpen className="h-4 w-4" />
               Khóa học
             </Link>
             <Link
               href="/about"
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
             >
-              <FolderOpen className="w-4 h-4" />
+              <FolderOpen className="h-4 w-4" />
               Giới thiệu
             </Link>
 
             {user && (
-              <>
-                <Link
-                  href="/feedback"
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  Feedback
-                </Link>
-              </>
+              <Link
+                href="/feedback"
+                className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Feedback
+              </Link>
             )}
 
             {isAdmin && (
               <Link
                 href="/admin"
-                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+                className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
               >
-                <LayoutDashboard className="w-4 h-4" />
+                <LayoutDashboard className="h-4 w-4" />
                 Dashboard
               </Link>
             )}
@@ -214,7 +212,7 @@ export default function Navbar() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="icon" className="relative">
-                    <Bell className="w-5 h-5" />
+                    <Bell className="h-5 w-5" />
                     {unreadCount > 0 && (
                       <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold text-white">
                         {unreadCount > 9 ? "9+" : unreadCount}
@@ -263,9 +261,7 @@ export default function Navbar() {
                           )}
                         </div>
                         <div className="min-w-0 flex-1">
-                          <p className="line-clamp-1 text-sm font-medium">
-                            {item.title}
-                          </p>
+                          <p className="line-clamp-1 text-sm font-medium">{item.title}</p>
                           <p className="line-clamp-1 text-xs text-muted-foreground">
                             {item.description}
                           </p>
@@ -278,17 +274,17 @@ export default function Navbar() {
               </DropdownMenu>
             )}
 
-            <div className="ml-4 pl-4 border-l border-gray-300 dark:border-gray-600 dark:border-gray-600">
+            <div className="ml-2 border-l border-gray-300 pl-3 dark:border-gray-600">
               {loading ? (
-                <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <div className="h-8 w-8 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"></div>
               ) : user ? (
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   <Link
                     href="/profile"
-                    className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="flex items-center gap-1.5 text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                   >
-                    <User className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                    <span className="text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400">
+                    <User className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                    <span className="max-w-[120px] truncate whitespace-nowrap font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                       {user.user_metadata?.full_name || user.email}
                     </span>
                   </Link>
@@ -296,9 +292,9 @@ export default function Navbar() {
                     onClick={signOut}
                     variant="outline"
                     size="sm"
-                    className="gap-1 hover:bg-red-50 dark:hover:bg-red-900/20 hover:border-red-300 dark:hover:border-red-700 hover:text-red-600 dark:hover:text-red-400"
+                    className="gap-1 hover:border-red-300 hover:bg-red-50 hover:text-red-600 dark:hover:border-red-700 dark:hover:bg-red-900/20 dark:hover:text-red-400"
                   >
-                    <LogOut className="w-4 h-4" />
+                    <LogOut className="h-4 w-4" />
                     Đăng xuất
                   </Button>
                 </div>
@@ -307,9 +303,9 @@ export default function Navbar() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="gap-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="gap-1 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-700 dark:hover:bg-blue-900/20 dark:hover:text-blue-400"
                   >
-                    <LogIn className="w-4 h-4" />
+                    <LogIn className="h-4 w-4" />
                     Đăng nhập
                   </Button>
                 </Link>
