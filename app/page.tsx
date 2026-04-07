@@ -19,7 +19,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { redirect } from "next/dist/server/api-utils";
 import { useAuth } from "@/contexts/AuthContext";
 import { useResourceFavorites } from "@/hooks/useResourceFavorites";
 
@@ -78,19 +77,29 @@ export default function Home() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
-            className="flex gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" variant="secondary" className="group">
-              Khám phá ngay
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="group min-w-[250px] h-14 text-lg font-semibold bg-white text-gray-900 hover:bg-gray-100"
+            >
+              <Link href="/resources">
+                {"Kh\u00E1m ph\u00E1 ngay"}
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
-              className="bg-white/10 hover:bg-white/20 border-white text-white"
+              className="min-w-[250px] h-14 text-lg font-semibold border-white/70 bg-white/10 text-white hover:bg-white/20 hover:border-white"
             >
-              <Star className="mr-2 w-4 h-4" />
-              {`Tài liệu yêu thích (${favoriteCount})`}
+              <Link href="/resources?favorites=1">
+                <Star className="mr-2 w-5 h-5 text-yellow-300 fill-yellow-300" />
+                {`T\\u00E0i li\\u1EC7u y\\u00EAu th\\u00EDch (${favoriteCount})`}
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

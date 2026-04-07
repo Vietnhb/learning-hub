@@ -11,19 +11,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useResourceFavorites } from "@/hooks/useResourceFavorites";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useResourceFavoriteCounts } from "@/hooks/useResourceFavoriteCounts";
 
 export default function ResourcesPage() {
   const { user } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { favoriteSet, toggleFavorite } = useResourceFavorites(user?.id);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedType, setSelectedType] = useState<string>("all");
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   
   const resources = [
     {
@@ -79,6 +81,10 @@ export default function ResourcesPage() {
   );
   const { counts: favoriteCounts } = useResourceFavoriteCounts(resourceIds);
 
+  useEffect(() => {
+    setShowFavoritesOnly(searchParams.get("favorites") === "1");
+  }, [searchParams]);
+
   // Get unique categories and types
   const categories = useMemo(() => {
     const cats = Array.from(new Set(resources.map(r => r.category)));
@@ -99,18 +105,24 @@ export default function ResourcesPage() {
       
       const matchesCategory = selectedCategory === "all" || resource.category === selectedCategory;
       const matchesType = selectedType === "all" || resource.type === selectedType;
+      const matchesFavorites = !showFavoritesOnly || favoriteSet.has(String(resource.id));
       
-      return matchesSearch && matchesCategory && matchesType;
+      return matchesSearch && matchesCategory && matchesType && matchesFavorites;
     });
-  }, [searchQuery, selectedCategory, selectedType]);
+  }, [searchQuery, selectedCategory, selectedType, showFavoritesOnly, favoriteSet]);
 
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
     setSelectedType("all");
+    setShowFavoritesOnly(false);
   };
 
-  const hasActiveFilters = searchQuery !== "" || selectedCategory !== "all" || selectedType !== "all";
+  const hasActiveFilters =
+    searchQuery !== "" ||
+    selectedCategory !== "all" ||
+    selectedType !== "all" ||
+    showFavoritesOnly;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
@@ -208,6 +220,22 @@ export default function ResourcesPage() {
                   </button>
                 ))}
               </div>
+
+              <div className="h-6 w-px bg-gray-300 dark:bg-gray-600" />
+
+              {/* Favorite Filter */}
+              <button
+                type="button"
+                onClick={() => setShowFavoritesOnly((prev) => !prev)}
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                  showFavoritesOnly
+                    ? "bg-yellow-500 text-white shadow-md"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                }`}
+              >
+                <Star className={`w-4 h-4 ${showFavoritesOnly ? "fill-white text-white" : "text-yellow-500"}`} />
+                Chỉ yêu thích
+              </button>
 
               {/* Clear Filters Button */}
               {hasActiveFilters && (
