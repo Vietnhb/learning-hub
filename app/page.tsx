@@ -98,7 +98,7 @@ export default function Home() {
             >
               <Link href="/resources?favorites=1">
                 <Star className="mr-2 w-5 h-5 text-yellow-300 fill-yellow-300" />
-                {`T\\u00E0i li\\u1EC7u y\\u00EAu th\\u00EDch (${favoriteCount})`}
+                {`T\u00E0i li\u1EC7u y\u00EAu th\u00EDch (${favoriteCount})`}
               </Link>
             </Button>
           </motion.div>
