@@ -1,7 +1,16 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { Bell, CheckCheck, MessageCircle, MessageSquare, User } from "lucide-react";
+import {
+  Bell,
+  CheckCheck,
+  ChevronDown,
+  MessageCircle,
+  MessageSquare,
+  RefreshCcw,
+  ShieldCheck,
+  User,
+} from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   DropdownMenu,
@@ -12,6 +21,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { useFeedback } from "@/hooks/useFeedback";
@@ -31,6 +41,16 @@ const STORAGE_KEY = "admin_notification_seen_ids";
 interface AdminHeaderProps {
   title: string;
   description?: string;
+}
+
+function formatRelativeTime(input: string) {
+  const date = new Date(input);
+  if (Number.isNaN(date.getTime())) return "";
+
+  return new Intl.RelativeTimeFormat("vi", { numeric: "auto" }).format(
+    -Math.round((Date.now() - date.getTime()) / 60000),
+    "minute",
+  );
 }
 
 export default function AdminHeader({ title, description }: AdminHeaderProps) {
@@ -86,7 +106,7 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
       )
-      .slice(0, 8);
+      .slice(0, 10);
   }, [feedback, conversations]);
 
   const unreadCount = notifications.filter(
@@ -96,7 +116,7 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
   const persistSeenIds = (ids: string[]) => {
     setSeenIds(ids);
     if (typeof window !== "undefined") {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids.slice(-200)));
     }
   };
 
@@ -119,46 +139,54 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center gap-4 px-6">
+    <header className="sticky top-0 z-20 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:bg-gray-900/95 dark:supports-[backdrop-filter]:bg-gray-900/80">
+      <div className="flex min-h-16 items-center gap-4 px-4 py-3 md:px-6">
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">{title}</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white md:text-2xl">
+              {title}
+            </h1>
+            <Badge className="rounded-full bg-blue-100 text-blue-700 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-300">
+              <ShieldCheck className="mr-1 h-3.5 w-3.5" />
+              Admin
+            </Badge>
+          </div>
           {description && (
-            <p className="text-sm text-muted-foreground">{description}</p>
+            <p className="mt-0.5 text-sm text-muted-foreground">{description}</p>
           )}
         </div>
 
         <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="relative">
+              <Button variant="outline" size="icon" className="relative rounded-xl">
                 <Bell className="h-5 w-5" />
                 {unreadCount > 0 && (
-                  <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold text-white">
+                  <span className="absolute -right-1.5 -top-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold text-white">
                     {unreadCount > 9 ? "9+" : unreadCount}
                   </span>
                 )}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-80">
-              <DropdownMenuLabel className="flex items-center justify-between">
-                <span>Thông báo</span>
+            <DropdownMenuContent align="end" className="w-[340px] p-0">
+              <DropdownMenuLabel className="flex items-center justify-between px-3 py-2.5">
+                <span className="font-semibold">Thông báo quản trị</span>
                 {notifications.length > 0 && (
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-7 px-2 text-xs"
+                    className="h-7 gap-1 px-2 text-xs"
                     onClick={markAllAsSeen}
                   >
-                    <CheckCheck className="mr-1 h-3.5 w-3.5" />
-                    Đánh dấu đã đọc
+                    <CheckCheck className="h-3.5 w-3.5" />
+                    Đã đọc hết
                   </Button>
                 )}
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
 
               {notifications.length === 0 && (
-                <div className="px-2 py-6 text-center text-sm text-muted-foreground">
+                <div className="px-3 py-8 text-center text-sm text-muted-foreground">
                   Không có thông báo mới
                 </div>
               )}
@@ -169,7 +197,7 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
                 return (
                   <DropdownMenuItem
                     key={item.id}
-                    className="cursor-pointer items-start gap-3 py-3"
+                    className="cursor-pointer items-start gap-3 rounded-none px-3 py-3"
                     onSelect={() => {
                       markOneAsSeen(item.id);
                       router.push(item.href);
@@ -189,9 +217,12 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
                       <p className="line-clamp-1 text-xs text-muted-foreground">
                         {item.description}
                       </p>
+                      <p className="mt-1 text-[11px] text-muted-foreground/80">
+                        {formatRelativeTime(item.createdAt)}
+                      </p>
                     </div>
                     {!isSeen && (
-                      <span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+                      <span className="mt-1.5 h-2 w-2 rounded-full bg-primary"></span>
                     )}
                   </DropdownMenuItem>
                 );
@@ -199,10 +230,12 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
 
               <DropdownMenuSeparator />
               <DropdownMenuItem
+                className="cursor-pointer gap-2 px-3 py-2.5"
                 onSelect={() => {
                   void handleRefresh();
                 }}
               >
+                <RefreshCcw className="h-4 w-4" />
                 Làm mới thông báo
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -210,23 +243,26 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="gap-2">
-                <User className="h-5 w-5" />
-                <span className="hidden md:inline">{user?.email || "Admin"}</span>
+              <Button variant="outline" className="max-w-[260px] gap-2 rounded-xl">
+                <User className="h-4.5 w-4.5" />
+                <span className="truncate text-sm">
+                  {user?.email || "admin@learninghub.local"}
+                </span>
+                <ChevronDown className="h-4 w-4 opacity-70" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuContent align="end" className="w-60">
+              <DropdownMenuLabel>Tài khoản quản trị</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={() => router.push("/profile")}>
-                Profile
+                Hồ sơ cá nhân
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => router.push("/")}>
-                Back to Site
+                Về trang người dùng
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleSignOut} className="text-red-600">
-                Sign Out
+                Đăng xuất
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
