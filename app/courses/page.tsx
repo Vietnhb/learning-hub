@@ -40,7 +40,7 @@ export default function CoursesPage() {
       title: "Tiếng Nhật N5-N3",
       description:
         "Lộ trình học tiếng Nhật từ N5 đến N3 với phương pháp hiện đại",
-      instructor: "Nguyễn Hoàng Bảo Việt",
+      instructor: "みかみさん",
       duration: "60 giờ",
       students: 2100,
       level: "Cơ bản",

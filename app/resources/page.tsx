@@ -12,8 +12,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useState, useMemo } from "react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useResourceFavorites } from "@/hooks/useResourceFavorites";
+import { useRouter } from "next/navigation";
+import { useResourceFavoriteCounts } from "@/hooks/useResourceFavoriteCounts";
 
 export default function ResourcesPage() {
+  const { user } = useAuth();
+  const router = useRouter();
+  const { favoriteSet, toggleFavorite } = useResourceFavorites(user?.id);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedType, setSelectedType] = useState<string>("all");
@@ -65,6 +72,12 @@ export default function ResourcesPage() {
       link: "/resources/SWD392",
     },
   ];
+
+  const resourceIds = useMemo(
+    () => resources.map((resource) => String(resource.id)),
+    [resources],
+  );
+  const { counts: favoriteCounts } = useResourceFavoriteCounts(resourceIds);
 
   // Get unique categories and types
   const categories = useMemo(() => {
@@ -261,10 +274,37 @@ export default function ResourcesPage() {
                       type="button"
                       variant="ghost"
                       size="icon"
-                      aria-label="Đánh dấu yêu thích"
-                      title="Đánh dấu yêu thích"
+                      aria-label={
+                        favoriteSet.has(String(resource.id))
+                          ? "Bỏ yêu thích"
+                          : "Đánh dấu yêu thích"
+                      }
+                      title={
+                        favoriteSet.has(String(resource.id))
+                          ? "Bỏ yêu thích"
+                          : "Đánh dấu yêu thích"
+                      }
+                      onClick={async () => {
+                        if (!user) {
+                          router.push("/auth/login?redirect=/resources");
+                          return;
+                        }
+
+                        const { success, error } = await toggleFavorite(
+                          String(resource.id),
+                        );
+                        if (!success) {
+                          alert(error || "Không thể cập nhật yêu thích");
+                        }
+                      }}
                     >
-                      <Star className="w-5 h-5 text-yellow-500" />
+                      <Star
+                        className={`w-5 h-5 ${
+                          favoriteSet.has(String(resource.id))
+                            ? "fill-yellow-400 text-yellow-500"
+                            : "text-gray-400"
+                        }`}
+                      />
                     </Button>
                   </div>
                 </CardHeader>
@@ -277,7 +317,7 @@ export default function ResourcesPage() {
                       </span>
                       <span className="flex items-center gap-1">
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        {resource.rating}
+                        {favoriteCounts[String(resource.id)] || 0}
                       </span>
                     </div>
                     <div className="flex gap-2">

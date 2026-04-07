@@ -20,8 +20,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { redirect } from "next/dist/server/api-utils";
+import { useAuth } from "@/contexts/AuthContext";
+import { useResourceFavorites } from "@/hooks/useResourceFavorites";
 
 export default function Home() {
+  const { user } = useAuth();
+  const { favoriteSet } = useResourceFavorites(user?.id);
+  const favoriteCount = favoriteSet.size;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -84,7 +90,7 @@ export default function Home() {
               className="bg-white/10 hover:bg-white/20 border-white text-white"
             >
               <Star className="mr-2 w-4 h-4" />
-              Tài liệu yêu thích
+              {`Tài liệu yêu thích (${favoriteCount})`}
             </Button>
           </motion.div>
         </motion.div>

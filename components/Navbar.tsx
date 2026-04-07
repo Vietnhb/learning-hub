@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  Bell,
   Home,
   BookOpen,
   Library,
@@ -13,16 +14,32 @@ import {
   LogIn,
   LayoutDashboard,
   MessageSquare,
+  MessagesSquare,
+  CheckCheck,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { isUserAdmin } from "@/lib/authHelper";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useRouter } from "next/navigation";
+import { useUserNotifications } from "@/hooks/useUserNotifications";
+import { supabase } from "@/lib/supabase";
 
 export default function Navbar() {
   const { user, loading, signOut } = useAuth();
+  const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
+  const [hiddenIds, setHiddenIds] = useState<string[]>([]);
+  const { notifications } = useUserNotifications(user?.id);
 
   useEffect(() => {
     let mounted = true;
@@ -37,12 +54,90 @@ export default function Navbar() {
       if (mounted) setIsAdmin(adminStatus);
     }
 
-    checkAdmin();
+    void checkAdmin();
 
     return () => {
       mounted = false;
     };
   }, [user]);
+
+  useEffect(() => {
+    if (!user?.id) {
+      setHiddenIds([]);
+      return;
+    }
+
+    const raw = window.localStorage.getItem(
+      `user_notification_hidden_ids:${user.id}`,
+    );
+    if (!raw) {
+      setHiddenIds([]);
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        setHiddenIds(parsed.filter((item) => typeof item === "string"));
+      }
+    } catch {
+      setHiddenIds([]);
+    }
+  }, [user?.id]);
+
+  const persistHiddenIds = (ids: string[]) => {
+    const deduped = Array.from(new Set(ids)).slice(-200);
+    setHiddenIds(deduped);
+    if (user?.id) {
+      window.localStorage.setItem(
+        `user_notification_hidden_ids:${user.id}`,
+        JSON.stringify(deduped),
+      );
+    }
+  };
+
+  const visibleNotifications = useMemo(
+    () => notifications.filter((item) => !hiddenIds.includes(item.id)),
+    [notifications, hiddenIds],
+  );
+
+  const dismissNotification = async (id: string) => {
+    if (hiddenIds.includes(id)) return;
+    persistHiddenIds([...hiddenIds, id]);
+
+    if (!user?.id || !id.startsWith("message:")) return;
+
+    const messageId = id.replace("message:", "");
+    await supabase
+      .from("messages")
+      .update({ is_read: true })
+      .eq("id", messageId)
+      .eq("receiver_id", user.id);
+  };
+
+  const markAllAsSeen = () => {
+    const toHide = visibleNotifications.map((item) => item.id);
+    persistHiddenIds([...hiddenIds, ...toHide]);
+
+    if (!user?.id) return;
+
+    const messageIds = visibleNotifications
+      .filter((item) => item.type === "message")
+      .map((item) => item.id.replace("message:", ""));
+
+    if (messageIds.length > 0) {
+      void supabase
+        .from("messages")
+        .update({ is_read: true })
+        .in("id", messageIds)
+        .eq("receiver_id", user.id);
+    }
+  };
+
+  const unreadCount = useMemo(
+    () => visibleNotifications.filter((item) => item.isUnread).length,
+    [visibleNotifications],
+  );
 
   return (
     <motion.nav
@@ -115,6 +210,74 @@ export default function Navbar() {
 
             <ThemeToggle />
 
+            {user && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="relative">
+                    <Bell className="w-5 h-5" />
+                    {unreadCount > 0 && (
+                      <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold text-white">
+                        {unreadCount > 9 ? "9+" : unreadCount}
+                      </span>
+                    )}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-80">
+                  <DropdownMenuLabel className="flex items-center justify-between">
+                    <span>Thông báo</span>
+                    {visibleNotifications.length > 0 && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-7 px-2 text-xs"
+                        onClick={markAllAsSeen}
+                      >
+                        <CheckCheck className="mr-1 h-3.5 w-3.5" />
+                        Đánh dấu đã đọc
+                      </Button>
+                    )}
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+
+                  {visibleNotifications.length === 0 && (
+                    <div className="px-2 py-6 text-center text-sm text-muted-foreground">
+                      Chưa có thông báo mới
+                    </div>
+                  )}
+
+                  {visibleNotifications.map((item) => {
+                    return (
+                      <DropdownMenuItem
+                        key={item.id}
+                        className="cursor-pointer items-start gap-3 py-3"
+                        onSelect={async () => {
+                          await dismissNotification(item.id);
+                          router.push(item.href);
+                        }}
+                      >
+                        <div className="mt-0.5">
+                          {item.type === "feedback" ? (
+                            <MessageSquare className="h-4 w-4 text-blue-500" />
+                          ) : (
+                            <MessagesSquare className="h-4 w-4 text-emerald-500" />
+                          )}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="line-clamp-1 text-sm font-medium">
+                            {item.title}
+                          </p>
+                          <p className="line-clamp-1 text-xs text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </div>
+                        <span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
+
             <div className="ml-4 pl-4 border-l border-gray-300 dark:border-gray-600 dark:border-gray-600">
               {loading ? (
                 <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
@@ -136,7 +299,7 @@ export default function Navbar() {
                     className="gap-1 hover:bg-red-50 dark:hover:bg-red-900/20 hover:border-red-300 dark:hover:border-red-700 hover:text-red-600 dark:hover:text-red-400"
                   >
                     <LogOut className="w-4 h-4" />
-                    Ðăng xuất
+                    Đăng xuất
                   </Button>
                 </div>
               ) : (
@@ -147,7 +310,7 @@ export default function Navbar() {
                     className="gap-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     <LogIn className="w-4 h-4" />
-                    Ðăng nhập
+                    Đăng nhập
                   </Button>
                 </Link>
               )}
