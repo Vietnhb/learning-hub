@@ -553,6 +553,13 @@ export default function FsoftTrainingVocabularyPage() {
                 >
                   Lật thẻ
                 </Button>
+                <a
+                  href={`https://mazii.net/vi-VN/search/kanji/javi/${encodeURIComponent(current.term)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline">Giải nghĩa</Button>
+                </a>
                 <Button
                   variant={isReadingBlurred ? "outline" : "default"}
                   onClick={() => setIsReadingBlurred((prev) => !prev)}
