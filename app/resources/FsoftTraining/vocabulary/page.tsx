@@ -464,10 +464,6 @@ export default function FsoftTrainingVocabularyPage() {
                             </p>
                           )}
                         </div>
-
-                        <p className="text-sm text-gray-500 dark:text-gray-300">
-                          Nhấn thẻ để lật xem nghĩa
-                        </p>
                       </div>
 
                       {current.image && (
