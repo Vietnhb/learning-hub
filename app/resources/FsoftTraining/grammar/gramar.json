@@ -1,3 +1,190 @@
 {
-  "lessons": []
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Bài 1",
+      "grammar": [
+        {
+          "id": "vmasu-hajimeru-owaru",
+          "pattern": "V(ます-bỏ) + 始める・終わる",
+          "meaning": "Bắt đầu làm một việc gì đó. Kết thúc (xong) một việc gì đó.",
+          "note": "Dùng động từ thể ます, bỏ ます rồi nối 始める / 終わる. Ví dụ: 食べます → 食べ始める, 読みます → 読み終わる.",
+          "examples": [
+            {
+              "jp": "日本語を習い\"\"始めたのは半年前です\"\"。",
+              "vi": "Tôi bắt đầu học tiếng Nhật nửa năm trước."
+            },
+            {
+              "jp": "桜の花が咲き\"\"始めましたね\"\"。",
+              "vi": "Hoa anh đào bắt đầu nở rồi nhỉ."
+            },
+            {
+              "jp": "彼、遅いですね。食べ\"\"始めましょうか\"\"。",
+              "vi": "Anh ta lâu quá nhỉ. Hay là bắt đầu ăn đi."
+            },
+            {
+              "jp": "友達の子どもは１歳になった時、歩き\"\"始めた\"\"。",
+              "vi": "Con ông bạn tôi lúc lên 1 tuổi đã bắt đầu đi rồi."
+            },
+            {
+              "jp": "今で書き\"\"始めないでください\"\"。",
+              "vi": "Vui lòng chưa bắt đầu viết vội."
+            },
+            {
+              "jp": "夜が開けると、間も無く小鳥たちが鳴き\"\"始める\"\"。",
+              "vi": "Bóng tối mở ra, chẳng mấy chốc những con chim nhỏ sẽ bắt đầu cất tiếng kêu."
+            },
+            {
+              "jp": "その本読み\"\"終わったら\"\"、貸してもらえませんか。",
+              "vi": "Cuốn sách đó, lúc nào đọc xong cho mình mượn được không?"
+            },
+            {
+              "jp": "晩ご飯を食べ\"\"終わってから\"\"、皆でゲームをした。",
+              "vi": "Sau khi ăn tối xong thì mọi người đi cùng chơi game."
+            },
+            {
+              "jp": "書き\"\"終わったら\"\"、私に見せてください。",
+              "vi": "Viết xong thì đưa tôi xem nhé."
+            },
+            {
+              "jp": "もし、今学期中にこの本を読み\"\"終われば\"\"、次にこの本を読みます。",
+              "vi": "Nếu trong học kỳ này đọc xong cuốn sách này thì sẽ đọc cuốn tiếp theo."
+            }
+          ]
+        },
+        {
+          "id": "vru-vnai-youni-iu",
+          "pattern": "Vる / Vない + ように + 言う・言われる・注意する・頼む",
+          "meaning": "Truyền đạt lại lời dặn, yêu cầu, nhắc nhở hoặc mệnh lệnh một cách gián tiếp.(của ngôi t3 một cách nhẹ nhàng)",
+          "note": "Dùng ように sau động từ dạng từ điển (Vる) hoặc phủ định (Vない). Thường gặp: ように言う, ように言われる, ように注意する, ように頼む.",
+          "examples": [
+            {
+              "jp": "私は佐藤さんに、会議の前に資料をコピーしておく\"\"ように頼まれました\"\"。",
+              "vi": "Tôi được anh Sato nhờ photo tài liệu trước buổi họp."
+            },
+            {
+              "jp": "大学の前に先生のところへ行く\"\"ように言われた\"\"。",
+              "vi": "Tôi được dặn là hãy đến chỗ thầy trước cổng trường đại học."
+            },
+            {
+              "jp": "お兄さんにすぐ家に帰る\"\"ように言われました\"\"。",
+              "vi": "Tôi được anh trai nhắc là phải lập tức về nhà."
+            },
+            {
+              "jp": "ここへ来る\"\"ように言われました\"\"。",
+              "vi": "Tôi được yêu cầu phải đến đây."
+            },
+            {
+              "jp": "木村さんにすぐ本を返す\"\"ように言ってください\"\"。",
+              "vi": "Hãy nói với Kimura là trả sách lại ngay."
+            },
+            {
+              "jp": "部長にもっと静かにする\"\"ように言いましょう\"\"。",
+              "vi": "Hãy nói với trưởng bộ phận là giữ yên lặng hơn một chút."
+            },
+            {
+              "jp": "先輩にこれからは遅刻しない\"\"ように注意しておきました\"\"。",
+              "vi": "Tôi đã nhắc senpai là từ giờ chú ý đừng đến muộn nữa."
+            },
+            {
+              "jp": "隣の人に、ステレオの音量を下げてもらう\"\"ように頼んだ\"\"。",
+              "vi": "Tôi đã nhờ người bên cạnh giảm âm lượng dàn stereo."
+            }
+          ]
+        },
+        {
+          "id": "toiu-nominalization",
+          "pattern": "Thể thông thường + という + N / こと / もの",
+          "meaning": "Danh từ hóa mệnh đề/câu trước という để làm chủ ngữ hoặc đối tượng cho toàn câu.",
+          "note": "Mẫu này dùng để trích lại một nội dung/sự việc như một khái niệm rồi tiếp tục nói về nó.",
+          "examples": [
+            {
+              "jp": "彼が有名な音楽家だ\"\"ということ\"\"はあまり知られていない。",
+              "vi": "Chuyện anh ấy là một nhạc sĩ nổi tiếng thì không được biết đến nhiều."
+            },
+            {
+              "jp": "最近は大学を卒業しても就職が難しい\"\"という話\"\"を聞きました。",
+              "vi": "Gần đây tôi có nghe chuyện là tốt nghiệp đại học rồi mà xin việc vẫn khó."
+            },
+            {
+              "jp": "背が伸びる\"\"ということ\"\"は、骨が伸びる\"\"ということ\"\"です。",
+              "vi": "Việc cao lên nghĩa là việc xương phát triển dài ra."
+            },
+            {
+              "jp": "お金は要りません。無料\"\"ということ\"\"です。",
+              "vi": "Không cần tiền. Nghĩa là miễn phí."
+            },
+            {
+              "jp": "最初のオリンピックがアテネだった\"\"ということ\"\"は今まで知らなかった。",
+              "vi": "Tôi đến giờ mới biết chuyện kỳ Olympic đầu tiên là ở Athens."
+            },
+            {
+              "jp": "日本語のクラスで日本ではクリスマスよりお正月の方が大事だ\"\"ということ\"\"を習った。",
+              "vi": "Trong lớp tiếng Nhật, tôi học được rằng ở Nhật thì năm mới quan trọng hơn Giáng sinh."
+            },
+            {
+              "jp": "小林さんがバンコクへ出張する\"\"ということ\"\"が正式に決まった。",
+              "vi": "Việc anh Kobayashi đi công tác Bangkok đã được quyết định chính thức."
+            }
+          ]
+        },
+        {
+          "id": "darou-to-omou",
+          "pattern": "Thể thông thường + だろうと思う",
+          "meaning": "Có lẽ là / Tôi nghĩ là (~).",
+          "note": "Diễn tả phỏng đoán hoặc nhận định chủ quan của người nói trong văn phong thông thường.",
+          "examples": [
+            {
+              "jp": "たぶんこの雨は１時間ぐらいでやむ\"\"だろうと思います\"\"。",
+              "vi": "Có lẽ cơn mưa này sẽ tạnh trong khoảng 1 tiếng nữa."
+            },
+            {
+              "jp": "外国で一人暮らしをするのはきっとさびしい\"\"だろうと思う\"\"。",
+              "vi": "Tôi nghĩ sống một mình ở nước ngoài chắc sẽ buồn lắm."
+            },
+            {
+              "jp": "沖縄は暑い\"\"だろうと思っていた\"\"が、毎日雨で寒くて泳げなかった。",
+              "vi": "Tôi cứ nghĩ Okinawa chắc nóng, nhưng ngày nào cũng mưa và lạnh nên không bơi được."
+            },
+            {
+              "jp": "この実験にはあと２、３週間はかかる\"\"だろうと思います\"\"。",
+              "vi": "Tôi nghĩ thí nghiệm này sẽ còn mất thêm khoảng 2-3 tuần."
+            },
+            {
+              "jp": "今度の試験は難しい\"\"だろうと思っていた\"\"が、意外に簡単だった。",
+              "vi": "Tôi cứ nghĩ kỳ thi lần này chắc khó, nhưng bất ngờ là khá dễ."
+            },
+            {
+              "jp": "タクシーならすぐ着く\"\"だろうと思った\"\"が２時間もかかってしまった。",
+              "vi": "Tôi nghĩ đi taxi thì tới ngay, nhưng cuối cùng lại mất tận 2 tiếng."
+            }
+          ]
+        },
+        {
+          "id": "nasasouda",
+          "pattern": "TT-い: くな + さそうだ / TT-な・N: じゃな + さそうだ",
+          "meaning": "Không có vẻ ~ / Trông không ~ lắm.",
+          "note": "Dùng khi nhìn/cảm nhận rồi phỏng đoán rằng không ~.",
+          "examples": [
+            {
+              "jp": "このカレーはあまり辛く\"\"なさそう\"\"ですね。",
+              "vi": "Món cà ri này có vẻ không cay lắm nhỉ."
+            },
+            {
+              "jp": "この仕事はそんなに大変じゃ\"\"なさそう\"\"だ。",
+              "vi": "Công việc này có vẻ không vất vả đến mức vậy."
+            },
+            {
+              "jp": "この電子辞書、安いけどあまりかわいくないかなあ。でも、性能は悪く\"\"なさそう\"\"よ。",
+              "vi": "Cái từ điển điện tử này rẻ đấy nhưng không đẹp cho lắm. Nhưng tính năng thì có vẻ không tệ lắm."
+            },
+            {
+              "jp": "Ｌサイズがあるかどうか、あの人に聞いてみようか。でも、あの人はお店の人じゃ\"\"なさそう\"\"だよ。",
+              "vi": "Hỏi thử người kia xem có size L hay không. Nhưng người đó có vẻ không phải nhân viên cửa hàng."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
