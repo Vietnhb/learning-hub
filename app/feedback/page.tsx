@@ -32,6 +32,21 @@ export default function FeedbackPage() {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const categoryLabel: Record<FeedbackCategory, string> = {
+    bug: "Lỗi",
+    feature: "Tính năng",
+    improvement: "Cải thiện",
+    general: "Chung",
+    other: "Khác",
+  };
+
+  const statusLabel: Record<string, string> = {
+    pending: "Đang chờ xử lý",
+    in_progress: "Đang xử lý",
+    resolved: "Đã giải quyết",
+    closed: "Đã đóng",
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -55,10 +70,9 @@ export default function FeedbackPage() {
       setMessage("");
       setCategory("general");
       refetch();
-
       setTimeout(() => setSuccess(false), 5000);
     } else {
-      alert(error || "Failed to submit feedback");
+      alert(error || "Gửi phản hồi thất bại");
     }
 
     setSubmitting(false);
@@ -69,11 +83,11 @@ export default function FeedbackPage() {
       <div className="container max-w-4xl mx-auto py-12 px-4">
         <Alert>
           <AlertDescription>
-            Please{" "}
+            Vui lòng{" "}
             <a href="/auth/login" className="underline">
-              login
+              đăng nhập
             </a>{" "}
-            to submit feedback.
+            để gửi phản hồi.
           </AlertDescription>
         </Alert>
       </div>
@@ -83,27 +97,27 @@ export default function FeedbackPage() {
   return (
     <div className="container max-w-4xl mx-auto py-12 px-4 space-y-8">
       <div>
-        <h1 className="text-3xl font-bold">Feedback & Suggestions</h1>
+        <h1 className="text-3xl font-bold">Phản Hồi & Góp Ý</h1>
         <p className="text-muted-foreground mt-2">
-          We value your feedback! Let us know how we can improve.
+          Chúng tôi trân trọng đóng góp của bạn. Hãy cho chúng tôi biết điều cần
+          cải thiện.
         </p>
       </div>
 
-      {/* Submit Form */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <MessageSquare className="h-5 w-5" />
-            Submit New Feedback
+            Gửi Phản Hồi Mới
           </CardTitle>
           <CardDescription>
-            Tell us about bugs, feature requests, or general improvements
+            Chia sẻ lỗi, đề xuất tính năng hoặc góp ý cải thiện.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="category">Category</Label>
+              <Label htmlFor="category">Danh mục</Label>
               <div className="flex gap-2 mt-2 flex-wrap">
                 {(
                   [
@@ -121,19 +135,19 @@ export default function FeedbackPage() {
                     size="sm"
                     onClick={() => setCategory(cat)}
                   >
-                    {cat}
+                    {categoryLabel[cat]}
                   </Button>
                 ))}
               </div>
             </div>
 
             <div>
-              <Label htmlFor="subject">Subject</Label>
+              <Label htmlFor="subject">Tiêu đề</Label>
               <Input
                 id="subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                placeholder="Brief description of your feedback"
+                placeholder="Mô tả ngắn gọn nội dung phản hồi"
                 required
                 minLength={3}
                 maxLength={200}
@@ -142,19 +156,19 @@ export default function FeedbackPage() {
             </div>
 
             <div>
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message">Nội dung</Label>
               <Textarea
                 id="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Provide detailed information about your feedback"
+                placeholder="Vui lòng cung cấp thông tin chi tiết"
                 required
                 minLength={10}
                 maxLength={5000}
                 className="mt-2 min-h-[150px]"
               />
               <p className="text-xs text-muted-foreground mt-1">
-                {message.length}/5000 characters
+                {message.length}/5000 ký tự
               </p>
             </div>
 
@@ -162,18 +176,18 @@ export default function FeedbackPage() {
               <Alert className="bg-green-50 dark:bg-green-900/20 border-green-200">
                 <CheckCircle2 className="h-4 w-4 text-green-600" />
                 <AlertDescription className="text-green-800 dark:text-green-400">
-                  Thank you! Your feedback has been submitted successfully.
+                  Cảm ơn bạn! Phản hồi đã được gửi thành công.
                 </AlertDescription>
               </Alert>
             )}
 
             <Button type="submit" disabled={submitting} className="w-full">
               {submitting ? (
-                <>Submitting...</>
+                <>Đang gửi...</>
               ) : (
                 <>
                   <Send className="mr-2 h-4 w-4" />
-                  Submit Feedback
+                  Gửi phản hồi
                 </>
               )}
             </Button>
@@ -181,12 +195,11 @@ export default function FeedbackPage() {
         </CardContent>
       </Card>
 
-      {/* My Feedback History */}
       <Card>
         <CardHeader>
-          <CardTitle>My Feedback History</CardTitle>
+          <CardTitle>Lịch Sử Phản Hồi</CardTitle>
           <CardDescription>
-            Track the status of your submissions
+            Theo dõi trạng thái các phản hồi đã gửi
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -196,7 +209,7 @@ export default function FeedbackPage() {
             </div>
           ) : feedback.length === 0 ? (
             <p className="text-center text-muted-foreground py-8">
-              No feedback submitted yet
+              Bạn chưa gửi phản hồi nào
             </p>
           ) : (
             <div className="space-y-4">
@@ -212,7 +225,9 @@ export default function FeedbackPage() {
                         {item.message}
                       </p>
                       <div className="flex items-center gap-2 mt-2 flex-wrap">
-                        <Badge variant="outline">{item.category}</Badge>
+                        <Badge variant="outline">
+                          {categoryLabel[item.category]}
+                        </Badge>
                         <Badge
                           variant={
                             item.status === "pending"
@@ -222,16 +237,18 @@ export default function FeedbackPage() {
                                 : "info"
                           }
                         >
-                          {item.status}
+                          {statusLabel[item.status] || item.status}
                         </Badge>
                         <span className="text-xs text-muted-foreground">
-                          {new Date(item.created_at).toLocaleDateString()}
+                          {new Date(item.created_at).toLocaleDateString(
+                            "vi-VN",
+                          )}
                         </span>
                       </div>
                       {item.admin_reply && (
                         <div className="mt-3 rounded bg-muted p-3">
                           <p className="text-xs font-medium mb-1">
-                            Admin Reply:
+                            Phản hồi từ quản trị viên:
                           </p>
                           <p className="text-sm">{item.admin_reply}</p>
                         </div>

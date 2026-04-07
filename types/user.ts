@@ -3,6 +3,7 @@ export interface User {
   email: string;
   full_name: string;
   role_id: number;
+  is_banned: boolean;
   date_of_birth: string | null;
   created_at: string;
 }

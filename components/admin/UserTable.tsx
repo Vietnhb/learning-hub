@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,8 +30,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { MoreHorizontal, Shield, User, Trash2 } from "lucide-react";
-import { updateUserRole, deleteUser } from "@/lib/adminService";
+import { MoreHorizontal, Shield, User, Trash2, Ban, Pencil } from "lucide-react";
+import {
+  updateUserRole,
+  deleteUser,
+  adminUpdateUserProfile,
+  setUserBanStatus,
+} from "@/lib/adminService";
 
 interface UserTableProps {
   users: UserWithRole[];
@@ -39,6 +46,9 @@ interface UserTableProps {
 export default function UserTable({ users, onUpdate }: UserTableProps) {
   const [selectedUser, setSelectedUser] = useState<UserWithRole | null>(null);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [editDialogOpen, setEditDialogOpen] = useState(false);
+  const [editFullName, setEditFullName] = useState("");
+  const [editDateOfBirth, setEditDateOfBirth] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleRoleChange = async (userId: string, newRoleId: number) => {
@@ -69,6 +79,45 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
     setLoading(false);
   };
 
+  const openEditDialog = (user: UserWithRole) => {
+    setSelectedUser(user);
+    setEditFullName(user.full_name || "");
+    setEditDateOfBirth(user.date_of_birth || "");
+    setEditDialogOpen(true);
+  };
+
+  const handleUpdateProfile = async () => {
+    if (!selectedUser) return;
+
+    setLoading(true);
+    const { success, error } = await adminUpdateUserProfile(
+      selectedUser.id,
+      editFullName.trim(),
+      editDateOfBirth || null,
+    );
+
+    if (success) {
+      setEditDialogOpen(false);
+      setSelectedUser(null);
+      onUpdate();
+    } else {
+      alert(error || "Failed to update user profile");
+    }
+    setLoading(false);
+  };
+
+  const handleBanToggle = async (user: UserWithRole) => {
+    setLoading(true);
+    const { success, error } = await setUserBanStatus(user.id, !user.is_banned);
+
+    if (success) {
+      onUpdate();
+    } else {
+      alert(error || "Failed to update user ban status");
+    }
+    setLoading(false);
+  };
+
   return (
     <>
       <div className="rounded-md border">
@@ -78,6 +127,7 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
               <TableHead>Email</TableHead>
               <TableHead>Full Name</TableHead>
               <TableHead>Role</TableHead>
+              <TableHead>Status</TableHead>
               <TableHead>Date of Birth</TableHead>
               <TableHead>Created At</TableHead>
               <TableHead className="text-right">Actions</TableHead>
@@ -86,7 +136,7 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
           <TableBody>
             {users.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={6} className="text-center py-8">
+                <TableCell colSpan={7} className="text-center py-8">
                   <p className="text-muted-foreground">No users found</p>
                 </TableCell>
               </TableRow>
@@ -108,6 +158,11 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
                         <User className="mr-1 h-3 w-3" />
                       )}
                       {user.role_name}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant={user.is_banned ? "destructive" : "secondary"}>
+                      {user.is_banned ? "Banned" : "Active"}
                     </Badge>
                   </TableCell>
                   <TableCell>
@@ -139,6 +194,22 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
                           disabled={user.role_id === 2 || loading}
                         >
                           Make User
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem
+                          onClick={() => openEditDialog(user)}
+                          disabled={loading}
+                        >
+                          <Pencil className="mr-2 h-4 w-4" />
+                          Edit Profile
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => handleBanToggle(user)}
+                          className={user.is_banned ? "text-green-600" : "text-amber-600"}
+                          disabled={loading}
+                        >
+                          <Ban className="mr-2 h-4 w-4" />
+                          {user.is_banned ? "Unban User" : "Ban User"}
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem
@@ -187,6 +258,52 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
               disabled={loading}
             >
               {loading ? "Deleting..." : "Delete"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Edit User Dialog */}
+      <Dialog open={editDialogOpen} onOpenChange={setEditDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Edit User Profile</DialogTitle>
+            <DialogDescription>
+              Update profile information for <strong>{selectedUser?.email}</strong>.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-2">
+            <div className="space-y-2">
+              <Label htmlFor="admin-edit-full-name">Full Name</Label>
+              <Input
+                id="admin-edit-full-name"
+                value={editFullName}
+                onChange={(e) => setEditFullName(e.target.value)}
+                placeholder="Nguyen Van A"
+                disabled={loading}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="admin-edit-dob">Date of Birth</Label>
+              <Input
+                id="admin-edit-dob"
+                type="date"
+                value={editDateOfBirth}
+                onChange={(e) => setEditDateOfBirth(e.target.value)}
+                disabled={loading}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => setEditDialogOpen(false)}
+              disabled={loading}
+            >
+              Cancel
+            </Button>
+            <Button onClick={handleUpdateProfile} disabled={loading}>
+              {loading ? "Saving..." : "Save changes"}
             </Button>
           </DialogFooter>
         </DialogContent>

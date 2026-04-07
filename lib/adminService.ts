@@ -62,6 +62,36 @@ export async function updateUserRole(
 }
 
 /**
+ * Update user profile fields (Admin only)
+ */
+export async function adminUpdateUserProfile(
+  userId: string,
+  fullName: string,
+  dateOfBirth: string | null,
+): Promise<{ success: boolean; error: string | null }> {
+  try {
+    const { error } = await supabase.rpc("admin_update_user_profile", {
+      target_user_id: userId,
+      new_full_name: fullName,
+      new_date_of_birth: dateOfBirth,
+    });
+
+    if (error) {
+      console.error("Admin update user profile error:", error);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true, error: null };
+  } catch (err) {
+    console.error("Admin update user profile exception:", err);
+    return {
+      success: false,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+/**
  * Delete user (Admin only)
  */
 export async function deleteUser(
@@ -80,6 +110,34 @@ export async function deleteUser(
     return { success: true, error: null };
   } catch (err) {
     console.error("Delete user exception:", err);
+    return {
+      success: false,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+/**
+ * Ban or unban user (Admin only)
+ */
+export async function setUserBanStatus(
+  userId: string,
+  banned: boolean,
+): Promise<{ success: boolean; error: string | null }> {
+  try {
+    const { error } = await supabase.rpc("admin_set_user_ban_status", {
+      target_user_id: userId,
+      ban_status: banned,
+    });
+
+    if (error) {
+      console.error("Set user ban status error:", error);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true, error: null };
+  } catch (err) {
+    console.error("Set user ban status exception:", err);
     return {
       success: false,
       error: err instanceof Error ? err.message : "Unknown error",

@@ -29,18 +29,41 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Kiểm tra session hiện tại
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
+    const enforceBanStatus = async (nextUser: User | null) => {
+      if (!nextUser) {
+        setUser(null);
+        setLoading(false);
+        return;
+      }
+
+      const { data } = await supabase
+        .from("users")
+        .select("is_banned")
+        .eq("id", nextUser.id)
+        .single();
+
+      if (data?.is_banned) {
+        await supabase.auth.signOut();
+        setUser(null);
+        setLoading(false);
+        if (typeof window !== "undefined") {
+          window.location.replace("/auth/login?error=banned");
+        }
+        return;
+      }
+
+      setUser(nextUser);
       setLoading(false);
+    };
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      enforceBanStatus(session?.user ?? null);
     });
 
-    // Lắng nghe thay đổi auth state
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
+      enforceBanStatus(session?.user ?? null);
     });
 
     return () => subscription.unsubscribe();
@@ -57,3 +80,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     </AuthContext.Provider>
   );
 }
+

@@ -22,6 +22,14 @@ export async function getOrCreateConversation(): Promise<{
       return { data: null, error: "User not authenticated" };
     }
 
+    const { data: fallbackAdmin } = await supabase
+      .from("users")
+      .select("id")
+      .eq("role_id", 1)
+      .order("created_at", { ascending: true })
+      .limit(1)
+      .maybeSingle();
+
     // Try to get existing conversation
     const { data: existing, error: fetchError } = await supabase
       .from("conversations")
@@ -30,6 +38,17 @@ export async function getOrCreateConversation(): Promise<{
       .single();
 
     if (existing) {
+      if (!existing.admin_id && fallbackAdmin?.id) {
+        const { data: updatedConv } = await supabase
+          .from("conversations")
+          .update({ admin_id: fallbackAdmin.id })
+          .eq("id", existing.id)
+          .select("*")
+          .single();
+
+        return { data: updatedConv || existing, error: null };
+      }
+
       return { data: existing, error: null };
     }
 
@@ -38,6 +57,7 @@ export async function getOrCreateConversation(): Promise<{
       .from("conversations")
       .insert({
         user_id: user.id,
+        admin_id: fallbackAdmin?.id || null,
       })
       .select()
       .single();

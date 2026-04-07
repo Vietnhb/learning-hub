@@ -67,6 +67,7 @@ export interface UserWithRole {
   full_name: string;
   role_id: number;
   role_name: string;
+  is_banned: boolean;
   date_of_birth: string | null;
   created_at: string;
 }

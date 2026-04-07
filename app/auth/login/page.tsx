@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
+import { Mail, Lock, AlertCircle, Loader2, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
 import { getAuthRedirectUrls } from "@/lib/auth-config";
 import { validateEmail, validatePassword } from "@/lib/validation";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import { Mail, Lock, AlertCircle, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,6 +20,7 @@ import {
 
 export default function LoginPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -31,13 +32,18 @@ export default function LoginPage() {
     60,
   );
 
+  useEffect(() => {
+    if (searchParams.get("error") === "banned") {
+      setError("Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.");
+    }
+  }, [searchParams]);
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setLoading(true);
     setNeedsVerification(false);
 
-    // Validation
     const emailError = validateEmail(email);
     if (emailError) {
       setError(emailError);
@@ -53,25 +59,19 @@ export default function LoginPage() {
     }
 
     try {
-      const { data, error: signInError } =
-        await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
       if (signInError) {
-        // Kiểm tra nếu lỗi là do email chưa xác nhận
         if (signInError.message.includes("Email not confirmed")) {
           setNeedsVerification(true);
-          setError(
-            "Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.",
-          );
+          setError("Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.");
         } else if (signInError.message.includes("Invalid login credentials")) {
           setError("Email hoặc mật khẩu không đúng. Vui lòng thử lại.");
         } else if (signInError.message.includes("Email not found")) {
-          setError(
-            "Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.",
-          );
+          setError("Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.");
         } else {
           setError(signInError.message || "Đăng nhập thất bại");
         }
@@ -79,7 +79,6 @@ export default function LoginPage() {
         return;
       }
 
-      // Kiểm tra xem email đã được xác nhận chưa
       if (data.user && !data.user.email_confirmed_at) {
         setNeedsVerification(true);
         setError("Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.");
@@ -88,7 +87,19 @@ export default function LoginPage() {
         return;
       }
 
-      // Đăng nhập thành công
+      const { data: userRow } = await supabase
+        .from("users")
+        .select("is_banned")
+        .eq("id", data.user.id)
+        .single();
+
+      if (userRow?.is_banned) {
+        await supabase.auth.signOut();
+        setError("Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.");
+        setLoading(false);
+        return;
+      }
+
       setLoading(false);
       router.push("/");
       router.refresh();
@@ -148,7 +159,6 @@ export default function LoginPage() {
 
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
-              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
@@ -166,7 +176,6 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              {/* Password */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Mật khẩu
@@ -184,7 +193,6 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              {/* Forgot Password Link */}
               <div className="text-right">
                 <Link
                   href="/auth/forgot-password"
@@ -194,14 +202,12 @@ export default function LoginPage() {
                 </Link>
               </div>
 
-              {/* Error Message */}
               {error && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex items-start gap-2">
                   <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-sm text-red-600">{error}</p>
 
-                    {/* Resend Verification Button */}
                     {needsVerification && (
                       <Button
                         onClick={handleResendVerification}
@@ -226,7 +232,6 @@ export default function LoginPage() {
                 </div>
               )}
 
-              {/* Submit Button */}
               <Button
                 type="submit"
                 disabled={loading}
@@ -243,7 +248,6 @@ export default function LoginPage() {
               </Button>
             </form>
 
-            {/* Sign Up Link */}
             <div className="mt-6 text-center">
               <p className="text-gray-600 dark:text-gray-400">
                 Chưa có tài khoản?{" "}

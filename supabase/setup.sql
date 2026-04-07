@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS public.users (
     email VARCHAR(255) UNIQUE NOT NULL,
     full_name VARCHAR(255),
     role_id INTEGER DEFAULT 2 REFERENCES public.roles(id),
+    is_banned BOOLEAN NOT NULL DEFAULT FALSE,
     date_of_birth DATE,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW()
@@ -39,7 +40,7 @@ BEGIN
     VALUES (
         NEW.id,
         NEW.email,
-        NEW.raw_user_meta_data->>'full_name',
+        COALESCE(NEW.raw_user_meta_data->>'full_name', NEW.raw_user_meta_data->>'display_name'),
         2  -- Default role: user
     );
     RETURN NEW;
@@ -67,6 +68,65 @@ CREATE TRIGGER on_user_updated
     BEFORE UPDATE ON public.users
     FOR EACH ROW
     EXECUTE FUNCTION public.handle_updated_at();
+
+-- 6. Sync full_name between auth.users and public.users
+CREATE OR REPLACE FUNCTION public.sync_auth_user_to_public_user()
+RETURNS TRIGGER AS $$
+DECLARE
+    mapped_full_name TEXT;
+BEGIN
+    mapped_full_name := COALESCE(
+        NEW.raw_user_meta_data->>'full_name',
+        NEW.raw_user_meta_data->>'display_name'
+    );
+
+    UPDATE public.users
+    SET full_name = mapped_full_name
+    WHERE id = NEW.id
+      AND full_name IS DISTINCT FROM mapped_full_name;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_auth_user_metadata_updated ON auth.users;
+CREATE TRIGGER on_auth_user_metadata_updated
+    AFTER UPDATE OF raw_user_meta_data ON auth.users
+    FOR EACH ROW
+    WHEN (OLD.raw_user_meta_data IS DISTINCT FROM NEW.raw_user_meta_data)
+    EXECUTE FUNCTION public.sync_auth_user_to_public_user();
+
+CREATE OR REPLACE FUNCTION public.sync_public_user_to_auth_user()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE auth.users
+    SET raw_user_meta_data = jsonb_set(
+        jsonb_set(
+            COALESCE(raw_user_meta_data, '{}'::jsonb),
+            '{full_name}',
+            to_jsonb(NEW.full_name),
+            true
+        ),
+        '{display_name}',
+        to_jsonb(NEW.full_name),
+        true
+    )
+    WHERE id = NEW.id
+      AND (
+          COALESCE(raw_user_meta_data->>'full_name', '') IS DISTINCT FROM COALESCE(NEW.full_name, '')
+          OR COALESCE(raw_user_meta_data->>'display_name', '') IS DISTINCT FROM COALESCE(NEW.full_name, '')
+      );
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_public_user_full_name_updated ON public.users;
+CREATE TRIGGER on_public_user_full_name_updated
+    AFTER UPDATE OF full_name ON public.users
+    FOR EACH ROW
+    WHEN (OLD.full_name IS DISTINCT FROM NEW.full_name)
+    EXECUTE FUNCTION public.sync_public_user_to_auth_user();
 
 -- ============================================
 -- ROW LEVEL SECURITY (RLS) POLICIES
@@ -99,6 +159,7 @@ CREATE POLICY "Users can update own profile"
         auth.uid() = id
         AND email = (SELECT email FROM public.users WHERE id = auth.uid())
         AND role_id = (SELECT role_id FROM public.users WHERE id = auth.uid())
+        AND is_banned = (SELECT is_banned FROM public.users WHERE id = auth.uid())
     );
 
 -- Policy: Service role can insert users (for trigger)

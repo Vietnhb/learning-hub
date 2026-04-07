@@ -48,7 +48,7 @@ export default function UsersPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-lg border p-4">
             <div className="text-sm font-medium text-muted-foreground">
               Total Users
@@ -69,6 +69,14 @@ export default function UsersPage() {
             </div>
             <div className="text-2xl font-bold">
               {users.filter((u) => u.role_name === "user").length}
+            </div>
+          </div>
+          <div className="rounded-lg border p-4">
+            <div className="text-sm font-medium text-muted-foreground">
+              Banned Users
+            </div>
+            <div className="text-2xl font-bold">
+              {users.filter((u) => u.is_banned).length}
             </div>
           </div>
         </div>

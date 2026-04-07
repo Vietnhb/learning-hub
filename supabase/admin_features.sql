@@ -8,6 +8,10 @@
 -- 1. FEEDBACK SYSTEM
 -- ============================================
 
+-- Add ban flag for user moderation
+ALTER TABLE public.users
+ADD COLUMN IF NOT EXISTS is_banned BOOLEAN NOT NULL DEFAULT FALSE;
+
 -- Tạo bảng feedback
 CREATE TABLE IF NOT EXISTS public.feedback (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -310,6 +314,7 @@ RETURNS TABLE (
     full_name TEXT,
     role_id INTEGER,
     role_name TEXT,
+    is_banned BOOLEAN,
     date_of_birth DATE,
     created_at TIMESTAMPTZ
 ) 
@@ -329,15 +334,45 @@ BEGIN
     RETURN QUERY
     SELECT 
         u.id,
-        u.email,
-        u.full_name,
+        u.email::TEXT,
+        u.full_name::TEXT,
         u.role_id,
-        r.name as role_name,
+        r.name::TEXT as role_name,
+        u.is_banned,
         u.date_of_birth,
         u.created_at
     FROM public.users u
     JOIN public.roles r ON u.role_id = r.id
     ORDER BY u.created_at DESC;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Function: Update user profile (admin only)
+CREATE OR REPLACE FUNCTION public.admin_update_user_profile(
+    target_user_id UUID,
+    new_full_name TEXT,
+    new_date_of_birth DATE
+)
+RETURNS BOOLEAN
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM public.users u
+        JOIN public.roles r ON u.role_id = r.id
+        WHERE u.id = auth.uid() AND r.name = 'admin'
+    ) THEN
+        RAISE EXCEPTION 'Access denied: Admin only';
+    END IF;
+
+    UPDATE public.users
+    SET
+        full_name = COALESCE(NULLIF(TRIM(new_full_name), ''), full_name),
+        date_of_birth = COALESCE(new_date_of_birth, date_of_birth)
+    WHERE id = target_user_id;
+
+    RETURN FOUND;
 END;
 $$ LANGUAGE plpgsql;
 
@@ -402,6 +437,36 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Function: Ban/Unban user (admin only)
+CREATE OR REPLACE FUNCTION public.admin_set_user_ban_status(
+    target_user_id UUID,
+    ban_status BOOLEAN
+)
+RETURNS BOOLEAN
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM public.users u
+        JOIN public.roles r ON u.role_id = r.id
+        WHERE u.id = auth.uid() AND r.name = 'admin'
+    ) THEN
+        RAISE EXCEPTION 'Access denied: Admin only';
+    END IF;
+
+    IF target_user_id = auth.uid() AND ban_status = TRUE THEN
+        RAISE EXCEPTION 'Cannot ban your own account';
+    END IF;
+
+    UPDATE public.users
+    SET is_banned = ban_status
+    WHERE id = target_user_id;
+
+    RETURN FOUND;
+END;
+$$ LANGUAGE plpgsql;
+
 -- Function: Get unread message count for user
 CREATE OR REPLACE FUNCTION public.get_unread_message_count()
 RETURNS INTEGER
@@ -457,7 +522,9 @@ GRANT SELECT, INSERT, UPDATE ON public.messages TO authenticated;
 -- Grant execute on functions
 GRANT EXECUTE ON FUNCTION public.get_all_users() TO authenticated;
 GRANT EXECUTE ON FUNCTION public.admin_update_user_role(UUID, INTEGER) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.admin_update_user_profile(UUID, TEXT, DATE) TO authenticated;
 GRANT EXECUTE ON FUNCTION public.admin_delete_user(UUID) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.admin_set_user_ban_status(UUID, BOOLEAN) TO authenticated;
 GRANT EXECUTE ON FUNCTION public.get_unread_message_count() TO authenticated;
 GRANT EXECUTE ON FUNCTION public.get_pending_feedback_count() TO authenticated;
 

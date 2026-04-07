@@ -20,12 +20,7 @@ export default function UserMessagesPage() {
   const [loading, setLoading] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const {
-    messages,
-    loading: loadingMessages,
-    send,
-    sending,
-  } = useChat(conversationId);
+  const { messages, loading: loadingMessages, send, sending } = useChat(conversationId);
 
   useEffect(() => {
     async function initConversation() {
@@ -37,10 +32,9 @@ export default function UserMessagesPage() {
       const { data, error } = await getOrCreateConversation();
       if (data) {
         setConversationId(data.id);
-        // Get admin_id from conversation or fetch first admin
         setAdminId(data.admin_id || null);
       } else {
-        console.error("Failed to get conversation:", error);
+        console.error("Không thể tạo/lấy cuộc trò chuyện:", error);
       }
       setLoading(false);
     }
@@ -48,22 +42,19 @@ export default function UserMessagesPage() {
     initConversation();
   }, [user, router]);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSend = async (message: string) => {
     if (!conversationId) return;
 
-    // If we have an admin_id from the conversation, use it
-    // Otherwise, the message will be sent and admin can reply
-    const receiverId = adminId || user!.id; // Fallback to self for now
+    if (!adminId) {
+      alert("Hiện chưa có quản trị viên nào được gán cho cuộc trò chuyện này.");
+      return;
+    }
 
-    await send(message, receiverId);
+    await send(message, adminId);
   };
 
   if (!user) {
@@ -71,11 +62,7 @@ export default function UserMessagesPage() {
       <div className="container max-w-4xl mx-auto py-12 px-4">
         <Alert>
           <AlertDescription>
-            Please{" "}
-            <a href="/auth/login" className="underline">
-              login
-            </a>{" "}
-            to chat with admin.
+            Vui lòng <a href="/auth/login" className="underline">đăng nhập</a> để nhắn tin với quản trị viên.
           </AlertDescription>
         </Alert>
       </div>
@@ -99,10 +86,8 @@ export default function UserMessagesPage() {
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <div>
-          <h1 className="text-3xl font-bold">Message Admin</h1>
-          <p className="text-muted-foreground mt-1">
-            Get help and support from our team
-          </p>
+          <h1 className="text-3xl font-bold">Nhắn Tin Với Quản Trị Viên</h1>
+          <p className="text-muted-foreground mt-1">Nhận hỗ trợ trực tiếp từ đội ngũ quản trị</p>
         </div>
       </div>
 
@@ -110,12 +95,11 @@ export default function UserMessagesPage() {
         <CardHeader className="border-b">
           <CardTitle className="flex items-center gap-2">
             <MessageCircle className="h-5 w-5" />
-            Chat with Admin
+            Trò chuyện với quản trị viên
           </CardTitle>
         </CardHeader>
 
         <CardContent className="flex-1 flex flex-col p-0">
-          {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4">
             {loadingMessages ? (
               <div className="flex justify-center py-8">
@@ -124,9 +108,7 @@ export default function UserMessagesPage() {
             ) : messages.length === 0 ? (
               <div className="text-center py-12">
                 <MessageCircle className="h-12 w-12 mx-auto mb-4 text-muted-foreground opacity-50" />
-                <p className="text-muted-foreground">
-                  No messages yet. Start the conversation!
-                </p>
+                <p className="text-muted-foreground">Chưa có tin nhắn nào. Hãy bắt đầu cuộc trò chuyện!</p>
               </div>
             ) : (
               <>
@@ -138,19 +120,14 @@ export default function UserMessagesPage() {
             )}
           </div>
 
-          {/* Message Input */}
           <div className="border-t p-4">
-            <MessageInput
-              onSend={handleSend}
-              disabled={sending}
-              placeholder="Type your message to admin..."
-            />
+            <MessageInput onSend={handleSend} disabled={sending} placeholder="Nhập tin nhắn gửi quản trị viên..." />
           </div>
         </CardContent>
       </Card>
 
       <div className="mt-4 text-sm text-muted-foreground text-center">
-        <p>Our admin team typically responds within 24 hours</p>
+        <p>Đội ngũ quản trị thường phản hồi trong vòng 24 giờ</p>
       </div>
     </div>
   );

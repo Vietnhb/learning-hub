@@ -12,6 +12,8 @@ import {
   LogOut,
   LogIn,
   LayoutDashboard,
+  MessageSquare,
+  MessagesSquare,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -89,6 +91,26 @@ export default function Navbar() {
               <FolderOpen className="w-4 h-4" />
               Giới thiệu
             </Link>
+
+            {user && (
+              <>
+                <Link
+                  href="/feedback"
+                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  Feedback
+                </Link>
+                <Link
+                  href="/messages"
+                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+                >
+                  <MessagesSquare className="w-4 h-4" />
+                  Nhắn tin
+                </Link>
+              </>
+            )}
+
             {isAdmin && (
               <Link
                 href="/admin"
@@ -122,7 +144,7 @@ export default function Navbar() {
                     className="gap-1 hover:bg-red-50 dark:hover:bg-red-900/20 hover:border-red-300 dark:hover:border-red-700 hover:text-red-600 dark:hover:text-red-400"
                   >
                     <LogOut className="w-4 h-4" />
-                    Đăng xuất
+                    Ðăng xuất
                   </Button>
                 </div>
               ) : (
@@ -133,7 +155,7 @@ export default function Navbar() {
                     className="gap-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     <LogIn className="w-4 h-4" />
-                    Đăng nhập
+                    Ðăng nhập
                   </Button>
                 </Link>
               )}
