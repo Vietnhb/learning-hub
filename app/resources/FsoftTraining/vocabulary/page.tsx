@@ -32,7 +32,12 @@ type TransitivityTag =
   | "unknown"
   | null;
 
-type TransitivityFilter = "all" | "transitive" | "intransitive" | "both" | "unknown";
+type TransitivityFilter =
+  | "all"
+  | "transitive"
+  | "intransitive"
+  | "both"
+  | "unknown";
 
 interface VocabItem {
   id: string;
@@ -141,10 +146,16 @@ export default function FsoftTrainingVocabularyPage() {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return data
-      .filter((item) => (selectedUnit === "all" ? true : item.unit === selectedUnit))
-      .filter((item) => (selectedLesson === "all" ? true : item.lesson === selectedLesson))
+      .filter((item) =>
+        selectedUnit === "all" ? true : item.unit === selectedUnit,
+      )
+      .filter((item) =>
+        selectedLesson === "all" ? true : item.lesson === selectedLesson,
+      )
       .filter((item) => (posFilter === "all" ? true : item.pos === posFilter))
-      .filter((item) => (transFilter === "all" ? true : item.transitivity === transFilter))
+      .filter((item) =>
+        transFilter === "all" ? true : item.transitivity === transFilter,
+      )
       .filter((item) => {
         if (!q) return true;
         return (
@@ -155,7 +166,8 @@ export default function FsoftTrainingVocabularyPage() {
       })
       .sort((a, b) => {
         if (a.unit !== b.unit) return a.unit - b.unit;
-        if (a.lessonOrder !== b.lessonOrder) return a.lessonOrder - b.lessonOrder;
+        if (a.lessonOrder !== b.lessonOrder)
+          return a.lessonOrder - b.lessonOrder;
         return a.id.localeCompare(b.id);
       });
   }, [selectedUnit, selectedLesson, posFilter, transFilter, search]);
@@ -171,7 +183,9 @@ export default function FsoftTrainingVocabularyPage() {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
         e.preventDefault();
-        setCurrentIndex((prev) => Math.min(prev + 1, Math.max(deck.length - 1, 0)));
+        setCurrentIndex((prev) =>
+          Math.min(prev + 1, Math.max(deck.length - 1, 0)),
+        );
         setIsFlipped(false);
       } else if (e.key === "ArrowLeft") {
         e.preventDefault();
@@ -187,7 +201,8 @@ export default function FsoftTrainingVocabularyPage() {
   }, [deck.length]);
 
   const current = deck[currentIndex] ?? null;
-  const progress = deck.length > 0 ? ((currentIndex + 1) / deck.length) * 100 : 0;
+  const progress =
+    deck.length > 0 ? ((currentIndex + 1) / deck.length) * 100 : 0;
 
   const grouped = useMemo(() => {
     const map = new Map<string, VocabItem[]>();
@@ -376,11 +391,15 @@ export default function FsoftTrainingVocabularyPage() {
 
         <div className="grid md:grid-cols-3 gap-4">
           <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
-            <p className="text-sm text-gray-500 dark:text-gray-300">Số từ đang học</p>
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+              Số từ đang học
+            </p>
             <p className="text-3xl font-bold text-orange-600">{deck.length}</p>
           </Card>
           <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
-            <p className="text-sm text-gray-500 dark:text-gray-300">Vị trí hiện tại</p>
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+              Vị trí hiện tại
+            </p>
             <p className="text-3xl font-bold text-amber-600">
               {deck.length > 0 ? `${currentIndex + 1}/${deck.length}` : "0/0"}
             </p>
@@ -414,63 +433,98 @@ export default function FsoftTrainingVocabularyPage() {
               >
                 <Card className="p-6 min-h-[260px] border-2 border-orange-300 bg-white hover:shadow-md transition dark:bg-gray-900 dark:border-orange-700">
                   {!isFlipped ? (
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2 flex-wrap text-xs">
-                        <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
-                          Unit {current.unit}
-                        </span>
-                        <span className="px-2 py-1 rounded-full border bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800">
-                          {current.lesson}
-                        </span>
-                        <span className="px-2 py-1 rounded-full border bg-gray-50 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600">
-                          {posLabel(current.pos)}
-                        </span>
-                        {current.transitivity && (
-                          <span
-                            className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
-                          >
-                            {transitivityLabel(current.transitivity)}
+                    <div className="flex gap-6 h-full">
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
+                          <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
+                            Unit {current.unit}
                           </span>
-                        )}
-                      </div>
+                          <span className="px-2 py-1 rounded-full border bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800">
+                            {current.lesson}
+                          </span>
+                          <span className="px-2 py-1 rounded-full border bg-gray-50 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600">
+                            {posLabel(current.pos)}
+                          </span>
+                          {current.transitivity && (
+                            <span
+                              className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
+                            >
+                              {transitivityLabel(current.transitivity)}
+                            </span>
+                          )}
+                        </div>
 
-                      <div className="pt-4">
-                        <p className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100">
-                          {current.term}
+                        <div className="flex-1">
+                          <p className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100">
+                            {current.term}
+                          </p>
+                          {current.reading && (
+                            <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">
+                              {current.reading}
+                            </p>
+                          )}
+                        </div>
+
+                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                          Nhấn thẻ để lật xem nghĩa
                         </p>
-                        {current.reading && (
-                          <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">{current.reading}</p>
-                        )}
                       </div>
 
-                      <p className="text-sm text-gray-500 dark:text-gray-300 pt-6">
-                        Nhấn thẻ để lật xem nghĩa
-                      </p>
+                      {current.image && (
+                        <div className="flex items-center justify-end">
+                          <img
+                            src={current.image}
+                            alt={current.term}
+                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none";
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
                   ) : (
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2 flex-wrap text-xs">
-                        <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
-                          Unit {current.unit}
-                        </span>
-                        <span className="px-2 py-1 rounded-full border bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800">
-                          {current.lesson}
-                        </span>
-                        {current.transitivity && (
-                          <span
-                            className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
-                          >
-                            {transitivityLabel(current.transitivity)}
+                    <div className="flex gap-6 h-full">
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
+                          <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
+                            Unit {current.unit}
                           </span>
-                        )}
+                          <span className="px-2 py-1 rounded-full border bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800">
+                            {current.lesson}
+                          </span>
+                          {current.transitivity && (
+                            <span
+                              className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
+                            >
+                              {transitivityLabel(current.transitivity)}
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="flex-1">
+                          <p className="text-2xl md:text-3xl font-semibold text-emerald-700">
+                            {current.definition}
+                          </p>
+                        </div>
+
+                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                          Nhấn thẻ để quay lại từ tiếng Nhật
+                        </p>
                       </div>
 
-                      <p className="text-2xl md:text-3xl font-semibold text-emerald-700 pt-6">
-                        {current.definition}
-                      </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-300 pt-8">
-                        Nhấn thẻ để quay lại từ tiếng Nhật
-                      </p>
+                      {current.image && (
+                        <div className="flex items-center justify-end">
+                          <img
+                            src={current.image}
+                            alt={current.term}
+                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none";
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
                   )}
                 </Card>
@@ -515,10 +569,15 @@ export default function FsoftTrainingVocabularyPage() {
         </Card>
 
         <Card className="p-5 bg-white/95 dark:bg-gray-800/95">
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Danh sách theo Unit/Bài</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+            Danh sách theo Unit/Bài
+          </h2>
           <div className="space-y-4 max-h-[520px] overflow-auto pr-2">
             {grouped.map(([groupTitle, items]) => (
-              <div key={groupTitle} className="border rounded-lg overflow-hidden">
+              <div
+                key={groupTitle}
+                className="border rounded-lg overflow-hidden"
+              >
                 <div className="px-3 py-2 bg-orange-50 border-b text-sm font-semibold text-orange-700 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
                   {groupTitle}
                 </div>
@@ -552,7 +611,9 @@ export default function FsoftTrainingVocabularyPage() {
                                 {item.reading}
                               </p>
                             )}
-                            <p className="text-base text-gray-700 dark:text-gray-300 truncate mt-1">{item.definition}</p>
+                            <p className="text-base text-gray-700 dark:text-gray-300 truncate mt-1">
+                              {item.definition}
+                            </p>
                           </div>
                           <div className="flex items-center gap-2 flex-wrap justify-end">
                             <span className="text-xs px-2 py-1 rounded-full border bg-gray-50 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600">
@@ -579,5 +640,3 @@ export default function FsoftTrainingVocabularyPage() {
     </div>
   );
 }
-
-

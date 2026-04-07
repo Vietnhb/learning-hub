@@ -187,7 +187,7 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "名詞A",
-    "term": "年",
+    "term": "å¹´",
     "reading": "とし",
     "definition": "năm, tuổi",
     "pos": "noun",
@@ -1032,7 +1032,7 @@
     "lesson": "Bài 6",
     "lessonOrder": 6,
     "section": "名詞A",
-    "term": "皮",
+    "term": "çš®",
     "reading": "かわ",
     "definition": "da, vỏ",
     "pos": "noun",
@@ -1045,7 +1045,7 @@
     "lesson": "Bài 6",
     "lessonOrder": 6,
     "section": "名詞A",
-    "term": "缶",
+    "term": "ç¼¶",
     "reading": "かん",
     "definition": "lon",
     "pos": "noun",
@@ -1279,7 +1279,7 @@
     "lesson": "Bài 7",
     "lessonOrder": 7,
     "section": "名詞A",
-    "term": "煙",
+    "term": "ç…™",
     "reading": "けむり",
     "definition": "khói",
     "pos": "noun",
@@ -1372,7 +1372,7 @@
     "section": "名詞A",
     "term": "後半",
     "reading": "こうはん",
-    "definition": "nửa sau",
+    "definition": "ná»­a sau",
     "pos": "noun",
     "transitivity": null,
     "image": "https://o.quizlet.com/rxNOJzyKE1DwH2TIRsizfw.png"
@@ -2074,7 +2074,7 @@
     "section": "動詞A",
     "term": "嗅ぐ",
     "reading": "か",
-    "definition": "ngửi",
+    "definition": "ngá»­i",
     "pos": "verb",
     "transitivity": "transitive",
     "image": "https://o.quizlet.com/pzwphDdfcJT9q1BS-q-O.w.jpg"
@@ -2098,7 +2098,7 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "動詞A",
-    "term": "殴る",
+    "term": "æ®´ã'‹",
     "reading": "なぐ",
     "definition": "đánh, đấm",
     "pos": "verb",
@@ -2163,7 +2163,7 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "動詞A",
-    "term": "起きる／起こる",
+    "term": "起きる/起こる",
     "reading": "おお",
     "definition": "thức dậy, thức, xảy ra",
     "pos": "verb",
@@ -2449,7 +2449,7 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "動詞A",
-    "term": "断る",
+    "term": "æ–­ã'‹",
     "reading": "ことわ",
     "definition": "từ chối",
     "pos": "verb",
@@ -2514,7 +2514,7 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "動詞A",
-    "term": "乗る",
+    "term": "ä¹—ã'‹",
     "reading": "の",
     "definition": "lên (tàu,xe), cưỡi (ngựa)",
     "pos": "verb",
@@ -2540,7 +2540,7 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "動詞A",
-    "term": "降りる／下りる",
+    "term": "降りる/下りる",
     "reading": "おお",
     "definition": "xuống (tàu, xe, núi), nhận được(cấp phép, chứng chỉ, lương hưu…)",
     "pos": "verb",
@@ -2553,7 +2553,7 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "動詞A",
-    "term": "降ろす／下ろす",
+    "term": "降ろす/下ろす",
     "reading": "おお",
     "definition": "cho xuống (tàu, xe), hạ xuống, rút tiền",
     "pos": "verb",
@@ -2566,7 +2566,7 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "動詞A",
-    "term": "直る",
+    "term": "ç›´ã'‹",
     "reading": "なお",
     "definition": "được sửa",
     "pos": "verb",
@@ -3231,7 +3231,7 @@
     "section": "動詞A",
     "term": "冷める",
     "reading": "さ",
-    "definition": "nguội",
+    "definition": "nguá»™i",
     "pos": "verb",
     "transitivity": "intransitive",
     "image": "https://o.quizlet.com/i/_t6urm5wsOjdqMhiAyKNRA.jpg"
@@ -3256,7 +3256,7 @@
     "lessonOrder": 8,
     "section": "動詞A",
     "term": "燃える",
-    "reading": "も",
+    "reading": "ã''",
     "definition": "cháy",
     "pos": "verb",
     "transitivity": "intransitive",
@@ -3269,7 +3269,7 @@
     "lessonOrder": 8,
     "section": "動詞A",
     "term": "燃やす",
-    "reading": "も",
+    "reading": "ã''",
     "definition": "đốt cháy, cháy cùng (đam mê)",
     "pos": "verb",
     "transitivity": "transitive",
@@ -3307,7 +3307,7 @@
     "lesson": "Bài 8",
     "lessonOrder": 8,
     "section": "動詞A",
-    "term": "鳴る",
+    "term": "é³´ã'‹",
     "reading": "な",
     "definition": "reo, kêu, hót, vang",
     "pos": "verb",
@@ -3465,7 +3465,7 @@
     "section": "Khác",
     "term": "広まる",
     "reading": "ひろ",
-    "definition": "lan rộng",
+    "definition": "lan rá»™ng",
     "pos": "adjective",
     "transitivity": null,
     "image": "https://o.quizlet.com/9dxuJJZM2NZ9Ct81.tGs1w.png"
@@ -4011,7 +4011,7 @@
     "section": "形容詞A",
     "term": "自由な",
     "reading": "じゆう",
-    "definition": "tự do",
+    "definition": "tá»± do",
     "pos": "adjective",
     "transitivity": null,
     "image": "https://o.quizlet.com/YVJAHZRi6QTygU8lQQd.Yw.jpg"
@@ -4087,12 +4087,12 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "名詞B",
-    "term": "（お）礼",
+    "term": "(お)礼",
     "reading": "れい",
     "definition": "biết ơn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89+%E7%A4%BC"
+    "image": "https://o.quizlet.com/ebiRisBImQ.zB7Y-fHjOUw.jpg"
   },
   {
     "id": "u04-l01-006",
@@ -4100,12 +4100,12 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "名詞B",
-    "term": "（お）詫び",
+    "term": "(お)詫び",
     "reading": "わ",
     "definition": "lời xin lỗi, tạ lỗi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89+%E8%A9%AB+%E3%81%B3"
+    "image": "https://o.quizlet.com/.BsKboOzDFQd.K0QbiBfJw.jpg"
   },
   {
     "id": "u04-l01-007",
@@ -4113,12 +4113,12 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "名詞B",
-    "term": "（お）じぎ",
+    "term": "(お)じぎ",
     "reading": null,
     "definition": "sự cúi chào",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%EF%BC%88%E3%81%8A%EF%BC%89%E3%81%98%E3%81%8E"
+    "image": "https://o.quizlet.com/i/DDeb_cSyly3T62QXvS9V7g.jpg"
   },
   {
     "id": "u04-l01-008",
@@ -4131,7 +4131,7 @@
     "definition": "bắt tay",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%A1%E6%89%8B"
+    "image": "https://o.quizlet.com/BnkdvYdqclG.esPNIep3YA.jpg"
   },
   {
     "id": "u04-l01-009",
@@ -4144,7 +4144,7 @@
     "definition": "xấu tính, hay bắt nạt/chơi xấu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%8F%E5%9C%B0%E6%82%AA"
+    "image": "https://o.quizlet.com/OK0x4xEEp8lEHiUkZyhwLw.jpg"
   },
   {
     "id": "u04-l01-010",
@@ -4157,7 +4157,7 @@
     "definition": "ngịch ngợm, giễu cợt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%9F%E3%81%9A%E3%82%89"
+    "image": "https://o.quizlet.com/i/X7O6t1oEjfE53K7qokHnRQ.jpg"
   },
   {
     "id": "u04-l01-011",
@@ -4170,7 +4170,7 @@
     "definition": "sự tiết kiệm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AF%80%E7%B4%84"
+    "image": "https://o.quizlet.com/WR55IoRoAzkFRdedl3C01g.jpg"
   },
   {
     "id": "u04-l01-012",
@@ -4183,7 +4183,7 @@
     "definition": "quản lý, điều hành (kinh doanh)",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%8C%E5%96%B6"
+    "image": "https://o.quizlet.com/9YIC6frMLrHtExQdUwLHCA.png"
   },
   {
     "id": "u04-l01-013",
@@ -4196,7 +4196,7 @@
     "definition": "kiểm điểm, xem xét lại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%8D%E7%9C%81"
+    "image": "https://o.quizlet.com/kse9nG4g8WuToUOVwYcCvA.jpg"
   },
   {
     "id": "u04-l01-014",
@@ -4209,7 +4209,7 @@
     "definition": "thực hành, thực hiện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F%E8%A1%8C"
+    "image": "https://o.quizlet.com/9VGr8haloCTBwKz2WPwx2Q.jpg"
   },
   {
     "id": "u04-l01-015",
@@ -4222,7 +4222,7 @@
     "definition": "tiến bộ, tiến triển",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2%E6%AD%A9"
+    "image": "https://o.quizlet.com/XhNoTmn9BB3aO5eH40E2Vg.jpg"
   },
   {
     "id": "u04-l01-016",
@@ -4235,7 +4235,7 @@
     "definition": "thay đổi, biến đổi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89%E5%8C%96"
+    "image": "https://o.quizlet.com/fTQFUufxePXJ9Wsi7u865g.jpg"
   },
   {
     "id": "u04-l02-001",
@@ -4248,7 +4248,7 @@
     "definition": "phát triển, tiến bộ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%BA%E9%81%94"
+    "image": "https://o.quizlet.com/vZpa9UHsPrKHv0ZClFfYdg.jpg"
   },
   {
     "id": "u04-l02-002",
@@ -4261,7 +4261,7 @@
     "definition": "thể lực",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BD%93%E5%8A%9B"
+    "image": "https://o.quizlet.com/usb..4fOElLrkT2PPsYO5Q.png"
   },
   {
     "id": "u04-l02-003",
@@ -4287,7 +4287,7 @@
     "definition": "hoạt động nổi bật, phát huy, tỏa sáng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B4%BB%E8%BA%8D"
+    "image": "https://o.quizlet.com/hwJRAHece5jpR45zFlP68w.jpg"
   },
   {
     "id": "u04-l02-005",
@@ -4300,7 +4300,7 @@
     "definition": "cạnh tranh, thi đấu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%B6%E4%BA%89"
+    "image": "https://o.quizlet.com/n7HgnkZd5D5GXf3XR3JApA.jpg"
   },
   {
     "id": "u04-l02-006",
@@ -4313,7 +4313,7 @@
     "definition": "hỗ trợ, cổ vũ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BF%9C%E6%8F%B4"
+    "image": "https://o.quizlet.com/pFsOeo1GZe.SXWGAHF1bcQ.jpg"
   },
   {
     "id": "u04-l02-007",
@@ -4323,10 +4323,10 @@
     "section": "名詞B",
     "term": "拍手",
     "reading": "はくしゅ",
-    "definition": "vỗ tay",
+    "definition": "vá»— tay",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8B%8D%E6%89%8B"
+    "image": "https://o.quizlet.com/i/81yO4aoEa0HQcJqPmVg1NA.jpg"
   },
   {
     "id": "u04-l02-008",
@@ -4339,7 +4339,7 @@
     "definition": "phổ biến, được yêu thích",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%BA%E6%B0%97"
+    "image": "https://o.quizlet.com/UrdXZKbsM6WrVDtb4HZtQg.jpg"
   },
   {
     "id": "u04-l02-009",
@@ -4352,7 +4352,7 @@
     "definition": "tin đồn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%82%8F%E3%81%95"
+    "image": "https://o.quizlet.com/Mw3RLzvo.Cr6ZaDkzbyqag.jpg"
   },
   {
     "id": "u04-l02-010",
@@ -4365,7 +4365,7 @@
     "definition": "tin tức, thông tin",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%83%85%E5%A0%B1"
+    "image": "https://o.quizlet.com/YvI-3KnIiwBON3Dnd7Lxjw.jpg"
   },
   {
     "id": "u04-l02-011",
@@ -4378,7 +4378,7 @@
     "definition": "trao đổi, thay thế",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%A4%E6%8F%9B"
+    "image": "https://o.quizlet.com/i/oLPU8yWzmbKuds7g2U03zw.jpg"
   },
   {
     "id": "u04-l02-012",
@@ -4391,7 +4391,7 @@
     "definition": "thịnh hành, mốt; (bệnh) bùng phát",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%81%E8%A1%8C"
+    "image": "https://o.quizlet.com/10MOjtMKGxG0ZOvMQC5Yhw.jpg"
   },
   {
     "id": "u04-l02-013",
@@ -4404,7 +4404,7 @@
     "definition": "quảng bá, tuyên truyền",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%A3%E4%BC%9D"
+    "image": "https://o.quizlet.com/yqb8AEWmYEkQoyzRi-iOhQ.jpg"
   },
   {
     "id": "u04-l02-014",
@@ -4417,7 +4417,7 @@
     "definition": "quảng cáo",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%83%E5%91%8A"
+    "image": "https://o.quizlet.com/01LnD3BdjPeNdmOdOWlHOQ.png"
   },
   {
     "id": "u04-l02-015",
@@ -4430,7 +4430,7 @@
     "definition": "sự chú ý, để ý",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B3%A8%E7%9B%AE"
+    "image": "https://o.quizlet.com/D5VIVyo1te3QKABW1xIl9A.jpg"
   },
   {
     "id": "u04-l03-001",
@@ -4443,7 +4443,7 @@
     "definition": "phiên dịch, người phiên dịch",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A%E8%A8%B3"
+    "image": "https://o.quizlet.com/.LanOmU.cpT1Ni2I3RVpjQ.png"
   },
   {
     "id": "u04-l03-002",
@@ -4456,7 +4456,7 @@
     "definition": "biên dịch",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%BF%BB%E8%A8%B3"
+    "image": "https://o.quizlet.com/t96PSdZznxAGpRKeKx-o4Q.jpg"
   },
   {
     "id": "u04-l03-003",
@@ -4469,7 +4469,7 @@
     "definition": "lời nhắn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D%E8%A8%80"
+    "image": "https://o.quizlet.com/i/MJjvDoHdTbvkCbOoyM1J4w.jpg"
   },
   {
     "id": "u04-l03-004",
@@ -4482,7 +4482,7 @@
     "definition": "báo cáo",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A0%B1%E5%91%8A"
+    "image": "https://o.quizlet.com/G50UMxfSIN7P4xTgz5GTkA.jpg"
   },
   {
     "id": "u04-l03-005",
@@ -4495,7 +4495,7 @@
     "definition": "ghi hình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%8C%B2%E7%94%BB"
+    "image": "https://o.quizlet.com/HkxBG.iUc2D6qzEhzCEBhw.jpg"
   },
   {
     "id": "u04-l03-006",
@@ -4508,7 +4508,7 @@
     "definition": "đông đúc, tắc nghẽn (nơi đông người)",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7%E9%9B%91"
+    "image": "https://o.quizlet.com/1FL5wSpx6ehgtATUUMz41g.jpg"
   },
   {
     "id": "u04-l03-007",
@@ -4521,7 +4521,7 @@
     "definition": "tắc nghẽn ( xe cộ )",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%8B%E6%BB%9E"
+    "image": "https://o.quizlet.com/rDJK1GkWpy-E1uLhPNV9DA.jpg"
   },
   {
     "id": "u04-l03-008",
@@ -4534,7 +4534,7 @@
     "definition": "va chạm, xung đột",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%9D%E7%AA%81"
+    "image": "https://o.quizlet.com/xdWF1H4dWktGdCBWukeQmA.jpg"
   },
   {
     "id": "u04-l03-009",
@@ -4547,7 +4547,7 @@
     "definition": "thiệt hại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A2%AB%E5%AE%B3"
+    "image": "https://o.quizlet.com/ii5MQO5FQ3KAwjC4epuCgw.jpg"
   },
   {
     "id": "u04-l03-010",
@@ -4560,7 +4560,7 @@
     "definition": "tai nạn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%8B%E6%95%85"
+    "image": "https://o.quizlet.com/ASLE0w6IOAXtSw-XcaRZiw.jpg"
   },
   {
     "id": "u04-l03-011",
@@ -4573,7 +4573,7 @@
     "definition": "biến cố, sự kiện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%8B%E4%BB%B6"
+    "image": "https://o.quizlet.com/5rLoRpVMBEpnx9jKqtZYvA.jpg"
   },
   {
     "id": "u04-l03-012",
@@ -4581,12 +4581,12 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "名詞B",
-    "term": "故障",
+    "term": "æ•…éšœ",
     "reading": "こしょう",
     "definition": "hỏng, sự cố",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%85%E9%9A%9C"
+    "image": "https://o.quizlet.com/Z0I4iUX9ljhIVvb9XuWcFw.png"
   },
   {
     "id": "u04-l03-013",
@@ -4599,7 +4599,7 @@
     "definition": "sửa chữa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%AE%E7%90%86"
+    "image": "https://o.quizlet.com/28lc2XKhFiaSpKqvxWuiew.jpg"
   },
   {
     "id": "u04-l03-014",
@@ -4612,7 +4612,7 @@
     "definition": "mất điện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%81%9C%E9%9B%BB"
+    "image": "https://o.quizlet.com/Iycs2I5RMuY-QM4ESJBv0w.png"
   },
   {
     "id": "u04-l03-015",
@@ -4625,7 +4625,7 @@
     "definition": "tình trạng, phong độ, nhịp điệu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%BF%E5%AD%90"
+    "image": "https://o.quizlet.com/i/G5g6ZN8yQpdLnFu8puy3-Q.jpg"
   },
   {
     "id": "u04-l04-001",
@@ -4633,12 +4633,12 @@
     "lesson": "Bài 4",
     "lessonOrder": 4,
     "section": "名詞B",
-    "term": "緊張",
+    "term": "ç·Šå¼µ",
     "reading": "きんちょう",
     "definition": "căng thẳng, lo lắng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B7%8A%E5%BC%B5"
+    "image": "https://o.quizlet.com/JeWQIVZJm8itSBiR9D2y0g.png"
   },
   {
     "id": "u04-l04-002",
@@ -4648,10 +4648,10 @@
     "section": "名詞B",
     "term": "自信",
     "reading": "じしん",
-    "definition": "tự tin",
+    "definition": "tá»± tin",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E4%BF%A1"
+    "image": "https://o.quizlet.com/4mM3M-IK.r.815Gsw.ss1Q.png"
   },
   {
     "id": "u04-l04-003",
@@ -4664,7 +4664,7 @@
     "definition": "tự hào, khoe khoang",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E6%85%A2"
+    "image": "https://o.quizlet.com/ttLQ1jont7o4MlecKSqUYQ.jpg"
   },
   {
     "id": "u04-l04-004",
@@ -4677,7 +4677,7 @@
     "definition": "thán phục, khâm phục",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E5%BF%83"
+    "image": "https://o.quizlet.com/52iTjDAjBQyQdZ9tV9563w.png"
   },
   {
     "id": "u04-l04-005",
@@ -4690,7 +4690,7 @@
     "definition": "bị xúc động, cảm động",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E5%8B%95"
+    "image": "https://o.quizlet.com/eM9idDHSq7UbFPfzvivR6A.png"
   },
   {
     "id": "u04-l04-006",
@@ -4703,7 +4703,7 @@
     "definition": "hưng phấn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%88%88%E5%A5%AE"
+    "image": "https://o.quizlet.com/RyCM9I5.z-1eeK1yOXGong.jpg"
   },
   {
     "id": "u04-l04-007",
@@ -4716,7 +4716,7 @@
     "definition": "cảm nghĩ, cảm tưởng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F%E6%83%B3"
+    "image": "https://o.quizlet.com/DKnIegzG32YEDJiGPHDxUA.jpg"
   },
   {
     "id": "u04-l04-008",
@@ -4729,7 +4729,7 @@
     "definition": "dự đoán",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%88%E6%83%B3"
+    "image": "https://o.quizlet.com/kTPZmUwdJz5HjnCiBpw5pA.jpg"
   },
   {
     "id": "u04-l04-009",
@@ -4737,12 +4737,12 @@
     "lesson": "Bài 4",
     "lessonOrder": 4,
     "section": "名詞B",
-    "term": "専門",
+    "term": "å°'é–€",
     "reading": "せんもん",
     "definition": "chuyên môn, chuyên ngành",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%82%E9%96%80"
+    "image": "https://o.quizlet.com/OGiNQyuuSXjUnsLkZ1s.uA.jpg"
   },
   {
     "id": "u04-l04-010",
@@ -4755,7 +4755,7 @@
     "definition": "nghiên cứu, tìm hiểu, học tập",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%94%E7%A9%B6"
+    "image": "https://o.quizlet.com/abCpeQ8KtUXRiyPCSeaaHw.jpg"
   },
   {
     "id": "u04-l04-011",
@@ -4768,7 +4768,7 @@
     "definition": "điều tra, khảo sát",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%BF%E6%9F%BB"
+    "image": "https://o.quizlet.com/-EL-q2lVp4bZwcdkbOj4Xw.jpg"
   },
   {
     "id": "u04-l04-012",
@@ -4781,7 +4781,7 @@
     "definition": "nguyên nhân",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8E%9F%E5%9B%A0"
+    "image": "https://o.quizlet.com/mtwE5L..m6347zcGTdHtUA.png"
   },
   {
     "id": "u04-l04-013",
@@ -4794,7 +4794,7 @@
     "definition": "kết quả",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%90%E6%9E%9C"
+    "image": "https://o.quizlet.com/I38-NTw6mpAXN3iX0HjvJw.jpg"
   },
   {
     "id": "u04-l04-014",
@@ -4807,7 +4807,7 @@
     "definition": "giải quyết",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3%E6%B1%BA"
+    "image": "https://o.quizlet.com/IhnYgVZ5jUwqeT52GAUXLA.jpg"
   },
   {
     "id": "u04-l05-001",
@@ -4820,7 +4820,7 @@
     "definition": "xác nhận, xác minh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA%E8%AA%8D"
+    "image": "https://o.quizlet.com/rxyBpY9isG2Fsky4XfBiYg.jpg"
   },
   {
     "id": "u04-l05-002",
@@ -4833,7 +4833,7 @@
     "definition": "sử dụng, khai thác",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A9%E7%94%A8"
+    "image": "https://o.quizlet.com/PsirB.3r8ZMA2EIc1-.UQQ.gif"
   },
   {
     "id": "u04-l05-003",
@@ -4846,7 +4846,7 @@
     "definition": "hiểu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%90%86%E8%A7%A3"
+    "image": "https://o.quizlet.com/PcOsGj2R-pV2G7yeqrv2jA.png"
   },
   {
     "id": "u04-l05-004",
@@ -4859,7 +4859,7 @@
     "definition": "khám phá, tìm thấy, phát hiện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%BA%E8%A6%8B"
+    "image": "https://o.quizlet.com/5kLgfkeeKsfbE-P1MrtvgQ.jpg"
   },
   {
     "id": "u04-l05-005",
@@ -4872,7 +4872,7 @@
     "definition": "phát minh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%BA%E6%98%8E"
+    "image": "https://o.quizlet.com/huIUSqHTvrsV6.nYLOdD4A.jpg"
   },
   {
     "id": "u04-l05-006",
@@ -4885,7 +4885,7 @@
     "definition": "quan hệ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%A2%E4%BF%82"
+    "image": "https://o.quizlet.com/rSEMx6gqu2dvXncDfGB9zw.jpg"
   },
   {
     "id": "u04-l05-007",
@@ -4898,7 +4898,7 @@
     "definition": "nhóm, đoàn thể",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%A3%E4%BD%93"
+    "image": "https://o.quizlet.com/Gx85TTeknWlJsDFHHudmsQ.jpg"
   },
   {
     "id": "u04-l05-008",
@@ -4911,7 +4911,7 @@
     "definition": "cuộc bầu cử",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%B8%E6%8C%99"
+    "image": "https://o.quizlet.com/nrEUrNFn6GljY9AXjL5qVQ.jpg"
   },
   {
     "id": "u04-l05-009",
@@ -4924,7 +4924,7 @@
     "definition": "thuế",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A8%8E%E9%87%91"
+    "image": "https://o.quizlet.com/wj6LISx.gX84h.mi.TADnQ.png"
   },
   {
     "id": "u04-l05-010",
@@ -4937,7 +4937,7 @@
     "definition": "trách nhiệm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B2%AC%E4%BB%BB"
+    "image": "https://o.quizlet.com/NV5GemACDZfQ2Bm7NFXzsg.jpg"
   },
   {
     "id": "u04-l05-011",
@@ -4950,7 +4950,7 @@
     "definition": "tài liệu, hồ sơ, giấy tờ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B8%E9%A1%9E"
+    "image": "https://o.quizlet.com/yZy0bTkrphofFYw3x4T.Og.jpg"
   },
   {
     "id": "u04-l05-012",
@@ -4963,7 +4963,7 @@
     "definition": "nhan đề, tên ( sách...)",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A1%8C%E5%90%8D"
+    "image": "https://o.quizlet.com/RAeSPe1BR30ROUlp6hXmSg.png"
   },
   {
     "id": "u04-l05-013",
@@ -4976,7 +4976,7 @@
     "definition": "điều kiện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9D%A1%E4%BB%B6"
+    "image": "https://o.quizlet.com/Xc6c.hEua-vljtzcWybKAA.jpg"
   },
   {
     "id": "u04-l06-001",
@@ -4989,7 +4989,7 @@
     "definition": "hạn cuối",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B7%A0+%E3%82%81+%E5%88%87+%E3%82%8A"
+    "image": "https://o.quizlet.com/uQezpyWQdHSNGLtSKpG.3A.jpg"
   },
   {
     "id": "u04-l06-002",
@@ -5002,7 +5002,7 @@
     "definition": "kỳ, thời kỳ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%9F%E9%96%93"
+    "image": "https://o.quizlet.com/bGtgOo7xHOgIOY47yCejSw.jpg"
   },
   {
     "id": "u04-l06-003",
@@ -5015,7 +5015,7 @@
     "definition": "gấp đôi, lần",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%8D"
+    "image": "https://o.quizlet.com/NAnsGowtN966QWtYA2PKFw.png"
   },
   {
     "id": "u04-l06-004",
@@ -5028,7 +5028,7 @@
     "definition": "rút thăm, xổ số",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8F%E3%81%98"
+    "image": "https://o.quizlet.com/i/Wt0aK8kRQuczTGIiIpuHAg.jpg"
   },
   {
     "id": "u04-l06-005",
@@ -5041,7 +5041,7 @@
     "definition": "đường tắt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91%E9%81%93"
+    "image": "https://o.quizlet.com/sCE3CN8coJ87hdQemCJkow.jpg"
   },
   {
     "id": "u04-l06-006",
@@ -5054,7 +5054,7 @@
     "definition": "trung tâm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%AD%E5%BF%83"
+    "image": "https://o.quizlet.com/0lx5Iaf24nUjMJRsfUEYJA.jpg"
   },
   {
     "id": "u04-l06-007",
@@ -5067,7 +5067,7 @@
     "definition": "xung quanh, vùng lân cận",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BE%BA+%E3%82%8A"
+    "image": "https://o.quizlet.com/GfMIDhGQB6Zv90F2C7vBuA.jpg"
   },
   {
     "id": "u04-l06-008",
@@ -5080,7 +5080,7 @@
     "definition": "vòng quanh, xung quanh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%91%A8+%E3%82%8A%2F+%E5%9B%9E+%E3%82%8A"
+    "image": "https://o.quizlet.com/dESqY5Dkhvy7N.v8jH0g3w.jpg"
   },
   {
     "id": "u04-l06-009",
@@ -5088,12 +5088,12 @@
     "lesson": "Bài 6",
     "lessonOrder": 6,
     "section": "名詞B",
-    "term": "穴",
+    "term": "ç©´",
     "reading": "あな",
     "definition": "hố, lỗ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A9%B4"
+    "image": "https://o.quizlet.com/ktB6jbjK7HO2t8Rxpdc0yw.jpg"
   },
   {
     "id": "u04-l06-010",
@@ -5106,7 +5106,7 @@
     "definition": "hàng, dòng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%97"
+    "image": "https://o.quizlet.com/ruXO.bxwfTpjckaiYpxPKA.jpg"
   },
   {
     "id": "u04-l06-011",
@@ -5114,12 +5114,12 @@
     "lesson": "Bài 6",
     "lessonOrder": 6,
     "section": "名詞B",
-    "term": "幅",
+    "term": "å¹…",
     "reading": "はば",
     "definition": "chiều rộng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%85"
+    "image": "https://o.quizlet.com/.yanm1FY3FS2G6dY87KVSQ.jpg"
   },
   {
     "id": "u04-l06-012",
@@ -5132,7 +5132,7 @@
     "definition": "phạm vi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AF%84%E5%9B%B2"
+    "image": "https://o.quizlet.com/P.w-Ot0sKdKjme9.B4v5lg.jpg"
   },
   {
     "id": "u04-l06-013",
@@ -5142,10 +5142,10 @@
     "section": "名詞B",
     "term": "内容",
     "reading": "ないよう",
-    "definition": "nội dung",
+    "definition": "ná»™i dung",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%86%85%E5%AE%B9"
+    "image": "https://o.quizlet.com/a8gIzQYBZN4K8mCOkuYe1A.jpg"
   },
   {
     "id": "u04-l07-001",
@@ -5158,7 +5158,7 @@
     "definition": "bên trong, nội dung",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%AD%E8%BA%AB"
+    "image": "https://o.quizlet.com/znM.oiaBFh6gp9P.XnRDMA.jpg"
   },
   {
     "id": "u04-l07-002",
@@ -5184,7 +5184,7 @@
     "definition": "bình thường, thông thường",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%99%AE%E9%80%9A"
+    "image": "https://o.quizlet.com/yVu5rxQASgYLccJoehzWGA.jpg"
   },
   {
     "id": "u04-l07-004",
@@ -5197,7 +5197,7 @@
     "definition": "tất nhiên",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%9F%E3%82%8A+%E5%89%8D"
+    "image": "https://o.quizlet.com/.y9FiZkykzIycmupuCaP4w.jpg"
   },
   {
     "id": "u04-l07-005",
@@ -5210,7 +5210,7 @@
     "definition": "giả",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%81%BD"
+    "image": "https://o.quizlet.com/Ueg7KwdJGGHadtrAi7vv.g.png"
   },
   {
     "id": "u04-l07-006",
@@ -5223,7 +5223,7 @@
     "definition": "khác nhau, riêng biệt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A5"
+    "image": "https://o.quizlet.com/JPWAFoQVYPoPmfb.bryiNw.jpg"
   },
   {
     "id": "u04-l07-007",
@@ -5236,7 +5236,7 @@
     "definition": "quốc tịch",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E7%B1%8D"
+    "image": "https://o.quizlet.com/gIu2EDTtd1EUrkpraj3.kA.jpg"
   },
   {
     "id": "u04-l07-008",
@@ -5249,7 +5249,7 @@
     "definition": "phương Đông",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9D%B1%E6%B4%8B"
+    "image": "https://o.quizlet.com/XyMyTXj21tSxs3.dYQ5Obg.png"
   },
   {
     "id": "u04-l07-009",
@@ -5262,7 +5262,7 @@
     "definition": "phương Tây",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A5%BF%E6%B4%8B"
+    "image": "https://o.quizlet.com/PunttlU4ezRO9Z4FKOSMVQ.png"
   },
   {
     "id": "u04-l07-010",
@@ -5275,7 +5275,7 @@
     "definition": "quốc tế",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E9%9A%9B"
+    "image": "https://o.quizlet.com/YHR6ikI1lCEHDfc4IotL7Q.png"
   },
   {
     "id": "u04-l07-011",
@@ -5288,7 +5288,7 @@
     "definition": "tự nhiên",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AA%E7%84%B6"
+    "image": "https://o.quizlet.com/HB1Du7RMCJP007JMduVeuA.jpg"
   },
   {
     "id": "u04-l07-012",
@@ -5301,7 +5301,7 @@
     "definition": "phong cảnh, cảnh sắc",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%99%AF%E8%89%B2"
+    "image": "https://o.quizlet.com/PRQOKoELhZEFpG5XY.FZYA.jpg"
   },
   {
     "id": "u04-l07-013",
@@ -5309,12 +5309,12 @@
     "lesson": "Bài 7",
     "lessonOrder": 7,
     "section": "名詞B",
-    "term": "宗教",
+    "term": "å®—æ•™",
     "reading": "しゅうきょう",
     "definition": "tôn giáo",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%97%E6%95%99"
+    "image": "https://o.quizlet.com/w60z.Xg3xRQqiR33wyNW1w.jpg"
   },
   {
     "id": "u04-l07-014",
@@ -5322,12 +5322,12 @@
     "lesson": "Bài 7",
     "lessonOrder": 7,
     "section": "名詞B",
-    "term": "愛",
+    "term": "æ\"›",
     "reading": "あい",
     "definition": "tình yêu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9B"
+    "image": "https://o.quizlet.com/i/LQ6LS07tk4riiHTvLYP9LQ.jpg"
   },
   {
     "id": "u05-l01-001",
@@ -5340,7 +5340,7 @@
     "definition": "đến nơi, tới (bưu phẩm/tin), tới tay; (tay) với tới",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B1%8A+%E3%81%8F"
+    "image": "https://o.quizlet.com/9o0SxBWvEeVUhTrgptmmgQ.jpg"
   },
   {
     "id": "u05-l01-002",
@@ -5353,7 +5353,7 @@
     "definition": "gửi/đem đến; nộp/trình (đơn, giấy tờ); báo cáo/khai báo",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B1%8A+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/b2jT2AqAahEjR7-HrN1sDw.png"
   },
   {
     "id": "u05-l01-003",
@@ -5366,7 +5366,7 @@
     "definition": "gãi (đầu), gãi (ngứa), toát (mồ hôi)",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%8F"
+    "image": "https://o.quizlet.com/i/V1UnyuUzkJY5-SCeCPfpDg.jpg"
   },
   {
     "id": "u05-l01-004",
@@ -5379,7 +5379,7 @@
     "definition": "cầm nắm, tóm được, nắm bắt (cơ hội, ý nghĩa)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%8B%E3%82%80"
+    "image": "https://o.quizlet.com/5Z8Eq80odatt85zGY2UE5A.png"
   },
   {
     "id": "u05-l01-005",
@@ -5392,7 +5392,7 @@
     "definition": "nắm, cầm, nắm chặt; nắm quyền/giữ bí mật",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%A1+%E3%82%8B"
+    "image": "https://o.quizlet.com/8.RbV0q3nGSoU0ZGDesD.g.jpg"
   },
   {
     "id": "u05-l01-006",
@@ -5405,7 +5405,7 @@
     "definition": "nắm bắt, giữ",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%BC+%E3%81%95%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/i/n7JBMMONg1VFTwGl9UyaMQ.jpg"
   },
   {
     "id": "u05-l01-007",
@@ -5418,7 +5418,7 @@
     "definition": "lại gần",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91+%E3%81%A5%E3%81%8F"
+    "image": "https://o.quizlet.com/Uf0-VKftwTCnwzR5IYwN4Q.png"
   },
   {
     "id": "u05-l01-008",
@@ -5431,7 +5431,7 @@
     "definition": "mang, đưa đến gần",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%91+%E3%81%A5%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/zobqcnZSgNzAEPAnpT3QnA.png"
   },
   {
     "id": "u05-l01-009",
@@ -5444,7 +5444,7 @@
     "definition": "hợp, khớp",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88+%E3%81%86"
+    "image": "https://o.quizlet.com/6zjV7dyoK6t2ywPPfadshA.png"
   },
   {
     "id": "u05-l01-010",
@@ -5457,7 +5457,7 @@
     "definition": "hợp, chỉnh (đồng hồ)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88+%E3%82%8F%E3%81%9B%E3%82%8B"
+    "image": "https://o.quizlet.com/tqnomB3prX7XmQyWw4Kt3g.jpg"
   },
   {
     "id": "u05-l01-011",
@@ -5470,7 +5470,7 @@
     "definition": "trúng (số), va/chạm, đúng; bị (ánh nắng) chiếu; gặp phải; ăn trúng (đồ ăn không hợp)",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%9F%E3%82%8B"
+    "image": "https://o.quizlet.com/NbI9AbFIKWIusDP120J.Wg.jpg"
   },
   {
     "id": "u05-l01-012",
@@ -5483,7 +5483,7 @@
     "definition": "đặt/áp vào; trúng; đoán; chỉ định; (đèn) rọi; (xe) đâm vào",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%93+%E3%81%A6%E3%82%8B"
+    "image": "https://o.quizlet.com/A3LMfgkiRT5RLhYgV9W3Hg.jpg"
   },
   {
     "id": "u05-l02-001",
@@ -5496,7 +5496,7 @@
     "definition": "so sánh",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AF%94+%E3%81%B9%E3%82%8B"
+    "image": "https://o.quizlet.com/UeG.LNoaRg5JSIKo3vXZlA.jpg"
   },
   {
     "id": "u05-l02-002",
@@ -5509,7 +5509,7 @@
     "definition": "hợp (với), hợp gu",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC%E5%90%88+%E3%81%86"
+    "image": "https://o.quizlet.com/VgyRchifI7Zvb2sXi6xKeA.png"
   },
   {
     "id": "u05-l02-003",
@@ -5522,7 +5522,7 @@
     "definition": "giống",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC+%E3%82%8B"
+    "image": "https://o.quizlet.com/FXSunTbdD328lsEA.iu6eg.jpg"
   },
   {
     "id": "u05-l02-004",
@@ -5535,7 +5535,7 @@
     "definition": "bắt chước, mô phỏng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%BC+%E3%81%9B%E3%82%8B"
+    "image": "https://o.quizlet.com/FXSunTbdD328lsEA.iu6eg.jpg"
   },
   {
     "id": "u05-l02-005",
@@ -5548,7 +5548,7 @@
     "definition": "chia, phân chia",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%86+%E3%81%8B%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/Vvn5BRVfdN82ee2J7xDfrA.jpg"
   },
   {
     "id": "u05-l02-006",
@@ -5561,7 +5561,7 @@
     "definition": "chia, phân chia, tách, phân loại; nhường/để phần cho",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%86+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/X3w.GjLw-GDSyOHx3bHJlg.jpg"
   },
   {
     "id": "u05-l02-007",
@@ -5574,7 +5574,7 @@
     "definition": "thêm vào, cộng thêm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%B3+%E3%81%99"
+    "image": "https://o.quizlet.com/x1ooJ-EWur0ZgNG9jELEKA.png"
   },
   {
     "id": "u05-l02-008",
@@ -5587,7 +5587,7 @@
     "definition": "trừ, bớt, kéo, dẫn, rút, tra (từ điển)",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%95+%E3%81%8F"
+    "image": "https://o.quizlet.com/i/-lRSTJ3q3rA_H9OKoICslg.jpg"
   },
   {
     "id": "u05-l02-009",
@@ -5600,7 +5600,7 @@
     "definition": "tăng lên, gia tăng",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A2%97+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/5WP1igw7WHJLmznmLZF0hA.jpg"
   },
   {
     "id": "u05-l02-010",
@@ -5613,7 +5613,7 @@
     "definition": "làm tăng lên",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A2%97+%E3%82%84%E3%81%99"
+    "image": "https://o.quizlet.com/ATREEJznOOWdcMr-rdj70A.jpg"
   },
   {
     "id": "u05-l02-011",
@@ -5626,7 +5626,7 @@
     "definition": "giảm xuống",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%9B+%E3%82%8B"
+    "image": "https://o.quizlet.com/9tvpvdQ-0KEyKeCmd..LMA.jpg"
   },
   {
     "id": "u05-l02-012",
@@ -5639,7 +5639,7 @@
     "definition": "cắt giảm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%9B+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/h7WDMaQBgXMZN-6zROuDIQ.jpg"
   },
   {
     "id": "u05-l02-013",
@@ -5652,7 +5652,7 @@
     "definition": "thay đổi, biến đổi",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89+%E3%82%8F%E3%82%8B"
+    "image": "https://o.quizlet.com/7LhEklRlK5FtETZKY1GaeQ.jpg"
   },
   {
     "id": "u05-l02-014",
@@ -5665,7 +5665,7 @@
     "definition": "đổi",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/g24nQ0L5TKdokk61Bu8NzA.png"
   },
   {
     "id": "u05-l02-015",
@@ -5678,7 +5678,7 @@
     "definition": "thay đổi, thay thế",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%BF+%E3%82%8F%E3%82%8B%2F+%E4%BB%A3+%E3%82%8F%E3%82%8B%2F+%E6%8F%9B+%E3%82%8F%E3%82%8B"
+    "image": "https://o.quizlet.com/tsNdt-kTE0e5BJcz5W-6aQ.jpg"
   },
   {
     "id": "u05-l02-016",
@@ -5691,7 +5691,7 @@
     "definition": "thay đổi, thế chỗ",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%BF+%E3%81%88%E3%82%8B%2F+%E4%BB%A3+%E3%81%88%E3%82%8B%2F+%E6%8F%9B+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/j1dEY37RPWEx5KRTPMurbA.jpg"
   },
   {
     "id": "u05-l03-001",
@@ -5704,7 +5704,7 @@
     "definition": "trả về",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%94+%E3%82%8B"
+    "image": "https://o.quizlet.com/CPa8IgkiGM1twBOd-UfFNQ.png"
   },
   {
     "id": "u05-l03-002",
@@ -5717,7 +5717,7 @@
     "definition": "trả lại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%94+%E3%81%99"
+    "image": "https://o.quizlet.com/i/9b2VRRSOixscFylUyuIb4Q.jpg"
   },
   {
     "id": "u05-l03-003",
@@ -5730,7 +5730,7 @@
     "definition": "bàn giao, chuyển nhượng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AD%B2+%E3%82%8B"
+    "image": "https://o.quizlet.com/98a.777MvVKBwEfnZP1oIQ.png"
   },
   {
     "id": "u05-l03-004",
@@ -5743,7 +5743,7 @@
     "definition": "được cứu giúp, đỡ quá, may quá",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%A9+%E3%81%8B%E3%82%8B"
+    "image": "https://o.quizlet.com/W-McpqJPTzI.WWQg3fDL8Q.png"
   },
   {
     "id": "u05-l03-005",
@@ -5756,7 +5756,7 @@
     "definition": "cứu, giúp",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%A9+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/i/Kpz_LX9L1BflAZcITE48Gw.jpg"
   },
   {
     "id": "u05-l03-006",
@@ -5769,7 +5769,7 @@
     "definition": "bắt nạt, chọc ghẹo",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%98%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/iARVJUeX0SpXBShvBVTa-A.jpg"
   },
   {
     "id": "u05-l03-007",
@@ -5782,7 +5782,7 @@
     "definition": "lừa gạt",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A0%E3%81%BE%E3%81%99"
+    "image": "https://o.quizlet.com/M1lmX3PYVoOopyE44FQn2w.png"
   },
   {
     "id": "u05-l03-008",
@@ -5790,12 +5790,12 @@
     "lesson": "Bài 3",
     "lessonOrder": 3,
     "section": "動詞B",
-    "term": "盗む",
+    "term": "ç›—ã'€",
     "reading": "ぬす",
     "definition": "ăn trộm, ăn cắp",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%97+%E3%82%80"
+    "image": "https://o.quizlet.com/4zQJzwDdUDeeGhEH2l4JgQ.jpg"
   },
   {
     "id": "u05-l03-009",
@@ -5808,7 +5808,7 @@
     "definition": "mắc, hóc, đâm",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%BA+%E3%81%95%E3%82%8B"
+    "image": "https://o.quizlet.com/SGP801LlG42ZJDE.7lNVoQ.png"
   },
   {
     "id": "u05-l03-010",
@@ -5821,7 +5821,7 @@
     "definition": "cắn, hút, chích, đâm, thọc",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%BA+%E3%81%99"
+    "image": "https://o.quizlet.com/Mb6BQ0dViBMVCmaMFBWo-Q.jpg"
   },
   {
     "id": "u05-l03-011",
@@ -5834,7 +5834,7 @@
     "definition": "giết, sát hại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AE%BA+%E3%81%99"
+    "image": "https://o.quizlet.com/ywS07mHSlObLDid35FAzlw.png"
   },
   {
     "id": "u05-l03-012",
@@ -5847,7 +5847,7 @@
     "definition": "trốn, ẩn nấp",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9A%A0+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/.N6gtWkzLijV8YGp7kNbHA.jpg"
   },
   {
     "id": "u05-l03-013",
@@ -5860,7 +5860,7 @@
     "definition": "giấu diếm, che giấu",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9A%A0+%E3%81%99"
+    "image": "https://o.quizlet.com/rj31roKMwQGi-wSmBUQnnQ.jpg"
   },
   {
     "id": "u05-l03-014",
@@ -5873,7 +5873,7 @@
     "definition": "bị chôn/lấp; bị vùi; (chỗ trống) được lấp đầy; (lịch) kín",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%8B+%E3%81%BE%E3%82%8B"
+    "image": "https://o.quizlet.com/KX40Iy9ZXSChT-bJJpw8lw.png"
   },
   {
     "id": "u05-l03-015",
@@ -5886,7 +5886,7 @@
     "definition": "chôn/lấp; lấp đầy; bù (khoảng cách/thiếu hụt)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%8B+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/KX40Iy9ZXSChT-bJJpw8lw.png"
   },
   {
     "id": "u05-l03-016",
@@ -5899,7 +5899,7 @@
     "definition": "bao quanh, vây quanh",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%B2+%E3%82%80"
+    "image": "https://o.quizlet.com/TF8-LH11A6E3iMi3XERFZg.jpg"
   },
   {
     "id": "u05-l04-001",
@@ -5912,7 +5912,7 @@
     "definition": "chất, chặt, tắc, bít, gần lại",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B0+%E3%81%BE%E3%82%8B"
+    "image": "https://o.quizlet.com/MKf0S3xGFe3AYx33cVxVqA.jpg"
   },
   {
     "id": "u05-l04-002",
@@ -5925,7 +5925,7 @@
     "definition": "chất, nhét vào, rút ngắn (khoảng cách)",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B0+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/B9GtjDKkQQN5ZqsjRf67tg.jpg"
   },
   {
     "id": "u05-l04-003",
@@ -5938,7 +5938,7 @@
     "definition": "mở, tổ chức",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%8B+%E3%81%8F"
+    "image": "https://o.quizlet.com/LBRCSHtMn.88e0sPk5et9w.jpg"
   },
   {
     "id": "u05-l04-004",
@@ -5964,7 +5964,7 @@
     "definition": "bay, bay mất",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%9B+%E3%81%B6"
+    "image": "https://o.quizlet.com/yqGpkcBqwRBsZUVvDar.qQ.png"
   },
   {
     "id": "u05-l04-006",
@@ -5977,7 +5977,7 @@
     "definition": "bắn, phóng, làm bay, bỏ qua",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%9B+%E3%81%B0%E3%81%99"
+    "image": "https://o.quizlet.com/FTaH4nwSgI4OqxDteCemng.png"
   },
   {
     "id": "u05-l05-001",
@@ -5990,7 +5990,7 @@
     "definition": "vẫy (tay), rắc (muối), chia tay / đá (người yêu)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8C%AF+%E3%82%8B"
+    "image": "https://o.quizlet.com/i/r0NEFmCWQ-6ItO7o4dKAWA.jpg"
   },
   {
     "id": "u05-l05-002",
@@ -6003,7 +6003,7 @@
     "definition": "lật (card, lịch...)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%81%E3%81%8F%E3%82%8B"
+    "image": "https://o.quizlet.com/ZwRsrVr0rqHvW6CT2FfNIQ.jpg"
   },
   {
     "id": "u05-l05-003",
@@ -6016,7 +6016,7 @@
     "definition": "thấy, tình cờ gặp",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%8B+%E3%81%8B%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/VQsQQbyieXkSQtwKYH1KIQ.jpg"
   },
   {
     "id": "u05-l05-004",
@@ -6029,7 +6029,7 @@
     "definition": "xác nhận, làm cho rõ ràng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA+%E3%81%8B%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/LSi-dig-52unKfZknClDRA.jpg"
   },
   {
     "id": "u05-l05-005",
@@ -6042,7 +6042,7 @@
     "definition": "thử nghiệm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%A6+%E3%81%99"
+    "image": "https://o.quizlet.com/JkBjows6zBf2.s8anM8Ruw.jpg"
   },
   {
     "id": "u05-l05-006",
@@ -6055,7 +6055,7 @@
     "definition": "lặp lại",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B9%B0+%E3%82%8A+%E8%BF%94+%E3%81%99"
+    "image": "https://o.quizlet.com/Ba-wx.6DGTy1cTl9VOgWJw.png"
   },
   {
     "id": "u05-l05-007",
@@ -6068,7 +6068,7 @@
     "definition": "dịch (phiên dịch, thông dịch)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B3+%E3%81%99"
+    "image": "https://o.quizlet.com/MjyNC-a.VgdHZA8klcLsXw.jpg"
   },
   {
     "id": "u05-l05-008",
@@ -6081,7 +6081,7 @@
     "definition": "tiến hành, thực hiện, tổ chức",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%8C+%E3%81%86"
+    "image": "https://o.quizlet.com/h4cUFkuXocJMHVKOHSdEMg.jpg"
   },
   {
     "id": "u05-l05-009",
@@ -6094,7 +6094,7 @@
     "definition": "nhầm",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93%E9%81%95+%E3%81%86"
+    "image": "https://o.quizlet.com/.fpvMBoB-e-6ytGITbaF1Q.png"
   },
   {
     "id": "u05-l05-010",
@@ -6107,7 +6107,7 @@
     "definition": "làm nhầm, mắc lỗi, chọn sai",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%96%93%E9%81%95+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/MqKU7t-HG14UeZg0sXQTTQ.jpg"
   },
   {
     "id": "u05-l05-011",
@@ -6120,7 +6120,7 @@
     "definition": "tha thứ, cho phép",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B1+%E3%81%99"
+    "image": "https://o.quizlet.com/eYj1.9zxefLI2FJDVJ0iLA.png"
   },
   {
     "id": "u05-l05-012",
@@ -6130,10 +6130,10 @@
     "section": "動詞B",
     "term": "慣れる",
     "reading": "な",
-    "definition": "quen, quen với",
+    "definition": "quen, quen vá»›i",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%A3+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/0nOBNOim-mAmV77wXqaFXw.png"
   },
   {
     "id": "u05-l05-013",
@@ -6146,7 +6146,7 @@
     "definition": "làm cho quen",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%A3+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/i/D4n6BTi-5DE_h1GtVYp7aw.jpg"
   },
   {
     "id": "u05-l05-014",
@@ -6159,7 +6159,7 @@
     "definition": "đứng, đứng dậy; mọc (nhà, cột); phát sinh",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B+%E3%81%A4"
+    "image": "https://o.quizlet.com/ZqESWhFytPNF5QrvUiVhlQ.jpg"
   },
   {
     "id": "u05-l05-015",
@@ -6172,7 +6172,7 @@
     "definition": "dựng đứng, lập nên",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B+%E3%81%A6%E3%82%8B"
+    "image": "https://o.quizlet.com/p..p7npchsNFcLg1mHoQyA.jpg"
   },
   {
     "id": "u05-l06-001",
@@ -6185,7 +6185,7 @@
     "definition": "được xây dựng, dựng lên",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%BA+%E3%81%A4"
+    "image": "https://o.quizlet.com/QCkc9NB5X2k2SctwJuIYUA.jpg"
   },
   {
     "id": "u05-l06-002",
@@ -6198,7 +6198,7 @@
     "definition": "xây dựng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%BA+%E3%81%A6%E3%82%8B"
+    "image": "https://o.quizlet.com/zL.DJnQFqRzDW6bHI7Upug.jpg"
   },
   {
     "id": "u05-l06-003",
@@ -6211,7 +6211,7 @@
     "definition": "lớn lên, phát triển, được đào tạo",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%82%B2+%E3%81%A4"
+    "image": "https://o.quizlet.com/thgcuCo60kPLEVmFhkyhOA.jpg"
   },
   {
     "id": "u05-l06-004",
@@ -6224,7 +6224,7 @@
     "definition": "nuôi dưỡng, nuôi lớn, chăm sóc (hoa)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%82%B2+%E3%81%A6%E3%82%8B"
+    "image": "https://o.quizlet.com/8oNx9tGcNGX5mTncbeQucg.jpg"
   },
   {
     "id": "u05-l06-005",
@@ -6237,7 +6237,7 @@
     "definition": "mọc (cỏ, tóc, răng)",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/gRd5iNO8a1PIaOa4FvAdEA.gif"
   },
   {
     "id": "u05-l06-006",
@@ -6250,7 +6250,7 @@
     "definition": "nuôi, chăm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F+%E3%82%84%E3%81%99"
+    "image": "https://o.quizlet.com/kxpwJax09v7V8pWzYdBMDg.png"
   },
   {
     "id": "u05-l06-007",
@@ -6263,7 +6263,7 @@
     "definition": "vấy bẩn, bị bẩn",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%9A+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/wyONfdAkwL6MTfxU1R9fMA.jpg"
   },
   {
     "id": "u05-l06-008",
@@ -6276,7 +6276,7 @@
     "definition": "làm dơ, làm bẩn",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%9A+%E3%81%99"
+    "image": "https://o.quizlet.com/164Us-jNc8lkiQy5EilIzw.png"
   },
   {
     "id": "u05-l06-009",
@@ -6289,7 +6289,7 @@
     "definition": "hỏng, bị hỏng",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A3%8A+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/5abhYJ0houAeHTAYWl7QJA.png"
   },
   {
     "id": "u05-l06-010",
@@ -6302,7 +6302,7 @@
     "definition": "làm hư, làm hỏng, gây hại",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A3%8A+%E3%81%99"
+    "image": "https://o.quizlet.com/viY4J.Ko4u4NvrykmAg9AQ.jpg"
   },
   {
     "id": "u05-l06-011",
@@ -6315,7 +6315,7 @@
     "definition": "bể, nứt, hỏng",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/le3-OTDAmajtsvLz64aG7A.png"
   },
   {
     "id": "u05-l06-012",
@@ -6328,7 +6328,7 @@
     "definition": "làm vỡ, chia",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2+%E3%82%8B"
+    "image": "https://o.quizlet.com/4TB-cWL.QTEzg2klUw.8Ig.png"
   },
   {
     "id": "u05-l06-013",
@@ -6341,7 +6341,7 @@
     "definition": "bị bẻ, gãy",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%98+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/DocemhA3m0gK01Vs1xuSrA.png"
   },
   {
     "id": "u05-l06-014",
@@ -6354,7 +6354,7 @@
     "definition": "bẻ gãy, gấp lại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%98+%E3%82%8B"
+    "image": "https://o.quizlet.com/DocemhA3m0gK01Vs1xuSrA.png"
   },
   {
     "id": "u05-l06-015",
@@ -6367,7 +6367,7 @@
     "definition": "bị rách (giấy, sách, vải, áo…)",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%B4+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/icE02zG.-PaalZzNLM4FXw.png"
   },
   {
     "id": "u05-l06-016",
@@ -6375,12 +6375,12 @@
     "lesson": "Bài 6",
     "lessonOrder": 6,
     "section": "動詞B",
-    "term": "破る",
+    "term": "ç ´ã'‹",
     "reading": "やぶ",
     "definition": "làm rách (giấy, sách, vải, áo…)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A0%B4+%E3%82%8B"
+    "image": "https://o.quizlet.com/FDgzuJk5s1UywhXsdVUGtQ.jpg"
   },
   {
     "id": "u05-l06-017",
@@ -6393,7 +6393,7 @@
     "definition": "cong, rẽ",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B2+%E3%81%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/KZjnGmhLpmRbYJbPOWYZFg.jpg"
   },
   {
     "id": "u05-l06-018",
@@ -6406,7 +6406,7 @@
     "definition": "bẻ cong , uốn cong",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9B%B2+%E3%81%92%E3%82%8B"
+    "image": "https://o.quizlet.com/VJryOeV.YMxrjHARwzGisw.jpg"
   },
   {
     "id": "u05-l07-001",
@@ -6419,7 +6419,7 @@
     "definition": "tuột ra, rời ra",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%96+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/F0S.5vP2UqSEwEDtFcMmpQ.png"
   },
   {
     "id": "u05-l07-002",
@@ -6432,7 +6432,7 @@
     "definition": "tháo; làm trượt; bỏ (ca trực); trật (đáp án)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%96+%E3%81%99"
+    "image": "https://o.quizlet.com/i/VKOucCaLuu36rWpymwTs_A.jpg"
   },
   {
     "id": "u05-l07-003",
@@ -6445,7 +6445,7 @@
     "definition": "dao động, lung lay",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%BA+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/VLUE6JELcrgMkQx-RuHxrw.png"
   },
   {
     "id": "u05-l07-004",
@@ -6458,7 +6458,7 @@
     "definition": "rung lắc, làm lung lay",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%BA+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/D8sD9lmi8hobZkdIzpsZIg.png"
   },
   {
     "id": "u05-l07-005",
@@ -6471,7 +6471,7 @@
     "definition": "chảy, trôi, lan ra",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%81+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/UXjRQwvHyNjnBHSK8tId0Q.jpg"
   },
   {
     "id": "u05-l07-006",
@@ -6484,7 +6484,7 @@
     "definition": "làm cho chảy ra",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%81+%E3%81%99"
+    "image": "https://o.quizlet.com/9jOuT.FPctcYvmR9tfUDTg.jpg"
   },
   {
     "id": "u05-l07-007",
@@ -6497,7 +6497,7 @@
     "definition": "ướt, dính",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%A1+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/8-oTVgPK.9aiyEWdsiL4Pg.jpg"
   },
   {
     "id": "u05-l07-008",
@@ -6510,7 +6510,7 @@
     "definition": "làm ướt, làm ẩm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%A1+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/xW36iqCqxopvonAwwLGscQ.png"
   },
   {
     "id": "u05-l07-009",
@@ -6523,7 +6523,7 @@
     "definition": "lạc đường, lúng túng, phân vân",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BF%B7+%E3%81%86"
+    "image": "https://o.quizlet.com/CiNumiEonbkmnzdw.JquYA.jpg"
   },
   {
     "id": "u05-l07-010",
@@ -6531,12 +6531,12 @@
     "lesson": "Bài 7",
     "lessonOrder": 7,
     "section": "動詞B",
-    "term": "悩む",
+    "term": "æ'©ã'€",
     "reading": "なや",
     "definition": "phiền não, trăn trở, đau đầu vì…",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%82%A9+%E3%82%80"
+    "image": "https://o.quizlet.com/avHvW93WRKwrnejY83dWHQ.jpg"
   },
   {
     "id": "u05-l07-011",
@@ -6549,7 +6549,7 @@
     "definition": "vội, luống cuống, hốt hoảng",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%8C+%E3%81%A6%E3%82%8B"
+    "image": "https://o.quizlet.com/YAJIxwgFIW3xFXNib0ugTA.png"
   },
   {
     "id": "u05-l08-001",
@@ -6562,7 +6562,7 @@
     "definition": "tỉnh dậy, tỉnh",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%9A+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/JzsWOTgbBITm9APJurRQfA.jpg"
   },
   {
     "id": "u05-l08-002",
@@ -6575,7 +6575,7 @@
     "definition": "đánh thức, làm cho tỉnh",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%9A+%E3%81%BE%E3%81%99"
+    "image": "https://o.quizlet.com/keBfiNz4q2VWyTuvKAisew.png"
   },
   {
     "id": "u05-l08-003",
@@ -6585,10 +6585,10 @@
     "section": "動詞B",
     "term": "眠る",
     "reading": "ねむ",
-    "definition": "ngủ",
+    "definition": "ngá»§",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9C%A0+%E3%82%8B"
+    "image": "https://o.quizlet.com/bQiryKxRvHMIuSbisw5qBg.jpg"
   },
   {
     "id": "u05-l08-004",
@@ -6601,7 +6601,7 @@
     "definition": "cầu nguyện",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A5%88+%E3%82%8B"
+    "image": "https://o.quizlet.com/W7ESsmaTvotYM5gL8mUXuA.jpg"
   },
   {
     "id": "u05-l08-005",
@@ -6614,7 +6614,7 @@
     "definition": "ăn mừng, chúc mừng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A5%9D+%E3%81%86"
+    "image": "https://o.quizlet.com/j7l0tYNvGDX32nNXipHLmA.jpg"
   },
   {
     "id": "u05-l08-006",
@@ -6627,527 +6627,527 @@
     "definition": "cảm giác, cảm thấy",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%84%9F+%E3%81%98%E3%82%8B"
+    "image": "https://o.quizlet.com/e3CICSO50eyof3jY5vNNAg.png"
   },
   {
     "id": "u06-l99-001",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "クラスメート",
     "reading": null,
     "definition": "bạn cùng lớp (classmate)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A1%E3%83%BC%E3%83%88"
+    "image": "https://o.quizlet.com/4XgQhewWbGz5Hc2BV7UT-Q.jpg"
   },
   {
     "id": "u06-l99-002",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "グループ",
     "reading": null,
     "definition": "nhóm (group)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97"
+    "image": "https://o.quizlet.com/LDWUB.1nmJzER3ap64X-Sg.png"
   },
   {
     "id": "u06-l99-003",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "チーム",
     "reading": null,
     "definition": "đội, nhóm (team)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%81%E3%83%BC%E3%83%A0"
+    "image": "https://o.quizlet.com/h2SgGHeA1x3OE7-nd9MBHQ.jpg"
   },
   {
     "id": "u06-l99-004",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
-    "term": "プロフェッショナル（プロ）",
+    "section": "カタカナA",
+    "term": "プロフェッショナル(プロ)",
     "reading": null,
     "definition": "chuyên nghiệp, nhà nghề (professional)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%83%83%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%EF%BC%88%E3%83%97%E3%83%AD%EF%BC%89"
+    "image": "https://o.quizlet.com/vMIZn7PTnNaG.OpM0Y0mlw.jpg"
   },
   {
     "id": "u06-l99-005",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
-    "term": "アマチュア（アマ）",
+    "section": "カタカナA",
+    "term": "アマチュア(アマ)",
     "reading": null,
     "definition": "không chuyên, nghiệp dư (amateur)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%83%9E%E3%83%81%E3%83%A5%E3%82%A2%EF%BC%88%E3%82%A2%E3%83%9E%EF%BC%89"
+    "image": "https://o.quizlet.com/jgVP8kBspvvOHUrHd31tiQ.jpg"
   },
   {
     "id": "u06-l99-006",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "トレーニング",
     "reading": null,
     "definition": "đào tạo, huấn luyện (training)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0"
+    "image": "https://o.quizlet.com/SrU1D23U5tfmY3I9Lk7MHA.jpg"
   },
   {
     "id": "u06-l99-007",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "マッサージ",
     "reading": null,
     "definition": "xoa bóp, mát-xa (massage)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9E%E3%83%83%E3%82%B5%E3%83%BC%E3%82%B8"
+    "image": "https://o.quizlet.com/hVPvxNRyxOQLGCyv8epm4Q.jpg"
   },
   {
     "id": "u06-l99-008",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "アドバイス",
     "reading": null,
     "definition": "lời khuyên (advice)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%83%89%E3%83%90%E3%82%A4%E3%82%B9"
+    "image": "https://o.quizlet.com/.A1FWpacV4EqQuKg4HPhyQ.png"
   },
   {
     "id": "u06-l99-009",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "アイデア",
     "reading": null,
     "definition": "ý tưởng (idea)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2"
+    "image": "https://o.quizlet.com/p.yVFstATjoYhi.nNfGkIA.jpg"
   },
   {
     "id": "u06-l99-010",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "トップ",
     "reading": null,
     "definition": "đầu, đỉnh, đầu tiên (top)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%88%E3%83%83%E3%83%97"
+    "image": "https://o.quizlet.com/gR23ucWDXgphdPTWPne-6w.jpg"
   },
   {
     "id": "u06-l99-011",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "スピード",
     "reading": null,
     "definition": "tốc độ (speed)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89"
+    "image": "https://o.quizlet.com/Guc58JX6rwUmDiv.QEjqoQ.jpg"
   },
   {
     "id": "u06-l99-012",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ラッシュ",
     "reading": null,
     "definition": "cao điểm, giờ cao điểm (rush)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5"
+    "image": "https://o.quizlet.com/2jaZa6fp3KrPxq0gj.VKhg.jpg"
   },
   {
     "id": "u06-l99-013",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "バイク",
     "reading": null,
     "definition": "xe mô tô (motobike)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%90%E3%82%A4%E3%82%AF"
+    "image": "https://o.quizlet.com/56J3EvFEogli9NRqgHUo5A.jpg"
   },
   {
     "id": "u06-l99-014",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ヘルメット",
     "reading": null,
     "definition": "mũ bảo hiểm (helmet)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%98%E3%83%AB%E3%83%A1%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/bjhFHNfRqm.EKk0sfO5JkQ.png"
   },
   {
     "id": "u06-l99-015",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "コンタクトレンズ",
     "reading": null,
     "definition": "kính áp tròng (contact lens)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B3%E3%83%B3%E3%82%BF%E3%82%AF%E3%83%88%E3%83%AC%E3%83%B3%E3%82%BA"
+    "image": "https://o.quizlet.com/RpxZuEXZhfqvssgSseLytA.jpg"
   },
   {
     "id": "u06-l99-016",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ガラス",
     "reading": null,
     "definition": "kính (glass)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%AC%E3%83%A9%E3%82%B9"
+    "image": "https://o.quizlet.com/TcSAIs40wkTIi2wUH54ueQ.jpg"
   },
   {
     "id": "u06-l99-017",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "プラスチック",
     "reading": null,
-    "definition": "nhựa (plastic)",
+    "definition": "nhá»±a (plastic)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF"
+    "image": "https://o.quizlet.com/ifJkCYRJb5ggYmkJxlO4VQ.jpg"
   },
   {
     "id": "u06-l99-018",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ベランダ",
     "reading": null,
     "definition": "ban công (balcony)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%99%E3%83%A9%E3%83%B3%E3%83%80"
+    "image": "https://o.quizlet.com/QQbxp4aQu91t-DH0RvG49g.jpg"
   },
   {
     "id": "u06-l99-019",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ペット",
     "reading": null,
     "definition": "vật nuôi, thú cưng (pet)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9A%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/tOr0zJkzgpec3oRZXXi.vQ.jpg"
   },
   {
     "id": "u06-l99-020",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ベンチ",
     "reading": null,
     "definition": "băng ghế dài (bench)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%99%E3%83%B3%E3%83%81"
+    "image": "https://o.quizlet.com/R.fOkmIdk.U2oBTw7Rk6BA.jpg"
   },
   {
     "id": "u06-l99-021",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "デザイン",
     "reading": null,
     "definition": "thiết kế (design)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3"
+    "image": "https://o.quizlet.com/-DM9fTfOIfcm-zwQ-ZH69w.jpg"
   },
   {
     "id": "u06-l99-022",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "バーゲンセール",
     "reading": null,
     "definition": "hạ giá, giảm giá (sale)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%90%E3%83%BC%E3%82%B2%E3%83%B3%E3%82%BB%E3%83%BC%E3%83%AB"
+    "image": "https://o.quizlet.com/imTVo1B8o88GnYJSUQUfPA.jpg"
   },
   {
     "id": "u06-l99-023",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "パート",
     "reading": null,
     "definition": "việc làm part time, một phần (part-time job, part)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%91%E3%83%BC%E3%83%88"
+    "image": "https://o.quizlet.com/qkt5vLCU46YvSO5wOdsC4Q.png"
   },
   {
     "id": "u06-l99-024",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "コンビニエンスストア",
     "reading": null,
     "definition": "của hàng tiện lợi (convenience store)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8B%E3%82%A8%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%88%E3%82%A2"
+    "image": "https://o.quizlet.com/mhn2me0AvyFLt8wh8tWDxw.jpg"
   },
   {
     "id": "u06-l99-025",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
-    "term": "レジ（レジスター）",
+    "section": "カタカナA",
+    "term": "レジ(レジスター)",
     "reading": null,
     "definition": "máy tính tiền (cash register)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AC%E3%82%B8%EF%BC%88%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%BC%EF%BC%89"
+    "image": "https://o.quizlet.com/dpYdyhtS-XToK4kXaDA.Nw.jpg"
   },
   {
     "id": "u06-l99-026",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "レシート",
     "reading": null,
     "definition": "biên nhận, hóa đơn (receipt)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AC%E3%82%B7%E3%83%BC%E3%83%88"
+    "image": "https://o.quizlet.com/SETpZQ8gDg8mcMoiXj7g0A.png"
   },
   {
     "id": "u06-l99-027",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "インスタント",
     "reading": null,
     "definition": "(ăn, uống, …)liền, lập tức (instant)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88"
+    "image": "https://o.quizlet.com/zOwfukZB0UnTmJ5iEPKIqQ.jpg"
   },
   {
     "id": "u06-l99-028",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "ファストフード",
     "reading": null,
     "definition": "thức ăn nhanh (fast food)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%95%E3%82%A1%E3%82%B9%E3%83%88%E3%83%95%E3%83%BC%E3%83%89"
+    "image": "https://o.quizlet.com/59o2fc9Vqj90g3V6VyNPUg.jpg"
   },
   {
     "id": "u06-l99-029",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "フルーツ",
     "reading": null,
     "definition": "hoa quả, trái cây (fruit)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84"
+    "image": "https://o.quizlet.com/meNo0Kpw3-nMj08oVdn58g.png"
   },
   {
     "id": "u06-l99-030",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "デザート",
     "reading": null,
     "definition": "món tráng miệng (dessert)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%87%E3%82%B6%E3%83%BC%E3%83%88"
+    "image": "https://o.quizlet.com/GZDzKKOlMy0kTTJgAH2f0A.png"
   },
   {
     "id": "u06-l99-031",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "インターネット",
     "reading": null,
     "definition": "internet",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/dzgQ.MUcgJ2Uj2xc.qyqmw.jpg"
   },
   {
     "id": "u06-l99-032",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "チャイム",
     "reading": null,
     "definition": "chuông (chime)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%81%E3%83%A3%E3%82%A4%E3%83%A0"
+    "image": "https://o.quizlet.com/lBZYfb4LfczDuyelwPDY6Q.jpg"
   },
   {
     "id": "u06-l99-033",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "アナウンス",
     "reading": null,
     "definition": "thông báo (announcement)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B9"
+    "image": "https://o.quizlet.com/X6BpXlBNwCtVGc-IcUNJww.jpg"
   },
   {
     "id": "u06-l99-034",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "メッセージ",
     "reading": null,
     "definition": "tin nhắn, thông điệp (message)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8"
+    "image": "https://o.quizlet.com/NOs4EdK1QPUKNl9fooPCuw.jpg"
   },
   {
     "id": "u06-l99-035",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "パンフレット",
     "reading": null,
     "definition": "ấn phẩm quảng cáo (pamphlet)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/P0969epMPb30OV2CG6bGnw.png"
   },
   {
     "id": "u06-l99-036",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "カード",
     "reading": null,
     "definition": "thẻ card",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%AB%E3%83%BC%E3%83%89"
+    "image": "https://o.quizlet.com/ks5Fq5MJoX2WNejKzDr64g.jpg"
   },
   {
     "id": "u06-l99-037",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "インタビュー",
     "reading": null,
     "definition": "phỏng vấn (interview)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%93%E3%83%A5%E3%83%BC"
+    "image": "https://o.quizlet.com/nW6I7QkeYntpDEcqzXqs-g.jpg"
   },
   {
     "id": "u06-l99-038",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "アンケート",
     "reading": null,
     "definition": "bảng khảo sát / bảng điều tra",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88"
+    "image": "https://o.quizlet.com/-EL-q2lVp4bZwcdkbOj4Xw.jpg"
   },
   {
     "id": "u06-l99-039",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "データ",
     "reading": null,
     "definition": "dữ liệu (data)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%87%E3%83%BC%E3%82%BF"
+    "image": "https://o.quizlet.com/i/fCxej44Wz83zMNe2T9XwjA.jpg"
   },
   {
     "id": "u06-l99-040",
     "unit": 6,
     "lesson": "Katakana A",
     "lessonOrder": 99,
-    "section": "????A",
+    "section": "カタカナA",
     "term": "パーセント",
     "reading": null,
     "definition": "phần trăm (pecent)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%83%88"
+    "image": "https://o.quizlet.com/-WeeTohdY.J4K8X.w7-nXg.png"
   },
   {
     "id": "u07-l01-001",
@@ -7160,7 +7160,7 @@
     "definition": "đậm, đặc",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%83+%E3%81%84"
+    "image": "https://o.quizlet.com/BTcMn6Kd8Fgk4ZAesiEMuw.jpg"
   },
   {
     "id": "u07-l01-002",
@@ -7173,7 +7173,7 @@
     "definition": "nhạt, mỏng",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%96%84+%E3%81%84"
+    "image": "https://o.quizlet.com/fo-hDcMuY5vYOUaIN.X.sA.jpg"
   },
   {
     "id": "u07-l01-003",
@@ -7186,7 +7186,7 @@
     "definition": "chua",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%85%B8+%E3%81%A3%E3%81%B1%E3%81%84"
+    "image": "https://o.quizlet.com/.jU3pwk8mlTHWlGwRfmRhw.jpg"
   },
   {
     "id": "u07-l01-004",
@@ -7199,7 +7199,7 @@
     "definition": "thối, tanh",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%87%AD+%E3%81%84"
+    "image": "https://o.quizlet.com/8v454aTPVfBrz1mDrYPOqg.jpg"
   },
   {
     "id": "u07-l01-005",
@@ -7212,7 +7212,7 @@
     "definition": "buồn cười, kì quặc (sự cố) có vấn đề, lạ",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8A%E3%81%8B%E3%81%97%E3%81%84"
+    "image": "https://o.quizlet.com/FaNcBn445vAvJh-MW6SDEw.jpg"
   },
   {
     "id": "u07-l01-006",
@@ -7225,7 +7225,7 @@
     "definition": "dễ nhìn, bảnh bao, ngầu",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%A3%E3%81%93%E3%81%84%E3%81%84"
+    "image": "https://o.quizlet.com/i/mYuI_EDOj2UMKgHdLsDOlQ.jpg"
   },
   {
     "id": "u07-l01-007",
@@ -7238,7 +7238,7 @@
     "definition": "giỏi, ngon, suôn sẻ, trôi chảy",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%81%BE%E3%81%84"
+    "image": "https://o.quizlet.com/ENtpHu.wVlnTrrEsAqgkKw.png"
   },
   {
     "id": "u07-l01-008",
@@ -7251,7 +7251,7 @@
     "definition": "thân thiết",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A6%AA+%E3%81%97%E3%81%84"
+    "image": "https://o.quizlet.com/a-JEEqeAzvFKJSFMFEe9wQ.jpg"
   },
   {
     "id": "u07-l01-009",
@@ -7264,7 +7264,7 @@
     "definition": "rành / am hiểu / thạo / biết rõ (về lĩnh vực, sự việc)",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A9%B3+%E3%81%97%E3%81%84"
+    "image": "https://o.quizlet.com/KRV0nZTJUezmvHn5rVKiRw.jpg"
   },
   {
     "id": "u07-l01-010",
@@ -7277,7 +7277,7 @@
     "definition": "nhỏ, chi tiết, tiểu tiết, tiền lẻ",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B4%B0+%E3%81%8B%E3%81%84"
+    "image": "https://o.quizlet.com/i/CAX0g3YAjGwdz7C6wb5hxg.jpg"
   },
   {
     "id": "u07-l01-011",
@@ -7290,7 +7290,7 @@
     "definition": "nông, nông cạn, chưa thâm sâu",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B5%85+%E3%81%84"
+    "image": "https://o.quizlet.com/CJPAJ-6YXprjPZKw65T8zw.jpg"
   },
   {
     "id": "u07-l02-001",
@@ -7303,7 +7303,7 @@
     "definition": "硬い: cứng (vật), cứng nhắc; 固い: chắc/chặt/kiên cố",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A1%AC+%E3%81%84%2F+%E5%9B%BA+%E3%81%84"
+    "image": "https://o.quizlet.com/pQXaIRr-PfuCrrjS42TiiA.jpg"
   },
   {
     "id": "u07-l02-002",
@@ -7313,10 +7313,10 @@
     "section": "形容詞B",
     "term": "ぬるい",
     "reading": null,
-    "definition": "nguội",
+    "definition": "nguá»™i",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AC%E3%82%8B%E3%81%84"
+    "image": "https://farm4.staticflickr.com/3816/10932053173_9c74ff0128.jpg"
   },
   {
     "id": "u07-l02-003",
@@ -7329,7 +7329,7 @@
     "definition": "chói (mắt), rạng rỡ",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%B6%E3%81%97%E3%81%84"
+    "image": "https://o.quizlet.com/iv0l1TmbNb7Vxfc8gefbxw.jpg"
   },
   {
     "id": "u07-l02-004",
@@ -7342,7 +7342,7 @@
     "definition": "oi bức",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%92%B8+%E3%81%97+%E6%9A%91+%E3%81%84"
+    "image": "https://o.quizlet.com/pyppoYDQvXUO-4XuMk.SDg.png"
   },
   {
     "id": "u07-l02-005",
@@ -7355,7 +7355,7 @@
     "definition": "sạch sẽ",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%85%E6%BD%94+%E3%81%AA"
+    "image": "https://o.quizlet.com/zia3mzKtBTqHyVbkvWXymg.png"
   },
   {
     "id": "u07-l02-006",
@@ -7368,7 +7368,7 @@
     "definition": "tươi",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%B0%E9%AE%AE+%E3%81%AA"
+    "image": "https://o.quizlet.com/ym678AYhScbhCvhc7VWcqg.jpg"
   },
   {
     "id": "u07-l02-007",
@@ -7381,7 +7381,7 @@
     "definition": "giàu có, trù phú, đa dạng",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B1%8A+%E3%81%8B%E3%81%AA"
+    "image": "https://o.quizlet.com/cnKLHy8MTjG.BHe6cuqSvQ.jpg"
   },
   {
     "id": "u07-l02-008",
@@ -7394,7 +7394,7 @@
     "definition": "đàng hoàng, tử tế, xứng đáng, đáng khen",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AB%8B%E6%B4%BE+%E3%81%AA"
+    "image": "https://o.quizlet.com/9ssEOaPkEkmoAbLD-jwkrw.jpg"
   },
   {
     "id": "u07-l02-009",
@@ -7407,7 +7407,7 @@
     "definition": "chính xác",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AD%A3%E7%A2%BA+%E3%81%AA"
+    "image": "https://o.quizlet.com/.cFu-E31e9XgLNE04ibt-w.png"
   },
   {
     "id": "u07-l02-010",
@@ -7420,7 +7420,7 @@
     "definition": "chắc chắn, đáng tin, xác thực",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A2%BA+%E3%81%8B%E3%81%AA"
+    "image": "https://o.quizlet.com/.cFu-E31e9XgLNE04ibt-w.png"
   },
   {
     "id": "u07-l03-001",
@@ -7433,7 +7433,7 @@
     "definition": "trọng yếu, quan trọng",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D%E8%A6%81+%E3%81%AA"
+    "image": "https://o.quizlet.com/-qFbsH8tJLuIT4Zl1eZleQ.jpg"
   },
   {
     "id": "u07-l03-002",
@@ -7446,7 +7446,7 @@
     "definition": "cần thiết",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BF%85%E8%A6%81+%E3%81%AA"
+    "image": "https://o.quizlet.com/LX4EBirgd7x6YIX5yt.oeA.jpg"
   },
   {
     "id": "u07-l03-003",
@@ -7472,7 +7472,7 @@
     "definition": "kinh khủng, giỏi, tuyệt vời",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%94%E3%81%84"
+    "image": "https://o.quizlet.com/7STB35xt8G3RaZkovxmecg.png"
   },
   {
     "id": "u07-l03-005",
@@ -7485,7 +7485,7 @@
     "definition": "tồi tệ, khủng khiếp",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B2%E3%81%A9%E3%81%84"
+    "image": "https://o.quizlet.com/hUklWkwPBH9RgDS0G5.d9w.jpg"
   },
   {
     "id": "u07-l03-006",
@@ -7498,7 +7498,7 @@
     "definition": "dữ dội, mãnh liệt, gay gắt",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BF%80+%E3%81%97%E3%81%84"
+    "image": "https://o.quizlet.com/ZUdjvR57iHH.3OqRtUg1yw.jpg"
   },
   {
     "id": "u07-l03-007",
@@ -7511,7 +7511,7 @@
     "definition": "giống y đúc",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%AA"
+    "image": "https://o.quizlet.com/Yott6tTYNJMU9hq2uOFQOw.jpg"
   },
   {
     "id": "u07-l03-008",
@@ -7524,7 +7524,7 @@
     "definition": "gấp, nhanh, đột nhiên",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%A5+%E3%81%AA"
+    "image": "https://o.quizlet.com/a.1oCwd7dA7vFZG3KXTyog.jpg"
   },
   {
     "id": "u07-l03-009",
@@ -7537,7 +7537,7 @@
     "definition": "thích hợp/vừa phải; qua loa, đại khái, làm cho có",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%A9%E5%BD%93+%E3%81%AA"
+    "image": "https://o.quizlet.com/N2UCWgY02Dv8amOGGU8D1Q.jpg"
   },
   {
     "id": "u07-l04-001",
@@ -7550,7 +7550,7 @@
     "definition": "đặc biệt, riêng biệt",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%B9%E5%88%A5+%E3%81%AA"
+    "image": "https://o.quizlet.com/0tUo-J.zieb91UqfCCqPfA.jpg"
   },
   {
     "id": "u07-l04-002",
@@ -7563,7 +7563,7 @@
     "definition": "hoàn toàn, tất cả",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%8C%E5%85%A8+%E3%81%AA"
+    "image": "https://o.quizlet.com/jnTcJkHKkvRVhmy6WVjMdw.jpg"
   },
   {
     "id": "u07-l04-003",
@@ -7576,7 +7576,7 @@
     "definition": "sôi nổi, thịnh hành, phát triển mạnh",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%9B+%E3%82%93%E3%81%AA"
+    "image": "https://o.quizlet.com/vJzyayV86wGZTz4PkXAoFQ.jpg"
   },
   {
     "id": "u07-l04-004",
@@ -7589,7 +7589,7 @@
     "definition": "nhiều loại, đa dạng",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A7%98%E3%80%85+%E3%81%AA"
+    "image": "https://o.quizlet.com/yRa.xFPA0W0RNlGKjiAw8w.jpg"
   },
   {
     "id": "u07-l04-005",
@@ -7602,7 +7602,7 @@
     "definition": "khả thi, có thể",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8F%AF%E8%83%BD+%E3%81%AA"
+    "image": "https://o.quizlet.com/XqkqUy7FQJv8VreFa8RkrA.png"
   },
   {
     "id": "u07-l04-006",
@@ -7615,7 +7615,7 @@
     "definition": "không thể",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E5%8F%AF%E8%83%BD+%E3%81%AA"
+    "image": "https://o.quizlet.com/XqkqUy7FQJv8VreFa8RkrA.png"
   },
   {
     "id": "u07-l04-007",
@@ -7628,7 +7628,7 @@
     "definition": "cơ bản",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%BA%E6%9C%AC%E7%9A%84+%E3%81%AA"
+    "image": "https://o.quizlet.com/LYqdcsV54IZcPTnzvA2IZg.jpg"
   },
   {
     "id": "u07-l04-008",
@@ -7641,7 +7641,7 @@
     "definition": "tính quốc tế",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9B%BD%E9%9A%9B%E7%9A%84+%E3%81%AA"
+    "image": "https://o.quizlet.com/YHR6ikI1lCEHDfc4IotL7Q.png"
   },
   {
     "id": "u07-l04-009",
@@ -7654,7 +7654,7 @@
     "definition": "chia rẻ, phân tán",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B0%E3%82%89%E3%81%B0%E3%82%89%E3%81%AA"
+    "image": "https://o.quizlet.com/HjqId.C9mMt9.XqjOML2gQ.png"
   },
   {
     "id": "u07-l04-010",
@@ -7667,7 +7667,7 @@
     "definition": "rách nát, tồi tàn, te tua",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BC%E3%82%8D%E3%81%BC%E3%82%8D%E3%81%AA"
+    "image": "https://o.quizlet.com/ZA43BDq4EIo741rBwU.8wA.png"
   },
   {
     "id": "u08-l01-001",
@@ -7680,7 +7680,7 @@
     "definition": "vô cùng, cực kỳ, rất",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%9D%9E%E5%B8%B8+%E3%81%AB"
+    "image": "https://o.quizlet.com/j-22IbSu.8xeziTh46UI5Q.jpg"
   },
   {
     "id": "u08-l01-002",
@@ -7688,12 +7688,12 @@
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "section": "副詞A",
-    "term": "大変（に）",
+    "term": "大変(に)",
     "reading": "たいへん",
     "definition": "vất vả, vô cùng, rất (mức độ)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E5%A4%89+%EF%BC%88%E3%81%AB%EF%BC%89"
+    "image": "https://o.quizlet.com/54F54rOux9DTSurE.LnXUA.jpg"
   },
   {
     "id": "u08-l01-003",
@@ -7706,7 +7706,7 @@
     "definition": "hầu hết, hầu như, hầu như…không (phủ định)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9"
+    "image": "https://o.quizlet.com/MFb0q7qBIk.NIAgx6qXdmw.jpg"
   },
   {
     "id": "u08-l01-004",
@@ -7719,7 +7719,7 @@
     "definition": "đại khái, nhìn chung, khoảng chừng",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E4%BD%93"
+    "image": "https://o.quizlet.com/f8hueXducbeKZmg5CGHFrQ.png"
   },
   {
     "id": "u08-l01-005",
@@ -7732,7 +7732,7 @@
     "definition": "tương đối, khá",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8B%E3%81%AA%E3%82%8A"
+    "image": "https://o.quizlet.com/7UHsyYgmnS8lr55PqQzAPA.jpg"
   },
   {
     "id": "u08-l01-006",
@@ -7745,7 +7745,7 @@
     "definition": "đáng kể, nhiều",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9A%E3%81%84%E3%81%B6%E3%82%93"
+    "image": "https://o.quizlet.com/dAGyEVVjDyYTKPa32RnZzA.jpg"
   },
   {
     "id": "u08-l01-007",
@@ -7758,7 +7758,7 @@
     "definition": "rất, cũng được, vừa đủ",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%91%E3%81%A3%E3%81%93%E3%81%86"
+    "image": "https://o.quizlet.com/i/AVSwADc4M13pEr-w8WWNAA.jpg"
   },
   {
     "id": "u08-l01-008",
@@ -7771,7 +7771,7 @@
     "definition": "nhiều, khá",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%A7%E5%88%86"
+    "image": "https://o.quizlet.com/o8CC7xWSeJ3LNpSoJ-uEXA.png"
   },
   {
     "id": "u08-l01-009",
@@ -7784,7 +7784,7 @@
     "definition": "hơn nữa, thêm nữa",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/Z7W.-DUHm9kjCdREZk7RTw.jpg"
   },
   {
     "id": "u08-l01-010",
@@ -7797,7 +7797,7 @@
     "definition": "toàn bộ, hoàn toàn",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%A3%E3%81%8B%E3%82%8A"
+    "image": "https://o.quizlet.com/YUK52wq6C5sYlq6rsfdXMQ.png"
   },
   {
     "id": "u08-l01-011",
@@ -7810,7 +7810,7 @@
     "definition": "đầy, no, hoàn toàn",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84"
+    "image": "https://o.quizlet.com/UmZSbCZ3.U0SAFnSHz9VrQ.jpg"
   },
   {
     "id": "u08-l02-001",
@@ -7823,7 +7823,7 @@
     "definition": "gần, sát nút",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A"
+    "image": "https://o.quizlet.com/8iGOewDmV3sqcQueESfUHg.jpg"
   },
   {
     "id": "u08-l02-002",
@@ -7831,12 +7831,12 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "副詞A",
-    "term": "ぴったり（と）",
+    "term": "ぴったり(と)",
     "reading": null,
     "definition": "vừa vặn, đúng kịp, dính chặt, khép chặt, hợp, hoàn toàn",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%B4%E3%81%A3%E3%81%9F%E3%82%8A%EF%BC%88%E3%81%A8%EF%BC%89"
+    "image": "https://o.quizlet.com/i/ZTMx7WOcikYahcEKb2Dpbg.jpg"
   },
   {
     "id": "u08-l02-003",
@@ -7849,7 +7849,7 @@
     "definition": "thông thường, đa phần",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%84%E3%81%A6%E3%81%84"
+    "image": "https://o.quizlet.com/pWfIuohcw.JzG.MKANgAtg.jpg"
   },
   {
     "id": "u08-l02-004",
@@ -7862,7 +7862,7 @@
     "definition": "đồng thời, cùng một lúc",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%8C%E6%99%82+%E3%81%AB"
+    "image": "https://o.quizlet.com/G2sPwvlhxEnL1l4uK.N4Rw.jpg"
   },
   {
     "id": "u08-l02-005",
@@ -7875,7 +7875,7 @@
     "definition": "trước",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%8D+%E3%82%82%E3%81%A3%E3%81%A6"
+    "image": "https://o.quizlet.com/cBODh5Vivcj6z3JQj1StJg.png"
   },
   {
     "id": "u08-l02-006",
@@ -7883,12 +7883,12 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "副詞A",
-    "term": "すぐ（に）",
+    "term": "すぐ(に)",
     "reading": null,
     "definition": "ngay lập tức, sát gần",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%99%E3%81%90%EF%BC%88%E3%81%AB%EF%BC%89"
+    "image": "https://o.quizlet.com/VgZYauuG1m5blhBbP-QXtQ.jpg"
   },
   {
     "id": "u08-l02-007",
@@ -7901,7 +7901,7 @@
     "definition": "sắp, sắp tới",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%86%E3%81%99%E3%81%90"
+    "image": "https://o.quizlet.com/VgZYauuG1m5blhBbP-QXtQ.jpg"
   },
   {
     "id": "u08-l02-008",
@@ -7914,7 +7914,7 @@
     "definition": "đột nhiên",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%AA%81%E7%84%B6"
+    "image": "https://o.quizlet.com/fA8I1j0uKi6.ajcL3QVBqg.jpg"
   },
   {
     "id": "u08-l02-009",
@@ -7922,12 +7922,12 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "副詞A",
-    "term": "あっと言う間（に）",
+    "term": "あっと言う間(に)",
     "reading": "いま",
     "definition": "loáng cái, trong chớp mắt",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%82%E3%81%A3%E3%81%A8+%E8%A8%80+%E3%81%86+%E9%96%93+%EF%BC%88%E3%81%AB%EF%BC%89"
+    "image": "https://o.quizlet.com/dDtQy-axxMD5RhlTqrRJWA.jpg"
   },
   {
     "id": "u08-l02-010",
@@ -7940,7 +7940,7 @@
     "definition": "từ lúc nào không biết",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%81%A4%E3%81%AE+%E9%96%93+%E3%81%AB%E3%81%8B"
+    "image": "https://o.quizlet.com/LPHgeBj4XFas23hATNNmnQ.png"
   },
   {
     "id": "u08-l02-011",
@@ -7953,7 +7953,7 @@
     "definition": "chốc lát, đã lâu không gặp",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F"
+    "image": "https://o.quizlet.com/.Q2x-9ocYphn87x0EgJT4Q.jpg"
   },
   {
     "id": "u08-l02-012",
@@ -7966,7 +7966,7 @@
     "definition": "hơn hẳn, rất, suốt",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9A%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/jd0tNKkYNutwVdnaU6XXQg.jpg"
   },
   {
     "id": "u08-l02-013",
@@ -7979,7 +7979,7 @@
     "definition": "như mọi khi, không thay đổi",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B8%E5%A4%89+%E3%82%8F%E3%82%89%E3%81%9A"
+    "image": "https://o.quizlet.com/liahap2J51dso.QVDQAJ3g.jpg"
   },
   {
     "id": "u08-l03-001",
@@ -7992,7 +7992,7 @@
     "definition": "tiếp theo, lần lượt",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AC%A1%E3%80%85+%E3%81%AB"
+    "image": "https://o.quizlet.com/u8ePxeoG24rB5aNWjE30fQ.jpg"
   },
   {
     "id": "u08-l03-002",
@@ -8005,7 +8005,7 @@
     "definition": "nhanh chóng, dồn dập, rầm rầm",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93"
+    "image": "https://o.quizlet.com/ZBDwherYaY04iRGEBZ4cMw.jpg"
   },
   {
     "id": "u08-l03-003",
@@ -8018,7 +8018,7 @@
     "definition": "càng ngày càng",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%99%E3%81%BE%E3%81%99"
+    "image": "https://o.quizlet.com/BvYt.SlE5a-sh6lRxkCvwA.jpg"
   },
   {
     "id": "u08-l03-004",
@@ -8031,7 +8031,7 @@
     "definition": "cuối cùng",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/jXFGZ.J.7VRIWSvqeimWnw.jpg"
   },
   {
     "id": "u08-l03-005",
@@ -8044,7 +8044,7 @@
     "definition": "cuối cùng thì (khẳng định), cuối cùng thì (phủ định)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A8%E3%81%86%E3%81%A8%E3%81%86"
+    "image": "https://o.quizlet.com/u2quMV7819aLwkQdXkHx0A.jpg"
   },
   {
     "id": "u08-l03-006",
@@ -8057,7 +8057,7 @@
     "definition": "cuối cùng, sau tất cả (2 cách dùng đi cùng với khẳng định và phủ định)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%84%E3%81%AB"
+    "image": "https://o.quizlet.com/kkmGujttgWEey9zNxoWEeQ.jpg"
   },
   {
     "id": "u08-l03-007",
@@ -8070,7 +8070,7 @@
     "definition": "tất nhiên",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%A1%E3%82%8D%E3%82%93"
+    "image": "https://o.quizlet.com/dMexxqhDSLnaCd6AHrTocw.jpg"
   },
   {
     "id": "u08-l03-008",
@@ -8083,7 +8083,7 @@
     "definition": "như dự tính, như tính toán, vẫn, cũng, quả nhiên",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%81%AF%E3%82%8A"
+    "image": "https://o.quizlet.com/XXCXTeG9NvqTP955j89HhQ.png"
   },
   {
     "id": "u08-l03-009",
@@ -8096,7 +8096,7 @@
     "definition": "chắc chắn là, nhất định là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%8D%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/TtOpfvnVgvdebcWQXYKFjA.jpg"
   },
   {
     "id": "u08-l03-010",
@@ -8109,7 +8109,7 @@
     "definition": "bằng mọi giá, nhất định",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9C%E3%81%B2"
+    "image": "https://o.quizlet.com/yOqmH-WQ2VhfxzIMHw33zA.png"
   },
   {
     "id": "u08-l03-011",
@@ -8122,7 +8122,7 @@
     "definition": "cố gắng, nếu có thể",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F"
+    "image": "https://o.quizlet.com/xeslc5EK8gaNiYc08PauFg.png"
   },
   {
     "id": "u08-l03-012",
@@ -8135,7 +8135,7 @@
     "definition": "không ngờ đến",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A1%88%E5%A4%96"
+    "image": "https://o.quizlet.com/mC2e8coTHpGL2KcuVYRsfA.jpg"
   },
   {
     "id": "u08-l04-001",
@@ -8148,7 +8148,7 @@
     "definition": "có lẽ, nếu không nhầm thì",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%82%E3%81%97%E3%81%8B%E3%81%99%E3%82%8B%E3%81%A8%2F%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%9F%E3%82%89%2F%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%A6"
+    "image": "https://o.quizlet.com/jj6L0RSXPP2bD2nPyx5Kxg.jpg"
   },
   {
     "id": "u08-l04-002",
@@ -8161,7 +8161,7 @@
     "definition": "không lẽ nào, không thể nào",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%95%E3%81%8B"
+    "image": "https://o.quizlet.com/ryDkPceHT4SrDnrS1f9j4A.jpg"
   },
   {
     "id": "u08-l04-003",
@@ -8174,7 +8174,7 @@
     "definition": "lỡ/nhỡ, sơ ý, bất cẩn, đãng trí",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%86%E3%81%A3%E3%81%8B%E3%82%8A"
+    "image": "https://o.quizlet.com/lQxTgkPL5CAKjjRmeLxyKQ.jpg"
   },
   {
     "id": "u08-l04-004",
@@ -8187,7 +8187,7 @@
     "definition": "vô ý, lỡ",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%84"
+    "image": "https://o.quizlet.com/q6fdxAOIskIBBtIzwTcfog.jpg"
   },
   {
     "id": "u08-l04-005",
@@ -8200,7 +8200,7 @@
     "definition": "bất giác / không kìm được / lỡ (buột miệng)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%82%8F%E3%81%9A"
+    "image": "https://o.quizlet.com/BNaLWouign4cCNh3BhsUQg.jpg"
   },
   {
     "id": "u08-l04-006",
@@ -8213,7 +8213,7 @@
     "definition": "thở phào, nhẹ nhõm",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BB%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/5LAYyuHe1fxqFx70ixJZCg.png"
   },
   {
     "id": "u08-l04-007",
@@ -8226,7 +8226,7 @@
     "definition": "nóng lòng",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%84%E3%82%89%E3%81%84%E3%82%89"
+    "image": "https://o.quizlet.com/kPuyxTPoRdNlfumd64gFcA.jpg"
   },
   {
     "id": "u08-l04-008",
@@ -8239,7 +8239,7 @@
     "definition": "thong thả, từ từ",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AE%E3%82%93%E3%81%B3%E3%82%8A"
+    "image": "https://o.quizlet.com/HaGaVBFA16zXabW6TfRM5g.jpg"
   },
   {
     "id": "u08-l04-009",
@@ -8252,7 +8252,7 @@
     "definition": "thực ra là, thực tế là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F+%E3%81%AF"
+    "image": "https://o.quizlet.com/ZpgZwUf7oxsZkhjN1Yi1-A.jpg"
   },
   {
     "id": "u09-l01-001",
@@ -8265,7 +8265,7 @@
     "definition": "đọc sách",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%AD%E6%9B%B8"
+    "image": "https://o.quizlet.com/i/BbmOgkSHgBh94-a_jYlFzw.jpg"
   },
   {
     "id": "u09-l01-002",
@@ -8278,7 +8278,7 @@
     "definition": "biểu diễn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%BC%94%E5%A5%8F"
+    "image": "https://o.quizlet.com/kXqFsqfotXlJDjmwBDBxMQ.jpg"
   },
   {
     "id": "u09-l01-003",
@@ -8291,7 +8291,7 @@
     "definition": "nghệ thuật",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%8A%B8%E8%A1%93"
+    "image": "https://o.quizlet.com/fyJFi4h3zLRt7qq4tR.dhg.jpg"
   },
   {
     "id": "u09-l01-004",
@@ -8304,7 +8304,7 @@
     "definition": "kiểm tra",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A4%9C%E6%9F%BB"
+    "image": "https://o.quizlet.com/DaOload-ScDqTMZZcX8Bfw.png"
   },
   {
     "id": "u09-l01-005",
@@ -8317,7 +8317,7 @@
     "definition": "máu (dịch máu) / huyết dịch",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%80%E6%B6%B2"
+    "image": "https://o.quizlet.com/i/xH9uGJSS7j6EgNYIsa8Rvg.jpg"
   },
   {
     "id": "u09-l01-006",
@@ -8330,7 +8330,7 @@
     "definition": "trị liệu, chữa bệnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B2%BB%E7%99%82"
+    "image": "https://o.quizlet.com/segQDM9mXVQ2iZz7evCjaA.jpg"
   },
   {
     "id": "u09-l01-007",
@@ -8343,7 +8343,7 @@
     "definition": "triệu chứng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%97%87%E7%8A%B6"
+    "image": "https://o.quizlet.com/rp3R0K4OI3rtdEE6PJ0SmQ.png"
   },
   {
     "id": "u09-l01-008",
@@ -8356,7 +8356,7 @@
     "definition": "đề phòng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%88%E9%98%B2"
+    "image": "https://o.quizlet.com/CoMjCK2fkYPJDnmPzdCthQ.png"
   },
   {
     "id": "u09-l01-009",
@@ -8369,7 +8369,7 @@
     "definition": "dinh dưỡng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A0%84%E9%A4%8A"
+    "image": "https://o.quizlet.com/rYrpSCNrU1LdQbYFZI30SQ.jpg"
   },
   {
     "id": "u09-l01-010",
@@ -8382,7 +8382,7 @@
     "definition": "phẫu thuật",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%89%8B%E8%A1%93"
+    "image": "https://o.quizlet.com/28olh-TgobeXM7Nfc3x31g.jpg"
   },
   {
     "id": "u09-l01-011",
@@ -8395,7 +8395,7 @@
     "definition": "chết",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%AD%BB%E4%BA%A1"
+    "image": "https://o.quizlet.com/0f1D2.8IRhJBzw6c9HHdZA.jpg"
   },
   {
     "id": "u09-l01-012",
@@ -8408,7 +8408,7 @@
     "definition": "sinh mạng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%91%BD"
+    "image": "https://o.quizlet.com/vWjj9z-bd9vzk2yTB56jOg.png"
   },
   {
     "id": "u09-l01-013",
@@ -8421,7 +8421,7 @@
     "definition": "suốt đời",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%80%E7%94%9F"
+    "image": "https://o.quizlet.com/jAMx4JFybpqEDaDHUx4WnA.jpg"
   },
   {
     "id": "u09-l01-014",
@@ -8434,7 +8434,7 @@
     "definition": "hiểu lầm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%A4%E8%A7%A3"
+    "image": "https://o.quizlet.com/sy1As3YJZrbw4yJv6ooBhA.jpg"
   },
   {
     "id": "u09-l01-015",
@@ -8447,7 +8447,7 @@
     "definition": "hối hận",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%8C%E6%82%94"
+    "image": "https://o.quizlet.com/I6w3TmtDuBE507Jh1Eq9uw.jpg"
   },
   {
     "id": "u09-l01-016",
@@ -8460,7 +8460,7 @@
     "definition": "lý do / nguyên nhân / lẽ / nghĩa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%B3"
+    "image": "https://o.quizlet.com/MjyNC-a.VgdHZA8klcLsXw.jpg"
   },
   {
     "id": "u09-l02-001",
@@ -8473,7 +8473,7 @@
     "definition": "thái độ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%85%8B%E5%BA%A6"
+    "image": "https://o.quizlet.com/RbcVcUBeIBTQ6IA09qePnA.jpg"
   },
   {
     "id": "u09-l02-002",
@@ -8481,12 +8481,12 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "名詞C",
-    "term": "癖",
+    "term": "ç™–",
     "reading": "くせ",
     "definition": "tật / thói quen",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%99%96"
+    "image": "https://o.quizlet.com/f9wPjEZAzlAoKPLnGxQtDw.jpg"
   },
   {
     "id": "u09-l02-003",
@@ -8499,7 +8499,7 @@
     "definition": "lễ nghĩa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A4%BC%E5%84%80"
+    "image": "https://o.quizlet.com/8ZNrjf9L5bAXUBOiJiKozg.jpg"
   },
   {
     "id": "u09-l02-004",
@@ -8512,7 +8512,7 @@
     "definition": "lời phàn nàn / than phiền",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%87%E5%8F%A5"
+    "image": "https://o.quizlet.com/4kR5GmxPJFfPTniTc9I.kw.jpg"
   },
   {
     "id": "u09-l02-005",
@@ -8525,7 +8525,7 @@
     "definition": "biểu cảm, nét mặt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8%E6%83%85"
+    "image": "https://o.quizlet.com/98JwnUC.7vq8Cy1QvAbtRA.jpg"
   },
   {
     "id": "u09-l02-006",
@@ -8538,7 +8538,7 @@
     "definition": "bề mặt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8%E9%9D%A2"
+    "image": "https://o.quizlet.com/S.LSLVTzbdWPH3ovQJ3k5g.png"
   },
   {
     "id": "u09-l02-007",
@@ -8551,7 +8551,7 @@
     "definition": "cấm hút thuốc",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A6%81%E7%85%99"
+    "image": "https://o.quizlet.com/Le6ayA7xYJVwuqo7dDa7EQ.png"
   },
   {
     "id": "u09-l02-008",
@@ -8564,7 +8564,7 @@
     "definition": "cấm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A6%81%E6%AD%A2"
+    "image": "https://o.quizlet.com/fivQcBfOJlX6pARWRfO07g.jpg"
   },
   {
     "id": "u09-l02-009",
@@ -8577,7 +8577,7 @@
     "definition": "hoàn thành",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%8C%E6%88%90"
+    "image": "https://o.quizlet.com/HLh1D2-2yqhUlWNq.9KibA.jpg"
   },
   {
     "id": "u09-l02-010",
@@ -8590,7 +8590,7 @@
     "definition": "đề tài, bài tập, nhiệm vụ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%AA%B2%E9%A1%8C"
+    "image": "https://o.quizlet.com/i/ZbphGSwPdI0uToSfdFfb8w.jpg"
   },
   {
     "id": "u09-l02-011",
@@ -8603,7 +8603,7 @@
     "definition": "ngoại lệ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BE%8B%E5%A4%96"
+    "image": "https://o.quizlet.com/AU8fjhskfwxc64jIJbZtwA.jpg"
   },
   {
     "id": "u09-l02-012",
@@ -8616,7 +8616,7 @@
     "definition": "cơ bản",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9F%BA%E6%9C%AC"
+    "image": "https://o.quizlet.com/LYqdcsV54IZcPTnzvA2IZg.jpg"
   },
   {
     "id": "u09-l02-013",
@@ -8629,7 +8629,7 @@
     "definition": "ghi chép, kỉ lục",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%98%E9%8C%B2"
+    "image": "https://o.quizlet.com/eS0y4vmpgDhbTM92rxhH6A.jpg"
   },
   {
     "id": "u09-l02-014",
@@ -8642,7 +8642,7 @@
     "definition": "trạng thái",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8A%B6%E6%85%8B"
+    "image": "https://o.quizlet.com/rp3R0K4OI3rtdEE6PJ0SmQ.png"
   },
   {
     "id": "u09-l02-015",
@@ -8655,7 +8655,7 @@
     "definition": "sự kiện",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E6%9D%A5%E4%BA%8B"
+    "image": "https://o.quizlet.com/bVZ4qrMdM3ic5VguBUMK4g.jpg"
   },
   {
     "id": "u09-l03-001",
@@ -8668,7 +8668,7 @@
     "definition": "tình huống, hiện trường, cảnh (phim)",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A0%B4%E9%9D%A2"
+    "image": "https://o.quizlet.com/1LWRpL4Sot48RVQ1xFcmpQ.png"
   },
   {
     "id": "u09-l03-002",
@@ -8681,7 +8681,7 @@
     "definition": "cơ hội",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%A9%9F%E4%BC%9A"
+    "image": "https://o.quizlet.com/QhuTh9gbYgpOBO3XGy0hbQ.png"
   },
   {
     "id": "u09-l03-003",
@@ -8694,7 +8694,7 @@
     "definition": "cự li, khoảng cách",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B7%9D%E9%9B%A2"
+    "image": "https://o.quizlet.com/AJ74hYM53IuVkohIPwY61Q.jpg"
   },
   {
     "id": "u09-l03-004",
@@ -8707,7 +8707,7 @@
     "definition": "đề án, đề xuất",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%90%E6%A1%88"
+    "image": "https://o.quizlet.com/5hIJLnOWKQy5kkbj3.hI3A.png"
   },
   {
     "id": "u09-l03-005",
@@ -8720,7 +8720,7 @@
     "definition": "trao đổi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%82%8A+%E5%8F%96+%E3%82%8A"
+    "image": "https://o.quizlet.com/UJ8U5FblM3nec5oswfVQtA.jpg"
   },
   {
     "id": "u09-l03-006",
@@ -8733,7 +8733,7 @@
     "definition": "tri thức / kiến thức",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9F%A5%E8%AD%98"
+    "image": "https://o.quizlet.com/ct0m1gMeZMssQ6eOvyXdyg.jpg"
   },
   {
     "id": "u09-l03-007",
@@ -8743,10 +8743,10 @@
     "section": "名詞C",
     "term": "実力",
     "reading": "じつりょく",
-    "definition": "thực lực",
+    "definition": "thá»±c lá»±c",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%9F%E5%8A%9B"
+    "image": "https://o.quizlet.com/3anK73sx31VTyURUjWcv.A.png"
   },
   {
     "id": "u09-l03-008",
@@ -8759,7 +8759,7 @@
     "definition": "cách thức, phương pháp",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%89%8B%E6%AE%B5"
+    "image": "https://o.quizlet.com/TQOatHOFNwugBY14CaASqg.jpg"
   },
   {
     "id": "u09-l03-009",
@@ -8772,7 +8772,7 @@
     "definition": "đại biểu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%A3%E8%A1%A8"
+    "image": "https://o.quizlet.com/wYe-NnrPybmbtMMyaR2QRg.jpg"
   },
   {
     "id": "u09-l04-001",
@@ -8785,7 +8785,7 @@
     "definition": "ảnh hưởng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BD%B1%E9%9F%BF"
+    "image": "https://o.quizlet.com/1LH8-UOuM2rNzjLv0dXYdw.jpg"
   },
   {
     "id": "u09-l04-002",
@@ -8798,7 +8798,7 @@
     "definition": "hiệu quả",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8A%B9%E6%9E%9C"
+    "image": "https://o.quizlet.com/VvOsLO65VjG3G8VbJPC4bg.jpg"
   },
   {
     "id": "u09-l04-003",
@@ -8811,7 +8811,7 @@
     "definition": "ấn tượng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8D%B0%E8%B1%A1"
+    "image": "https://o.quizlet.com/jbja85o.7FVHwhJFOy8GwQ.jpg"
   },
   {
     "id": "u09-l04-004",
@@ -8824,7 +8824,7 @@
     "definition": "dấu hiệu, biểu tượng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8D%B0"
+    "image": "https://o.quizlet.com/i/ip1fz6sEs8ebrnOwwMMLtw.jpg"
   },
   {
     "id": "u09-l04-005",
@@ -8837,7 +8837,7 @@
     "definition": "ra hiệu / ám hiệu / dấu hiệu (làm tín hiệu)",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%88%E5%9B%B3"
+    "image": "https://o.quizlet.com/RaHc9swjq11BEtz2oFpx0Q.jpg"
   },
   {
     "id": "u09-l04-006",
@@ -8850,7 +8850,7 @@
     "definition": "điểm chung",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%B1%E9%80%9A"
+    "image": "https://o.quizlet.com/5FAMi.M5QyY9hEjsKIgwLA.jpg"
   },
   {
     "id": "u09-l04-007",
@@ -8863,7 +8863,7 @@
     "definition": "nhấn mạnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BC%B7%E8%AA%BF"
+    "image": "https://o.quizlet.com/wDSQAM-3xFk5CaoHF7KvcA.jpg"
   },
   {
     "id": "u09-l04-008",
@@ -8876,7 +8876,7 @@
     "definition": "giản lược, rút gọn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9C%81%E7%95%A5"
+    "image": "https://o.quizlet.com/A5EFjvTtsxpHrUGVovsaVg.jpg"
   },
   {
     "id": "u09-l04-009",
@@ -8889,7 +8889,7 @@
     "definition": "thử thách",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8C%91%E6%88%A6"
+    "image": "https://o.quizlet.com/bZS.UQeGd-7aaKGU8svqyw.png"
   },
   {
     "id": "u09-l04-010",
@@ -8897,12 +8897,12 @@
     "lesson": "Bài 4",
     "lessonOrder": 4,
     "section": "名詞C",
-    "term": "やる気",
+    "term": "ã'\"ã'‹æ°—",
     "reading": "き",
     "definition": "có hứng thú, động lực",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%84%E3%82%8B+%E6%B0%97"
+    "image": "https://o.quizlet.com/N2X3y7TDyBgHXYUm6uVSkw.png"
   },
   {
     "id": "u09-l04-011",
@@ -8915,7 +8915,7 @@
     "definition": "dũng khí, dũng cảm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%87%E6%B0%97"
+    "image": "https://o.quizlet.com/BW3tRORgPZG5qZjunidbhg.jpg"
   },
   {
     "id": "u09-l04-012",
@@ -8928,7 +8928,7 @@
     "definition": "tư cách, bằng cấp, xứng đáng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%87%E6%A0%BC"
+    "image": "https://o.quizlet.com/z4qhw9nib1yD8n1Bki8Mjg.jpg"
   },
   {
     "id": "u09-l04-013",
@@ -8941,7 +8941,7 @@
     "definition": "nộp đơn xin / đăng ký / xin cấp",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%B3%E8%AB%8B"
+    "image": "https://o.quizlet.com/BpuetUa5lInY4.sxJhdT.w.jpg"
   },
   {
     "id": "u09-l04-014",
@@ -8954,7 +8954,7 @@
     "definition": "chính chủ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%AC%E4%BA%BA"
+    "image": "https://o.quizlet.com/i7JEJ5a5WFszSjeY2O.5wA.png"
   },
   {
     "id": "u09-l04-015",
@@ -8967,7 +8967,7 @@
     "definition": "hợp đồng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A5%91%E7%B4%84"
+    "image": "https://o.quizlet.com/Z04vd4ZjmW9SbmjYS-F5Qg.png"
   },
   {
     "id": "u09-l05-001",
@@ -8980,7 +8980,7 @@
     "definition": "chứng minh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A8%BC%E6%98%8E"
+    "image": "https://o.quizlet.com/1M.tpXOApvI.nXSwBTH-UQ.jpg"
   },
   {
     "id": "u09-l05-002",
@@ -8993,7 +8993,7 @@
     "definition": "thay đổi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%A4%89%E6%9B%B4"
+    "image": "https://o.quizlet.com/H4dCCzt-6crfz7gSq.kTNA.jpg"
   },
   {
     "id": "u09-l05-003",
@@ -9006,7 +9006,7 @@
     "definition": "lưu, bảo quản",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%9D%E5%AD%98"
+    "image": "https://o.quizlet.com/pBlkldSJqAeKKltpdhEpDA.jpg"
   },
   {
     "id": "u09-l05-004",
@@ -9019,7 +9019,7 @@
     "definition": "bảo hộ, trông nom",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%9D%E8%AD%B7"
+    "image": "https://o.quizlet.com/OWh9OBviFaMi7QMQ07hXjA.jpg"
   },
   {
     "id": "u09-l05-005",
@@ -9032,7 +9032,7 @@
     "definition": "môi trường",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%92%B0%E5%A2%83"
+    "image": "https://o.quizlet.com/PsH.lbjO7ivUXKsdelufHg.jpg"
   },
   {
     "id": "u09-l05-006",
@@ -9045,7 +9045,7 @@
     "definition": "tài nguyên",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%87%E6%BA%90"
+    "image": "https://o.quizlet.com/REs93IGsJYrwvG7WdscSmA.jpg"
   },
   {
     "id": "u09-l05-007",
@@ -9058,7 +9058,7 @@
     "definition": "thiếu, không đầy đủ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8D%E8%B6%B3"
+    "image": "https://o.quizlet.com/1hb.l-tkLcENx1cnRVjyig.jpg"
   },
   {
     "id": "u09-l05-008",
@@ -9071,7 +9071,7 @@
     "definition": "bình quân, đồng đều, trung bình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B3%E5%9D%87"
+    "image": "https://o.quizlet.com/S9VoEdtkKzpQlkqYX2eV1A.jpg"
   },
   {
     "id": "u09-l05-009",
@@ -9084,7 +9084,7 @@
     "definition": "tỷ lệ / phần trăm / mức độ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%89%B2%E5%90%88"
+    "image": "https://o.quizlet.com/DuLxC6J8MVBVe4yaq7Y8bA.jpg"
   },
   {
     "id": "u09-l05-010",
@@ -9097,7 +9097,7 @@
     "definition": "thương mại, buôn bán",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%95%86%E5%A3%B2"
+    "image": "https://o.quizlet.com/Cpo0a9TkUoNncDqQVYGOjg.jpg"
   },
   {
     "id": "u09-l05-011",
@@ -9110,7 +9110,7 @@
     "definition": "hàng hóa, thương phẩm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%95%86%E5%93%81"
+    "image": "https://o.quizlet.com/i/OIvl8oaCjYkaZPCYL34VPQ.jpg"
   },
   {
     "id": "u09-l05-012",
@@ -9123,7 +9123,7 @@
     "definition": "chất lượng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B3%AA"
+    "image": "https://o.quizlet.com/i/66JS123X_Fa5uh10cLoO-g.jpg"
   },
   {
     "id": "u09-l05-013",
@@ -9131,12 +9131,12 @@
     "lesson": "Bài 5",
     "lessonOrder": 5,
     "section": "名詞C",
-    "term": "型",
+    "term": "åž‹",
     "reading": "かた",
     "definition": "kiểu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9E%8B"
+    "image": "https://o.quizlet.com/d2-i96F4-ndPm0PP9h-0dg.jpg"
   },
   {
     "id": "u09-l05-014",
@@ -9149,7 +9149,7 @@
     "definition": "sản xuất, sinh sản",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%94%9F%E7%94%A3"
+    "image": "https://o.quizlet.com/uS.3IeddRvg2kkb0YLqgwg.png"
   },
   {
     "id": "u09-l05-015",
@@ -9162,7 +9162,7 @@
     "definition": "tiêu dùng, tiêu hao",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B6%88%E8%B2%BB"
+    "image": "https://o.quizlet.com/er.CQP1rB9eP003PuzQOCA.png"
   },
   {
     "id": "u09-l06-001",
@@ -9175,7 +9175,7 @@
     "definition": "giá cả, vật giá, mức giá chung",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%A9%E4%BE%A1"
+    "image": "https://o.quizlet.com/3iRY4Kb-6nYMUiUnK8pFWw.jpg"
   },
   {
     "id": "u09-l06-002",
@@ -9188,7 +9188,7 @@
     "definition": "phá sản",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%80%92%E7%94%A3"
+    "image": "https://o.quizlet.com/laCgnjBxuv.EbFcP.wmidw.png"
   },
   {
     "id": "u09-l06-003",
@@ -9201,7 +9201,7 @@
     "definition": "mang theo, di động",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%90%BA%E5%B8%AF"
+    "image": "https://o.quizlet.com/DNovBJXvoxFQnId0CN01Lg.jpg"
   },
   {
     "id": "u09-l06-004",
@@ -9214,7 +9214,7 @@
     "definition": "hiện đại, ngày nay",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE%E4%BB%A3"
+    "image": "https://o.quizlet.com/QM5h1ojX6PI6te.gRooirw.png"
   },
   {
     "id": "u09-l06-005",
@@ -9227,7 +9227,7 @@
     "definition": "thế kỷ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%96%E7%B4%80"
+    "image": "https://o.quizlet.com/g8OGzwr5FBs5faJEllJZdA.jpg"
   },
   {
     "id": "u09-l06-006",
@@ -9240,7 +9240,7 @@
     "definition": "văn hóa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%96%87%E5%8C%96"
+    "image": "https://o.quizlet.com/i/8hrjDeX6AQJxfxmMLbbYkw.jpg"
   },
   {
     "id": "u09-l06-007",
@@ -9253,7 +9253,7 @@
     "definition": "đô thị, thành phố",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%83%BD%E5%B8%82"
+    "image": "https://o.quizlet.com/xSiS7wrtkPdfGe2FRFcOpw.jpg"
   },
   {
     "id": "u09-l06-008",
@@ -9266,7 +9266,7 @@
     "definition": "địa phương, vùng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%9C%B0%E6%96%B9"
+    "image": "https://o.quizlet.com/bzWtlaCAlGaYVQP9xQNk6A.jpg"
   },
   {
     "id": "u09-l06-009",
@@ -9279,7 +9279,7 @@
     "definition": "chiến tranh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%88%A6%E4%BA%89"
+    "image": "https://o.quizlet.com/MRhIdikVuAAh5WLoNKnCsg.png"
   },
   {
     "id": "u09-l06-010",
@@ -9292,7 +9292,7 @@
     "definition": "hòa bình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B9%B3%E5%92%8C"
+    "image": "https://o.quizlet.com/i/hEUqNwT0WXL-4c6Icla1fg.jpg"
   },
   {
     "id": "u10-l01-001",
@@ -9305,7 +9305,7 @@
     "definition": "leo lên, lên đến, lên tới",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8A+%E3%82%8B"
+    "image": "https://o.quizlet.com/ABcDrX8GjazFv36bPbAiNw.png"
   },
   {
     "id": "u10-l01-002",
@@ -9318,7 +9318,7 @@
     "definition": "xuống",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8B+%E3%82%8B"
+    "image": "https://o.quizlet.com/HNNAGVglYthwJXj3cC2suw.png"
   },
   {
     "id": "u10-l01-003",
@@ -9331,7 +9331,7 @@
     "definition": "tiến lên, tiến cấp, tiến triển",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2+%E3%82%80"
+    "image": "https://o.quizlet.com/MjLARD8W.UCnw6lBSSvsLQ.png"
   },
   {
     "id": "u10-l01-004",
@@ -9344,7 +9344,7 @@
     "definition": "tiến hành/đẩy tới/cho tiến lên/đề xuất",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%B2+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/MdGfLgIiXd1fnXPvAa0PZQ.jpg"
   },
   {
     "id": "u10-l01-005",
@@ -9357,7 +9357,7 @@
     "definition": "thông qua, đi qua",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%82%8B"
+    "image": "https://o.quizlet.com/YJsDO73TZjVYaHUr5U.etQ.jpg"
   },
   {
     "id": "u10-l01-006",
@@ -9370,7 +9370,7 @@
     "definition": "cho đi qua",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%81%99"
+    "image": "https://o.quizlet.com/MbXz81vgv02gBAd3XSZJUA.jpg"
   },
   {
     "id": "u10-l01-007",
@@ -9383,7 +9383,7 @@
     "definition": "vượt qua",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%B6%85+%E3%81%88%E3%82%8B%2F+%E8%B6%8A+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/TgFD7JfSL04BgI.Mi0A4fA.jpg"
   },
   {
     "id": "u10-l01-008",
@@ -9396,7 +9396,7 @@
     "definition": "quá, đi qua, quá (thời gian)",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%8E+%E3%81%8E%E3%82%8B"
+    "image": "https://o.quizlet.com/ifGK-7Gx2kpv7TYZG9I5qA.jpg"
   },
   {
     "id": "u10-l01-009",
@@ -9409,7 +9409,7 @@
     "definition": "trải qua, dành (thời gian)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%81%8E+%E3%81%94%E3%81%99"
+    "image": "https://o.quizlet.com/QA7PShaBpN4D-tCqWVfFEA.jpg"
   },
   {
     "id": "u10-l02-001",
@@ -9422,7 +9422,7 @@
     "definition": "chuyển, lây",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A7%BB+%E3%82%8B"
+    "image": "https://o.quizlet.com/E1sf89Kdq5B.1JXAX70ezw.jpg"
   },
   {
     "id": "u10-l02-002",
@@ -9435,7 +9435,7 @@
     "definition": "làm di chuyển, làm lây nhiễm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%A7%BB+%E3%81%99"
+    "image": "https://o.quizlet.com/E1sf89Kdq5B.1JXAX70ezw.jpg"
   },
   {
     "id": "u10-l02-003",
@@ -9448,7 +9448,7 @@
     "definition": "dẫn đi",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%A3+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/ToDhL-LpyN1GcJImZrAcVA.jpg"
   },
   {
     "id": "u10-l02-004",
@@ -9461,7 +9461,7 @@
     "definition": "ghé (vào), lại gần, nghiêng/lệch về",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AF%84+%E3%82%8B"
+    "image": "https://o.quizlet.com/MGQsD7jj5zA81R3yrV76GQ.png"
   },
   {
     "id": "u10-l02-005",
@@ -9474,7 +9474,7 @@
     "definition": "kéo lại gần/ghé lại/cho sát vào; dồn/góp",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AF%84+%E3%81%9B%E3%82%8B"
+    "image": "https://o.quizlet.com/98a.777MvVKBwEfnZP1oIQ.png"
   },
   {
     "id": "u10-l02-006",
@@ -9487,7 +9487,7 @@
     "definition": "cho, đem lại, gây ra",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%8E+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/Z7pbMZRho3cUCGpjdl8vLA.jpg"
   },
   {
     "id": "u10-l02-007",
@@ -9495,12 +9495,12 @@
     "lesson": "Bài 2",
     "lessonOrder": 2,
     "section": "動詞C",
-    "term": "得る",
+    "term": "å¾—ã'‹",
     "reading": "え",
     "definition": "đạt được",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BE%97+%E3%82%8B"
+    "image": "https://o.quizlet.com/YW3eVDyXgJCrtpXo4flxuA.jpg"
   },
   {
     "id": "u10-l02-008",
@@ -9509,11 +9509,11 @@
     "lessonOrder": 2,
     "section": "動詞C",
     "term": "向く",
-    "reading": "む",
+    "reading": "ã'€",
     "definition": "hướng, thích hợp, dành cho",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%91+%E3%81%8F"
+    "image": "https://o.quizlet.com/g-kOcHQLKjCmM1KoM3zGgg.jpg"
   },
   {
     "id": "u10-l02-009",
@@ -9522,11 +9522,11 @@
     "lessonOrder": 2,
     "section": "動詞C",
     "term": "向ける",
-    "reading": "む",
+    "reading": "ã'€",
     "definition": "hướng về, quay về phía, hướng tới (đối tượng)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%91+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/9WYhJgqQA4Eu885j0UkDTw.jpg"
   },
   {
     "id": "u10-l02-010",
@@ -9539,7 +9539,7 @@
     "definition": "khuyên, đề nghị, giới thiệu",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%8B%A7+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/vN5ZrLUyJ8F8SgaN5VIY.A.jpg"
   },
   {
     "id": "u10-l02-011",
@@ -9552,7 +9552,7 @@
     "definition": "giới thiệu/đề cử/khuyên dùng",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%96%A6+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/44v8eRTLAsHY4fO.SE1meQ.png"
   },
   {
     "id": "u10-l02-012",
@@ -9565,7 +9565,7 @@
     "definition": "giao phó",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%BB+%E3%81%9B%E3%82%8B"
+    "image": "https://o.quizlet.com/C6EyMYAI8woy-ng6sG2YIA.png"
   },
   {
     "id": "u10-l02-013",
@@ -9578,7 +9578,7 @@
     "definition": "giữ, tuân thủ, bảo vệ",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%AE%88+%E3%82%8B"
+    "image": "https://o.quizlet.com/gTyMeKTqxgHPVl4WeVswuQ.jpg"
   },
   {
     "id": "u10-l03-001",
@@ -9591,7 +9591,7 @@
     "definition": "tranh nhau, tranh cãi, chiến đấu, cạnh tranh",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%89+%E3%81%86"
+    "image": "https://o.quizlet.com/n7HgnkZd5D5GXf3XR3JApA.jpg"
   },
   {
     "id": "u10-l03-002",
@@ -9604,7 +9604,7 @@
     "definition": "mong muốn",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%9B+%E3%82%80"
+    "image": "https://o.quizlet.com/kn88gI8YUGfje1NX1OmZGQ.jpg"
   },
   {
     "id": "u10-l03-003",
@@ -9617,7 +9617,7 @@
     "definition": "tin, tin rằng, tinh tưởng, tin",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BF%A1+%E3%81%98%E3%82%8B"
+    "image": "https://o.quizlet.com/9Oq4lR5.fC5NL9.boyYT9g.jpg"
   },
   {
     "id": "u10-l03-004",
@@ -9630,7 +9630,7 @@
     "definition": "hiểu, thông qua, xuyên qua, kết nối được",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%80%9A+%E3%81%98%E3%82%8B"
+    "image": "https://o.quizlet.com/kHexjhXdxOqPgEIWmMgCOA.png"
   },
   {
     "id": "u10-l03-005",
@@ -9643,7 +9643,7 @@
     "definition": "chán",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%A3%BD+%E3%81%8D%E3%82%8B"
+    "image": "https://o.quizlet.com/72GuCMS4ArLZv23JMXQ6Lg.jpg"
   },
   {
     "id": "u10-l03-006",
@@ -9656,7 +9656,7 @@
     "definition": "nghĩ, nghĩ ra",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84%E3%81%A4%E3%81%8F"
+    "image": "https://o.quizlet.com/M1eLhqAV.Dlip9u2nvwrZA.jpg"
   },
   {
     "id": "u10-l03-007",
@@ -9669,7 +9669,7 @@
     "definition": "quan tâm, thông cảm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%80%9D+%E3%81%84%E3%82%84%E3%82%8B"
+    "image": "https://o.quizlet.com/lmCGl2cQ66qxZ3-ul.5hUQ.png"
   },
   {
     "id": "u10-l03-008",
@@ -9682,7 +9682,7 @@
     "definition": "mải mê, nghiện",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%86%B1%E4%B8%AD+%E3%81%99%E3%82%8B"
+    "image": "https://o.quizlet.com/8Z4TZu5tEv6M2aotQ-1MfA.jpg"
   },
   {
     "id": "u10-l03-009",
@@ -9695,7 +9695,7 @@
     "definition": "sống, sinh hoạt",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9A%AE+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/gpSCJ3DqC1F9iq-OaBuV-w.jpg"
   },
   {
     "id": "u10-l03-010",
@@ -9708,7 +9708,7 @@
     "definition": "quấn, bọc, choàng",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B7%BB+%E3%81%8F"
+    "image": "https://o.quizlet.com/ScpZN1yuVtdnXoyZlOhoqA.jpg"
   },
   {
     "id": "u10-l03-011",
@@ -9721,7 +9721,7 @@
     "definition": "buộc, thắt, nối, kí (hợp đồng)",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%90+%E3%81%B6"
+    "image": "https://o.quizlet.com/SvHE8HOeu9SrGqf39Gjx6Q.jpg"
   },
   {
     "id": "u10-l03-012",
@@ -9734,7 +9734,7 @@
     "definition": "kết thúc, hoàn tất, xong",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%88+%E3%82%80"
+    "image": "https://o.quizlet.com/aTr-GFomJsQSfEqv-yDecQ.jpg"
   },
   {
     "id": "u10-l03-013",
@@ -9747,7 +9747,7 @@
     "definition": "kết thúc, cũng xong",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B8%88+%E3%81%BE%E3%81%9B%E3%82%8B%2F+%E6%B8%88+%E3%81%BE%E3%81%99"
+    "image": "https://o.quizlet.com/lhsBDwGUg3ckI54JOr2bDQ.jpg"
   },
   {
     "id": "u10-l04-001",
@@ -9760,7 +9760,7 @@
     "definition": "hoàn thành, xong, có thể",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%87%BA%E6%9D%A5+%E3%82%8B"
+    "image": "https://o.quizlet.com/ANHqva2ZGGQimfLfruAs-w.jpg"
   },
   {
     "id": "u10-l04-002",
@@ -9773,7 +9773,7 @@
     "definition": "cắt, hết, hết hạn",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%87+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/SStUN.6Jcdi4C5Byxjd.CA.jpg"
   },
   {
     "id": "u10-l04-003",
@@ -9786,7 +9786,7 @@
     "definition": "dùng hết",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%87+%E3%82%89%E3%81%99"
+    "image": "https://o.quizlet.com/8PZPTJpiqqOTVOatF2nu9g.jpg"
   },
   {
     "id": "u10-l05-001",
@@ -9799,7 +9799,7 @@
     "definition": "lan truyền, được truyền",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D+%E3%82%8F%E3%82%8B"
+    "image": "https://o.quizlet.com/SSxh9Vp8vBGAjjLuAdNjFw.jpg"
   },
   {
     "id": "u10-l05-002",
@@ -9812,7 +9812,7 @@
     "definition": "truyền, truyền đạt, truyền (đạo), dẫn, truyền",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%9D+%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/1h6JSpx5fXMQNK.kS5bGng.png"
   },
   {
     "id": "u10-l05-003",
@@ -9825,7 +9825,7 @@
     "definition": "tiếp tục, theo",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B6%9A+%E3%81%8F"
+    "image": "https://o.quizlet.com/Z63FvsSUXJT-UWEVqQXyUQ.png"
   },
   {
     "id": "u10-l05-004",
@@ -9838,7 +9838,7 @@
     "definition": "tiếp tục, liên tiếp kéo dài",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B6%9A+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/B5uGE2g5ae98ppQxTE1rHQ.jpg"
   },
   {
     "id": "u10-l05-005",
@@ -9851,7 +9851,7 @@
     "definition": "được kết nối, dẫn tới, nối nhau, kết nối",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/SNtg4tx2TvK-N1UjOgBwXQ.jpg"
   },
   {
     "id": "u10-l05-006",
@@ -9864,7 +9864,7 @@
     "definition": "kết nối",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%90"
+    "image": "https://o.quizlet.com/6OThw-MUPJFwRLgZvIHp6A.jpg"
   },
   {
     "id": "u10-l05-007",
@@ -9877,7 +9877,7 @@
     "definition": "nối/kết nối; gắn; liên kết; nối máy (điện/điện thoại); kéo dài (câu chuyện)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%AA%E3%81%92%E3%82%8B"
+    "image": "https://o.quizlet.com/WDoKDGdiTQjg7bETonvwGA.jpg"
   },
   {
     "id": "u10-l05-008",
@@ -9890,7 +9890,7 @@
     "definition": "dài ra/giãn ra; cao lên; phát triển/tăng; (tóc) mọc dài; (đường) kéo dài; (thành tích) tiến bộ",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%B8+%E3%81%B3%E3%82%8B"
+    "image": "https://o.quizlet.com/.8HDw7ijjBM-OyPY7YYy3Q.jpg"
   },
   {
     "id": "u10-l05-009",
@@ -9903,7 +9903,7 @@
     "definition": "kéo dài/duỗi ra; làm dài ra; kéo dài thời gian; phát triển/nâng cao (năng lực)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BC%B8+%E3%81%B0%E3%81%99"
+    "image": "https://o.quizlet.com/UgP4uDyvWVpxQL-bNWYr3A.jpg"
   },
   {
     "id": "u10-l05-010",
@@ -9916,7 +9916,7 @@
     "definition": "bị trì hoãn, kéo dài",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%B6+%E3%81%B3%E3%82%8B"
+    "image": "https://o.quizlet.com/hLQfkvn5Qf8AK3JTjPod.w.png"
   },
   {
     "id": "u10-l05-011",
@@ -9929,7 +9929,7 @@
     "definition": "kéo dài; gia hạn; hoãn lại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BB%B6+%E3%81%B0%E3%81%99"
+    "image": "https://o.quizlet.com/VVo1f0PFuvX.h4y-138bbQ.jpg"
   },
   {
     "id": "u10-l05-012",
@@ -9942,7 +9942,7 @@
     "definition": "lồng vào nhau, chồng chất",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D+%E3%81%AA%E3%82%8B"
+    "image": "https://o.quizlet.com/vBMkAwO4CaR6mZa1u5.jKw.jpg"
   },
   {
     "id": "u10-l05-013",
@@ -9955,7 +9955,7 @@
     "definition": "lồng vào nhau, chồng chất",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E9%87%8D+%E3%81%AD%E3%82%8B"
+    "image": "https://o.quizlet.com/QhnHi2D3ucqSK0mDqhPQOw.jpg"
   },
   {
     "id": "u10-l06-001",
@@ -9968,7 +9968,7 @@
     "definition": "rộng, lan rộng, mở rộng",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%83+%E3%81%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/pa4WOx4RjIXkAlzJF7VR2w.png"
   },
   {
     "id": "u10-l06-002",
@@ -9981,7 +9981,7 @@
     "definition": "mở rộng, trải rộng, dan rộng",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BA%83+%E3%81%92%E3%82%8B"
+    "image": "https://o.quizlet.com/qrHwpFSdaGPUEzlfPRgGsA.jpg"
   },
   {
     "id": "u10-l06-003",
@@ -9994,7 +9994,7 @@
     "definition": "được đăng/tải lên (báo, sách, web); được in; (xe) chở; được đặt lên",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BC%89+%E3%82%8B"
+    "image": "https://o.quizlet.com/P1t57Nj7P0WKgaCEoyfmiA.png"
   },
   {
     "id": "u10-l06-004",
@@ -10007,7 +10007,7 @@
     "definition": "cho lên, đăng tải",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%BC%89+%E3%81%9B%E3%82%8B"
+    "image": "https://o.quizlet.com/P1t57Nj7P0WKgaCEoyfmiA.png"
   },
   {
     "id": "u10-l06-005",
@@ -10020,7 +10020,7 @@
     "definition": "tụ tập, thu thập, hợp, hòa hợp",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8D%E3%81%86"
+    "image": "https://o.quizlet.com/pTSf2cs.dLIhG1ukP3GT0A.jpg"
   },
   {
     "id": "u10-l06-006",
@@ -10033,7 +10033,7 @@
     "definition": "tập hợp, chuẩn bị, sắp xếp, hợp",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/5f5AvNrxvP-k53ugoU2Mmw.jpg"
   },
   {
     "id": "u10-l06-007",
@@ -10046,7 +10046,7 @@
     "definition": "tổng hợp, thống nhất",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%A8%E3%81%BE%E3%82%8B"
+    "image": "https://o.quizlet.com/LHRjC21gt.noQhDBUqH1cw.jpg"
   },
   {
     "id": "u10-l06-008",
@@ -10059,7 +10059,7 @@
     "definition": "tập hợp, gom lại, sắp xếp",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/kCeHyDEfNGXtzI.ro8U5Rg.jpg"
   },
   {
     "id": "u10-l06-009",
@@ -10072,7 +10072,7 @@
     "definition": "dính, gắn, có được, ngấm vào, đính kèm",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%98+%E3%81%8F"
+    "image": "https://o.quizlet.com/yGW3Xc.zjXGWuFv4.omFWg.jpg"
   },
   {
     "id": "u10-l06-010",
@@ -10085,7 +10085,7 @@
     "definition": "bôi, phết, ngấm, đính kèm, viết",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BB%98+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/xuZGTeQs8gHHnlrUJq3yxA.png"
   },
   {
     "id": "u10-l07-001",
@@ -10098,7 +10098,7 @@
     "definition": "lưu trữ, tích tụ",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%BE%E3%82%8B"
+    "image": "https://o.quizlet.com/Nxq4cmJ.zRMQqj.4TVPj.g.jpg"
   },
   {
     "id": "u10-l07-002",
@@ -10111,7 +10111,7 @@
     "definition": "tích",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/iC9lINMWvDjxIGkg7kspXw.jpg"
   },
   {
     "id": "u10-l07-003",
@@ -10124,7 +10124,7 @@
     "definition": "giao nhau, lẫn vào",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%98%E3%82%8B%2F+%E4%BA%A4+%E3%81%98%E3%82%8B"
+    "image": "https://o.quizlet.com/o9AwJsl1b6M1lhrEEHLYUQ.jpg"
   },
   {
     "id": "u10-l07-004",
@@ -10137,7 +10137,7 @@
     "definition": "trộn vào",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%96%E3%82%8B%2F+%E4%BA%A4+%E3%81%96%E3%82%8B"
+    "image": "https://o.quizlet.com/1FL5wSpx6ehgtATUUMz41g.jpg"
   },
   {
     "id": "u10-l07-005",
@@ -10150,7 +10150,7 @@
     "definition": "trộn lẫn",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B7%B7+%E3%81%9C%E3%82%8B%2F+%E4%BA%A4+%E3%81%9C%E3%82%8B"
+    "image": "https://o.quizlet.com/cdNbG9pqpFv7xHtqPpYscA.jpg"
   },
   {
     "id": "u10-l07-006",
@@ -10163,7 +10163,7 @@
     "definition": "được giải (bài toán), được tháo/tuột (nút dây), được giải tỏa (căng thẳng); tan chảy",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3+%E3%81%91%E3%82%8B%2F+%E6%BA%B6+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/k9RIYn.IYEReGA80n-3QFw.jpg"
   },
   {
     "id": "u10-l07-007",
@@ -10176,7 +10176,7 @@
     "definition": "giải (bài); tháo (nút); hòa tan; làm tan chảy",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A7%A3+%E3%81%8F%2F+%E6%BA%B6+%E3%81%8F%2F+%E6%BA%B6+%E3%81%8B%E3%81%99"
+    "image": "https://o.quizlet.com/sR1ILLdW73mSH-8xaI.1OQ.jpg"
   },
   {
     "id": "u10-l07-008",
@@ -10189,7 +10189,7 @@
     "definition": "bao gồm, chứa",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%AB+%E3%82%80"
+    "image": "https://o.quizlet.com/wYAnTDvy4H7TOPjvm-AhJg.png"
   },
   {
     "id": "u10-l07-009",
@@ -10202,7 +10202,7 @@
     "definition": "bao gồm",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%90%AB+%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/UTfXDby9TVBmqiYathG--w.jpg"
   },
   {
     "id": "u10-l07-010",
@@ -10215,7 +10215,7 @@
     "definition": "tháo, tuột",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%9C+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/96h0nTOnajGzR83JbMKx2Q.jpg"
   },
   {
     "id": "u10-l07-011",
@@ -10228,7 +10228,7 @@
     "definition": "lấy ra, nhổ, cho qua, bỏ, thư giãn (cơ thể)",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8A%9C+%E3%81%8F"
+    "image": "https://o.quizlet.com/Qkp46LEN.WdV1btUgAU4Rg.jpg"
   },
   {
     "id": "u10-l07-012",
@@ -10241,7 +10241,7 @@
     "definition": "xuất hiện, hiện ra",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/foQtOYj8sU4TfJ8PTu6a1g.jpg"
   },
   {
     "id": "u10-l07-013",
@@ -10254,7 +10254,7 @@
     "definition": "làm hiện ra",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%8F%BE+%E3%81%99"
+    "image": "https://o.quizlet.com/mS3pMZrFD5gifiILbCGJAg.jpg"
   },
   {
     "id": "u10-l07-014",
@@ -10267,7 +10267,7 @@
     "definition": "biểu hiện",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8+%E3%82%8C%E3%82%8B"
+    "image": "https://o.quizlet.com/7npv.TwItE8.h34OGjDjyQ.jpg"
   },
   {
     "id": "u10-l07-015",
@@ -10280,7 +10280,7 @@
     "definition": "biểu thị, biểu lộ",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%A1%A8+%E3%81%99"
+    "image": "https://o.quizlet.com/APQ4oyrHODSkHY1Tboi1LQ.png"
   },
   {
     "id": "u10-l08-001",
@@ -10293,7 +10293,7 @@
     "definition": "rơi, tàn",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%95%A3+%E3%82%8B"
+    "image": "https://o.quizlet.com/HB5FKlK0XPi0rRB.Qdau-Q.jpg"
   },
   {
     "id": "u10-l08-002",
@@ -10319,7 +10319,7 @@
     "definition": "kết thúc (mùa mưa), bắt đầu (năm mới), đến (đêm)",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%98%8E+%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/Ir10u2DhDnCNamz2ieJV6w.jpg"
   },
   {
     "id": "u10-l08-004",
@@ -10332,7 +10332,7 @@
     "definition": "giương (ô), giơ (tay), chiếu (nắng).",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B7%AE+%E3%81%99"
+    "image": "https://o.quizlet.com/-ubIFzKVpmwxdVUZ175t6A.jpg"
   },
   {
     "id": "u11-l00-001",
@@ -10345,7 +10345,7 @@
     "definition": "được nấu",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%82%8A%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/p4uXWF271-0BP8sugCqz0A.jpg"
   },
   {
     "id": "u11-l00-002",
@@ -10358,7 +10358,7 @@
     "definition": "nấu (cơm)",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%82%8A%E3%81%8F"
+    "image": "https://o.quizlet.com/EkzobYPL9Ilqk4i4DJb5ow.jpg"
   },
   {
     "id": "u11-l00-003",
@@ -10371,7 +10371,7 @@
     "definition": "được nấu, hầm",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%85%AE%E3%81%88%E3%82%8B"
+    "image": "https://o.quizlet.com/cihkeyChN2s-23VspLlreg.jpg"
   },
   {
     "id": "u11-l00-004",
@@ -10384,7 +10384,7 @@
     "definition": "ninh, nấu",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%85%AE%E3%82%8B"
+    "image": "https://o.quizlet.com/8qAp8-zeg65BqHiv1C0rIw.jpg"
   },
   {
     "id": "u11-l00-005",
@@ -10397,7 +10397,7 @@
     "definition": "rán, xào",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%82%92%E3%82%81%E3%82%8B"
+    "image": "https://o.quizlet.com/R0ImWlEuAH6C9GWdfY9cqA.jpg"
   },
   {
     "id": "u11-l00-006",
@@ -10406,11 +10406,11 @@
     "lessonOrder": 0,
     "section": "Khác",
     "term": "焼ける",
-    "reading": "や",
+    "reading": "ã'\"",
     "definition": "được nướng, được rán",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%84%BC%E3%81%91%E3%82%8B"
+    "image": "https://o.quizlet.com/C82S6gN5e5Z6Tjs05hctdw.jpg"
   },
   {
     "id": "u11-l00-007",
@@ -10419,11 +10419,11 @@
     "lessonOrder": 0,
     "section": "Khác",
     "term": "焼く",
-    "reading": "や",
+    "reading": "ã'\"",
     "definition": "nướng, rán",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%84%BC%E3%81%8F"
+    "image": "https://o.quizlet.com/0HlfQZX3NM7YdCNBDFwYwA.jpg"
   },
   {
     "id": "u11-l00-008",
@@ -10433,10 +10433,10 @@
     "section": "Khác",
     "term": "ゆでる",
     "reading": null,
-    "definition": "luộc",
+    "definition": "luá»™c",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%86%E3%81%A7%E3%82%8B"
+    "image": "https://o.quizlet.com/QdjNTqts3Kk9w0ckmr48Dw.jpg"
   },
   {
     "id": "u11-l00-009",
@@ -10449,7 +10449,7 @@
     "definition": "chiên, rán",
     "pos": "verb",
     "transitivity": "unknown",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%8F%9A%E3%81%92%E3%82%8B"
+    "image": "https://o.quizlet.com/DDeFL53M9syCXUeNtmFs4Q.jpg"
   },
   {
     "id": "u11-l00-010",
@@ -10458,44 +10458,44 @@
     "lessonOrder": 0,
     "section": "Khác",
     "term": "蒸す",
-    "reading": "む",
+    "reading": "ã'€",
     "definition": "hấp",
     "pos": "verb",
     "transitivity": "both",
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E8%92%B8%E3%81%99"
+    "image": "https://o.quizlet.com/k8cJ1.rbXnKGDvqZHf0Ksw.jpg"
   },
   {
     "id": "u11-l98-001",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "パートナー",
     "reading": null,
     "definition": "đối tác (partner)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC"
+    "image": "https://o.quizlet.com/LDe1dsrmZEhb1c-tQFkBpQ.jpg"
   },
   {
     "id": "u11-l98-002",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "リーダー",
     "reading": null,
     "definition": "lãnh đạo (leader)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC"
+    "image": "https://o.quizlet.com/f7IksXuntHkMtfEabb5.gA.png"
   },
   {
     "id": "u11-l98-003",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ボランテイア",
     "reading": null,
     "definition": "tình nguyện, tình nguyện viên (volunteer)",
@@ -10508,481 +10508,481 @@
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "コミュニケーション",
     "reading": null,
     "definition": "giao tiếp (communication)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3"
+    "image": "https://o.quizlet.com/vL2xXTWbCBeZKWbSedFbaw.jpg"
   },
   {
     "id": "u11-l98-005",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ユーモア",
     "reading": null,
     "definition": "hài hước (humor)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%A6%E3%83%BC%E3%83%A2%E3%82%A2"
+    "image": "https://o.quizlet.com/ysCKO1SM1vGIxq4QEVShVA.jpg"
   },
   {
     "id": "u11-l98-006",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ショック",
     "reading": null,
     "definition": "bất ngờ, sốc (shock)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF"
+    "image": "https://o.quizlet.com/cwAeaL2z..PMBeAdvIABeg.jpg"
   },
   {
     "id": "u11-l98-007",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ストレス",
     "reading": null,
     "definition": "căng thẳng (stress)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9"
+    "image": "https://o.quizlet.com/crCzEiqSPZunfwtbx1tGZQ.jpg"
   },
   {
     "id": "u11-l98-008",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "バランス",
     "reading": null,
     "definition": "cân bằng (balance)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9"
+    "image": "https://o.quizlet.com/9Y90iWmfXYmATkp4ikhQ1Q.jpg"
   },
   {
     "id": "u11-l98-009",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "レベル",
     "reading": null,
     "definition": "trình độ, cấp độ (level)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AC%E3%83%99%E3%83%AB"
+    "image": "https://o.quizlet.com/TQtapwYhRRodYr2HVE1e9g.png"
   },
   {
     "id": "u11-l98-010",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "アップ",
     "reading": null,
     "definition": "tăng lên, đến gần (cận cảnh)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A2%E3%83%83%E3%83%97"
+    "image": "https://o.quizlet.com/fI9-6465jF0tB-N-9ZFwDg.jpg"
   },
   {
     "id": "u11-l98-011",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ダウン",
     "reading": null,
     "definition": "hạ xuống, tải xuống,bị hạ (down)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%80%E3%82%A6%E3%83%B3"
+    "image": "https://o.quizlet.com/kdsuXZJ9WSDJcqz7uyuGmQ.png"
   },
   {
     "id": "u11-l98-012",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "プラス",
     "reading": null,
     "definition": "cộng, dư, tác động tích cực (addition, surplus, positive impact)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%97%E3%83%A9%E3%82%B9"
+    "image": "https://o.quizlet.com/HDphqCB01Lz3X4p-FP9IrA.png"
   },
   {
     "id": "u11-l98-013",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "マイナス",
     "reading": null,
     "definition": "trừ, âm, lỗ, tác động tiêu cực (subtration, deficit, negative impact)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9E%E3%82%A4%E3%83%8A%E3%82%B9"
+    "image": "https://o.quizlet.com/gU587u7qFxv-XfLYppK.ow.jpg"
   },
   {
     "id": "u11-l98-014",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "イメージ",
     "reading": null,
     "definition": "hình ảnh (image)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8"
+    "image": "https://o.quizlet.com/Wc4QEJZ5Hqat-B4Ohj4JCg.jpg"
   },
   {
     "id": "u11-l98-015",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "コンテスト",
     "reading": null,
-    "definition": "cuộc thi (contest)",
+    "definition": "cuá»™c thi (contest)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88"
+    "image": "https://o.quizlet.com/i/-UoN3Dhg-aIjv55VIj4Z5A.jpg"
   },
   {
     "id": "u11-l98-016",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "マスコミ",
     "reading": null,
     "definition": "các phương tiện truyền thông, thông tin đại chúng",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%9F"
+    "image": "https://o.quizlet.com/nLIM5m1H3tUc4pH-B6mLYw.png"
   },
   {
     "id": "u11-l98-017",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "プライバシー",
     "reading": null,
     "definition": "riêng tư, cá nhân (privacy)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC"
+    "image": "https://o.quizlet.com/FEitP8HSdtfwiLhL7mO2fw.jpg"
   },
   {
     "id": "u11-l98-018",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "オフィス",
     "reading": null,
     "definition": "văn phòng (office)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9"
+    "image": "https://o.quizlet.com/pVQCg8pdFRE2Ptww4A7BkA.jpg"
   },
   {
     "id": "u11-l98-019",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ルール",
     "reading": null,
     "definition": "luật lệ (rule)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AB%E3%83%BC%E3%83%AB"
+    "image": "https://o.quizlet.com/t4tUPDX12Cwqe4ANJOEPjg.jpg"
   },
   {
     "id": "u11-l98-020",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "マナー",
     "reading": null,
     "definition": "kiểu, tác phong, cách ứng xử (manners)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9E%E3%83%8A%E3%83%BC"
+    "image": "https://o.quizlet.com/cGAhQcx7hdZtKitxYKTIXQ.jpg"
   },
   {
     "id": "u11-l98-021",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ミス",
     "reading": null,
-    "definition": "lỗi (mistake)",
+    "definition": "lá»—i (mistake)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9F%E3%82%B9"
+    "image": "https://o.quizlet.com/5ElKkW5.J2RlIzxQ5TPxTA.png"
   },
   {
     "id": "u11-l98-022",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "スケジュール",
     "reading": null,
     "definition": "lịch trình, lịch biểu (schedule)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB"
+    "image": "https://o.quizlet.com/Fuf3.fmFvHQ5Zh3c4Xt2ag.jpg"
   },
   {
     "id": "u11-l98-023",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "タイトル",
     "reading": null,
     "definition": "tiêu đề (title)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB"
+    "image": "https://o.quizlet.com/RAeSPe1BR30ROUlp6hXmSg.png"
   },
   {
     "id": "u11-l98-024",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "テーマ",
     "reading": null,
     "definition": "chủ đề (topic)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%86%E3%83%BC%E3%83%9E"
+    "image": "https://o.quizlet.com/iRAPJcMD1IRHOCx-FOUIHg.png"
   },
   {
     "id": "u11-l98-025",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ストーリー",
     "reading": null,
     "definition": "câu chuyện (story)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC"
+    "image": "https://o.quizlet.com/HrUWpRSE-zPcPnkBsirsfw.jpg"
   },
   {
     "id": "u11-l98-026",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ヒット",
     "reading": null,
     "definition": "nổi tiếng, đỉnh cao (hit)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%92%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/.Aao0CW2dySDE9d6noksbg.gif"
   },
   {
     "id": "u11-l98-027",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ブランド",
     "reading": null,
     "definition": "thương hiệu (brand)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89"
+    "image": "https://o.quizlet.com/uXXbtamt2It3hSbSllxYxg.jpg"
   },
   {
     "id": "u11-l98-028",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "レンタル",
     "reading": null,
     "definition": "thuê (rental)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB"
+    "image": "https://o.quizlet.com/LVFfXf17Tmw22Qaq9VTl-A.png"
   },
   {
     "id": "u11-l98-029",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "リサイクル",
     "reading": null,
     "definition": "tái chế (recycling)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB"
+    "image": "https://o.quizlet.com/N9b0rcWJ8Dji8jcJnKyxXA.png"
   },
   {
     "id": "u11-l98-030",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ラベル",
     "reading": null,
     "definition": "nhãn dán (label)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%A9%E3%83%99%E3%83%AB"
+    "image": "https://o.quizlet.com/ZEvno0sOBLO-HIHhOwhksA.jpg"
   },
   {
     "id": "u11-l98-031",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "タイプ",
     "reading": null,
     "definition": "kiểu, mẫu (type)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%BF%E3%82%A4%E3%83%97"
+    "image": "https://o.quizlet.com/Ie1VS60QMLU0WL5XStJwOg.jpg"
   },
   {
     "id": "u11-l98-032",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "スタイル",
     "reading": null,
     "definition": "dáng, phong cách (style)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB"
+    "image": "https://o.quizlet.com/UT0I.8vvt6KgEwrtlLjBRg.png"
   },
   {
     "id": "u11-l98-033",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "セット",
     "reading": null,
     "definition": "bộ, đặt (đồng hồ) (set)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%BB%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/1kzqkom7cknMa2vqC96Sow.jpg"
   },
   {
     "id": "u11-l98-034",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ウイルス",
     "reading": null,
     "definition": "virus",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9"
+    "image": "https://o.quizlet.com/.QA.4UAM5dRVTXgkM-SFKA.jpg"
   },
   {
     "id": "u11-l98-035",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ロボット",
     "reading": null,
     "definition": "robot",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88"
+    "image": "https://o.quizlet.com/KG2k-IXxCZ7Z89PecQ2sRQ.jpg"
   },
   {
     "id": "u11-l98-036",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "エネルギー",
     "reading": null,
     "definition": "năng lượng (energy)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC"
+    "image": "https://o.quizlet.com/Csqb5o4swk0Q7WGAJuxt3w.jpg"
   },
   {
     "id": "u11-l98-037",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "デジタル",
     "reading": null,
     "definition": "kỹ thuật số (digital)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB"
+    "image": "https://o.quizlet.com/fEswhtO4CYBS4QUpdpOgBg.jpg"
   },
   {
     "id": "u11-l98-038",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "マイク",
     "reading": null,
     "definition": "microphone",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9E%E3%82%A4%E3%82%AF"
+    "image": "https://o.quizlet.com/71Yh7rOrg-QycnYAj8SeTw.jpg"
   },
   {
     "id": "u11-l98-039",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ブレーキ",
     "reading": null,
     "definition": "phanh (brake)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD"
+    "image": "https://o.quizlet.com/8hsaXwcElTUxzkwnq0euEg.jpg"
   },
   {
     "id": "u11-l98-040",
     "unit": 11,
     "lesson": "Katakana B",
     "lessonOrder": 98,
-    "section": "????B",
+    "section": "カタカナB",
     "term": "ペンキ",
     "reading": null,
     "definition": "sơn (paint)",
     "pos": "other",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%83%9A%E3%83%B3%E3%82%AD"
+    "image": "https://o.quizlet.com/8eP6MErE9ErFryu0aJatPg.jpg"
   },
   {
     "id": "u12-l01-001",
@@ -10992,10 +10992,10 @@
     "section": "副詞B、連体詞・接続詞",
     "term": "ぐっすり",
     "reading": null,
-    "definition": "ngủ say",
+    "definition": "ngá»§ say",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%90%E3%81%A3%E3%81%99%E3%82%8A"
+    "image": "https://o.quizlet.com/.Yev2-DTDIkIERsTrNWpYQ.png"
   },
   {
     "id": "u12-l01-002",
@@ -11021,7 +11021,7 @@
     "definition": "chắc chắn, đáng tin cậy",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%97%E3%81%A3%E3%81%8B%E3%82%8A"
+    "image": "https://o.quizlet.com/-n5cm14x0PY0uMxK1sS9iA.jpg"
   },
   {
     "id": "u12-l01-004",
@@ -11034,7 +11034,7 @@
     "definition": "rõ ràng",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A"
+    "image": "https://o.quizlet.com/i/752VkN2O0etC35vMcBloRQ.jpg"
   },
   {
     "id": "u12-l01-005",
@@ -11047,7 +11047,7 @@
     "definition": "kiên nhẫn, không động đậy, lặng im (duy trì trạng thái)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%98%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/AeL36ffB9dO3KDOFAZ1yDQ.jpg"
   },
   {
     "id": "u12-l01-006",
@@ -11060,7 +11060,7 @@
     "definition": "lặng lẽ, âm thầm, nhẹ nhàng, lén lút",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%A3%E3%81%A8"
+    "image": "https://o.quizlet.com/vanE19VqaG3b82Gy2aOvmQ.jpg"
   },
   {
     "id": "u12-l01-007",
@@ -11073,7 +11073,7 @@
     "definition": "riêng ra",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A5%E3%80%85+%E3%81%AB"
+    "image": "https://o.quizlet.com/dHCwSLJ9G1AmACFvXCeG2g.png"
   },
   {
     "id": "u12-l01-008",
@@ -11086,7 +11086,7 @@
     "definition": "mỗi, riêng biệt, tương ứng với từng đơn vị",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C"
+    "image": "https://o.quizlet.com/-sZ8PCzqpZmdu0DVpAipFA.jpg"
   },
   {
     "id": "u12-l01-009",
@@ -11099,7 +11099,7 @@
     "definition": "lẫn nhau",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%BA%92+%E3%81%84%E3%81%AB"
+    "image": "https://o.quizlet.com/j2kZvV00gpMnjF4h-1sUxw.jpg"
   },
   {
     "id": "u12-l01-010",
@@ -11112,7 +11112,7 @@
     "definition": "trực tiếp",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%9B%B4%E6%8E%A5"
+    "image": "https://o.quizlet.com/.OZB6.4C1we3oYABZDMk9w.png"
   },
   {
     "id": "u12-l01-011",
@@ -11125,7 +11125,7 @@
     "definition": "thực sự, nói thực, sự thật",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%9C%AC%E5%BD%93+%E3%81%AB"
+    "image": "https://o.quizlet.com/jBuFwg2KfC1IOhjdMbDpnw.jpg"
   },
   {
     "id": "u12-l01-012",
@@ -11138,7 +11138,7 @@
     "definition": "chắc chắn, đảm bảo, nhất định, luôn như vậy, không có ngoại lệ",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%BF%85+%E3%81%9A"
+    "image": "https://o.quizlet.com/.ymqYiDDstujKUPq5v3y-g.jpg"
   },
   {
     "id": "u12-l02-001",
@@ -11151,7 +11151,7 @@
     "definition": "chắc chắn, không bao giờ, tuyệt đối không",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%B5%B6%E5%AF%BE+%E3%81%AB"
+    "image": "https://o.quizlet.com/WIMbyCHRzcQpusoJxt3Now.png"
   },
   {
     "id": "u12-l02-002",
@@ -11164,7 +11164,7 @@
     "definition": "đặc biệt là, nhất là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E7%89%B9+%E3%81%AB"
+    "image": "https://o.quizlet.com/hmo1R241qZ0eW17LqAwHyQ.jpg"
   },
   {
     "id": "u12-l02-003",
@@ -11177,7 +11177,7 @@
     "definition": "chỉ, chỉ có",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%A0"
+    "image": "https://o.quizlet.com/i/s_kk9Gz5rZWrgcIaNaSpKw.jpg"
   },
   {
     "id": "u12-l02-004",
@@ -11190,7 +11190,7 @@
     "definition": "tối thiểu, ít",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%91+%E3%81%AA%E3%81%8F%E3%81%A8%E3%82%82"
+    "image": "https://o.quizlet.com/irW1ddQ-mwnwWVSV4TylWA.jpg"
   },
   {
     "id": "u12-l02-005",
@@ -11203,7 +11203,7 @@
     "definition": "không bao giờ",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E6%B1%BA+%E3%81%97%E3%81%A6"
+    "image": "https://o.quizlet.com/t3VbHaw7NUqJziayg19Nsg.jpg"
   },
   {
     "id": "u12-l02-006",
@@ -11216,7 +11216,7 @@
     "definition": "một chút cũng không",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%B0%91+%E3%81%97%E3%82%82"
+    "image": "https://o.quizlet.com/W2.Zrqu85nk.Um-97GsuEA.png"
   },
   {
     "id": "u12-l02-007",
@@ -11229,7 +11229,7 @@
     "definition": "một chút cũng không",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A1%E3%81%A3%E3%81%A8%E3%82%82"
+    "image": "https://o.quizlet.com/dVuTT4YJMhP5UnYrLtc3DQ.png"
   },
   {
     "id": "u12-l02-008",
@@ -11242,7 +11242,7 @@
     "definition": "hoàn toàn không, hoàn toàn, thực sự",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%85%A8+%E3%81%8F"
+    "image": "https://o.quizlet.com/yvhZiGdXXOYCo9kywNGqzg.png"
   },
   {
     "id": "u12-l02-009",
@@ -11255,7 +11255,7 @@
     "definition": "rất, thực sự, khó có thể, không thể",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A8%E3%81%A6%E3%82%82"
+    "image": "https://o.quizlet.com/WACqyG2gtWCg6wq0XWNY6A.jpg"
   },
   {
     "id": "u12-l02-010",
@@ -11268,7 +11268,7 @@
     "definition": "bao nhiêu (nhiều), dù cho có thể nào… đi chăng nữa",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A9%E3%82%93%E3%81%AA%E3%81%AB"
+    "image": "https://o.quizlet.com/gMawbesKd6RFBDCmuMMpyg.jpg"
   },
   {
     "id": "u12-l03-001",
@@ -11281,7 +11281,7 @@
     "definition": "dù sao cũng, nhất định, không thể",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A9%E3%81%86%E3%81%97%E3%81%A6%E3%82%82"
+    "image": "https://o.quizlet.com/e.AyAlgHYqvM3JGwMcbQIA.jpg"
   },
   {
     "id": "u12-l03-002",
@@ -11294,7 +11294,7 @@
     "definition": "giống như, hoàn toàn không",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%82%8B%E3%81%A7"
+    "image": "https://o.quizlet.com/zKn5SKTrB3O9pV3YHOC4mw.jpg"
   },
   {
     "id": "u12-l03-003",
@@ -11307,7 +11307,7 @@
     "definition": "rốt cuộc thì / rốt cuộc là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E4%B8%80%E4%BD%93"
+    "image": "https://o.quizlet.com/WoVnFM6C.bcj51Fr39Xc7Q.jpg"
   },
   {
     "id": "u12-l03-004",
@@ -11320,7 +11320,7 @@
     "definition": "không có gì (cụ thể)",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E5%88%A5%E3%81%AB"
+    "image": "https://o.quizlet.com/u90fu6FDrTjHSglb5D7AgA.jpg"
   },
   {
     "id": "u12-l03-005",
@@ -11333,7 +11333,7 @@
     "definition": "chỉ, mỗi",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9F%E3%81%A3%E3%81%9F"
+    "image": "https://o.quizlet.com/M2RpdNDFuQbasVYiniUB4A.jpg"
   },
   {
     "id": "u12-l03-006",
@@ -11346,7 +11346,7 @@
     "definition": "chỉ, đơn thuần",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BB%E3%82%93%E3%81%AE"
+    "image": "https://o.quizlet.com/Yhxqy.PJsdc3ZkCsVDWmog.jpg"
   },
   {
     "id": "u12-l03-007",
@@ -11359,7 +11359,7 @@
     "definition": "nên là, sau đó thì, rồi sao",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8C%E3%81%A7"
+    "image": "https://o.quizlet.com/2rKfDIat2rxzSJC42RX1Bg.png"
   },
   {
     "id": "u12-l03-008",
@@ -11372,7 +11372,7 @@
     "definition": "do vậy, do đó",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%93%E3%81%A7"
+    "image": "https://o.quizlet.com/h4o2PcBCkiXOsMghgKR4tQ.jpg"
   },
   {
     "id": "u12-l03-009",
@@ -11385,7 +11385,7 @@
     "definition": "thêm nữa",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%81%AE%E3%81%86%E3%81%88"
+    "image": "https://o.quizlet.com/.-Ta.wzmBmAMCuIWuPjnOg.jpg"
   },
   {
     "id": "u12-l04-001",
@@ -11398,7 +11398,7 @@
     "definition": "và, cũng lại",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%9F"
+    "image": "https://o.quizlet.com/i/KXt-N0US1akJ-3WmP2xHIQ.jpg"
   },
   {
     "id": "u12-l04-002",
@@ -11411,7 +11411,7 @@
     "definition": "hoặc",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%BE%E3%81%9F%E3%81%AF"
+    "image": "https://o.quizlet.com/bOYEgD9r5vayZWSdkxaozQ.png"
   },
   {
     "id": "u12-l04-003",
@@ -11424,7 +11424,7 @@
     "definition": "hay là, hoặc là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%9D%E3%82%8C%E3%81%A8%E3%82%82"
+    "image": "https://o.quizlet.com/2rKfDIat2rxzSJC42RX1Bg.png"
   },
   {
     "id": "u12-l04-004",
@@ -11437,6 +11437,6 @@
     "definition": "nói các khác, tóm lại là, tức là",
     "pos": "adverb",
     "transitivity": null,
-    "image": "https://placehold.co/640x400/F6F3EE/1F2937/png?text=%E3%81%A4%E3%81%BE%E3%82%8A"
+    "image": "https://o.quizlet.com/sIrx41Eh1bvBEGOObKqKaQ.jpg"
   }
 ]
