@@ -11,13 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useState, useMemo, useEffect } from "react";
+import { Suspense, useState, useMemo, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useResourceFavorites } from "@/hooks/useResourceFavorites";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useResourceFavoriteCounts } from "@/hooks/useResourceFavoriteCounts";
 
-export default function ResourcesPage() {
+function ResourcesPageContent() {
   const { user } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -375,5 +375,15 @@ export default function ResourcesPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ResourcesPage() {
+  return (
+    <Suspense
+      fallback={<div className="min-h-screen bg-gray-50 dark:bg-gray-900" />}
+    >
+      <ResourcesPageContent />
+    </Suspense>
   );
 }
