@@ -127,6 +127,7 @@ export default function FsoftTrainingVocabularyPage() {
   const [posFilter, setPosFilter] = useState<PosTag | "all">("all");
   const [transFilter, setTransFilter] = useState<TransitivityFilter>("all");
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isReadingBlurred, setIsReadingBlurred] = useState(true);
   const [isShuffled, setIsShuffled] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [deck, setDeck] = useState<VocabItem[]>([]);
@@ -455,11 +456,17 @@ export default function FsoftTrainingVocabularyPage() {
                         </div>
 
                         <div className="flex-1">
-                          <p className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100">
+                          <p className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100">
                             {current.term}
                           </p>
                           {current.reading && (
-                            <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">
+                            <p
+                              className={`mt-2 text-xl md:text-2xl text-gray-600 dark:text-gray-300 transition ${
+                                isReadingBlurred
+                                  ? "blur-sm select-none"
+                                  : "blur-none"
+                              }`}
+                            >
                               {current.reading}
                             </p>
                           )}
@@ -499,7 +506,7 @@ export default function FsoftTrainingVocabularyPage() {
                         </div>
 
                         <div className="flex-1">
-                          <p className="text-2xl md:text-3xl font-semibold text-emerald-700">
+                          <p className="text-3xl md:text-4xl font-semibold text-emerald-700">
                             {current.definition}
                           </p>
                         </div>
@@ -544,6 +551,13 @@ export default function FsoftTrainingVocabularyPage() {
                   onClick={() => setIsFlipped((prev) => !prev)}
                 >
                   Lật thẻ
+                </Button>
+                <Button
+                  variant={isReadingBlurred ? "outline" : "default"}
+                  onClick={() => setIsReadingBlurred((prev) => !prev)}
+                  disabled={!current?.reading}
+                >
+                  {isReadingBlurred ? "Mở reading" : "Làm mờ reading"}
                 </Button>
                 <Button
                   variant="outline"
@@ -599,15 +613,15 @@ export default function FsoftTrainingVocabularyPage() {
                       >
                         <div className="flex items-center justify-between gap-3">
                           <div className="min-w-0">
-                            <p className="font-bold text-lg md:text-xl leading-tight truncate text-gray-900 dark:text-gray-100">
+                            <p className="font-bold text-xl md:text-2xl leading-tight truncate text-gray-900 dark:text-gray-100">
                               {item.term}
                             </p>
                             {item.reading && (
-                              <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                              <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 truncate mt-0.5">
                                 {item.reading}
                               </p>
                             )}
-                            <p className="text-base text-gray-700 dark:text-gray-300 truncate mt-1">
+                            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 truncate mt-1">
                               {item.definition}
                             </p>
                           </div>
