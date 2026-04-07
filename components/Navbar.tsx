@@ -11,13 +11,37 @@ import {
   User,
   LogOut,
   LogIn,
+  LayoutDashboard,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { isUserAdmin } from "@/lib/authHelper";
 
 export default function Navbar() {
   const { user, loading, signOut } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function checkAdmin() {
+      if (!user) {
+        if (mounted) setIsAdmin(false);
+        return;
+      }
+
+      const adminStatus = await isUserAdmin();
+      if (mounted) setIsAdmin(adminStatus);
+    }
+
+    checkAdmin();
+
+    return () => {
+      mounted = false;
+    };
+  }, [user]);
 
   return (
     <motion.nav
@@ -65,11 +89,18 @@ export default function Navbar() {
               <FolderOpen className="w-4 h-4" />
               Giới thiệu
             </Link>
+            {isAdmin && (
+              <Link
+                href="/admin"
+                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-110"
+              >
+                <LayoutDashboard className="w-4 h-4" />
+                Dashboard
+              </Link>
+            )}
 
-            {/* Theme Toggle */}
             <ThemeToggle />
 
-            {/* Auth Section */}
             <div className="ml-4 pl-4 border-l border-gray-300 dark:border-gray-600 dark:border-gray-600">
               {loading ? (
                 <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>

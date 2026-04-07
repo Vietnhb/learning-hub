@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
 import { getSiteUrl } from "@/lib/site-url";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import AppChrome from "@/components/AppChrome";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
@@ -100,9 +99,7 @@ export default function RootLayout({
           themes={["light", "dark", "catppuccin"]}
         >
           <AuthProvider>
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
+            <AppChrome>{children}</AppChrome>
             <SpeedInsights />
           </AuthProvider>
         </ThemeProvider>

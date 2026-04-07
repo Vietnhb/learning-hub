@@ -17,7 +17,11 @@ export async function isUserAdmin(): Promise<boolean> {
       .eq("id", user.id)
       .single();
 
-    return data?.roles?.name === "admin";
+    const roles = (data as { roles?: { name?: string } | { name?: string }[] })
+      ?.roles;
+    const roleName = Array.isArray(roles) ? roles[0]?.name : roles?.name;
+
+    return roleName === "admin";
   } catch (error) {
     console.error("Check admin error:", error);
     return false;
