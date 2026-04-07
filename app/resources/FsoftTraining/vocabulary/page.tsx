@@ -510,10 +510,6 @@ export default function FsoftTrainingVocabularyPage() {
                             {current.definition}
                           </p>
                         </div>
-
-                        <p className="text-sm text-gray-500 dark:text-gray-300">
-                          Nhấn thẻ để quay lại từ tiếng Nhật
-                        </p>
                       </div>
 
                       {current.image && (
