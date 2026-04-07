@@ -182,7 +182,12 @@ export default function FsoftTrainingVocabularyPage() {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (!isFlipped && deck[currentIndex]?.reading) {
+          setIsReadingBlurred((prev) => !prev);
+        }
+      } else if (e.key === "ArrowRight") {
         e.preventDefault();
         setCurrentIndex((prev) =>
           Math.min(prev + 1, Math.max(deck.length - 1, 0)),
@@ -199,7 +204,7 @@ export default function FsoftTrainingVocabularyPage() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [deck.length]);
+  }, [deck, currentIndex, isFlipped]);
 
   const current = deck[currentIndex] ?? null;
   const progress =
