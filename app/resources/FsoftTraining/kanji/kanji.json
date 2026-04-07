@@ -2570,6 +2570,361 @@
           ]
         }
       ]
+    },
+    {
+      "id": 13,
+      "title": "Đầu, Mũi, Mặt và Cổ",
+      "kanji": [
+        {
+          "character": "頭",
+          "meaning": "Đầu",
+          "onyomi": "トウ",
+          "kunyomi": "あたま",
+          "examples": [
+            {
+              "word": "頭",
+              "reading": "あたま",
+              "meaning": "Đầu"
+            },
+            {
+              "word": "頭痛",
+              "reading": "ずつう",
+              "meaning": "Đau đầu"
+            }
+          ]
+        },
+        {
+          "character": "鼻",
+          "meaning": "Mũi",
+          "onyomi": "ビ",
+          "kunyomi": "はな",
+          "examples": [
+            {
+              "word": "鼻",
+              "reading": "はな",
+              "meaning": "Mũi"
+            },
+            {
+              "word": "耳鼻科",
+              "reading": "じびか",
+              "meaning": "Khoa tai mũi họng"
+            },
+            {
+              "word": "鼻水",
+              "reading": "はなみず",
+              "meaning": "Nước mũi"
+            }
+          ]
+        },
+        {
+          "character": "顔",
+          "meaning": "Mặt",
+          "onyomi": "ガン",
+          "kunyomi": "かお",
+          "examples": [
+            {
+              "word": "顔",
+              "reading": "かお",
+              "meaning": "Khuôn mặt"
+            },
+            {
+              "word": "洗顔",
+              "reading": "せんがん",
+              "meaning": "Rửa mặt"
+            },
+            {
+              "word": "顔色",
+              "reading": "かおいろ",
+              "meaning": "Sắc mặt"
+            }
+          ]
+        },
+        {
+          "character": "首",
+          "meaning": "Cổ",
+          "onyomi": "シュ",
+          "kunyomi": "くび",
+          "examples": [
+            {
+              "word": "首",
+              "reading": "くび",
+              "meaning": "Cổ"
+            },
+            {
+              "word": "足首",
+              "reading": "あしくび",
+              "meaning": "Cổ chân"
+            },
+            {
+              "word": "手首",
+              "reading": "てくび",
+              "meaning": "Cổ tay"
+            },
+            {
+              "word": "首都",
+              "reading": "しゅと",
+              "meaning": "Thủ đô"
+            }
+          ]
+        },
+        {
+          "character": "足",
+          "meaning": "Chân",
+          "onyomi": "ソク",
+          "kunyomi": "あし",
+          "examples": [
+            {
+              "word": "足首",
+              "reading": "あしくび",
+              "meaning": "Cổ chân"
+            }
+          ]
+        },
+        {
+          "character": "手",
+          "meaning": "Tay",
+          "onyomi": "シュ",
+          "kunyomi": "て",
+          "examples": [
+            {
+              "word": "手首",
+              "reading": "てくび",
+              "meaning": "Cổ tay"
+            }
+          ]
+        },
+        {
+          "character": "洗",
+          "meaning": "Rửa",
+          "onyomi": "セン",
+          "kunyomi": "あら-う",
+          "examples": [
+            {
+              "word": "洗顔",
+              "reading": "せんがん",
+              "meaning": "Rửa mặt"
+            }
+          ]
+        },
+        {
+          "character": "耳",
+          "meaning": "Tai",
+          "onyomi": "ジ",
+          "kunyomi": "みみ",
+          "examples": [
+            {
+              "word": "耳鼻科",
+              "reading": "じびか",
+              "meaning": "Khoa tai mũi họng"
+            }
+          ]
+        },
+        {
+          "character": "科",
+          "meaning": "Khoa",
+          "onyomi": "カ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "耳鼻科",
+              "reading": "じびか",
+              "meaning": "Khoa tai mũi họng"
+            }
+          ]
+        },
+        {
+          "character": "都",
+          "meaning": "Đô",
+          "onyomi": "ト",
+          "kunyomi": "みやこ",
+          "examples": [
+            {
+              "word": "首都",
+              "reading": "しゅと",
+              "meaning": "Thủ đô"
+            }
+          ]
+        },
+        {
+          "character": "痛",
+          "meaning": "Đau",
+          "onyomi": "ツウ",
+          "kunyomi": "いた-い",
+          "examples": [
+            {
+              "word": "頭痛",
+              "reading": "ずつう",
+              "meaning": "Đau đầu"
+            }
+          ]
+        },
+        {
+          "character": "色",
+          "meaning": "Sắc, màu",
+          "onyomi": "ショク",
+          "kunyomi": "いろ",
+          "examples": [
+            {
+              "word": "顔色",
+              "reading": "かおいろ",
+              "meaning": "Sắc mặt"
+            }
+          ]
+        },
+        {
+          "character": "水",
+          "meaning": "Nước",
+          "onyomi": "スイ",
+          "kunyomi": "みず",
+          "examples": [
+            {
+              "word": "鼻水",
+              "reading": "はなみず",
+              "meaning": "Nước mũi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Hơi Thở và Mồ Hôi",
+      "kanji": [
+        {
+          "character": "汗",
+          "meaning": "Mồ hôi",
+          "onyomi": "カン",
+          "kunyomi": "あせ",
+          "examples": [
+            {
+              "word": "汗",
+              "reading": "あせ",
+              "meaning": "Mồ hôi"
+            },
+            {
+              "word": "冷汗",
+              "reading": "れいかん",
+              "meaning": "Mồ hôi lạnh"
+            }
+          ]
+        },
+        {
+          "character": "息",
+          "meaning": "Hơi thở",
+          "onyomi": "ソク",
+          "kunyomi": "いき",
+          "examples": [
+            {
+              "word": "息",
+              "reading": "いき",
+              "meaning": "Hơi thở"
+            },
+            {
+              "word": "休息",
+              "reading": "きゅうそく",
+              "meaning": "Nghỉ ngơi"
+            },
+            {
+              "word": "ため息",
+              "reading": "ためいき",
+              "meaning": "Thở dài"
+            },
+            {
+              "word": "利息",
+              "reading": "りそく",
+              "meaning": "Tiền lãi"
+            }
+          ]
+        },
+        {
+          "character": "吸",
+          "meaning": "Hít",
+          "onyomi": "キュウ",
+          "kunyomi": "す-う",
+          "examples": [
+            {
+              "word": "吸う",
+              "reading": "すう",
+              "meaning": "Hít"
+            },
+            {
+              "word": "深呼吸",
+              "reading": "しんこきゅう",
+              "meaning": "Hít thở sâu"
+            }
+          ]
+        },
+        {
+          "character": "呼",
+          "meaning": "Gọi, hô hấp",
+          "onyomi": "コ",
+          "kunyomi": "よ-ぶ",
+          "examples": [
+            {
+              "word": "呼ぶ",
+              "reading": "よぶ",
+              "meaning": "Gọi"
+            },
+            {
+              "word": "深呼吸",
+              "reading": "しんこきゅう",
+              "meaning": "Hít thở sâu"
+            }
+          ]
+        },
+        {
+          "character": "深",
+          "meaning": "Sâu",
+          "onyomi": "シン",
+          "kunyomi": "ふか-い",
+          "examples": [
+            {
+              "word": "深呼吸",
+              "reading": "しんこきゅう",
+              "meaning": "Hít thở sâu"
+            }
+          ]
+        },
+        {
+          "character": "休",
+          "meaning": "Nghỉ",
+          "onyomi": "キュウ",
+          "kunyomi": "やす-む",
+          "examples": [
+            {
+              "word": "休息",
+              "reading": "きゅうそく",
+              "meaning": "Nghỉ ngơi"
+            }
+          ]
+        },
+        {
+          "character": "冷",
+          "meaning": "Lạnh",
+          "onyomi": "レイ",
+          "kunyomi": "つめ-たい",
+          "examples": [
+            {
+              "word": "冷汗",
+              "reading": "れいかん",
+              "meaning": "Mồ hôi lạnh"
+            }
+          ]
+        },
+        {
+          "character": "利",
+          "meaning": "Lợi",
+          "onyomi": "リ",
+          "kunyomi": "き-く",
+          "examples": [
+            {
+              "word": "利息",
+              "reading": "りそく",
+              "meaning": "Tiền lãi"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
