@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Learning Hub",
-  description: "Nội dung từ vựng FsoftTraining đang được cập nhật.",
-  robots: {
-    index: false,
-    follow: false,
+  description:
+    "Kotoba FsoftTraining theo Unit 1-12, co loc theo bai va ghi chu tu dong tu/tha dong tu.",
+  alternates: {
+    canonical: "/resources/FsoftTraining/vocabulary",
   },
 };
 
@@ -16,3 +16,4 @@ export default function FsoftTrainingVocabularyLayout({
 }) {
   return children;
 }
+
