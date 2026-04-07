@@ -488,9 +488,9 @@
         },
         {
           "id": "tagaru-third-person-desire",
-          "pattern": "V(ます)たい + がる / たがる",
-          "meaning": "(Ngôi thứ 3) muốn ~",
-          "note": "Dùng để nói mong muốn/cảm xúc của người thứ 3 (không dùng trực tiếp cho bản thân).\nDạng bổ nghĩa danh từ: ～たがる + N.\nDanh từ ～がり thường gặp: 寒がり、暑がり、こわがり.",
+          "pattern": "い形容詞(い-bỏ) / な形容詞(だ-bỏ) / V(ます-bỏ)たい(い-bỏ) + がる",
+          "meaning": "(Ngôi thứ 3) biểu lộ cảm xúc, trạng thái hoặc mong muốn",
+          "note": "Quy tắc nối:\n- い形容詞: bỏ い rồi + がる (ví dụ: 寒い → 寒がる).\n- な形容詞: bỏ だ rồi + がる (ví dụ: 嫌だ → 嫌がる).\n- Vたい: từ V(ます-bỏ)+たい, bỏ い của たい rồi + がる (ví dụ: 行きたい → 行きたがる).\nDùng để nói cảm xúc/mong muốn của người thứ 3 (không dùng trực tiếp cho bản thân).",
           "examples": [
             {
               "jp": "彼らはどうして離婚したのか\"\"言いたがらなかった\"\"。",
