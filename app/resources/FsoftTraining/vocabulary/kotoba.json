@@ -125,8 +125,8 @@
         "term":  "知り合い",
         "reading":  "しあ",
         "definition":  "người quen",
-        "pos":  "verb",
-        "transitivity":  "transitive",
+        "pos":  "noun",
+        "transitivity":  null,
         "image":  "https://o.quizlet.com/bodgDaPSz2qg5Ilyrfwrmw.jpg"
     },
     {
@@ -256,7 +256,7 @@
         "reading":  "ごうかく",
         "definition":  "thi đỗ, trúng tuyển",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/O.N2j9LD5ygKdqi29eNy2g.png"
     },
     {
@@ -269,7 +269,7 @@
         "reading":  "しんがく",
         "definition":  "học lên",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/TWqE1zrSV2VcrOd.aPl-HA.jpg"
     },
     {
@@ -282,7 +282,7 @@
         "reading":  "たいがく",
         "definition":  "thôi học",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/ZYG5ls1-dSAQrTyLfGfmrw.jpg"
     },
     {
@@ -295,7 +295,7 @@
         "reading":  "しゅうしょく",
         "definition":  "tìm việc",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/cbI7JxECcfhcrjn-b8X0LQ.jpg"
     },
     {
@@ -308,7 +308,7 @@
         "reading":  "たいしょく",
         "definition":  "nghỉ việc",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/RaZwNVm6UcueKBDpvavgWQ.png"
     },
     {
@@ -477,7 +477,7 @@
         "reading":  "さんか",
         "definition":  "tham gia",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/Qxdf9uaxlTfslbx1BKIbrA.jpg"
     },
     {
@@ -542,7 +542,7 @@
         "reading":  "けいさん",
         "definition":  "tính toán",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/PDaVRiiH6Qy3InXPcHeE8w.jpg"
     },
     {
@@ -607,7 +607,7 @@
         "reading":  "せいり",
         "definition":  "sắp xếp, vứt bỏ",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/i/8jCZrwhB8Go1mCRaMplH9g.jpg"
     },
     {
@@ -620,7 +620,7 @@
         "reading":  "ちゅうもん",
         "definition":  "đặt hàng, gọi đồ, yêu cầu",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/t-6afgiB.70RJEf7v6k-6g.jpg"
     },
     {
@@ -880,7 +880,7 @@
         "reading":  "さんせい",
         "definition":  "tán thành, đồng ý",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/FVGLin4eSKHy2zv.6NuRCQ.jpg"
     },
     {
@@ -893,7 +893,7 @@
         "reading":  "はんたい",
         "definition":  "đối ngược, phản đối",
         "pos":  "noun",
-        "transitivity":  null,
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/glWn.y0khd5OF5fw4LmzcQ.jpg"
     },
     {
@@ -2115,7 +2115,7 @@
         "reading":  null,
         "definition":  "đá",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/i/GYUPpGHkdu5c_p9gyn8FeA.jpg"
     },
     {
@@ -2713,7 +2713,7 @@
         "reading":  "き",
         "definition":  "hiệu quả",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/5HIMBhnbsPXX89ET3gAgvQ.png"
     },
     {
@@ -2947,7 +2947,7 @@
         "reading":  null,
         "definition":  "lau, chùi",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/7DP3.y6AoMhBtKH5IzNwfA.png"
     },
     {
@@ -2999,7 +2999,7 @@
         "reading":  "は",
         "definition":  "dán",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/pymASIMu0ABJ4Au8yqb6zA.png"
     },
     {
@@ -3116,7 +3116,7 @@
         "reading":  "すべ",
         "definition":  "trượt",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/yT5NUmAtgDiq8Z8Mkn.YjA.png"
     },
     {
@@ -3129,7 +3129,7 @@
         "reading":  "つ",
         "definition":  "(tuyết) phủ dày, chất đống; tích tụ",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/gysA8sjVHgG5cKUYOykkmg.jpg"
     },
     {
@@ -3168,7 +3168,7 @@
         "reading":  "あ",
         "definition":  "làm trống; chừa ra; để trống (ghế/giờ); dọn trống",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/T0K1vR5sanMqVPn.MW1k7g.png"
     },
     {
@@ -3194,7 +3194,7 @@
         "reading":  "さ",
         "definition":  "hạ bớt, giảm đi, thu dọn",
         "pos":  "verb",
-        "transitivity":  "transitive",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/i/FpZzNSbgw2yeTrzVmXEGHg.jpg"
     },
     {
@@ -5365,7 +5365,7 @@
         "reading":  null,
         "definition":  "gãi (đầu), gãi (ngứa), toát (mồ hôi)",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/i/V1UnyuUzkJY5-SCeCPfpDg.jpg"
     },
     {
@@ -5430,7 +5430,7 @@
         "reading":  "ちか",
         "definition":  "mang, đưa đến gần",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/zobqcnZSgNzAEPAnpT3QnA.png"
     },
     {
@@ -5495,7 +5495,7 @@
         "reading":  "くら",
         "definition":  "so sánh",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/UeG.LNoaRg5JSIKo3vXZlA.jpg"
     },
     {
@@ -5560,7 +5560,7 @@
         "reading":  "わ",
         "definition":  "chia, phân chia, tách, phân loại; nhường/để phần cho",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/X3w.GjLw-GDSyOHx3bHJlg.jpg"
     },
     {
@@ -5586,7 +5586,7 @@
         "reading":  "ひ",
         "definition":  "trừ, bớt, kéo, dẫn, rút, tra (từ điển)",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/i/-lRSTJ3q3rA_H9OKoICslg.jpg"
     },
     {
@@ -5911,7 +5911,7 @@
         "reading":  "つ",
         "definition":  "chất, chặt, tắc, bít, gần lại",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/MKf0S3xGFe3AYx33cVxVqA.jpg"
     },
     {
@@ -5924,7 +5924,7 @@
         "reading":  "つ",
         "definition":  "chất, nhét vào, rút ngắn (khoảng cách)",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/B9GtjDKkQQN5ZqsjRf67tg.jpg"
     },
     {
@@ -5976,7 +5976,7 @@
         "reading":  "と",
         "definition":  "bắn, phóng, làm bay, bỏ qua",
         "pos":  "verb",
-        "transitivity":  "transitive",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/FTaH4nwSgI4OqxDteCemng.png"
     },
     {
@@ -6015,7 +6015,7 @@
         "reading":  "み",
         "definition":  "thấy, tình cờ gặp",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/VQsQQbyieXkSQtwKYH1KIQ.jpg"
     },
     {
@@ -6054,7 +6054,7 @@
         "reading":  "くかえ",
         "definition":  "lặp lại",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/Ba-wx.6DGTy1cTl9VOgWJw.png"
     },
     {
@@ -6080,7 +6080,7 @@
         "reading":  "おこな",
         "definition":  "tiến hành, thực hiện, tổ chức",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/h4cUFkuXocJMHVKOHSdEMg.jpg"
     },
     {
@@ -6093,7 +6093,7 @@
         "reading":  "まちが",
         "definition":  "nhầm",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/.fpvMBoB-e-6ytGITbaF1Q.png"
     },
     {
@@ -6171,7 +6171,7 @@
         "reading":  "た",
         "definition":  "dựng đứng, lập nên",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/p..p7npchsNFcLg1mHoQyA.jpg"
     },
     {
@@ -6301,7 +6301,7 @@
         "reading":  "こわ",
         "definition":  "làm hư, làm hỏng, gây hại",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/viY4J.Ko4u4NvrykmAg9AQ.jpg"
     },
     {
@@ -6418,7 +6418,7 @@
         "reading":  "はず",
         "definition":  "tuột ra, rời ra",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/F0S.5vP2UqSEwEDtFcMmpQ.png"
     },
     {
@@ -6483,7 +6483,7 @@
         "reading":  "なが",
         "definition":  "làm cho chảy ra",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/9jOuT.FPctcYvmR9tfUDTg.jpg"
     },
     {
@@ -6626,7 +6626,7 @@
         "reading":  "かん",
         "definition":  "cảm giác, cảm thấy",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/e3CICSO50eyof3jY5vNNAg.png"
     },
     {
@@ -9382,7 +9382,7 @@
         "reading":  "ここ",
         "definition":  "vượt qua",
         "pos":  "verb",
-        "transitivity":  "transitive",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/TgFD7JfSL04BgI.Mi0A4fA.jpg"
     },
     {
@@ -9577,7 +9577,7 @@
         "reading":  "まも",
         "definition":  "giữ, tuân thủ, bảo vệ",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/gTyMeKTqxgHPVl4WeVswuQ.jpg"
     },
     {
@@ -9642,7 +9642,7 @@
         "reading":  "あ",
         "definition":  "chán",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/72GuCMS4ArLZv23JMXQ6Lg.jpg"
     },
     {
@@ -9655,7 +9655,7 @@
         "reading":  "おも",
         "definition":  "nghĩ, nghĩ ra",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/M1eLhqAV.Dlip9u2nvwrZA.jpg"
     },
     {
@@ -9694,7 +9694,7 @@
         "reading":  "く",
         "definition":  "sống, sinh hoạt",
         "pos":  "verb",
-        "transitivity":  "transitive",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/gpSCJ3DqC1F9iq-OaBuV-w.jpg"
     },
     {
@@ -9707,7 +9707,7 @@
         "reading":  "ま",
         "definition":  "quấn, bọc, choàng",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/ScpZN1yuVtdnXoyZlOhoqA.jpg"
     },
     {
@@ -9720,7 +9720,7 @@
         "reading":  "むす",
         "definition":  "buộc, thắt, nối, kí (hợp đồng)",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/SvHE8HOeu9SrGqf39Gjx6Q.jpg"
     },
     {
@@ -9850,7 +9850,7 @@
         "reading":  null,
         "definition":  "được kết nối, dẫn tới, nối nhau, kết nối",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/SNtg4tx2TvK-N1UjOgBwXQ.jpg"
     },
     {
@@ -9915,7 +9915,7 @@
         "reading":  "の",
         "definition":  "bị trì hoãn, kéo dài",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/hLQfkvn5Qf8AK3JTjPod.w.png"
     },
     {
@@ -9980,7 +9980,7 @@
         "reading":  "ひろ",
         "definition":  "mở rộng, trải rộng, dan rộng",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/qrHwpFSdaGPUEzlfPRgGsA.jpg"
     },
     {
@@ -10214,7 +10214,7 @@
         "reading":  "ぬ",
         "definition":  "tháo, tuột",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/96h0nTOnajGzR83JbMKx2Q.jpg"
     },
     {
@@ -10240,7 +10240,7 @@
         "reading":  "あらわ",
         "definition":  "xuất hiện, hiện ra",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/foQtOYj8sU4TfJ8PTu6a1g.jpg"
     },
     {
@@ -10357,7 +10357,7 @@
         "reading":  "た",
         "definition":  "nấu (cơm)",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/EkzobYPL9Ilqk4i4DJb5ow.jpg"
     },
     {
@@ -10370,7 +10370,7 @@
         "reading":  "に",
         "definition":  "được nấu, hầm",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "intransitive",
         "image":  "https://o.quizlet.com/cihkeyChN2s-23VspLlreg.jpg"
     },
     {
@@ -10382,8 +10382,8 @@
         "term":  "煮る",
         "reading":  "に",
         "definition":  "ninh, nấu",
-        "pos":  "other",
-        "transitivity":  null,
+        "pos":  "verb",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/8qAp8-zeg65BqHiv1C0rIw.jpg"
     },
     {
@@ -10448,7 +10448,7 @@
         "reading":  "あ",
         "definition":  "chiên, rán",
         "pos":  "verb",
-        "transitivity":  "unknown",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/DDeFL53M9syCXUeNtmFs4Q.jpg"
     },
     {
@@ -10461,7 +10461,7 @@
         "reading":  "む",
         "definition":  "hấp",
         "pos":  "verb",
-        "transitivity":  "both",
+        "transitivity":  "transitive",
         "image":  "https://o.quizlet.com/k8cJ1.rbXnKGDvqZHf0Ksw.jpg"
     },
     {

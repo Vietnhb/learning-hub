@@ -379,7 +379,7 @@ export default function FsoftTrainingVocabularyPage() {
                 title="Lọc theo loại động từ"
                 className="h-10 rounded-md border border-gray-300 bg-white px-3 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
               >
-                <option value="all">Tất cả động từ</option>
+                <option value="all">Tất cả</option>
                 <option value="transitive">他動詞 (tha động từ)</option>
                 <option value="intransitive">自動詞 (tự động từ)</option>
                 <option value="both">自・他動詞</option>
