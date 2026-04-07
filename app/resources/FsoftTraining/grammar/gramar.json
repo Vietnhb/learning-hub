@@ -8,7 +8,7 @@
           "id": "vmasu-hajimeru-owaru",
           "pattern": "V(ます-bỏ) + 始める・終わる",
           "meaning": "Bắt đầu làm một việc gì đó. Kết thúc (xong) một việc gì đó.",
-          "note": "Dùng động từ thể ます, bỏ ます rồi nối 始める / 終わる. Ví dụ: 食べます → 食べ始める, 読みます → 読み終わる.",
+          "note": "Dùng động từ thể ます, bỏ ます rồi nối 始める / 終わる.\nVí dụ: 食べます → 食べ始める, 読みます → 読み終わる.",
           "examples": [
             {
               "jp": "日本語を習い\"\"始めたのは半年前です\"\"。",
@@ -56,7 +56,7 @@
           "id": "vru-vnai-youni-iu",
           "pattern": "Vる / Vない + ように + 言う・言われる・注意する・頼む",
           "meaning": "Truyền đạt lại lời dặn, yêu cầu, nhắc nhở hoặc mệnh lệnh một cách gián tiếp.(của ngôi t3 một cách nhẹ nhàng)",
-          "note": "Dùng ように sau động từ dạng từ điển (Vる) hoặc phủ định (Vない). Thường gặp: ように言う, ように言われる, ように注意する, ように頼む.",
+          "note": "Dùng ように sau động từ dạng từ điển (Vる) hoặc phủ định (Vない).\nThường gặp: ように言う, ように言われる, ように注意する, ように頼む.",
           "examples": [
             {
               "jp": "私は佐藤さんに、会議の前に資料をコピーしておく\"\"ように頼まれました\"\"。",
@@ -96,7 +96,7 @@
           "id": "toiu-nominalization",
           "pattern": "Thể thông thường + という + N / こと / もの",
           "meaning": "Danh từ hóa mệnh đề/câu trước という để làm chủ ngữ hoặc đối tượng cho toàn câu.",
-          "note": "Mẫu này dùng để trích lại một nội dung/sự việc như một khái niệm rồi tiếp tục nói về nó.",
+          "note": "Dùng để danh từ hóa mệnh đề/câu phía trước bằng という.\nSau đó xem cả cụm như một nội dung để tiếp tục nhận xét/giải thích.",
           "examples": [
             {
               "jp": "彼が有名な音楽家だ\"\"ということ\"\"はあまり知られていない。",
@@ -132,7 +132,7 @@
           "id": "darou-to-omou",
           "pattern": "Thể thông thường + だろうと思う",
           "meaning": "Có lẽ là / Tôi nghĩ là (~).",
-          "note": "Diễn tả phỏng đoán hoặc nhận định chủ quan của người nói trong văn phong thông thường.",
+          "note": "Diễn tả phỏng đoán hoặc nhận định chủ quan của người nói.\nThường dùng trong văn phong thông thường.",
           "examples": [
             {
               "jp": "たぶんこの雨は１時間ぐらいでやむ\"\"だろうと思います\"\"。",
@@ -164,7 +164,7 @@
           "id": "nasasouda",
           "pattern": "TT-い: くな + さそうだ / TT-な・N: じゃな + さそうだ",
           "meaning": "Không có vẻ ~ / Trông không ~ lắm.",
-          "note": "Dùng khi nhìn/cảm nhận rồi phỏng đoán rằng không ~.",
+          "note": "Dùng khi nhìn/cảm nhận rồi phỏng đoán theo hướng phủ định.\nÝ nghĩa gần với: “trông có vẻ không ~”.",
           "examples": [
             {
               "jp": "このカレーはあまり辛く\"\"なさそう\"\"ですね。",
@@ -181,6 +181,694 @@
             {
               "jp": "Ｌサイズがあるかどうか、あの人に聞いてみようか。でも、あの人はお店の人じゃ\"\"なさそう\"\"だよ。",
               "vi": "Hỏi thử người kia xem có size L hay không. Nhưng người đó có vẻ không phải nhân viên cửa hàng."
+            }
+          ]
+        },
+        {
+          "id": "v-plain-to-realize",
+          "pattern": "V_thông thường + と",
+          "meaning": "Mới biết là, thì...đã...rồi.",
+          "note": "Dùng khi nhận ra một điều mà trước đó chưa nhận ra.\nMệnh đề sau thường là trạng thái/sự việc đã xảy ra.",
+          "examples": [
+            {
+              "jp": "\"\"気がつくと\"\"、外はすっかり暗くなっていた。",
+              "vi": "Lúc ấy mới biết bên ngoài trời đã tối hẳn rồi."
+            },
+            {
+              "jp": "待ち合わせの場所に\"\"着くと\"\"、友達はもう来ていた。",
+              "vi": "Lúc tôi tới chỗ hẹn thì mới biết bạn đã tới đó rồi."
+            },
+            {
+              "jp": "昔、住んでいたところに\"\"行ってみると\"\"、大きいビルが建っていた。",
+              "vi": "Ngày xưa, thử tới nơi từng sống mới biết tòa nhà lớn đã được xây rồi."
+            },
+            {
+              "jp": "国から届いた荷物を\"\"開けると\"\"、大好きなお菓子が入っていた。",
+              "vi": "Mở gói đồ gửi từ nước nhà ra mới biết bên trong có món bánh mình rất thích."
+            },
+            {
+              "jp": "冷蔵庫を\"\"開けると\"\"、ケーキがあった。",
+              "vi": "Mở tủ lạnh ra mới biết là có bánh ở trong."
+            },
+            {
+              "jp": "日曜日、目が\"\"覚めると\"\"、１２時だった。",
+              "vi": "Chủ nhật, mở mắt ra mới biết là 12 giờ rồi."
+            },
+            {
+              "jp": "窓を\"\"開けると\"\"、雪が降っていた。",
+              "vi": "Mở cửa sổ ra mới biết là trời đang tuyết rơi."
+            }
+          ]
+        },
+        {
+          "id": "hodo-degree",
+          "pattern": "Vる / Vない / N + ほど",
+          "meaning": "~ Tới mức / Như là ...",
+          "note": "Dùng để nhấn mạnh mức độ rất cao/thấp của trạng thái, hành động.\nSắc thái thường là vượt mức bình thường.",
+          "examples": [
+            {
+              "jp": "富士山に登って、下りてきたときは、もう一歩も歩けない\"\"ほど\"\"疲れた。",
+              "vi": "Leo núi Phú Sĩ xong, lúc xuống núi thì mệt tới mức không đi nổi thêm một bước."
+            },
+            {
+              "jp": "あの双子は両親も間違える\"\"ほど\"\"よく似ている。",
+              "vi": "Cặp sinh đôi kia giống nhau tới mức bố mẹ cũng nhầm."
+            },
+            {
+              "jp": "今日は死ぬ\"\"ほど\"\"疲れた。",
+              "vi": "Hôm nay mệt gần chết."
+            },
+            {
+              "jp": "今週中にやらなければならない仕事が山\"\"ほど\"\"ある。",
+              "vi": "Công việc phải làm trong tuần này nhiều tới mức chất như núi."
+            },
+            {
+              "jp": "その質問は、山田博士もやれない\"\"ほど\"\"難しかった。",
+              "vi": "Câu hỏi đó khó tới mức tiến sĩ Yamada cũng không làm được."
+            },
+            {
+              "jp": "輝いてみえる\"\"ほど\"\"美しかった。",
+              "vi": "Đẹp tới mức như đang tỏa sáng."
+            },
+            {
+              "jp": "彼は、天才\"\"ほど\"\"程度が高い。",
+              "vi": "Anh ấy giỏi tới mức như thiên tài."
+            },
+            {
+              "jp": "顔も見たくない\"\"ほど\"\"きらいだ。",
+              "vi": "Tôi ghét tới mức không muốn nhìn mặt."
+            }
+          ]
+        },
+        {
+          "id": "v-te-iku-kuru",
+          "pattern": "V_て + 行く・来る",
+          "meaning": "Diễn tả sự thay đổi liên tục/tiếp diễn theo thời gian hoặc sự dịch chuyển trong không gian.",
+          "note": "～てくる: thay đổi tiến dần đến hiện tại hoặc dịch chuyển về gần người nói.\n～ていく: thay đổi từ hiện tại đến tương lai hoặc dịch chuyển rời xa người nói.",
+          "examples": [
+            {
+              "jp": "冬になると、渡り鳥は南の方へ飛んで\"\"いく\"\"。",
+              "vi": "Mùa đông tới thì chim di cư bay về phía Nam."
+            },
+            {
+              "jp": "A: もしもし、今からそっちへ行くけど、何か買って\"\"行こう\"\"か。\nB: ジュースを買って\"\"きて\"\"。",
+              "vi": "A: Alo, bây giờ anh qua chỗ em, có cần mua gì mang qua không?\nB: Mua nước ép mang tới nhé."
+            },
+            {
+              "jp": "これからも日本語の勉強を続けて\"\"いく\"\"つもりです。",
+              "vi": "Từ bây giờ tôi dự định sẽ tiếp tục học tiếng Nhật."
+            },
+            {
+              "jp": "これから、日本の会社でも外国人社員は増えて\"\"いく\"\"と思います。",
+              "vi": "Tôi nghĩ từ giờ ở các công ty Nhật, nhân viên người nước ngoài sẽ tiếp tục tăng."
+            },
+            {
+              "jp": "申し込みのときに、身分証明書を持って\"\"きて\"\"ください。",
+              "vi": "Khi đăng ký, hãy mang giấy tờ tùy thân đến."
+            },
+            {
+              "jp": "棚から本が落ちて\"\"きて\"\"、驚いた。",
+              "vi": "Sách rơi xuống từ kệ, làm tôi giật mình."
+            },
+            {
+              "jp": "私はこの町で４年間、環境調査を続けて\"\"きました\"\"。",
+              "vi": "Tôi đã liên tục khảo sát môi trường ở thành phố này suốt 4 năm tới giờ."
+            },
+            {
+              "jp": "17歳のときからずっとこの店で働いて\"\"きました\"\"。",
+              "vi": "Tôi đã làm việc ở cửa hàng này suốt từ năm 17 tuổi tới giờ."
+            },
+            {
+              "jp": "雲の間から月が出て\"\"きた\"\"。",
+              "vi": "Từ giữa đám mây, mặt trăng đã ló ra."
+            },
+            {
+              "jp": "雨が降って\"\"きた\"\"。",
+              "vi": "Mưa bắt đầu đổ xuống rồi."
+            },
+            {
+              "jp": "最近少し太って\"\"きた\"\"。",
+              "vi": "Dạo này tôi đã béo lên một chút."
+            },
+            {
+              "jp": "ずいぶん寒くなって\"\"きました\"\"ね。",
+              "vi": "Trời trở lạnh khá nhiều rồi nhỉ."
+            },
+            {
+              "jp": "学校まで走って\"\"いこう\"\"。",
+              "vi": "Cùng chạy đến trường nào."
+            },
+            {
+              "jp": "日本ではさらに子供の数が減少して\"\"いく\"\"ことが予測される。",
+              "vi": "Ở Nhật, sự suy giảm số lượng trẻ em hơn nữa được dự đoán sẽ tiếp diễn."
+            },
+            {
+              "jp": "その映画で評判になって以来、彼女の人気は日増しに高まって\"\"いった\"\"。",
+              "vi": "Kể từ khi nổi tiếng nhờ bộ phim đó, độ nổi tiếng của cô ấy ngày càng tăng lên."
+            },
+            {
+              "jp": "毎日交通事故で多くの人が死んで\"\"いく\"\"。",
+              "vi": "Mỗi ngày có nhiều người ra đi vì tai nạn giao thông."
+            }
+          ]
+        },
+        {
+          "id": "vmasu-tsuzukeru",
+          "pattern": "V(ます-bỏ) + 続ける",
+          "meaning": "Tiếp tục (làm gì) / Liên tục (làm gì).",
+          "note": "Nhấn mạnh việc duy trì liên tục một hành động/thói quen.\nThường đi với khoảng thời gian hoặc bối cảnh kéo dài.",
+          "examples": [
+            {
+              "jp": "あの人は昨年に１年以上通い\"\"続けている\"\"そうです。",
+              "vi": "Nghe nói người đó đã đi lại liên tục hơn một năm từ năm ngoái."
+            },
+            {
+              "jp": "犬のハチ公は、主人の帰りを待ち\"\"続けた\"\"。",
+              "vi": "Chú chó Hachiko đã tiếp tục chờ chủ về."
+            },
+            {
+              "jp": "この薬は途中でやめないで、１週間飲み\"\"続けて\"\"ください。",
+              "vi": "Đừng bỏ thuốc giữa chừng, hãy uống liên tục trong một tuần."
+            },
+            {
+              "jp": "雪が降る中を５時間もさまよい\"\"続けた\"\"。",
+              "vi": "Giữa trời tuyết rơi mà đã đi lang thang suốt 5 tiếng."
+            },
+            {
+              "jp": "もう夜が明けるのに、彼らはまだ話し\"\"続けている\"\"。",
+              "vi": "Trời gần sáng rồi mà họ vẫn tiếp tục nói chuyện."
+            },
+            {
+              "jp": "彼はこつこつと作品を作り\"\"続けている\"\"。",
+              "vi": "Anh ấy vẫn bền bỉ tiếp tục làm tác phẩm đó."
+            },
+            {
+              "jp": "自分の専門のこととなったら、彼は何時間でも話し\"\"続ける\"\"。",
+              "vi": "Khi nói về chuyên môn của mình, anh ấy có thể nói liên tục hàng giờ."
+            },
+            {
+              "jp": "これ以上歩き\"\"続ける\"\"のは体力的にもう無理です。",
+              "vi": "Đi bộ liên tục thế này thì về thể lực là quá sức rồi."
+            }
+          ]
+        },
+        {
+          "id": "nara-conditional",
+          "pattern": "V_る / N / 欲しい / ～たい + なら、～",
+          "meaning": "Nếu ~ / Trường hợp ~",
+          "note": "～なら giới hạn phạm vi tình huống “nếu/trường hợp ~”.\nSau đó đưa ra lời khuyên, đề nghị hoặc nhận định phù hợp.",
+          "examples": [
+            {
+              "jp": "台湾へ旅行に行く\"\"なら\"\"、11月が一番いいと思いますよ。",
+              "vi": "Nếu mà đi du lịch Đài Loan thì tôi nghĩ tháng 11 là tốt nhất."
+            },
+            {
+              "jp": "A: 論文を書くので、色々調べなければならないんです。\nB: 論文を書く\"\"なら\"\"、国会図書館にたくさんありますよ。",
+              "vi": "A: Vì viết luận văn nên phải tra cứu nhiều thứ lắm.\nB: Nếu là tài liệu luận văn thì ở thư viện Quốc hội có nhiều lắm."
+            },
+            {
+              "jp": "A: 今度アメリカへ行くんです。\nB: それ\"\"なら\"\"、大きいかばんを貸しましょうか。",
+              "vi": "A: Lần tới tôi sẽ đi Mỹ.\nB: Nếu vậy thì tôi cho mượn cái ba lô to nhé?"
+            },
+            {
+              "jp": "N3に合格したい\"\"なら\"\"、この本をよく勉強したほうがいいよ。",
+              "vi": "Trường hợp muốn đỗ N3 thì học kỹ cuốn này sẽ tốt hơn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Bài 2",
+      "grammar": [
+        {
+          "id": "tte-for-toiu",
+          "pattern": "～って (thay cho ～という)",
+          "meaning": "Dùng để nêu tên người/vật/sự việc một cách khẩu ngữ, tự nhiên.",
+          "note": "～って là dạng khẩu ngữ thay cho ～という.\nTrước って thường là tên người/vật/địa điểm hoặc cụm danh từ cần giới thiệu.",
+          "examples": [
+            {
+              "jp": "さっき、上田さん\"\"って人\"\"が訪ねてきましたよ。お知り合いですか。",
+              "vi": "Vừa rồi có người tên Ueda đến thăm. Bạn có quen không?"
+            },
+            {
+              "jp": "花粉症\"\"って病気\"\"、アレルギーが原因なんだよ。",
+              "vi": "Bệnh gọi là dị ứng phấn hoa thì nguyên nhân là do dị ứng đó."
+            },
+            {
+              "jp": "A: 長野県の戸隠\"\"ってところ\"\"、知ってる？\nB: うん。最近人気だ\"\"って\"\"聞いたよ。",
+              "vi": "A: Bạn biết chỗ Togakushi ở tỉnh Nagano không?\nB: Ừ, mình nghe nói gần đây chỗ đó nổi tiếng."
+            },
+            {
+              "jp": "木村先生\"\"って\"\"だれだっけ。",
+              "vi": "Thầy Kimura là ai ấy nhỉ?"
+            },
+            {
+              "jp": "これ、キアリー\"\"って作家\"\"の書いた本です。",
+              "vi": "Đây là cuốn sách do nhà văn tên Kiari viết."
+            },
+            {
+              "jp": "佐川さん\"\"って人\"\"に会いました。友達だそうですね。",
+              "vi": "Tôi đã gặp người tên Sagawa. Nghe nói là bạn của bạn nhỉ."
+            },
+            {
+              "jp": "駅前のベル\"\"って喫茶店\"\"、入ったことある？",
+              "vi": "Quán cà phê tên Bell trước nhà ga, bạn đã vào bao giờ chưa?"
+            },
+            {
+              "jp": "ゲートボール\"\"って\"\"、どんなスポーツですか。",
+              "vi": "Môn gọi là gateball là môn thể thao như thế nào vậy?"
+            }
+          ]
+        },
+        {
+          "id": "causative-morau-kureru",
+          "pattern": "Thể sai khiến_て（～させて）+ もらう / くれる",
+          "meaning": "Nhận được phép làm gì / Cho phép mình được làm gì.",
+          "note": "Dùng để diễn tả việc được cho phép thực hiện một hành động.\nThường mang sắc thái “xin phép/được cho phép làm”.",
+          "examples": [
+            {
+              "jp": "私の家は貧しかったが、親は私を大学まで行か\"\"せてくれた\"\"。",
+              "vi": "Nhà tôi nghèo nhưng bố mẹ vẫn cho phép tôi học đến đại học."
+            },
+            {
+              "jp": "母は入院したので、今日は仕事を休ま\"\"せてもらった\"\"。",
+              "vi": "Vì mẹ nhập viện nên hôm nay tôi đã xin phép nghỉ làm."
+            },
+            {
+              "jp": "この会社は自分の意見を自由に言わ\"\"せてくれる\"\"。",
+              "vi": "Công ty này cho phép nhân viên tự do nói ý kiến của mình."
+            },
+            {
+              "jp": "高校生のとき、アルバイトをしたいと父に言ったが、\"\"させてもらえなかった\"\"。",
+              "vi": "Thời cấp ba, tôi nói muốn đi làm thêm nhưng đã không được cho phép."
+            },
+            {
+              "jp": "A：もうすぐ、帰ると思います。\nB：じゃ、ここで待た\"\"せてもらいましょう\"\"か。",
+              "vi": "A: Chắc sắp về rồi.\nB: Vậy thì cho mình đợi ở đây nhé."
+            },
+            {
+              "jp": "金婚式のお祝いに、子ども達にハワイに行か\"\"せてもらった\"\"。",
+              "vi": "Nhân dịp kỷ niệm 50 năm ngày cưới, tôi đã được các con cho phép đi Hawaii."
+            },
+            {
+              "jp": "癌だということなら、退院\"\"させてくれる\"\"はずがない。",
+              "vi": "Nếu đúng là bị ung thư thì chắc họ sẽ không cho mình xuất viện."
+            },
+            {
+              "jp": "後の資金繰りはどうしたものか、少し考えさ\"\"せてくれ\"\"。",
+              "vi": "Chuyện xoay sở vốn về sau thì để tôi suy nghĩ một chút đã."
+            },
+            {
+              "jp": "A：もう、11時ですよ。\nB：いいじゃないか。日曜日ぐらい、ゆっくり寝か\"\"せてくれよ\"\"。",
+              "vi": "A: Muộn rồi, 11 giờ rồi đó.\nB: Có sao đâu. Chủ nhật thì cho tôi ngủ nướng một chút đi mà."
+            }
+          ]
+        },
+        {
+          "id": "tagaru-third-person-desire",
+          "pattern": "V(ます)たい + がる / たがる",
+          "meaning": "(Ngôi thứ 3) muốn ~",
+          "note": "Dùng để nói mong muốn/cảm xúc của người thứ 3 (không dùng trực tiếp cho bản thân).\nDạng bổ nghĩa danh từ: ～たがる + N.\nDanh từ ～がり thường gặp: 寒がり、暑がり、こわがり.",
+          "examples": [
+            {
+              "jp": "彼らはどうして離婚したのか\"\"言いたがらなかった\"\"。",
+              "vi": "Họ không muốn nói về lý do vì sao ly hôn."
+            },
+            {
+              "jp": "子どもが塾に\"\"行きたがらない\"\"。",
+              "vi": "Con tôi không muốn đi lớp học thêm."
+            },
+            {
+              "jp": "彼女は事実を\"\"認めたがらない\"\"。",
+              "vi": "Cô ấy không muốn chấp nhận sự thật."
+            },
+            {
+              "jp": "父は海外旅行に\"\"行きたがっている\"\"が、母は行きたくないようだ。",
+              "vi": "Ba tôi thì muốn đi du lịch nước ngoài, còn mẹ thì có vẻ không muốn đi."
+            },
+            {
+              "jp": "夏になると、みんな冷たくてさっぱりしたものばかり\"\"食べたがる\"\"。",
+              "vi": "Mùa hè đến là mọi người hay muốn ăn đồ lạnh và thanh nhẹ."
+            },
+            {
+              "jp": "避難している住民は一刻も早く家に\"\"帰りたがっている\"\"。",
+              "vi": "Những người đang sơ tán muốn về nhà càng sớm càng tốt."
+            },
+            {
+              "jp": "寮に\"\"住みたがっている学生\"\"が多い。",
+              "vi": "Có nhiều sinh viên muốn ở ký túc xá."
+            },
+            {
+              "jp": "これは子どもが\"\"見たがっていた\"\"アニメ映画です。",
+              "vi": "Đây là bộ phim anime mà con tôi đã muốn xem từ lâu."
+            },
+            {
+              "jp": "最近、\"\"結婚したがらない女性\"\"が多いです。",
+              "vi": "Gần đây có nhiều phụ nữ không muốn kết hôn."
+            },
+            {
+              "jp": "子どもを医者に\"\"したがる親\"\"が多い。",
+              "vi": "Có nhiều phụ huynh muốn cho con mình trở thành bác sĩ."
+            },
+            {
+              "jp": "彼はハワイへ行きたいと言っている。",
+              "vi": "Anh ấy nói là muốn đi Hawaii."
+            },
+            {
+              "jp": "彼はハワイへ行きたそうだ。",
+              "vi": "Trông có vẻ/Nghe nói anh ấy muốn đi Hawaii."
+            },
+            {
+              "jp": "彼はハワイへ行きたいらしい。",
+              "vi": "Nghe nói anh ấy muốn đi Hawaii."
+            },
+            {
+              "jp": "私は\"\"寒がり\"\"だから、冬が苦手だ。",
+              "vi": "Vì tôi thuộc kiểu người dễ thấy lạnh nên tôi không giỏi chịu mùa đông."
+            }
+          ]
+        },
+        {
+          "id": "vta-totan",
+          "pattern": "V_た + とたん（に）",
+          "meaning": "Ngay sau khi ~ thì ...",
+          "note": "Nhấn mạnh sự việc xảy ra ngay sau khoảnh khắc vừa hoàn thành hành động trước đó.\nMệnh đề sau thường là sự việc bất ngờ, không dùng ý định/chủ ý.",
+          "examples": [
+            {
+              "jp": "立ち上がった\"\"とたん\"\"、目の前が暗くなった。",
+              "vi": "Ngay khi đứng dậy thì trước mắt tối sầm lại."
+            },
+            {
+              "jp": "彼女さっきまで元気がなかったのに、ご飯を食べた\"\"とたん\"\"、元気になった。",
+              "vi": "Nãy còn không khỏe mà vừa ăn xong thì cô ấy lại khỏe ngay."
+            },
+            {
+              "jp": "彼は相手が社長だと知った\"\"とたん\"\"、急にていねいに話し始めた。",
+              "vi": "Ngay sau khi biết đối phương là giám đốc, anh ta lập tức nói chuyện lễ phép hẳn."
+            },
+            {
+              "jp": "ドアを開けた\"\"とたん\"\"、猫が飛び込んできた。",
+              "vi": "Ngay khi mở cửa thì con mèo lao vào."
+            },
+            {
+              "jp": "有名になった\"\"とたんに\"\"、彼は横柄な態度で話すことになった。",
+              "vi": "Ngay sau khi nổi tiếng, anh ta bắt đầu nói năng với thái độ kênh kiệu."
+            },
+            {
+              "jp": "試験終了のベルが鳴った\"\"とたんに\"\"教室が騒がしくなった。",
+              "vi": "Ngay sau khi chuông hết giờ thi vang lên, lớp học trở nên ồn ào."
+            },
+            {
+              "jp": "注射をした\"\"とたん\"\"、患者のけいれんはおさまった。",
+              "vi": "Ngay sau khi tiêm, cơn co giật của bệnh nhân đã dịu lại."
+            }
+          ]
+        },
+        {
+          "id": "vmasu-dasu",
+          "pattern": "V(ます-bỏ) + 出す",
+          "meaning": "Tự dưng ~ / Bỗng dưng ~",
+          "note": "Dùng khi một hiện tượng/hành động bắt đầu xảy ra đột ngột.\nSắc thái: bỗng dưng/tự nhiên bắt đầu ~.",
+          "examples": [
+            {
+              "jp": "さっきまで笑っていた赤ちゃんが急に\"\"泣き出した\"\"。",
+              "vi": "Đứa bé vừa còn cười mà đột nhiên khóc."
+            },
+            {
+              "jp": "突然大雨が\"\"降り出し\"\"、人々は慌てて建物の中に入った。",
+              "vi": "Bỗng nhiên trời mưa to, mọi người vội chạy vào trong tòa nhà."
+            },
+            {
+              "jp": "彼は短気で急に怒り\"\"出す\"\"から、付き合いにくい。",
+              "vi": "Anh ta nóng tính, hay tự dưng nổi nóng nên khó giao tiếp."
+            },
+            {
+              "jp": "彼女はおしゃべりな人で、いったん話し\"\"出す\"\"と止まらない。",
+              "vi": "Cô ấy rất hay nói, một khi bắt đầu nói thì không dừng lại."
+            },
+            {
+              "jp": "これを知ったら、彼はきっと烈火のごとく怒り\"\"出す\"\"に相違ない。",
+              "vi": "Nếu biết chuyện này, chắc chắn anh ta sẽ nổi giận dữ dội."
+            },
+            {
+              "jp": "スポーツをやめるとすぐ太り\"\"出した\"\"。",
+              "vi": "Vừa bỏ thể thao thì lập tức bắt đầu béo lên."
+            },
+            {
+              "jp": "スタートの合図と同時に、選手達はいっせいに走り\"\"出した\"\"。",
+              "vi": "Ngay khi có hiệu lệnh xuất phát, các vận động viên đồng loạt lao chạy."
+            },
+            {
+              "jp": "急に雨が\"\"降り出した\"\"ので、買うものも買わないで帰ってきてしまった。",
+              "vi": "Vì trời đột nhiên đổ mưa nên tôi chưa kịp mua đồ đã phải về."
+            },
+            {
+              "jp": "列車はゆっくりと動き\"\"出した\"\"。",
+              "vi": "Tàu hỏa từ từ bắt đầu chuyển bánh."
+            }
+          ]
+        },
+        {
+          "id": "volitional-to-suru",
+          "pattern": "V_よう（thể ý định）+ とする / としない",
+          "meaning": "Định làm ~ / Cố làm ~ / Sắp làm ~ (hoặc: không định, không cố làm).",
+          "note": "～ようとする: diễn tả ý định/cố gắng hoặc hành động sắp bắt đầu.\n～ようとした: đã định làm nhưng kết quả có thể không như ý.\n～ようとしない: không có ý định, không chịu làm.",
+          "examples": [
+            {
+              "jp": "小さい子どもが道を\"\"わたろうとしている\"\"よ。一人でどこへ行くのかな。",
+              "vi": "Em bé đang định qua đường kìa, một mình không biết đi đâu nữa..."
+            },
+            {
+              "jp": "生まれたばかりの馬の赤ちゃんが、一所懸命\"\"立とうとしている\"\"。",
+              "vi": "Chú ngựa con mới sinh đang cố gắng đứng dậy."
+            },
+            {
+              "jp": "昔の友達の名前を\"\"思い出そうとした\"\"が、どうしても思い出せない。",
+              "vi": "Tôi đã cố nhớ tên người bạn năm xưa nhưng vẫn không sao nhớ ra được."
+            },
+            {
+              "jp": "リンさんは試験が近いのに、ぜんぜん勉強\"\"しようとしない\"\"。",
+              "vi": "Rin sắp thi rồi mà hoàn toàn không chịu học hành gì cả."
+            },
+            {
+              "jp": "西の空に太陽が\"\"沈もうとしている\"\"。",
+              "vi": "Mặt trời đang sắp lặn ở phía tây."
+            },
+            {
+              "jp": "あ、ボチがあなたの靴を\"\"かもうとしている\"\"よ。",
+              "vi": "Á, con Bochi đang định cắn giày cậu kìa."
+            },
+            {
+              "jp": "\"\"出掛けようとした\"\"ところに電話がかかってきた。",
+              "vi": "Vừa định ra ngoài thì có điện thoại gọi tới."
+            },
+            {
+              "jp": "アンさんはどうしても私の手紙に返事を\"\"書こうとしません\"\"。",
+              "vi": "Dù thế nào thì cô An cũng không có ý định viết thư trả lời tôi."
+            },
+            {
+              "jp": "あの子はしかられても、決して\"\"謝ろうとしない\"\"。",
+              "vi": "Đứa bé đó dù bị mắng cũng nhất quyết không chịu xin lỗi."
+            },
+            {
+              "jp": "仕事がたくさん残っているけど、だれも何も\"\"しようとしない\"\"ね。",
+              "vi": "Công việc còn rất nhiều mà chẳng ai chịu làm gì cả."
+            },
+            {
+              "jp": "彼は私を\"\"避けようとしている\"\"。",
+              "vi": "Anh ấy đang cố tránh mặt tôi."
+            }
+          ]
+        },
+        {
+          "id": "vru-vnai-kotogaaru",
+          "pattern": "V_る / V_ない + こともある / ことがある",
+          "meaning": "Thỉnh thoảng, đôi khi ~",
+          "note": "Diễn tả sự việc không xảy ra thường xuyên mà chỉ xảy ra trong một số trường hợp.\nこともある thường nhấn mạnh sắc thái “cũng có khi ~”.",
+          "examples": [
+            {
+              "jp": "この地方では４月でも雪が降る\"\"ことがある\"\"。",
+              "vi": "Ở vùng này, dù tháng 4 đôi khi vẫn có tuyết rơi."
+            },
+            {
+              "jp": "私の大学は横浜にもキャンパスがあって、時々そちらに行かなければならない\"\"ことがある\"\"んです。",
+              "vi": "Trường tôi có cơ sở ở Yokohama, nên đôi khi tôi phải đến đó."
+            },
+            {
+              "jp": "ふだんはよく寝られるんですが、ストレスがたまって眠れない\"\"こともあります\"\"。",
+              "vi": "Bình thường tôi ngủ tốt, nhưng đôi khi stress dồn lại thì không ngủ được."
+            },
+            {
+              "jp": "あの店の営業時間は５時までですが、昼過ぎに全部売れてしまう\"\"こともあります\"\"。",
+              "vi": "Cửa hàng kia mở tới 5 giờ, nhưng đôi khi quá trưa là bán hết hàng rồi."
+            }
+          ]
+        },
+        {
+          "id": "v-sasete-oku",
+          "pattern": "V_させて + おく",
+          "meaning": "Cứ tiếp tục (để ai đó làm gì đó)",
+          "note": "Dùng khi để cho ai đó tiếp tục hành động như vậy.\nThường dùng với người dưới hoặc động vật.",
+          "examples": [
+            {
+              "jp": "夏に車の中で子どもを待たせて\"\"おく\"\"のは危険です。",
+              "vi": "Mùa hè mà để trẻ chờ trong ô tô thì rất nguy hiểm."
+            },
+            {
+              "jp": "家事をしている間、子どもをおもちゃで遊ばせて\"\"おく\"\"。",
+              "vi": "Trong lúc làm việc nhà thì cứ để trẻ chơi với đồ chơi."
+            },
+            {
+              "jp": "まあ、ここは相手に花を持たせて\"\"おく\"\"ことだね。またチャンスもあるよ。",
+              "vi": "Thôi, chỗ này cứ để bên kia giữ thể diện trước đi. Vẫn còn cơ hội mà."
+            },
+            {
+              "jp": "甘えて泣いているだけだから、そのまま泣かせて\"\"おきなさい\"\"。",
+              "vi": "Nó chỉ đang làm nũng khóc thôi, cứ để nó khóc vậy đi."
+            },
+            {
+              "jp": "夕方になると急に冷え込みますから、あんまり遅くまで遊ばせて\"\"おいて\"\"はいけません。",
+              "vi": "Chiều tối trời lạnh nhanh, nên không được để chơi quá muộn."
+            },
+            {
+              "jp": "人を２時間も待たせて\"\"おいて\"\"「すみません」の一言もないとはまったく非常識な奴だ。",
+              "vi": "Để người khác chờ 2 tiếng mà không nói nổi một câu xin lỗi thì đúng là vô ý thức."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bài 3",
+      "grammar": [
+        {
+          "id": "rarate-shimau-passive",
+          "pattern": "V_られて + しまう",
+          "meaning": "(Mình) bị ... (thể bị động, sắc thái tiếc/bực)",
+          "note": "Dùng khi người khác làm gì đó với mình khiến mình khó chịu, bất lợi hoặc đáng tiếc.\nThường là bị động + しまう để nhấn mạnh cảm xúc đó.",
+          "examples": [
+            {
+              "jp": "片思いの彼を映画に誘ったが、断られて\"\"しまった\"\"。",
+              "vi": "Tôi rủ người mình thích đi xem phim mà lại bị từ chối."
+            },
+            {
+              "jp": "後で食べようと思っていたケーキを妹に食べられて\"\"しまった\"\"。",
+              "vi": "Cái bánh định để ăn sau đã bị em gái ăn mất."
+            },
+            {
+              "jp": "ハイキングをしていたら、はちに刺されて\"\"しまった\"\"。",
+              "vi": "Đang đi leo núi thì tôi bị ong chích."
+            },
+            {
+              "jp": "言葉が足りないと、誤解されて\"\"しまう\"\"ことです。",
+              "vi": "Nếu thiếu từ ngữ thì sẽ bị hiểu lầm."
+            },
+            {
+              "jp": "子供に新しい自転車を買ってやったら、翌日盗まれて\"\"しまった\"\"。",
+              "vi": "Mới mua xe đạp mới cho con mà hôm sau đã bị trộm mất."
+            },
+            {
+              "jp": "高いお金を出して買ったところが、すぐ壊れて\"\"しまった\"\"。",
+              "vi": "Bỏ nhiều tiền ra mua mà dùng không bao lâu đã hỏng mất."
+            },
+            {
+              "jp": "傘を持たないで出かけて雨に降られて\"\"しまった\"\"。",
+              "vi": "Ra ngoài không mang ô nên bị dính mưa."
+            },
+            {
+              "jp": "彼はどろぼうに飛びかかったが、反対にやられて\"\"しまった\"\"。",
+              "vi": "Anh ta lao vào tên trộm nhưng ngược lại lại bị nó hạ."
+            }
+          ]
+        },
+        {
+          "id": "n-niyotte-niyoru",
+          "pattern": "N + によって / による",
+          "meaning": "Tùy vào N / Theo N thì / Được bởi / Dựa vào N",
+          "note": "Nhiều cách dùng:\n1) 原因: chỉ nguyên nhân.\n2) 受身文の動作主: chỉ tác nhân trong câu bị động.\n3) 手段・方法: chỉ phương tiện/cách thức.\n4) よりどころ: căn cứ để quyết định/đánh giá.\n5) 場合: khác nhau tùy đối tượng hoặc khu vực.",
+          "examples": [
+            {
+              "jp": "\"\"ことによると\"\"、今回の旅行はキャンセルしなければならないかもしれない。",
+              "vi": "Có khi chuyến du lịch lần này phải hủy cũng nên."
+            },
+            {
+              "jp": "\"\"場合によると\"\"、彼らも応援に来てくれるかもしれない。",
+              "vi": "Tùy trường hợp, họ cũng có thể đến cổ vũ."
+            },
+            {
+              "jp": "聞いた\"\"ところによると\"\"、最近は飛行機で行く方が電車より安い場合もあるそうですね。",
+              "vi": "Theo như tôi nghe, dạo này có khi đi máy bay còn rẻ hơn đi tàu."
+            },
+            {
+              "jp": "彼の主張する\"\"ところによると\"\"、彼は事件とは関係ないということだ。",
+              "vi": "Theo lời anh ta nói thì anh ta không liên quan đến vụ việc."
+            },
+            {
+              "jp": "祖父の語った\"\"ところによると\"\"、このあたりには昔古い農家があったということだ。",
+              "vi": "Theo lời ông tôi kể, khu này ngày xưa từng có nhà nông cổ."
+            },
+            {
+              "jp": "私の不注意な発言\"\"によって\"\"、彼を傷つけてしまった。",
+              "vi": "Do phát ngôn bất cẩn của tôi mà anh ấy bị tổn thương."
+            },
+            {
+              "jp": "踏切事故\"\"によって\"\"、電車は３時間も遅れました。",
+              "vi": "Do tai nạn ở đường ngang, tàu bị trễ tới 3 tiếng."
+            },
+            {
+              "jp": "ほとんどの会社は不況\"\"によって\"\"経営が悪化した。",
+              "vi": "Hầu hết công ty đều kinh doanh xấu đi vì suy thoái."
+            },
+            {
+              "jp": "この建物は有名な建築家\"\"によって\"\"設計された。",
+              "vi": "Tòa nhà này được thiết kế bởi một kiến trúc sư nổi tiếng."
+            },
+            {
+              "jp": "その村の家の多くは洪水\"\"によって\"\"押し流された。",
+              "vi": "Nhiều ngôi nhà trong làng đó đã bị lũ cuốn trôi."
+            },
+            {
+              "jp": "地震後、その教会は地域の住民\"\"によって\"\"再建された。",
+              "vi": "Sau động đất, nhà thờ đó được cư dân địa phương tái thiết."
+            },
+            {
+              "jp": "この資料\"\"によって\"\"多くの事実が明らかになった。",
+              "vi": "Nhờ tài liệu này mà nhiều sự thật đã trở nên rõ ràng."
+            },
+            {
+              "jp": "彼はその作品\"\"によって\"\"国内で絶大な人気を得た。",
+              "vi": "Anh ấy có được sự hâm mộ rất lớn trong nước nhờ tác phẩm đó."
+            },
+            {
+              "jp": "給料をカットすること\"\"によって\"\"、不況を乗り切ろうとしている。",
+              "vi": "Họ đang cố vượt suy thoái bằng cách cắt giảm lương."
+            },
+            {
+              "jp": "この資料\"\"によって\"\"いままで不明だった多くの点が明らかになった。",
+              "vi": "Dựa vào tài liệu này, nhiều điểm từng chưa rõ nay đã sáng tỏ."
+            },
+            {
+              "jp": "行くか行かないかは、あしたの天気\"\"によって\"\"決めよう。",
+              "vi": "Đi hay không thì hãy quyết định tùy theo thời tiết ngày mai."
+            },
+            {
+              "jp": "先生の御指導\"\"によって\"\"この作品を完成させることができました。",
+              "vi": "Nhờ sự hướng dẫn của thầy mà tôi đã hoàn thành được tác phẩm này."
+            },
+            {
+              "jp": "\"\"例によって\"\"彼らは夜遅くまで議論を続けた。",
+              "vi": "Như mọi khi, họ tiếp tục thảo luận đến khuya."
+            },
+            {
+              "jp": "人\"\"によって\"\"考え方が違う。",
+              "vi": "Cách nghĩ khác nhau tùy người."
+            },
+            {
+              "jp": "明日は所\"\"によって\"\"雨が降るそうだ。",
+              "vi": "Nghe nói ngày mai có nơi sẽ mưa."
             }
           ]
         }

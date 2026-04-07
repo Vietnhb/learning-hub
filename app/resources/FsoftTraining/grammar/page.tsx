@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, type ReactNode } from "react";
 import { ArrowLeft, BookOpen, ListChecks, Sparkles } from "lucide-react";
@@ -92,6 +92,12 @@ export default function FsoftTrainingGrammarPage() {
     0,
   );
 
+  const jumpToGrammar = (grammarId: string) => {
+    const el = document.getElementById(`grammar-${grammarId}`);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-orange-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 px-4 py-8">
       <div className="mx-auto max-w-5xl space-y-5">
@@ -150,9 +156,31 @@ export default function FsoftTrainingGrammarPage() {
               </p>
             </div>
 
+            <Card className="border-orange-200 bg-white/95 shadow-sm dark:bg-gray-800/95">
+              <CardContent className="p-4">
+                <p className="mb-3 text-sm font-semibold text-orange-700 dark:text-orange-300">
+                  Xem nhanh trong bài
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {currentLesson.grammar.map((point, idx) => (
+                    <button
+                      key={`quick-${point.id}`}
+                      type="button"
+                      onClick={() => jumpToGrammar(point.id)}
+                      title={point.pattern}
+                      className="rounded-full border border-orange-300 bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-700 hover:bg-orange-100 dark:border-orange-700 dark:bg-gray-900 dark:text-orange-300 dark:hover:bg-gray-800"
+                    >
+                      {idx + 1}. {point.pattern}
+                    </button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {currentLesson.grammar.map((point) => (
               <Card
                 key={point.id}
+                id={`grammar-${point.id}`}
                 className="overflow-hidden border-orange-200 bg-white/95 shadow-sm dark:bg-gray-800/95"
               >
                 <CardHeader className="border-b border-orange-100 bg-orange-50/60 py-4 dark:border-gray-700 dark:bg-gray-900">
@@ -167,7 +195,7 @@ export default function FsoftTrainingGrammarPage() {
                       <p className="mb-1 text-xs font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
                         Ý nghĩa
                       </p>
-                      <p className="text-sm md:text-base font-semibold text-emerald-900 dark:text-emerald-100">
+                      <p className="whitespace-pre-line text-sm md:text-base font-semibold text-emerald-900 dark:text-emerald-100">
                         {point.meaning}
                       </p>
                     </div>
@@ -175,7 +203,7 @@ export default function FsoftTrainingGrammarPage() {
                       <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">
                         Ghi chú
                       </p>
-                      <p className="text-sm md:text-base font-semibold text-amber-900 dark:text-amber-100">
+                      <p className="whitespace-pre-line text-sm md:text-base font-semibold text-amber-900 dark:text-amber-100">
                         {point.note}
                       </p>
                     </div>
