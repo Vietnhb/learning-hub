@@ -2925,6 +2925,144 @@
           ]
         }
       ]
+    },
+    {
+      "id": 15,
+      "title": "Kiểm tra - Đau - Răng",
+      "kanji": [
+        {
+          "character": "検",
+          "meaning": "Kiểm",
+          "onyomi": "ケン",
+          "kunyomi": "しらべる",
+          "examples": [
+            {
+              "word": "検査",
+              "reading": "けんさ",
+              "meaning": "Kiểm tra / Khám"
+            },
+            {
+              "word": "点検",
+              "reading": "てんけん",
+              "meaning": "Kiểm tra (máy móc)"
+            },
+            {
+              "word": "検討",
+              "reading": "けんとう",
+              "meaning": "Xem xét, cân nhắc"
+            },
+            { "word": "探検", "reading": "たんけん", "meaning": "Thám hiểm" }
+          ]
+        },
+        {
+          "character": "査",
+          "meaning": "Tra",
+          "onyomi": "サ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "検査",
+              "reading": "けんさ",
+              "meaning": "Kiểm tra / Khám"
+            },
+            { "word": "調査", "reading": "ちょうさ", "meaning": "Điều tra" }
+          ]
+        },
+        {
+          "character": "歯",
+          "meaning": "Xỉ (răng)",
+          "onyomi": "シ",
+          "kunyomi": "は",
+          "examples": [
+            { "word": "歯", "reading": "は", "meaning": "Răng" },
+            { "word": "虫歯", "reading": "むしば", "meaning": "Sâu răng" },
+            { "word": "歯医者", "reading": "はいしゃ", "meaning": "Nha sĩ" }
+          ]
+        },
+        {
+          "character": "痛",
+          "meaning": "Thống (đau)",
+          "onyomi": "ツウ",
+          "kunyomi": "いたい・いたむ・いためる",
+          "examples": [
+            { "word": "痛い", "reading": "いたい", "meaning": "Đau" },
+            { "word": "頭痛", "reading": "ずつう", "meaning": "Đau đầu" },
+            { "word": "痛む", "reading": "いたむ", "meaning": "Bị đau" },
+            { "word": "痛める", "reading": "いためる", "meaning": "Làm đau" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Máu - Chất lỏng - Gói - Đai",
+      "kanji": [
+        {
+          "character": "血",
+          "meaning": "Huyết (máu)",
+          "onyomi": "ケツ",
+          "kunyomi": "ち",
+          "examples": [
+            { "word": "血", "reading": "ち", "meaning": "Máu" },
+            {
+              "word": "血液型",
+              "reading": "けつえきがた",
+              "meaning": "Nhóm máu"
+            },
+            { "word": "鼻血", "reading": "はなぢ", "meaning": "Chảy máu mũi" },
+            { "word": "血管", "reading": "けっかん", "meaning": "Mạch máu" },
+            {
+              "word": "血統書",
+              "reading": "けっとうしょ",
+              "meaning": "Gia phả"
+            }
+          ]
+        },
+        {
+          "character": "液",
+          "meaning": "Dịch (chất lỏng)",
+          "onyomi": "エキ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "液体", "reading": "えきたい", "meaning": "Chất lỏng" },
+            {
+              "word": "血液型",
+              "reading": "けつえきがた",
+              "meaning": "Nhóm máu"
+            },
+            {
+              "word": "消毒液",
+              "reading": "しょうどくえき",
+              "meaning": "Dung dịch khử trùng"
+            }
+          ]
+        },
+        {
+          "character": "包",
+          "meaning": "Bao (gói)",
+          "onyomi": "ホウ",
+          "kunyomi": "つつむ",
+          "examples": [
+            { "word": "包む", "reading": "つつむ", "meaning": "Gói, bọc" },
+            { "word": "包装", "reading": "ほうそう", "meaning": "Đóng gói" }
+          ]
+        },
+        {
+          "character": "帯",
+          "meaning": "Đới (đai)",
+          "onyomi": "タイ",
+          "kunyomi": "おびる・おび",
+          "examples": [
+            { "word": "帯", "reading": "おび", "meaning": "Cái đai" },
+            {
+              "word": "安全帯",
+              "reading": "あんぜんたい",
+              "meaning": "Dây an toàn"
+            },
+            { "word": "帯びる", "reading": "おびる", "meaning": "Mang, đeo" }
+          ]
+        }
+      ]
     }
   ]
 }
