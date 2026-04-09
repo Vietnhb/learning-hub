@@ -2,7 +2,10 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";
+import { usePathname } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtimeChannels";
+import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
 
 interface AuthContextType {
   user: User | null;
@@ -27,6 +30,7 @@ export const useAuth = () => {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     const enforceBanStatus = async (nextUser: User | null) => {
@@ -57,17 +61,142 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
 
     supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.access_token) {
+        void supabase.realtime.setAuth(session.access_token);
+      }
       enforceBanStatus(session?.user ?? null);
     });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.access_token) {
+        void supabase.realtime.setAuth(session.access_token);
+      }
       enforceBanStatus(session?.user ?? null);
     });
 
     return () => subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (!user?.id) {
+      return;
+    }
+    if (pathname?.startsWith("/admin")) {
+      return;
+    }
+
+    let active = true;
+    let isSubscribed = false;
+    let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
+    let channel: ReturnType<typeof supabase.channel> | null = null;
+
+    const cleanupChannel = () => {
+      isSubscribed = false;
+      if (!channel) {
+        return;
+      }
+
+      channel.untrack().catch(() => {});
+      void supabase.removeChannel(channel);
+      channel = null;
+    };
+
+    const trackPresence = async () => {
+      if (!isSubscribed || !channel) {
+        return;
+      }
+
+      try {
+        await channel.track({
+          user_id: user.id,
+          online_at: new Date().toISOString(),
+        });
+      } catch (error) {
+        console.error("Track user presence error:", error);
+      }
+    };
+
+    const scheduleReconnect = () => {
+      if (!active || reconnectTimer) {
+        return;
+      }
+
+      reconnectTimer = setTimeout(() => {
+        reconnectTimer = null;
+        void connect();
+      }, 2000);
+    };
+
+    const connect = async () => {
+      if (!active) {
+        return;
+      }
+
+      await setRealtimeAuthFromSession();
+      cleanupChannel();
+
+      const nextChannel = supabase.channel(USERS_ONLINE_PRESENCE_CHANNEL, {
+        config: {
+          presence: {
+            key: user.id,
+          },
+        },
+      });
+      channel = nextChannel;
+
+      nextChannel.subscribe((status) => {
+        if (!active) {
+          return;
+        }
+
+        if (status === "SUBSCRIBED") {
+          isSubscribed = true;
+          void trackPresence();
+          return;
+        }
+
+        if (
+          status === "CHANNEL_ERROR" ||
+          status === "TIMED_OUT" ||
+          status === "CLOSED"
+        ) {
+          cleanupChannel();
+          scheduleReconnect();
+        }
+      });
+    };
+
+    const handleActivity = () => {
+      if (typeof document !== "undefined" && document.visibilityState !== "visible") {
+        return;
+      }
+      void trackPresence();
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("focus", handleActivity);
+      document.addEventListener("visibilitychange", handleActivity);
+    }
+
+    void connect();
+
+    return () => {
+      active = false;
+
+      if (reconnectTimer) {
+        clearTimeout(reconnectTimer);
+      }
+
+      if (typeof window !== "undefined") {
+        window.removeEventListener("focus", handleActivity);
+        document.removeEventListener("visibilitychange", handleActivity);
+      }
+
+      cleanupChannel();
+    };
+  }, [user?.id, pathname]);
 
   const signOut = async () => {
     await supabase.auth.signOut();

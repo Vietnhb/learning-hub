@@ -40,10 +40,15 @@ import {
 
 interface UserTableProps {
   users: UserWithRole[];
+  onlineUserIds?: Set<string>;
   onUpdate: () => void;
 }
 
-export default function UserTable({ users, onUpdate }: UserTableProps) {
+export default function UserTable({
+  users,
+  onlineUserIds,
+  onUpdate,
+}: UserTableProps) {
   const [selectedUser, setSelectedUser] = useState<UserWithRole | null>(null);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
@@ -127,6 +132,7 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
               <TableHead>Email</TableHead>
               <TableHead>Full Name</TableHead>
               <TableHead>Role</TableHead>
+              <TableHead>Online</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Date of Birth</TableHead>
               <TableHead>Created At</TableHead>
@@ -136,98 +142,110 @@ export default function UserTable({ users, onUpdate }: UserTableProps) {
           <TableBody>
             {users.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={7} className="text-center py-8">
+                <TableCell colSpan={8} className="text-center py-8">
                   <p className="text-muted-foreground">No users found</p>
                 </TableCell>
               </TableRow>
             ) : (
-              users.map((user) => (
-                <TableRow key={user.id}>
-                  <TableCell className="font-medium">{user.email}</TableCell>
-                  <TableCell>{user.full_name || "-"}</TableCell>
-                  <TableCell>
-                    <Badge
-                      variant={
-                        user.role_name === "admin" ? "default" : "secondary"
-                      }
-                    >
-                      {user.role_name === "admin" && (
-                        <Shield className="mr-1 h-3 w-3" />
-                      )}
-                      {user.role_name === "user" && (
-                        <User className="mr-1 h-3 w-3" />
-                      )}
-                      {user.role_name}
-                    </Badge>
-                  </TableCell>
-                  <TableCell>
-                    <Badge variant={user.is_banned ? "destructive" : "secondary"}>
-                      {user.is_banned ? "Banned" : "Active"}
-                    </Badge>
-                  </TableCell>
-                  <TableCell>
-                    {user.date_of_birth
-                      ? new Date(user.date_of_birth).toLocaleDateString()
-                      : "-"}
-                  </TableCell>
-                  <TableCell>
-                    {new Date(user.created_at).toLocaleDateString()}
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="icon">
-                          <MoreHorizontal className="h-4 w-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem
-                          onClick={() => handleRoleChange(user.id, 1)}
-                          disabled={user.role_id === 1 || loading}
-                        >
-                          Make Admin
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => handleRoleChange(user.id, 2)}
-                          disabled={user.role_id === 2 || loading}
-                        >
-                          Make User
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem
-                          onClick={() => openEditDialog(user)}
-                          disabled={loading}
-                        >
-                          <Pencil className="mr-2 h-4 w-4" />
-                          Edit Profile
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => handleBanToggle(user)}
-                          className={user.is_banned ? "text-green-600" : "text-amber-600"}
-                          disabled={loading}
-                        >
-                          <Ban className="mr-2 h-4 w-4" />
-                          {user.is_banned ? "Unban User" : "Ban User"}
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem
-                          onClick={() => {
-                            setSelectedUser(user);
-                            setDeleteDialogOpen(true);
-                          }}
-                          className="text-red-600"
-                          disabled={loading}
-                        >
-                          <Trash2 className="mr-2 h-4 w-4" />
-                          Delete User
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </TableCell>
-                </TableRow>
-              ))
+              users.map((user) => {
+                const isOnline = onlineUserIds?.has(user.id) ?? false;
+                return (
+                  <TableRow key={user.id}>
+                    <TableCell className="font-medium">{user.email}</TableCell>
+                    <TableCell>{user.full_name || "-"}</TableCell>
+                    <TableCell>
+                      <Badge
+                        variant={
+                          user.role_name === "admin" ? "default" : "secondary"
+                        }
+                      >
+                        {user.role_name === "admin" && (
+                          <Shield className="mr-1 h-3 w-3" />
+                        )}
+                        {user.role_name === "user" && (
+                          <User className="mr-1 h-3 w-3" />
+                        )}
+                        {user.role_name}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant={isOnline ? "default" : "secondary"}>
+                        {isOnline ? "Online" : "Offline"}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      <Badge
+                        variant={user.is_banned ? "destructive" : "secondary"}
+                      >
+                        {user.is_banned ? "Banned" : "Active"}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      {user.date_of_birth
+                        ? new Date(user.date_of_birth).toLocaleDateString()
+                        : "-"}
+                    </TableCell>
+                    <TableCell>
+                      {new Date(user.created_at).toLocaleDateString()}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" size="icon">
+                            <MoreHorizontal className="h-4 w-4" />
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                          <DropdownMenuSeparator />
+                          <DropdownMenuItem
+                            onClick={() => handleRoleChange(user.id, 1)}
+                            disabled={user.role_id === 1 || loading}
+                          >
+                            Make Admin
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick={() => handleRoleChange(user.id, 2)}
+                            disabled={user.role_id === 2 || loading}
+                          >
+                            Make User
+                          </DropdownMenuItem>
+                          <DropdownMenuSeparator />
+                          <DropdownMenuItem
+                            onClick={() => openEditDialog(user)}
+                            disabled={loading}
+                          >
+                            <Pencil className="mr-2 h-4 w-4" />
+                            Edit Profile
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick={() => handleBanToggle(user)}
+                            className={
+                              user.is_banned ? "text-green-600" : "text-amber-600"
+                            }
+                            disabled={loading}
+                          >
+                            <Ban className="mr-2 h-4 w-4" />
+                            {user.is_banned ? "Unban User" : "Ban User"}
+                          </DropdownMenuItem>
+                          <DropdownMenuSeparator />
+                          <DropdownMenuItem
+                            onClick={() => {
+                              setSelectedUser(user);
+                              setDeleteDialogOpen(true);
+                            }}
+                            className="text-red-600"
+                            disabled={loading}
+                          >
+                            <Trash2 className="mr-2 h-4 w-4" />
+                            Delete User
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </TableCell>
+                  </TableRow>
+                );
+              })
             )}
           </TableBody>
         </Table>

@@ -1,21 +1,39 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import AdminHeader from "../components/AdminHeader";
 import UserTable from "@/components/admin/UserTable";
 import { useUsers } from "@/hooks/useUsers";
+import { useOnlineUsers } from "@/hooks/useOnlineUsers";
 import { Input } from "@/components/ui/input";
 import { Search, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function UsersPage() {
   const { users, loading, refetch } = useUsers();
+  const { onlineUserIds, onlineCount, connectionStatus } = useOnlineUsers();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredUsers = users.filter(
-    (user) =>
-      user.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      user.full_name?.toLowerCase().includes(searchQuery.toLowerCase()),
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+
+  const filteredUsers = useMemo(
+    () =>
+      users.filter(
+        (user) =>
+          user.email.toLowerCase().includes(normalizedQuery) ||
+          user.full_name?.toLowerCase().includes(normalizedQuery),
+      ),
+    [users, normalizedQuery],
+  );
+
+  const stats = useMemo(
+    () => ({
+      total: users.length,
+      admins: users.filter((u) => u.role_name === "admin").length,
+      regular: users.filter((u) => u.role_name === "user").length,
+      banned: users.filter((u) => u.is_banned).length,
+    }),
+    [users],
   );
 
   return (
@@ -48,35 +66,40 @@ export default function UsersPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid gap-4 md:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-5">
           <div className="rounded-lg border p-4">
             <div className="text-sm font-medium text-muted-foreground">
               Total Users
             </div>
-            <div className="text-2xl font-bold">{users.length}</div>
+            <div className="text-2xl font-bold">{stats.total}</div>
           </div>
           <div className="rounded-lg border p-4">
             <div className="text-sm font-medium text-muted-foreground">
               Admins
             </div>
-            <div className="text-2xl font-bold">
-              {users.filter((u) => u.role_name === "admin").length}
-            </div>
+            <div className="text-2xl font-bold">{stats.admins}</div>
           </div>
           <div className="rounded-lg border p-4">
             <div className="text-sm font-medium text-muted-foreground">
               Regular Users
             </div>
-            <div className="text-2xl font-bold">
-              {users.filter((u) => u.role_name === "user").length}
-            </div>
+            <div className="text-2xl font-bold">{stats.regular}</div>
           </div>
           <div className="rounded-lg border p-4">
             <div className="text-sm font-medium text-muted-foreground">
               Banned Users
             </div>
-            <div className="text-2xl font-bold">
-              {users.filter((u) => u.is_banned).length}
+            <div className="text-2xl font-bold">{stats.banned}</div>
+          </div>
+          <div className="rounded-lg border p-4">
+            <div className="text-sm font-medium text-muted-foreground">
+              Online Now
+            </div>
+            <div className="text-2xl font-bold text-emerald-600">
+              {onlineCount}
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              Realtime: {connectionStatus}
             </div>
           </div>
         </div>
@@ -87,7 +110,11 @@ export default function UsersPage() {
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
           </div>
         ) : (
-          <UserTable users={filteredUsers} onUpdate={refetch} />
+          <UserTable
+            users={filteredUsers}
+            onlineUserIds={onlineUserIds}
+            onUpdate={refetch}
+          />
         )}
       </div>
     </div>
