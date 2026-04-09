@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ChevronLeft,
@@ -167,8 +167,9 @@ export default function FsoftTrainingVocabularyPage() {
       })
       .sort((a, b) => {
         if (a.unit !== b.unit) return a.unit - b.unit;
-        if (a.lessonOrder !== b.lessonOrder)
-          return a.lessonOrder - b.lessonOrder;
+        const aOrder = a.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : a.lessonOrder;
+        const bOrder = b.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : b.lessonOrder;
+        if (aOrder !== bOrder) return aOrder - bOrder;
         return a.id.localeCompare(b.id);
       });
   }, [selectedUnit, selectedLesson, posFilter, transFilter, search]);
@@ -211,15 +212,62 @@ export default function FsoftTrainingVocabularyPage() {
     deck.length > 0 ? ((currentIndex + 1) / deck.length) * 100 : 0;
 
   const grouped = useMemo(() => {
-    const map = new Map<string, VocabItem[]>();
+    type GroupBucket = {
+      title: string;
+      items: VocabItem[];
+      unit: number;
+      lesson: string;
+      section: string;
+      lessonOrder: number;
+    };
+
+    const map = new Map<string, GroupBucket>();
+
     for (const item of deck) {
-      const key = `Unit ${item.unit} - ${item.lesson} - ${item.section}`;
-      const list = map.get(key) ?? [];
-      list.push(item);
-      map.set(key, list);
+      const key = `${item.unit}|||${item.lesson}|||${item.section}`;
+      const existing = map.get(key);
+
+      if (!existing) {
+        map.set(key, {
+          title: `Unit ${item.unit} - ${item.lesson} - ${item.section}`,
+          items: [item],
+          unit: item.unit,
+          lesson: item.lesson,
+          section: item.section,
+          lessonOrder: item.lessonOrder,
+        });
+        continue;
+      }
+
+      existing.items.push(item);
+      if (item.lessonOrder < existing.lessonOrder) {
+        existing.lessonOrder = item.lessonOrder;
+      }
     }
-    return Array.from(map.entries());
+
+    return Array.from(map.values()).sort((a, b) => {
+      if (a.unit !== b.unit) return a.unit - b.unit;
+
+      const aIsExtra = a.lessonOrder === 0;
+      const bIsExtra = b.lessonOrder === 0;
+      if (aIsExtra !== bIsExtra) return aIsExtra ? 1 : -1;
+
+      if (a.lessonOrder !== b.lessonOrder) return a.lessonOrder - b.lessonOrder;
+
+      const lessonCompare = a.lesson.localeCompare(b.lesson, "vi");
+      if (lessonCompare !== 0) return lessonCompare;
+
+      return a.section.localeCompare(b.section, "vi");
+    });
   }, [deck]);
+
+  const groupedListRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (groupedListRef.current) {
+      groupedListRef.current.scrollTop = 0;
+    }
+  }, [selectedUnit, selectedLesson, search, posFilter, transFilter]);
 
   if (loading) {
     return (
@@ -590,17 +638,20 @@ export default function FsoftTrainingVocabularyPage() {
           <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
             Danh sách theo Unit/Bài
           </h2>
-          <div className="space-y-4 max-h-[520px] overflow-auto pr-2">
-            {grouped.map(([groupTitle, items]) => (
+          <div
+            ref={groupedListRef}
+            className="space-y-4 max-h-[520px] overflow-auto pr-2"
+          >
+            {grouped.map((group) => (
               <div
-                key={groupTitle}
+                key={group.title}
                 className="border rounded-lg overflow-hidden"
               >
                 <div className="px-3 py-2 bg-orange-50 border-b text-sm font-semibold text-orange-700 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
-                  {groupTitle}
+                  {group.title}
                 </div>
                 <div className="divide-y">
-                  {items.map((item) => {
+                  {group.items.map((item) => {
                     const idx = deck.findIndex((x) => x.id === item.id);
                     const active = idx === currentIndex;
                     return (
