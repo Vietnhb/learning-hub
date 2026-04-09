@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS public.users (
     role_id INTEGER DEFAULT 2 REFERENCES public.roles(id),
     is_banned BOOLEAN NOT NULL DEFAULT FALSE,
     date_of_birth DATE,
+    last_online_at TIMESTAMPTZ,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );

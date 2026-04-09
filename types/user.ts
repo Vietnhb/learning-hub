@@ -5,6 +5,7 @@ export interface User {
   role_id: number;
   is_banned: boolean;
   date_of_birth: string | null;
+  last_online_at?: string | null;
   created_at: string;
 }
 

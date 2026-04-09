@@ -48,10 +48,21 @@ export async function getAllUsers(): Promise<{
   error: string | null;
 }> {
   try {
+    const { data: v2Data, error: v2Error } = await supabase.rpc(
+      "get_all_users_v2",
+    );
+
+    if (!v2Error) {
+      return { data: v2Data, error: null };
+    }
+
     const { data, error } = await supabase.rpc("get_all_users");
 
     if (error) {
-      console.error("Get all users error:", error);
+      console.error("Get all users error:", {
+        v2Error,
+        v1Error: error,
+      });
       return { data: null, error: error.message };
     }
 

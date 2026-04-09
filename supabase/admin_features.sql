@@ -316,6 +316,7 @@ RETURNS TABLE (
     role_name TEXT,
     is_banned BOOLEAN,
     date_of_birth DATE,
+    last_online_at TIMESTAMPTZ,
     created_at TIMESTAMPTZ
 ) 
 SECURITY DEFINER
@@ -340,6 +341,7 @@ BEGIN
         r.name::TEXT as role_name,
         u.is_banned,
         u.date_of_birth,
+        u.last_online_at,
         u.created_at
     FROM public.users u
     JOIN public.roles r ON u.role_id = r.id

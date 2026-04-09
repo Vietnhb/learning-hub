@@ -10,7 +10,7 @@ import { Search, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function UsersPage() {
-  const { users, loading, refetch } = useUsers();
+  const { users, loading, refetch } = useUsers({ autoRefreshMs: 15000 });
   const { onlineUserIds, onlineCount, connectionStatus } = useOnlineUsers();
   const [searchQuery, setSearchQuery] = useState("");
 

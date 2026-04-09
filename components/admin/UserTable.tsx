@@ -44,6 +44,30 @@ interface UserTableProps {
   onUpdate: () => void;
 }
 
+function formatLastOnline(iso?: string | null): string {
+  if (!iso) {
+    return "-";
+  }
+
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) {
+    return "-";
+  }
+
+  const formatted = new Intl.DateTimeFormat("vi-VN", {
+    timeZone: "Asia/Ho_Chi_Minh",
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(date);
+
+  return `${formatted} GMT+7`;
+}
+
 export default function UserTable({
   users,
   onlineUserIds,
@@ -133,6 +157,7 @@ export default function UserTable({
               <TableHead>Full Name</TableHead>
               <TableHead>Role</TableHead>
               <TableHead>Online</TableHead>
+              <TableHead>Last Online</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Date of Birth</TableHead>
               <TableHead>Created At</TableHead>
@@ -142,13 +167,14 @@ export default function UserTable({
           <TableBody>
             {users.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={8} className="text-center py-8">
+                <TableCell colSpan={9} className="text-center py-8">
                   <p className="text-muted-foreground">No users found</p>
                 </TableCell>
               </TableRow>
             ) : (
               users.map((user) => {
                 const isOnline = onlineUserIds?.has(user.id.toLowerCase()) ?? false;
+                const lastOnline = formatLastOnline(user.last_online_at);
                 return (
                   <TableRow key={user.id}>
                     <TableCell className="font-medium">{user.email}</TableCell>
@@ -173,6 +199,7 @@ export default function UserTable({
                         {isOnline ? "Online" : "Offline"}
                       </Badge>
                     </TableCell>
+                    <TableCell>{lastOnline}</TableCell>
                     <TableCell>
                       <Badge
                         variant={user.is_banned ? "destructive" : "secondary"}
