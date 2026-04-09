@@ -1,14 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
-import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtimeChannels";
-import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
 import { useAuth } from "@/contexts/AuthContext";
+import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
+import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtimeChannels";
+import { supabase } from "@/lib/supabase";
 
 type PresenceMeta = {
   user_id?: string;
 };
+
+function normalizeId(value?: string | null): string {
+  return (value || "").trim().toLowerCase();
+}
 
 function buildOnlineSetFromPresenceState(
   state: Record<string, PresenceMeta[]>,
@@ -16,13 +20,15 @@ function buildOnlineSetFromPresenceState(
   const next = new Set<string>();
 
   for (const [key, metas] of Object.entries(state)) {
-    if (key) {
-      next.add(key);
+    const normalizedKey = normalizeId(key);
+    if (normalizedKey) {
+      next.add(normalizedKey);
     }
 
     for (const meta of metas) {
-      if (meta.user_id) {
-        next.add(meta.user_id);
+      const normalizedUserId = normalizeId(meta.user_id);
+      if (normalizedUserId) {
+        next.add(normalizedUserId);
       }
     }
   }
@@ -49,24 +55,23 @@ export function useOnlineUsers() {
 
   useEffect(() => {
     if (!user?.id) {
+      setOnlineUserIds(new Set());
       setConnectionStatus("idle");
       return;
     }
 
     let active = true;
     let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
-    let currentChannel:
-      | ReturnType<typeof supabase.channel>
-      | null = null;
+    let retryCount = 0;
+    let channel: ReturnType<typeof supabase.channel> | null = null;
 
     const cleanupChannel = () => {
-      if (!currentChannel) {
+      if (!channel) {
         return;
       }
 
-      currentChannel.untrack().catch(() => {});
-      void supabase.removeChannel(currentChannel);
-      currentChannel = null;
+      void supabase.removeChannel(channel);
+      channel = null;
     };
 
     const scheduleReconnect = () => {
@@ -74,10 +79,12 @@ export function useOnlineUsers() {
         return;
       }
 
+      const delay = Math.min(500 * 2 ** retryCount, 4000);
+      retryCount += 1;
       reconnectTimer = setTimeout(() => {
         reconnectTimer = null;
         void connect();
-      }, 2000);
+      }, delay);
     };
 
     const connect = async () => {
@@ -85,51 +92,45 @@ export function useOnlineUsers() {
         return;
       }
 
+      cleanupChannel();
       setConnectionStatus("connecting");
-      void setRealtimeAuthFromSession();
 
-      const channel = supabase.channel(USERS_ONLINE_PRESENCE_CHANNEL, {
-        config: {
-          presence: {
-            key: user.id,
-          },
-        },
-      });
-      currentChannel = channel;
+      try {
+        await setRealtimeAuthFromSession();
+      } catch (error) {
+        console.error("Set realtime auth error:", error);
+      }
+
+      const nextChannel = supabase.channel(USERS_ONLINE_PRESENCE_CHANNEL);
+      channel = nextChannel;
 
       const syncPresence = () => {
-        const state = channel.presenceState<PresenceMeta>();
+        const state = nextChannel.presenceState<PresenceMeta>();
         const next = buildOnlineSetFromPresenceState(state);
-
-        setOnlineUserIds((prev) => {
-          return areSetsEqual(prev, next) ? prev : next;
-        });
+        setOnlineUserIds((prev) => (areSetsEqual(prev, next) ? prev : next));
       };
 
-      channel.on("presence", { event: "sync" }, syncPresence);
-      channel.on("presence", { event: "join" }, syncPresence);
-      channel.on("presence", { event: "leave" }, syncPresence);
+      nextChannel.on("presence", { event: "sync" }, syncPresence);
+      nextChannel.on("presence", { event: "join" }, syncPresence);
+      nextChannel.on("presence", { event: "leave" }, syncPresence);
 
-      channel.subscribe((status) => {
+      nextChannel.subscribe((status) => {
         if (!active) {
           return;
         }
 
         if (status === "SUBSCRIBED") {
+          retryCount = 0;
           setConnectionStatus("connected");
-          channel
-            .track({
-              user_id: user.id,
-              online_at: new Date().toISOString(),
-            })
-            .catch((error) =>
-              console.error("Track admin online presence error:", error),
-            );
           syncPresence();
           return;
         }
 
-        if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+        if (
+          status === "CHANNEL_ERROR" ||
+          status === "TIMED_OUT" ||
+          status === "CLOSED"
+        ) {
           setConnectionStatus("error");
           cleanupChannel();
           scheduleReconnect();
@@ -152,6 +153,6 @@ export function useOnlineUsers() {
     onlineUserIds,
     onlineCount: onlineUserIds.size,
     connectionStatus,
-    isOnline: (userId: string) => onlineUserIds.has(userId),
+    isOnline: (userId: string) => onlineUserIds.has(normalizeId(userId)),
   };
 }

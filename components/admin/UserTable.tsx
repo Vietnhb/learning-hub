@@ -148,7 +148,7 @@ export default function UserTable({
               </TableRow>
             ) : (
               users.map((user) => {
-                const isOnline = onlineUserIds?.has(user.id) ?? false;
+                const isOnline = onlineUserIds?.has(user.id.toLowerCase()) ?? false;
                 return (
                   <TableRow key={user.id}>
                     <TableCell className="font-medium">{user.email}</TableCell>

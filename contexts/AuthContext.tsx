@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";
-import { usePathname } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtimeChannels";
 import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
@@ -30,7 +29,6 @@ export const useAuth = () => {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const pathname = usePathname();
 
   useEffect(() => {
     const enforceBanStatus = async (nextUser: User | null) => {
@@ -81,9 +79,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!user?.id) {
-      return;
-    }
-    if (pathname?.startsWith("/admin")) {
       return;
     }
 
@@ -196,7 +191,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       cleanupChannel();
     };
-  }, [user?.id, pathname]);
+  }, [user?.id]);
 
   const signOut = async () => {
     await supabase.auth.signOut();
