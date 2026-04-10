@@ -3063,6 +3063,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": 17,
+      "title": "Chủ đề: Cứu hộ và Sự sống",
+      "kanji_list": [
+        {
+          "character": "救",
+          "meaning": "Cứu",
+          "onyomi": "キュウ",
+          "kunyomi": "すく-う",
+          "vocabulary": [
+            {
+              "word": "救う",
+              "reading": "すくう",
+              "meaning": "Cứu giúp / Cứu vớt"
+            },
+            {
+              "word": "救助",
+              "reading": "きゅうじょ",
+              "meaning": "Cứu trợ / Cứu hộ"
+            },
+            {
+              "word": "救急車",
+              "reading": "きゅうきゅうしゃ",
+              "meaning": "Xe cứu thương"
+            }
+          ]
+        },
+        {
+          "character": "助",
+          "meaning": "Trợ",
+          "onyomi": "ジョ",
+          "kunyomi": ["たす-かる", "たす-ける", "すけ"],
+          "vocabulary": [
+            {
+              "word": "助かる",
+              "reading": "たすかる",
+              "meaning": "Được cứu / Thoát chết"
+            },
+            {
+              "word": "助ける",
+              "reading": "たすける",
+              "meaning": "Giúp đỡ / Cứu giúp"
+            },
+            {
+              "word": "救助",
+              "reading": "きゅうじょ",
+              "meaning": "Cứu trợ / Cứu hộ"
+            }
+          ]
+        },
+        {
+          "character": "死",
+          "meaning": "Tử",
+          "onyomi": "シ",
+          "kunyomi": "し-ぬ",
+          "vocabulary": [
+            { "word": "死ぬ", "reading": "しぬ", "meaning": "Chết" },
+            { "word": "死亡", "reading": "しぼう", "meaning": "Tử vong" },
+            {
+              "word": "死亡者",
+              "reading": "しぼうしゃ",
+              "meaning": "Người chết / Người quá cố"
+            }
+          ]
+        },
+        {
+          "character": "亡",
+          "meaning": "Vong",
+          "onyomi": ["ボウ", "モウ"],
+          "kunyomi": "な-い",
+          "vocabulary": [
+            { "word": "亡くす", "reading": "なくす", "meaning": "Mất (ai đó)" },
+            { "word": "死亡", "reading": "しぼう", "meaning": "Tử vong" },
+            {
+              "word": "死亡者",
+              "reading": "しぼうしゃ",
+              "meaning": "Người tử vong"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
