@@ -3067,13 +3067,13 @@
     {
       "id": 17,
       "title": "Chủ đề: Cứu hộ và Sự sống",
-      "kanji_list": [
+      "kanji": [
         {
           "character": "救",
           "meaning": "Cứu",
           "onyomi": "キュウ",
           "kunyomi": "すく-う",
-          "vocabulary": [
+          "examples": [
             {
               "word": "救う",
               "reading": "すくう",
@@ -3095,8 +3095,8 @@
           "character": "助",
           "meaning": "Trợ",
           "onyomi": "ジョ",
-          "kunyomi": ["たす-かる", "たす-ける", "すけ"],
-          "vocabulary": [
+          "kunyomi": "たす-かる / たす-ける / すけ",
+          "examples": [
             {
               "word": "助かる",
               "reading": "たすかる",
@@ -3119,7 +3119,7 @@
           "meaning": "Tử",
           "onyomi": "シ",
           "kunyomi": "し-ぬ",
-          "vocabulary": [
+          "examples": [
             { "word": "死ぬ", "reading": "しぬ", "meaning": "Chết" },
             { "word": "死亡", "reading": "しぼう", "meaning": "Tử vong" },
             {
@@ -3132,9 +3132,9 @@
         {
           "character": "亡",
           "meaning": "Vong",
-          "onyomi": ["ボウ", "モウ"],
+          "onyomi": "ボウ / モウ",
           "kunyomi": "な-い",
-          "vocabulary": [
+          "examples": [
             { "word": "亡くす", "reading": "なくす", "meaning": "Mất (ai đó)" },
             { "word": "死亡", "reading": "しぼう", "meaning": "Tử vong" },
             {
