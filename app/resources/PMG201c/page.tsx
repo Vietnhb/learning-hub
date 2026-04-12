@@ -72,12 +72,18 @@ function parseAnswerIds(
 
   if (Array.isArray(answer)) {
     answer.forEach((item) => {
-      const match = String(item).trim().match(/^([A-E])(?:\.|\b)/i);
-      if (match) pushIfValid(match[1]);
+      const tokens = String(item)
+        .toUpperCase()
+        .split(/[^A-Z]+/)
+        .filter((token) => token.length === 1);
+      tokens.forEach((token) => pushIfValid(token));
     });
   } else if (typeof answer === "string") {
-    const matches = answer.toUpperCase().match(/[A-E](?=\.|\b)/g) ?? [];
-    matches.forEach((id) => pushIfValid(id));
+    const tokens = answer
+      .toUpperCase()
+      .split(/[^A-Z]+/)
+      .filter((token) => token.length === 1);
+    tokens.forEach((token) => pushIfValid(token));
   }
 
   return picked.length > 0 ? picked : [choices[0]?.id ?? "A"];
@@ -91,7 +97,7 @@ function areSameAnswerSet(selected: string[], correct: string[]): boolean {
 
 function parseFromTermDefinition(item: TermDefinitionQuestion): ParsedQuestion {
   const rawTerm = item.term?.trim() ?? "";
-  const markerRegex = /([A-D])\.\s*/gi;
+  const markerRegex = /([A-Z])\.\s*/gi;
   const markers: Array<{ id: string; index: number; length: number }> = [];
   let markerMatch: RegExpExecArray | null = markerRegex.exec(rawTerm);
   while (markerMatch) {
@@ -130,7 +136,7 @@ function parseFromTermDefinition(item: TermDefinitionQuestion): ParsedQuestion {
     choices.find((choice) => normalizeText(choice.text) === defNorm)?.id ?? "";
 
   if (!correctChoiceId) {
-    const byPrefix = (item.definition ?? "").trim().match(/^([A-D])\./i);
+    const byPrefix = (item.definition ?? "").trim().match(/^([A-Z])\./i);
     if (byPrefix) {
       const candidate = byPrefix[1].toUpperCase();
       if (choices.some((choice) => choice.id === candidate)) {
@@ -215,7 +221,7 @@ export default function PMG201cPage() {
       }
 
       const choices: ParsedChoice[] = item.choices.map((choice, index) => {
-        const matched = choice.match(/^([A-D])\.\s*(.*)$/i);
+        const matched = choice.match(/^([A-Z])\.\s*(.*)$/i);
         if (matched) {
           return {
             id: matched[1].toUpperCase(),
