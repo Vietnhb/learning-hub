@@ -70,9 +70,11 @@
       "A. Functional",
       "B. Weak Matrix",
       "C. Balanced Matrix",
-      "D. Strongest Matrix E Projectized F. Medium Matrix"
+      "D. Strongest Matrix",
+      "E. Projectized",
+      "F. Medium Matrix"
     ],
-    "answer": "D"
+    "answer": "F"
   },
   {
     "question": "Which project management process group generally takes the most project time and resources?",
