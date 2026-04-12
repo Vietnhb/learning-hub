@@ -744,11 +744,12 @@
   {
     "question": "Which one of these is not the major source of conflict that a project manager may influence?",
     "choices": [
-      "A. Project priorities B Project management",
+      "A. Project priorities",
+      "B. Project management",
       "C. Project resources",
-      "D. Project team A Project priorities"
+      "D. Project team"
     ],
-    "answer": "C"
+    "answer": "A"
   },
   {
     "question": "True or False: Performance reporting aims to inform stakeholders the good achievements of the project's objectives weekly or monthly.",
