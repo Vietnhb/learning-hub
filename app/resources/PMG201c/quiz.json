@@ -445,7 +445,7 @@
   {
     "question": "True or False: Performing quality control within the context of a project involves taking actions to eliminate causes of unsatisfactory project performance.",
     "choices": ["A. False", "B. True"],
-    "answer": "B"
+    "answer": "A"
   },
   {
     "question": "True or False: Risk management is one-time process. You need to plan for all possible risks at the project beginning and then follow defined actions to control those risks until they are closed or cancelled.",
