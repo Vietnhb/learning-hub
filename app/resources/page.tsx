@@ -73,6 +73,18 @@ function ResourcesPageContent() {
         "Luyện tập kiến thức Software Architecture, UML, design strategy, PIM/PSM",
       link: "/resources/SWD392",
     },
+    {
+      id: 5,
+      title: "PMG201c - Project Management Quiz",
+      category: "Kỹ thuật phần mềm",
+      type: "Quiz",
+      size: "Đang cập nhật",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Luyện tập kiến thức quản lý dự án: scope, schedule, risk, stakeholder, quality",
+      link: "/resources/PMG201c",
+    },
   ];
 
   const resourceIds = useMemo(
@@ -137,7 +149,7 @@ function ResourcesPageContent() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật và SWD392 (Kiến trúc hệ thống)
+            Giáo trình Tiếng Nhật, SWD392 và PMG201c
           </p>
         </motion.div>
 
