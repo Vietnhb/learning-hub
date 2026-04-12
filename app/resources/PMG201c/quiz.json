@@ -1404,8 +1404,8 @@
   },
   {
     "question": "True or false, a project manager spend most of his/her time communicating",
-    "choices": ["A. False", "B. True B"],
-    "answer": "A"
+    "choices": ["A. False", "B. True"],
+    "answer": "B"
   },
   {
     "question": "If the response you choose is to enhance a risk this means that:",
