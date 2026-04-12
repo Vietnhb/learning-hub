@@ -98,9 +98,10 @@
       "A. Decreased understanding of what is takes to get it done",
       "B. Changing stakeholder perspectives",
       "C. Poorly defined objectives",
-      "D. Inability to say \"NO\"E. Lack of defined change control process"
+      "D. Inability to say \"NO\"",
+      "E. Lack of defined change control process"
     ],
-    "answer": "D"
+    "answer": "D,E"
   },
   {
     "question": "True or False: Project quality focuses on the project management processes used to meet project objectives.",
