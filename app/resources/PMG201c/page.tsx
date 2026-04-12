@@ -28,7 +28,7 @@ import rawQuiz from "./quiz.json";
 interface QuizQuestion {
   question: string;
   choices: string[];
-  answer: string;
+  answer: string | string[];
 }
 
 interface TermDefinitionQuestion {
@@ -44,7 +44,7 @@ interface ParsedChoice {
 interface ParsedQuestion {
   question: string;
   choices: ParsedChoice[];
-  correctChoiceId: string;
+  correctChoiceIds: string[];
   topic: string;
 }
 
@@ -54,6 +54,39 @@ function normalizeText(value: string): string {
     .replace(/[`"'.,:;!?()[\]{}]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function parseAnswerIds(
+  answer: string | string[] | undefined,
+  choices: ParsedChoice[],
+): string[] {
+  const choiceIds = new Set(choices.map((choice) => choice.id));
+  const picked: string[] = [];
+
+  const pushIfValid = (id: string) => {
+    const normalized = id.toUpperCase();
+    if (choiceIds.has(normalized) && !picked.includes(normalized)) {
+      picked.push(normalized);
+    }
+  };
+
+  if (Array.isArray(answer)) {
+    answer.forEach((item) => {
+      const match = String(item).trim().match(/^([A-E])(?:\.|\b)/i);
+      if (match) pushIfValid(match[1]);
+    });
+  } else if (typeof answer === "string") {
+    const matches = answer.toUpperCase().match(/[A-E](?=\.|\b)/g) ?? [];
+    matches.forEach((id) => pushIfValid(id));
+  }
+
+  return picked.length > 0 ? picked : [choices[0]?.id ?? "A"];
+}
+
+function areSameAnswerSet(selected: string[], correct: string[]): boolean {
+  if (selected.length !== correct.length) return false;
+  const selectedSet = new Set(selected);
+  return correct.every((id) => selectedSet.has(id));
 }
 
 function parseFromTermDefinition(item: TermDefinitionQuestion): ParsedQuestion {
@@ -113,7 +146,7 @@ function parseFromTermDefinition(item: TermDefinitionQuestion): ParsedQuestion {
   return {
     question,
     choices,
-    correctChoiceId,
+    correctChoiceIds: [correctChoiceId],
     topic: detectTopic(question),
   };
 }
@@ -169,7 +202,7 @@ export default function PMG201cPage() {
   const [mode, setMode] = useState<"review" | "quiz">("review");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<
-    Record<number, string>
+    Record<number, string[]>
   >({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -195,30 +228,28 @@ export default function PMG201cPage() {
         };
       });
 
-      const correctId = item.answer.trim().toUpperCase();
-      const hasCorrectId = choices.some((choice) => choice.id === correctId);
-
       return {
         question: item.question,
         choices,
-        correctChoiceId: hasCorrectId ? correctId : (choices[0]?.id ?? "A"),
+        correctChoiceIds: parseAnswerIds(item.answer, choices),
         topic: detectTopic(item.question),
       };
     });
   }, [quizData]);
 
   const totalQuestions = questions.length;
-  const answeredCount = Object.keys(selectedAnswers).length;
+  const answeredCount = Object.values(selectedAnswers).filter(
+    (selected) => selected.length > 0,
+  ).length;
   const currentQuestion = questions[currentIndex];
-  const selectedForCurrent = selectedAnswers[currentIndex];
+  const selectedForCurrent = selectedAnswers[currentIndex] ?? [];
   const progress =
     totalQuestions > 0 ? Math.round((answeredCount / totalQuestions) * 100) : 0;
 
   const score = useMemo(() => {
     return questions.reduce((acc, question, index) => {
-      return selectedAnswers[index] === question.correctChoiceId
-        ? acc + 1
-        : acc;
+      const selected = selectedAnswers[index] ?? [];
+      return areSameAnswerSet(selected, question.correctChoiceIds) ? acc + 1 : acc;
     }, 0);
   }, [questions, selectedAnswers]);
 
@@ -228,10 +259,11 @@ export default function PMG201cPage() {
 
     questions.forEach((question, index) => {
       totalByTopic[question.topic] = (totalByTopic[question.topic] ?? 0) + 1;
+      const selected = selectedAnswers[index] ?? [];
       if (
         submitted &&
-        selectedAnswers[index] &&
-        selectedAnswers[index] !== question.correctChoiceId
+        selected.length > 0 &&
+        !areSameAnswerSet(selected, question.correctChoiceIds)
       ) {
         wrongByTopic[question.topic] = (wrongByTopic[question.topic] ?? 0) + 1;
       }
@@ -242,10 +274,18 @@ export default function PMG201cPage() {
 
   const handleSelectAnswer = (choiceId: string) => {
     if (submitted) return;
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [currentIndex]: choiceId,
-    }));
+    setSelectedAnswers((prev) => {
+      const current = prev[currentIndex] ?? [];
+      const isSelected = current.includes(choiceId);
+      const next = isSelected
+        ? current.filter((item) => item !== choiceId)
+        : [...current, choiceId].sort();
+
+      return {
+        ...prev,
+        [currentIndex]: next,
+      };
+    });
   };
 
   const handleReset = () => {
@@ -436,9 +476,9 @@ export default function PMG201cPage() {
 
                 <div className="space-y-3">
                   {currentQuestion.choices.map((choice) => {
-                    const isSelected = selectedForCurrent === choice.id;
+                    const isSelected = selectedForCurrent.includes(choice.id);
                     const isCorrect =
-                      currentQuestion.correctChoiceId === choice.id;
+                      currentQuestion.correctChoiceIds.includes(choice.id);
                     const isWrongSelected =
                       submitted && isSelected && !isCorrect;
 
@@ -482,7 +522,7 @@ export default function PMG201cPage() {
                     <p className="text-sm text-emerald-200">
                       Đáp án đúng:{" "}
                       <span className="font-bold">
-                        {currentQuestion.correctChoiceId}
+                        {currentQuestion.correctChoiceIds.join(", ")}
                       </span>
                     </p>
                     <p className="text-xs text-emerald-300/90 mt-1">
@@ -497,7 +537,7 @@ export default function PMG201cPage() {
                     <p className="text-sm text-slate-300">
                       Đáp án đúng:{" "}
                       <span className="font-bold text-emerald-300">
-                        {currentQuestion.correctChoiceId}
+                        {currentQuestion.correctChoiceIds.join(", ")}
                       </span>
                     </p>
                   </div>
