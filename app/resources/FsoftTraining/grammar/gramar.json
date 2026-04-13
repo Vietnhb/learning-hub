@@ -737,13 +737,7 @@
               "vi": "Để người khác chờ 2 tiếng mà không nói nổi một câu xin lỗi thì đúng là vô ý thức."
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Bài 3",
-      "grammar": [
+        },
         {
           "id": "rarate-shimau-passive",
           "pattern": "V_られて + しまう",
@@ -783,7 +777,13 @@
               "vi": "Anh ta lao vào tên trộm nhưng ngược lại lại bị nó hạ."
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bài 3",
+      "grammar": [
         {
           "id": "n-niyotte-niyoru",
           "pattern": "N + によって / による",
