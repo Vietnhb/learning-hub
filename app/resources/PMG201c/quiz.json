@@ -101,7 +101,7 @@
       "D. Inability to say \"NO\"",
       "E. Lack of defined change control process"
     ],
-    "answer": "D,E"
+    "answer": "D"
   },
   {
     "question": "True or False: Project quality focuses on the project management processes used to meet project objectives.",
@@ -1382,9 +1382,9 @@
     "answer": "B"
   },
   {
-    "question": "True or False: Performing quality assurance within the context of a project involves taking actions to eliminate causes of unsatisfactory project performance. B",
+    "question": "True or False: Performing quality assurance within the context of a project involves taking actions to eliminate causes of unsatisfactory project performance.",
     "choices": ["A. False", "B. True"],
-    "answer": "A"
+    "answer": "B"
   },
   {
     "question": "Which one of these should be the view of conflict?",
