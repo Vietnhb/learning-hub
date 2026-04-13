@@ -682,10 +682,10 @@
     "choices": [
       "A. Scope Management Plan",
       "B. Requirement Management Plan",
-      "C. Quality Management Plan",
+      "C. Cost Management Plan",
       "D. Time Management Plan"
     ],
-    "answer": "C"
+    "answer": "C,D"
   },
   {
     "question": "True or False: A Work Breakdown Structure (WBS) is a deliverable-oriented hierarchical decomposition of the work to be executed by the project team.",
