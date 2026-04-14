@@ -3143,12 +3143,12 @@
   {
     "question": "Which one of these situations most closely represents scope creep",
     "choices": [
-      "A. The project scope keeps changing and team members are not sure why and the project seems like it will never en",
+      "A. The project scope keeps changing and team members are not sure why and the project seems like it will never end",
       "B. The project scope changes through the use of a formal change control process.",
       "C. The scope of the project is clearly agreed upon by the key project stakeholders.",
       "D. The project scope was used to create a WBS that was used to create estimates and a schedule."
     ],
-    "answer": "C"
+    "answer": "A"
   },
   {
     "question": "While looking at the project cost baseline graph shown below, a project manager sees that the stair-step line's last point is higher than the estimate at completion (EAC). What does this relationship mean for the project?",
