@@ -3065,10 +3065,10 @@
     "choices": [
       "A. You should develop a response to handle this risk.",
       "B. You should wait a few weeks and see what changes.",
-      "C. You should not document the risk; it will upset your stakeholders.",
+      "C. You should not document the risk, it will upset your stakeholders.",
       "D. You should all hope this risk does not occur."
     ],
-    "answer": "B"
+    "answer": "C"
   },
   {
     "question": "When you report project status you compare actual performance to",
