@@ -3204,6 +3204,66 @@
           ]
         }
       ]
+    },
+    {
+      "id": 19,
+      "title": "Đại - Biểu - Đệ - Hồi",
+      "kanji": [
+        {
+          "character": "代",
+          "meaning": "Đại",
+          "onyomi": "ダイ",
+          "kunyomi": "か-わる",
+          "examples": [
+            { "word": "代わる", "reading": "かわる", "meaning": "Thay thế" },
+            { "word": "八千代", "reading": "やちよ", "meaning": "Yachiyo (tên riêng)" },
+            { "word": "時代", "reading": "じだい", "meaning": "Thời đại" },
+            { "word": "代理人", "reading": "だいりにん", "meaning": "Người đại diện" },
+            { "word": "食事代", "reading": "しょくじだい", "meaning": "Tiền ăn" }
+          ]
+        },
+        {
+          "character": "表",
+          "meaning": "Biểu",
+          "onyomi": "ヒョウ",
+          "kunyomi": "あらわ-す・あらわ-れる",
+          "examples": [
+            { "word": "表す", "reading": "あらわす", "meaning": "Biểu hiện" },
+            { "word": "表れる", "reading": "あらわれる", "meaning": "Xuất hiện, biểu lộ" },
+            { "word": "発表", "reading": "はっぴょう", "meaning": "Phát biểu" },
+            { "word": "代表", "reading": "だいひょう", "meaning": "Đại biểu" }
+          ]
+        },
+        {
+          "character": "評",
+          "meaning": "Bình",
+          "onyomi": "ヒョウ",
+          "kunyomi": "",
+          "examples": [{ "word": "評価", "reading": "ひょうか", "meaning": "Đánh giá" }]
+        },
+        {
+          "character": "第",
+          "meaning": "Đệ",
+          "onyomi": "ダイ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "第1章", "reading": "だいいっしょう", "meaning": "Chương 1" },
+            { "word": "安全第一", "reading": "あんぜんだいいち", "meaning": "An toàn là trên hết" }
+          ]
+        },
+        {
+          "character": "回",
+          "meaning": "Hồi",
+          "onyomi": "カイ",
+          "kunyomi": "まわ-る・まわ-す",
+          "examples": [
+            { "word": "回る", "reading": "まわる", "meaning": "Quay" },
+            { "word": "回す", "reading": "まわす", "meaning": "Xoay" },
+            { "word": "回数券", "reading": "かいすうけん", "meaning": "Vé nhiều lượt" },
+            { "word": "何回", "reading": "なんかい", "meaning": "Mấy lần" }
+          ]
+        }
+      ]
     }
   ]
 }
