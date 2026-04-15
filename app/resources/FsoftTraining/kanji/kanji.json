@@ -3150,6 +3150,60 @@
           ]
         }
       ]
+    },
+    {
+      "id": 18,
+      "title": "Chiến - Quyết - Thắng - Thua",
+      "kanji": [
+        {
+          "character": "戦",
+          "meaning": "Chiến",
+          "onyomi": "セン",
+          "kunyomi": "たたか-う",
+          "examples": [
+            { "word": "戦う", "reading": "たたかう", "meaning": "Chiến đấu" },
+            { "word": "作戦", "reading": "さくせん", "meaning": "Tác chiến" },
+            { "word": "戦争", "reading": "せんそう", "meaning": "Chiến tranh" },
+            { "word": "決勝戦", "reading": "けっしょうせん", "meaning": "Trận chung kết" }
+          ]
+        },
+        {
+          "character": "決",
+          "meaning": "Quyết",
+          "onyomi": "ケツ",
+          "kunyomi": "き-める・き-まる",
+          "examples": [
+            { "word": "決める", "reading": "きめる", "meaning": "Quyết định" },
+            { "word": "決まる", "reading": "きまる", "meaning": "Được quyết định" },
+            { "word": "決意", "reading": "けつい", "meaning": "Quyết ý" },
+            { "word": "決心", "reading": "けっしん", "meaning": "Quyết tâm" }
+          ]
+        },
+        {
+          "character": "勝",
+          "meaning": "Thắng",
+          "onyomi": "ショウ",
+          "kunyomi": "か-つ・まさ-る",
+          "examples": [
+            { "word": "勝つ", "reading": "かつ", "meaning": "Thắng" },
+            { "word": "勝る", "reading": "まさる", "meaning": "Vượt trội" },
+            { "word": "決勝", "reading": "けっしょう", "meaning": "Chung kết" },
+            { "word": "圧勝", "reading": "あっしょう", "meaning": "Thắng áp đảo" }
+          ]
+        },
+        {
+          "character": "負",
+          "meaning": "Phụ",
+          "onyomi": "フ",
+          "kunyomi": "ま-ける・せお-う",
+          "examples": [
+            { "word": "勝負", "reading": "しょうぶ", "meaning": "Thắng thua" },
+            { "word": "負ける", "reading": "まける", "meaning": "Thua" },
+            { "word": "背負う", "reading": "せおう", "meaning": "Mang vác" },
+            { "word": "自己負担", "reading": "じこふたん", "meaning": "Tự chi trả" }
+          ]
+        }
+      ]
     }
   ]
 }
