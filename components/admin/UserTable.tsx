@@ -44,28 +44,72 @@ interface UserTableProps {
   onUpdate: () => void;
 }
 
+const relativeTimeFormatter = new Intl.RelativeTimeFormat("vi-VN", {
+  numeric: "auto",
+});
+
 function formatLastOnline(iso?: string | null): string {
   if (!iso) {
     return "-";
   }
 
-  const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) {
+  const onlineAtMs = Date.parse(iso);
+  if (!Number.isFinite(onlineAtMs)) {
     return "-";
   }
 
-  const formatted = new Intl.DateTimeFormat("vi-VN", {
-    timeZone: "Asia/Ho_Chi_Minh",
-    hour12: false,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  }).format(date);
+  const elapsedMs = Math.max(0, Date.now() - onlineAtMs);
+  const minuteMs = 60_000;
+  const hourMs = 60 * minuteMs;
+  const dayMs = 24 * hourMs;
+  const weekMs = 7 * dayMs;
+  const monthMs = 30 * dayMs;
+  const yearMs = 365 * dayMs;
 
-  return `${formatted} GMT+7`;
+  if (elapsedMs >= yearMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / yearMs),
+      "year",
+    );
+  }
+
+  if (elapsedMs >= monthMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / monthMs),
+      "month",
+    );
+  }
+
+  if (elapsedMs >= weekMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / weekMs),
+      "week",
+    );
+  }
+
+  if (elapsedMs >= dayMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / dayMs),
+      "day",
+    );
+  }
+
+  if (elapsedMs >= hourMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / hourMs),
+      "hour",
+    );
+  }
+
+  if (elapsedMs >= minuteMs) {
+    return relativeTimeFormatter.format(
+      -Math.floor(elapsedMs / minuteMs),
+      "minute",
+    );
+  }
+
+  const second = Math.max(1, Math.floor(elapsedMs / 1000));
+  return relativeTimeFormatter.format(-second, "second");
 }
 
 export default function UserTable({
@@ -199,7 +243,7 @@ export default function UserTable({
                         {isOnline ? "Online" : "Offline"}
                       </Badge>
                     </TableCell>
-                    <TableCell>{lastOnline}</TableCell>
+                    <TableCell>{isOnline ? "" : lastOnline}</TableCell>
                     <TableCell>
                       <Badge
                         variant={user.is_banned ? "destructive" : "secondary"}
