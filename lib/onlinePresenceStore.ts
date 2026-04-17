@@ -34,6 +34,11 @@ let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
 let heartbeatTimer: ReturnType<typeof setInterval> | null = null;
 let retryCount = 0;
 let lastPersistAt = 0;
+let canUseRpcPersist: boolean | null = null;
+
+const PRESENCE_HEARTBEAT_MS = 30_000;
+const PRESENCE_STALE_AFTER_MS = 120_000;
+const LAST_ONLINE_PERSIST_MIN_INTERVAL_MS = 50_000;
 
 function emit() {
   listeners.forEach((listener) => listener());
@@ -43,10 +48,46 @@ function normalizeId(value?: string | null): string {
   return (value || "").trim().toLowerCase();
 }
 
+function toEpochMs(iso?: string): number | null {
+  if (!iso) {
+    return null;
+  }
+
+  const ms = Date.parse(iso);
+  return Number.isFinite(ms) ? ms : null;
+}
+
 function maxIso(a?: string, b?: string): string | undefined {
-  if (!a) return b;
-  if (!b) return a;
-  return new Date(a).getTime() >= new Date(b).getTime() ? a : b;
+  const aMs = toEpochMs(a);
+  const bMs = toEpochMs(b);
+  if (aMs === null) return b;
+  if (bMs === null) return a;
+  return aMs >= bMs ? a : b;
+}
+
+function isPresenceFresh(onlineAt?: string, nowMs = Date.now()): boolean {
+  const onlineAtMs = toEpochMs(onlineAt);
+  if (onlineAtMs === null) {
+    return true;
+  }
+  return nowMs - onlineAtMs <= PRESENCE_STALE_AFTER_MS;
+}
+
+function isMissingRpcFunction(error: { code?: string; message?: string } | null): boolean {
+  if (!error) {
+    return false;
+  }
+
+  const code = (error.code || "").toLowerCase();
+  const message = (error.message || "").toLowerCase();
+  if (code === "pgrst202" || code === "42883") {
+    return true;
+  }
+
+  return (
+    message.includes("update_my_last_online") &&
+    (message.includes("not found") || message.includes("schema cache"))
+  );
 }
 
 function setsEqual(a: Set<string>, b: Set<string>): boolean {
@@ -83,18 +124,25 @@ function setSnapshot(next: PresenceSnapshot) {
 
 function buildOnlineSet(state: Record<string, PresenceMeta[]>): Set<string> {
   const next = new Set<string>();
+  const nowMs = Date.now();
 
   for (const [key, metas] of Object.entries(state)) {
     const normalizedKey = normalizeId(key);
-    if (normalizedKey) {
-      next.add(normalizedKey);
+    for (const meta of metas) {
+      const userId = normalizeId(meta.user_id) || normalizedKey;
+      if (!userId) {
+        continue;
+      }
+
+      if (!isPresenceFresh(meta.online_at, nowMs)) {
+        continue;
+      }
+
+      next.add(userId);
     }
 
-    for (const meta of metas) {
-      const metaUserId = normalizeId(meta.user_id);
-      if (metaUserId) {
-        next.add(metaUserId);
-      }
+    if (metas.length === 0 && normalizedKey) {
+      next.add(normalizedKey);
     }
   }
 
@@ -106,15 +154,13 @@ function buildOnlineMeta(state: Record<string, PresenceMeta[]>): Record<string, 
 
   for (const [key, metas] of Object.entries(state)) {
     const normalizedKey = normalizeId(key);
-    if (!normalizedKey) {
-      continue;
-    }
-
     for (const meta of metas) {
-      if (!meta.online_at) {
+      const userId = normalizeId(meta.user_id) || normalizedKey;
+      if (!userId || !meta.online_at || toEpochMs(meta.online_at) === null) {
         continue;
       }
-      next[normalizedKey] = maxIso(next[normalizedKey], meta.online_at) || meta.online_at;
+
+      next[userId] = maxIso(next[userId], meta.online_at) || meta.online_at;
     }
   }
 
@@ -142,8 +188,24 @@ function stopHeartbeat() {
 function startHeartbeat() {
   stopHeartbeat();
   heartbeatTimer = setInterval(() => {
+    void refreshPresence();
     void persistLastOnline();
-  }, 60_000);
+  }, PRESENCE_HEARTBEAT_MS);
+}
+
+async function refreshPresence() {
+  if (!active || !channel || !currentUserId) {
+    return;
+  }
+
+  const status = await channel.track({
+    user_id: currentUserId,
+    online_at: new Date().toISOString(),
+  });
+
+  if (status !== "ok") {
+    console.error("Track presence error:", status);
+  }
 }
 
 async function persistLastOnline(force = false) {
@@ -152,18 +214,33 @@ async function persistLastOnline(force = false) {
   }
 
   const now = Date.now();
-  if (!force && now - lastPersistAt < 50_000) {
+  if (!force && now - lastPersistAt < LAST_ONLINE_PERSIST_MIN_INTERVAL_MS) {
     return;
   }
 
   lastPersistAt = now;
-  const { error } = await supabase
+  if (canUseRpcPersist !== false) {
+    const { error: rpcError } = await supabase.rpc("update_my_last_online");
+    if (!rpcError) {
+      canUseRpcPersist = true;
+      return;
+    }
+
+    if (isMissingRpcFunction(rpcError)) {
+      canUseRpcPersist = false;
+    } else {
+      console.error("Persist last_online_at via RPC error:", rpcError);
+      return;
+    }
+  }
+
+  const { error: updateError } = await supabase
     .from("users")
     .update({ last_online_at: new Date().toISOString() })
     .eq("id", currentUserId);
 
-  if (error) {
-    console.error("Persist last_online_at error:", error);
+  if (updateError) {
+    console.error("Persist last_online_at error:", updateError);
   }
 }
 
@@ -216,6 +293,20 @@ function syncPresence() {
   });
 }
 
+function markConnectionError() {
+  const now = new Date().toISOString();
+  const nextLastSeen = { ...snapshot.lastSeenByUserId };
+  for (const id of Array.from(snapshot.onlineUserIds)) {
+    nextLastSeen[id] = maxIso(nextLastSeen[id], now) || now;
+  }
+
+  setSnapshot({
+    connectionStatus: "error",
+    onlineUserIds: new Set(),
+    lastSeenByUserId: nextLastSeen,
+  });
+}
+
 async function connect() {
   if (!active || !currentUserId) {
     return;
@@ -259,25 +350,16 @@ async function connect() {
         ...snapshot,
         connectionStatus: "connected",
       });
-      nextChannel
-        .track({
-          user_id: currentUserId || undefined,
-          online_at: new Date().toISOString(),
-        })
-        .catch((error) => console.error("Track presence error:", error))
-        .finally(() => {
-          syncPresence();
-          void persistLastOnline(true);
-          startHeartbeat();
-        });
+      void refreshPresence().finally(() => {
+        syncPresence();
+        void persistLastOnline(true);
+        startHeartbeat();
+      });
       return;
     }
 
     if (status === "CHANNEL_ERROR" || status === "TIMED_OUT" || status === "CLOSED") {
-      setSnapshot({
-        ...snapshot,
-        connectionStatus: "error",
-      });
+      markConnectionError();
       stopHeartbeat();
       cleanupChannel();
       scheduleReconnect();
