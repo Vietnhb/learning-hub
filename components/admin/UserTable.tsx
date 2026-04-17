@@ -44,7 +44,7 @@ interface UserTableProps {
   onUpdate: () => void;
 }
 
-const relativeTimeFormatter = new Intl.RelativeTimeFormat("vi-VN", {
+const relativeTimeFormatter = new Intl.RelativeTimeFormat("en-US", {
   numeric: "auto",
 });
 
