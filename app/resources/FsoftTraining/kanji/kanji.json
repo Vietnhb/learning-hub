@@ -3164,7 +3164,11 @@
             { "word": "戦う", "reading": "たたかう", "meaning": "Chiến đấu" },
             { "word": "作戦", "reading": "さくせん", "meaning": "Tác chiến" },
             { "word": "戦争", "reading": "せんそう", "meaning": "Chiến tranh" },
-            { "word": "決勝戦", "reading": "けっしょうせん", "meaning": "Trận chung kết" }
+            {
+              "word": "決勝戦",
+              "reading": "けっしょうせん",
+              "meaning": "Trận chung kết"
+            }
           ]
         },
         {
@@ -3174,7 +3178,11 @@
           "kunyomi": "き-める・き-まる",
           "examples": [
             { "word": "決める", "reading": "きめる", "meaning": "Quyết định" },
-            { "word": "決まる", "reading": "きまる", "meaning": "Được quyết định" },
+            {
+              "word": "決まる",
+              "reading": "きまる",
+              "meaning": "Được quyết định"
+            },
             { "word": "決意", "reading": "けつい", "meaning": "Quyết ý" },
             { "word": "決心", "reading": "けっしん", "meaning": "Quyết tâm" }
           ]
@@ -3188,7 +3196,11 @@
             { "word": "勝つ", "reading": "かつ", "meaning": "Thắng" },
             { "word": "勝る", "reading": "まさる", "meaning": "Vượt trội" },
             { "word": "決勝", "reading": "けっしょう", "meaning": "Chung kết" },
-            { "word": "圧勝", "reading": "あっしょう", "meaning": "Thắng áp đảo" }
+            {
+              "word": "圧勝",
+              "reading": "あっしょう",
+              "meaning": "Thắng áp đảo"
+            }
           ]
         },
         {
@@ -3200,7 +3212,11 @@
             { "word": "勝負", "reading": "しょうぶ", "meaning": "Thắng thua" },
             { "word": "負ける", "reading": "まける", "meaning": "Thua" },
             { "word": "背負う", "reading": "せおう", "meaning": "Mang vác" },
-            { "word": "自己負担", "reading": "じこふたん", "meaning": "Tự chi trả" }
+            {
+              "word": "自己負担",
+              "reading": "じこふたん",
+              "meaning": "Tự chi trả"
+            }
           ]
         }
       ]
@@ -3216,10 +3232,22 @@
           "kunyomi": "か-わる",
           "examples": [
             { "word": "代わる", "reading": "かわる", "meaning": "Thay thế" },
-            { "word": "八千代", "reading": "やちよ", "meaning": "Yachiyo (tên riêng)" },
+            {
+              "word": "八千代",
+              "reading": "やちよ",
+              "meaning": "Yachiyo (tên riêng)"
+            },
             { "word": "時代", "reading": "じだい", "meaning": "Thời đại" },
-            { "word": "代理人", "reading": "だいりにん", "meaning": "Người đại diện" },
-            { "word": "食事代", "reading": "しょくじだい", "meaning": "Tiền ăn" }
+            {
+              "word": "代理人",
+              "reading": "だいりにん",
+              "meaning": "Người đại diện"
+            },
+            {
+              "word": "食事代",
+              "reading": "しょくじだい",
+              "meaning": "Tiền ăn"
+            }
           ]
         },
         {
@@ -3229,7 +3257,11 @@
           "kunyomi": "あらわ-す・あらわ-れる",
           "examples": [
             { "word": "表す", "reading": "あらわす", "meaning": "Biểu hiện" },
-            { "word": "表れる", "reading": "あらわれる", "meaning": "Xuất hiện, biểu lộ" },
+            {
+              "word": "表れる",
+              "reading": "あらわれる",
+              "meaning": "Xuất hiện, biểu lộ"
+            },
             { "word": "発表", "reading": "はっぴょう", "meaning": "Phát biểu" },
             { "word": "代表", "reading": "だいひょう", "meaning": "Đại biểu" }
           ]
@@ -3239,7 +3271,9 @@
           "meaning": "Bình",
           "onyomi": "ヒョウ",
           "kunyomi": "",
-          "examples": [{ "word": "評価", "reading": "ひょうか", "meaning": "Đánh giá" }]
+          "examples": [
+            { "word": "評価", "reading": "ひょうか", "meaning": "Đánh giá" }
+          ]
         },
         {
           "character": "第",
@@ -3247,8 +3281,16 @@
           "onyomi": "ダイ",
           "kunyomi": "",
           "examples": [
-            { "word": "第1章", "reading": "だいいっしょう", "meaning": "Chương 1" },
-            { "word": "安全第一", "reading": "あんぜんだいいち", "meaning": "An toàn là trên hết" }
+            {
+              "word": "第1章",
+              "reading": "だいいっしょう",
+              "meaning": "Chương 1"
+            },
+            {
+              "word": "安全第一",
+              "reading": "あんぜんだいいち",
+              "meaning": "An toàn là trên hết"
+            }
           ]
         },
         {
@@ -3259,8 +3301,101 @@
           "examples": [
             { "word": "回る", "reading": "まわる", "meaning": "Quay" },
             { "word": "回す", "reading": "まわす", "meaning": "Xoay" },
-            { "word": "回数券", "reading": "かいすうけん", "meaning": "Vé nhiều lượt" },
+            {
+              "word": "回数券",
+              "reading": "かいすうけん",
+              "meaning": "Vé nhiều lượt"
+            },
             { "word": "何回", "reading": "なんかい", "meaning": "Mấy lần" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Ký - Lục - Ưu - Thưởng",
+      "kanji": [
+        {
+          "character": "記",
+          "meaning": "Ký",
+          "onyomi": "キ",
+          "kunyomi": "しる-す",
+          "examples": [
+            { "word": "記す", "reading": "しるす", "meaning": "Ghi chép" },
+            { "word": "日記", "reading": "にっき", "meaning": "Nhật ký" },
+            {
+              "word": "記入",
+              "reading": "きにゅう",
+              "meaning": "Điền vào, ghi vào"
+            },
+            {
+              "word": "暗記",
+              "reading": "あんき",
+              "meaning": "Học thuộc lòng"
+            },
+            {
+              "word": "記録",
+              "reading": "きろく",
+              "meaning": "Ghi chép, kỷ lục"
+            }
+          ]
+        },
+        {
+          "character": "録",
+          "meaning": "Lục",
+          "onyomi": "ロク",
+          "kunyomi": "",
+          "examples": [
+            { "word": "登録", "reading": "とうろく", "meaning": "Đăng ký" },
+            { "word": "録音", "reading": "ろくおん", "meaning": "Ghi âm" },
+            {
+              "word": "記録",
+              "reading": "きろく",
+              "meaning": "Ghi chép, kỷ lục"
+            }
+          ]
+        },
+        {
+          "character": "優",
+          "meaning": "Ưu",
+          "onyomi": "ユウ",
+          "kunyomi": "やさ-しい・すぐ-れる",
+          "examples": [
+            {
+              "word": "優れる",
+              "reading": "すぐれる",
+              "meaning": "Xuất sắc, vượt trội"
+            },
+            {
+              "word": "優しい",
+              "reading": "やさしい",
+              "meaning": "Hiền, dịu dàng"
+            },
+            { "word": "優勝", "reading": "ゆうしょう", "meaning": "Vô địch" },
+            {
+              "word": "優秀",
+              "reading": "ゆうしゅう",
+              "meaning": "Ưu tú, xuất sắc"
+            }
+          ]
+        },
+        {
+          "character": "賞",
+          "meaning": "Thưởng",
+          "onyomi": "ショウ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "賞", "reading": "しょう", "meaning": "Giải thưởng" },
+            {
+              "word": "賞金",
+              "reading": "しょうきん",
+              "meaning": "Tiền thưởng"
+            },
+            {
+              "word": "賞状",
+              "reading": "しょうじょう",
+              "meaning": "Giấy khen"
+            }
           ]
         }
       ]
