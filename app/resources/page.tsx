@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Search, Filter, Download, Eye, Star, X } from "lucide-react";
@@ -75,8 +75,8 @@ function ResourcesPageContent() {
     },
     {
       id: 5,
-      title: "PMG201c - Project Management Quiz",
-      category: "Kỹ thuật phần mềm",
+      title: "PMG201c - Project Management",
+      category: "Quản lý dự án",
       type: "Quiz",
       size: "Đã Hoàn Thành",
       downloads: 0,
@@ -87,14 +87,14 @@ function ResourcesPageContent() {
     },
     {
       id: 6,
-      title: "SYB302c - Entrepreneurship Quiz",
-      category: "Kỹ thuật phần mềm",
+      title: "SYB302c - Khởi nghiệp",
+      category: "Kinh doanh",
       type: "Quiz",
       size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
       description:
-        "Luyện tập kiến thức entrepreneurship: opportunity, innovation, customer value, fundraising",
+        "Luyện tập kiến thức khởi nghiệp: opportunity, innovation, customer value, fundraising",
       link: "/resources/SYB302c",
     },
   ];

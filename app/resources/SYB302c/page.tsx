@@ -167,7 +167,7 @@ function detectTopic(question: string): string {
     q.includes("motivation") ||
     q.includes("risk")
   ) {
-    return "Entrepreneurial Mindset";
+    return "Tư duy khởi nghiệp";
   }
   if (
     q.includes("opportunity") ||
@@ -175,7 +175,7 @@ function detectTopic(question: string): string {
     q.includes("market pull") ||
     q.includes("technology")
   ) {
-    return "Opportunity and Innovation";
+    return "Cơ hội và đổi mới";
   }
   if (
     q.includes("customer") ||
@@ -183,7 +183,7 @@ function detectTopic(question: string): string {
     q.includes("prototype") ||
     q.includes("marketing")
   ) {
-    return "Customer and Marketing";
+    return "Khách hàng và marketing";
   }
   if (
     q.includes("finance") ||
@@ -193,7 +193,7 @@ function detectTopic(question: string): string {
     q.includes("investor") ||
     q.includes("term sheet")
   ) {
-    return "Finance and Fundraising";
+    return "Tài chính và gọi vốn";
   }
   if (
     q.includes("strategy") ||
@@ -201,10 +201,10 @@ function detectTopic(question: string): string {
     q.includes("industry") ||
     q.includes("competitive")
   ) {
-    return "Strategy and Execution";
+    return "Chiến lược và thực thi";
   }
 
-  return "Core Concepts";
+  return "Kiến thức nền tảng";
 }
 
 export default function SYB302cPage() {
@@ -328,7 +328,7 @@ export default function SYB302cPage() {
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-400 mx-auto mb-4"></div>
-          <p className="text-slate-300">Dang tai...</p>
+          <p className="text-slate-300">Đang tải...</p>
         </div>
       </div>
     );
@@ -354,7 +354,7 @@ export default function SYB302cPage() {
                 className="gap-2 bg-slate-900/80 border-slate-700 text-slate-100 hover:bg-slate-800"
               >
                 <ArrowLeft className="w-4 h-4" />
-                Quay lai Tai nguyen
+                Quay lại Tài nguyên
               </Button>
             </Link>
           </motion.div>
@@ -362,10 +362,10 @@ export default function SYB302cPage() {
           <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
             <CardHeader>
               <CardTitle className="text-2xl font-black bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-transparent">
-                SYB302c - Entrepreneurship Quiz
+                SYB302c - Quiz Khởi nghiệp
               </CardTitle>
               <CardDescription className="text-slate-300">
-                Chua co cau hoi trac nghiem hop le trong file
+                Chưa có câu hỏi trắc nghiệm hợp lệ trong file
                 `app/resources/SYB302c/quiz.json`.
               </CardDescription>
             </CardHeader>
@@ -390,7 +390,7 @@ export default function SYB302cPage() {
               className="gap-2 bg-slate-900/80 border-slate-700 text-slate-100 hover:bg-slate-800"
             >
               <ArrowLeft className="w-4 h-4" />
-              Quay lai Tai nguyen
+              Quay lại Tài nguyên
             </Button>
           </Link>
         </motion.div>
@@ -403,42 +403,42 @@ export default function SYB302cPage() {
           <Card className="border-slate-700 bg-slate-900/70 text-slate-100 shadow-xl">
             <CardHeader>
               <CardTitle className="text-3xl md:text-4xl font-black bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-transparent">
-                SYB302c - Entrepreneurship and Venture Strategy
+                SYB302c - Khởi nghiệp và Chiến lược dự án
               </CardTitle>
               <CardDescription className="text-slate-300 text-base">
-                Luyen tap mindset khoi nghiep, phat hien co hoi, customer value
-                proposition va fundraising fundamentals.
+                Luyện tập tư duy khởi nghiệp, phát hiện cơ hội, xây dựng giá trị
+                khách hàng và nền tảng gọi vốn.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="rounded-xl border border-amber-700/60 bg-amber-950/30 p-4">
                 <div className="flex items-center gap-2 text-amber-300 font-semibold mb-2">
                   <Lightbulb className="w-4 h-4" />
-                  Opportunity Thinking
+                  Tư duy cơ hội
                 </div>
                 <p className="text-sm text-slate-300">
-                  Learn how to identify market gaps and evaluate innovation
-                  viability.
+                  Nhận diện khoảng trống thị trường và đánh giá khả năng phát
+                  triển của ý tưởng đổi mới.
                 </p>
               </div>
               <div className="rounded-xl border border-orange-700/60 bg-orange-950/30 p-4">
                 <div className="flex items-center gap-2 text-orange-300 font-semibold mb-2">
                   <Rocket className="w-4 h-4" />
-                  Venture Execution
+                  Thực thi dự án khởi nghiệp
                 </div>
                 <p className="text-sm text-slate-300">
-                  Practice strategic decisions across industry, customer and
-                  partnerships.
+                  Luyện các quyết định chiến lược theo ngành, khách hàng và mô
+                  hình hợp tác.
                 </p>
               </div>
               <div className="rounded-xl border border-rose-700/60 bg-rose-950/30 p-4">
                 <div className="flex items-center gap-2 text-rose-300 font-semibold mb-2">
                   <HandCoins className="w-4 h-4" />
-                  Finance Basics
+                  Nền tảng tài chính
                 </div>
                 <p className="text-sm text-slate-300">
-                  Build confidence with valuation, term sheet and startup
-                  financing terms.
+                  Củng cố kiến thức định giá, term sheet và các thuật ngữ gọi vốn
+                  startup.
                 </p>
               </div>
             </CardContent>
@@ -461,7 +461,7 @@ export default function SYB302cPage() {
                     }
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    On tap truoc
+                    Ôn tập trước
                   </Button>
                   <Button
                     type="button"
@@ -474,7 +474,7 @@ export default function SYB302cPage() {
                     }
                   >
                     <ClipboardCheck className="w-4 h-4 mr-2" />
-                    Lam quiz
+                    Làm quiz
                   </Button>
                 </div>
               </CardContent>
@@ -484,11 +484,11 @@ export default function SYB302cPage() {
               <CardHeader>
                 <CardTitle className="text-xl">
                   {mode === "review"
-                    ? `On tap cau ${currentIndex + 1}/${totalQuestions}`
-                    : `Cau ${currentIndex + 1}/${totalQuestions}`}
+                    ? `Ôn tập câu ${currentIndex + 1}/${totalQuestions}`
+                    : `Câu ${currentIndex + 1}/${totalQuestions}`}
                 </CardTitle>
                 <CardDescription className="text-slate-300">
-                  Chu de: {currentQuestion.topic}
+                  Chủ đề: {currentQuestion.topic}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -543,14 +543,14 @@ export default function SYB302cPage() {
                 {mode === "review" && (
                   <div className="rounded-lg border border-emerald-700/60 bg-emerald-950/30 p-4">
                     <p className="text-sm text-emerald-200">
-                      Dap an dung:{" "}
+                      Đáp án đúng:{" "}
                       <span className="font-bold">
                         {currentQuestion.correctChoiceIds.join(", ")}
                       </span>
                     </p>
                     <p className="text-xs text-emerald-300/90 mt-1">
-                      Goi y: doc ky keyword trong cau hoi, sau do loai tru cac
-                      lua chon gan nghia.
+                      Gợi ý: đọc kỹ từ khóa trong câu hỏi, sau đó loại trừ các
+                      lựa chọn gần nghĩa.
                     </p>
                   </div>
                 )}
@@ -558,7 +558,7 @@ export default function SYB302cPage() {
                 {mode === "quiz" && submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-4">
                     <p className="text-sm text-slate-300">
-                      Dap an dung:{" "}
+                      Đáp án đúng:{" "}
                       <span className="font-bold text-emerald-300">
                         {currentQuestion.correctChoiceIds.join(", ")}
                       </span>
@@ -576,7 +576,7 @@ export default function SYB302cPage() {
                     disabled={currentIndex === 0}
                     className="border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
                   >
-                    Cau truoc
+                    Câu trước
                   </Button>
                   <Button
                     type="button"
@@ -589,7 +589,7 @@ export default function SYB302cPage() {
                     disabled={currentIndex === totalQuestions - 1}
                     className="border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
                   >
-                    Cau tiep
+                    Câu tiếp
                   </Button>
 
                   {mode === "review" ? (
@@ -598,7 +598,7 @@ export default function SYB302cPage() {
                       onClick={handleStartQuiz}
                       className="bg-gradient-to-r from-amber-500 to-orange-500 text-white"
                     >
-                      Bat dau lam quiz
+                      Bắt đầu làm quiz
                     </Button>
                   ) : !submitted ? (
                     <Button
@@ -607,7 +607,7 @@ export default function SYB302cPage() {
                       disabled={answeredCount === 0}
                       className="bg-gradient-to-r from-amber-500 to-orange-500 text-white"
                     >
-                      Nop bai
+                      Nộp bài
                     </Button>
                   ) : (
                     <Button
@@ -617,7 +617,7 @@ export default function SYB302cPage() {
                       className="border-amber-400 bg-slate-900 text-amber-100 hover:bg-amber-900/40 hover:text-amber-50 dark:border-amber-300 dark:bg-slate-900 dark:text-amber-100 dark:hover:bg-amber-900/50 dark:hover:text-amber-50"
                     >
                       <RefreshCw className="w-4 h-4 mr-2" />
-                      Lam lai
+                      Làm lại
                     </Button>
                   )}
                 </div>
@@ -628,7 +628,7 @@ export default function SYB302cPage() {
           <div className="space-y-6">
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Tien do</CardTitle>
+                <CardTitle>Tiến độ</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
@@ -639,16 +639,16 @@ export default function SYB302cPage() {
                 </div>
                 <p className="text-sm text-slate-300">
                   {mode === "review"
-                    ? `Dang on cau ${currentIndex + 1}/${totalQuestions}`
-                    : `Da lam ${answeredCount}/${totalQuestions} cau (${progress}%)`}
+                    ? `Đang ôn câu ${currentIndex + 1}/${totalQuestions}`
+                    : `Đã làm ${answeredCount}/${totalQuestions} câu (${progress}%)`}
                 </p>
                 {mode === "quiz" && submitted && (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-3">
                     <p className="font-semibold text-slate-100">
-                      Ket qua: {score}/{totalQuestions}
+                      Kết quả: {score}/{totalQuestions}
                     </p>
                     <p className="text-sm text-slate-300">
-                      {Math.round((score / totalQuestions) * 100)}% do chinh xac
+                      {Math.round((score / totalQuestions) * 100)}% độ chính xác
                     </p>
                   </div>
                 )}
@@ -657,7 +657,7 @@ export default function SYB302cPage() {
 
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Phan bo chu de</CardTitle>
+                <CardTitle>Phân bố chủ đề</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {Object.entries(topicStats.totalByTopic).map(
@@ -670,11 +670,11 @@ export default function SYB302cPage() {
                       >
                         <div className="flex items-center justify-between text-sm">
                           <span>{topic}</span>
-                          <span className="text-slate-400">{total} cau</span>
+                          <span className="text-slate-400">{total} câu</span>
                         </div>
                         {mode === "quiz" && submitted && wrong > 0 && (
                           <p className="text-xs text-rose-300 mt-1">
-                            Sai {wrong} cau, can on them
+                            Sai {wrong} câu, cần ôn thêm
                           </p>
                         )}
                       </div>
@@ -686,19 +686,19 @@ export default function SYB302cPage() {
 
             <Card className="border-slate-700 bg-slate-900/70 text-slate-100">
               <CardHeader>
-                <CardTitle>Danh gia nhanh</CardTitle>
+                <CardTitle>Đánh giá nhanh</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
                 {mode === "review" && (
                   <p className="text-slate-300">
-                    Day la che do on tap. Moi cau se hien dap an dung de ban xac
-                    thuc lai kien thuc truoc khi lam bai.
+                    Đây là chế độ ôn tập. Mỗi câu sẽ hiển thị đáp án đúng để bạn
+                    xác thực lại kiến thức trước khi làm bài.
                   </p>
                 )}
                 {mode === "quiz" && !submitted && (
                   <p className="text-slate-300">
-                    Hoan thanh quiz de nhan goi y on tap theo tung nhom kien
-                    thuc khoi nghiep.
+                    Hoàn thành quiz để nhận gợi ý ôn tập theo từng nhóm kiến
+                    thức khởi nghiệp.
                   </p>
                 )}
                 {mode === "quiz" &&
@@ -706,7 +706,7 @@ export default function SYB302cPage() {
                   score / totalQuestions >= 0.8 && (
                     <p className="flex items-center gap-2 text-emerald-300">
                       <CheckCircle2 className="w-4 h-4" />
-                      Ban dang nam kha chac nen tang SYB302c.
+                      Bạn đang nắm khá chắc nền tảng SYB302c.
                     </p>
                   )}
                 {mode === "quiz" &&
@@ -714,7 +714,7 @@ export default function SYB302cPage() {
                   score / totalQuestions < 0.8 && (
                     <p className="flex items-center gap-2 text-amber-300">
                       <XCircle className="w-4 h-4" />
-                      Nen on lai nhom innovation, customer value va fundraising.
+                      Nên ôn lại nhóm innovation, customer value và fundraising.
                     </p>
                   )}
               </CardContent>
