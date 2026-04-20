@@ -3399,6 +3399,73 @@
           ]
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Giây - Chênh - Đo - Trình tự - Thứ tự",
+      "kanji": [
+        {
+          "character": "秒",
+          "meaning": "Miểu",
+          "onyomi": "ビョウ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "秒", "reading": "びょう", "meaning": "Giây" },
+            { "word": "毎秒", "reading": "まいびょう", "meaning": "Mỗi giây" },
+            {
+              "word": "秒読み",
+              "reading": "びょうよみ",
+              "meaning": "Đếm ngược"
+            }
+          ]
+        },
+        {
+          "character": "差",
+          "meaning": "Soa",
+          "onyomi": "サ",
+          "kunyomi": "さ-す",
+          "examples": [
+            { "word": "差す", "reading": "さす", "meaning": "Chiếu, rọi" },
+            {
+              "word": "時差",
+              "reading": "じさ",
+              "meaning": "Chênh lệch múi giờ"
+            },
+            { "word": "日差し", "reading": "ひざし", "meaning": "Ánh nắng" },
+            { "word": "差別", "reading": "さべつ", "meaning": "Phân biệt" }
+          ]
+        },
+        {
+          "character": "測",
+          "meaning": "Trắc",
+          "onyomi": "ソク",
+          "kunyomi": "はか-る",
+          "examples": [
+            { "word": "測る", "reading": "はかる", "meaning": "Đo lường" },
+            { "word": "予測", "reading": "よそく", "meaning": "Dự đoán" },
+            { "word": "測定", "reading": "そくてい", "meaning": "Đo đạc" }
+          ]
+        },
+        {
+          "character": "順",
+          "meaning": "Thuận",
+          "onyomi": "ジュン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "手順", "reading": "てじゅん", "meaning": "Trình tự" },
+            { "word": "順番", "reading": "じゅんばん", "meaning": "Thứ tự" }
+          ]
+        },
+        {
+          "character": "番",
+          "meaning": "Phiên",
+          "onyomi": "バン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "順番", "reading": "じゅんばん", "meaning": "Thứ tự" }
+          ]
+        }
+      ]
     }
   ]
 }
