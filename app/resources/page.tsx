@@ -26,7 +26,7 @@ function ResourcesPageContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
-  
+
   const resources = [
     {
       id: 1,
@@ -78,12 +78,24 @@ function ResourcesPageContent() {
       title: "PMG201c - Project Management Quiz",
       category: "Kỹ thuật phần mềm",
       type: "Quiz",
-      size: "Đang cập nhật",
+      size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
       description:
         "Luyện tập kiến thức quản lý dự án: scope, schedule, risk, stakeholder, quality",
       link: "/resources/PMG201c",
+    },
+    {
+      id: 6,
+      title: "SYB302c - Entrepreneurship Quiz",
+      category: "Kỹ thuật phần mềm",
+      type: "Quiz",
+      size: "Đã Hoàn Thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Luyện tập kiến thức entrepreneurship: opportunity, innovation, customer value, fundraising",
+      link: "/resources/SYB302c",
     },
   ];
 
@@ -99,29 +111,41 @@ function ResourcesPageContent() {
 
   // Get unique categories and types
   const categories = useMemo(() => {
-    const cats = Array.from(new Set(resources.map(r => r.category)));
+    const cats = Array.from(new Set(resources.map((r) => r.category)));
     return ["all", ...cats];
   }, []);
 
   const types = useMemo(() => {
-    const typeList = Array.from(new Set(resources.map(r => r.type)));
+    const typeList = Array.from(new Set(resources.map((r) => r.type)));
     return ["all", ...typeList];
   }, []);
 
   // Filter resources based on search and filters
   const filteredResources = useMemo(() => {
-    return resources.filter(resource => {
-      const matchesSearch = searchQuery === "" || 
+    return resources.filter((resource) => {
+      const matchesSearch =
+        searchQuery === "" ||
         resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         resource.description.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      const matchesCategory = selectedCategory === "all" || resource.category === selectedCategory;
-      const matchesType = selectedType === "all" || resource.type === selectedType;
-      const matchesFavorites = !showFavoritesOnly || favoriteSet.has(String(resource.id));
-      
-      return matchesSearch && matchesCategory && matchesType && matchesFavorites;
+
+      const matchesCategory =
+        selectedCategory === "all" || resource.category === selectedCategory;
+      const matchesType =
+        selectedType === "all" || resource.type === selectedType;
+      const matchesFavorites =
+        !showFavoritesOnly || favoriteSet.has(String(resource.id));
+
+      return (
+        matchesSearch && matchesCategory && matchesType && matchesFavorites
+      );
     });
-  }, [searchQuery, selectedCategory, selectedType, showFavoritesOnly, favoriteSet]);
+  }, [
+    searchQuery,
+    selectedCategory,
+    selectedType,
+    showFavoritesOnly,
+    favoriteSet,
+  ]);
 
   const clearFilters = () => {
     setSearchQuery("");
@@ -149,7 +173,7 @@ function ResourcesPageContent() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật, SWD392 và PMG201c
+            Giáo trình Tiếng Nhật, SWD392, PMG201c và SYB302c
           </p>
         </motion.div>
 
@@ -192,12 +216,14 @@ function ResourcesPageContent() {
             <div className="flex gap-3 flex-wrap items-center">
               <div className="flex items-center gap-2">
                 <Filter className="w-4 h-4 text-gray-500" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Lọc:</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  Lọc:
+                </span>
               </div>
-              
+
               {/* Category Filter */}
               <div className="flex gap-2">
-                {categories.map(cat => (
+                {categories.map((cat) => (
                   <button
                     type="button"
                     key={cat}
@@ -217,7 +243,7 @@ function ResourcesPageContent() {
 
               {/* Type Filter */}
               <div className="flex gap-2">
-                {types.map(type => (
+                {types.map((type) => (
                   <button
                     type="button"
                     key={type}
@@ -245,7 +271,9 @@ function ResourcesPageContent() {
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                 }`}
               >
-                <Star className={`w-4 h-4 ${showFavoritesOnly ? "fill-white text-white" : "text-yellow-500"}`} />
+                <Star
+                  className={`w-4 h-4 ${showFavoritesOnly ? "fill-white text-white" : "text-yellow-500"}`}
+                />
                 Chỉ yêu thích
               </button>
 
@@ -265,7 +293,11 @@ function ResourcesPageContent() {
 
             {/* Results Count */}
             <div className="text-sm text-gray-600 dark:text-gray-400">
-              Hiển thị <span className="font-semibold text-gray-900 dark:text-white">{filteredResources.length}</span> / {resources.length} tài liệu
+              Hiển thị{" "}
+              <span className="font-semibold text-gray-900 dark:text-white">
+                {filteredResources.length}
+              </span>{" "}
+              / {resources.length} tài liệu
             </div>
           </div>
         </motion.div>
@@ -289,99 +321,103 @@ function ResourcesPageContent() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredResources.map((resource, index) => (
-            <motion.div
-              key={resource.id}
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card className="hover:shadow-xl transition-shadow dark:bg-gray-800 dark:border-gray-700">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <CardTitle className="text-xl mb-2">
-                        {resource.title}
-                      </CardTitle>
-                      <CardDescription className="flex items-center gap-2">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs font-medium">
-                          {resource.category}
-                        </span>
-                        <span className="text-gray-500">• {resource.type}</span>
-                        <span className="text-gray-500">• {resource.size}</span>
-                      </CardDescription>
-                    </div>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon"
-                      aria-label={
-                        favoriteSet.has(String(resource.id))
-                          ? "Bỏ yêu thích"
-                          : "Đánh dấu yêu thích"
-                      }
-                      title={
-                        favoriteSet.has(String(resource.id))
-                          ? "Bỏ yêu thích"
-                          : "Đánh dấu yêu thích"
-                      }
-                      onClick={async () => {
-                        if (!user) {
-                          router.push("/auth/login?redirect=/resources");
-                          return;
-                        }
-
-                        const { success, error } = await toggleFavorite(
-                          String(resource.id),
-                        );
-                        if (!success) {
-                          alert(error || "Không thể cập nhật yêu thích");
-                        }
-                      }}
-                    >
-                      <Star
-                        className={`w-5 h-5 ${
+              <motion.div
+                key={resource.id}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="hover:shadow-xl transition-shadow dark:bg-gray-800 dark:border-gray-700">
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <CardTitle className="text-xl mb-2">
+                          {resource.title}
+                        </CardTitle>
+                        <CardDescription className="flex items-center gap-2">
+                          <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs font-medium">
+                            {resource.category}
+                          </span>
+                          <span className="text-gray-500">
+                            • {resource.type}
+                          </span>
+                          <span className="text-gray-500">
+                            • {resource.size}
+                          </span>
+                        </CardDescription>
+                      </div>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        aria-label={
                           favoriteSet.has(String(resource.id))
-                            ? "fill-yellow-400 text-yellow-500"
-                            : "text-gray-400"
-                        }`}
-                      />
-                    </Button>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <Download className="w-4 h-4" />
-                        {resource.downloads}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        {favoriteCounts[String(resource.id)] || 0}
-                      </span>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link href={resource.link}>
-                        <Button size="sm" variant="outline" className="gap-2">
-                          <Eye className="w-4 h-4" />
-                          Xem
-                        </Button>
-                      </Link>
-                      <Button size="sm" className="gap-2" asChild>
-                        <a
-                          href="https://drive.google.com/drive/folders/10djG7_z2QVRr6_wx_yVBrFhZcCPaDD-O?usp=drive_link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Download className="w-4 h-4" />
-                          Tải về
-                        </a>
+                            ? "Bỏ yêu thích"
+                            : "Đánh dấu yêu thích"
+                        }
+                        title={
+                          favoriteSet.has(String(resource.id))
+                            ? "Bỏ yêu thích"
+                            : "Đánh dấu yêu thích"
+                        }
+                        onClick={async () => {
+                          if (!user) {
+                            router.push("/auth/login?redirect=/resources");
+                            return;
+                          }
+
+                          const { success, error } = await toggleFavorite(
+                            String(resource.id),
+                          );
+                          if (!success) {
+                            alert(error || "Không thể cập nhật yêu thích");
+                          }
+                        }}
+                      >
+                        <Star
+                          className={`w-5 h-5 ${
+                            favoriteSet.has(String(resource.id))
+                              ? "fill-yellow-400 text-yellow-500"
+                              : "text-gray-400"
+                          }`}
+                        />
                       </Button>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <span className="flex items-center gap-1">
+                          <Download className="w-4 h-4" />
+                          {resource.downloads}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          {favoriteCounts[String(resource.id)] || 0}
+                        </span>
+                      </div>
+                      <div className="flex gap-2">
+                        <Link href={resource.link}>
+                          <Button size="sm" variant="outline" className="gap-2">
+                            <Eye className="w-4 h-4" />
+                            Xem
+                          </Button>
+                        </Link>
+                        <Button size="sm" className="gap-2" asChild>
+                          <a
+                            href="https://drive.google.com/drive/folders/10djG7_z2QVRr6_wx_yVBrFhZcCPaDD-O?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Download className="w-4 h-4" />
+                            Tải về
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         )}

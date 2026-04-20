@@ -27,7 +27,9 @@ let snapshot: PresenceSnapshot = {
   lastSeenByUserId: {},
 };
 
-let channel: ReturnType<typeof supabase.channel> | null = null;
+type PresenceChannel = ReturnType<typeof supabase.channel>;
+
+let channel: PresenceChannel | null = null;
 let active = false;
 let currentUserId: string | null = null;
 let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
@@ -167,14 +169,17 @@ function buildOnlineMeta(state: Record<string, PresenceMeta[]>): Record<string, 
   return next;
 }
 
-function cleanupChannel() {
-  if (!channel) {
+function cleanupChannel(target: PresenceChannel | null = channel) {
+  if (!target) {
     return;
   }
 
-  channel.untrack().catch(() => {});
-  void supabase.removeChannel(channel);
-  channel = null;
+  if (channel === target) {
+    channel = null;
+  }
+
+  target.untrack().catch(() => {});
+  void supabase.removeChannel(target);
 }
 
 function stopHeartbeat() {
@@ -257,12 +262,12 @@ function scheduleReconnect() {
   }, delay);
 }
 
-function syncPresence() {
-  if (!channel) {
+function syncPresence(source: PresenceChannel | null = channel) {
+  if (!source || source !== channel) {
     return;
   }
 
-  const state = channel.presenceState<PresenceMeta>();
+  const state = source.presenceState<PresenceMeta>();
   const nextOnline = buildOnlineSet(state);
   const nextOnlineMeta = buildOnlineMeta(state);
   const now = new Date().toISOString();
@@ -326,7 +331,7 @@ async function connect() {
     console.error("Set realtime auth error:", error);
   }
 
-  const nextChannel = supabase.channel(USERS_ONLINE_PRESENCE_CHANNEL, {
+  const nextChannel: PresenceChannel = supabase.channel(USERS_ONLINE_PRESENCE_CHANNEL, {
     config: {
       presence: {
         key: currentUserId,
@@ -335,12 +340,17 @@ async function connect() {
   });
   channel = nextChannel;
 
-  nextChannel.on("presence", { event: "sync" }, syncPresence);
-  nextChannel.on("presence", { event: "join" }, syncPresence);
-  nextChannel.on("presence", { event: "leave" }, syncPresence);
+  nextChannel.on("presence", { event: "sync" }, () => syncPresence(nextChannel));
+  nextChannel.on("presence", { event: "join" }, () => syncPresence(nextChannel));
+  nextChannel.on("presence", { event: "leave" }, () => syncPresence(nextChannel));
 
   nextChannel.subscribe((status) => {
     if (!active) {
+      return;
+    }
+
+    // Ignore status events from channels that are no longer current.
+    if (channel !== nextChannel) {
       return;
     }
 
@@ -351,7 +361,7 @@ async function connect() {
         connectionStatus: "connected",
       });
       void refreshPresence().finally(() => {
-        syncPresence();
+        syncPresence(nextChannel);
         void persistLastOnline(true);
         startHeartbeat();
       });
@@ -361,7 +371,7 @@ async function connect() {
     if (status === "CHANNEL_ERROR" || status === "TIMED_OUT" || status === "CLOSED") {
       markConnectionError();
       stopHeartbeat();
-      cleanupChannel();
+      cleanupChannel(nextChannel);
       scheduleReconnect();
     }
   });
