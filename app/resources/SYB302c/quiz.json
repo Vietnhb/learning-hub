@@ -1,0 +1,1259 @@
+﻿[
+  {
+    "question": "Entrepreneurs cause entrepreneurship.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "What are common motivators for entrepreneurs to start a new venture? Check all that apply.",
+    "choices": [
+      "A. To elevate their independence",
+      "B. To earn more money",
+      "C. To create new things",
+      "D. To increase their freedom",
+      "E. To help others"
+    ],
+    "answer": "A,B,C,D,E"
+  },
+  {
+    "question": "Innovations must be radical and disruptive in order to be viable for new company creation.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Nike\u0027s development of the \"Air Jordan\" brand is an example of this type of innovation:",
+    "choices": [
+      "A. Marketing innovation",
+      "B. Business model innovation",
+      "C. Product innovation",
+      "D. Service innovation"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What makes a decision \"strategic\"? Check all that apply.",
+    "choices": [
+      "A. Results in substantial gains or losses as a result of the decision and its subsequent outcomes",
+      "B. Involves planning actions in an uncertain and unpredictable future",
+      "C. Requires significant allocations ofresources"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "Strategic decisions typically share which four processes? Choose the four that apply.",
+    "choices": [
+      "A. Recognizing a problem situation",
+      "B. Generating alternatives",
+      "C. Evaluating the various alternatives",
+      "D. Assessing the environmental impact",
+      "E. Selecting the alternative that best satisfies the evaluation criteria"
+    ],
+    "answer": "A,B,C,E"
+  },
+  {
+    "question": "The Opportunity Analysis Canvas is designed to help individuals develop which areas? (Check all that apply).",
+    "choices": [
+      "A. Thinking entrepreneurially",
+      "B. Seeing entrepreneurially",
+      "C. Acting entrepreneurially"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "Entrepreneurs have a natural desire to take risks at a higher level than non-entrepreneurs.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Which type of individuals are more likely to discover and act on an entrepreneurial opportunity?",
+    "choices": ["A. External locus of control", "B. Internal locus of control"],
+    "answer": "B"
+  },
+  {
+    "question": "Which is the more valuable measure of your social capital?",
+    "choices": [
+      "A. The diversity of the people that you know.",
+      "B. The number of people that you know."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Why build social capital? (Check all that apply.)",
+    "choices": [
+      "A. To be a more valuable collaborator",
+      "B. To be more creative",
+      "C. To be a more efficient problem solver",
+      "D. To be better informed"
+    ],
+    "answer": "A,B,C,D"
+  },
+  {
+    "question": "What four attributes influence an industry\u0027s favorability to new firm entry? Choose the four that apply.",
+    "choices": [
+      "A. Demand conditions",
+      "B. Knowledge conditions",
+      "C. Industry lifecycle",
+      "D. Innovation potential",
+      "E. Industry structure",
+      "F. Market attractiveness"
+    ],
+    "answer": "A,B,C,E"
+  },
+  {
+    "question": "What are the four characteristics of industry structure? Choose the four that apply.",
+    "choices": [
+      "A. Demographics",
+      "B. Advertising intensity",
+      "C. Firm concentration",
+      "D. Regulatory issues",
+      "E. Psychographics",
+      "F. Capital intensity",
+      "G. Firm size"
+    ],
+    "answer": "B,C,F,G"
+  },
+  {
+    "question": "Sustainable competitive advantage can only be maintained until competitors are able to duplicate or develop a compelling substitute.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "When developing a new product, it is necessary to meet every customer desire.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Within the product design and development decisions, successful entrepreneurs create multiple products simultaneously that are uniquely positioned for every potential market segment.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "It is smart to set your pricing significantly lower than competitors\u0027 prices in an effort to capture market share and achieve your revenue goals quickly.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Strategic planning requires near-term commitment for long-term benefits.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "What factors may make it economically unattractive to produce your anticipated product or service? Choose all that apply.",
+    "choices": [
+      "A. Over-designing the product to the point where the price is beyond your customer",
+      "B. Designing the product for a market niche that is too small to generate the desired revenue goals of your company",
+      "C. Agreeing to minimum production volume requirements that exceed your ability to pay for the production costs and invest in marketing appropriately"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "What are the four key items do customers want to know? (Choose Four)",
+    "choices": [
+      "A. How does this impact my end state?",
+      "B. Do I have chemistry with this seller?",
+      "C. Is this the right solution?",
+      "D. Can I afford this solution?",
+      "E. What are the technical specifications of the solution?"
+    ],
+    "answer": "A,B,C,D"
+  },
+  {
+    "question": "A \"customer archetype\" is a \"customer type\"?",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "A winning value proposition typically requires a \"gain creator\" or \"pain killer\" for a major \"customer job\".",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "Customers derive value not just from what companies produce in their factories, but also from what companies add to their factory output in the form of packaging, services, advertising, customer advice, financing, delivery arrangements, and upgrades.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "The Total Product Concept consists of which four main elements? (Choose Four)",
+    "choices": [
+      "A. Core",
+      "B. Cost of doing business",
+      "C. Augmented",
+      "D. Potential Product",
+      "E. Expected"
+    ],
+    "answer": "C,D,E"
+  },
+  {
+    "question": "What are the three pillars of Qualitative Research? (Choose Three)",
+    "choices": [
+      "A. In-depth interviews",
+      "B. Focus groups",
+      "C. Observation",
+      "D. Surveys"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "What are the three types Of Strategic Partnerships? (Choose Three)",
+    "choices": [
+      "A. Vertical partnerships",
+      "B. Co-opetition",
+      "C. Acquisitions",
+      "D. Horizontal partnerships"
+    ],
+    "answer": "A,B,D"
+  },
+  {
+    "question": "High fidelity prototyping tools are best for concept sketching and basic story boards.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "What is the first step of the Experience Map?",
+    "choices": [
+      "A. The lens",
+      "B. The journey model",
+      "C. Quantitative information",
+      "D. Qualitative insight"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Customer insights is the fuel that drives effective marketing in all companies.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "Anti-dilution provisions in financing documents protect:",
+    "choices": [
+      "A. (a) founders, by preventing their ownership in a company from being significantly reduced by new investors",
+      "B. (b) investors from dilution in the event of stock splits, stock dividends or sales of stock at a price lower than that the investor paid",
+      "C. (c) employees who have options issued from the company\u0027s option pool",
+      "D. (d) both (a) and (b)"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Bridge financing is a term that means:",
+    "choices": [
+      "A. An interim financing round that provides cash to a company that is anticipating either a larger financing round, a merger or an initial public offering",
+      "B. A special kind of construction loan",
+      "C. An interim financing round that provides cash to a company that \"bridges\" the gap between cash on hand and the next monthly payroll",
+      "D. None of the above"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "The key components of a business plan are:",
+    "choices": [
+      "A. Income Statement, Balance Sheet, Cash Flow Statement",
+      "B. Company Description, Product Description, Market Analysis, Headcount Plan, Customer List, Patents",
+      "C. Executive Summary, Company Description, Product/Service Description, Market Opportunity, Sales \u0026 Marketing Plan, Management Team, Financial Projections",
+      "D. Early-stage companies do not need to write business plans because they new to the market and too many variables are unknown"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "The 4 \"M\u0027s\" that investors look for in a company are:",
+    "choices": [
+      "A. Momentum, Management Team, Market Potential, Money",
+      "B. Monthly Sales, Management Team, Money, Mystery",
+      "C. Momentum, Monthly Sales, Money, Management Team",
+      "D. None of the above"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is false about a Term Sheet?",
+    "choices": [
+      "A. It includes the pre-money valuation of the company.",
+      "B. It is binding on the investor for 60 days.",
+      "C. It specifies the use of proceeds.",
+      "D. It specifies the form of investment."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "The primary purpose of the \u0027cap\u0027 in a convertible note is:",
+    "choices": [
+      "A. To convert into equity at the value of the next round of financing, regardless of the valuation of that round.",
+      "B. To delay the valuation of an early-stage company.",
+      "C. To establish an arbitrary valuation of an early-stage company.",
+      "D. To place a ceiling on the valuation at which the note converts into equity."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Series A, Series B and Series C preferred refers to the:",
+    "choices": [
+      "A. Value of the preferred stock.",
+      "B. Priority of the preferred stock in liquidation.",
+      "C. Class of the preferred stock.",
+      "D. Nothing - they are simply given a letter to distinguish each preferred stock issuance."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "An investor invests $2.5 million on $5 million post-money valuation in a participating Preferred Stock. The company subsequently sells for $10 million. What is the ownership of the Preferred investor and how much of the $10 million will the investor receive?",
+    "choices": [
+      "A. 33%; $3.3 million.",
+      "B. 50%; $5 million.",
+      "C. 50%; $6.25 million.",
+      "D. 33%; $5 million."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following statements about a balance sheet is correct?",
+    "choices": [
+      "A. Assets = Liabilities + Equity",
+      "B. Equity = Assets - Liabilities",
+      "C. Liabilities = Assets - Equity",
+      "D. All of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is the simplest form of corporate structure?",
+    "choices": [
+      "A. General partnership",
+      "B. Limited partnership",
+      "C. Unincorporated sole proprietorship",
+      "D. Limited liability company (LLC)"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "BACKGROUND - Ima Founder starts her own business, NEWCO, on January 1, 2014 and sets up a corporation with 10,000 shares of common stock, with a par value of $0.001 per share. She invests $1,000 in NEWCO in exchange for the 10,000 shares of common stock.She subsequently raises $150,000 in convertible notes, which she closes on March 1, 2014. The notes accrue simple interest at 12% per year. The maturity date of the notes is March 1, 2017, at which time all principal and accrued interest are payable to the noteholders, unless the notes are converted earlier in accordance with the note terms.From April 1 through December 31, 2014, Ima spends $72,000 in payroll costs to develop her first product, a web application used to book doctor appointments online. All costs to develop the application are expensed as incurred.On March 1, 2014, Ima enters into a lease agreement to rent office space for NEWCO. The terms of the lease include an upfront payment of a $3,000 security deposit to guarantee timely rent payment and provide for repairing any damages to the office that are not considered \"normal wear and tear\", but which is refundable upon completion of the lease term. Rent is $3,000 per month, which includes ALL costs, including use of the office space, phones, use of common facilities and all Internet connectivity. Rent is payable in arrears (that is, payable on the first day of each month following a month during which the office space is occupied).On September 1, 2014, she engages the services of a UX/UI consultant to provide a professional user experience in using the web application. The consultant is paid $5,000 monthly, payable on the first day of the month following the month the work is performed.On December 1, 2014, she sells 4 annual contracts of her web application to doctor offices at a price of $60,000 per contract per year. The doctor offices have immediate use of the web application and are given 30 day payment terms. (Note: for purposes of this exercise, assume the cost of the mobile applications is negligible).ASSIGNMENT - Develop a balance sheet and an income statement for NEWCO based upon the above facts. Based on the balance sheet and income statement developed, answer the following questions:QUESTION 1: What is NEWCO\u0027s cash balance on December 31, 2014?",
+    "choices": ["A. $17,000", "B. $34,000", "C. $68,000", "D. $6,800"],
+    "answer": "B"
+  },
+  {
+    "question": "What is the balance of convertible notes (including accrued interest) at December 31, 2014?",
+    "choices": ["A. $247,500", "B. $150,000", "C. $82,500", "D. $165,000"],
+    "answer": "D"
+  },
+  {
+    "question": "What is NEWCO\u0027s Shareholders\u0027 Equity at December 31, 2014?",
+    "choices": ["A. $(45,000)", "B. $(4,400)", "C. $(22,500)", "D. $(116,000)"],
+    "answer": "D"
+  },
+  {
+    "question": "What is NEWCO\u0027s pre-tax income or loss for the year 2014?",
+    "choices": [
+      "A. Loss of $117,000",
+      "B. Loss of $67,000",
+      "C. Gain of $67,000",
+      "D. Gain of $117,000"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Deferred revenues are revenues that have been booked (contracted for) but not yet earned as of a reporting date. What is Newco\u0027s deferred revenue balance at December 31, 2014?",
+    "choices": ["A. $240,000", "B. $220,000", "C. $65,000", "D. $120,000"],
+    "answer": "B"
+  },
+  {
+    "question": "What is the accrued expense balance on the balance sheet at December 31, 2014?",
+    "choices": ["A. $8,000", "B. $4,000", "C. $16,000", "D. $12,000"],
+    "answer": "A"
+  },
+  {
+    "question": "What is NEWCO\u0027s Shareholders\u0027 Equity at December 31, 2014?",
+    "choices": ["A. $(45,000)", "B. $(4,400)", "C. $(116,000)", "D. $(22,500)"],
+    "answer": "C"
+  },
+  {
+    "question": "Early stage companies, owing to the lack of history and collateral, rarely raise money via debt with one notable exception, which is:",
+    "choices": [
+      "A. Preferred stock, with a dividend that acts like an interest rate",
+      "B. Convertible notes, which are a hybrid, more closely related to equity",
+      "C. Common stock",
+      "D. Shareholder loans"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is TRUE regarding intermediary sources of capital? (Select all that apply.)",
+    "choices": [
+      "A. This category includes investment bankers.",
+      "B. They can introduce you to other financing sources.",
+      "C. They are a prime source of early-stage capital.",
+      "D. They may charge a fee for their services."
+    ],
+    "answer": "A,B,D"
+  },
+  {
+    "question": "Strategic or corporate venture capital firms make investments:",
+    "choices": [
+      "A. Primarily outside of their core businesses to diversify their risk",
+      "B. Within their core businesses to achieve financial and strategic returns",
+      "C. Only to achieve financial returns",
+      "D. To build risk portfolios with excess cash of the corporation"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "The primary sources of seed and early stage capital include the following: (Select all that apply.)",
+    "choices": [
+      "A. Angel investors",
+      "B. Management team",
+      "C. Founders",
+      "D. IPO\u0027s"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "Which of the following statements is CORRECT about friends and family investors? (Select all that apply.)",
+    "choices": [
+      "A. Terms should always be put into writing",
+      "B. They invest because of the relationship to the founder(s)",
+      "C. When discussing an investment with a friends and family investor, the entrepreneur should clearly discuss risk versus reward",
+      "D. Only equity investments are allowed given the relationship to the founder"
+    ],
+    "answer": "A,B,C"
+  },
+  {
+    "question": "According to the U.S. Federal Reserve, what percentage of all startups are bootstraped?",
+    "choices": [
+      "A. Less than 20%",
+      "B. More than 70%",
+      "C. About 50%",
+      "D. Almost 90%"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What is the primary benefit to the entrepreneur of bootstrapping his/her company:",
+    "choices": [
+      "A. The longer time it takes to get to market allows the entrepreneur time to make sure the product works perfectly",
+      "B. If successful, the entrepreneur retains a greater share of the exit value (or a higher valuation during fund raising)",
+      "C. Bartering with established companies develop lasting relationships that would not otherwise be developed",
+      "D. It allows the entrepreneur to be creative in finding ways to achieve progress without money"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "One of the disadvantages of an entrepreneur going into an accelerator program is that the entrepreneur:",
+    "choices": [
+      "A. Spends a lot of time meeting investors interested in future financing rounds",
+      "B. Is often provided new office space",
+      "C. Must give up equity to participate",
+      "D. Spends too much time receiving training that strengthens his/her business expertise"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is true about angel investors:",
+    "choices": [
+      "A. They invest twice as much as venture capital funds do each year",
+      "B. They provide critical seed capital that other funding sources do not focus on",
+      "C. They are often motivated by factors other than financial return",
+      "D. All of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Seed or early stage investors typically invest in companies that have all of the following attributes: (Select all that apply.)",
+    "choices": [
+      "A. Is at cash flow break even",
+      "B. A promising product concept",
+      "C. Is seeking funding of $5 million or less",
+      "D. Early customer validation"
+    ],
+    "answer": "B,C,D"
+  },
+  {
+    "question": "Which of the following statements is correct about the due diligence process? (Select all that apply.)",
+    "choices": [
+      "A. Due diligence is not time consuming if done properly",
+      "B. Due diligence is a two-way process",
+      "C. Prospective investors will want to investigate legal, financial and strategic matters",
+      "D. The key to success in due diligence is advance preparation and cooperation among the parties"
+    ],
+    "answer": "B,C,D"
+  },
+  {
+    "question": "Which of the following items discovered in the due diligence process could be a cause for concern by an investor, which could ultimately lead to a decision by the investor to NOT invest?",
+    "choices": [
+      "A. Large accounts payable for goods and services that are all \"current\" (i.e., within the terms offered by the vendor)",
+      "B. A large shareholder loan that will be paid upon completion of the current financing",
+      "C. Significant related party transactions that are properly documented and performed on an arms-length basis",
+      "D. Accounts receivable from 20 very small customers which are 10 days past due"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "When negotiating terms sheets with prospective investors, which of the following are correct? (Select all that apply.)",
+    "choices": [
+      "A. Experience from past deals should be used to negotiate the current term sheet.",
+      "B. Don\u0027t take everything the other side says at face value - they may be posturing.",
+      "C. Both the investor and entrepreneur need to win.",
+      "D. Compromise indicates to the investor that the entrepreneur is desperate for funding."
+    ],
+    "answer": "B,C"
+  },
+  {
+    "question": "Valuation of startup companies can be done objectively by following traditional valuation methods.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Choose the statement that is NOT correct?",
+    "choices": [
+      "A. ROI = Exit Value Ã· Post-money valuation",
+      "B. If the average PE ratio of companies similar to your company in the industry in which you will operate is 15X, and your projected after tax earnings in year 5 is $3 million, a reasonable exit valuation for your company in year 5 is $45 million",
+      "C. The Wiltbank Study indicates that investors expect an IRR of 15% in six years",
+      "D. Post-money valuation = Exit Value Ã· ROI"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What factor(s) can impact the valuation of your company?",
+    "choices": [
+      "A. Hot sectors",
+      "B. Management team experience",
+      "C. Early traction (revenues, partnerships, etc.)",
+      "D. A well developed V1 product",
+      "E. All of the above"
+    ],
+    "answer": "E"
+  },
+  {
+    "question": "Which of the following statements about term sheets is correct? (Select all that apply.)",
+    "choices": [
+      "A. They state the pre-money valuation and the amount of the investment.",
+      "B. They are binding on the investor for 60 days.",
+      "C. No shop clauses are beneficial to the investor but not the company.",
+      "D. They normally include a statement on the use of the proceeds of the investment."
+    ],
+    "answer": "A,C,D"
+  },
+  {
+    "question": "Equity securities include all of the following: (Select all that apply.)",
+    "choices": [
+      "A. Warrants",
+      "B. Preferred stock",
+      "C. Convertible notes",
+      "D. Options"
+    ],
+    "answer": "A,B,D"
+  },
+  {
+    "question": "A cap on a convertible note is used to:",
+    "choices": [
+      "A. Establish the maximum pre-money valulation at which the note will convert",
+      "B. Put a limit on the maximum interest rate payable on the note",
+      "C. Secure the payment of the note upon liquidation",
+      "D. Put a value on the company"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is not a characteristic of Preferred Stock?",
+    "choices": [
+      "A. Preferred stock is an equity instrument with some characteristic of debt",
+      "B. Preferred stock shareholders receive the greater of the original purchase plus accrued dividends OR a percentage of the liquidation proceeds on an \u0027as-converted\" basis in a standard liquidation of the company",
+      "C. Anti-dilution provisions protect the preferred shareholder\u0027s pro-rata interests",
+      "D. It is the financing vehicle of choice for venture capitalists"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following statements is correct about what prospective investors want to see when you pitch your company to them? (Select all that apply.)",
+    "choices": [
+      "A. Your company should be in a new industry where the investor has not made previous investments to enable the investor to diversify his/her risk",
+      "B. Investors don\u0027t care how or if your product works because they assume it does or will",
+      "C. Why customers will buy your product/solution",
+      "D. You and your team have an in-depth knowledge of the market"
+    ],
+    "answer": "B,C,D"
+  },
+  {
+    "question": "When an entrepreneur tells an investor \"I have no competition\", what the investor hears and thinks is:",
+    "choices": [
+      "A. (a) The market the entrepreneur is going after must not be very big if no other competitors are entering it",
+      "B. (b) That\u0027s great! This entrepreneur is pretty smart to have built a product in a big market that has no competing products to worry about",
+      "C. (c) This entrepreneur doesn\u0027t know the market very well",
+      "D. (d) Both a and c"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is Guy Kawasaki\u0027s 10/20/30 rule?",
+    "choices": [
+      "A. 10 slides, 20 minutes, 30-point font",
+      "B. 10-point font, 20 slides, 30 minutes",
+      "C. 10 minutes, 20-point font, 30 slides",
+      "D. None of the above"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the one attribute of every \"perfect\" pitch deck, regardless of its size?",
+    "choices": [
+      "A. They have an appendix with additional slides not covered during the actual pitch session.",
+      "B. They tell a compelling story.",
+      "C. They all have at least one embedded video.",
+      "D. They have bright colors, professional fonts and creative graphics to enhance the presentation."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "When discussing/presenting the Competition slide in a pitch deck, which of the following statements is correct?",
+    "choices": [
+      "A. Point out why your product or solution is better but never \"knock\" the competition.",
+      "B. Highlight how bad the competitors\u0027 product is.",
+      "C. If there is no competition in your market, this slide is unnecessary.",
+      "D. Never discuss competitive products by name - otherwise, your prospective investors may seek out your competitors and invest in their products."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "The appendix is useful for:",
+    "choices": [
+      "A. Putting information into the deck that you want to have available in the event questions arise after the pitch to which these slides relate.",
+      "B. Hiding problematic information that you\u0027d rather not talk about.",
+      "C. Providing a list of all slides in the deck.",
+      "D. Nothing - an appendix should never be included in your pitch deck."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "When you \"tell your story\" to prospectors, you should do all of the following: (Select all that apply.)",
+    "choices": [
+      "A. Be prepared to go into great details, especially if your business is complicated.",
+      "B. Discuss who you are, where you\u0027re from and why you\u0027re starting the company.",
+      "C. Be genuine, passionate and try to connect directly with the audience.",
+      "D. Tell interesting stories constructed from anecdotes from your life that an investor might think is interesting."
+    ],
+    "answer": "B,C,D"
+  },
+  {
+    "question": "Which of the following is a \"Don\u0027t\" that should be avoided in making an investor pitch?",
+    "choices": [
+      "A. Reading your slides",
+      "B. Exaggerating",
+      "C. Focusing only on positives",
+      "D. All of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following are \"Do\u0027s\" of making a pitch: (Select all that apply.)",
+    "choices": [
+      "A. Connect emotionally with the investor.",
+      "B. Give a product demo, if applicable.",
+      "C. Forecast \u0027hockey stick\u0027 growth to ensure the investor sees that market as having significant potential.",
+      "D. Highlight your and your management team\u0027s prior successes."
+    ],
+    "answer": "A,B,D"
+  },
+  {
+    "question": "Assuming that an entrepreneur must speak to between 10 to 15 prospective investors to actually have one investor \"close\"; that the amount of each investor\u0027s investment is $50,000; and you are trying to raise a minimum of $1 million. How many prospective investors must the entrepreneur speak to before they successfully raise $1 million?",
+    "choices": [
+      "A. 100",
+      "B. 10 to 15",
+      "C. It is impossible to estimate based on the data provided.",
+      "D. 200 to 300"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Activities through which cash is obtained from and paid to lenders, owners, and investors are called _____ activities.",
+    "choices": ["A. operating", "B. investing", "C. financing", "D. marketing"],
+    "answer": "C"
+  },
+  {
+    "question": "when developing a new product, it is necessary to meet every customer details",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Which Of The Following Items Discovered In The Due Diligence Process Could Be A Cause For Concern By An Investor, Which Could Ultimately Lead To A Decision By The Investor To NOT Invest?",
+    "choices": [
+      "A. Significant related party transactions that are properly documented and performed on an arms-length basis",
+      "B. A large shareholder loan that will be paid upon completion of the current financing",
+      "C. Large accounts payable for goods and services that are all \"current\" (i.e., within the terms offered by the vendor)",
+      "D. Accounts receivable from 20 very small customers which are 10 days past due"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "A cap on a convertible note is used to:",
+    "choices": [
+      "A. Establish the maximum pre-money valuation at which the note will convert",
+      "B. Put a limit on the maximum interest rate payable on the note",
+      "C. Secure the payment of the note upon liquidation",
+      "D. Put a value on the company"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Entrepreneurs have a natural desire to take risks at a higher level than non-entrepreneurs.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Working for a very large organization in the tractor manufacturing industry, John always heard complaints from customers about the parts and service aspect of the business. Taking an early retirement, John started his small business to address the customer complaints he had been hearing. Which of the following best describes the factor that led John to this business idea?",
+    "choices": [
+      "A. A similar business",
+      "B. Chance",
+      "C. Work experience",
+      "D. Family and friends"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What are the Customer Segments that your company or organization services?",
+    "choices": [
+      "A. Customer segments define the different groups of products or service",
+      "B. customer segments define the different groups of people or organizations to service",
+      "C. Customer segments define the different groups of partners to serve",
+      "D. Customer segments define the different groups of suppliers to serve",
+      "E. All of the above"
+    ],
+    "answer": "E"
+  },
+  {
+    "question": "What is the value proposition that your company or organization offers to solve customer problems and satisfy their needs?",
+    "choices": [
+      "A. Value proposition describes the bundle of products or services that create value for a specific customer segment",
+      "B. Value proposition describes the profits and lossesc. Value proposition describes the price and service",
+      "D. Value proposition describes the target market",
+      "E. None of the above"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Focus group method refers to gathering data by sample observation",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Search and capture of new ideas that lead to business opportunities is called opportunity recognition",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements is CORRECT about friends and family investors?",
+    "choices": [
+      "A. When discussing an investment with a friends and family investor, the entrepreneur should clearly discuss risk versus reward",
+      "B. They invest because of the relationship to the founder(s).",
+      "C. Only equily investments are allowed given the relationship to the founder",
+      "D. Terms should always be put into writing",
+      "E. All of the above",
+      "F. None of the above"
+    ],
+    "answer": "E"
+  },
+  {
+    "question": "_____ is a process of producing an idea or opportunity that is novel and useful, frequently delivered from making connections among distinct ideas or opportunities.",
+    "choices": ["A. Ethics", "B. Creativity", "C. Imitation", "D. Flexibility"],
+    "answer": "B"
+  },
+  {
+    "question": "Customers derive value not just from what companies produce in their factories, but also from what companies add to their factory output in the form of packaging, services, advertising, customer advice, financing, delivery arrangements, and upgrades.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "what is the simplest form of corporate structure",
+    "choices": [
+      "A. General partnership",
+      "B. Limited partnership",
+      "C. Unicorporated sole proprietorship",
+      "D. Limited LLC"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "When people find a way to turn their hobbies into successful businesses, which of the following factors is considered as leading them to their business idea?",
+    "choices": [
+      "A. Family and friends",
+      "B. Education and expertise",
+      "C. Serendipity",
+      "D. Personal interest"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "A cost structure is all costs incurred to operate a business model. By owling",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "The key market knowledge for a small business",
+    "choices": [
+      "A. is to know how to seek and obtain external financing.",
+      "B. focuses on its immediate marketplace and communities.",
+      "C. is to know how to cash out through the sale of an initial public offering of stock or through the sale of the company to a larger company.",
+      "D. focuses on the need to know how to dominate the market and grow dramatically and quickly."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "All of the following are examples of long term incentives to employees that help retain valuable team members EXCEPT",
+    "choices": [
+      "A. profit-sharing plans.",
+      "B. stock options.",
+      "C. stock grants.",
+      "D. employee bonuses."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "The primary sources of seed and early stage capital include the following",
+    "choices": [
+      "A. Founders",
+      "B. Management team",
+      "C. Angel investors",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is True regarding intermediary sources of capital?",
+    "choices": [
+      "A. This category includes investment bankers.",
+      "B. They can introduce you to other financing sources.",
+      "C. They may charge a fee for their services.",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is not a characteristic of Preferred Stock?",
+    "choices": [
+      "A. Preferred stock is an equity instrument with some characteristic of debt",
+      "B. Preferred stock shareholders receive the greater of the original purchase plus accrued dividends OR a percentage of the liquidation proceeds on an \u0027as-converted\" basis in a standard liquidation of the company",
+      "C. Anti-dilution provisions protect the preferred shareholder\u0027s pro-rata interests",
+      "D. It is the financing vehicle of choice for venture capitalists"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "An example or photo of your product or service is a great visual aid in helping you sell your plan in your written market plan. This is an example of",
+    "choices": [
+      "A. Defining your product price",
+      "B. Defining your product.",
+      "C. Using a promotinal tool for your product",
+      "D. Defining a distribution system for your product"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What are the characteristics of industry structure?",
+    "choices": [
+      "A. advertising intensity",
+      "B. firm size",
+      "C. Demographics",
+      "D. capital intensity",
+      "E. All of the above",
+      "F. None Of the above"
+    ],
+    "answer": "E"
+  },
+  {
+    "question": "The percentage amount that the payout of an investment differs from original cost is called as",
+    "choices": [
+      "A. dividend.",
+      "B. gain on investment.",
+      "C. risk.",
+      "D. interest."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "An entrepreneur\u0027s relationships and contacts with others is termed as",
+    "choices": [
+      "A. a social network.",
+      "B. visibility.",
+      "C. the Golden Rule.",
+      "D. mutuality."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements ARE CORRECT about the due diligence process?",
+    "choices": [
+      "A. Due diligence is a two-way process",
+      "B. Due diligence is not time consuming if done properly",
+      "C. Prospective investors will want to investigate legal, financial, and strategic matters",
+      "D. The key to success in due diligence is advance preparation and cooperation among the parties"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is a disadvantage of a start-up?",
+    "choices": [
+      "A. It begins with a clean slate",
+      "B. Absence of \"legacy\" locations, buildings, and equipment",
+      "C. Absence of initial name recognition",
+      "D. Providing new products or services"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following statements about term sheets is correct?",
+    "choices": [
+      "A. No shop clauses are beneficial to the investor but not the company",
+      "B. The normally include a statement on the use of the proceeds of the investment",
+      "C. They state the pre-money valuation and the amount of the investment",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "According to research, start-up entrepreneurs lait most confident about obtaining startup capital",
+    "choices": ["A. True", "B. False"],
+    "answer": ""
+  },
+  {
+    "question": "What factor(s) can impact the valuation of your company?",
+    "choices": [
+      "A. Hot sectors",
+      "B. Management learn experience",
+      "C. Early traction (revenues, partnerships, etc)",
+      "D. A well developed V1 product",
+      "E. All of the above"
+    ],
+    "answer": "E"
+  },
+  {
+    "question": "Compensation, training time, employee tax, and accounting costs are some of the additional expenses involved in adding",
+    "choices": [
+      "A. part-time employees.",
+      "B. full-time employees.",
+      "C. contract employees.",
+      "D. temporary employees"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Strategic or corporate venture capital firms make investments:",
+    "choices": [
+      "A. Primarily outside of their core businesses to diversify their risk",
+      "B. Within their core businesses to achieve financial and strategic returns",
+      "C. Only to achieve financial returns",
+      "D. To build risk portfolios with excess cash of the corporation"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "The entrepreneurial focus which refers to doing the most work with the Invest resources is",
+    "choices": [
+      "A. Customer-focus",
+      "B. Innovation",
+      "C. Efficiency",
+      "D. Creation"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Anti-dilution provisions in financing documents protect:",
+    "choices": [
+      "A. (a) founders, by preventing their ownership in a company from being significantly reduced by new investors",
+      "B. (b) investors from dilution in the event of stock splits, stock dividends or sales of stock at a price lower than that the investor paid",
+      "C. (c) employees who have options issued from the company\u0027s option pool",
+      "D. (d) both (a) and (b)"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "People who buy ownership rights in your business are considered",
+    "choices": [
+      "A. Outside equity investors",
+      "B. Family",
+      "C. Debt holders",
+      "D. Creditors"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "For small businesses, the key budget is the _____ budget.",
+    "choices": ["A. cash", "B. retained earnings", "C. sales", "D. marketing"],
+    "answer": "A"
+  },
+  {
+    "question": "Cash is composed of all of these forms of money that can be immediately used to make payments EXCEPT:",
+    "choices": [
+      "A. currency.",
+      "B. receivables.",
+      "C. demand deposits.",
+      "D. traveler\u0027s checks."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Sustainable competitive advantagecan only be maintained until competitors are able to duplicateor develop a compelling substitute.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following are \"Do\u0027s\" of making a pitch",
+    "choices": [
+      "A. Highlight your and your management team\u0027s prior successes",
+      "B. Connect emotionally with the investor.",
+      "C. Give a product demo, if applicable.",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Equity securities include all of the following:",
+    "choices": [
+      "A. Warrants",
+      "B. Preferred stock",
+      "C. Options",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is an advantage of a start-up?",
+    "choices": [
+      "A. It begins with a clean state",
+      "B. It has initail name recognition",
+      "C. It is easy to establish and provide positive cash flow",
+      "D. It has easy acces to revolving credit"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements is correct about what prospective investors want to see when you pitch your company to them? (Select all that apply.)",
+    "choices": [
+      "A. Investors don\u0027t care how or if your product works because they assume it does or will",
+      "B. Why customers will buy your product/solution",
+      "C. You and your team have an in-depth knowledge of the market",
+      "D. All of the above",
+      "E. None of the above"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "When an entrepreneur tells an investor \"I have no competition\", what the investor hears and thinks is:",
+    "choices": [
+      "A. (a) The market the entrepreneur is going after must not be very big if no other competitors are entering it",
+      "B. (b) That\u0027s great! This entrepreneur is pretty smart to have built a product in a big market that has no competing products to worry about",
+      "C. This entrepreneur will invest their money",
+      "D. All of the above"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "The sum of all profits and losses, less all dividends paid since the beginning of the business is called",
+    "choices": [
+      "A. liabilities.",
+      "B. retained earnings.",
+      "C. net income.",
+      "D. tax liability"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "A \"customer archetype\" is a \"customer type\"?",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "A winning value proposition typically requires a \"gain creator\" or \"pain killer\" for a major \"customer job\".",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "Customers derive value not just from what companies produce in their factories, but also from what companies add to their factory output in the form of packaging, services, advertising, customer advice, financing, delivery arrangements, and upgrades.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "High fidelity prototyping tools are best for concept sketching and basic story boards.",
+    "choices": ["A. True", "B. False"],
+    "answer": "B"
+  },
+  {
+    "question": "Customer insights is the fuel that drives effective marketing in all companies.",
+    "choices": ["A. True", "B. False"],
+    "answer": "A"
+  },
+  {
+    "question": "BACKGROUND - Ima Founder starts her own business, NEWCO, on January 1, 2014 and sets up a corporation with 10,000 shares of common stock, with a par value of $0.001 per share. She invests $1,000 in NEWCO in exchange for the 10,000 shares of common stock. She subsequently raises $150,000 in convertible notes, which she closes on March 1, 2014. The notes accrue simple interest at 12% per year. The maturity date of the notes is March 1, 2017, at which time all principal and accrued interest are payable to the noteholders, unless the notes are converted earlier in accordance with the note terms. From April 1 through December 31, 2014, Ima spends $72,000 in payroll costs to develop her first product, a web application used to book doctor appointments online. All costs to develop the application are expensed as incurred. On March 1, 2014, Ima enters into a lease agreement to rent office space for NEWCO. The terms of the lease include an upfront payment of a $3,000 security deposit to guarantee timely rent payment and provide for repairing any damages to the office that are not considered \"normal wear and tear\", but which is refundable upon completion of the lease term. Rent is $3,000 per month, which includes ALL costs, including use of the office space, phones, use of common facilities and all Internet connectivity. Rent is payable in arrears (that is, payable on the first day of each month following a month during which the office space is occupied). On September 1, 2014, she engages the services of a UX/UI consultant to provide a professional user experience in using the web application. The consultant is paid $5,000 monthly, payable on the first day of the month following the month the work is performed. On December 1, 2014, she sells 4 annual contracts of her web application to doctor offices at a price of $60,000 per contract per year. The doctor offices have immediate use of the web application and are given 30 day payment terms. (Note: for purposes of this exercise, assume the cost of the mobile applications is negligible). ASSIGNMENT - Develop a balance sheet and an income statement for NEWCO based upon the above facts. Based on the balance sheet and income statement developed, answer the following questions: QUESTION 1: What is NEWCO\u0027s cash balance on December 31, 2014?",
+    "choices": ["A. $17,000", "B. $68,000", "C. $6,800", "D. $34,000"],
+    "answer": "B"
+  },
+  {
+    "question": "What is the Value Proposition that your company or organization offers to solve customer problems and satisfy their needs? Your response should address value proposition items to include a distinct mix of elements catering to a customer segment\u0027s needs. Values may be quantitative, such as price or speed of service, or qualitative, such as design or customer experience. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "The value proposition describes the bundle of products or services that create value for a specific customer segment. Examples are such as what value do we deliver to the customer? Which customer needs are we satisfying? And, what are we offering to each customer segment? Value propositions exist in quantitative and qualitative areas. Quantitative areas include price, cost reduction, risk reduction, convenience and usability. Qualitative areas include newness, performance, design, brand, and customization"
+  },
+  {
+    "question": "What are the Customer Segments that your company or organization serves? Your response should address customer segment items to include the needs and wants of customers, distribution channels, types of relationships, different profitabilities, and the customers\u0027 willingness to pay. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "Customer segments define the different groups of people or organizations to serve. They have separate segments if customer needs require and justify distinct offer, of if customer reached through different channels, requires different types of relationships, are willing to pay for different aspects, and have different profitabilities. Customer segments may exist in different types. Mass market is one large group comprising only one segment, niche market is specific, specialized customer group, segmented is a slightly different customer groups, diversified is having multiple unrelated customer segments and multi-sided markets."
+  },
+  {
+    "question": "What Channels does your company or organization utilize for communication, distribution, and sales? Your response should address some or all of the five distinct channel phases which include awareness, evaluation, purchase, delivery, and after sales. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "Channels describe how a company communicates with and reaches its customer segments to deliver a value proposition. Channels helps in raising awareness of the products and services, helping customers evaluate the value proposition, allowing customers to purchase, delivering a value proposition, and providing post-purchase customer support. Channels demand consideration of key questions. For example, through which channels do our customer segments want to be reached? How can we integrate our channels? And, what measures define which channels work best?"
+  },
+  {
+    "question": "What are the Customer Relationships that your company or organization plans to establish with its customer segments? Your response should address customer relationships that may include customer acquisition, customer retention, and upselling. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "A customer relationship describes the types of relationships a company establishes with specific customer segments. It is driven by motivations to include customer acquisition, customer retention and upselling."
+  },
+  {
+    "question": "What are the Revenue Streams that your company or organization will generate? Your response should address at least one of the following transaction revenues resulting from one-time customer payments or recurring revenues resulting from ongoing payments. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "A revenue stream represents the cash a company generates from each Customer Segment. Revenues minus costs equals to profits. There are different types of revenue streams. The first is transaction revenues resulting from one-time customer payments. Another type is a recurring revenues resulting from ongoing payments to either deliver a value proposition to customers and/or provide post-purchase customer support. Revenue stream opportunities require you to ask several core questions. For what value are customers really willing to pay? For what do they currently pay (competitors)? And, how will this change in the future? Ways to generate revenue streams includes buying (asset sale), renting, subscription, licensing and advertising."
+  },
+  {
+    "question": "What are the Key Partnerships that your company or organization utilizes? Your response should describe the company or organization\u0027s network of suppliers and partners. Examples of partnerships include strategic alliances, co-opetition, joint ventures, and buyer-supplier relationships. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "Key partnership describes the network of suppliers and partners that make the business model work. There are different types of partnerships which includes strategic alliances between non-competitors, joint ventures to develop new businesses, buyer-supplier relationships, and co-opetition which is a strategic partnership between competitors. Several motivations to create partnerships includes optimization and economy of scale, which is the most basic form of partnership or buyer-supplier relationship designed to optimize resources and activities (i.e. reduce cost). Another is an acquisition of particular resources and activities, to extend capabilities by relying on other firms to furnish particular resources or perform certain activities, and motivated by needs to acquire knowledge, licenses, or access to customers. Lastly is to reduce risk and uncertainty."
+  },
+  {
+    "question": "What Key Resources are required to make the business model work? Your response should address key resources that can be physical, financial, intellectual, and/or human. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "Key resources describe the most important assets required to make a business model work. It can be physical, financial, intellectual, or human. Key resources can be owned or leased by the company or acquired from key partners. Intellectual resources include intangible assets such as licences, trade marks and patents held by the firm."
+  },
+  {
+    "question": "What are the Key Activities your company or organization must perform? Your response should describe the most important activities a company must perform to operate successfully. Key activities will differ depending on type of business. These activities may be outsourced or completed within the organization. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "Key activities are the most important things a company must do to make its business model work. For example, for PC manufacturer Dell, key activities include supply chain management. And for consultancy McKinsey, key activities include problem solving."
+  },
+  {
+    "question": "What is the Cost Structure of your company or organization? Your response should describe all costs incurred to operate the business model. Two types of cost structures are cost-driven and value-driven; many business models fall somewhere in between these two models. Please respond with one paragraph.",
+    "choices": [],
+    "answer": "A cost structure isall costs incurred to operate a business model. By creating and delivering value, maintaining customer relationships, and generating revenue all incur costs. Costs can be calculated relatively easily after defining key resources, key activities, and key partnerships Cost-driven business models focus onminimizing costs wherever possible. They aim at creating and maintaining the leanest possible cost structure, using low price value propositions, maximum automation, and extensive outsourcing. Value-driven companies are lessconcerned with the cost implications, and instead focus on value creation. They offer premium value propositions and a high degree of personalized service usually characterize value-driven business models."
+  },
+  {
+    "question": "a market attractiveness factor.",
+    "choices": [],
+    "answer": "\u003cdiv class\"dxv8pid\"\u003e \u003cspan class=\"bgP\"\u003eIt\u0027s the sales and profit potential of an innovative idea. What revenue might it produce? What value might it produce? And how easily can it get into the marketplace and produce what we would call profitable sales. One example of this might be how Apple\u0027s next generation iPad, or whatever the next generation iPad, or next generation iPhone product is likely to break into the market and displace sales of competitors\u0027 products.\u003c/div\u003e\u003c/span\u003e"
+  },
+  {
+    "question": "growth potential.",
+    "choices": [],
+    "answer": "the potential growth of the market need, and the relative degree to which that market need is being served is an assessment that you have to make about any new innovation. sá»± tÄƒng trÆ°á»Ÿng tiá»m nÄƒng cá»§a thá»‹ trÆ°á»ng cáº§n, vÃ  má»©c Ä‘á»™ tÆ°Æ¡ng Ä‘á»‘i mÃ  nhu cáº§u thá»‹ trÆ°á»ng Ä‘ang Ä‘Æ°á»£c phá»¥c vá»¥ lÃ  Ä‘Ã¡nh giÃ¡ mÃ  báº¡n pháº£i thá»±c hiá»‡n vá» báº¥t ká»³ cáº£i tiáº¿n má»›i nÃ o. VÃ¬ váº­y, á»Ÿ Ä‘Ã¢y má»™t láº§n ná»¯a, chÃºng ta cÃ³ thá»ƒ há»i iPad cÃ³ bao nhiÃªu tiá»m nÄƒng phÃ¡t triá»ƒn trÆ°á»›c khi nhu cáº§u thá»‹ trÆ°á»ng Ä‘Æ°á»£c thá»a mÃ£n hoáº·c Ä‘á»‘i thá»§ cáº¡nh tranh nÃ o Ä‘Ã³ cung cáº¥p giáº£i phÃ¡p thay tháº¿? VÃ  tÃ´i nghÄ© ráº±ng chÃºng ta Ä‘Ã£ tháº¥y nhanh nhÆ° tháº¿ nÃ o thá»‹ trÆ°á»ng Ä‘Ã£ trÃ n ngáº­p cÃ¡c lá»±a chá»n thay tháº¿ cho iPad."
+  },
+  {
+    "question": "technology-push",
+    "choices": [],
+    "answer": "\u003cdiv class\"dxv8pid\"\u003e research and development or \u003cspan class=\"bgP\"\u003esome technology breakthrough actually drives the launch of a product. And so it\u0027s the technology that is interesting to customers in the marketplace and valuable to customers in the marketplace.\u003c/div\u003e"
+  },
+  {
+    "question": "Market pull (innovation strategies)",
+    "choices": [],
+    "answer": "\u003cdiv class\"dxv8pid\"\u003e This is when the market demand for some solution to a problem or some solution \u003cspan class=\"bgP\"\u003eto a need in the marketplace actually triggers a development of a new product.\u003c/div\u003e"
+  },
+  {
+    "question": "Which \"customers\" do most solutions involve? (Choose All That Apply)",
+    "choices": [],
+    "answer": "Saboteur Payer Influencer End-user Recommender Decision-Maker"
+  },
+  {
+    "question": "What is the \"chasm\" in the content of marketing innovations? (Please respond in approximately 50 words).",
+    "choices": [],
+    "answer": "The chasm is the gap between your early adopters (visionaries) and your early majority, which make up the the start of the mainstream market. This is the most difficult market to capture and often where most technologies fail to make progress."
+  },
+  {
+    "question": "The world beyond the chasm requires companies to be adept at four competencies: (1) establishing strategic partnerships, (2) securing competitive advantage, (3) positioning their businesses, and (4) providing effective leadership. For the business idea that you developed in the first assignment on business modeling, what is your strategy for developing these four competencies? (Please respond in approximately 250 words).",
+    "choices": [],
+    "answer": "no answer - check later"
+  },
+  {
+    "question": "The four purposes of prototypes are: (Choose Four)",
+    "choices": [],
+    "answer": "Communication Learning Milestones Integration"
+  },
+  {
+    "question": "What is the first step of the Experience Map?",
+    "choices": [],
+    "answer": "The lens"
+  },
+  {
+    "question": "The multiple levels of product and service is an extremely useful concept in thinking of a number of marketing concepts, such as growth, customer value, segmentation, and positioning. For the product or service that you envisioned with the first assignment on business modelling, what is the (1) Core Benefit, (2) Actual Product or Service, and (3) Augmented Products or Services? (Please respond in approximately 250 words).",
+    "choices": [],
+    "answer": "The core product acts as a basis for the tangible product (which is the extra benefits that differentiate the product from its competitors) and the augmented product, which also includes peripheral benefits such as after-sales service, helplines or even training in the use of the product. Actual Product level When understanding the customers\u0027 needs, the wants -specific requirements to match the needs- can be co-created. By opening up the product development process, integrating iterative feedback loops and involving external stakeholders will achieve increased effectiveness and lowered costs. Customization kicks in when a \u0027standard\u0027/basic product is being delivered where customers can personalize the output to its own refined wants. This furthers the perception of the experience in a positive way. Augmented Product level Also on this level, customization (output) personalizes additional features and benefits all adapted to the requirements of the customer. Prior to the output, as within the Actual Product, defining and co-creating the additional features and benefits increases effectiveness and value."
+  },
+  {
+    "question": "\u003cdiv class\"dxv8pid\"\u003e Your board members, and their reasons for being included, should be a brief part of your business plan. A board of directors gives you access to expertise, provided you choose them wisely, but at the cost of giving up control of the business to them. Technically, the officers of a corporation report to the board of directors, who bear the ultimate responsibility for the proper management of the company. A board of advisors is a less-formal entity. You can have the same kind of people on an advisory board, but you don\u0027t report to them nor do they have the same power as a board of directors. Your board should be able to challenge your thinking, help you solve knotty problems, and even change management if necessary. \u003cem\u003eWhat specific activities, events, organizations, etc. can you engage in to meet qualified, potential board members for your venture?\u003c/em\u003e\u003c/div\u003e",
+    "choices": [],
+    "answer": "Read definition only"
+  },
+  {
+    "question": "\u003cdiv class\"dxv8pid\"\u003e A number of the most important people who\u0027ll do work for you won\u0027t work for you. Your attorney, your accountant, and your insurance broker are all crucial members of your team. They are part of the external team of your venture. \u003cem\u003eWhat specific activities, events, organizations, etc. can you engage in to meet qualified, potential outside professionals for your venture?\u003c/em\u003e\u003c/div\u003e",
+    "choices": [],
+    "answer": "Read definition only"
+  },
+  {
+    "question": "How would you define the \"entrepreneurial mindset\"? Be sure to discuss each of the five factors. Please respond in one to two paragraphs. |",
+    "choices": [],
+    "answer": "Entrepreneurial mindset has five factors. They are; high need for achievement, individualism, locus of control focus, and optimism. Need for achievement is defined as having a preference for challenge, an acceptance of personal responsibility for outcomes, and a personal drive for accomplishment. Individualism means that entrepreneurs need less support or approval from others. High individualism is associated with an emphasis on individual initiative and achievement. Often results in entrepreneurs needing less support or approval from others. Control has two segments, which is autonomy and locus of control. Autonomy is an individual\u0027s belief about their level of freedom from the influence of others. Locus of control is an individual\u0027s belief that they can influence the environment in which they are found. People with higher levels of autonomy and an internal locus on control are more likely to discover an entrepreneurial opportunity. Internally-oriented locus of control people believed that they are able to influence their environment. Successful entrepreneurs are able to focus attention on a single task and see it through to completion. This leads selected individuals to react and to become successful entrepreneurs. While optimism enables entrepreneurs to try new things and attempt difficult tasks, optimism may also present negative impacts. Optimism leads entrepreneurs to frequently make judgements on subjective positive factors."
+  },
+  {
+    "question": "We are interested in your personal perspectives on \"entrepreneurial motivation\". Discuss each of the three factors through which goal-directed behavior is initiated, energized and maintained as related to entrepreneurial strategic decision-making. Please respond in one to two paragraphs. |",
+    "choices": [],
+    "answer": "We are interested in your personal perspectives on \"entrepreneurial motivation\". Discuss each of the three factors through which goal-directed behavior is initiated, energized and maintained as related to entrepreneurial strategic decision-making. Please respond in one to two paragraphs. Entrepreneurial motivation is having high self-efficacy in all task, having high cognitive motivation, Self-efficacy is defined as one\u0027s belief in one\u0027s ability to accomplish a specific task. Self-efficacy differs as it is task dependent. For example my self-efficacy is low in selling in an audience because I fear public speaking. In improving one\u0027s self-efficacy, there different approaches, namely; increasing mastery, having a role model/observing, verbal encouragement from trusted sources like a coach or mentor, and exhibiting a positive mood and high energy. Cognition is the process of thought. Individuals exhibiting a high need for cognition tend to seek, acquire, think, and reflect on relevant information. In other words their brain is active in thinking for solutions all the time. Tolerance for ambiguity is defined as the tendency to perceive ambiguous situations as desirable rather than threatening. Entrepreneurs make complex decisions in ambiguous situations and desire them. It is a necessary factor for entrepreneurs based on dynamic nature of markets and competition."
+  },
+  {
+    "question": "In considering the role of \"risk\" in entrepreneurial decision-making, why do entrepreneurs accept risks that traditional managers may avoid? Please respond in one paragraph. |",
+    "choices": [],
+    "answer": "Entrepreneurs engage in risk that traditional managers may avoid because they have intuition, have individualistic view, have high tolerance for ambiguity and high confidence in skills, knowledge, and expertise. Entrepreneurs mitigate risk based on intuition which is improved through past experiences. They have individualistic view complemented by relationships and team orientation. They have high tolerance for ambiguity based on comfort with making difficult choices with in complement information in the past. And lastly they have high confidence in skills, knowledge, and expertise enhanced based on past success. Entrepreneurs engage in risk that traditional managers may avoid because they lack in necessary information in a situation needing prompt decision. They develop an inside view of the decisions they face. They also ignore elements of past situations. And they favor positive possible outcomes over negative outcomes. Entrepreneurs assess real risk and improve decision-making by using the following keys. They apply multiple perspectives to a decision situation, they integrate these perspectives into the decision, they use a complex cognitive framework regarding a decision situation, and they have broader and deeper view of the decision at hand which may result in a more accurate assessment of risk."
+  },
+  {
+    "question": "Based on the following data, determine a \"reasonable\" valuation that an investor would place on your company in issuing a term sheet to make an investment in your company. Note that all amounts stated in the assumptions, except for estimated revenues that are based on the financial projections for your company, are based on comparables for companies similar to yours who are operating in your industry. (1) Estimated revenues in year 5 (assumed exit year) - $25 million (2) After tax earnings in the year of exit are estimated at 12% of revenues, or $3 million. (3) PE ratio in the year of exit is 20X (4) Exit values approximate 2X of revenues in the exit year (5) The investor\u0027s desired IRR yield based on the Wiltbank Study is 20X. QUESTION 1: Assuming the investor is investing $750,000, what is the average exit value? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "$50 million"
+  },
+  {
+    "question": "Assuming the investor is investing $750,000, what is the post-money value? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "$2.5 million"
+  },
+  {
+    "question": "Assuming the investor is investing $750,000, what is the pre-money value? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "$1.75 million"
+  },
+  {
+    "question": "Assuming the investor is investing $750,000, what is the post-money ownership for the investor? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "30%"
+  },
+  {
+    "question": "Assuming the investor is investing $750,000, what is the post-money ownership for the founders/ owners? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "70%"
+  },
+  {
+    "question": "The pitch deck is less important than your product, vision, team and execution, the factors that ultimately attract investment. However, it exists to convey those aspects of your company and pique investors\u0027 interest in hearing more. Using the following points as a guideline, develop a \"winning pitch\" for your new venture. (1.) Create a memorable \"one-liner\" - an opening vision/mission statement that catches the attention of your audience. (2.) Know your audience. (3.) Use between to 8-10 slides, providing the following information: a. Cover slide, with logo and contact information, b. Opportunity, c. Management ream, d. Product, e. Market size, f. Business model, g. Competition, h. Go-to-market strategy, i. Traction, and j. How much money you\u0027re raising and the \"use of proceeds\". (4.) If your pitch includes a demo, make sure you have enough time in the pitch session to do it properly - otherwise DON\u0027T. You can demo the product later. -- To create your pitch deck, you may use this free tool, Google Slides (http://www.google.com/slides/about/). --How to create a new presentation Once you are in Google Drive you can create a new presentation as follows: (1) Click the red \"Create\" button in the top left corner (2) Then click \"Presentation\" from the drop-down menu (3) Your blank presentation will now open. (4) You can pick a theme for your new presentation, which you can change later if you wish. (5) You can give it a name by clicking in the \"Untitled Presentation\" box at the top left, and then typing in your title. You can click there again to change the title at any time. (6) Google Docs automatically saves your presentation any time you make changes. NOTE: Your submission with this assignment will not be shared with classmates, and will only be viewable by University and Coursera staff. SUBMISSION: Please paste the URL to where you posted your pitch deck online. Include your presentation notes in the \"notes\" section below each slide. You may use Google Slides (http://www.google.com/slides/about/) or an alternate site. |",
+    "choices": [],
+    "answer": "The pitch deck is less important than your product, vision, team and execution, the factors that ultimately attract investment."
+  },
+  {
+    "question": "Develop a high-level funding schedule for a new venture business concept that can be used to discuss cash requirements for the first year of operations with prospective investors. The schedule should be prepared on a monthly basis and should include the following specific details: (1.) Headcount plan - including all personnel need to carry out the critical operations of the business for the upcoming year. (2.) Forecast general \u0026 administrative expenses, including office rent and related costs, utilities, communication expenses, insurance, filing fees, etc. (3.) Estimate the cost of how you plan to market the company/product. (4.) Develop your revenue model, including key assumptions and variables such as unit sales, sales growth, number of customers by the end of the year, product pricing, etc., Make the model flexible enough to enable you to change key variables and run \"what if\" analyses. (5.) If the cost of delivering your product of service is significant, forecast the cost of goods sold based upon estimate costs and the product assumptions used in item 4 above. (6.) After preparing the initial financial plan, critically review the plan and assumptions (including having advisors and other management team members review the plan for reasonableness). Adjust the month-to-month results to \"normalize\" the cash balance (and ensure it never runs below $0), adjusting discretionary expenses if necessary. Upon completion of the financial model, answer the following questions: QUESTION 1: How much cash do you need to raise to operate during the first 12 months of operations? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "Cash requirements for the first year of operations."
+  },
+  {
+    "question": "Does the amount of cash needed in item 1 above fall within the \"reasonableness range\" for an early stage company (i.e., up to $5 million)? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "Up to $5 million."
+  },
+  {
+    "question": "What is your monthly cash burn rate - both gross and net burn (gross burn is the average of total expenses each month; net burn is gross burn offset by the average monthly cash generated from revenues). Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "Average of total expenses each month."
+  },
+  {
+    "question": "How long will you be able to operate at the end of the 12 months forecast before you need to raise additional funding? Please include your numeric answer and an explanation of several sentences. |",
+    "choices": [],
+    "answer": "12 months forecast."
+  }
+]
