@@ -225,11 +225,10 @@ export default function Home() {
 
             <motion.div
               onClick={() =>
-                window.open("https://baovietweb.site/resources/JPD316", "_self")
+                window.open("https://baovietweb.site/resources/", "_self")
               }
               variants={itemVariants}
             >
-              {/* <Link href="https://baovietweb.site/resources/JPD316"> */}
               <Card className="hover:shadow-xl transition-all cursor-pointer group hover:scale-105 border-2 border-orange-300 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20">
                 <CardHeader>
                   <motion.div
@@ -240,10 +239,10 @@ export default function Home() {
                     <Languages className="w-12 h-12 text-orange-500 dark:text-orange-400" />
                   </motion.div>
                   <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    Ngoại Ngữ - JPD316
+                    Ngoại Ngữ
                   </CardTitle>
                   <CardDescription>
-                    Giáo trình Tiếng Nhật JPD316 - Hiện đã có sẵn
+                    Giáo trình Tiếng Nhật - Hiện đã có sẵn
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
