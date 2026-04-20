@@ -106,9 +106,7 @@ function parseAnswerIds(
     return [choices[0].id];
   }
 
-  return choices
-    .map((choice) => choice.id)
-    .filter((id) => picked.includes(id));
+  return choices.map((choice) => choice.id).filter((id) => picked.includes(id));
 }
 
 function areSameAnswerSet(selected: string[], correct: string[]): boolean {
@@ -271,7 +269,9 @@ export default function SYB302cPage() {
   const score = useMemo(() => {
     return questions.reduce((acc, question, index) => {
       const selected = selectedAnswers[index] ?? [];
-      return areSameAnswerSet(selected, question.correctChoiceIds) ? acc + 1 : acc;
+      return areSameAnswerSet(selected, question.correctChoiceIds)
+        ? acc + 1
+        : acc;
     }, 0);
   }, [questions, selectedAnswers]);
 
@@ -499,8 +499,9 @@ export default function SYB302cPage() {
                 <div className="space-y-3">
                   {currentQuestion.choices.map((choice) => {
                     const isSelected = selectedForCurrent.includes(choice.id);
-                    const isCorrect =
-                      currentQuestion.correctChoiceIds.includes(choice.id);
+                    const isCorrect = currentQuestion.correctChoiceIds.includes(
+                      choice.id,
+                    );
                     const isWrongSelected =
                       submitted && isSelected && !isCorrect;
 
@@ -690,8 +691,8 @@ export default function SYB302cPage() {
               <CardContent className="space-y-2 text-sm">
                 {mode === "review" && (
                   <p className="text-slate-300">
-                    Day la che do on tap. Moi cau se hien dap an dung de ban
-                    xac thuc lai kien thuc truoc khi lam bai.
+                    Day la che do on tap. Moi cau se hien dap an dung de ban xac
+                    thuc lai kien thuc truoc khi lam bai.
                   </p>
                 )}
                 {mode === "quiz" && !submitted && (
@@ -716,15 +717,6 @@ export default function SYB302cPage() {
                       Nen on lai nhom innovation, customer value va fundraising.
                     </p>
                   )}
-                {openEndedCount > 0 && (
-                  <div className="mt-3 rounded-lg border border-amber-800/60 bg-amber-950/30 p-3 text-amber-100">
-                    <p className="font-semibold">Note dataset:</p>
-                    <p>
-                      Dang co {openEndedCount} muc khong co lua chon trac
-                      nghiem, da duoc bo qua trong quiz mode.
-                    </p>
-                  </div>
-                )}
               </CardContent>
             </Card>
           </div>
