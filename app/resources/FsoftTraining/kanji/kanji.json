@@ -3466,6 +3466,62 @@
           ]
         }
       ]
+    },
+    {
+      "id": 22,
+      "title": "Cầu - Đả - Đầu - Điểm",
+      "kanji": [
+        {
+          "character": "球",
+          "meaning": "Cầu",
+          "onyomi": "キュウ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "球", "reading": "きゅう", "meaning": "Quả bóng" },
+            { "word": "地球", "reading": "ちきゅう", "meaning": "Trái đất" },
+            { "word": "野球", "reading": "やきゅう", "meaning": "Bóng chày" },
+            { "word": "卓球", "reading": "たっきゅう", "meaning": "Bóng bàn" }
+          ]
+        },
+        {
+          "character": "打",
+          "meaning": "Đả",
+          "onyomi": "ダ",
+          "kunyomi": "う-つ",
+          "examples": [
+            { "word": "打つ", "reading": "うつ", "meaning": "Đánh" },
+            {
+              "word": "打ち合わせ",
+              "reading": "うちあわせ",
+              "meaning": "Họp, trao đổi"
+            },
+            { "word": "投打", "reading": "とうだ", "meaning": "Ném và đánh" },
+            { "word": "打点", "reading": "だてん", "meaning": "Điểm ghi được" }
+          ]
+        },
+        {
+          "character": "投",
+          "meaning": "Đầu",
+          "onyomi": "トウ",
+          "kunyomi": "な-げる",
+          "examples": [
+            { "word": "投げる", "reading": "なげる", "meaning": "Ném" },
+            { "word": "投書", "reading": "とうしょ", "meaning": "Thư gửi báo" },
+            { "word": "投打", "reading": "とうだ", "meaning": "Ném và đánh" }
+          ]
+        },
+        {
+          "character": "点",
+          "meaning": "Điểm",
+          "onyomi": "テン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "点数", "reading": "てんすう", "meaning": "Điểm số" },
+            { "word": "満点", "reading": "まんてん", "meaning": "Điểm tối đa" },
+            { "word": "打点", "reading": "だてん", "meaning": "Điểm ghi được" }
+          ]
+        }
+      ]
     }
   ]
 }
