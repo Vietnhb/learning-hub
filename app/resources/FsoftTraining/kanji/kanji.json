@@ -3522,6 +3522,136 @@
           ]
         }
       ]
+    },
+    {
+      "id": 23,
+      "title": "Luyến - Ái - Cảm - Tình",
+      "kanji": [
+        {
+          "character": "恋",
+          "meaning": "Luyến",
+          "onyomi": "レン",
+          "kunyomi": "こい",
+          "examples": [
+            {
+              "word": "恋",
+              "reading": "こい",
+              "meaning": "Tình yêu (đơn phương)"
+            },
+            { "word": "恋人", "reading": "こいびと", "meaning": "Người yêu" },
+            {
+              "word": "恋愛",
+              "reading": "れんあい",
+              "meaning": "Tình yêu nam nữ"
+            }
+          ]
+        },
+        {
+          "character": "愛",
+          "meaning": "Ái",
+          "onyomi": "アイ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "愛", "reading": "あい", "meaning": "Tình yêu" },
+            { "word": "愛情", "reading": "あいじょう", "meaning": "Tình cảm" },
+            {
+              "word": "愛用",
+              "reading": "あいよう",
+              "meaning": "Dùng thường xuyên"
+            }
+          ]
+        },
+        {
+          "character": "感",
+          "meaning": "Cảm",
+          "onyomi": "カン",
+          "kunyomi": "",
+          "examples": [
+            { "word": "感動", "reading": "かんどう", "meaning": "Xúc động" },
+            { "word": "感情", "reading": "かんじょう", "meaning": "Cảm xúc" },
+            { "word": "同感", "reading": "どうかん", "meaning": "Đồng cảm" }
+          ]
+        },
+        {
+          "character": "情",
+          "meaning": "Tình",
+          "onyomi": "ジョウ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "感情", "reading": "かんじょう", "meaning": "Cảm xúc" },
+            { "word": "愛情", "reading": "あいじょう", "meaning": "Tình cảm" },
+            {
+              "word": "情けない",
+              "reading": "なさけない",
+              "meaning": "Đáng thương / hèn nhát"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Tín - Truyền - Dục - Tưởng",
+      "kanji": [
+        {
+          "character": "信",
+          "meaning": "Tín",
+          "onyomi": "シン",
+          "kunyomi": "しん-じる",
+          "examples": [
+            { "word": "信じる", "reading": "しんじる", "meaning": "Tin tưởng" },
+            { "word": "信用", "reading": "しんよう", "meaning": "Tín nhiệm" }
+          ]
+        },
+        {
+          "character": "伝",
+          "meaning": "Truyền",
+          "onyomi": "デン",
+          "kunyomi": "つた-える",
+          "examples": [
+            { "word": "伝言", "reading": "でんごん", "meaning": "Lời nhắn" },
+            {
+              "word": "伝える",
+              "reading": "つたえる",
+              "meaning": "Truyền đạt"
+            },
+            {
+              "word": "伝説",
+              "reading": "でんせつ",
+              "meaning": "Truyền thuyết"
+            }
+          ]
+        },
+        {
+          "character": "欲",
+          "meaning": "Dục",
+          "onyomi": "ヨク",
+          "kunyomi": "ほ-しい",
+          "examples": [
+            { "word": "欲しい", "reading": "ほしい", "meaning": "Muốn" },
+            {
+              "word": "意欲",
+              "reading": "いよく",
+              "meaning": "Ý chí, động lực"
+            }
+          ]
+        },
+        {
+          "character": "想",
+          "meaning": "Tưởng",
+          "onyomi": "ソウ",
+          "kunyomi": "",
+          "examples": [
+            { "word": "想像", "reading": "そうぞう", "meaning": "Tưởng tượng" },
+            {
+              "word": "片想い",
+              "reading": "かたおもい",
+              "meaning": "Yêu đơn phương"
+            },
+            { "word": "予想", "reading": "よそう", "meaning": "Dự đoán" }
+          ]
+        }
+      ]
     }
   ]
 }
