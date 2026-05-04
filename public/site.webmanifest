@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#3B4B7F",
-  "background_color": "#FFFEF9",
+  "theme_color": "#071B49",
+  "background_color": "#F7FAFF",
   "display": "standalone",
-  "description": "Hệ thống quản lý tài nguyên học tập"
+  "description": "Learning Hub - không gian học tập thân thiện cho mọi người"
 }

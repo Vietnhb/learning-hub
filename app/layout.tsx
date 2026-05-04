@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Learning Hub",
   description:
-    "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
+    "Learning Hub is a friendly study space for learning resources, quizzes, favorites, and feedback.",
   keywords: [
     "fpt source",
     "fpt src",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     siteName: "Learning Hub",
     title: "Learning Hub",
     description:
-      "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
+      "A friendly study space for resources, quizzes, favorites, and feedback.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Learning Hub",
     description:
-      "Learning Hub for FPT Source (FPT SRC), Japanese courses JPD316/JPD326, and SWD392 system architecture practice.",
+      "A friendly study space for resources, quizzes, favorites, and feedback.",
   },
   robots: {
     index: true,
@@ -107,4 +107,3 @@ export default function RootLayout({
     </html>
   );
 }
-

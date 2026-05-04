@@ -5,7 +5,7 @@ import { Heart, Github, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 dark:bg-gray-950 text-white py-8 mt-auto border-t border-gray-700 dark:border-gray-800">
+    <footer className="bg-[#071b49] dark:bg-[#050b18] text-white py-8 mt-auto border-t border-blue-900/40 dark:border-blue-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4">
           <motion.div

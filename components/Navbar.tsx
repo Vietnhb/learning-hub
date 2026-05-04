@@ -8,7 +8,6 @@ import {
   BookOpen,
   Library,
   FolderOpen,
-  GraduationCap,
   User,
   LogOut,
   LogIn,
@@ -152,8 +151,13 @@ export default function Navbar() {
             href="/"
             className="flex shrink-0 items-center gap-2 whitespace-nowrap text-xl font-bold text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400 lg:text-2xl"
           >
-            <GraduationCap className="h-7 w-7" />
-            Learning Hub
+            <img
+              src="/android-chrome-192x192.png"
+              alt=""
+              aria-hidden="true"
+              className="h-9 w-9 rounded-md bg-white object-contain p-0.5 shadow-sm"
+            />
+            <span>Learning Hub</span>
           </Link>
 
           <div className="flex items-center gap-2 lg:gap-3">
