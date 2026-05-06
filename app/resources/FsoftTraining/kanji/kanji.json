@@ -3534,9 +3534,24 @@
           "kunyomi": "こい",
           "examples": [
             {
-              "word": "恋",
-              "reading": "こい",
-              "meaning": "Tình yêu (đơn phương)"
+              "word": "恋しい",
+              "reading": "こいしい",
+              "meaning": "Nhớ nhung"
+            },
+            {
+              "word": "初恋",
+              "reading": "はつこい",
+              "meaning": "Mối tình đầu"
+            },
+            {
+              "word": "責任感",
+              "reading": "せきにんかん",
+              "meaning": "Trách nhiệm"
+            },
+            {
+              "word": "失恋",
+              "reading": "しつれん",
+              "meaning": "Thất tình"
             },
             { "word": "恋人", "reading": "こいびと", "meaning": "Người yêu" },
             {
