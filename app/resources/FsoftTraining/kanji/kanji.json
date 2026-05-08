@@ -3667,6 +3667,207 @@
           ]
         }
       ]
+    },
+    {
+      "id": 25,
+      "title": "Nan - Não - Khổ - Khốn",
+      "kanji": [
+        {
+          "character": "難",
+          "meaning": "Nan",
+          "onyomi": "ナン",
+          "kunyomi": "むずか-しい",
+          "examples": [
+            {
+              "word": "難しい",
+              "reading": "むずかしい",
+              "meaning": "Khó"
+            },
+            {
+              "word": "困難",
+              "reading": "こんなん",
+              "meaning": "Khó khăn"
+            },
+            {
+              "word": "避難訓練",
+              "reading": "ひなんくんれん",
+              "meaning": "Diễn tập sơ tán"
+            }
+          ]
+        },
+        {
+          "character": "悩",
+          "meaning": "Não",
+          "onyomi": "ノウ",
+          "kunyomi": "なや-む",
+          "examples": [
+            {
+              "word": "苦悩",
+              "reading": "くのう",
+              "meaning": "Đau khổ"
+            },
+            {
+              "word": "悩む",
+              "reading": "なやむ",
+              "meaning": "Phiền não"
+            }
+          ]
+        },
+        {
+          "character": "苦",
+          "meaning": "Khổ",
+          "onyomi": "ク",
+          "kunyomi": "くる-しい",
+          "examples": [
+            {
+              "word": "苦しむ",
+              "reading": "くるしむ",
+              "meaning": "Đau khổ"
+            },
+            {
+              "word": "苦い",
+              "reading": "にがい",
+              "meaning": "Đắng"
+            },
+            {
+              "word": "苦労",
+              "reading": "くろう",
+              "meaning": "Gian khổ"
+            }
+          ]
+        },
+        {
+          "character": "困",
+          "meaning": "Khốn",
+          "onyomi": "コン",
+          "kunyomi": "こま-る",
+          "examples": [
+            {
+              "word": "困る",
+              "reading": "こまる",
+              "meaning": "Khó xử"
+            },
+            {
+              "word": "困難",
+              "reading": "こんなん",
+              "meaning": "Khó khăn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Bi - Tiếu - Nộ",
+      "kanji": [
+        {
+          "character": "悲",
+          "meaning": "Bi",
+          "onyomi": "ヒ",
+          "kunyomi": "かな-しい",
+          "examples": [
+            {
+              "word": "悲喜",
+              "reading": "ひき",
+              "meaning": "Buồn vui"
+            },
+            {
+              "word": "悲しい",
+              "reading": "かなしい",
+              "meaning": "Buồn"
+            },
+            {
+              "word": "悲しむ",
+              "reading": "かなしむ",
+              "meaning": "Đau buồn"
+            },
+            {
+              "word": "喜怒哀楽",
+              "reading": "きどあいらく",
+              "meaning": "Hỉ nộ ái ố"
+            }
+          ]
+        },
+        {
+          "character": "笑",
+          "meaning": "Tiếu",
+          "onyomi": "ショウ",
+          "kunyomi": "わら-う",
+          "examples": [
+            {
+              "word": "微笑",
+              "reading": "びしょう",
+              "meaning": "Mỉm cười"
+            },
+            {
+              "word": "微笑み",
+              "reading": "ほほえみ",
+              "meaning": "Nụ cười"
+            },
+            {
+              "word": "笑顔",
+              "reading": "えがお",
+              "meaning": "Gương mặt tươi cười"
+            },
+            {
+              "word": "笑う",
+              "reading": "わらう",
+              "meaning": "Cười"
+            }
+          ]
+        },
+        {
+          "character": "怒",
+          "meaning": "Nộ",
+          "onyomi": "ド",
+          "kunyomi": "おこ-る",
+          "examples": [
+            {
+              "word": "怒る",
+              "reading": "おこる",
+              "meaning": "Nổi giận"
+            },
+            {
+              "word": "怒り",
+              "reading": "いかり",
+              "meaning": "Cơn giận"
+            },
+            {
+              "word": "怒鳴る",
+              "reading": "どなる",
+              "meaning": "Quát mắng"
+            },
+            {
+              "word": "激怒",
+              "reading": "げきど",
+              "meaning": "Phẫn nộ"
+            },
+            {
+              "word": "喜怒哀楽",
+              "reading": "きどあいらく",
+              "meaning": "Hỉ nộ ái ố"
+            }
+          ]
+        },
+        {
+          "character": "喜",
+          "meaning": "Hỷ",
+          "onyomi": "キ",
+          "kunyomi": "よろこ-ぶ",
+          "examples": [
+            {
+              "word": "悲喜",
+              "reading": "ひき",
+              "meaning": "Buồn vui"
+            },
+            {
+              "word": "喜怒哀楽",
+              "reading": "きどあいらく",
+              "meaning": "Hỉ nộ ái ố"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
