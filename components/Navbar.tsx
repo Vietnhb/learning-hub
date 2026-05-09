@@ -89,7 +89,10 @@ export default function Navbar() {
       void loadProfileDisplayName();
     };
 
-    window.addEventListener("learning-hub:user-profile-updated", handleProfileUpdated);
+    window.addEventListener(
+      "learning-hub:user-profile-updated",
+      handleProfileUpdated,
+    );
 
     return () => {
       mounted = false;

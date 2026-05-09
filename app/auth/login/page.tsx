@@ -174,9 +174,9 @@ function LoginPageContent() {
               onError={setError}
             />
 
-            <div className="my-6 flex items-center gap-3">
+            <div className="my-5 flex items-center gap-3">
               <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
-              <span className="text-sm text-gray-500 dark:text-gray-400">
+              <span className="text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">
                 hoặc
               </span>
               <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
