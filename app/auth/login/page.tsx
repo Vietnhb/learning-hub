@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 import { Mail, Lock, AlertCircle, Loader2, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
-import { getAuthRedirectUrls } from "@/lib/auth-config";
+import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
 import { validateEmail, validatePassword } from "@/lib/validation";
+import { GoogleAuthButton } from "@/components/GoogleAuthButton";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -26,6 +27,9 @@ function LoginPageContent() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [needsVerification, setNeedsVerification] = useState(false);
+  const redirectPath = getSafeRedirectPath(
+    searchParams.get("redirect") || searchParams.get("next"),
+  );
 
   const { secondsLeft, isActive, startCooldown } = useCooldown(
     "login_resend",
@@ -33,8 +37,14 @@ function LoginPageContent() {
   );
 
   useEffect(() => {
-    if (searchParams.get("error") === "banned") {
+    const authError = searchParams.get("error");
+
+    if (authError === "banned") {
       setError("Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.");
+    } else if (authError === "oauth_callback") {
+      setError("Không thể hoàn tất đăng nhập với Google. Vui lòng thử lại.");
+    } else if (authError === "callback_error") {
+      setError("Không thể hoàn tất đăng nhập. Vui lòng thử lại.");
     }
   }, [searchParams]);
 
@@ -101,7 +111,7 @@ function LoginPageContent() {
       }
 
       setLoading(false);
-      router.push("/");
+      router.push(redirectPath);
       router.refresh();
     } catch (err: any) {
       setError(err.message || "Đăng nhập thất bại");
@@ -158,6 +168,20 @@ function LoginPageContent() {
           </CardHeader>
 
           <CardContent>
+            <GoogleAuthButton
+              disabled={loading}
+              redirectPath={redirectPath}
+              onError={setError}
+            />
+
+            <div className="my-6 flex items-center gap-3">
+              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                hoặc
+              </span>
+              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
+            </div>
+
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

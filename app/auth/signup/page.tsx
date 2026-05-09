@@ -9,6 +9,7 @@ import {
   validatePassword,
   validateFullName,
 } from "@/lib/validation";
+import { GoogleAuthButton } from "@/components/GoogleAuthButton";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -254,6 +255,16 @@ export default function SignUpPage() {
           </CardHeader>
 
           <CardContent>
+            <GoogleAuthButton disabled={loading} onError={setError} />
+
+            <div className="my-6 flex items-center gap-3">
+              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                hoặc
+              </span>
+              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
+            </div>
+
             <form onSubmit={handleSignUp} className="space-y-4">
               {/* Full Name */}
               <div>

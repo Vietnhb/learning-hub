@@ -102,6 +102,8 @@ export default function ProfilePage() {
         setProfile(updatedProfile);
       }
 
+      window.dispatchEvent(new Event("learning-hub:user-profile-updated"));
+
       // Clear success message after 3s
       setTimeout(() => setSuccessMessage(""), 3000);
     } catch (err: any) {

@@ -38,6 +38,9 @@ export default function Navbar() {
   const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
   const [hiddenIds, setHiddenIds] = useState<string[]>([]);
+  const [profileDisplayName, setProfileDisplayName] = useState<string | null>(
+    null,
+  );
   const { notifications } = useUserNotifications(user?.id);
 
   useEffect(() => {
@@ -59,6 +62,43 @@ export default function Navbar() {
       mounted = false;
     };
   }, [user]);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadProfileDisplayName = async () => {
+      if (!user?.id) {
+        setProfileDisplayName(null);
+        return;
+      }
+
+      const { data } = await supabase
+        .from("users")
+        .select("full_name")
+        .eq("id", user.id)
+        .single();
+
+      if (!mounted) return;
+
+      setProfileDisplayName(data?.full_name?.trim() || null);
+    };
+
+    void loadProfileDisplayName();
+
+    const handleProfileUpdated = () => {
+      void loadProfileDisplayName();
+    };
+
+    window.addEventListener("learning-hub:user-profile-updated", handleProfileUpdated);
+
+    return () => {
+      mounted = false;
+      window.removeEventListener(
+        "learning-hub:user-profile-updated",
+        handleProfileUpdated,
+      );
+    };
+  }, [user?.id]);
 
   useEffect(() => {
     if (!user?.id) {
@@ -289,7 +329,7 @@ export default function Navbar() {
                   >
                     <User className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                     <span className="max-w-[120px] truncate whitespace-nowrap font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-                      {user.user_metadata?.full_name || user.email}
+                      {profileDisplayName || user.email}
                     </span>
                   </Link>
                   <Button
