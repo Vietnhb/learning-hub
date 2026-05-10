@@ -278,7 +278,7 @@ export default function ForumPage() {
         post.user_id || post.username,
         post.username,
         post.avatar_url,
-        3,
+        0,
         post.user_id,
       );
       post.comments.forEach((comment) => {
@@ -286,7 +286,7 @@ export default function ForumPage() {
           comment.user_id || comment.username,
           comment.username,
           null,
-          2,
+          0,
           comment.user_id,
         );
       });
@@ -302,7 +302,7 @@ export default function ForumPage() {
       );
     });
 
-    if (user?.id) addMember(user.id, username, avatarUrl, 4, user.id);
+    if (user?.id) addMember(user.id, username, avatarUrl, 0, user.id);
 
     return Object.values(members)
       .sort((a, b) => b.score - a.score)
