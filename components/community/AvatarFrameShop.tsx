@@ -161,18 +161,28 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
     [isAdmin, userInventory],
   );
 
+  const rarityRank: Record<string, number> = {
+    legendary: 0,
+    epic: 1,
+    rare: 2,
+    uncommon: 3,
+    common: 4,
+  };
+
   const filteredFrames = useMemo(
     () =>
-      getAllFrames().filter((frame) => {
-        const matchesSearch = frame.name
-          .toLowerCase()
-          .includes(searchTerm.trim().toLowerCase());
-        const matchesRarity =
-          filterRarity === "all" || frame.rarity === filterRarity;
-        const isOwned = ownedFrameIds.has(frame.id);
+      getAllFrames()
+        .filter((frame) => {
+          const matchesSearch = frame.name
+            .toLowerCase()
+            .includes(searchTerm.trim().toLowerCase());
+          const matchesRarity =
+            filterRarity === "all" || frame.rarity === filterRarity;
+          const isOwned = ownedFrameIds.has(frame.id);
 
-        return matchesSearch && matchesRarity && isOwned;
-      }),
+          return matchesSearch && matchesRarity && isOwned;
+        })
+        .sort((a, b) => (rarityRank[a.rarity] ?? 9) - (rarityRank[b.rarity] ?? 9)),
     [filterRarity, ownedFrameIds, searchTerm],
   );
 
