@@ -1769,3 +1769,72 @@
   z-index: 5;
 }
 
+/* Community Markdown Styles */
+.prose-hub {
+  line-height: 1.75;
+}
+
+.prose-hub p {
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+.prose-hub strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+.prose-hub em {
+  font-style: italic;
+}
+
+.prose-hub ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-hub ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-hub li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-hub code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+.dark .prose-hub code {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.prose-hub blockquote {
+  border-left: 4px solid #e2e8f0;
+  padding-left: 1rem;
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.dark .prose-hub blockquote {
+  border-left-color: #334155;
+  color: #94a3b8;
+}
+
+.prose-hub a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .prose-hub a {
+  color: #60a5fa;
+}

@@ -112,31 +112,25 @@ export function PremiumAvatarPaymentModal({
             )}
 
             {/* Payment Methods */}
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-center">
+                <p className="text-sm font-semibold text-amber-800 dark:text-amber-400">
+                  🚧 Chức năng VIP đang được bảo trì và sẽ sớm quay trở lại!
+                </p>
+              </div>
               <Button
-                onClick={handleUnlock}
-                disabled={loading}
-                className="w-full gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-10"
+                disabled={true}
+                className="w-full gap-2 bg-slate-300 dark:bg-slate-700 text-slate-500 cursor-not-allowed h-10"
               >
-                {loading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    Đang xử lý...
-                  </>
-                ) : (
-                  <>
-                    <CreditCard className="w-4 h-4" />
-                    Thanh toán ngay - $9.99
-                  </>
-                )}
+                <CreditCard className="w-4 h-4" />
+                Thanh toán tạm đóng
               </Button>
               <Button
                 variant="outline"
                 onClick={() => onOpenChange(false)}
-                disabled={loading}
                 className="w-full"
               >
-                Hủy
+                Quay lại
               </Button>
             </div>
 

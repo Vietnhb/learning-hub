@@ -19,6 +19,7 @@ import { storage } from "@/lib/firebase";
 import { supabase } from "@/lib/supabase";
 import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
 import { getUserProfile } from "@/lib/userService";
+import { getSiteUrl } from "@/lib/site-url";
 
 import { ActiveMember, ChatMessageRow } from "./types";
 import { getDisplayName } from "./utils/formatters";
@@ -572,7 +573,8 @@ export default function ForumPage() {
   };
 
   const sharePost = async (postId: string) => {
-    const url = `${window.location.origin}/forum#post-${postId}`;
+    const siteUrl = getSiteUrl();
+    const url = `${siteUrl}/forum#post-${postId}`;
     if (navigator.share) {
       await navigator.share({ title: "Learning Hub Community", url });
       return;

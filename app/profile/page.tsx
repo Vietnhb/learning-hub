@@ -313,15 +313,15 @@ export default function ProfilePage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xs text-yellow-700 dark:text-yellow-500/80 mb-4 leading-relaxed">
-                      Nâng cấp để sở hữu viền avatar lấp lánh và hiệu ứng shimmer độc quyền!
+                    <p className="text-xs text-yellow-700 dark:text-yellow-500/80 mb-4 leading-relaxed italic font-medium">
+                      🚧 Chức năng VIP đang được phát triển và sẽ sớm ra mắt!
                     </p>
                     <Button
-                      onClick={() => setShowPaymentModal(true)}
+                      disabled
                       size="sm"
-                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold"
+                      className="w-full bg-slate-300 dark:bg-slate-800 text-slate-500 cursor-not-allowed font-bold"
                     >
-                      Nạp tiền - 9.99$/tháng
+                      Sắp ra mắt
                     </Button>
                   </CardContent>
                 </Card>

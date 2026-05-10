@@ -1,3 +1,4 @@
+import React from "react";
 import { Heart, MessageCircle, Share2, Bookmark, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,8 @@ import { Avatar } from "../shared/Avatar";
 import { Username } from "@/components/community/Username";
 import { ActionButton } from "../shared/ActionButton";
 import { FeedPost } from "../../types";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { formatTimeAgo } from "../../utils/formatters";
 
 export function PostCard({
@@ -39,6 +42,15 @@ export function PostCard({
   >;
   addComment: (id: string) => Promise<void>;
 }) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const CONTENT_LIMIT = 250;
+  const content = post.content || "";
+  const isLongContent = content.length > CONTENT_LIMIT;
+  const displayedContent =
+    isLongContent && !isExpanded
+      ? content.slice(0, CONTENT_LIMIT) + "..."
+      : content;
+
   return (
     <motion.article
       id={`post-${post.id}`}
@@ -70,9 +82,21 @@ export function PostCard({
             </span>
           </div>
 
-          <p className="mt-3 whitespace-pre-wrap leading-7 text-slate-700 dark:text-slate-200">
-            {post.content}
-          </p>
+          <div className="mt-3">
+            <div className="prose-hub text-slate-700 dark:text-slate-200">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {displayedContent}
+              </ReactMarkdown>
+            </div>
+            {isLongContent && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+              >
+                {isExpanded ? "Ẩn bớt" : "Đọc thêm"}
+              </button>
+            )}
+          </div>
 
           {post.image_url ? (
             <div className="mt-4 overflow-hidden rounded-[1.4rem] border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900">
