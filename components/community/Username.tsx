@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
 import {
   AVATAR_FRAMES,
   type AvatarFrameId,
   getUsernameStyleByFrame,
 } from "@/lib/designSystem";
 import { cn } from "@/lib/utils";
+import { fetchUserCacheAsync } from "@/lib/userCache";
 
 interface UsernameProps {
   userId?: string | null;
@@ -35,13 +35,10 @@ export const Username: React.FC<UsernameProps> = ({
       if (!userId || frameIdOverride !== undefined) return;
 
       try {
-        const { data } = await supabase
-          .from("users")
-          .select("avatar_frame_id")
-          .eq("id", userId)
-          .single();
-
-        setFrameId(data?.avatar_frame_id as AvatarFrameId | null);
+        const cached = await fetchUserCacheAsync(userId);
+        if (cached) {
+          setFrameId(cached.frameId);
+        }
       } catch (err) {
         console.error("Error fetching username frame:", err);
       }

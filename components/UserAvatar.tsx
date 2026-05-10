@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 import { AvatarFrame } from "@/components/community/AvatarFrame";
 import { type AvatarFrameId } from "@/lib/designSystem";
 import { User } from "lucide-react";
-import { getCachedUser, setCachedUser, clearUserCache } from "@/lib/userCache";
+import { getCachedUser, setCachedUser, clearUserCache, fetchUserCacheAsync } from "@/lib/userCache";
 
 interface UserAvatarProps {
   userId?: string;
@@ -50,50 +50,14 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     const fetchUserData = async () => {
       if (!userId) return;
 
-      // Check cache first
-      const cached = getCachedUser(userId);
-      if (cached && refreshToken === 0) {
+      const cached = await fetchUserCacheAsync(userId, refreshToken > 0);
+      if (cached) {
         if (dbAvatarUrl !== cached.avatarUrl) setDbAvatarUrl(cached.avatarUrl);
         if (frameIdOverride === undefined && frameId !== cached.frameId) {
           setFrameId(cached.frameId);
         }
-        // Still need to check premium flag if not cached or if we want to be safe
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from("users")
-          .select("avatar_frame_id, avatar_url")
-          .eq("id", userId)
-          .single();
-
-        if (error) throw error;
-
-        const fetchedFrameId = (data?.avatar_frame_id || null) as AvatarFrameId | null;
-        const fetchedAvatarUrl = data?.avatar_url || null;
-
-        if (fetchedAvatarUrl) setDbAvatarUrl(fetchedAvatarUrl);
-        if (frameIdOverride === undefined) setFrameId(fetchedFrameId);
-
-        // Update cache
-        setCachedUser(userId, {
-          frameId: fetchedFrameId,
-          avatarUrl: fetchedAvatarUrl
-        });
-      } catch (err) {
-        console.error("Error fetching user avatar data:", err);
-      }
-
-      // Query premium flag separately to stay compatible with DBs that have not run migration yet.
-      if (premiumBorderUnlocked === undefined) {
-        const { data: premiumData, error: premiumError } = await supabase
-          .from("users")
-          .select("premium_avatar_border")
-          .eq("id", userId)
-          .single();
-
-        if (!premiumError) {
-          setIsPremium(Boolean(premiumData?.premium_avatar_border));
+        if (premiumBorderUnlocked === undefined && cached.isPremium !== undefined) {
+          setIsPremium(cached.isPremium);
         }
       }
     };

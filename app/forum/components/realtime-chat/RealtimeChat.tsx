@@ -1,5 +1,5 @@
 import { Loader2, Send } from "lucide-react";
-import { FormEvent, RefObject } from "react";
+import { FormEvent, RefObject, useState, useEffect } from "react";
 import { Avatar } from "../shared/Avatar";
 import { Username } from "@/components/community/Username";
 import { HubCard } from "../shared/HubCard";
@@ -10,6 +10,38 @@ import { formatTimeAgo } from "../../utils/formatters";
 import { cn } from "@/lib/utils";
 import { getCachedUser } from "@/lib/userCache";
 import { getUsernameStyleByFrame } from "@/lib/designSystem";
+
+function ChatBubbleText({ userId, isMe, content }: { userId?: string | null, isMe: boolean, content?: string | null }) {
+  const [frameId, useState_setFrameId] = useState<any>(null);
+
+  useEffect(() => {
+    if (!userId) return;
+    let mounted = true;
+    import("@/lib/userCache").then(({ fetchUserCacheAsync }) => {
+      fetchUserCacheAsync(userId).then(cached => {
+        if (mounted && cached) {
+          useState_setFrameId(cached.frameId);
+        }
+      });
+    });
+    return () => { mounted = false; };
+  }, [userId]);
+
+  const style = getUsernameStyleByFrame(frameId);
+  const bubbleClass = style?.bubbleClass;
+
+  return (
+    <p className={cn(
+      "inline-block rounded-2xl px-3 py-2 text-sm leading-6 transition spark-chat-bubble-base",
+      bubbleClass,
+      !bubbleClass && (isMe
+        ? "bg-cyan-600 text-white dark:bg-cyan-500 dark:text-slate-950"
+        : "bg-slate-100 text-slate-700 group-hover:bg-white dark:bg-white/[0.07] dark:text-slate-200 dark:group-hover:bg-white/[0.1]")
+    )}>
+      {content}
+    </p>
+  );
+}
 
 export function RealtimeChat({
   chatLoading,
@@ -102,23 +134,7 @@ export function RealtimeChat({
                     </div>
                   ) : null}
 
-                  {(() => {
-                    const cached = message.user_id ? getCachedUser(message.user_id) : null;
-                    const style = getUsernameStyleByFrame(cached?.frameId);
-                    const bubbleClass = style?.bubbleClass;
-
-                    return (
-                      <p className={cn(
-                        "inline-block rounded-2xl px-3 py-2 text-sm leading-6 transition spark-chat-bubble-base",
-                        bubbleClass,
-                        !bubbleClass && (isMe
-                          ? "bg-cyan-600 text-white dark:bg-cyan-500 dark:text-slate-950"
-                          : "bg-slate-100 text-slate-700 group-hover:bg-white dark:bg-white/[0.07] dark:text-slate-200 dark:group-hover:bg-white/[0.1]")
-                      )}>
-                        {message.content}
-                      </p>
-                    );
-                  })()}
+                  <ChatBubbleText userId={message.user_id} isMe={isMe} content={message.content} />
                 </div>
               </div>
             );
