@@ -13,7 +13,7 @@ const fallbackChatMessages: ChatMessageRow[] = [
   {
     id: "welcome-chat-2",
     username: "Community",
-    content: "Ai đang ôn NextJS hoặc Supabase thì cùng trao đổi trong hub này.",
+    content: "Ai đang ôn Nhật hoặc technical thì cùng trao đổi trong hub này.",
     created_at: new Date(Date.now() - 1000 * 60 * 3).toISOString(),
   },
 ];
@@ -47,14 +47,14 @@ export function useRealtimeChat(userId: string | undefined) {
     void loadChat();
   }, [userId]);
 
-  return { 
-    chatMessages, 
-    setChatMessages, 
-    chatLoading, 
-    chatNotice, 
+  return {
+    chatMessages,
+    setChatMessages,
+    chatLoading,
+    chatNotice,
     setChatNotice,
-    sendingChat, 
+    sendingChat,
     setSendingChat,
-    loadChat 
+    loadChat
   };
 }
