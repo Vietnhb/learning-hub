@@ -5,6 +5,7 @@ import { Username } from "@/components/community/Username";
 import { HubCard } from "../shared/HubCard";
 import { ActiveMember } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
+import { cn } from "@/lib/utils";
 
 export function RightSidebar({
   notificationRef,
@@ -105,25 +106,33 @@ export function RightSidebar({
               <Avatar
                 name={member.name}
                 src={member.avatar}
+                userId={member.userId}
                 size="sm"
-                online={Boolean(member.userId && isOnline(member.userId))}
               />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-sm font-medium">
                   <Username userId={member.userId} name={member.name} />
                 </div>
-                <div className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
-                  {index === 0 ? (
-                    <ShieldCheck className="h-3 w-3 text-amber-500" />
-                  ) : member.badge === "Active now" ? (
-                    <Zap className="h-3 w-3 text-emerald-500" />
-                  ) : (
-                    <AtSign className="h-3 w-3" />
-                  )}
-                  {index === 0 ? "Top Contributor" : member.badge}
+                  {/* Premium Role Badge */}
+                  <div className={cn(
+                    "inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider shadow-sm",
+                    index === 0 
+                      ? "bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white shadow-[0_0_10px_rgba(245,158,11,0.4)]"
+                      : member.badge === "Active now"
+                        ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_0_8px_rgba(16,185,129,0.3)]"
+                        : "bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-400"
+                  )}>
+                    {index === 0 ? (
+                      <ShieldCheck className="h-2.5 w-2.5" />
+                    ) : member.badge === "Active now" ? (
+                      <Zap className="h-2.5 w-2.5" />
+                    ) : (
+                      <AtSign className="h-2.5 w-2.5" />
+                    )}
+                    {index === 0 ? "Top Contributor" : member.badge}
+                  </div>
                 </div>
               </div>
-            </div>
           ))}
         </div>
       </HubCard>

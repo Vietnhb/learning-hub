@@ -79,22 +79,20 @@ export const Username: React.FC<UsernameProps> = ({
     );
   }
 
-  const isLegendary = effectiveFrameId && AVATAR_FRAMES[effectiveFrameId as keyof typeof AVATAR_FRAMES]?.rarity === "legendary";
+  const rarity = effectiveFrameId ? AVATAR_FRAMES[effectiveFrameId as keyof typeof AVATAR_FRAMES]?.rarity : null;
+  const isLegendary = rarity === "legendary";
+  const isEpic = rarity === "epic";
+  const isRare = rarity === "rare";
 
   return (
     <span
       className={cn(
-        "inline-block transition-all duration-300 relative group/username",
-        "font-bold text-slate-900 dark:text-white", // Base styles for visibility
-        style.nameClass,
-        style.glowClass,
-        style.shimmerClass,
-        (style as any).auraClass,
-        style.hoverEffect,
+        "inline-flex items-center gap-1.5 transition-all duration-300 relative group/username font-bold",
         className
       )}
-      style={{ minHeight: "1em", minWidth: "1ch" }}
+      style={{ minHeight: "1.2em" }}
     >
+      {/* Legendary Aura Particles */}
       {isLegendary && (
         <>
           <span className="absolute -top-1 -left-1 w-1 h-1 bg-white rounded-full animate-ping opacity-75" />
@@ -102,7 +100,25 @@ export const Username: React.FC<UsernameProps> = ({
           <span className="absolute top-1/2 -right-2 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-bounce opacity-40 blur-[1px]" />
         </>
       )}
-      {name}
+      
+      <span className={cn(
+        "relative z-10 flex items-center gap-1.5",
+        !style && "text-slate-900 dark:text-white",
+        style?.nameClass,
+        style?.glowClass,
+        style?.shimmerClass,
+        (style as any)?.auraClass,
+        style?.hoverEffect
+      )}>
+        {name}
+        {style && (
+          <img 
+            src="/effectBling.gif" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40 mix-blend-screen"
+          />
+        )}
+      </span>
     </span>
   );
 };

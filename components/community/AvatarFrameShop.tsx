@@ -23,6 +23,8 @@ interface AvatarFrameShopProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   userId: string;
+  userRole?: number | null;
+  inventory?: string[] | null;
   currentFrameId?: AvatarFrameId | null;
   onFrameSelected?: (frameId: AvatarFrameId) => void;
 }
@@ -31,6 +33,8 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
   open,
   onOpenChange,
   userId,
+  userRole,
+  inventory = [],
   currentFrameId,
   onFrameSelected,
 }) => {
@@ -46,13 +50,21 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
     setSelectedFrame(currentFrameId || null);
   }, [currentFrameId, open]);
 
+  const isAdmin = userRole === 1;
+  const userInventory = inventory || [];
+
   const filteredFrames = getAllFrames().filter((frame) => {
+    // Basic search/rarity filters
     const matchesSearch = frame.name
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     const matchesRarity =
       filterRarity === "all" || frame.rarity === filterRarity;
-    return matchesSearch && matchesRarity;
+    
+    // Inventory System: Admin sees all, Users see only inventory frames
+    const isOwned = isAdmin || userInventory.includes(frame.id);
+    
+    return matchesSearch && matchesRarity && isOwned;
   });
 
   const handleSelectFrame = async () => {
@@ -171,45 +183,57 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
           </div>
         )}
 
-        {/* Frame Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-4">
-          {filteredFrames.map((frame) => (
-            <button
-              key={frame.id}
-              onClick={() => setSelectedFrame(frame.id as AvatarFrameId)}
-              className={`p-4 rounded-lg border-2 transition-all ${
-                selectedFrame === frame.id
-                  ? "border-cyan-500 bg-cyan-500/10 ring-2 ring-cyan-500"
-                  : "border-gray-600 bg-gray-700 hover:border-cyan-500/50 hover:bg-gray-600"
-              }`}
-            >
-              <div className="flex justify-center mb-3">
-                <AvatarFrame
-                  frameId={frame.id as AvatarFrameId}
-                  size="md"
-                  animated
-                >
-                  <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-lg font-bold text-white">
-                    {frame.icon}
-                  </div>
-                </AvatarFrame>
-              </div>
-              <h4 className="text-sm font-semibold text-white text-center mb-2">
-                {frame.name}
-              </h4>
-              <div className="flex gap-1 justify-center mb-2">
-                <span className="px-1.5 py-0.5 text-xs rounded bg-gray-600 text-gray-200 capitalize">
-                  {frame.rarity}
-                </span>
-              </div>
-              {selectedFrame === frame.id && (
-                <div className="flex justify-center">
-                  <Check className="w-5 h-5 text-cyan-400" />
+        {/* Frame Grid or Empty State */}
+        {filteredFrames.length > 0 ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-4">
+            {filteredFrames.map((frame) => (
+              <button
+                key={frame.id}
+                onClick={() => setSelectedFrame(frame.id as AvatarFrameId)}
+                className={`p-4 rounded-lg border-2 transition-all ${
+                  selectedFrame === frame.id
+                    ? "border-cyan-500 bg-cyan-500/10 ring-2 ring-cyan-500"
+                    : "border-gray-600 bg-gray-700 hover:border-cyan-500/50 hover:bg-gray-600"
+                }`}
+              >
+                <div className="flex justify-center mb-3">
+                  <AvatarFrame
+                    frameId={frame.id as AvatarFrameId}
+                    size="md"
+                    animated
+                  >
+                    <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-lg font-bold text-white">
+                      {frame.icon}
+                    </div>
+                  </AvatarFrame>
                 </div>
-              )}
-            </button>
-          ))}
-        </div>
+                <h4 className="text-sm font-semibold text-white text-center mb-2">
+                  {frame.name}
+                </h4>
+                <div className="flex gap-1 justify-center mb-2">
+                  <span className="px-1.5 py-0.5 text-xs rounded bg-gray-600 text-gray-200 capitalize">
+                    {frame.rarity}
+                  </span>
+                </div>
+                {selectedFrame === frame.id && (
+                  <div className="flex justify-center">
+                    <Check className="w-5 h-5 text-cyan-400" />
+                  </div>
+                )}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="py-12 flex flex-col items-center justify-center text-center bg-gray-900/50 rounded-xl border border-dashed border-gray-700">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 text-gray-500">
+              <Sparkles className="w-8 h-8" />
+            </div>
+            <h3 className="text-white font-bold mb-1">Kho của bạn đang trống</h3>
+            <p className="text-gray-400 text-sm max-w-xs mx-auto">
+              Bạn chưa sở hữu khung hình nào. Hãy tham gia tích cực các hoạt động và sự kiện để được cấp những bộ khung đẳng cấp nhé!
+            </p>
+          </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex gap-3 pt-4 border-t border-gray-600">

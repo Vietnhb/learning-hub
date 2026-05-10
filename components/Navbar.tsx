@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -70,26 +70,29 @@ export default function Navbar() {
     const loadProfileDisplayName = async () => {
       if (!user?.id) {
         setProfileDisplayName(null);
-        setAvatarUrl(user?.user_metadata?.avatar_url || null);
+        setAvatarUrl(null);
         return;
       }
 
       const { data } = await supabase
         .from("users")
-        .select("full_name")
+        .select("full_name, avatar_url")
         .eq("id", user.id)
         .single();
 
       if (!mounted) return;
 
       setProfileDisplayName(data?.full_name?.trim() || null);
-      setAvatarUrl(user?.user_metadata?.avatar_url || null);
+      if (data?.avatar_url) {
+        setAvatarUrl(data.avatar_url);
+      } else {
+        setAvatarUrl(user?.user_metadata?.avatar_url || null);
+      }
     };
 
     void loadProfileDisplayName();
 
     const handleProfileUpdated = () => {
-      setAvatarUrl(user?.user_metadata?.avatar_url || null);
       void loadProfileDisplayName();
     };
 

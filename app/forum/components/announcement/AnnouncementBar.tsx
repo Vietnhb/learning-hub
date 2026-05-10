@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { HubCard } from "../shared/HubCard";
 import { Username } from "@/components/community/Username";
+import { Avatar } from "../shared/Avatar";
 import { AnnouncementRow } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
 
@@ -44,13 +45,20 @@ export function AnnouncementBar({
                 {announcement?.content ||
                   "Mọi thông báo quan trọng của cộng đồng sẽ xuất hiện ở đây."}
               </p>
-              <p className="mt-3 text-xs text-slate-400">
-                <Username
-                  userId={announcement?.created_by}
+              <div className="mt-3 flex items-center gap-2">
+                <Avatar
                   name={announcement?.author_name || "Admin"}
-                />{" "}
-                · {formatTimeAgo(announcement?.created_at)}
-              </p>
+                  userId={announcement?.created_by}
+                  size="xs"
+                />
+                <p className="text-xs text-slate-400">
+                  <Username
+                    userId={announcement?.created_by}
+                    name={announcement?.author_name || "Admin"}
+                  />{" "}
+                  · {formatTimeAgo(announcement?.created_at)}
+                </p>
+              </div>
             </div>
           </div>
 

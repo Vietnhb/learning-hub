@@ -88,7 +88,11 @@ export function PostCard({
             <div className="mt-4 space-y-2 rounded-2xl bg-slate-100/75 p-3 dark:bg-slate-950/40">
               {post.comments.slice(-2).map((comment) => (
                 <div key={comment.id} className="flex gap-2 text-sm">
-                  <Avatar name={comment.username || "Member"} size="xs" />
+                  <Avatar 
+                    name={comment.username || "Member"} 
+                    userId={comment.user_id}
+                    size="xs" 
+                  />
                   <div className="min-w-0">
                     <Username
                       userId={comment.user_id}
@@ -140,7 +144,11 @@ export function PostCard({
             <div className="mt-4 space-y-3 rounded-2xl bg-slate-100/70 p-4 dark:bg-slate-950/40">
               {post.comments.map((comment) => (
                 <div key={comment.id} className="flex gap-3">
-                  <Avatar name={comment.username || "Member"} size="sm" />
+                  <Avatar 
+                    name={comment.username || "Member"} 
+                    userId={comment.user_id}
+                    size="sm" 
+                  />
                   <div className="rounded-2xl bg-white px-4 py-2 text-sm shadow-sm dark:bg-white/10">
                     <Username
                       userId={comment.user_id}

@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { ChatMessageRow } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
+import { cn } from "@/lib/utils";
+import { getCachedUser } from "@/lib/userCache";
+import { getUsernameStyleByFrame } from "@/lib/designSystem";
 
 export function RealtimeChat({
   chatLoading,
@@ -44,15 +47,11 @@ export function RealtimeChat({
       <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-4 dark:border-white/10">
         <div>
           <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
             <h2 className="font-semibold">Tán Gẫu Cùng Đồng Bọn</h2>
           </div>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Lounge chung cho hỏi nhanh, tán gẫu và phản hồi tức thì.
           </p>
-        </div>
-        <div className="hidden rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-white/10 dark:text-slate-300 sm:block">
-          {displayedOnlineCount} active
         </div>
       </div>
 
@@ -76,9 +75,8 @@ export function RealtimeChat({
             return (
               <div
                 key={message.id}
-                className={`group flex gap-3 rounded-2xl px-2 py-2 transition hover:bg-slate-100/80 dark:hover:bg-white/[0.06] ${
-                  grouped ? "mt-0" : "mt-3"
-                } ${isMe ? "flex-row-reverse" : ""}`}
+                className={`group flex gap-3 rounded-2xl px-2 py-2 transition hover:bg-slate-100/80 dark:hover:bg-white/[0.06] ${grouped ? "mt-0" : "mt-3"
+                  } ${isMe ? "flex-row-reverse" : ""}`}
               >
                 {grouped ? (
                   <div className="w-9 shrink-0" />
@@ -86,10 +84,8 @@ export function RealtimeChat({
                   <Avatar
                     name={message.username || "Member"}
                     src={message.avatar_url}
+                    userId={message.user_id}
                     size="sm"
-                    online={Boolean(
-                      message.user_id && isOnline(message.user_id),
-                    )}
                   />
                 )}
                 <div className={`min-w-0 flex-1 ${isMe ? "text-right" : ""}`}>
@@ -105,13 +101,24 @@ export function RealtimeChat({
                       </span>
                     </div>
                   ) : null}
-                  <p className={`inline-block rounded-2xl px-3 py-2 text-sm leading-6 transition ${
-                    isMe
-                      ? "bg-cyan-600 text-white dark:bg-cyan-500 dark:text-slate-950"
-                      : "bg-slate-100 text-slate-700 group-hover:bg-white dark:bg-white/[0.07] dark:text-slate-200 dark:group-hover:bg-white/[0.1]"
-                  }`}>
-                    {message.content}
-                  </p>
+
+                  {(() => {
+                    const cached = message.user_id ? getCachedUser(message.user_id) : null;
+                    const style = getUsernameStyleByFrame(cached?.frameId);
+                    const bubbleClass = style?.bubbleClass;
+
+                    return (
+                      <p className={cn(
+                        "inline-block rounded-2xl px-3 py-2 text-sm leading-6 transition spark-chat-bubble-base",
+                        bubbleClass,
+                        !bubbleClass && (isMe
+                          ? "bg-cyan-600 text-white dark:bg-cyan-500 dark:text-slate-950"
+                          : "bg-slate-100 text-slate-700 group-hover:bg-white dark:bg-white/[0.07] dark:text-slate-200 dark:group-hover:bg-white/[0.1]")
+                      )}>
+                        {message.content}
+                      </p>
+                    );
+                  })()}
                 </div>
               </div>
             );
@@ -126,7 +133,6 @@ export function RealtimeChat({
       >
         <div className="mb-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
           <span className="inline-flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
             {chatDraft.trim()
               ? `${username} đang soạn...`
               : `${displayedOnlineCount} người đang ở trong hub`}

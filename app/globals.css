@@ -1004,4 +1004,249 @@
       background-position: 200% 0;
     }
   }
+
+  /* Premium Username Styles */
+  .spark-username-shimmer {
+    background-size: 200% auto;
+    animation: spark-text-shimmer 3s linear infinite;
+  }
+
+  @keyframes spark-text-shimmer {
+    to { background-position: 200% center; }
+  }
+
+  /* Admin: Ruby Crimson */
+  .spark-username-gradient-admin {
+    background: linear-gradient(to right, #ff1f1f, #ff4b2b, #ff1f1f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-admin { text-shadow: 0 0 10px rgba(255, 31, 31, 0.4); }
+
+  /* Moderator: Deep Emerald */
+  .spark-username-gradient-moderator {
+    background: linear-gradient(to right, #00b09b, #96c93d, #00b09b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-moderator { text-shadow: 0 0 10px rgba(0, 176, 155, 0.4); }
+
+  /* Premium: Gold Amber */
+  .spark-username-gradient-premium {
+    background: linear-gradient(to right, #f8b500, #fceabb, #f8b500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-premium { text-shadow: 0 0 10px rgba(248, 181, 0, 0.4); }
+
+  /* Contributor: Sunset Orange */
+  .spark-username-gradient-contributor {
+    background: linear-gradient(to right, #f46b45, #eea849, #f46b45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-contributor { text-shadow: 0 0 10px rgba(244, 107, 69, 0.4); }
+
+  /* Verified: Azure Cyan */
+  .spark-username-gradient-verified {
+    background: linear-gradient(to right, #00d2ff, #3a7bd5, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-verified { text-shadow: 0 0 10px rgba(0, 210, 255, 0.4); }
+
+  /* VIP: Amethyst Purple */
+  .spark-username-gradient-vip {
+    background: linear-gradient(to right, #8e2de2, #4a00e0, #8e2de2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-vip { text-shadow: 0 0 10px rgba(142, 45, 226, 0.4); }
+
+  /* AI Expert: Cyber Purple-Blue */
+  .spark-username-gradient-ai {
+    background: linear-gradient(to right, #00c6ff, #0072ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-ai { text-shadow: 0 0 10px rgba(0, 198, 255, 0.4); }
+
+  /* Developer: Matrix Green */
+  .spark-username-gradient-developer {
+    background: linear-gradient(to right, #11998e, #38ef7d, #11998e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-developer { text-shadow: 0 0 10px rgba(17, 153, 142, 0.4); }
+
+  /* Legendary: Solar Flare */
+  .spark-username-gradient-legendary {
+    background: linear-gradient(to right, #f12711, #f5af19, #f12711);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .spark-username-glow-legendary { text-shadow: 0 0 15px rgba(241, 39, 17, 0.6); }
+
+  .spark-username-legendary-aura {
+    animation: spark-legendary-aura 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes spark-legendary-aura {
+    from { filter: drop-shadow(0 0 2px #f5af19); }
+    to { filter: drop-shadow(0 0 8px #f12711); }
+  }
+
+  /* Legendary Dragon Soul Effects */
+  @keyframes dragon-soul-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); filter: blur(8px) brightness(1.2); }
+    50% { opacity: 0.9; transform: scale(1.15); filter: blur(12px) brightness(1.8); }
+  }
+
+  @keyframes dragon-tail-rotate {
+    0% { transform: rotate(0deg) translate(28px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(28px) rotate(-360deg); }
+  }
+
+  .spark-dragon-aura {
+    background: radial-gradient(circle, rgba(251,191,36,0.9) 0%, rgba(217,119,6,0.5) 50%, transparent 75%);
+    animation: dragon-soul-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .spark-dragon-particle {
+    background: radial-gradient(circle, #fff 0%, #fbbf24 40%, transparent 70%);
+    box-shadow: 0 0 15px #fbbf24, 0 0 30px #f59e0b;
+    filter: blur(1px);
+    pointer-events: none;
+  }
+
+  /* Premium Chat Bubbles Base */
+  .spark-chat-bubble-base {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+}
+
+/* PREMIUM CHAT BUBBLES - GLOBAL SCOPE */
+.spark-chat-bubble-base {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.spark-chat-bubble-legendary {
+  background-color: #fbbf24 !important;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+  border: 1.5px solid #d97706 !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.dark .spark-chat-bubble-legendary {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  border-color: #fbbf24 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.3) !important;
+}
+
+.spark-chat-bubble-admin {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  border: 1px solid #f87171 !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-vip {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important;
+  border: 1px solid #a78bfa !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-moderator {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  border: 1px solid #fbbf24 !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-premium {
+  background: linear-gradient(135deg, #eab308, #ca8a04) !important;
+  border: 1px solid #fde047 !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-ai {
+  background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+  border: 1px solid #67e8f9 !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-developer {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border: 1px solid #6ee7b7 !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-verified {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+  border: 1px solid #7dd3fc !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-contributor {
+  background: linear-gradient(135deg, #f43f5e, #e11d48) !important;
+  border: 1px solid #fda4af !important;
+  color: white !important;
+}
+
+.spark-chat-bubble-legendary::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important; left: -100% !important;
+  width: 50% !important; height: 100% !important;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent) !important;
+  transform: skewX(-25deg) !important;
+  animation: spark-bubble-shimmer 3s infinite !important;
+}
+
+@keyframes spark-bubble-shimmer {
+  0% { left: -100%; }
+  30%, 100% { left: 150%; }
+}
+
+.spark-username-gradient-legendary {
+  background: linear-gradient(to right, #f59e0b, #fbbf24, #f59e0b) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 800 !important;
+}
+
+.spark-chat-bubble-legendary::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -1.5px !important;
+  padding: 1.5px !important;
+  border-radius: inherit !important;
+  background: linear-gradient(45deg, #f12711, #f5af19, #f12711) !important;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+  -webkit-mask-composite: xor !important;
+  mask-composite: exclude !important;
+  opacity: 0.6 !important;
+  animation: spark-border-rotate 4s linear infinite !important;
+  pointer-events: none !important;
+}
+
+@keyframes spark-border-rotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
 }

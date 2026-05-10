@@ -36,6 +36,7 @@ import { Crown, Sparkles, Palette } from "lucide-react";
 import { PremiumAvatarPaymentModal } from "@/components/PremiumAvatarPaymentModal";
 import { AvatarFrameShop } from "@/components/community/AvatarFrameShop";
 import { ProfileAvatar } from "@/components/UserAvatar";
+import { Username } from "@/components/community/Username";
 import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
 
 export default function ProfilePage() {
@@ -57,6 +58,7 @@ export default function ProfilePage() {
   const [showFrameShop, setShowFrameShop] = useState(false);
   const [currentAvatarFrameId, setCurrentAvatarFrameId] =
     useState<AvatarFrameId | null>(null);
+  const [inventory, setInventory] = useState<string[]>([]);
   const [userRole, setUserRole] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -76,13 +78,16 @@ export default function ProfilePage() {
           setFullName(userProfile.full_name || "");
           setDateOfBirth(userProfile.date_of_birth || "");
           setUserRole(userProfile.role_id || null);
-          // Load avatar frame first (compatible even when premium migration is not run)
+          
+          // Load avatar frame and inventory
           const { data } = await supabase
             .from("users")
-            .select("avatar_frame_id")
+            .select("avatar_frame_id, role_id, avatar_frames_inventory")
             .eq("id", authUser.id)
             .single();
+          
           setCurrentAvatarFrameId(data?.avatar_frame_id || null);
+          setInventory(data?.avatar_frames_inventory || []);
 
           // Load premium flag separately and ignore missing-column DBs
           const { data: premiumData, error: premiumError } = await supabase
@@ -209,396 +214,289 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Back Button */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="mb-6"
+          className="mb-8"
         >
           <Link href="/">
-            <Button variant="outline" className="gap-2">
+            <Button variant="outline" className="gap-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
               <ArrowLeft className="w-4 h-4" />
-              Quay lại
+              Quay lại Forum
             </Button>
           </Link>
         </motion.div>
 
-        {/* Profile Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
-            <CardHeader className="text-center">
-              <div
-                className="relative mx-auto mb-4 group cursor-pointer"
-                onClick={() => fileInputRef.current?.click()}
-              >
-                {/* Centralized Avatar Component */}
-                <ProfileAvatar
-                  userId={authUser?.id}
-                  avatarUrl={avatarUrl || undefined}
-                  userName={profile.full_name || "User"}
-                  frameId={currentAvatarFrameId}
-                  premiumBorderUnlocked={hasAvatarBorderUnlocked}
-                />
-
-                {/* Premium Badge Overlay */}
-                {hasAvatarBorderUnlocked && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full p-1 shadow-lg">
-                    <Crown className="w-5 h-5 text-white" />
-                  </div>
-                )}
-
-                {/* Upload Overlay */}
-                <div className="absolute inset-0 rounded-full bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  {uploadingAvatar ? (
-                    <Loader2 className="w-6 h-6 text-white animate-spin" />
-                  ) : (
-                    <>
-                      <Camera className="w-6 h-6 text-white mb-1" />
-                      <span className="text-white text-[10px] font-medium">
-                        Thay ảnh
-                      </span>
-                    </>
-                  )}
-                </div>
-
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  className="hidden"
-                  accept="image/*"
-                  onChange={handleAvatarUpload}
-                  disabled={uploadingAvatar}
-                  aria-label="Upload profile avatar image"
-                  title="Choose an image file to upload as your profile avatar"
-                />
-              </div>
-              <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
-                Thông tin cá nhân
-              </CardTitle>
-              <CardDescription className="text-base mt-2">
-                Quản lý và cập nhật thông tin của bạn
-              </CardDescription>
-
-              {/* Premium Avatar Border Section */}
-              {!hasAvatarBorderUnlocked && (
-                <div className="mt-4 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4">
-                  <div className="flex items-start gap-3">
-                    <Sparkles className="w-5 h-5 text-yellow-600 dark:text-yellow-400 flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-1">
-                        🎁 Mở khóa Premium
-                      </h4>
-                      <p className="text-sm text-yellow-800 dark:text-yellow-400 mb-3">
-                        Nâng cấp tài khoản của bạn để có viền avatar lấp lánh
-                        với hiệu ứng shimmer độc quyền!
-                      </p>
-                      <Button
-                        onClick={() => setShowPaymentModal(true)}
-                        className="gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white"
-                      >
-                        <Crown className="w-4 h-4" />
-                        Nạp tiền - Chỉ 9.99$/tháng
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {hasAvatarBorderUnlocked && (
-                <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
-                  <div className="flex items-center gap-2">
-                    <Crown className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                    <p className="text-sm font-medium text-blue-900 dark:text-blue-300">
-                      ✨ Bạn đã unlock viền avatar Premium! Avatar của bạn sẽ
-                      lấp lánh.
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* Avatar Frame Shop Section - Admin Only */}
-              {userRole === 1 && (
-                <div className="mt-4 bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 border border-cyan-200 dark:border-cyan-700 rounded-lg p-4">
-                  <div className="flex items-start gap-3">
-                    <Palette className="w-5 h-5 text-cyan-600 dark:text-cyan-400 flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-cyan-900 dark:text-cyan-300 mb-1">
-                        🎨 Kho Avatar Frames
-                      </h4>
-                      <p className="text-sm text-cyan-800 dark:text-cyan-400 mb-3">
-                        Chọn khung avatar từ kho để hiển thị trạng thái cộng
-                        đồng của bạn
-                      </p>
-                      <div className="flex items-center gap-3">
-                        {currentAvatarFrameId && (
-                          <div className="flex items-center gap-2 px-3 py-1.5 bg-white/30 dark:bg-gray-700/50 rounded-lg">
-                            <span className="text-sm text-cyan-700 dark:text-cyan-300 font-medium">
-                              Hiện tại:{" "}
-                              {AVATAR_FRAMES[currentAvatarFrameId]?.name}
-                            </span>
-                          </div>
-                        )}
-                        <Button
-                          onClick={() => setShowFrameShop(true)}
-                          className="gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white"
-                          type="button"
-                        >
-                          <Palette className="w-4 h-4" />
-                          Mở Kho
-                        </Button>
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* LEFT SIDEBAR: Visual & Premium Identity */}
+          <aside className="w-full lg:w-80 space-y-6 lg:sticky lg:top-8">
+            {/* Avatar & Basic Info Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <Card className="border shadow-md overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+                <div className="h-24 bg-gradient-to-r from-blue-600 to-indigo-600" />
+                <CardContent className="pt-0 -mt-12 text-center pb-6">
+                  <div
+                    className="relative mx-auto mb-4 group cursor-pointer inline-block"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <ProfileAvatar
+                      userId={authUser?.id}
+                      avatarUrl={avatarUrl || undefined}
+                      userName={profile.full_name || "User"}
+                      frameId={currentAvatarFrameId}
+                      premiumBorderUnlocked={hasAvatarBorderUnlocked}
+                    />
+                    {hasAvatarBorderUnlocked && (
+                      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full p-1 shadow-lg ring-2 ring-white dark:ring-gray-800">
+                        <Crown className="w-4 h-4 text-white" />
                       </div>
+                    )}
+                    <div className="absolute inset-0 rounded-full bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      {uploadingAvatar ? (
+                        <Loader2 className="w-6 h-6 text-white animate-spin" />
+                      ) : (
+                        <Camera className="w-5 h-5 text-white" />
+                      )}
                     </div>
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      className="hidden"
+                      accept="image/*"
+                      onChange={handleAvatarUpload}
+                      disabled={uploadingAvatar}
+                    />
                   </div>
-                </div>
-              )}
-            </CardHeader>
-
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Email (Read-only) */}
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
-                  >
-                    <Mail className="w-4 h-4" />
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    value={profile.email}
-                    readOnly
-                    placeholder="your.email@example.com"
-                    title="Email address (read-only)"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
-                  />
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    Email không thể thay đổi
+                  <div className="mb-1">
+                    <Username 
+                      userId={authUser.id} 
+                      name={fullName || "User"} 
+                      frameId={currentAvatarFrameId}
+                      className="text-xl"
+                    />
+                  </div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    {profile.email}
                   </p>
-                </div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+                    {profile.role_id === 1 ? "👑 Admin" : "👤 Thành viên"}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-                {/* Full Name */}
-                <div>
-                  <label
-                    htmlFor="fullName"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
-                  >
-                    <User className="w-4 h-4" />
-                    Họ và tên <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="fullName"
-                    type="text"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                      errors.full_name
-                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
-                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
-                    }`}
-                    placeholder="Nguyễn Văn A"
-                    title="Enter your full name"
-                    required
-                  />
-                  {errors.full_name && (
-                    <p className="text-sm text-red-600 mt-1">
-                      {errors.full_name}
+            {/* Premium Section Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              {!hasAvatarBorderUnlocked ? (
+                <Card className="border border-yellow-200 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 dark:border-yellow-900/30 overflow-hidden">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-bold text-yellow-800 dark:text-yellow-400 flex items-center gap-2">
+                      <Sparkles className="w-4 h-4" />
+                      🎁 Mở khóa Premium
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs text-yellow-700 dark:text-yellow-500/80 mb-4 leading-relaxed">
+                      Nâng cấp để sở hữu viền avatar lấp lánh và hiệu ứng shimmer độc quyền!
                     </p>
-                  )}
-                </div>
-
-                {/* Date of Birth */}
-                <div>
-                  <label
-                    htmlFor="dateOfBirth"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
-                  >
-                    <Calendar className="w-4 h-4" />
-                    Ngày sinh <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="dateOfBirth"
-                    type="date"
-                    value={dateOfBirth}
-                    onChange={(e) => setDateOfBirth(e.target.value)}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                      errors.date_of_birth
-                        ? "border-red-300 dark:border-red-700 focus:border-red-400"
-                        : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
-                    }`}
-                    placeholder="dd/mm/yyyy"
-                    title="Select your date of birth"
-                    required
-                  />
-                  {errors.date_of_birth && (
-                    <p className="text-sm text-red-600 mt-1">
-                      {errors.date_of_birth}
-                    </p>
-                  )}
-                </div>
-
-                {/* Role (Read-only) */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
-                    Vai trò
-                  </label>
-                  <div className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700">
-                    <span className="text-gray-700 dark:text-gray-300 font-medium">
-                      {profile.role_id === 1 ? "👑 Admin" : "👤 User"}
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    Vai trò do quản trị viên quản lý
-                  </p>
-                </div>
-
-                {/* Success Message */}
-                {successMessage && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-green-600">{successMessage}</p>
-                  </div>
-                )}
-
-                {/* Error Message */}
-                {generalError && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex items-start gap-2">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-red-600">{generalError}</p>
-                  </div>
-                )}
-
-                {/* Submit Button */}
-                <Button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 text-lg font-semibold shadow-md transition-all"
-                >
-                  {loading ? (
-                    <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Đang cập nhật...
-                    </>
-                  ) : (
-                    <>
-                      <CheckCircle className="mr-2 h-5 w-5" />
-                      Lưu thay đổi
-                    </>
-                  )}
-                </Button>
-              </form>
-
-              {/* Info Section */}
-              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
-                    ℹ️ Thông tin tài khoản
-                  </h4>
-                  <ul className="text-sm text-blue-800 dark:text-blue-300 space-y-1">
-                    <li>• Email không thể thay đổi sau khi đăng ký</li>
-                    <li>• Vai trò của bạn do quản trị viên quản lý</li>
-                    <li>• Thông tin cá nhân được bảo mật theo chính sách</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Account Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-6"
-        >
-          <Card className="border dark:bg-gray-800 dark:border-gray-700">
-            <CardContent className="pt-6">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-                Thông tin tài khoản
-              </h3>
-              <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                <div className="flex justify-between">
-                  <span>Ngày tạo:</span>
-                  <span className="font-medium">
-                    {new Date(profile.created_at).toLocaleDateString("vi-VN")}
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span>ID:</span>
-                  <span className="font-mono text-xs">{profile.id}</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Security Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6"
-        >
-          <Card className="border dark:bg-gray-800 dark:border-gray-700">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Shield className="w-5 h-5" />
-                Bảo mật
-              </CardTitle>
-              <CardDescription>
-                Quản lý mật khẩu và cài đặt bảo mật tài khoản
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                      <Key className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <Button
+                      onClick={() => setShowPaymentModal(true)}
+                      size="sm"
+                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold"
+                    >
+                      Nạp tiền - 9.99$/tháng
+                    </Button>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card className="border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 dark:border-blue-900/30">
+                  <CardContent className="py-4 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center shrink-0 shadow-sm">
+                      <Crown className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">
-                        Mật khẩu
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Thay đổi mật khẩu đăng nhập của bạn
-                      </p>
+                      <h4 className="text-sm font-bold text-blue-900 dark:text-blue-300">Premium Active</h4>
+                      <p className="text-[11px] text-blue-700 dark:text-blue-400">Viền avatar của bạn đã lấp lánh!</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+            </motion.div>
+
+            {/* Avatar Frame Shop Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Card className="border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/10 dark:to-blue-900/10 dark:border-cyan-900/30">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-bold text-cyan-800 dark:text-cyan-400 flex items-center gap-2">
+                    <Palette className="w-4 h-4" />
+                    🎨 Kho Avatar Frames
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[10px] text-cyan-700/70 dark:text-cyan-500/60 mb-3 leading-tight">
+                    Khám phá bộ sưu tập khung hình độc quyền và làm mới hồ sơ của bạn.
+                  </p>
+                  <div className="flex items-center gap-2 mb-4 p-2 bg-white/50 dark:bg-gray-800/50 rounded-lg border border-cyan-100 dark:border-cyan-800">
+                    <div className="text-[10px] uppercase font-bold text-cyan-600 dark:text-cyan-400">Hiện tại</div>
+                    <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 truncate">
+                      {currentAvatarFrameId ? AVATAR_FRAMES[currentAvatarFrameId]?.name : "Mặc định"}
                     </div>
                   </div>
                   <Button
-                    onClick={() => setShowPasswordModal(true)}
-                    variant="outline"
-                    className="gap-2"
+                    onClick={() => setShowFrameShop(true)}
+                    size="sm"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold transition-all active:scale-95"
                   >
-                    <Key className="w-4 h-4" />
-                    Đổi mật khẩu
+                    Mở Kho Frames
                   </Button>
-                </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </aside>
 
-                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2 flex items-center gap-2">
-                    🔒 Bảo mật mật khẩu
-                  </h4>
-                  <ul className="text-sm text-blue-800 dark:text-blue-300 space-y-1">
-                    <li>✓ Mật khẩu được mã hóa tự động bởi Supabase Auth</li>
-                    <li>
-                      ✓ Không bao giờ lưu mật khẩu dưới dạng văn bản thường
-                    </li>
-                    <li>✓ Sử dụng mật khẩu mạnh ít nhất 6 ký tự</li>
-                    <li>✓ Không chia sẻ mật khẩu với bất kỳ ai</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+          {/* RIGHT CONTENT: Forms & Settings */}
+          <main className="flex-1 w-full space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <Card className="border shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold flex items-center gap-2">
+                    <User className="w-6 h-6 text-blue-500" />
+                    Thông tin cá nhân
+                  </CardTitle>
+                  <CardDescription>Cập nhật hồ sơ công khai của bạn</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    {/* Full Name */}
+                    <div className="grid gap-2">
+                      <label htmlFor="fullName" className="text-sm font-semibold flex items-center gap-2">
+                        Họ và tên <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="fullName"
+                        type="text"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className={`w-full px-4 py-2.5 border rounded-xl focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                          errors.full_name ? "border-red-300 focus:ring-red-100" : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
+                        }`}
+                        placeholder="Nguyễn Văn A"
+                      />
+                      {errors.full_name && <p className="text-xs text-red-500">{errors.full_name}</p>}
+                    </div>
+
+                    {/* Date of Birth */}
+                    <div className="grid gap-2">
+                      <label htmlFor="dateOfBirth" className="text-sm font-semibold flex items-center gap-2">
+                        Ngày sinh <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="dateOfBirth"
+                        type="date"
+                        value={dateOfBirth}
+                        onChange={(e) => setDateOfBirth(e.target.value)}
+                        className={`w-full px-4 py-2.5 border rounded-xl focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                          errors.date_of_birth ? "border-red-300 focus:ring-red-100" : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
+                        }`}
+                      />
+                      {errors.date_of_birth && <p className="text-xs text-red-500">{errors.date_of_birth}</p>}
+                    </div>
+
+                    {/* Success/Error Alerts */}
+                    {successMessage && (
+                      <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl p-4 flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                        <p className="text-sm text-emerald-700 dark:text-emerald-300 font-medium">{successMessage}</p>
+                      </div>
+                    )}
+                    {generalError && (
+                      <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 rounded-xl p-4 flex items-center gap-3">
+                        <AlertCircle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                        <p className="text-sm text-rose-700 dark:text-rose-300 font-medium">{generalError}</p>
+                      </div>
+                    )}
+
+                    <Button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-12 rounded-xl font-bold shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98]"
+                    >
+                      {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Lưu Thay Đổi"}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Security & Account Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Card className="border shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold flex items-center gap-2">
+                    <Shield className="w-5 h-5 text-emerald-500" />
+                    Bảo mật & Tài khoản
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-gray-700/50 rounded-2xl border border-slate-100 dark:border-gray-600">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <Key className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white">Mật khẩu</h4>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Bảo vệ tài khoản của bạn</p>
+                      </div>
+                    </div>
+                    <Button
+                      onClick={() => setShowPasswordModal(true)}
+                      variant="outline"
+                      size="sm"
+                      className="rounded-xl font-bold"
+                    >
+                      Thay đổi
+                    </Button>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 text-xs">
+                    <div className="p-3 bg-slate-50 dark:bg-gray-700/50 rounded-xl">
+                      <div className="text-gray-500 dark:text-gray-400 mb-1">Ngày gia nhập</div>
+                      <div className="font-bold text-gray-900 dark:text-white">
+                        {new Date(profile.created_at).toLocaleDateString("vi-VN")}
+                      </div>
+                    </div>
+                    <div className="p-3 bg-slate-50 dark:bg-gray-700/50 rounded-xl overflow-hidden">
+                      <div className="text-gray-500 dark:text-gray-400 mb-1">ID Người dùng</div>
+                      <div className="font-mono text-[10px] text-gray-900 dark:text-white truncate">
+                        {profile.id}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </main>
+        </div>
       </div>
 
       {/* Change Password Modal */}
@@ -620,17 +518,21 @@ export default function ProfilePage() {
       />
 
       {/* Avatar Frame Shop Modal */}
-      <AvatarFrameShop
-        open={showFrameShop}
-        onOpenChange={setShowFrameShop}
-        userId={authUser?.id || ""}
-        currentFrameId={currentAvatarFrameId}
-        onFrameSelected={(frameId) => {
-          setCurrentAvatarFrameId(frameId);
-          setSuccessMessage("✨ Avatar frame đã được thay đổi!");
-          setTimeout(() => setSuccessMessage(""), 3000);
-        }}
-      />
+      {authUser && profile && (
+        <AvatarFrameShop
+          open={showFrameShop}
+          onOpenChange={setShowFrameShop}
+          userId={authUser.id}
+          userRole={profile.role_id}
+          inventory={inventory}
+          currentFrameId={currentAvatarFrameId}
+          onFrameSelected={(frameId) => {
+            setCurrentAvatarFrameId(frameId);
+            setSuccessMessage("✨ Avatar frame đã được thay đổi!");
+            setTimeout(() => setSuccessMessage(""), 3000);
+          }}
+        />
+      )}
     </div>
   );
 }

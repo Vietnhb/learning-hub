@@ -1,8 +1,12 @@
-import { Users, Plus, ImageIcon, Reply, Bell } from "lucide-react";
-import { RefObject } from "react";
+import { Users, Plus, ImageIcon, Reply, Bell, Palette, Sparkles } from "lucide-react";
+import { RefObject, useState, useEffect } from "react";
 import { Avatar } from "../shared/Avatar";
 import { HubCard } from "../shared/HubCard";
 import { ActiveMember } from "../../types";
+import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/lib/supabase";
+import { AvatarFrameShop } from "@/components/community/AvatarFrameShop";
+import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
 
 export function LeftSidebar({
   displayedOnlineCount,
@@ -25,6 +29,33 @@ export function LeftSidebar({
   notificationRef: RefObject<HTMLElement>;
   unreadCount: number;
 }) {
+  const { user } = useAuth();
+  const [showFrameShop, setShowFrameShop] = useState(false);
+  const [currentFrameId, setCurrentFrameId] = useState<AvatarFrameId | null>(null);
+  const [userRole, setUserRole] = useState<number | null>(null);
+  const [inventory, setInventory] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (!user) return;
+      const { data } = await supabase
+        .from("users")
+        .select("avatar_frame_id, role_id, avatar_frames_inventory")
+        .eq("id", user.id)
+        .single();
+      setCurrentFrameId(data?.avatar_frame_id || null);
+      setUserRole(data?.role_id || null);
+      setInventory(data?.avatar_frames_inventory || []);
+    };
+
+    fetchUserData();
+
+    // Subscribe to profile updates
+    const handleUpdate = () => fetchUserData();
+    window.addEventListener("learning-hub:user-profile-updated", handleUpdate);
+    return () => window.removeEventListener("learning-hub:user-profile-updated", handleUpdate);
+  }, [user]);
+
   return (
     <aside className="space-y-5 xl:sticky xl:top-24 xl:self-start">
       <HubCard className="p-5">
@@ -51,8 +82,8 @@ export function LeftSidebar({
               key={member.key}
               name={member.name}
               src={member.avatar}
+              userId={member.userId}
               size="sm"
-              online={Boolean(member.userId && isOnline(member.userId))}
             />
           ))}
         </div>
@@ -63,6 +94,35 @@ export function LeftSidebar({
             : "Đang đồng bộ trạng thái online..."}
         </div>
       </HubCard>
+
+      {/* Avatar Frame Shop Card */}
+      {user && (
+        <HubCard className="p-4 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 border-cyan-500/20">
+          <div className="flex items-start gap-3">
+            <div className="rounded-xl bg-cyan-100 p-2 text-cyan-600 dark:bg-cyan-500/20 dark:text-cyan-400">
+              <Palette className="h-5 w-5" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                Kho Avatar Frames
+                <Sparkles className="h-3 w-3 text-amber-400 animate-pulse" />
+              </h3>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 line-clamp-1">
+                {currentFrameId 
+                  ? `Đang dùng: ${AVATAR_FRAMES[currentFrameId]?.name || currentFrameId}`
+                  : "Chưa chọn khung đại diện"}
+              </p>
+              <button
+                type="button"
+                onClick={() => setShowFrameShop(true)}
+                className="mt-2.5 w-full rounded-xl bg-cyan-500 px-3 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-cyan-600 active:scale-95"
+              >
+                Mở Kho Frames
+              </button>
+            </div>
+          </div>
+        </HubCard>
+      )}
 
       <HubCard className="p-3">
         <button
@@ -110,6 +170,21 @@ export function LeftSidebar({
           ) : null}
         </button>
       </HubCard>
+
+      {/* Avatar Frame Shop Modal */}
+      {user && (
+        <AvatarFrameShop
+          open={showFrameShop}
+          onOpenChange={setShowFrameShop}
+          userId={user.id}
+          userRole={userRole}
+          inventory={inventory}
+          currentFrameId={currentFrameId}
+          onFrameSelected={(frameId) => {
+            setCurrentFrameId(frameId);
+          }}
+        />
+      )}
     </aside>
   );
 }

@@ -5,12 +5,13 @@ import { supabase } from "@/lib/supabase";
 import { AvatarFrame } from "@/components/community/AvatarFrame";
 import { type AvatarFrameId } from "@/lib/designSystem";
 import { User } from "lucide-react";
+import { getCachedUser, setCachedUser, clearUserCache } from "@/lib/userCache";
 
 interface UserAvatarProps {
   userId?: string;
   avatarUrl?: string;
   userName?: string;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   className?: string;
   showFrameEffects?: boolean;
   onClick?: () => void;
@@ -41,53 +42,69 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
   premiumBorderUnlocked,
 }) => {
   const [frameId, setFrameId] = useState<AvatarFrameId | null>(null);
+  const [dbAvatarUrl, setDbAvatarUrl] = useState<string | null>(null);
   const [isPremium, setIsPremium] = useState(false);
   const [refreshToken, setRefreshToken] = useState(0);
 
   useEffect(() => {
     const fetchUserData = async () => {
-      if (!userId) {
-        return;
+      if (!userId) return;
+
+      // Check cache first
+      const cached = getCachedUser(userId);
+      if (cached && refreshToken === 0) {
+        if (dbAvatarUrl !== cached.avatarUrl) setDbAvatarUrl(cached.avatarUrl);
+        if (frameIdOverride === undefined && frameId !== cached.frameId) {
+          setFrameId(cached.frameId);
+        }
+        // Still need to check premium flag if not cached or if we want to be safe
       }
 
       try {
         const { data, error } = await supabase
           .from("users")
-          .select("avatar_frame_id")
+          .select("avatar_frame_id, avatar_url")
           .eq("id", userId)
           .single();
 
         if (error) throw error;
 
-        if (frameIdOverride === undefined) {
-          setFrameId((data?.avatar_frame_id || null) as AvatarFrameId | null);
-        }
+        const fetchedFrameId = (data?.avatar_frame_id || null) as AvatarFrameId | null;
+        const fetchedAvatarUrl = data?.avatar_url || null;
 
-        // Query premium flag separately to stay compatible with DBs that have not run migration yet.
-        if (premiumBorderUnlocked === undefined) {
-          const { data: premiumData, error: premiumError } = await supabase
-            .from("users")
-            .select("premium_avatar_border")
-            .eq("id", userId)
-            .single();
+        if (fetchedAvatarUrl) setDbAvatarUrl(fetchedAvatarUrl);
+        if (frameIdOverride === undefined) setFrameId(fetchedFrameId);
 
-          if (!premiumError) {
-            setIsPremium(Boolean(premiumData?.premium_avatar_border));
-          } else if ((premiumError as { code?: string }).code !== "42703") {
-            console.error("Error fetching premium avatar flag:", premiumError);
-          } else {
-            setIsPremium(false);
-          }
-        }
+        // Update cache
+        setCachedUser(userId, {
+          frameId: fetchedFrameId,
+          avatarUrl: fetchedAvatarUrl
+        });
       } catch (err) {
         console.error("Error fetching user avatar data:", err);
       }
+
+      // Query premium flag separately to stay compatible with DBs that have not run migration yet.
+      if (premiumBorderUnlocked === undefined) {
+        const { data: premiumData, error: premiumError } = await supabase
+          .from("users")
+          .select("premium_avatar_border")
+          .eq("id", userId)
+          .single();
+
+        if (!premiumError) {
+          setIsPremium(Boolean(premiumData?.premium_avatar_border));
+        }
+      }
     };
 
-    fetchUserData();
+    void fetchUserData();
 
     const handleProfileUpdated = () => {
-      setRefreshToken((value) => value + 1);
+      if (userId) {
+        clearUserCache(userId);
+        setRefreshToken((value) => value + 1);
+      }
     };
 
     window.addEventListener(
@@ -118,10 +135,13 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
   // Determine if should show shimmer effect
   const showShimmer = showFrameEffects && !!frameId;
 
+  // Prioritize DB avatar URL if available
+  const effectiveAvatarUrl = dbAvatarUrl || avatarUrl;
+
   // Base avatar content
-  const avatarContent = avatarUrl ? (
+  const avatarContent = effectiveAvatarUrl ? (
     <img
-      src={avatarUrl}
+      src={effectiveAvatarUrl}
       alt={userName}
       className="w-full h-full object-cover"
     />
@@ -157,6 +177,7 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
 
   // Fallback: simple avatar without frame
   const sizeClasses = {
+    xs: "h-6 w-6",
     sm: "h-8 w-8",
     md: "h-12 w-12",
     lg: "h-20 w-20",

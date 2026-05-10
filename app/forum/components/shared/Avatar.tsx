@@ -20,8 +20,8 @@ export function Avatar({
   showFrameEffects?: boolean;
 }) {
   // Map forum sizes to UserAvatar sizes
-  const sizeMap: Record<string, "sm" | "md" | "lg" | "xl"> = {
-    xs: "sm",
+  const sizeMap: Record<string, "xs" | "sm" | "md" | "lg" | "xl"> = {
+    xs: "xs",
     sm: "sm",
     md: "md",
   };

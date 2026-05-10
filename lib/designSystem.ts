@@ -125,65 +125,81 @@ export const ROLE_BADGES = {
     id: "admin",
     label: "Admin",
     icon: "👑",
-    bgGradient: "from-red-600 to-red-700",
+    bgGradient: "from-rose-600 via-red-600 to-red-700",
     textColor: "text-white",
-    borderColor: "border-red-500",
+    borderColor: "border-rose-400",
+    glowClass: "shadow-[0_0_15px_rgba(244,63,94,0.5)]",
+    shimmerClass: "spark-shimmer-red",
   },
   moderator: {
     id: "moderator",
     label: "Moderator",
     icon: "🛡️",
-    bgGradient: "from-orange-600 to-orange-700",
+    bgGradient: "from-amber-500 via-orange-500 to-orange-600",
     textColor: "text-white",
-    borderColor: "border-orange-500",
+    borderColor: "border-amber-400",
+    glowClass: "shadow-[0_0_12px_rgba(251,146,60,0.4)]",
+    shimmerClass: "spark-shimmer-amber",
   },
   topContributor: {
     id: "top-contributor",
     label: "Top Contributor",
     icon: "🔥",
-    bgGradient: "from-pink-600 to-red-600",
+    bgGradient: "from-pink-500 via-rose-500 to-red-600",
     textColor: "text-white",
-    borderColor: "border-pink-500",
+    borderColor: "border-pink-400",
+    glowClass: "shadow-[0_0_12px_rgba(244,114,182,0.4)]",
+    shimmerClass: "spark-shimmer-pink",
   },
   verified: {
     id: "verified",
     label: "Verified",
     icon: "✅",
-    bgGradient: "from-cyan-600 to-blue-600",
+    bgGradient: "from-cyan-500 via-sky-500 to-blue-600",
     textColor: "text-white",
-    borderColor: "border-cyan-500",
+    borderColor: "border-cyan-400",
+    glowClass: "shadow-[0_0_10px_rgba(34,211,238,0.3)]",
+    shimmerClass: "spark-shimmer-cyan",
   },
   vipMember: {
     id: "vip-member",
     label: "VIP Member",
     icon: "⭐",
-    bgGradient: "from-purple-600 to-indigo-700",
+    bgGradient: "from-violet-600 via-purple-600 to-indigo-700",
     textColor: "text-white",
-    borderColor: "border-purple-500",
+    borderColor: "border-violet-400",
+    glowClass: "shadow-[0_0_15px_rgba(139,92,246,0.5)]",
+    shimmerClass: "spark-shimmer-violet",
   },
   aiExpert: {
     id: "ai-expert",
     label: "AI Expert",
     icon: "🤖",
-    bgGradient: "from-teal-600 to-cyan-600",
+    bgGradient: "from-teal-500 via-cyan-500 to-blue-600",
     textColor: "text-white",
-    borderColor: "border-teal-500",
+    borderColor: "border-teal-400",
+    glowClass: "shadow-[0_0_10px_rgba(20,184,166,0.3)]",
+    shimmerClass: "spark-shimmer-silver",
   },
   developer: {
     id: "developer",
     label: "Developer",
     icon: "💻",
-    bgGradient: "from-emerald-600 to-teal-600",
+    bgGradient: "from-emerald-500 via-teal-500 to-cyan-600",
     textColor: "text-white",
-    borderColor: "border-emerald-500",
+    borderColor: "border-emerald-400",
+    glowClass: "shadow-[0_0_12px_rgba(16,185,129,0.4)]",
+    shimmerClass: "spark-shimmer-blue",
   },
   activeMember: {
     id: "active-member",
     label: "Active Member",
     icon: "⚡",
-    bgGradient: "from-blue-600 to-cyan-600",
+    bgGradient: "from-blue-500 via-cyan-500 to-sky-600",
     textColor: "text-white",
-    borderColor: "border-blue-500",
+    borderColor: "border-blue-400",
+    glowClass: "shadow-[0_0_8px_rgba(59,130,246,0.3)]",
+    shimmerClass: "spark-shimmer-blue",
   },
 } as const;
 
@@ -195,14 +211,16 @@ export const USERNAME_STYLES = {
     shimmerClass: "spark-username-shimmer",
     hoverEffect: "hover:spark-username-hover-admin",
     nameplateClass: "spark-nameplate-admin",
+    bubbleClass: "spark-chat-bubble-admin",
   },
-  verified: {
-    id: "verified",
-    nameClass: "spark-username-gradient-verified",
-    glowClass: "spark-username-glow-verified",
+  moderator: {
+    id: "moderator",
+    nameClass: "spark-username-gradient-moderator",
+    glowClass: "spark-username-glow-moderator",
     shimmerClass: "spark-username-shimmer",
-    hoverEffect: "hover:spark-username-hover-verified",
-    nameplateClass: "spark-nameplate-verified",
+    hoverEffect: "hover:spark-username-hover-moderator",
+    nameplateClass: "spark-nameplate-moderator",
+    bubbleClass: "spark-chat-bubble-moderator",
   },
   premium: {
     id: "premium",
@@ -211,6 +229,43 @@ export const USERNAME_STYLES = {
     shimmerClass: "spark-username-shimmer",
     hoverEffect: "hover:spark-username-hover-premium",
     nameplateClass: "spark-nameplate-premium",
+    bubbleClass: "spark-chat-bubble-premium",
+  },
+  "top-contributor": {
+    id: "top-contributor",
+    nameClass: "spark-username-gradient-contributor",
+    glowClass: "spark-username-glow-contributor",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-contributor",
+    nameplateClass: "spark-nameplate-contributor",
+    bubbleClass: "spark-chat-bubble-contributor",
+  },
+  verified: {
+    id: "verified",
+    nameClass: "spark-username-gradient-verified",
+    glowClass: "spark-username-glow-verified",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-verified",
+    nameplateClass: "spark-nameplate-verified",
+    bubbleClass: "spark-chat-bubble-verified",
+  },
+  "vip-member": {
+    id: "vip-member",
+    nameClass: "spark-username-gradient-vip",
+    glowClass: "spark-username-glow-vip",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-vip",
+    nameplateClass: "spark-nameplate-vip",
+    bubbleClass: "spark-chat-bubble-vip",
+  },
+  "ai-expert": {
+    id: "ai-expert",
+    nameClass: "spark-username-gradient-ai",
+    glowClass: "spark-username-glow-ai",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-ai",
+    nameplateClass: "spark-nameplate-ai",
+    bubbleClass: "spark-chat-bubble-ai",
   },
   developer: {
     id: "developer",
@@ -219,14 +274,7 @@ export const USERNAME_STYLES = {
     shimmerClass: "spark-username-shimmer",
     hoverEffect: "hover:spark-username-hover-developer",
     nameplateClass: "spark-nameplate-developer",
-  },
-  vip: {
-    id: "vip",
-    nameClass: "spark-username-gradient-vip",
-    glowClass: "spark-username-glow-vip",
-    shimmerClass: "spark-username-shimmer",
-    hoverEffect: "hover:spark-username-hover-vip",
-    nameplateClass: "spark-nameplate-vip",
+    bubbleClass: "spark-chat-bubble-developer",
   },
   legendary: {
     id: "legendary",
@@ -236,6 +284,7 @@ export const USERNAME_STYLES = {
     auraClass: "spark-username-legendary-aura",
     hoverEffect: "spark-username-hover-legendary",
     nameplateClass: "spark-nameplate-legendary",
+    bubbleClass: "spark-chat-bubble-legendary",
   },
 } as const;
 
@@ -303,17 +352,25 @@ export const getRoleBadgeById = (id: RoleBadgeId) => ROLE_BADGES[id];
 export const getUsernameStyleByFrame = (frameId?: string | null) => {
   if (!frameId) return null;
 
-  // Direct mappings
+  const frame = AVATAR_FRAMES[frameId as AvatarFrameId];
+  
+  // High precedence for Legendary rarity (Gold/Solar Flare)
+  if (frame?.rarity === ("legendary" as any) || frameId === "legendary") {
+    return USERNAME_STYLES.legendary;
+  }
+
+  // Role based mappings
   if (frameId === "admin") return USERNAME_STYLES.admin;
+  if (frameId === "moderator") return USERNAME_STYLES.moderator;
   if (frameId === "developer") return USERNAME_STYLES.developer;
   if (frameId === "premium") return USERNAME_STYLES.premium;
   if (frameId === "verified") return USERNAME_STYLES.verified;
-  if (frameId === "vip-member") return USERNAME_STYLES.vip;
+  if (frameId === "vip-member") return USERNAME_STYLES["vip-member"];
+  if (frameId === "ai-expert") return USERNAME_STYLES["ai-expert"];
+  if (frameId === "top-contributor") return USERNAME_STYLES["top-contributor"];
 
-  // Rarity based mappings for others
-  const frame = AVATAR_FRAMES[frameId as AvatarFrameId];
-  if (frame?.rarity === ("legendary" as any)) return USERNAME_STYLES.legendary;
-  if (frame?.rarity === ("epic" as any)) return USERNAME_STYLES.vip;
+  // Fallback rarity based mappings
+  if (frame?.rarity === ("epic" as any)) return USERNAME_STYLES["vip-member"];
   if (frame?.rarity === ("rare" as any)) return USERNAME_STYLES.premium;
 
   return null;
