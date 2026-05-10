@@ -284,6 +284,71 @@ export const AVATAR_FRAMES = {
     rarity: "legendary",
     theme: "warm",
   },
+  "cat-walking": {
+    id: "cat-walking",
+    name: "Cat Stroll",
+    description: "Adorable walking cat around your avatar",
+    borderClass: "spark-border-cat-walking",
+    glowClass: "shadow-[0_0_20px_rgba(255,255,255,0.3)]",
+    shimmerClass: "spark-shimmer-silver",
+    particleClass: "spark-particles-cyan",
+    accentColor: "from-slate-200 to-slate-400",
+    icon: "🐱",
+    rarity: "epic",
+    theme: "cool",
+  },
+  "dog-walking": {
+    id: "dog-walking",
+    name: "Shiba Walk",
+    description: "Friendly shiba walking around",
+    borderClass: "spark-border-dog-walking",
+    glowClass: "shadow-[0_0_20px_rgba(251,191,36,0.3)]",
+    shimmerClass: "spark-shimmer-gold",
+    particleClass: "spark-particles-gold",
+    accentColor: "from-amber-200 to-yellow-500",
+    icon: "🐶",
+    rarity: "epic",
+    theme: "warm",
+  },
+  "hamster-spin": {
+    id: "hamster-spin",
+    name: "Hamster Wheel",
+    description: "Energetic hamster running fast",
+    borderClass: "spark-border-hamster",
+    glowClass: "shadow-[0_0_20px_rgba(245,158,11,0.3)]",
+    shimmerClass: "spark-shimmer-amber",
+    particleClass: "spark-particles-gold",
+    accentColor: "from-orange-200 to-amber-500",
+    icon: "🐹",
+    rarity: "epic",
+    theme: "warm",
+  },
+  "pink-bling": {
+    id: "pink-bling",
+    name: "Pink Diamond",
+    description: "Luxurious pink sparkles and gems",
+    borderClass: "spark-border-pink-bling",
+    glowClass: "shadow-[0_0_25px_rgba(236,72,153,0.4)]",
+    shimmerClass: "spark-shimmer-pink",
+    particleClass: "spark-particles-rose",
+    accentColor: "from-pink-300 to-rose-500",
+    icon: "💖",
+    rarity: "legendary",
+    theme: "warm",
+  },
+  "small-bling": {
+    id: "small-bling",
+    name: "Star Dust",
+    description: "Subtle and elegant stardust sparkles",
+    borderClass: "spark-border-small-bling",
+    glowClass: "shadow-[0_0_20px_rgba(34,211,238,0.3)]",
+    shimmerClass: "spark-shimmer-cyan",
+    particleClass: "spark-particles-cyan",
+    accentColor: "from-cyan-200 to-blue-400",
+    icon: "✨",
+    rarity: "rare",
+    theme: "cool",
+  },
 } as const;
 
 export const ROLE_BADGES = {
@@ -452,6 +517,33 @@ export const USERNAME_STYLES = {
     nameplateClass: "spark-nameplate-legendary",
     bubbleClass: "spark-chat-bubble-legendary",
   },
+  "cat-walking": {
+    id: "cat-walking",
+    nameClass: "spark-username-gradient-cat",
+    glowClass: "spark-username-glow-verified",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-verified",
+    nameplateClass: "spark-nameplate-verified",
+    bubbleClass: "spark-chat-bubble-verified",
+  },
+  "dog-walking": {
+    id: "dog-walking",
+    nameClass: "spark-username-gradient-dog",
+    glowClass: "spark-username-glow-moderator",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-moderator",
+    nameplateClass: "spark-nameplate-moderator",
+    bubbleClass: "spark-chat-bubble-moderator",
+  },
+  "pink-bling": {
+    id: "pink-bling",
+    nameClass: "spark-username-gradient-pink",
+    glowClass: "spark-username-glow-vip",
+    shimmerClass: "spark-username-shimmer",
+    hoverEffect: "hover:spark-username-hover-vip",
+    nameplateClass: "spark-nameplate-vip",
+    bubbleClass: "spark-chat-bubble-vip",
+  },
 } as const;
 
 export const PREMIUM_DECORATIONS = {
@@ -538,6 +630,12 @@ export const getUsernameStyleByFrame = (frameId?: string | null) => {
   // Fallback rarity based mappings
   if (frame?.rarity === ("epic" as any)) return USERNAME_STYLES["vip-member"];
   if (frame?.rarity === ("rare" as any)) return USERNAME_STYLES.premium;
+
+  if (frameId === "cat-walking") return USERNAME_STYLES["cat-walking"];
+  if (frameId === "dog-walking") return USERNAME_STYLES["dog-walking"];
+  if (frameId === "pink-bling") return USERNAME_STYLES["pink-bling"];
+  if (frameId === "small-bling") return USERNAME_STYLES.premium;
+  if (frameId === "hamster-spin") return USERNAME_STYLES.premium;
 
   return null;
 };

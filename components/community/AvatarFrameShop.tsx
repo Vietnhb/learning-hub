@@ -85,6 +85,11 @@ const frameCardAccents: Record<string, [string, string, string, string]> = {
   "quantum-orbit":  ["from-sky-300 via-blue-500 to-violet-800",       "border-blue-400",    "ring-blue-200 dark:ring-blue-400/30",    "hover:shadow-blue-100 dark:hover:shadow-blue-900/30"],
   "ruby-overdrive": ["from-red-300 via-rose-600 to-fuchsia-900",      "border-rose-500",    "ring-rose-200 dark:ring-rose-500/30",    "hover:shadow-rose-100 dark:hover:shadow-rose-900/30"],
   "mythic-trophy":  ["from-yellow-200 via-amber-400 to-orange-700",   "border-amber-400",   "ring-amber-200 dark:ring-amber-400/30",  "hover:shadow-amber-100 dark:hover:shadow-amber-900/30"],
+  "cat-walking":    ["from-slate-100 via-slate-200 to-slate-400",     "border-slate-300",   "ring-slate-100 dark:ring-slate-400/30",  "hover:shadow-slate-100 dark:hover:shadow-slate-800/50"],
+  "dog-walking":    ["from-amber-200 via-yellow-400 to-amber-600",    "border-amber-400",   "ring-amber-100 dark:ring-amber-500/30",  "hover:shadow-amber-100 dark:hover:shadow-amber-900/30"],
+  "hamster-spin":   ["from-orange-200 via-amber-400 to-orange-700",   "border-orange-400",  "ring-orange-100 dark:ring-orange-500/30", "hover:shadow-orange-100 dark:hover:shadow-orange-900/30"],
+  "pink-bling":     ["from-pink-300 via-rose-500 to-fuchsia-700",     "border-pink-400",    "ring-pink-200 dark:ring-pink-500/30",    "hover:shadow-pink-100 dark:hover:shadow-pink-900/30"],
+  "small-bling":    ["from-cyan-200 via-blue-400 to-indigo-600",      "border-cyan-400",    "ring-cyan-100 dark:ring-cyan-400/30",    "hover:shadow-cyan-100 dark:hover:shadow-cyan-900/30"],
 };
 
 export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({

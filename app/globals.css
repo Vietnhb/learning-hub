@@ -1134,6 +1134,30 @@
     to { filter: drop-shadow(0 0 8px #f12711); }
   }
 
+  /* GIF Frame specific Username Styles */
+  .spark-username-gradient-cat {
+    background: linear-gradient(to right, #94a3b8, #cbd5e1, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .spark-username-gradient-dog {
+    background: linear-gradient(to right, #f59e0b, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .spark-username-gradient-pink {
+    background: linear-gradient(to right, #ec4899, #f472b6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: url('/pinkBling.gif'), linear-gradient(to right, #ec4899, #f472b6, #ec4899);
+    background-size: contain, 100% 100%;
+  }
+
   /* Legendary Dragon Soul Effects */
   @keyframes dragon-soul-pulse {
     0%, 100% { opacity: 0.6; transform: scale(1); filter: blur(8px) brightness(1.2); }
@@ -1703,5 +1727,45 @@
   height: calc(100% - 2px);
   border-radius: 9999px;
   overflow: hidden;
+}
+
+/* ============================================================
+   GIF-BASED PREMIUM FRAMES
+   ============================================================ */
+.spark-border-cat-walking,
+.spark-border-dog-walking,
+.spark-border-hamster,
+.spark-border-pink-bling,
+.spark-border-small-bling {
+  position: relative;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0 !important; /* Full-bleed avatar */
+  background: transparent !important;
+}
+
+.spark-border-cat-walking:hover,
+.spark-border-dog-walking:hover,
+.spark-border-hamster:hover,
+.spark-border-pink-bling:hover,
+.spark-border-small-bling:hover {
+  transform: scale(1.05);
+}
+
+.spark-border-cat-walking::before,
+.spark-border-dog-walking::before,
+.spark-border-hamster::before,
+.spark-border-pink-bling::before,
+.spark-border-small-bling::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 5;
 }
 

@@ -171,6 +171,78 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         </div>
       )}
 
+      {/* SPECIAL GIF DECORATION LAYERS */}
+      {animated && (
+        <>
+          {frameId === "cat-walking" && (
+            <div className="absolute inset-0 z-50 pointer-events-none overflow-visible">
+              <img 
+                src="/catWalking.gif" 
+                className={cn(
+                  "absolute object-contain drop-shadow-md",
+                  size === "xs" ? "w-6 h-6 -bottom-1.5 -right-1.5" : 
+                  size === "sm" ? "w-8 h-8 -bottom-2 -right-2" :
+                  size === "md" ? "w-14 h-14 -bottom-4 -right-4" :
+                  size === "lg" ? "w-24 h-24 -bottom-6 -right-6" :
+                  "w-36 h-36 -bottom-8 -right-8"
+                )}
+                alt=""
+              />
+            </div>
+          )}
+          {frameId === "dog-walking" && (
+            <div className="absolute inset-0 z-50 pointer-events-none overflow-visible">
+              <img 
+                src="/dogWalking.gif" 
+                className={cn(
+                  "absolute object-contain drop-shadow-md",
+                  size === "xs" ? "w-6 h-6 -bottom-1.5 -left-1.5" : 
+                  size === "sm" ? "w-8 h-8 -bottom-2 -left-2" :
+                  size === "md" ? "w-14 h-14 -bottom-4 -left-4" :
+                  size === "lg" ? "w-24 h-24 -bottom-6 -left-6" :
+                  "w-36 h-36 -bottom-8 -left-8"
+                )}
+                alt=""
+              />
+            </div>
+          )}
+          {frameId === "hamster-spin" && (
+            <div className="absolute inset-0 z-50 pointer-events-none overflow-visible">
+              <img 
+                src="/hamster.gif" 
+                className={cn(
+                  "absolute object-contain drop-shadow-md",
+                  size === "xs" ? "w-5 h-5 -top-1.5 -right-1.5" : 
+                  size === "sm" ? "w-7 h-7 -top-2 -right-2" :
+                  size === "md" ? "w-10 h-10 -top-3 -right-3" :
+                  size === "lg" ? "w-18 h-18 -top-5 -right-5" :
+                  "w-28 h-28 -top-8 -right-8"
+                )}
+                alt=""
+              />
+            </div>
+          )}
+          {frameId === "pink-bling" && (
+            <div className="absolute inset-0 z-40 pointer-events-none overflow-hidden rounded-full">
+              <img 
+                src="/pinkBling.gif" 
+                className="w-full h-full object-cover mix-blend-screen opacity-90 scale-110"
+                alt=""
+              />
+            </div>
+          )}
+          {frameId === "small-bling" && (
+            <div className="absolute inset-0 z-40 pointer-events-none overflow-hidden rounded-full">
+              <img 
+                src="/smallBling.gif" 
+                className="w-full h-full object-cover mix-blend-screen opacity-80 scale-110"
+                alt=""
+              />
+            </div>
+          )}
+        </>
+      )}
+
       {/* Border container – uses conic-gradient pseudo-element via spark-border-* class */}
       <div
         className={cn(
@@ -180,7 +252,14 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         )}
       >
         {/* Inner avatar container – sits inside the padding created by the frame class */}
-        <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+        <div 
+          className={cn(
+            "relative rounded-full overflow-hidden flex items-center justify-center",
+            ["cat-walking", "dog-walking", "hamster-spin", "pink-bling", "small-bling"].includes(frameId) 
+              ? "absolute inset-0 w-full h-full" 
+              : "w-full h-full"
+          )}
+        >
           {children}
         </div>
       </div>
