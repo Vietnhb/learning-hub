@@ -180,8 +180,8 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     xs: "h-6 w-6",
     sm: "h-8 w-8",
     md: "h-12 w-12",
-    lg: "h-20 w-20",
-    xl: "h-32 w-32",
+    lg: "h-24 w-24",
+    xl: "h-36 w-36",
   };
 
   return (
@@ -207,7 +207,7 @@ export const NavbarAvatar: React.FC<Omit<UserAvatarProps, "size">> = (
  * Avatar component for Forum posts
  */
 export const ForumAvatar: React.FC<Omit<UserAvatarProps, "size">> = (props) => (
-  <UserAvatar {...props} size="md" animated={true} showFrameEffects={true} />
+  <UserAvatar {...props} size="lg" animated={true} showFrameEffects={true} />
 );
 
 /**
