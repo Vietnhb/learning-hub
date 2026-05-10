@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import {
   Bell,
   Home,
-  BookOpen,
   Library,
   FolderOpen,
   User,
@@ -219,11 +218,11 @@ export default function Navbar() {
               Tài nguyên
             </Link>
             <Link
-              href="/courses"
+              href="/forum"
               className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
             >
-              <BookOpen className="h-4 w-4" />
-              Khóa học
+              <MessagesSquare className="h-4 w-4" />
+              Diễn đàn
             </Link>
             <Link
               href="/about"

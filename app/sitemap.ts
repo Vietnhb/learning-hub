@@ -11,7 +11,7 @@ const routes: Array<{
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/courses", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/forum", changeFrequency: "weekly", priority: 0.7 },
   { path: "/resources", changeFrequency: "weekly", priority: 0.95 },
   { path: "/resources/FsoftTraining", changeFrequency: "weekly", priority: 0.9 },
   { path: "/resources/FsoftTraining/kanji", changeFrequency: "weekly", priority: 0.8 },
