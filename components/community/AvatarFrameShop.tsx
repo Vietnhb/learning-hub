@@ -63,6 +63,30 @@ const themeStyles = {
   cool: "from-cyan-500 to-blue-600",
 } as const;
 
+// Per-frame card accent: [accentBarGradient, selectedBorderColor, selectedRingColor, hoverShadowColor]
+const frameCardAccents: Record<string, [string, string, string, string]> = {
+  admin:            ["from-rose-500 via-red-500 to-red-700",          "border-rose-400",    "ring-rose-200 dark:ring-rose-500/30",    "hover:shadow-rose-100 dark:hover:shadow-rose-900/30"],
+  moderator:        ["from-amber-400 via-orange-500 to-orange-700",   "border-amber-400",   "ring-amber-200 dark:ring-amber-500/30",  "hover:shadow-amber-100 dark:hover:shadow-amber-900/30"],
+  premium:          ["from-amber-300 via-yellow-400 to-amber-600",    "border-yellow-400",  "ring-yellow-200 dark:ring-yellow-500/30","hover:shadow-yellow-100 dark:hover:shadow-yellow-900/30"],
+  "top-contributor":["from-pink-400 via-rose-500 to-fuchsia-600",     "border-pink-400",    "ring-pink-200 dark:ring-pink-500/30",    "hover:shadow-pink-100 dark:hover:shadow-pink-900/30"],
+  verified:         ["from-cyan-300 via-sky-400 to-blue-600",          "border-cyan-400",    "ring-cyan-200 dark:ring-cyan-500/30",    "hover:shadow-cyan-100 dark:hover:shadow-cyan-900/30"],
+  "vip-member":     ["from-violet-400 via-purple-500 to-indigo-700",  "border-violet-400",  "ring-violet-200 dark:ring-violet-500/30","hover:shadow-violet-100 dark:hover:shadow-violet-900/30"],
+  "ai-expert":      ["from-slate-300 via-cyan-300 to-slate-500",      "border-cyan-300",    "ring-cyan-100 dark:ring-cyan-400/20",    "hover:shadow-cyan-100 dark:hover:shadow-slate-800/50"],
+  developer:        ["from-sky-400 via-blue-500 to-cyan-600",          "border-sky-400",     "ring-sky-200 dark:ring-sky-500/30",      "hover:shadow-sky-100 dark:hover:shadow-sky-900/30"],
+  "void-sovereign": ["from-fuchsia-400 via-violet-600 to-slate-950", "border-fuchsia-400", "ring-fuchsia-200 dark:ring-fuchsia-500/30","hover:shadow-fuchsia-100 dark:hover:shadow-fuchsia-900/30"],
+  "inferno-core":   ["from-yellow-300 via-orange-500 to-red-800",     "border-orange-500",  "ring-orange-200 dark:ring-orange-500/30", "hover:shadow-orange-100 dark:hover:shadow-orange-900/30"],
+  "frost-monarch":  ["from-white via-cyan-200 to-blue-700",           "border-blue-300",    "ring-blue-200 dark:ring-blue-400/30",    "hover:shadow-blue-100 dark:hover:shadow-blue-900/30"],
+  "thunder-pulse":  ["from-yellow-300 via-cyan-300 to-blue-700",      "border-yellow-400",  "ring-yellow-200 dark:ring-yellow-400/30","hover:shadow-yellow-100 dark:hover:shadow-yellow-900/30"],
+  "emerald-aegis":  ["from-emerald-300 via-green-500 to-teal-800",    "border-emerald-400", "ring-emerald-200 dark:ring-emerald-500/30","hover:shadow-emerald-100 dark:hover:shadow-emerald-900/30"],
+  "arcane-rift":    ["from-pink-300 via-purple-500 to-indigo-800",    "border-purple-400",  "ring-purple-200 dark:ring-purple-500/30","hover:shadow-purple-100 dark:hover:shadow-purple-900/30"],
+  "cyber-phantom":  ["from-lime-300 via-cyan-400 to-slate-900",       "border-lime-400",    "ring-lime-200 dark:ring-lime-400/30",    "hover:shadow-lime-100 dark:hover:shadow-lime-900/30"],
+  "aurora-crown":   ["from-teal-200 via-fuchsia-300 to-indigo-700",   "border-fuchsia-300", "ring-fuchsia-100 dark:ring-fuchsia-400/30","hover:shadow-fuchsia-100 dark:hover:shadow-fuchsia-900/30"],
+  "obsidian-eclipse":["from-zinc-950 via-stone-700 to-amber-400",    "border-amber-500",   "ring-amber-200 dark:ring-amber-500/30",  "hover:shadow-amber-100 dark:hover:shadow-amber-900/30"],
+  "quantum-orbit":  ["from-sky-300 via-blue-500 to-violet-800",       "border-blue-400",    "ring-blue-200 dark:ring-blue-400/30",    "hover:shadow-blue-100 dark:hover:shadow-blue-900/30"],
+  "ruby-overdrive": ["from-red-300 via-rose-600 to-fuchsia-900",      "border-rose-500",    "ring-rose-200 dark:ring-rose-500/30",    "hover:shadow-rose-100 dark:hover:shadow-rose-900/30"],
+  "mythic-trophy":  ["from-yellow-200 via-amber-400 to-orange-700",   "border-amber-400",   "ring-amber-200 dark:ring-amber-400/30",  "hover:shadow-amber-100 dark:hover:shadow-amber-900/30"],
+};
+
 export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
   open,
   onOpenChange,
@@ -336,6 +360,13 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
                     const frameId = frame.id as AvatarFrameId;
                     const selected = selectedFrame === frameId;
                     const active = currentFrameId === frameId;
+                    const accent = frameCardAccents[frame.id] ?? [
+                      "from-slate-400 to-slate-600",
+                      "border-slate-400",
+                      "ring-slate-200 dark:ring-slate-500/30",
+                      "hover:shadow-slate-100 dark:hover:shadow-black/30",
+                    ];
+                    const [accentBar, selBorder, selRing, hoverShadow] = accent;
 
                     return (
                       <button
@@ -343,13 +374,22 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
                         type="button"
                         onClick={() => setSelectedFrame(frameId)}
                         className={cn(
-                          "group relative overflow-visible rounded-2xl border bg-white p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-100 dark:bg-slate-900 dark:hover:shadow-black/30",
+                          "group relative overflow-visible rounded-2xl border bg-white p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:bg-slate-900",
+                          hoverShadow,
                           selected
-                            ? "border-cyan-400 ring-2 ring-cyan-200 dark:ring-cyan-400/30"
+                            ? cn(selBorder, "ring-2", selRing)
                             : "border-slate-200 dark:border-white/10",
                         )}
                       >
-                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-0 transition group-hover:opacity-100" />
+                        {/* Per-frame unique accent bar */}
+                        <div
+                          className={cn(
+                            "absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r opacity-0 transition group-hover:opacity-100",
+                            accentBar,
+                            selected && "opacity-100",
+                          )}
+                        />
+
                         <div className="flex items-start justify-between gap-3">
                           <div className="shrink-0 p-3">
                             <UserAvatar
@@ -371,7 +411,12 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
                               </span>
                             ) : null}
                             {selected ? (
-                              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-950 text-white dark:bg-cyan-400 dark:text-slate-950">
+                              <span
+                                className={cn(
+                                  "flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br text-white",
+                                  accentBar,
+                                )}
+                              >
                                 <Check className="h-4 w-4" />
                               </span>
                             ) : null}
@@ -393,13 +438,15 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
                           {frame.description}
                         </p>
                         <div className="mt-3 flex flex-wrap gap-2">
+                          {/* Icon badge riêng của từng frame */}
                           <span
                             className={cn(
-                              "rounded-full border px-2 py-1 text-[11px] font-semibold capitalize",
+                              "inline-flex items-center gap-1 rounded-full border px-2 py-1 text-[11px] font-semibold",
                               rarityStyles[frame.rarity],
                             )}
                           >
-                            {frame.rarity}
+                            <span className="text-[10px]">{frame.icon}</span>
+                            <span className="capitalize">{frame.rarity}</span>
                           </span>
                           <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-semibold capitalize text-slate-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                             {frame.theme}
