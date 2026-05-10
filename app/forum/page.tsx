@@ -177,14 +177,26 @@ export default function ForumPage() {
     };
   }, [user]);
 
+  const initialScrollDoneRef = useRef(false);
+
   useEffect(() => {
     const container = chatContainerRef.current;
     if (!container) return;
+    
+    // Nếu mới load xong, force scroll xuống dưới cùng
+    if (!chatLoading && !initialScrollDoneRef.current) {
+      container.scrollTop = container.scrollHeight;
+      if (chatMessages.length > 0) {
+        initialScrollDoneRef.current = true;
+      }
+      return;
+    }
+
     const isNearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 150;
     if (isNearBottom) {
       container.scrollTop = container.scrollHeight;
     }
-  }, [chatMessages.length]);
+  }, [chatMessages.length, chatLoading]);
 
   useEffect(() => {
     if (!selectedImage) {

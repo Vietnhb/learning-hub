@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
@@ -13,6 +13,7 @@ import {
   ArrowLeft,
   Shield,
   Key,
+  Camera,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -28,6 +29,9 @@ import { validateUserProfile } from "@/lib/validation";
 import { User as UserType } from "@/types/user";
 import { ChangePasswordModal } from "@/components/ChangePasswordModal";
 import Link from "next/link";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { storage } from "@/lib/firebase";
+import { supabase } from "@/lib/supabase";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -41,6 +45,9 @@ export default function ProfilePage() {
   const [generalError, setGeneralError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [avatarUrl, setAvatarUrl] = useState<string>("");
+  const [uploadingAvatar, setUploadingAvatar] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!authLoading && !authUser) {
@@ -51,6 +58,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const loadProfile = async () => {
       if (authUser) {
+        setAvatarUrl(authUser.user_metadata?.avatar_url || "");
         const userProfile = await getUserProfile(authUser.id);
         if (userProfile) {
           setProfile(userProfile);
@@ -65,6 +73,38 @@ export default function ProfilePage() {
       loadProfile();
     }
   }, [authUser]);
+
+  const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !authUser) return;
+
+    try {
+      setUploadingAvatar(true);
+      setGeneralError("");
+
+      const fileExt = file.name.split(".").pop();
+      const fileName = `${authUser.id}-${Math.random()}.${fileExt}`;
+      const storageRef = ref(storage, `avatars/${fileName}`);
+
+      await uploadBytes(storageRef, file);
+      const url = await getDownloadURL(storageRef);
+
+      const { error } = await supabase.auth.updateUser({
+        data: { avatar_url: url },
+      });
+
+      if (error) throw error;
+
+      setAvatarUrl(url);
+      setSuccessMessage("Cập nhật ảnh đại diện thành công!");
+      window.dispatchEvent(new Event("learning-hub:user-profile-updated"));
+      setTimeout(() => setSuccessMessage(""), 3000);
+    } catch (err: any) {
+      setGeneralError(err.message || "Lỗi khi tải ảnh lên");
+    } finally {
+      setUploadingAvatar(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -147,8 +187,43 @@ export default function ProfilePage() {
         >
           <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <CardHeader className="text-center">
-              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4">
-                <User className="w-12 h-12 text-white" />
+              <div
+                className="relative mx-auto w-24 h-24 mb-4 group cursor-pointer"
+                onClick={() => fileInputRef.current?.click()}
+              >
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
+                  {avatarUrl ? (
+                    <img
+                      src={avatarUrl}
+                      alt="Avatar"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-12 h-12 text-white" />
+                  )}
+                </div>
+                <div className="absolute inset-0 bg-black/50 rounded-full flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  {uploadingAvatar ? (
+                    <Loader2 className="w-6 h-6 text-white animate-spin" />
+                  ) : (
+                    <>
+                      <Camera className="w-6 h-6 text-white mb-1" />
+                      <span className="text-white text-[10px] font-medium">
+                        Thay ảnh
+                      </span>
+                    </>
+                  )}
+                </div>
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  className="hidden"
+                  accept="image/*"
+                  onChange={handleAvatarUpload}
+                  disabled={uploadingAvatar}
+                  aria-label="Upload profile avatar image"
+                  title="Choose an image file to upload as your profile avatar"
+                />
               </div>
               <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
                 Thông tin cá nhân
@@ -174,6 +249,8 @@ export default function ProfilePage() {
                     type="email"
                     value={profile.email}
                     readOnly
+                    placeholder="your.email@example.com"
+                    title="Email address (read-only)"
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                   />
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -201,6 +278,7 @@ export default function ProfilePage() {
                         : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
                     placeholder="Nguyễn Văn A"
+                    title="Enter your full name"
                     required
                   />
                   {errors.full_name && (
@@ -229,6 +307,8 @@ export default function ProfilePage() {
                         ? "border-red-300 dark:border-red-700 focus:border-red-400"
                         : "border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800"
                     }`}
+                    placeholder="dd/mm/yyyy"
+                    title="Select your date of birth"
                     required
                   />
                   {errors.date_of_birth && (
