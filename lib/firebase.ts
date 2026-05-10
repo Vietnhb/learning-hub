@@ -12,4 +12,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const storage = getStorage(app);
+// Get storage with explicit bucket name
+export const storage = getStorage(
+  app,
+  `gs://${process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET}`,
+);

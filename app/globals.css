@@ -113,3 +113,785 @@
     opacity: 0.9;
   }
 }
+
+/* Avatar shimmer glow animation */
+@keyframes avatar-shimmer {
+  0% {
+    box-shadow:
+      0 0 10px rgba(59, 130, 246, 0.5),
+      0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  25% {
+    box-shadow:
+      0 0 15px rgba(99, 102, 241, 0.6),
+      0 0 30px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(139, 92, 246, 0.7),
+      0 0 40px rgba(168, 85, 247, 0.4);
+  }
+  75% {
+    box-shadow:
+      0 0 15px rgba(99, 102, 241, 0.6),
+      0 0 30px rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(59, 130, 246, 0.5),
+      0 0 20px rgba(99, 102, 241, 0.3);
+  }
+}
+
+/* Shimmer text gradient animation */
+@keyframes shimmer-text {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Pulse glow effect for decorations */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(34, 211, 238, 0.7),
+      0 0 20px rgba(34, 211, 238, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px rgba(34, 211, 238, 0),
+      0 0 30px rgba(34, 211, 238, 0.6);
+  }
+}
+
+/* Flame aura effect */
+@keyframes flame-aura {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px rgba(249, 115, 22, 0.4),
+      0 0 10px rgba(239, 68, 68, 0.3),
+      0 0 20px rgba(239, 68, 68, 0.2);
+    filter: drop-shadow(0 0 5px rgba(249, 115, 22, 0.5));
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(249, 115, 22, 0.6),
+      0 0 20px rgba(239, 68, 68, 0.4),
+      0 0 30px rgba(249, 115, 22, 0.3);
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.8));
+  }
+}
+
+/* Aurora glow effect */
+@keyframes aurora-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(34, 211, 238, 0.4),
+      0 0 40px rgba(168, 85, 247, 0.2);
+    filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.3));
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(168, 85, 247, 0.5),
+      0 0 60px rgba(236, 72, 153, 0.3);
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.5));
+  }
+}
+
+/* Shimmer border animation */
+@keyframes shimmer-border {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Sparkle aura effect */
+@keyframes sparkle-aura {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px rgba(251, 191, 36, 0.3),
+      0 0 15px rgba(251, 146, 60, 0.2),
+      0 0 25px rgba(251, 191, 36, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(251, 191, 36, 0.5),
+      0 0 20px rgba(251, 146, 60, 0.4),
+      0 0 40px rgba(251, 191, 36, 0.2);
+  }
+}
+
+@keyframes spark-frame-sweep {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.35;
+  }
+}
+
+@keyframes spark-frame-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: saturate(1.1);
+  }
+}
+
+@keyframes spark-particle-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(0, -10px, 0) scale(1.15);
+    opacity: 0.2;
+  }
+}
+
+@keyframes spark-username-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes spark-holo-flicker {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes spark-orbit {
+  0% {
+    transform: rotate(0deg) translateX(18px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: rotate(360deg) translateX(18px) rotate(-360deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes spark-float-y {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spark-frame-sweep-reverse {
+  0% {
+    transform: rotate(360deg);
+    opacity: 0.25;
+  }
+  55% {
+    opacity: 0.82;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0.25;
+  }
+}
+
+@keyframes spark-frame-bloom {
+  0%,
+  100% {
+    transform: scale(0.98);
+    opacity: 0.35;
+    filter: blur(6px);
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.9;
+    filter: blur(10px);
+  }
+}
+
+@keyframes spark-frame-orbit-ring {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.25;
+  }
+}
+
+@keyframes spark-particle-burst {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.75);
+    opacity: 0.2;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -13px, 0) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .avatar-shimmer {
+    animation: avatar-shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-text {
+    animation: shimmer-text 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-flame-aura {
+    animation: flame-aura 2.5s ease-in-out infinite;
+  }
+
+  .animate-aurora-glow {
+    animation: aurora-glow 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-border {
+    animation: shimmer-border 3s ease-in-out infinite;
+    background-size: 200% auto;
+  }
+
+  .animate-sparkle-aura {
+    animation: sparkle-aura 2.5s ease-in-out infinite;
+  }
+
+  .spark-frame-root {
+    isolation: isolate;
+  }
+
+  .spark-frame-sweep {
+    animation: spark-frame-sweep 4.2s linear infinite;
+    mix-blend-mode: screen;
+  }
+
+  .spark-frame-sweep-reverse {
+    animation: spark-frame-sweep-reverse 2.8s linear infinite;
+    mix-blend-mode: screen;
+  }
+
+  .spark-frame-pulse {
+    animation: spark-frame-pulse 2.8s ease-in-out infinite;
+  }
+
+  .spark-frame-bloom {
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(125, 211, 252, 0.28),
+      rgba(99, 102, 241, 0.12) 45%,
+      transparent 72%
+    );
+    animation: spark-frame-bloom 2.2s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
+
+  .spark-frame-orbit-ring {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-top-color: rgba(34, 211, 238, 0.8);
+    border-right-color: rgba(167, 139, 250, 0.7);
+    border-bottom-color: rgba(250, 204, 21, 0.58);
+    border-left-color: rgba(34, 211, 238, 0.3);
+    animation: spark-frame-orbit-ring 4.8s linear infinite;
+    mix-blend-mode: screen;
+  }
+
+  .spark-frame-particle-a,
+  .spark-frame-particle-b,
+  .spark-frame-particle-c {
+    animation: spark-particle-drift 2.2s ease-in-out infinite;
+    box-shadow: 0 0 10px currentColor;
+  }
+
+  .spark-frame-particle-d,
+  .spark-frame-particle-e {
+    animation: spark-particle-burst 1.45s ease-out infinite;
+    box-shadow: 0 0 12px currentColor;
+  }
+
+  .spark-frame-particle-b {
+    animation-delay: 0.5s;
+  }
+
+  .spark-frame-particle-c {
+    animation-delay: 1s;
+  }
+
+  .spark-frame-particle-d {
+    animation-delay: 0.25s;
+  }
+
+  .spark-frame-particle-e {
+    animation-delay: 0.85s;
+  }
+
+  .spark-particles-cyan {
+    color: rgba(103, 232, 249, 0.95);
+    background: rgba(103, 232, 249, 0.95);
+  }
+
+  .spark-particles-blue {
+    color: rgba(125, 211, 252, 0.95);
+    background: rgba(125, 211, 252, 0.95);
+  }
+
+  .spark-particles-violet {
+    color: rgba(196, 181, 253, 0.95);
+    background: rgba(196, 181, 253, 0.95);
+  }
+
+  .spark-particles-gold {
+    color: rgba(253, 224, 71, 0.95);
+    background: rgba(253, 224, 71, 0.95);
+  }
+
+  .spark-particles-rose {
+    color: rgba(251, 113, 133, 0.92);
+    background: rgba(251, 113, 133, 0.92);
+  }
+
+  .spark-particles-warm {
+    color: rgba(248, 113, 113, 0.95);
+    background: rgba(248, 113, 113, 0.95);
+  }
+
+  .spark-shimmer-cyan,
+  .spark-shimmer-blue,
+  .spark-shimmer-violet,
+  .spark-shimmer-gold,
+  .spark-shimmer-pink,
+  .spark-shimmer-red,
+  .spark-shimmer-amber,
+  .spark-shimmer-silver {
+    background-size: 220% 220%;
+    -webkit-mask: radial-gradient(circle at center, #000 58%, transparent 76%);
+    mask: radial-gradient(circle at center, #000 58%, transparent 76%);
+  }
+
+  .spark-shimmer-cyan {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(34, 211, 238, 0) 0%,
+      rgba(34, 211, 238, 0.9) 18%,
+      rgba(59, 130, 246, 0.18) 35%,
+      rgba(34, 211, 238, 0) 55%
+    );
+  }
+
+  .spark-shimmer-blue {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(56, 189, 248, 0) 0%,
+      rgba(96, 165, 250, 0.9) 18%,
+      rgba(14, 165, 233, 0.18) 35%,
+      rgba(56, 189, 248, 0) 55%
+    );
+  }
+
+  .spark-shimmer-violet {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(167, 139, 250, 0) 0%,
+      rgba(192, 132, 252, 0.88) 18%,
+      rgba(99, 102, 241, 0.18) 35%,
+      rgba(167, 139, 250, 0) 55%
+    );
+  }
+
+  .spark-shimmer-gold {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(250, 204, 21, 0) 0%,
+      rgba(253, 224, 71, 0.9) 18%,
+      rgba(245, 158, 11, 0.2) 35%,
+      rgba(250, 204, 21, 0) 55%
+    );
+  }
+
+  .spark-shimmer-pink {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(244, 114, 182, 0) 0%,
+      rgba(251, 113, 133, 0.9) 18%,
+      rgba(236, 72, 153, 0.2) 35%,
+      rgba(244, 114, 182, 0) 55%
+    );
+  }
+
+  .spark-shimmer-red {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(248, 113, 113, 0) 0%,
+      rgba(244, 63, 94, 0.9) 18%,
+      rgba(220, 38, 38, 0.2) 35%,
+      rgba(248, 113, 113, 0) 55%
+    );
+  }
+
+  .spark-shimmer-amber {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(251, 191, 36, 0) 0%,
+      rgba(251, 146, 60, 0.88) 18%,
+      rgba(245, 158, 11, 0.2) 35%,
+      rgba(251, 191, 36, 0) 55%
+    );
+  }
+
+  .spark-shimmer-silver {
+    background-image: conic-gradient(
+      from 30deg,
+      rgba(226, 232, 240, 0) 0%,
+      rgba(203, 213, 225, 0.9) 18%,
+      rgba(103, 232, 249, 0.2) 35%,
+      rgba(226, 232, 240, 0) 55%
+    );
+  }
+
+  .spark-username-gradient-admin,
+  .spark-username-gradient-verified,
+  .spark-username-gradient-premium,
+  .spark-username-gradient-developer,
+  .spark-username-gradient-vip,
+  .spark-username-gradient-legendary {
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: spark-username-flow 3.8s linear infinite;
+  }
+
+  .spark-username-gradient-admin {
+    background-image: linear-gradient(
+      100deg,
+      #fb7185,
+      #f43f5e,
+      #ef4444,
+      #fb7185
+    );
+  }
+
+  .spark-username-gradient-verified {
+    background-image: linear-gradient(
+      100deg,
+      #67e8f9,
+      #22d3ee,
+      #60a5fa,
+      #67e8f9
+    );
+  }
+
+  .spark-username-gradient-premium {
+    background-image: linear-gradient(
+      100deg,
+      #fde047,
+      #fbbf24,
+      #fb923c,
+      #fde047
+    );
+  }
+
+  .spark-username-gradient-developer {
+    background-image: linear-gradient(
+      100deg,
+      #a78bfa,
+      #8b5cf6,
+      #6366f1,
+      #a78bfa
+    );
+  }
+
+  .spark-username-gradient-vip {
+    background-image: linear-gradient(
+      100deg,
+      #c4b5fd,
+      #a78bfa,
+      #f472b6,
+      #c4b5fd
+    );
+  }
+
+  .spark-username-gradient-legendary {
+    background-image: linear-gradient(
+      100deg,
+      #93c5fd,
+      #67e8f9,
+      #c4b5fd,
+      #fde047,
+      #93c5fd
+    );
+  }
+
+  .spark-username-glow-admin {
+    filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.48));
+  }
+
+  .spark-username-glow-verified {
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.46));
+  }
+
+  .spark-username-glow-premium {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+  }
+
+  .spark-username-glow-developer {
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.45));
+  }
+
+  .spark-username-glow-vip {
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.45));
+  }
+
+  .spark-username-glow-legendary {
+    filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.48));
+  }
+
+  .spark-username-shimmer {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .spark-username-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+      110deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.65) 47%,
+      transparent 64%
+    );
+    transform: translateX(-115%);
+    animation: shimmer-text 3.2s ease-in-out infinite;
+    filter: blur(5px);
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  .spark-username-hover-admin {
+    filter: drop-shadow(0 0 12px rgba(244, 63, 94, 0.66));
+  }
+
+  .spark-username-hover-verified {
+    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.66));
+  }
+
+  .spark-username-hover-premium {
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.7));
+  }
+
+  .spark-username-hover-developer {
+    filter: drop-shadow(0 0 12px rgba(129, 140, 248, 0.68));
+  }
+
+  .spark-username-hover-vip {
+    filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.7));
+  }
+
+  .spark-username-hover-legendary {
+    filter: drop-shadow(0 0 14px rgba(253, 224, 71, 0.66));
+  }
+
+  .spark-nameplate-admin,
+  .spark-nameplate-verified,
+  .spark-nameplate-premium,
+  .spark-nameplate-developer,
+  .spark-nameplate-vip,
+  .spark-nameplate-legendary {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(
+      120deg,
+      rgba(15, 23, 42, 0.64),
+      rgba(30, 41, 59, 0.45)
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 12px 26px rgba(2, 6, 23, 0.25);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .spark-nameplate-premium {
+    border-color: rgba(251, 191, 36, 0.36);
+  }
+
+  .spark-nameplate-verified {
+    border-color: rgba(34, 211, 238, 0.34);
+  }
+
+  .spark-nameplate-admin {
+    border-color: rgba(244, 63, 94, 0.34);
+  }
+
+  .spark-nameplate-developer {
+    border-color: rgba(139, 92, 246, 0.34);
+  }
+
+  .spark-nameplate-vip {
+    border-color: rgba(167, 139, 250, 0.34);
+  }
+
+  .spark-nameplate-legendary {
+    border-color: rgba(96, 165, 250, 0.3);
+    animation: spark-holo-flicker 2.4s ease-in-out infinite;
+  }
+
+  .spark-holo-plate {
+    position: relative;
+    border-radius: 16px;
+    padding: 10px 14px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: linear-gradient(
+      130deg,
+      rgba(15, 23, 42, 0.74),
+      rgba(30, 41, 59, 0.52)
+    );
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.34);
+    overflow: hidden;
+  }
+
+  .spark-holo-plate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.18) 45%,
+      transparent 70%
+    );
+    transform: translateX(-110%);
+    animation: shimmer-text 3.6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .spark-decoration-corners,
+  .spark-decoration-shimmer,
+  .spark-decoration-pulse,
+  .spark-decoration-stars,
+  .spark-decoration-orbit {
+    position: relative;
+  }
+
+  .spark-corner {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: rgba(251, 191, 36, 0.9);
+    box-shadow: 0 0 12px rgba(251, 191, 36, 0.65);
+    animation: spark-particle-drift 2.6s ease-in-out infinite;
+  }
+
+  .spark-corner-tl {
+    left: -3px;
+    top: -3px;
+  }
+
+  .spark-corner-tr {
+    right: -3px;
+    top: -3px;
+    animation-delay: 0.45s;
+  }
+
+  .spark-corner-bl {
+    left: -3px;
+    bottom: -3px;
+    animation-delay: 0.9s;
+  }
+
+  .spark-corner-br {
+    right: -3px;
+    bottom: -3px;
+    animation-delay: 1.3s;
+  }
+
+  .spark-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    margin-left: -3px;
+    border-radius: 9999px;
+    background: rgba(103, 232, 249, 0.9);
+    box-shadow: 0 0 10px rgba(103, 232, 249, 0.6);
+    animation: spark-orbit 3.2s linear infinite;
+  }
+
+  .spark-orbit-a {
+    animation-duration: 3.1s;
+  }
+
+  .spark-orbit-b {
+    animation-duration: 4.3s;
+    animation-delay: 0.75s;
+    background: rgba(196, 181, 253, 0.9);
+    box-shadow: 0 0 10px rgba(196, 181, 253, 0.6);
+  }
+
+  .spark-orbit-c {
+    animation-duration: 5.2s;
+    animation-delay: 1.35s;
+    background: rgba(251, 191, 36, 0.9);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+  }
+
+  .spark-float-y {
+    animation: spark-float-y 2.2s ease-in-out infinite;
+  }
+
+  .spark-float-y-delayed {
+    animation: spark-float-y 2.8s ease-in-out infinite;
+    animation-delay: 0.35s;
+  }
+
+  .spark-float-y-slow {
+    animation: spark-float-y 3.4s ease-in-out infinite;
+    animation-delay: 0.8s;
+  }
+}

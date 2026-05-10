@@ -32,6 +32,11 @@ import Link from "next/link";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/lib/firebase";
 import { supabase } from "@/lib/supabase";
+import { Crown, Sparkles, Palette } from "lucide-react";
+import { PremiumAvatarPaymentModal } from "@/components/PremiumAvatarPaymentModal";
+import { AvatarFrameShop } from "@/components/community/AvatarFrameShop";
+import { ProfileAvatar } from "@/components/UserAvatar";
+import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -47,6 +52,12 @@ export default function ProfilePage() {
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState<string>("");
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
+  const [hasAvatarBorderUnlocked, setHasAvatarBorderUnlocked] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [showFrameShop, setShowFrameShop] = useState(false);
+  const [currentAvatarFrameId, setCurrentAvatarFrameId] =
+    useState<AvatarFrameId | null>(null);
+  const [userRole, setUserRole] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -64,6 +75,29 @@ export default function ProfilePage() {
           setProfile(userProfile);
           setFullName(userProfile.full_name || "");
           setDateOfBirth(userProfile.date_of_birth || "");
+          setUserRole(userProfile.role_id || null);
+          // Load avatar frame first (compatible even when premium migration is not run)
+          const { data } = await supabase
+            .from("users")
+            .select("avatar_frame_id")
+            .eq("id", authUser.id)
+            .single();
+          setCurrentAvatarFrameId(data?.avatar_frame_id || null);
+
+          // Load premium flag separately and ignore missing-column DBs
+          const { data: premiumData, error: premiumError } = await supabase
+            .from("users")
+            .select("premium_avatar_border")
+            .eq("id", authUser.id)
+            .single();
+
+          if (!premiumError) {
+            setHasAvatarBorderUnlocked(
+              Boolean(premiumData?.premium_avatar_border),
+            );
+          } else if ((premiumError as { code?: string }).code === "42703") {
+            setHasAvatarBorderUnlocked(false);
+          }
         }
         setLoadingProfile(false);
       }
@@ -82,18 +116,28 @@ export default function ProfilePage() {
       setUploadingAvatar(true);
       setGeneralError("");
 
-      const fileExt = file.name.split(".").pop();
-      const fileName = `${authUser.id}-${Math.random()}.${fileExt}`;
+      // Upload to Firebase Storage
+      const fileExt = file.name.split(".").pop()?.toLowerCase() || "jpg";
+      const fileName = `${authUser.id}-${Date.now()}.${fileExt}`;
       const storageRef = ref(storage, `avatars/${fileName}`);
 
       await uploadBytes(storageRef, file);
       const url = await getDownloadURL(storageRef);
 
+      // Update Supabase Auth user metadata
       const { error } = await supabase.auth.updateUser({
         data: { avatar_url: url },
       });
 
       if (error) throw error;
+
+      // Also save avatar URL to users table
+      const { error: dbError } = await supabase
+        .from("users")
+        .update({ avatar_url: url })
+        .eq("id", authUser.id);
+
+      if (dbError) throw dbError;
 
       setAvatarUrl(url);
       setSuccessMessage("Cập nhật ảnh đại diện thành công!");
@@ -188,21 +232,27 @@ export default function ProfilePage() {
           <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <CardHeader className="text-center">
               <div
-                className="relative mx-auto w-24 h-24 mb-4 group cursor-pointer"
+                className="relative mx-auto mb-4 group cursor-pointer"
                 onClick={() => fileInputRef.current?.click()}
               >
-                <div className="w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
-                  {avatarUrl ? (
-                    <img
-                      src={avatarUrl}
-                      alt="Avatar"
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <User className="w-12 h-12 text-white" />
-                  )}
-                </div>
-                <div className="absolute inset-0 bg-black/50 rounded-full flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                {/* Centralized Avatar Component */}
+                <ProfileAvatar
+                  userId={authUser?.id}
+                  avatarUrl={avatarUrl || undefined}
+                  userName={profile.full_name || "User"}
+                  frameId={currentAvatarFrameId}
+                  premiumBorderUnlocked={hasAvatarBorderUnlocked}
+                />
+
+                {/* Premium Badge Overlay */}
+                {hasAvatarBorderUnlocked && (
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full p-1 shadow-lg">
+                    <Crown className="w-5 h-5 text-white" />
+                  </div>
+                )}
+
+                {/* Upload Overlay */}
+                <div className="absolute inset-0 rounded-full bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   {uploadingAvatar ? (
                     <Loader2 className="w-6 h-6 text-white animate-spin" />
                   ) : (
@@ -214,6 +264,7 @@ export default function ProfilePage() {
                     </>
                   )}
                 </div>
+
                 <input
                   type="file"
                   ref={fileInputRef}
@@ -231,6 +282,79 @@ export default function ProfilePage() {
               <CardDescription className="text-base mt-2">
                 Quản lý và cập nhật thông tin của bạn
               </CardDescription>
+
+              {/* Premium Avatar Border Section */}
+              {!hasAvatarBorderUnlocked && (
+                <div className="mt-4 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="w-5 h-5 text-yellow-600 dark:text-yellow-400 flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-1">
+                        🎁 Mở khóa Premium
+                      </h4>
+                      <p className="text-sm text-yellow-800 dark:text-yellow-400 mb-3">
+                        Nâng cấp tài khoản của bạn để có viền avatar lấp lánh
+                        với hiệu ứng shimmer độc quyền!
+                      </p>
+                      <Button
+                        onClick={() => setShowPaymentModal(true)}
+                        className="gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white"
+                      >
+                        <Crown className="w-4 h-4" />
+                        Nạp tiền - Chỉ 9.99$/tháng
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {hasAvatarBorderUnlocked && (
+                <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
+                  <div className="flex items-center gap-2">
+                    <Crown className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <p className="text-sm font-medium text-blue-900 dark:text-blue-300">
+                      ✨ Bạn đã unlock viền avatar Premium! Avatar của bạn sẽ
+                      lấp lánh.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Avatar Frame Shop Section - Admin Only */}
+              {userRole === 1 && (
+                <div className="mt-4 bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 border border-cyan-200 dark:border-cyan-700 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <Palette className="w-5 h-5 text-cyan-600 dark:text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-cyan-900 dark:text-cyan-300 mb-1">
+                        🎨 Kho Avatar Frames
+                      </h4>
+                      <p className="text-sm text-cyan-800 dark:text-cyan-400 mb-3">
+                        Chọn khung avatar từ kho để hiển thị trạng thái cộng
+                        đồng của bạn
+                      </p>
+                      <div className="flex items-center gap-3">
+                        {currentAvatarFrameId && (
+                          <div className="flex items-center gap-2 px-3 py-1.5 bg-white/30 dark:bg-gray-700/50 rounded-lg">
+                            <span className="text-sm text-cyan-700 dark:text-cyan-300 font-medium">
+                              Hiện tại:{" "}
+                              {AVATAR_FRAMES[currentAvatarFrameId]?.name}
+                            </span>
+                          </div>
+                        )}
+                        <Button
+                          onClick={() => setShowFrameShop(true)}
+                          className="gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white"
+                          type="button"
+                        >
+                          <Palette className="w-4 h-4" />
+                          Mở Kho
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </CardHeader>
 
             <CardContent>
@@ -481,6 +605,31 @@ export default function ProfilePage() {
       <ChangePasswordModal
         show={showPasswordModal}
         onClose={() => setShowPasswordModal(false)}
+      />
+
+      {/* Premium Avatar Payment Modal */}
+      <PremiumAvatarPaymentModal
+        open={showPaymentModal}
+        onOpenChange={setShowPaymentModal}
+        userId={authUser?.id || ""}
+        onSuccess={() => {
+          setHasAvatarBorderUnlocked(true);
+          setSuccessMessage("🎉 Avatar Premium đã được kích hoạt!");
+          setTimeout(() => setSuccessMessage(""), 3000);
+        }}
+      />
+
+      {/* Avatar Frame Shop Modal */}
+      <AvatarFrameShop
+        open={showFrameShop}
+        onOpenChange={setShowFrameShop}
+        userId={authUser?.id || ""}
+        currentFrameId={currentAvatarFrameId}
+        onFrameSelected={(frameId) => {
+          setCurrentAvatarFrameId(frameId);
+          setSuccessMessage("✨ Avatar frame đã được thay đổi!");
+          setTimeout(() => setSuccessMessage(""), 3000);
+        }}
       />
     </div>
   );

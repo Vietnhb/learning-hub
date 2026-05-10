@@ -1,3 +1,7 @@
+"use client";
+
+import React from "react";
+import { UserAvatar } from "@/components/UserAvatar";
 import { getInitials } from "../../utils/formatters";
 
 export function Avatar({
@@ -5,12 +9,45 @@ export function Avatar({
   src,
   size = "md",
   online = false,
+  userId,
+  showFrameEffects = false,
 }: {
   name: string;
   src?: string | null;
   size?: "xs" | "sm" | "md";
   online?: boolean;
+  userId?: string | null;
+  showFrameEffects?: boolean;
 }) {
+  // Map forum sizes to UserAvatar sizes
+  const sizeMap: Record<string, "sm" | "md" | "lg" | "xl"> = {
+    xs: "sm",
+    sm: "sm",
+    md: "md",
+  };
+
+  const userAvatarSize = sizeMap[size];
+
+  // If userId is provided and showFrameEffects is true, use UserAvatar with frame
+  if (userId && showFrameEffects) {
+    return (
+      <div className="relative shrink-0">
+        <UserAvatar
+          userId={userId}
+          avatarUrl={src || undefined}
+          userName={name}
+          size={userAvatarSize}
+          animated={true}
+          showFrameEffects={true}
+        />
+        {online && (
+          <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-emerald-500 dark:border-slate-950" />
+        )}
+      </div>
+    );
+  }
+
+  // Fallback: use simple Avatar without frame effects
   const sizeClass =
     size === "xs"
       ? "h-6 w-6 text-[10px]"

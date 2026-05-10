@@ -10,6 +10,7 @@ export function PostComposer({
   createPost,
   username,
   avatarUrl,
+  userId,
   content,
   setContent,
   previewUrl,
@@ -23,6 +24,7 @@ export function PostComposer({
   createPost: (e: FormEvent<HTMLFormElement>) => Promise<void>;
   username: string;
   avatarUrl?: string;
+  userId?: string;
   content: string;
   setContent: (val: string) => void;
   previewUrl: string | null;
@@ -41,7 +43,12 @@ export function PostComposer({
       className="rounded-[1.5rem] border border-white/70 bg-white/85 p-4 shadow-lg shadow-slate-200/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.06] dark:shadow-black/30"
     >
       <div className="flex gap-3">
-        <Avatar name={username} src={avatarUrl} />
+        <Avatar
+          name={username}
+          src={avatarUrl}
+          userId={userId}
+          showFrameEffects={true}
+        />
         <div className="min-w-0 flex-1">
           <Textarea
             value={content}

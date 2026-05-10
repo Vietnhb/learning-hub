@@ -182,7 +182,7 @@ export default function ForumPage() {
   useEffect(() => {
     const container = chatContainerRef.current;
     if (!container) return;
-    
+
     // Nếu mới load xong, force scroll xuống dưới cùng
     if (!chatLoading && !initialScrollDoneRef.current) {
       container.scrollTop = container.scrollHeight;
@@ -192,7 +192,9 @@ export default function ForumPage() {
       return;
     }
 
-    const isNearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 150;
+    const isNearBottom =
+      container.scrollHeight - container.scrollTop - container.clientHeight <
+      150;
     if (isNearBottom) {
       container.scrollTop = container.scrollHeight;
     }
@@ -684,6 +686,7 @@ export default function ForumPage() {
                 createPost={createPost}
                 username={username}
                 avatarUrl={avatarUrl}
+                userId={user?.id}
                 content={content}
                 setContent={setContent}
                 previewUrl={previewUrl}

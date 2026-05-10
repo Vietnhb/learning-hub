@@ -19,6 +19,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { NavbarAvatar } from "@/components/UserAvatar";
 import { isUserAdmin } from "@/lib/authHelper";
 import {
   DropdownMenu,
@@ -40,6 +41,7 @@ export default function Navbar() {
   const [profileDisplayName, setProfileDisplayName] = useState<string | null>(
     null,
   );
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const { notifications } = useUserNotifications(user?.id);
 
   useEffect(() => {
@@ -68,6 +70,7 @@ export default function Navbar() {
     const loadProfileDisplayName = async () => {
       if (!user?.id) {
         setProfileDisplayName(null);
+        setAvatarUrl(user?.user_metadata?.avatar_url || null);
         return;
       }
 
@@ -80,11 +83,13 @@ export default function Navbar() {
       if (!mounted) return;
 
       setProfileDisplayName(data?.full_name?.trim() || null);
+      setAvatarUrl(user?.user_metadata?.avatar_url || null);
     };
 
     void loadProfileDisplayName();
 
     const handleProfileUpdated = () => {
+      setAvatarUrl(user?.user_metadata?.avatar_url || null);
       void loadProfileDisplayName();
     };
 
@@ -307,7 +312,9 @@ export default function Navbar() {
                           )}
                         </div>
                         <div className="min-w-0 flex-1">
-                          <p className="line-clamp-1 text-sm font-medium">{item.title}</p>
+                          <p className="line-clamp-1 text-sm font-medium">
+                            {item.title}
+                          </p>
                           <p className="line-clamp-1 text-xs text-muted-foreground">
                             {item.description}
                           </p>
@@ -327,10 +334,15 @@ export default function Navbar() {
                 <div className="flex items-center gap-2">
                   <Link
                     href="/profile"
-                    className="flex items-center gap-1.5 text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+                    className="flex items-center gap-2 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                   >
-                    <User className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                    <span className="max-w-[120px] truncate whitespace-nowrap font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                    {/* Avatar - Centralized Component */}
+                    <NavbarAvatar
+                      userId={user.id}
+                      avatarUrl={avatarUrl || undefined}
+                      userName={profileDisplayName || user.email || "User"}
+                    />
+                    <span className="max-w-[120px] truncate whitespace-nowrap font-medium text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                       {profileDisplayName || user.email}
                     </span>
                   </Link>

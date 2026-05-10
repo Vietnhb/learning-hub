@@ -26,12 +26,16 @@ export function PostCard({
   isOnline: (id: string) => boolean;
   toggleLike: (post: FeedPost) => Promise<void>;
   openComments: Record<string, boolean>;
-  setOpenComments: React.Dispatch<React.SetStateAction<Record<string, boolean>>>;
+  setOpenComments: React.Dispatch<
+    React.SetStateAction<Record<string, boolean>>
+  >;
   sharePost: (id: string) => Promise<void>;
   savedPostIds: Set<string>;
   toggleSave: (id: string) => void;
   commentDrafts: Record<string, string>;
-  setCommentDrafts: React.Dispatch<React.SetStateAction<Record<string, string>>>;
+  setCommentDrafts: React.Dispatch<
+    React.SetStateAction<Record<string, string>>
+  >;
   addComment: (id: string) => Promise<void>;
 }) {
   return (
@@ -46,7 +50,9 @@ export function PostCard({
         <Avatar
           name={post.username || "Learning Hub member"}
           src={post.avatar_url}
+          userId={post.user_id}
           online={Boolean(post.user_id && isOnline(post.user_id))}
+          showFrameEffects={true}
         />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
