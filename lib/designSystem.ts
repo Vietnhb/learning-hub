@@ -118,6 +118,183 @@ export const AVATAR_FRAMES = {
     rarity: "uncommon",
     theme: "cool",
   },
+  "void-sovereign": {
+    id: "void-sovereign",
+    name: "Void Sovereign",
+    description: "Black-violet sovereign aura with deep space bloom",
+    borderClass:
+      "bg-gradient-to-br from-fuchsia-400 via-violet-600 to-slate-950",
+    glowClass:
+      "shadow-[0_0_30px_rgba(168,85,247,0.58),0_0_70px_rgba(15,23,42,0.42)]",
+    shimmerClass: "spark-shimmer-violet",
+    particleClass: "spark-particles-violet",
+    accentColor: "from-fuchsia-300 to-violet-700",
+    icon: "✦",
+    rarity: "legendary",
+    theme: "cool",
+  },
+  "inferno-core": {
+    id: "inferno-core",
+    name: "Inferno Core",
+    description: "Molten red-orange ring with volcanic impact glow",
+    borderClass:
+      "bg-gradient-to-br from-yellow-300 via-orange-500 to-red-800",
+    glowClass:
+      "shadow-[0_0_30px_rgba(249,115,22,0.62),0_0_76px_rgba(185,28,28,0.36)]",
+    shimmerClass: "spark-shimmer-red",
+    particleClass: "spark-particles-warm",
+    accentColor: "from-orange-300 to-red-700",
+    icon: "◆",
+    rarity: "legendary",
+    theme: "warm",
+  },
+  "frost-monarch": {
+    id: "frost-monarch",
+    name: "Frost Monarch",
+    description: "Icy royal frame with silver-blue crystal bloom",
+    borderClass: "bg-gradient-to-br from-white via-cyan-200 to-blue-700",
+    glowClass:
+      "shadow-[0_0_28px_rgba(125,211,252,0.62),0_0_68px_rgba(37,99,235,0.34)]",
+    shimmerClass: "spark-shimmer-cyan",
+    particleClass: "spark-particles-cyan",
+    accentColor: "from-cyan-100 to-blue-600",
+    icon: "❄",
+    rarity: "legendary",
+    theme: "cool",
+  },
+  "thunder-pulse": {
+    id: "thunder-pulse",
+    name: "Thunder Pulse",
+    description: "Electric yellow-cyan pulse with charged neon edge",
+    borderClass: "bg-gradient-to-br from-yellow-300 via-cyan-300 to-blue-700",
+    glowClass:
+      "shadow-[0_0_26px_rgba(250,204,21,0.52),0_0_62px_rgba(34,211,238,0.36)]",
+    shimmerClass: "spark-shimmer-blue",
+    particleClass: "spark-particles-blue",
+    accentColor: "from-yellow-300 to-cyan-500",
+    icon: "⚡",
+    rarity: "epic",
+    theme: "cool",
+  },
+  "emerald-aegis": {
+    id: "emerald-aegis",
+    name: "Emerald Aegis",
+    description: "Protective emerald ring with tactical shield glow",
+    borderClass:
+      "bg-gradient-to-br from-emerald-300 via-green-500 to-teal-800",
+    glowClass:
+      "shadow-[0_0_24px_rgba(16,185,129,0.5),0_0_56px_rgba(20,184,166,0.28)]",
+    shimmerClass: "spark-shimmer-cyan",
+    particleClass: "spark-particles-cyan",
+    accentColor: "from-emerald-300 to-teal-600",
+    icon: "⬟",
+    rarity: "epic",
+    theme: "cool",
+  },
+  "arcane-rift": {
+    id: "arcane-rift",
+    name: "Arcane Rift",
+    description: "Magenta arcane edge with spellburst particles",
+    borderClass:
+      "bg-gradient-to-br from-pink-300 via-purple-500 to-indigo-800",
+    glowClass:
+      "shadow-[0_0_26px_rgba(217,70,239,0.5),0_0_58px_rgba(99,102,241,0.32)]",
+    shimmerClass: "spark-shimmer-pink",
+    particleClass: "spark-particles-rose",
+    accentColor: "from-pink-300 to-indigo-600",
+    icon: "✧",
+    rarity: "epic",
+    theme: "cool",
+  },
+  "cyber-phantom": {
+    id: "cyber-phantom",
+    name: "Cyber Phantom",
+    description: "Neon matrix frame with stealthy cyber glow",
+    borderClass: "bg-gradient-to-br from-lime-300 via-cyan-400 to-slate-900",
+    glowClass:
+      "shadow-[0_0_24px_rgba(132,204,22,0.46),0_0_58px_rgba(34,211,238,0.3)]",
+    shimmerClass: "spark-shimmer-silver",
+    particleClass: "spark-particles-cyan",
+    accentColor: "from-lime-300 to-cyan-500",
+    icon: "▣",
+    rarity: "rare",
+    theme: "cool",
+  },
+  "aurora-crown": {
+    id: "aurora-crown",
+    name: "Aurora Crown",
+    description: "Aurora gradient crown with premium polar shimmer",
+    borderClass:
+      "bg-gradient-to-br from-teal-200 via-fuchsia-300 to-indigo-700",
+    glowClass:
+      "shadow-[0_0_28px_rgba(45,212,191,0.48),0_0_64px_rgba(168,85,247,0.34)]",
+    shimmerClass: "spark-shimmer-violet",
+    particleClass: "spark-particles-violet",
+    accentColor: "from-teal-200 to-fuchsia-500",
+    icon: "★",
+    rarity: "legendary",
+    theme: "cool",
+  },
+  "obsidian-eclipse": {
+    id: "obsidian-eclipse",
+    name: "Obsidian Eclipse",
+    description: "Dark eclipse frame with razor gold highlights",
+    borderClass:
+      "bg-gradient-to-br from-zinc-950 via-stone-700 to-amber-400",
+    glowClass:
+      "shadow-[0_0_24px_rgba(251,191,36,0.38),0_0_70px_rgba(24,24,27,0.55)]",
+    shimmerClass: "spark-shimmer-gold",
+    particleClass: "spark-particles-gold",
+    accentColor: "from-zinc-800 to-amber-400",
+    icon: "◉",
+    rarity: "legendary",
+    theme: "warm",
+  },
+  "quantum-orbit": {
+    id: "quantum-orbit",
+    name: "Quantum Orbit",
+    description: "Scientific orbit halo with high-energy blue sweep",
+    borderClass:
+      "bg-gradient-to-br from-sky-300 via-blue-500 to-violet-800",
+    glowClass:
+      "shadow-[0_0_24px_rgba(59,130,246,0.5),0_0_58px_rgba(124,58,237,0.3)]",
+    shimmerClass: "spark-shimmer-blue",
+    particleClass: "spark-particles-blue",
+    accentColor: "from-sky-300 to-violet-600",
+    icon: "◎",
+    rarity: "rare",
+    theme: "cool",
+  },
+  "ruby-overdrive": {
+    id: "ruby-overdrive",
+    name: "Ruby Overdrive",
+    description: "Hyper red ruby frame with aggressive speed glow",
+    borderClass:
+      "bg-gradient-to-br from-red-300 via-rose-600 to-fuchsia-900",
+    glowClass:
+      "shadow-[0_0_26px_rgba(244,63,94,0.54),0_0_58px_rgba(190,24,93,0.34)]",
+    shimmerClass: "spark-shimmer-red",
+    particleClass: "spark-particles-rose",
+    accentColor: "from-red-300 to-fuchsia-700",
+    icon: "◇",
+    rarity: "epic",
+    theme: "warm",
+  },
+  "mythic-trophy": {
+    id: "mythic-trophy",
+    name: "Mythic Trophy",
+    description: "Champion gold frame with victorious mythic shine",
+    borderClass:
+      "bg-gradient-to-br from-yellow-200 via-amber-400 to-orange-700",
+    glowClass:
+      "shadow-[0_0_30px_rgba(251,191,36,0.58),0_0_70px_rgba(234,88,12,0.35)]",
+    shimmerClass: "spark-shimmer-gold",
+    particleClass: "spark-particles-gold",
+    accentColor: "from-yellow-200 to-orange-600",
+    icon: "▲",
+    rarity: "legendary",
+    theme: "warm",
+  },
 } as const;
 
 export const ROLE_BADGES = {

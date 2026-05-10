@@ -36,7 +36,13 @@ import { CommunityFeed } from "./components/posts/CommunityFeed";
 export default function ForumPage() {
   const { user } = useAuth();
   const { onlineCount, connectionStatus, isOnline } = useOnlineUsers();
-  const { notifications } = useUserNotifications(user?.id);
+  const {
+    notifications,
+    visibleNotifications,
+    unreadCount,
+    dismissNotification,
+    markAllAsSeen,
+  } = useUserNotifications(user?.id);
 
   const {
     posts,
@@ -159,8 +165,6 @@ export default function ForumPage() {
     (user?.user_metadata?.name as string | undefined) ??
     getDisplayName(user?.email);
   const avatarUrl = user?.user_metadata?.avatar_url as string | undefined;
-  const unreadCount = notifications.filter((item) => item.isUnread).length;
-
   useEffect(() => {
     let mounted = true;
     async function checkAdmin() {
@@ -720,7 +724,9 @@ export default function ForumPage() {
           <RightSidebar
             notificationRef={notificationRef}
             unreadCount={unreadCount}
-            communityNotifications={communityNotifications}
+            notifications={visibleNotifications}
+            dismissNotification={dismissNotification}
+            markAllAsSeen={markAllAsSeen}
             trendingTopics={trendingTopics}
             activeMembers={activeMembers}
             isOnline={isOnline}

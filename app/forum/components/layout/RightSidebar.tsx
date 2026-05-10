@@ -1,30 +1,37 @@
-import { Bell, Flame, Zap, ShieldCheck, AtSign } from "lucide-react";
-import { RefObject, ReactNode } from "react";
+import {
+  Bell,
+  CheckCheck,
+  Flame,
+  MessageSquare,
+  MessagesSquare,
+  Zap,
+  ShieldCheck,
+  AtSign,
+} from "lucide-react";
+import { RefObject } from "react";
 import { Avatar } from "../shared/Avatar";
 import { Username } from "@/components/community/Username";
 import { HubCard } from "../shared/HubCard";
 import { ActiveMember } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
 import { cn } from "@/lib/utils";
+import { UserNotification } from "@/hooks/useUserNotifications";
 
 export function RightSidebar({
   notificationRef,
   unreadCount,
-  communityNotifications,
+  notifications,
+  dismissNotification,
+  markAllAsSeen,
   trendingTopics,
   activeMembers,
   isOnline,
 }: {
   notificationRef: RefObject<HTMLElement>;
   unreadCount: number;
-  communityNotifications: Array<{
-    id: string;
-    icon: ReactNode;
-    title: string;
-    description: string;
-    createdAt?: string | null;
-    href: string;
-  }>;
+  notifications: UserNotification[];
+  dismissNotification: (id: string) => Promise<void>;
+  markAllAsSeen: () => void;
   trendingTopics: Array<{ tag: string; count: number }>;
   activeMembers: ActiveMember[];
   isOnline: (id: string) => boolean;
@@ -45,14 +52,36 @@ export function RightSidebar({
         </div>
 
         <div className="space-y-3">
-          {communityNotifications.map((item) => (
+          {notifications.length === 0 ? (
+            <div className="rounded-2xl bg-slate-100/70 px-3 py-6 text-center text-sm text-slate-500 dark:bg-white/[0.06] dark:text-slate-400">
+              Chưa có thông báo mới
+            </div>
+          ) : null}
+
+          {notifications.length > 0 ? (
+            <button
+              type="button"
+              onClick={markAllAsSeen}
+              className="mb-1 inline-flex items-center gap-2 rounded-xl px-2 py-1.5 text-xs font-medium text-blue-600 transition hover:bg-blue-50 dark:text-cyan-300 dark:hover:bg-cyan-400/10"
+            >
+              <CheckCheck className="h-4 w-4" />
+              Đánh dấu đã đọc
+            </button>
+          ) : null}
+
+          {notifications.map((item) => (
             <a
               key={item.id}
               href={item.href}
+              onClick={() => void dismissNotification(item.id)}
               className="group flex gap-3 rounded-2xl p-2 transition hover:bg-slate-100 dark:hover:bg-white/10"
             >
               <div className="mt-0.5 rounded-xl bg-white p-2 shadow-sm dark:bg-white/10">
-                {item.icon}
+                {item.type === "feedback" ? (
+                  <MessageSquare className="h-4 w-4 text-blue-500" />
+                ) : (
+                  <MessagesSquare className="h-4 w-4 text-emerald-500" />
+                )}
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">

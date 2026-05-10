@@ -62,12 +62,13 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
   };
 
   return (
-    <div className="relative inline-block spark-frame-root">
+    <div className="relative z-10 inline-block overflow-visible spark-frame-root">
       {/* Aura layer */}
       <div
         className={cn(
           "absolute rounded-full",
           insetMap[size],
+          "z-0",
           frame.glowClass,
           animated ? "spark-frame-pulse" : ""
         )}
@@ -78,6 +79,7 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         <div 
           className={cn(
             "pointer-events-none absolute rounded-full spark-frame-bloom opacity-50",
+            "z-0",
             size === "xs" ? "-inset-[2px]" : size === "sm" ? "-inset-[3px]" : "-inset-[7px]"
           )} 
         />
@@ -88,6 +90,7 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         className={cn(
           "pointer-events-none absolute rounded-full",
           insetMap[size],
+          "z-10",
           frame.shimmerClass ?? "spark-shimmer-cyan",
           animated ? "spark-frame-sweep" : ""
         )}
@@ -99,6 +102,7 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
           className={cn(
             "pointer-events-none absolute rounded-full opacity-60",
             insetMap[size],
+            "z-10",
             frame.shimmerClass ?? "spark-shimmer-cyan",
             "spark-frame-sweep-reverse"
           )}
@@ -110,6 +114,7 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         <div 
           className={cn(
             "pointer-events-none absolute rounded-full spark-frame-orbit-ring opacity-40",
+            "z-10",
             size === "xs" ? "-inset-[1.5px]" : size === "sm" ? "-inset-[2px]" : "-inset-[5px]"
           )} 
         />
@@ -120,13 +125,31 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         <>
           <span
             className={cn(
-              "pointer-events-none absolute -top-1 left-1/4 h-1.5 w-1.5 rounded-full spark-frame-particle-a",
+              "pointer-events-none absolute -top-1 left-1/4 z-30 h-1.5 w-1.5 rounded-full spark-frame-particle-a",
               frame.particleClass ?? "spark-particles-cyan"
             )}
           />
           <span
             className={cn(
-              "pointer-events-none absolute bottom-0 right-2 h-1 w-1 rounded-full spark-frame-particle-b",
+              "pointer-events-none absolute bottom-0 right-2 z-30 h-1 w-1 rounded-full spark-frame-particle-b",
+              frame.particleClass ?? "spark-particles-cyan"
+            )}
+          />
+          <span
+            className={cn(
+              "pointer-events-none absolute right-1 top-1/4 z-30 h-1 w-1 rounded-full spark-frame-particle-c",
+              frame.particleClass ?? "spark-particles-cyan"
+            )}
+          />
+          <span
+            className={cn(
+              "pointer-events-none absolute bottom-1 left-1 z-30 h-1.5 w-1.5 rounded-full spark-frame-particle-d",
+              frame.particleClass ?? "spark-particles-cyan"
+            )}
+          />
+          <span
+            className={cn(
+              "pointer-events-none absolute left-1/2 top-0 z-30 h-1 w-1 rounded-full spark-frame-particle-e",
               frame.particleClass ?? "spark-particles-cyan"
             )}
           />
@@ -135,7 +158,7 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
 
       {/* LEGENDARY DRAGON SOUL EFFECTS */}
       {isLegendary && animated && (
-        <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 z-30 pointer-events-none">
           {/* Main Dragon Soul Aura */}
           <div className={cn("absolute rounded-full spark-dragon-aura", size === "xs" ? "-inset-[5px]" : size === "sm" ? "-inset-[8px]" : "-inset-[15px]")} />
           
@@ -145,18 +168,13 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
              <div className="absolute w-1.5 h-1.5 rounded-full spark-dragon-particle opacity-70" style={{ animation: 'dragon-tail-rotate 3s linear infinite 0.5s' }} />
              <div className="absolute w-1 h-1 rounded-full spark-dragon-particle opacity-50" style={{ animation: 'dragon-tail-rotate 3.5s linear infinite 1s' }} />
           </div>
-
-          {/* Crown Icon (Replaced Dragon) */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 text-lg drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]">
-            👑
-          </div>
         </div>
       )}
 
       {/* Border container */}
       <div
         className={cn(
-          "relative rounded-full p-[2px] flex items-center justify-center overflow-hidden flex-shrink-0",
+          "relative z-20 rounded-full p-[2px] flex items-center justify-center overflow-hidden flex-shrink-0",
           sizeClass,
           frame.borderClass
         )}

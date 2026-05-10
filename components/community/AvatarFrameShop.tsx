@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import {
   Dialog,
@@ -11,13 +11,25 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { AvatarFrame } from "@/components/community/AvatarFrame";
+import { UserAvatar } from "@/components/UserAvatar";
+import { Username } from "@/components/community/Username";
+import { useAuth } from "@/contexts/AuthContext";
 import {
   AVATAR_FRAMES,
   getAllFrames,
   type AvatarFrameId,
+  type RarityType,
 } from "@/lib/designSystem";
-import { Check, Search, Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  Check,
+  ChevronDown,
+  Crown,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Star,
+} from "lucide-react";
 
 interface AvatarFrameShopProps {
   open: boolean;
@@ -29,6 +41,28 @@ interface AvatarFrameShopProps {
   onFrameSelected?: (frameId: AvatarFrameId) => void;
 }
 
+const rarityOptions: Array<{ value: "all" | RarityType; label: string }> = [
+  { value: "all", label: "Tất cả" },
+  { value: "common", label: "Common" },
+  { value: "uncommon", label: "Uncommon" },
+  { value: "rare", label: "Rare" },
+  { value: "epic", label: "Epic" },
+  { value: "legendary", label: "Legendary" },
+];
+
+const rarityStyles: Record<RarityType, string> = {
+  common: "border-slate-200 bg-slate-100 text-slate-600",
+  uncommon: "border-emerald-200 bg-emerald-50 text-emerald-700",
+  rare: "border-blue-200 bg-blue-50 text-blue-700",
+  epic: "border-violet-200 bg-violet-50 text-violet-700",
+  legendary: "border-amber-200 bg-amber-50 text-amber-700",
+};
+
+const themeStyles = {
+  warm: "from-amber-500 to-rose-500",
+  cool: "from-cyan-500 to-blue-600",
+} as const;
+
 export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
   open,
   onOpenChange,
@@ -38,34 +72,89 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
   currentFrameId,
   onFrameSelected,
 }) => {
+  const { user } = useAuth();
   const [selectedFrame, setSelectedFrame] = useState<AvatarFrameId | null>(
     currentFrameId || null,
   );
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterRarity, setFilterRarity] = useState("all");
+  const [filterRarity, setFilterRarity] = useState<"all" | RarityType>("all");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [profilePreview, setProfilePreview] = useState<{
+    avatarUrl: string | null;
+    userName: string;
+  }>({ avatarUrl: null, userName: "User" });
 
   useEffect(() => {
     setSelectedFrame(currentFrameId || null);
+    setMessage("");
   }, [currentFrameId, open]);
+
+  useEffect(() => {
+    if (!open || !userId) return;
+
+    let mounted = true;
+
+    const loadPreviewProfile = async () => {
+      const { data } = await supabase
+        .from("users")
+        .select("full_name, avatar_url")
+        .eq("id", userId)
+        .single();
+
+      if (!mounted) return;
+
+      setProfilePreview({
+        avatarUrl:
+          data?.avatar_url ||
+          (user?.user_metadata?.avatar_url as string | undefined) ||
+          null,
+        userName:
+          data?.full_name?.trim() ||
+          (user?.user_metadata?.full_name as string | undefined) ||
+          (user?.user_metadata?.name as string | undefined) ||
+          user?.email ||
+          "User",
+      });
+    };
+
+    void loadPreviewProfile();
+
+    return () => {
+      mounted = false;
+    };
+  }, [open, user?.email, user?.user_metadata, userId]);
 
   const isAdmin = userRole === 1;
   const userInventory = inventory || [];
+  const ownedFrameIds = useMemo(
+    () =>
+      new Set(
+        isAdmin
+          ? getAllFrames().map((frame) => frame.id)
+          : userInventory.filter((id): id is AvatarFrameId => id in AVATAR_FRAMES),
+      ),
+    [isAdmin, userInventory],
+  );
 
-  const filteredFrames = getAllFrames().filter((frame) => {
-    // Basic search/rarity filters
-    const matchesSearch = frame.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-    const matchesRarity =
-      filterRarity === "all" || frame.rarity === filterRarity;
-    
-    // Inventory System: Admin sees all, Users see only inventory frames
-    const isOwned = isAdmin || userInventory.includes(frame.id);
-    
-    return matchesSearch && matchesRarity && isOwned;
-  });
+  const filteredFrames = useMemo(
+    () =>
+      getAllFrames().filter((frame) => {
+        const matchesSearch = frame.name
+          .toLowerCase()
+          .includes(searchTerm.trim().toLowerCase());
+        const matchesRarity =
+          filterRarity === "all" || frame.rarity === filterRarity;
+        const isOwned = ownedFrameIds.has(frame.id);
+
+        return matchesSearch && matchesRarity && isOwned;
+      }),
+    [filterRarity, ownedFrameIds, searchTerm],
+  );
+
+  const selectedFrameData = selectedFrame ? AVATAR_FRAMES[selectedFrame] : null;
+  const activeTheme =
+    selectedFrameData?.theme === "warm" ? themeStyles.warm : themeStyles.cool;
 
   const handleSelectFrame = async () => {
     if (!selectedFrame || !userId) return;
@@ -81,16 +170,16 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
 
       if (error) throw error;
 
-      setMessage("✅ Avatar frame updated!");
+      setMessage("Đã cập nhật avatar frame.");
       onFrameSelected?.(selectedFrame);
       window.dispatchEvent(new Event("learning-hub:user-profile-updated"));
 
       setTimeout(() => {
         onOpenChange(false);
         setMessage("");
-      }, 1500);
+      }, 1000);
     } catch (error: any) {
-      setMessage(`❌ Error: ${error.message}`);
+      setMessage(`Không thể cập nhật frame: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -98,159 +187,261 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-gray-800 border-gray-700">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 text-2xl text-white">
-            <Sparkles className="w-6 h-6 text-cyan-400" />
-            Avatar Frame Shop
-          </DialogTitle>
-          <DialogDescription className="text-gray-400">
-            Chọn khung avatar yêu thích để hiển thị trạng thái của bạn trong
-            cộng đồng
-          </DialogDescription>
-        </DialogHeader>
-
-        {/* Search and Filter */}
-        <div className="flex flex-col md:flex-row gap-4 pb-4">
-          <div className="flex-1 relative">
-            <Search className="absolute left-3 top-3 w-4 h-4 text-gray-500" />
-            <Input
-              type="text"
-              placeholder="Tìm kiếm frame..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 bg-gray-700 border-gray-600 text-white placeholder-gray-500"
-            />
-          </div>
-          <select
-            value={filterRarity}
-            onChange={(e) => setFilterRarity(e.target.value)}
-            aria-label="Lọc frame theo độ hiếm"
-            title="Lọc frame theo độ hiếm"
-            className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+      <DialogContent className="max-h-[92vh] max-w-5xl overflow-hidden border-0 bg-white p-0 shadow-2xl shadow-slate-950/20 dark:bg-slate-950">
+        <div className="grid max-h-[92vh] lg:grid-cols-[320px_minmax(0,1fr)]">
+          <section
+            className={cn(
+              "relative flex min-h-[360px] flex-col justify-between bg-gradient-to-br p-6 text-white",
+              activeTheme,
+            )}
           >
-            <option value="all">Tất cả độ hiếm</option>
-            <option value="common">Common</option>
-            <option value="uncommon">Uncommon</option>
-            <option value="rare">Rare</option>
-            <option value="epic">Epic</option>
-            <option value="legendary">Legendary</option>
-          </select>
-        </div>
-
-        {/* Message */}
-        {message && (
-          <div
-            className={`p-3 rounded-lg text-sm font-medium ${
-              message.includes("✅")
-                ? "bg-emerald-600/20 border border-emerald-600/50 text-emerald-300"
-                : "bg-red-600/20 border border-red-600/50 text-red-300"
-            }`}
-          >
-            {message}
-          </div>
-        )}
-
-        {/* Preview Selected Frame */}
-        {selectedFrame && (
-          <div className="bg-gray-700 rounded-lg p-4 mb-4">
-            <p className="text-sm text-gray-300 mb-3">Preview:</p>
-            <div className="flex items-center gap-6">
-              <div className="flex justify-center">
-                <AvatarFrame frameId={selectedFrame} size="lg" animated>
-                  <div className="w-full h-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-2xl font-bold text-white">
-                    {AVATAR_FRAMES[selectedFrame].icon}
-                  </div>
-                </AvatarFrame>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {AVATAR_FRAMES[selectedFrame].name}
-                </h3>
-                <p className="text-sm text-gray-300 mb-3">
-                  {AVATAR_FRAMES[selectedFrame].description}
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200 capitalize">
-                    {AVATAR_FRAMES[selectedFrame].rarity}
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200 capitalize">
-                    {AVATAR_FRAMES[selectedFrame].theme}
-                  </span>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.18),transparent_20%)]" />
+            <div className="relative">
+              <DialogHeader>
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/18 backdrop-blur">
+                  <Sparkles className="h-5 w-5" />
                 </div>
-              </div>
+                <DialogTitle className="text-2xl font-bold text-white">
+                  Avatar Frame Shop
+                </DialogTitle>
+                <DialogDescription className="mt-2 text-sm leading-6 text-white/78">
+                  Chọn khung avatar để làm nổi bật hồ sơ của bạn trong cộng
+                  đồng Learning Hub.
+                </DialogDescription>
+              </DialogHeader>
             </div>
-          </div>
-        )}
 
-        {/* Frame Grid or Empty State */}
-        {filteredFrames.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-4">
-            {filteredFrames.map((frame) => (
-              <button
-                key={frame.id}
-                onClick={() => setSelectedFrame(frame.id as AvatarFrameId)}
-                className={`p-4 rounded-lg border-2 transition-all ${
-                  selectedFrame === frame.id
-                    ? "border-cyan-500 bg-cyan-500/10 ring-2 ring-cyan-500"
-                    : "border-gray-600 bg-gray-700 hover:border-cyan-500/50 hover:bg-gray-600"
-                }`}
-              >
-                <div className="flex justify-center mb-3">
-                  <AvatarFrame
-                    frameId={frame.id as AvatarFrameId}
-                    size="md"
-                    animated
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-lg font-bold text-white">
-                      {frame.icon}
+            <div className="relative mt-8 rounded-2xl border border-white/20 bg-white/14 p-6 backdrop-blur-md">
+              <p className="mb-4 text-xs font-semibold uppercase text-white/70">
+                Preview
+              </p>
+              {selectedFrameData ? (
+                <div className="flex items-center gap-5">
+                  <div className="shrink-0 p-4">
+                    <UserAvatar
+                      userId={userId}
+                      avatarUrl={profilePreview.avatarUrl || undefined}
+                      userName={profilePreview.userName}
+                      frameId={selectedFrame}
+                      size="xl"
+                      animated={true}
+                      showFrameEffects={true}
+                      className="avatar-frame-shop-preview"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xl font-bold leading-tight">
+                      <Username
+                        userId={userId}
+                        name={profilePreview.userName}
+                        frameId={selectedFrame}
+                        className="text-xl"
+                      />
                     </div>
-                  </AvatarFrame>
-                </div>
-                <h4 className="text-sm font-semibold text-white text-center mb-2">
-                  {frame.name}
-                </h4>
-                <div className="flex gap-1 justify-center mb-2">
-                  <span className="px-1.5 py-0.5 text-xs rounded bg-gray-600 text-gray-200 capitalize">
-                    {frame.rarity}
-                  </span>
-                </div>
-                {selectedFrame === frame.id && (
-                  <div className="flex justify-center">
-                    <Check className="w-5 h-5 text-cyan-400" />
+                    <p className="mt-1 text-sm font-semibold text-white/70">
+                      {selectedFrameData.name}
+                    </p>
+                    <p className="mt-2 line-clamp-3 text-sm leading-5 text-white/76">
+                      {selectedFrameData.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <span className="rounded-full bg-white/18 px-3 py-1 text-xs font-semibold capitalize">
+                        {selectedFrameData.rarity}
+                      </span>
+                      <span className="rounded-full bg-white/18 px-3 py-1 text-xs font-semibold capitalize">
+                        {selectedFrameData.theme}
+                      </span>
+                    </div>
                   </div>
-                )}
-              </button>
-            ))}
-          </div>
-        ) : (
-          <div className="py-12 flex flex-col items-center justify-center text-center bg-gray-900/50 rounded-xl border border-dashed border-gray-700">
-            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 text-gray-500">
-              <Sparkles className="w-8 h-8" />
+                </div>
+              ) : (
+                <div className="rounded-xl border border-white/20 bg-white/10 p-5 text-sm text-white/76">
+                  Chọn một frame để xem trước.
+                </div>
+              )}
             </div>
-            <h3 className="text-white font-bold mb-1">Kho của bạn đang trống</h3>
-            <p className="text-gray-400 text-sm max-w-xs mx-auto">
-              Bạn chưa sở hữu khung hình nào. Hãy tham gia tích cực các hoạt động và sự kiện để được cấp những bộ khung đẳng cấp nhé!
-            </p>
-          </div>
-        )}
+          </section>
 
-        {/* Action Buttons */}
-        <div className="flex gap-3 pt-4 border-t border-gray-600">
-          <Button
-            variant="outline"
-            onClick={() => onOpenChange(false)}
-            className="flex-1"
-          >
-            Hủy
-          </Button>
-          <Button
-            onClick={handleSelectFrame}
-            disabled={!selectedFrame || loading}
-            className="flex-1 bg-cyan-600 hover:bg-cyan-700"
-          >
-            {loading ? "Đang lưu..." : "Chọn Frame"}
-          </Button>
+          <section className="flex min-h-0 flex-col bg-slate-50 dark:bg-slate-950">
+            <div className="border-b border-slate-200 bg-white px-5 py-4 dark:border-white/10 dark:bg-slate-900">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h2 className="text-lg font-bold text-slate-950 dark:text-white">
+                    Bộ sưu tập của bạn
+                  </h2>
+                  <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                    {isAdmin
+                      ? "Admin có thể xem và dùng toàn bộ frame."
+                      : `${ownedFrameIds.size} frame đã mở khóa.`}
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1.5 text-xs font-semibold text-cyan-700 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-200">
+                  {isAdmin ? (
+                    <Crown className="h-4 w-4" />
+                  ) : (
+                    <ShieldCheck className="h-4 w-4" />
+                  )}
+                  {isAdmin ? "Full access" : "Inventory only"}
+                </div>
+              </div>
+
+              <div className="mt-4 grid gap-3 md:grid-cols-[minmax(0,1fr)_180px]">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                  <Input
+                    type="text"
+                    placeholder="Tìm kiếm frame..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="h-11 rounded-xl border-slate-200 bg-slate-50 pl-10 text-slate-950 placeholder:text-slate-400 focus-visible:ring-cyan-500 dark:border-white/10 dark:bg-slate-950 dark:text-white"
+                  />
+                </div>
+                <div className="relative">
+                  <select
+                    value={filterRarity}
+                    onChange={(e) =>
+                      setFilterRarity(e.target.value as "all" | RarityType)
+                    }
+                    aria-label="Lọc frame theo độ hiếm"
+                    className="h-11 w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 dark:border-white/10 dark:bg-slate-950 dark:text-slate-100"
+                  >
+                    {rarityOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                </div>
+              </div>
+            </div>
+
+            {message ? (
+              <div
+                className={cn(
+                  "mx-5 mt-4 rounded-xl border px-4 py-3 text-sm font-medium",
+                  message.startsWith("Đã")
+                    ? "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-200"
+                    : "border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-400/20 dark:bg-rose-400/10 dark:text-rose-200",
+                )}
+              >
+                {message}
+              </div>
+            ) : null}
+
+            <div className="min-h-0 flex-1 overflow-y-auto px-5 py-6">
+              {filteredFrames.length > 0 ? (
+                <div className="grid grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2 xl:grid-cols-3">
+                  {filteredFrames.map((frame) => {
+                    const frameId = frame.id as AvatarFrameId;
+                    const selected = selectedFrame === frameId;
+                    const active = currentFrameId === frameId;
+
+                    return (
+                      <button
+                        key={frame.id}
+                        type="button"
+                        onClick={() => setSelectedFrame(frameId)}
+                        className={cn(
+                          "group relative overflow-visible rounded-2xl border bg-white p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-100 dark:bg-slate-900 dark:hover:shadow-black/30",
+                          selected
+                            ? "border-cyan-400 ring-2 ring-cyan-200 dark:ring-cyan-400/30"
+                            : "border-slate-200 dark:border-white/10",
+                        )}
+                      >
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-0 transition group-hover:opacity-100" />
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="shrink-0 p-3">
+                            <UserAvatar
+                              userId={userId}
+                              avatarUrl={profilePreview.avatarUrl || undefined}
+                              userName={profilePreview.userName}
+                              frameId={frameId}
+                              size="lg"
+                              animated={true}
+                              showFrameEffects={true}
+                              className="avatar-frame-shop-preview"
+                            />
+                          </div>
+                          <div className="flex flex-col items-end gap-2">
+                            {active ? (
+                              <span className="inline-flex items-center gap-1 rounded-full bg-cyan-500 px-2 py-1 text-[11px] font-semibold text-white">
+                                <Star className="h-3 w-3" />
+                                Đang dùng
+                              </span>
+                            ) : null}
+                            {selected ? (
+                              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-950 text-white dark:bg-cyan-400 dark:text-slate-950">
+                                <Check className="h-4 w-4" />
+                              </span>
+                            ) : null}
+                          </div>
+                        </div>
+
+                        <div className="mt-4 line-clamp-1 text-sm font-bold">
+                          <Username
+                            userId={userId}
+                            name={profilePreview.userName}
+                            frameId={frameId}
+                            className="text-sm"
+                          />
+                        </div>
+                        <h3 className="mt-1 line-clamp-1 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                          {frame.name}
+                        </h3>
+                        <p className="mt-1 line-clamp-2 min-h-10 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                          {frame.description}
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          <span
+                            className={cn(
+                              "rounded-full border px-2 py-1 text-[11px] font-semibold capitalize",
+                              rarityStyles[frame.rarity],
+                            )}
+                          >
+                            {frame.rarity}
+                          </span>
+                          <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-semibold capitalize text-slate-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+                            {frame.theme}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center dark:border-white/10 dark:bg-slate-900">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 text-slate-400 dark:bg-white/10">
+                    <Sparkles className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-base font-bold text-slate-950 dark:text-white">
+                    Chưa có frame phù hợp
+                  </h3>
+                  <p className="mt-2 max-w-sm text-sm leading-6 text-slate-500 dark:text-slate-400">
+                    Thử đổi bộ lọc hoặc tham gia thêm hoạt động cộng đồng để mở
+                    khóa frame mới.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-3 border-t border-slate-200 bg-white p-5 sm:flex-row dark:border-white/10 dark:bg-slate-900">
+              <Button
+                variant="outline"
+                onClick={() => onOpenChange(false)}
+                className="h-11 flex-1 rounded-xl"
+              >
+                Hủy
+              </Button>
+              <Button
+                onClick={handleSelectFrame}
+                disabled={!selectedFrame || loading}
+                className="h-11 flex-1 rounded-xl bg-slate-950 text-white hover:bg-cyan-700 dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
+              >
+                {loading ? "Đang lưu..." : "Dùng frame này"}
+              </Button>
+            </div>
+          </section>
         </div>
       </DialogContent>
     </Dialog>

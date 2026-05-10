@@ -468,6 +468,35 @@
     animation-delay: 0.85s;
   }
 
+  .avatar-frame-shop-preview .spark-frame-root {
+    overflow: visible;
+  }
+
+  .avatar-frame-shop-preview .spark-frame-particle-a {
+    top: -0.65rem;
+    left: 12%;
+  }
+
+  .avatar-frame-shop-preview .spark-frame-particle-b {
+    right: -0.4rem;
+    bottom: 14%;
+  }
+
+  .avatar-frame-shop-preview .spark-frame-particle-c {
+    right: -0.55rem;
+    top: 26%;
+  }
+
+  .avatar-frame-shop-preview .spark-frame-particle-d {
+    bottom: -0.45rem;
+    left: 10%;
+  }
+
+  .avatar-frame-shop-preview .spark-frame-particle-e {
+    top: -0.5rem;
+    left: 58%;
+  }
+
   .spark-particles-cyan {
     color: rgba(103, 232, 249, 0.95);
     background: rgba(103, 232, 249, 0.95);

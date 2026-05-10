@@ -15,7 +15,7 @@ import {
   MessagesSquare,
   CheckCheck,
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -37,12 +37,16 @@ export default function Navbar() {
   const { user, loading, signOut } = useAuth();
   const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
-  const [hiddenIds, setHiddenIds] = useState<string[]>([]);
   const [profileDisplayName, setProfileDisplayName] = useState<string | null>(
     null,
   );
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
-  const { notifications } = useUserNotifications(user?.id);
+  const {
+    visibleNotifications,
+    unreadCount,
+    dismissNotification,
+    markAllAsSeen,
+  } = useUserNotifications(user?.id);
 
   useEffect(() => {
     let mounted = true;
@@ -109,84 +113,6 @@ export default function Navbar() {
       );
     };
   }, [user?.id]);
-
-  useEffect(() => {
-    if (!user?.id) {
-      setHiddenIds([]);
-      return;
-    }
-
-    const raw = window.localStorage.getItem(
-      `user_notification_hidden_ids:${user.id}`,
-    );
-    if (!raw) {
-      setHiddenIds([]);
-      return;
-    }
-
-    try {
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) {
-        setHiddenIds(parsed.filter((item) => typeof item === "string"));
-      }
-    } catch {
-      setHiddenIds([]);
-    }
-  }, [user?.id]);
-
-  const persistHiddenIds = (ids: string[]) => {
-    const deduped = Array.from(new Set(ids)).slice(-200);
-    setHiddenIds(deduped);
-    if (user?.id) {
-      window.localStorage.setItem(
-        `user_notification_hidden_ids:${user.id}`,
-        JSON.stringify(deduped),
-      );
-    }
-  };
-
-  const visibleNotifications = useMemo(
-    () => notifications.filter((item) => !hiddenIds.includes(item.id)),
-    [notifications, hiddenIds],
-  );
-
-  const dismissNotification = async (id: string) => {
-    if (hiddenIds.includes(id)) return;
-    persistHiddenIds([...hiddenIds, id]);
-
-    if (!user?.id || !id.startsWith("message:")) return;
-
-    const messageId = id.replace("message:", "");
-    await supabase
-      .from("messages")
-      .update({ is_read: true })
-      .eq("id", messageId)
-      .eq("receiver_id", user.id);
-  };
-
-  const markAllAsSeen = () => {
-    const toHide = visibleNotifications.map((item) => item.id);
-    persistHiddenIds([...hiddenIds, ...toHide]);
-
-    if (!user?.id) return;
-
-    const messageIds = visibleNotifications
-      .filter((item) => item.type === "message")
-      .map((item) => item.id.replace("message:", ""));
-
-    if (messageIds.length > 0) {
-      void supabase
-        .from("messages")
-        .update({ is_read: true })
-        .in("id", messageIds)
-        .eq("receiver_id", user.id);
-    }
-  };
-
-  const unreadCount = useMemo(
-    () => visibleNotifications.filter((item) => item.isUnread).length,
-    [visibleNotifications],
-  );
 
   return (
     <motion.nav
