@@ -178,7 +178,7 @@ export default function DesignSystemShowcase() {
               <div>
                 <p className="text-gray-400 mb-3">User with 3 roles:</p>
                 <RoleBadges
-                  roleIds={["admin", "top-contributor", "developer"]}
+                  roleIds={["admin", "topContributor", "developer"]}
                   size="md"
                 />
               </div>
@@ -190,7 +190,7 @@ export default function DesignSystemShowcase() {
                   roleIds={[
                     "admin",
                     "moderator",
-                    "top-contributor",
+                    "topContributor",
                     "verified",
                     "developer",
                   ]}
@@ -202,7 +202,7 @@ export default function DesignSystemShowcase() {
                 <p className="text-gray-400 mb-3">
                   User with premium + AI expert:
                 </p>
-                <RoleBadges roleIds={["vip-member", "ai-expert"]} size="lg" />
+                <RoleBadges roleIds={["vipMember", "aiExpert"]} size="lg" />
               </div>
             </div>
           </Card>
@@ -355,7 +355,7 @@ export default function DesignSystemShowcase() {
                 <div className="mb-6">
                   <p className="text-sm text-gray-400 mb-3">Roles</p>
                   <RoleBadges
-                    roleIds={["vip-member", "top-contributor", "verified"]}
+                    roleIds={["vipMember", "topContributor", "verified"]}
                     size="sm"
                   />
                 </div>
