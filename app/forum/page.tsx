@@ -346,11 +346,11 @@ export default function ForumPage() {
     return topTags.length > 0
       ? topTags
       : [
-          { tag: "#NextJS", count: 12 },
-          { tag: "#Supabase", count: 9 },
-          { tag: "#AI", count: 7 },
-          { tag: "#StudyTips", count: 6 },
-        ];
+        { tag: "#301 VN Top 1", count: 12 },
+        { tag: "#Pass LJPT N6", count: 9 },
+        { tag: "#AI", count: 7 },
+        { tag: "#StudyTips", count: 6 },
+      ];
   }, [chatMessages, posts]);
 
   const communityNotifications = useMemo(() => {
@@ -385,56 +385,56 @@ export default function ForumPage() {
     return [
       announcements[0]
         ? {
-            id: `announcement-${announcements[0].id}`,
-            icon: <span className="text-amber-500">📢</span>,
-            title: "Thông báo mới từ admin",
-            description:
-              announcements[0].title || announcements[0].content || "",
-            createdAt: announcements[0].created_at,
-            href: "#announcement",
-          }
+          id: `announcement-${announcements[0].id}`,
+          icon: <span className="text-amber-500">📢</span>,
+          title: "Thông báo mới từ admin",
+          description:
+            announcements[0].title || announcements[0].content || "",
+          createdAt: announcements[0].created_at,
+          href: "#announcement",
+        }
         : null,
       latestComment,
       latestLike && likedPost
         ? {
-            id: `like-${latestLike.id || latestLike.post_id}`,
-            icon: <span className="text-rose-500">❤️</span>,
-            title: "Một bài viết vừa được thích",
-            description: likedPost.content || "Có người vừa tương tác với feed",
-            createdAt: latestLike.created_at,
-            href: `#post-${likedPost.id}`,
-          }
+          id: `like-${latestLike.id || latestLike.post_id}`,
+          icon: <span className="text-rose-500">❤️</span>,
+          title: "Một bài viết vừa được thích",
+          description: likedPost.content || "Có người vừa tương tác với feed",
+          createdAt: latestLike.created_at,
+          href: `#post-${likedPost.id}`,
+        }
         : null,
       posts[0]
         ? {
-            id: `post-${posts[0].id}`,
-            icon: <span className="text-violet-500">✨</span>,
-            title: `${posts[0].username || "Một thành viên"} vừa đăng bài`,
-            description: posts[0].content || "Bài đăng mới trong cộng đồng",
-            createdAt: posts[0].created_at,
-            href: `#post-${posts[0].id}`,
-          }
+          id: `post-${posts[0].id}`,
+          icon: <span className="text-violet-500">✨</span>,
+          title: `${posts[0].username || "Một thành viên"} vừa đăng bài`,
+          description: posts[0].content || "Bài đăng mới trong cộng đồng",
+          createdAt: posts[0].created_at,
+          href: `#post-${posts[0].id}`,
+        }
         : null,
       notifications[0]
         ? {
-            id: notifications[0].id,
-            icon: <span className="text-blue-500">🔔</span>,
-            title: notifications[0].title,
-            description: notifications[0].description,
-            createdAt: notifications[0].createdAt,
-            href: notifications[0].href,
-          }
+          id: notifications[0].id,
+          icon: <span className="text-blue-500">🔔</span>,
+          title: notifications[0].title,
+          description: notifications[0].description,
+          createdAt: notifications[0].createdAt,
+          href: notifications[0].href,
+        }
         : null,
     ]
       .filter(Boolean)
       .slice(0, 5) as Array<{
-      id: string;
-      icon: React.ReactNode;
-      title: string;
-      description: string;
-      createdAt?: string | null;
-      href: string;
-    }>;
+        id: string;
+        icon: React.ReactNode;
+        title: string;
+        description: string;
+        createdAt?: string | null;
+        href: string;
+      }>;
   }, [announcements, likes, notifications, posts]);
 
   const visiblePosts = posts.slice(0, visiblePostCount);
