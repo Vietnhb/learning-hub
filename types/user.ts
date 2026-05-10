@@ -7,6 +7,7 @@ export interface User {
   date_of_birth: string | null;
   last_online_at?: string | null;
   created_at: string;
+  points?: number;
 }
 
 export interface UserProfile {

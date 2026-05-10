@@ -7,6 +7,7 @@ import {
   Zap,
   ShieldCheck,
   AtSign,
+  Sparkles,
 } from "lucide-react";
 import { RefObject } from "react";
 import { Avatar } from "../shared/Avatar";
@@ -79,6 +80,8 @@ export function RightSidebar({
               <div className="mt-0.5 rounded-xl bg-white p-2 shadow-sm dark:bg-white/10">
                 {item.type === "feedback" ? (
                   <MessageSquare className="h-4 w-4 text-blue-500" />
+                ) : item.type === "reward" ? (
+                  <Sparkles className="h-4 w-4 text-amber-500" />
                 ) : (
                   <MessagesSquare className="h-4 w-4 text-emerald-500" />
                 )}

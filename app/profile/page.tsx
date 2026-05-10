@@ -283,8 +283,16 @@ export default function ProfilePage() {
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                     {profile.email}
                   </p>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
-                    {profile.role_id === 1 ? "👑 Admin" : "👤 Thành viên"}
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+                      {profile.role_id === 1 ? "👑 Admin" : "👤 Thành viên"}
+                    </div>
+                    {profile.points !== undefined && (
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-200/50 dark:border-amber-800/50">
+                        <Sparkles className="w-3.5 h-3.5" />
+                        {profile.points} Điểm
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

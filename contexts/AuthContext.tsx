@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
 import { startOnlinePresence, stopOnlinePresence } from "@/lib/onlinePresenceStore";
+import { DailyLoginRewardModal } from "@/components/DailyLoginRewardModal";
 
 interface AuthContextType {
   user: User | null;
@@ -28,6 +29,20 @@ export const useAuth = () => {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [dailyRewardPoints, setDailyRewardPoints] = useState<number | null>(null);
+
+  const checkDailyLogin = async (userId: string) => {
+    try {
+      const { data, error } = await supabase.rpc('claim_daily_login_reward');
+      if (!error && data > 0) {
+        setDailyRewardPoints(data);
+        window.dispatchEvent(new Event("learning-hub:user-profile-updated"));
+        window.dispatchEvent(new CustomEvent("learning-hub:reward-points", { detail: { points: data } }));
+      }
+    } catch (err) {
+      console.error("Error claiming daily reward:", err);
+    }
+  };
 
   useEffect(() => {
     const enforceBanStatus = async (nextUser: User | null) => {
@@ -55,6 +70,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       setUser(nextUser);
       setLoading(false);
+      checkDailyLogin(nextUser.id);
     };
 
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -94,6 +110,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   return (
     <AuthContext.Provider value={{ user, loading, signOut }}>
       {children}
+      <DailyLoginRewardModal 
+        points={dailyRewardPoints} 
+        onClose={() => setDailyRewardPoints(null)} 
+      />
     </AuthContext.Provider>
   );
 }

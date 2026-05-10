@@ -14,6 +14,7 @@ import {
   MessageSquare,
   MessagesSquare,
   CheckCheck,
+  Sparkles,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -236,6 +237,8 @@ export default function Navbar() {
                         <div className="mt-0.5">
                           {item.type === "feedback" ? (
                             <MessageSquare className="h-4 w-4 text-blue-500" />
+                          ) : item.type === "reward" ? (
+                            <Sparkles className="h-4 w-4 text-amber-500" />
                           ) : (
                             <MessagesSquare className="h-4 w-4 text-emerald-500" />
                           )}

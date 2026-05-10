@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 
 export type UserNotification = {
   id: string;
-  type: "feedback" | "message";
+  type: "feedback" | "message" | "reward";
   title: string;
   description: string;
   href: string;
@@ -15,17 +15,28 @@ export type UserNotification = {
 
 const getHiddenStorageKey = (userId: string) =>
   `user_notification_hidden_ids:${userId}`;
+const getLocalNotificationsKey = (userId: string) =>
+  `user_local_notifications:${userId}`;
 
 const NOTIFICATION_SYNC_EVENT = "learning-hub:user-notifications-updated";
+const REWARD_EVENT = "learning-hub:reward-points";
 
 export function useUserNotifications(userId?: string) {
-  const [notifications, setNotifications] = useState<UserNotification[]>([]);
+  const [serverNotifications, setServerNotifications] = useState<UserNotification[]>([]);
+  const [localNotifications, setLocalNotifications] = useState<UserNotification[]>([]);
   const [loading, setLoading] = useState(true);
   const [hiddenIds, setHiddenIds] = useState<string[]>([]);
 
+  // Derived state: merge and sort
+  const notifications = useMemo(() => {
+    return [...serverNotifications, ...localNotifications].sort(
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    ).slice(0, 30);
+  }, [serverNotifications, localNotifications]);
+
   const fetchNotifications = useCallback(async () => {
     if (!userId) {
-      setNotifications([]);
+      setServerNotifications([]);
       setLoading(false);
       return;
     }
@@ -83,11 +94,7 @@ export function useUserNotifications(userId?: string) {
       }),
     );
 
-    const merged = [...feedbackNotifications, ...messageNotifications].sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
-
-    setNotifications(merged.slice(0, 30));
+    setServerNotifications([...feedbackNotifications, ...messageNotifications]);
     setLoading(false);
   }, [userId]);
 
@@ -120,19 +127,61 @@ export function useUserNotifications(userId?: string) {
       }
     };
 
+    const loadLocalNotifications = () => {
+      const raw = window.localStorage.getItem(getLocalNotificationsKey(userId));
+      if (!raw) {
+        setLocalNotifications([]);
+        return;
+      }
+      try {
+        setLocalNotifications(JSON.parse(raw));
+      } catch {
+        setLocalNotifications([]);
+      }
+    };
+
     loadHiddenIds();
+    loadLocalNotifications();
 
     const handleStorage = (event: StorageEvent) => {
       if (event.key === getHiddenStorageKey(userId)) loadHiddenIds();
+      if (event.key === getLocalNotificationsKey(userId)) loadLocalNotifications();
     };
-    const handleLocalSync = () => loadHiddenIds();
+    const handleLocalSync = () => {
+      loadHiddenIds();
+      loadLocalNotifications();
+    };
+
+    const handleRewardEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<{ points: number }>;
+      const points = customEvent.detail?.points;
+      if (!points) return;
+      
+      const newNotif: UserNotification = {
+        id: `reward:${Date.now()}`,
+        type: "reward",
+        title: "Điểm danh hàng ngày",
+        description: `Bạn vừa nhận được +${points} điểm Learning Hub!`,
+        href: "#",
+        createdAt: new Date().toISOString(),
+        isUnread: true,
+      };
+      
+      setLocalNotifications(prev => {
+        const next = [newNotif, ...prev].slice(0, 10);
+        window.localStorage.setItem(getLocalNotificationsKey(userId), JSON.stringify(next));
+        return next;
+      });
+    };
 
     window.addEventListener("storage", handleStorage);
     window.addEventListener(NOTIFICATION_SYNC_EVENT, handleLocalSync);
+    window.addEventListener(REWARD_EVENT, handleRewardEvent);
 
     return () => {
       window.removeEventListener("storage", handleStorage);
       window.removeEventListener(NOTIFICATION_SYNC_EVENT, handleLocalSync);
+      window.removeEventListener(REWARD_EVENT, handleRewardEvent);
     };
   }, [userId]);
 
@@ -205,6 +254,17 @@ export function useUserNotifications(userId?: string) {
   const dismissNotification = useCallback(
     async (id: string) => {
       if (hiddenIds.includes(id)) return;
+
+      if (id.startsWith("reward:")) {
+        setLocalNotifications(prev => {
+          const next = prev.filter(n => n.id !== id);
+          if (userId) {
+            window.localStorage.setItem(getLocalNotificationsKey(userId), JSON.stringify(next));
+          }
+          return next;
+        });
+        return;
+      }
 
       persistHiddenIds([...hiddenIds, id]);
 
