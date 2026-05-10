@@ -8,7 +8,7 @@ export const AVATAR_FRAMES = {
     id: "admin",
     name: "Crimson Authority",
     description: "Admin red glow with cinematic edge lighting",
-    borderClass: "bg-gradient-to-br from-rose-500 via-red-500 to-red-700",
+    borderClass: "spark-border-admin",
     glowClass:
       "shadow-[0_0_22px_rgba(244,63,94,0.48),0_0_48px_rgba(220,38,38,0.28)]",
     shimmerClass: "spark-shimmer-red",
@@ -22,8 +22,7 @@ export const AVATAR_FRAMES = {
     id: "moderator",
     name: "Solar Sentinel",
     description: "Amber guard ring with soft glow sweep",
-    borderClass:
-      "bg-gradient-to-br from-amber-400 via-orange-500 to-orange-700",
+    borderClass: "spark-border-moderator",
     glowClass:
       "shadow-[0_0_20px_rgba(251,146,60,0.45),0_0_42px_rgba(245,158,11,0.24)]",
     shimmerClass: "spark-shimmer-amber",
@@ -37,7 +36,7 @@ export const AVATAR_FRAMES = {
     id: "premium",
     name: "Golden Luxe",
     description: "Gold premium shimmer with polished bloom",
-    borderClass: "bg-gradient-to-br from-amber-300 via-yellow-400 to-amber-600",
+    borderClass: "spark-border-premium",
     glowClass:
       "shadow-[0_0_24px_rgba(251,191,36,0.5),0_0_56px_rgba(245,158,11,0.32)]",
     shimmerClass: "spark-shimmer-gold",
@@ -51,7 +50,7 @@ export const AVATAR_FRAMES = {
     id: "top-contributor",
     name: "Rose Momentum",
     description: "Top contributor pink sparkle with soft drift",
-    borderClass: "bg-gradient-to-br from-pink-400 via-rose-500 to-fuchsia-600",
+    borderClass: "spark-border-contributor",
     glowClass:
       "shadow-[0_0_22px_rgba(244,114,182,0.46),0_0_44px_rgba(236,72,153,0.28)]",
     shimmerClass: "spark-shimmer-pink",
@@ -65,7 +64,7 @@ export const AVATAR_FRAMES = {
     id: "verified",
     name: "Cyan Crystal",
     description: "Verified crystal edge with cyan shimmer",
-    borderClass: "bg-gradient-to-br from-cyan-300 via-sky-400 to-blue-600",
+    borderClass: "spark-border-verified",
     glowClass:
       "shadow-[0_0_24px_rgba(34,211,238,0.46),0_0_52px_rgba(59,130,246,0.28)]",
     shimmerClass: "spark-shimmer-cyan",
@@ -79,8 +78,7 @@ export const AVATAR_FRAMES = {
     id: "vip-member",
     name: "Nebula Halo",
     description: "Purple nebula aura with holographic edge",
-    borderClass:
-      "bg-gradient-to-br from-violet-400 via-purple-500 to-indigo-700",
+    borderClass: "spark-border-vip",
     glowClass:
       "shadow-[0_0_26px_rgba(167,139,250,0.48),0_0_56px_rgba(99,102,241,0.3)]",
     shimmerClass: "spark-shimmer-violet",
@@ -94,7 +92,7 @@ export const AVATAR_FRAMES = {
     id: "ai-expert",
     name: "Holo Matrix",
     description: "Silver holographic edge with AI shimmer",
-    borderClass: "bg-gradient-to-br from-slate-300 via-cyan-300 to-slate-500",
+    borderClass: "spark-border-ai",
     glowClass:
       "shadow-[0_0_18px_rgba(148,163,184,0.45),0_0_44px_rgba(34,211,238,0.24)]",
     shimmerClass: "spark-shimmer-silver",
@@ -108,7 +106,7 @@ export const AVATAR_FRAMES = {
     id: "developer",
     name: "Blue Energy Ring",
     description: "Developer energy ring with dark neon outline",
-    borderClass: "bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-600",
+    borderClass: "spark-border-developer",
     glowClass:
       "shadow-[0_0_22px_rgba(56,189,248,0.45),0_0_50px_rgba(14,116,144,0.3)]",
     shimmerClass: "spark-shimmer-blue",
@@ -122,8 +120,7 @@ export const AVATAR_FRAMES = {
     id: "void-sovereign",
     name: "Void Sovereign",
     description: "Black-violet sovereign aura with deep space bloom",
-    borderClass:
-      "bg-gradient-to-br from-fuchsia-400 via-violet-600 to-slate-950",
+    borderClass: "spark-border-void",
     glowClass:
       "shadow-[0_0_30px_rgba(168,85,247,0.58),0_0_70px_rgba(15,23,42,0.42)]",
     shimmerClass: "spark-shimmer-violet",
@@ -137,8 +134,7 @@ export const AVATAR_FRAMES = {
     id: "inferno-core",
     name: "Inferno Core",
     description: "Molten red-orange ring with volcanic impact glow",
-    borderClass:
-      "bg-gradient-to-br from-yellow-300 via-orange-500 to-red-800",
+    borderClass: "spark-border-inferno",
     glowClass:
       "shadow-[0_0_30px_rgba(249,115,22,0.62),0_0_76px_rgba(185,28,28,0.36)]",
     shimmerClass: "spark-shimmer-red",
@@ -152,7 +148,7 @@ export const AVATAR_FRAMES = {
     id: "frost-monarch",
     name: "Frost Monarch",
     description: "Icy royal frame with silver-blue crystal bloom",
-    borderClass: "bg-gradient-to-br from-white via-cyan-200 to-blue-700",
+    borderClass: "spark-border-frost",
     glowClass:
       "shadow-[0_0_28px_rgba(125,211,252,0.62),0_0_68px_rgba(37,99,235,0.34)]",
     shimmerClass: "spark-shimmer-cyan",
@@ -166,7 +162,7 @@ export const AVATAR_FRAMES = {
     id: "thunder-pulse",
     name: "Thunder Pulse",
     description: "Electric yellow-cyan pulse with charged neon edge",
-    borderClass: "bg-gradient-to-br from-yellow-300 via-cyan-300 to-blue-700",
+    borderClass: "spark-border-thunder",
     glowClass:
       "shadow-[0_0_26px_rgba(250,204,21,0.52),0_0_62px_rgba(34,211,238,0.36)]",
     shimmerClass: "spark-shimmer-blue",
@@ -180,8 +176,7 @@ export const AVATAR_FRAMES = {
     id: "emerald-aegis",
     name: "Emerald Aegis",
     description: "Protective emerald ring with tactical shield glow",
-    borderClass:
-      "bg-gradient-to-br from-emerald-300 via-green-500 to-teal-800",
+    borderClass: "spark-border-emerald",
     glowClass:
       "shadow-[0_0_24px_rgba(16,185,129,0.5),0_0_56px_rgba(20,184,166,0.28)]",
     shimmerClass: "spark-shimmer-cyan",
@@ -195,8 +190,7 @@ export const AVATAR_FRAMES = {
     id: "arcane-rift",
     name: "Arcane Rift",
     description: "Magenta arcane edge with spellburst particles",
-    borderClass:
-      "bg-gradient-to-br from-pink-300 via-purple-500 to-indigo-800",
+    borderClass: "spark-border-arcane",
     glowClass:
       "shadow-[0_0_26px_rgba(217,70,239,0.5),0_0_58px_rgba(99,102,241,0.32)]",
     shimmerClass: "spark-shimmer-pink",
@@ -210,7 +204,7 @@ export const AVATAR_FRAMES = {
     id: "cyber-phantom",
     name: "Cyber Phantom",
     description: "Neon matrix frame with stealthy cyber glow",
-    borderClass: "bg-gradient-to-br from-lime-300 via-cyan-400 to-slate-900",
+    borderClass: "spark-border-cyber",
     glowClass:
       "shadow-[0_0_24px_rgba(132,204,22,0.46),0_0_58px_rgba(34,211,238,0.3)]",
     shimmerClass: "spark-shimmer-silver",
@@ -224,8 +218,7 @@ export const AVATAR_FRAMES = {
     id: "aurora-crown",
     name: "Aurora Crown",
     description: "Aurora gradient crown with premium polar shimmer",
-    borderClass:
-      "bg-gradient-to-br from-teal-200 via-fuchsia-300 to-indigo-700",
+    borderClass: "spark-border-aurora",
     glowClass:
       "shadow-[0_0_28px_rgba(45,212,191,0.48),0_0_64px_rgba(168,85,247,0.34)]",
     shimmerClass: "spark-shimmer-violet",
@@ -239,8 +232,7 @@ export const AVATAR_FRAMES = {
     id: "obsidian-eclipse",
     name: "Obsidian Eclipse",
     description: "Dark eclipse frame with razor gold highlights",
-    borderClass:
-      "bg-gradient-to-br from-zinc-950 via-stone-700 to-amber-400",
+    borderClass: "spark-border-obsidian",
     glowClass:
       "shadow-[0_0_24px_rgba(251,191,36,0.38),0_0_70px_rgba(24,24,27,0.55)]",
     shimmerClass: "spark-shimmer-gold",
@@ -254,8 +246,7 @@ export const AVATAR_FRAMES = {
     id: "quantum-orbit",
     name: "Quantum Orbit",
     description: "Scientific orbit halo with high-energy blue sweep",
-    borderClass:
-      "bg-gradient-to-br from-sky-300 via-blue-500 to-violet-800",
+    borderClass: "spark-border-quantum",
     glowClass:
       "shadow-[0_0_24px_rgba(59,130,246,0.5),0_0_58px_rgba(124,58,237,0.3)]",
     shimmerClass: "spark-shimmer-blue",
@@ -269,8 +260,7 @@ export const AVATAR_FRAMES = {
     id: "ruby-overdrive",
     name: "Ruby Overdrive",
     description: "Hyper red ruby frame with aggressive speed glow",
-    borderClass:
-      "bg-gradient-to-br from-red-300 via-rose-600 to-fuchsia-900",
+    borderClass: "spark-border-ruby",
     glowClass:
       "shadow-[0_0_26px_rgba(244,63,94,0.54),0_0_58px_rgba(190,24,93,0.34)]",
     shimmerClass: "spark-shimmer-red",
@@ -284,8 +274,7 @@ export const AVATAR_FRAMES = {
     id: "mythic-trophy",
     name: "Mythic Trophy",
     description: "Champion gold frame with victorious mythic shine",
-    borderClass:
-      "bg-gradient-to-br from-yellow-200 via-amber-400 to-orange-700",
+    borderClass: "spark-border-mythic",
     glowClass:
       "shadow-[0_0_30px_rgba(251,191,36,0.58),0_0_70px_rgba(234,88,12,0.35)]",
     shimmerClass: "spark-shimmer-gold",

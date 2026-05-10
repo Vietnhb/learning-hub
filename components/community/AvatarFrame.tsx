@@ -15,8 +15,8 @@ const sizeClasses = {
   xs: "h-6 w-6",
   sm: "h-8 w-8",
   md: "h-12 w-12",
-  lg: "h-20 w-20",
-  xl: "h-32 w-32",
+  lg: "h-24 w-24",
+  xl: "h-36 w-36",
 };
 
 export const AvatarFrame: React.FC<AvatarFrameProps> = ({
@@ -171,17 +171,15 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
         </div>
       )}
 
-      {/* Border container */}
+      {/* Border container – uses conic-gradient pseudo-element via spark-border-* class */}
       <div
         className={cn(
-          "relative z-20 rounded-full p-[2px] flex items-center justify-center overflow-hidden flex-shrink-0",
+          "relative z-20 flex items-center justify-center flex-shrink-0",
           sizeClass,
           frame.borderClass
         )}
       >
-        <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-white/45 via-white/10 to-transparent opacity-70" />
-
-        {/* Inner avatar container */}
+        {/* Inner avatar container – sits inside the padding created by the frame class */}
         <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
           {children}
         </div>

@@ -1279,3 +1279,429 @@
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
+
+/* ============================================================
+   @property – required for conic-gradient angle animation
+   ============================================================ */
+@property --sa { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@property --sb { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@property --sc { syntax: "<angle>"; initial-value: 360deg; inherits: false; }
+@property --sd { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@property --se { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@property --sf { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@property --sg { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+
+@keyframes ang-cw-3s  { to { --sa: 360deg; } }
+@keyframes ang-cw-5s  { to { --sb: 360deg; } }
+@keyframes ang-ccw-4s { to { --sc: -360deg; } }
+@keyframes ang-cw-2s  { to { --sd: 360deg; } }
+@keyframes ang-cw-7s  { to { --se: 360deg; } }
+@keyframes ang-cw-9s  { to { --sf: 360deg; } }
+@keyframes ang-cw-4s  { to { --sg: 360deg; } }
+
+/* ============================================================
+   ADMIN 👑  – Double crimson fire ring, fast & aggressive
+   ============================================================ */
+.spark-border-admin {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sa), #ff0000 0%, #ff4444 8%, transparent 18%, #cc0000 35%, #ff2222 45%, transparent 55%, #ff6666 72%, transparent 82%);
+  animation: ang-cw-3s 2s linear infinite;
+}
+.spark-border-admin::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(255,80,80,0.4) 15%, transparent 30%);
+  animation: ang-ccw-4s 3s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-admin > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   MODERATOR 🛡️ – Amber solar pulse, medium speed
+   ============================================================ */
+.spark-border-moderator {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--sb), #f59e0b 0%, #fbbf24 12%, transparent 28%, #d97706 50%, #fcd34d 62%, transparent 76%);
+  animation: ang-cw-5s 3.5s linear infinite;
+}
+.spark-border-moderator::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.5) 0%, transparent 60%);
+  animation: ang-cw-5s 3.5s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-moderator > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   PREMIUM 💎 – Triple gold shimmer, elegant slow sweep
+   ============================================================ */
+.spark-border-premium {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--se), #b8860b 0%, #ffd700 10%, #fffacd 18%, #ffd700 26%, transparent 40%, #daa520 65%, #ffe066 75%, transparent 88%);
+  animation: ang-cw-7s 4s linear infinite;
+}
+.spark-border-premium::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--se), transparent 0%, rgba(255,215,0,0.6) 20%, transparent 40%);
+  animation: ang-cw-7s 4s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-premium > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   TOP-CONTRIBUTOR 🔥 – Pink-fuchsia flame burst, pulsing
+   ============================================================ */
+.spark-border-contributor {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--sa), #ec4899 0%, #f472b6 10%, transparent 22%, #a21caf 42%, #e879f9 55%, transparent 68%, #be185d 85%, transparent 95%);
+  animation: ang-cw-3s 2.8s linear infinite;
+}
+.spark-border-contributor::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(236,72,153,0.45) 20%, transparent 38%);
+  animation: ang-ccw-4s 4s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-contributor > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   VERIFIED ✅ – Crystal cyan clean line, thin & sharp
+   ============================================================ */
+.spark-border-verified {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sb), #22d3ee 0%, #67e8f9 8%, transparent 22%, #0ea5e9 45%, #38bdf8 55%, transparent 72%);
+  animation: ang-cw-5s 5s linear infinite;
+}
+.spark-border-verified::before {
+  content:""; position:absolute; inset:-1px; border-radius:9999px;
+  background: conic-gradient(from var(--sb), transparent 0%, rgba(34,211,238,0.3) 15%, transparent 30%);
+  animation: ang-cw-5s 5s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-verified > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   VIP-MEMBER ⭐ – Nebula purple holo, dual counter-spin
+   ============================================================ */
+.spark-border-vip {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sa), #7c3aed 0%, #c084fc 10%, #4f46e5 25%, transparent 40%, #8b5cf6 60%, #a78bfa 70%, transparent 85%);
+  animation: ang-cw-3s 4s linear infinite;
+}
+.spark-border-vip::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(167,139,250,0.5) 18%, rgba(99,102,241,0.3) 35%, transparent 50%);
+  animation: ang-ccw-4s 5s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-vip > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   AI-EXPERT 🤖 – Holographic silver-cyan scanline, staggered
+   ============================================================ */
+.spark-border-ai {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sf),
+    #94a3b8 0%, #e2e8f0 6%, transparent 14%,
+    #22d3ee 30%, #67e8f9 36%, transparent 44%,
+    #94a3b8 60%, #e2e8f0 66%, transparent 74%,
+    #22d3ee 88%, transparent 96%);
+  animation: ang-cw-9s 6s linear infinite;
+}
+.spark-border-ai::after {
+  content:""; position:absolute; inset:0; border-radius:9999px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%, rgba(34,211,238,0.1) 100%);
+  animation: spark-holo-flicker 3s ease-in-out infinite;
+}
+.spark-border-ai > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   DEVELOPER 💻 – Neon blue matrix dash, medium-fast
+   ============================================================ */
+.spark-border-developer {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--sd), #0ea5e9 0%, #38bdf8 8%, transparent 20%, #0284c7 40%, #7dd3fc 50%, transparent 62%, #0369a1 80%, transparent 92%);
+  animation: ang-cw-2s 3s linear infinite;
+}
+.spark-border-developer::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sd), transparent 0%, rgba(14,165,233,0.5) 12%, transparent 24%);
+  animation: ang-cw-2s 3s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-developer > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   VOID-SOVEREIGN ✦ – Dark matter reverse orbit, deep & ominous
+   ============================================================ */
+.spark-border-void {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sc),
+    #0f0f1a 0%, #4c1d95 12%, #7c3aed 20%, #1e1b4b 32%,
+    #0f0f1a 45%, #6d28d9 58%, #c084fc 68%, #0f0f1a 80%);
+  animation: ang-ccw-4s 4.5s linear infinite;
+}
+.spark-border-void::before {
+  content:""; position:absolute; inset:-3px; border-radius:9999px;
+  background: conic-gradient(from var(--sa), transparent 0%, rgba(168,85,247,0.6) 15%, rgba(236,72,153,0.2) 28%, transparent 42%);
+  animation: ang-cw-3s 3s linear infinite;
+  filter: blur(5px);
+}
+.spark-border-void > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   INFERNO-CORE ◆ – Lava magma chaos, fast irregular
+   ============================================================ */
+.spark-border-inferno {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sd),
+    #7f1d1d 0%, #dc2626 8%, #f97316 16%, #fbbf24 22%,
+    #b91c1c 35%, #ea580c 48%, #fcd34d 55%, #991b1b 68%,
+    #f87171 80%, transparent 90%);
+  animation: ang-cw-2s 2.2s linear infinite;
+}
+.spark-border-inferno::before {
+  content:""; position:absolute; inset:-3px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(249,115,22,0.7) 12%, rgba(220,38,38,0.4) 25%, transparent 40%);
+  animation: ang-ccw-4s 3.5s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-inferno > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   FROST-MONARCH ❄ – Crystalline ice slow stop-motion
+   ============================================================ */
+@keyframes frost-step {
+  0%   { --sf: 0deg;   } 12%  { --sf: 45deg;  }
+  24%  { --sf: 45deg;  } 36%  { --sf: 120deg; }
+  48%  { --sf: 120deg; } 60%  { --sf: 200deg; }
+  72%  { --sf: 200deg; } 84%  { --sf: 300deg; }
+  100% { --sf: 360deg; }
+}
+.spark-border-frost {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--sf),
+    #ffffff 0%, #bae6fd 8%, #7dd3fc 16%, transparent 28%,
+    #e0f2fe 50%, #ffffff 58%, transparent 72%,
+    #93c5fd 88%, #ffffff 96%);
+  animation: frost-step 5s ease-in-out infinite;
+}
+.spark-border-frost::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sf), transparent 0%, rgba(186,230,253,0.6) 18%, rgba(147,197,253,0.3) 34%, transparent 50%);
+  animation: frost-step 5s ease-in-out infinite;
+  filter: blur(4px);
+}
+.spark-border-frost > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   THUNDER-PULSE ⚡ – Electric flicker, alternating yellow/cyan
+   ============================================================ */
+@keyframes thunder-flicker {
+  0%,100% { opacity:1; --sd: 0deg; }
+  8%       { opacity:0.4; }
+  9%       { opacity:1; }
+  50%      { --sd: 180deg; opacity:1; }
+  58%      { opacity:0.3; }
+  59%      { opacity:1; }
+}
+.spark-border-thunder {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sd),
+    #fde047 0%, #22d3ee 15%, #fbbf24 30%, transparent 42%,
+    #06b6d4 58%, #fcd34d 72%, transparent 85%);
+  animation: thunder-flicker 1.8s ease-in-out infinite;
+}
+.spark-border-thunder::before {
+  content:""; position:absolute; inset:-3px; border-radius:9999px;
+  background: conic-gradient(from var(--sd), transparent 0%, rgba(250,204,21,0.7) 10%, rgba(34,211,238,0.5) 22%, transparent 36%);
+  animation: thunder-flicker 1.8s ease-in-out infinite;
+  filter: blur(4px);
+}
+.spark-border-thunder > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   EMERALD-AEGIS ⬟ – Shield pulse, steady tactical green
+   ============================================================ */
+.spark-border-emerald {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--se),
+    #065f46 0%, #10b981 12%, #6ee7b7 20%, transparent 34%,
+    #047857 55%, #34d399 66%, transparent 80%);
+  animation: ang-cw-7s 4.5s linear infinite;
+}
+.spark-border-emerald::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--se), transparent 0%, rgba(16,185,129,0.5) 18%, rgba(20,184,166,0.3) 35%, transparent 50%);
+  animation: ang-cw-7s 4.5s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-emerald > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   ARCANE-RIFT ✧ – Spell burst, pink-indigo dual layer
+   ============================================================ */
+.spark-border-arcane {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sb),
+    #db2777 0%, #e879f9 12%, #4338ca 28%, transparent 40%,
+    #a21caf 55%, #818cf8 68%, transparent 80%);
+  animation: ang-cw-5s 3.8s linear infinite;
+}
+.spark-border-arcane::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(217,70,239,0.55) 16%, rgba(99,102,241,0.35) 32%, transparent 48%);
+  animation: ang-ccw-4s 5s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-arcane > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   CYBER-PHANTOM ▣ – Neon matrix scanline, green-cyan on black
+   ============================================================ */
+@keyframes cyber-scan {
+  0%   { --sg: 0deg;   opacity:1; }
+  45%  { --sg: 160deg; opacity:0.85; }
+  46%  { opacity:0.2; }
+  47%  { opacity:0.9; }
+  100% { --sg: 360deg; opacity:1; }
+}
+.spark-border-cyber {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sg),
+    #000000 0%, #84cc16 6%, #22d3ee 14%, #000000 22%,
+    #4ade80 38%, #000000 46%, #06b6d4 60%, #000000 70%,
+    #65a30d 84%, #000000 92%);
+  animation: cyber-scan 3.5s linear infinite;
+}
+.spark-border-cyber::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sg), transparent 0%, rgba(132,204,22,0.5) 10%, rgba(34,211,238,0.3) 20%, transparent 32%);
+  animation: cyber-scan 3.5s linear infinite;
+  filter: blur(3px);
+}
+.spark-border-cyber > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   AURORA-CROWN ★ – 3-color polar aurora drift, very slow
+   ============================================================ */
+.spark-border-aurora {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sf),
+    #2dd4bf 0%, #a78bfa 18%, #ec4899 34%, #6366f1 50%,
+    #14b8a6 66%, #c084fc 82%, #f472b6 100%);
+  animation: ang-cw-9s 7s linear infinite;
+}
+.spark-border-aurora::before {
+  content:""; position:absolute; inset:-3px; border-radius:9999px;
+  background: conic-gradient(from var(--sf), rgba(45,212,191,0.4) 0%, rgba(168,85,247,0.4) 33%, rgba(236,72,153,0.4) 66%, rgba(45,212,191,0.4) 100%);
+  animation: ang-cw-9s 7s linear infinite;
+  filter: blur(5px);
+}
+.spark-border-aurora > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   OBSIDIAN-ECLIPSE ◉ – Razor-thin gold on deep black
+   ============================================================ */
+@keyframes eclipse-reveal {
+  0%   { --sa: 270deg; }
+  40%  { --sa: 630deg; }
+  60%  { --sa: 630deg; }
+  100% { --sa: 990deg; }
+}
+.spark-border-obsidian {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sa),
+    #09090b 0%, #78716c 10%, #d97706 18%, #fbbf24 22%,
+    #09090b 28%, #44403c 65%, #b45309 75%, #09090b 82%);
+  animation: eclipse-reveal 5s ease-in-out infinite;
+}
+.spark-border-obsidian::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sa), transparent 15%, rgba(251,191,36,0.6) 21%, transparent 27%);
+  animation: eclipse-reveal 5s ease-in-out infinite;
+  filter: blur(5px);
+}
+.spark-border-obsidian > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   QUANTUM-ORBIT ◎ – Scientific dual orbit, sky-violet
+   ============================================================ */
+.spark-border-quantum {
+  position: relative; border-radius: 9999px; padding: 1.5px;
+  background: conic-gradient(from var(--sb),
+    #0ea5e9 0%, #818cf8 14%, #7c3aed 28%, transparent 40%,
+    #38bdf8 60%, #6366f1 74%, transparent 88%);
+  animation: ang-cw-5s 4s linear infinite;
+}
+.spark-border-quantum::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sc), transparent 0%, rgba(99,102,241,0.4) 18%, rgba(56,189,248,0.3) 34%, transparent 50%);
+  animation: ang-ccw-4s 6s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-quantum > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   RUBY-OVERDRIVE ◇ – Hyper speed red-to-pink slash
+   ============================================================ */
+.spark-border-ruby {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--sd),
+    #9f1239 0%, #f43f5e 10%, #fb7185 18%, transparent 28%,
+    #881337 45%, #e11d48 58%, #fda4af 66%, transparent 78%);
+  animation: ang-cw-2s 1.8s linear infinite;
+}
+.spark-border-ruby::before {
+  content:""; position:absolute; inset:-2px; border-radius:9999px;
+  background: conic-gradient(from var(--sd), transparent 0%, rgba(244,63,94,0.7) 12%, rgba(190,24,93,0.4) 24%, transparent 38%);
+  animation: ang-cw-2s 1.8s linear infinite;
+  filter: blur(4px);
+}
+.spark-border-ruby > div { border-radius: 9999px; overflow: hidden; }
+
+/* ============================================================
+   MYTHIC-TROPHY ▲ – Champion tricolor slow sweep
+   ============================================================ */
+.spark-border-mythic {
+  position: relative; border-radius: 9999px; padding: 2px;
+  background: conic-gradient(from var(--se),
+    #fef08a 0%, #fbbf24 10%, #f59e0b 20%, #d97706 30%,
+    #fef9c3 40%, #fbbf24 50%, #ea580c 62%,
+    #fcd34d 75%, #f97316 88%, #fef08a 100%);
+  animation: ang-cw-7s 5s linear infinite;
+}
+.spark-border-mythic::before {
+  content:""; position:absolute; inset:-3px; border-radius:9999px;
+  background: conic-gradient(from var(--se), rgba(251,191,36,0.5) 0%, rgba(234,88,12,0.4) 33%, rgba(251,191,36,0.5) 66%, rgba(234,88,12,0.4) 100%);
+  animation: ang-cw-7s 5s linear infinite;
+  filter: blur(5px);
+}
+.spark-border-mythic > div { border-radius: 9999px; overflow: hidden; }
+
+/* Shared: inner div must clip cleanly */
+.spark-border-admin > div,
+.spark-border-moderator > div,
+.spark-border-premium > div,
+.spark-border-contributor > div,
+.spark-border-verified > div,
+.spark-border-vip > div,
+.spark-border-ai > div,
+.spark-border-developer > div,
+.spark-border-void > div,
+.spark-border-inferno > div,
+.spark-border-frost > div,
+.spark-border-thunder > div,
+.spark-border-emerald > div,
+.spark-border-arcane > div,
+.spark-border-cyber > div,
+.spark-border-aurora > div,
+.spark-border-obsidian > div,
+.spark-border-quantum > div,
+.spark-border-ruby > div,
+.spark-border-mythic > div {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
