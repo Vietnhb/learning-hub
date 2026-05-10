@@ -235,51 +235,52 @@ export const AvatarFrameShop: React.FC<AvatarFrameShopProps> = ({
               </DialogHeader>
             </div>
 
-            <div className="relative mt-8 rounded-2xl border border-white/20 bg-white/14 p-6 backdrop-blur-md">
-              <p className="mb-4 text-xs font-semibold uppercase text-white/70">
+            <div className="relative mt-6 rounded-2xl border border-white/20 bg-white/14 p-5 backdrop-blur-md">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/60">
                 Preview
               </p>
               {selectedFrameData ? (
-                <div className="flex items-center gap-5">
-                  <div className="shrink-0 p-4">
-                    <UserAvatar
-                      userId={userId}
-                      avatarUrl={profilePreview.avatarUrl || undefined}
-                      userName={profilePreview.userName}
-                      frameId={selectedFrame}
-                      size="xl"
-                      animated={true}
-                      showFrameEffects={true}
-                      className="avatar-frame-shop-preview"
-                    />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-xl font-bold leading-tight">
+                <div className="flex flex-col items-center gap-4">
+                  {/* Avatar centered */}
+                  <UserAvatar
+                    userId={userId}
+                    avatarUrl={profilePreview.avatarUrl || undefined}
+                    userName={profilePreview.userName}
+                    frameId={selectedFrame}
+                    size="xl"
+                    animated={true}
+                    showFrameEffects={true}
+                    className="avatar-frame-shop-preview"
+                  />
+                  {/* Info below */}
+                  <div className="w-full text-center">
+                    <div className="text-lg font-bold leading-tight">
                       <Username
                         userId={userId}
                         name={profilePreview.userName}
                         frameId={selectedFrame}
-                        className="text-xl"
+                        className="text-lg"
                       />
                     </div>
-                    <p className="mt-1 text-sm font-semibold text-white/70">
+                    <p className="mt-1 text-sm font-semibold text-white/75">
                       {selectedFrameData.name}
                     </p>
-                    <p className="mt-2 line-clamp-3 text-sm leading-5 text-white/76">
+                    <p className="mt-1.5 text-xs leading-5 text-white/60">
                       {selectedFrameData.description}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <span className="rounded-full bg-white/18 px-3 py-1 text-xs font-semibold capitalize">
-                        {selectedFrameData.rarity}
+                    <div className="mt-3 flex flex-wrap justify-center gap-2">
+                      <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold capitalize">
+                        {selectedFrameData.icon} {selectedFrameData.rarity}
                       </span>
-                      <span className="rounded-full bg-white/18 px-3 py-1 text-xs font-semibold capitalize">
+                      <span className="rounded-full bg-white/14 px-3 py-1 text-xs font-semibold capitalize">
                         {selectedFrameData.theme}
                       </span>
                     </div>
                   </div>
                 </div>
               ) : (
-                <div className="rounded-xl border border-white/20 bg-white/10 p-5 text-sm text-white/76">
+                <div className="flex flex-col items-center gap-3 py-4 text-center text-sm text-white/60">
+                  <Sparkles className="h-8 w-8 opacity-40" />
                   Chọn một frame để xem trước.
                 </div>
               )}
