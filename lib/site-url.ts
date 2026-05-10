@@ -10,6 +10,11 @@ function normalizeUrl(rawUrl: string): string {
 }
 
 export function getSiteUrl(): string {
+  // Client-side: use window.location
+  if (typeof window !== "undefined") {
+    return normalizeUrl(window.location.origin);
+  }
+
   const explicitCandidates = [
     process.env.NEXT_PUBLIC_SITE_URL,
     process.env.SITE_URL,
