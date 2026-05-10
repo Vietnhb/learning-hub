@@ -3,6 +3,7 @@ import { FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { HubCard } from "../shared/HubCard";
+import { Username } from "@/components/community/Username";
 import { AnnouncementRow } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
 
@@ -44,8 +45,11 @@ export function AnnouncementBar({
                   "Mọi thông báo quan trọng của cộng đồng sẽ xuất hiện ở đây."}
               </p>
               <p className="mt-3 text-xs text-slate-400">
-                {announcement?.author_name || "Admin"} ·{" "}
-                {formatTimeAgo(announcement?.created_at)}
+                <Username
+                  userId={announcement?.created_by}
+                  name={announcement?.author_name || "Admin"}
+                />{" "}
+                · {formatTimeAgo(announcement?.created_at)}
               </p>
             </div>
           </div>

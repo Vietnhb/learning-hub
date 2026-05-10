@@ -1,6 +1,7 @@
 import { Bell, Flame, Zap, ShieldCheck, AtSign } from "lucide-react";
 import { RefObject, ReactNode } from "react";
 import { Avatar } from "../shared/Avatar";
+import { Username } from "@/components/community/Username";
 import { HubCard } from "../shared/HubCard";
 import { ActiveMember } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
@@ -109,7 +110,7 @@ export function RightSidebar({
               />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-sm font-medium">
-                  {member.name}
+                  <Username userId={member.userId} name={member.name} />
                 </div>
                 <div className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
                   {index === 0 ? (

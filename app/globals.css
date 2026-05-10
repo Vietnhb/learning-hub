@@ -597,142 +597,170 @@
   .spark-username-gradient-developer,
   .spark-username-gradient-vip,
   .spark-username-gradient-legendary {
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: spark-username-flow 3.8s linear infinite;
+    display: inline-block;
+    font-weight: 900; /* Extra bold */
+    letter-spacing: -0.02em;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 0 6px;
+    border-radius: 6px;
+    background: url('/effectBling.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* Cinematic Bloom */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+
+  .spark-username-gradient-admin:hover,
+  .spark-username-gradient-verified:hover,
+  .spark-username-gradient-premium:hover,
+  .spark-username-gradient-developer:hover,
+  .spark-username-gradient-vip:hover,
+  .spark-username-gradient-legendary:hover {
+    transform: scale(1.08) translateY(-1px);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
   }
 
   .spark-username-gradient-admin {
-    background-image: linear-gradient(
-      100deg,
-      #fb7185,
-      #f43f5e,
-      #ef4444,
-      #fb7185
-    );
+    color: #ff3333 !important;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.6), 0 0 20px rgba(255, 51, 51, 0.3);
   }
 
   .spark-username-gradient-verified {
-    background-image: linear-gradient(
-      100deg,
-      #67e8f9,
-      #22d3ee,
-      #60a5fa,
-      #67e8f9
-    );
+    color: #22d3ee !important;
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
   }
 
   .spark-username-gradient-premium {
-    background-image: linear-gradient(
-      100deg,
-      #fde047,
-      #fbbf24,
-      #fb923c,
-      #fde047
-    );
+    color: #fbbf24 !important;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5), 0 0 20px rgba(251, 191, 36, 0.2);
   }
 
   .spark-username-gradient-developer {
-    background-image: linear-gradient(
-      100deg,
-      #a78bfa,
-      #8b5cf6,
-      #6366f1,
-      #a78bfa
-    );
+    color: #8b5cf6 !important;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+
+  .spark-username-bling {
+    background: url('/effectBling.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .spark-username-gradient-vip {
-    background-image: linear-gradient(
-      100deg,
-      #c4b5fd,
-      #a78bfa,
-      #f472b6,
-      #c4b5fd
-    );
+    color: #e400ff !important;
+    text-shadow: 
+      0px 2px 7px hsl(302, 100%, 50%), 
+      0 0 20px rgba(228, 0, 255, 0.6),
+      0 0 35px rgba(228, 0, 255, 0.3);
   }
 
   .spark-username-gradient-legendary {
-    background-image: linear-gradient(
-      100deg,
-      #93c5fd,
-      #67e8f9,
-      #c4b5fd,
-      #fde047,
-      #93c5fd
+    color: #fff !important;
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.9), 
+      0 0 20px rgba(251, 191, 36, 0.8), 
+      0 0 35px rgba(251, 191, 36, 0.5),
+      0 0 50px rgba(251, 191, 36, 0.3);
+    /* Bling is inherited, adding the sweep layer on top */
+    background-image: url('/effectBling.gif'), linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
     );
+    background-size: cover, 200% 100%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    animation: spark-username-sweep 2.5s ease-in-out infinite;
+  }
+
+  /* Animations updated for new username logic */
+  @keyframes spark-username-sweep {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 
   .spark-username-glow-admin {
-    filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.48));
+    filter: drop-shadow(0 0 10px rgba(244, 63, 94, 0.5));
   }
 
   .spark-username-glow-verified {
-    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.46));
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.4));
   }
 
   .spark-username-glow-premium {
-    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
   }
 
   .spark-username-glow-developer {
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.45));
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.45));
   }
 
   .spark-username-glow-vip {
-    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.45));
+    filter: drop-shadow(0 0 12px rgba(217, 70, 239, 0.45));
   }
 
   .spark-username-glow-legendary {
-    filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.48));
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.6))
+      drop-shadow(0 0 25px rgba(251, 191, 36, 0.2));
   }
 
-  .spark-username-shimmer {
+  /* Shimmer effect integrated into gradients above */
+
+  .spark-username-legendary-aura {
     position: relative;
-    isolation: isolate;
   }
 
-  .spark-username-shimmer::after {
+  .spark-username-legendary-aura::before {
     content: "";
     position: absolute;
-    inset: -2px;
-    background: linear-gradient(
-      110deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.65) 47%,
-      transparent 64%
+    inset: -2px -4px;
+    background: radial-gradient(
+      circle at center,
+      rgba(251, 191, 36, 0.15) 0%,
+      transparent 70%
     );
-    transform: translateX(-115%);
-    animation: shimmer-text 3.2s ease-in-out infinite;
-    filter: blur(5px);
-    mix-blend-mode: screen;
-    pointer-events: none;
+    filter: blur(4px);
+    animation: spark-frame-pulse 2s ease-in-out infinite;
+    z-index: -1;
   }
 
-  .spark-username-hover-admin {
-    filter: drop-shadow(0 0 12px rgba(244, 63, 94, 0.66));
+  .spark-username-hover-admin:hover {
+    filter: drop-shadow(0 0 15px rgba(244, 63, 94, 0.8));
+    transition: filter 0.3s ease;
   }
 
-  .spark-username-hover-verified {
-    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.66));
+  .spark-username-hover-verified:hover {
+    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.7));
+    transition: filter 0.3s ease;
   }
 
-  .spark-username-hover-premium {
-    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.7));
+  .spark-username-hover-premium:hover {
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.8));
+    transition: filter 0.3s ease;
   }
 
-  .spark-username-hover-developer {
-    filter: drop-shadow(0 0 12px rgba(129, 140, 248, 0.68));
+  .spark-username-hover-developer:hover {
+    filter: drop-shadow(0 0 15px rgba(129, 140, 248, 0.8));
+    transition: filter 0.3s ease;
   }
 
-  .spark-username-hover-vip {
-    filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.7));
+  .spark-username-hover-vip:hover {
+    filter: drop-shadow(0 0 18px rgba(217, 70, 239, 0.8));
+    transition: filter 0.3s ease;
   }
 
-  .spark-username-hover-legendary {
-    filter: drop-shadow(0 0 14px rgba(253, 224, 71, 0.66));
+  .spark-username-hover-legendary:hover {
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 1));
+    transform: scale(1.02);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .spark-nameplate-admin,
@@ -893,5 +921,87 @@
   .spark-float-y-slow {
     animation: spark-float-y 3.4s ease-in-out infinite;
     animation-delay: 0.8s;
+  }
+
+  @keyframes spark-username-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes shimmer-text {
+    0% {
+      transform: translateX(-150%);
+    }
+    50% {
+      transform: translateX(150%);
+    }
+    100% {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes spark-frame-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes spark-frame-bloom {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.1) rotate(180deg);
+    }
+  }
+
+  @keyframes spark-frame-sweep {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes steam {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 400% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .spark-animate-steam {
+    animation: steam 15s linear infinite;
+    background-size: 400%;
+  }
+  @keyframes spark-username-sweep {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 }

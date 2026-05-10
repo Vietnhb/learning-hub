@@ -2,6 +2,7 @@
 
 import React from "react";
 import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
+import { cn } from "@/lib/utils";
 
 interface AvatarFrameProps {
   frameId?: AvatarFrameId;
@@ -49,61 +50,94 @@ export const AvatarFrame: React.FC<AvatarFrameProps> = ({
     );
   }
 
+  const isLegendary = frame.rarity === "legendary";
+
+  const insetMap = {
+    sm: "-inset-[1px]",
+    md: "-inset-[2px]",
+    lg: "-inset-[3.5px]",
+    xl: "-inset-[5px]",
+  };
+
   return (
     <div className="relative inline-block spark-frame-root">
       {/* Aura layer */}
       <div
-        className={`absolute -inset-1 rounded-full ${frame.glowClass} ${animated ? "spark-frame-pulse" : ""}`}
+        className={cn(
+          "absolute rounded-full",
+          insetMap[size],
+          frame.glowClass,
+          animated ? "spark-frame-pulse" : ""
+        )}
       />
 
       {/* Cinematic bloom ring */}
-      {animated ? (
-        <div className="pointer-events-none absolute -inset-[7px] rounded-full spark-frame-bloom" />
-      ) : null}
+      {animated && (
+        <div 
+          className={cn(
+            "pointer-events-none absolute rounded-full spark-frame-bloom opacity-50",
+            size === "sm" ? "-inset-[3px]" : "-inset-[7px]"
+          )} 
+        />
+      )}
 
       {/* Edge shimmer sweep */}
       <div
-        className={`pointer-events-none absolute -inset-[3px] rounded-full ${frame.shimmerClass ?? "spark-shimmer-cyan"} ${animated ? "spark-frame-sweep" : ""}`}
+        className={cn(
+          "pointer-events-none absolute rounded-full",
+          insetMap[size],
+          frame.shimmerClass ?? "spark-shimmer-cyan",
+          animated ? "spark-frame-sweep" : ""
+        )}
       />
 
       {/* Counter sweep for richer motion */}
-      {animated ? (
+      {animated && (
         <div
-          className={`pointer-events-none absolute -inset-[2px] rounded-full ${frame.shimmerClass ?? "spark-shimmer-cyan"} spark-frame-sweep-reverse opacity-70`}
+          className={cn(
+            "pointer-events-none absolute rounded-full opacity-60",
+            insetMap[size],
+            frame.shimmerClass ?? "spark-shimmer-cyan",
+            "spark-frame-sweep-reverse"
+          )}
         />
-      ) : null}
+      )}
 
       {/* Outer rotating light ring */}
-      {animated ? (
-        <div className="pointer-events-none absolute -inset-[5px] rounded-full spark-frame-orbit-ring" />
-      ) : null}
+      {animated && (
+        <div 
+          className={cn(
+            "pointer-events-none absolute rounded-full spark-frame-orbit-ring opacity-40",
+            size === "sm" ? "-inset-[2px]" : "-inset-[5px]"
+          )} 
+        />
+      )}
 
       {/* Floating particles */}
-      {animated ? (
+      {animated && (
         <>
           <span
-            className={`pointer-events-none absolute -top-1 left-1/4 h-1.5 w-1.5 rounded-full ${frame.particleClass ?? "spark-particles-cyan"} spark-frame-particle-a`}
+            className={cn(
+              "pointer-events-none absolute -top-1 left-1/4 h-1.5 w-1.5 rounded-full spark-frame-particle-a",
+              frame.particleClass ?? "spark-particles-cyan"
+            )}
           />
           <span
-            className={`pointer-events-none absolute bottom-0 right-2 h-1 w-1 rounded-full ${frame.particleClass ?? "spark-particles-cyan"} spark-frame-particle-b`}
-          />
-          <span
-            className={`pointer-events-none absolute top-1/3 -right-1 h-1.5 w-1.5 rounded-full ${frame.particleClass ?? "spark-particles-cyan"} spark-frame-particle-c`}
-          />
-          <span
-            className={`pointer-events-none absolute top-1 left-1 h-1 w-1 rounded-full ${frame.particleClass ?? "spark-particles-cyan"} spark-frame-particle-d`}
-          />
-          <span
-            className={`pointer-events-none absolute bottom-1 left-1/3 h-1 w-1 rounded-full ${frame.particleClass ?? "spark-particles-cyan"} spark-frame-particle-e`}
+            className={cn(
+              "pointer-events-none absolute bottom-0 right-2 h-1 w-1 rounded-full spark-frame-particle-b",
+              frame.particleClass ?? "spark-particles-cyan"
+            )}
           />
         </>
-      ) : null}
+      )}
 
       {/* Border container */}
       <div
-        className={`relative ${sizeClass} rounded-full p-[2px] flex items-center justify-center overflow-hidden flex-shrink-0 ${
+        className={cn(
+          "relative rounded-full p-[2px] flex items-center justify-center overflow-hidden flex-shrink-0",
+          sizeClass,
           frame.borderClass
-        }`}
+        )}
       >
         <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-white/45 via-white/10 to-transparent opacity-70" />
 

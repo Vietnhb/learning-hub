@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar } from "../shared/Avatar";
+import { Username } from "@/components/community/Username";
 import { ActionButton } from "../shared/ActionButton";
 import { FeedPost } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
@@ -56,8 +57,12 @@ export function PostCard({
         />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-950 dark:text-white">
-              {post.username || "Learning Hub member"}
+            <h3 className="text-slate-950 dark:text-white">
+              <Username
+                userId={post.user_id}
+                name={post.username || "Learning Hub member"}
+                className="text-base"
+              />
             </h3>
             <span className="text-sm text-slate-400">·</span>
             <span className="text-sm text-slate-500 dark:text-slate-400">
@@ -85,9 +90,11 @@ export function PostCard({
                 <div key={comment.id} className="flex gap-2 text-sm">
                   <Avatar name={comment.username || "Member"} size="xs" />
                   <div className="min-w-0">
-                    <span className="font-medium text-slate-900 dark:text-white">
-                      {comment.username || "Member"}
-                    </span>{" "}
+                    <Username
+                      userId={comment.user_id}
+                      name={comment.username || "Member"}
+                      className="text-sm"
+                    />{" "}
                     <span className="text-slate-600 dark:text-slate-300">
                       {comment.content}
                     </span>
@@ -135,9 +142,11 @@ export function PostCard({
                 <div key={comment.id} className="flex gap-3">
                   <Avatar name={comment.username || "Member"} size="sm" />
                   <div className="rounded-2xl bg-white px-4 py-2 text-sm shadow-sm dark:bg-white/10">
-                    <div className="font-medium text-slate-900 dark:text-white">
-                      {comment.username || "Member"}
-                    </div>
+                    <Username
+                      userId={comment.user_id}
+                      name={comment.username || "Member"}
+                      className="text-sm mb-0.5 block"
+                    />
                     <p className="text-slate-600 dark:text-slate-200">
                       {comment.content}
                     </p>

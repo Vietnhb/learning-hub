@@ -1,6 +1,7 @@
 import { Loader2, Send } from "lucide-react";
 import { FormEvent, RefObject } from "react";
 import { Avatar } from "../shared/Avatar";
+import { Username } from "@/components/community/Username";
 import { HubCard } from "../shared/HubCard";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -94,9 +95,11 @@ export function RealtimeChat({
                 <div className={`min-w-0 flex-1 ${isMe ? "text-right" : ""}`}>
                   {!grouped ? (
                     <div className={`mb-1 flex flex-wrap items-center gap-2 ${isMe ? "justify-end" : ""}`}>
-                      <span className="font-medium text-slate-950 dark:text-white">
-                        {message.username || "Learning Hub member"}
-                      </span>
+                      <Username
+                        userId={message.user_id}
+                        name={message.username || "Learning Hub member"}
+                        className="text-sm"
+                      />
                       <span className="text-xs text-slate-400">
                         {formatTimeAgo(message.created_at)}
                       </span>

@@ -10,7 +10,7 @@ export function Avatar({
   size = "md",
   online = false,
   userId,
-  showFrameEffects = false,
+  showFrameEffects = true,
 }: {
   name: string;
   src?: string | null;

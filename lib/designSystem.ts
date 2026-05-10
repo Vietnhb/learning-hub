@@ -47,7 +47,7 @@ export const AVATAR_FRAMES = {
     rarity: "rare",
     theme: "warm",
   },
-  topContributor: {
+  "top-contributor": {
     id: "top-contributor",
     name: "Rose Momentum",
     description: "Top contributor pink sparkle with soft drift",
@@ -75,7 +75,7 @@ export const AVATAR_FRAMES = {
     rarity: "uncommon",
     theme: "cool",
   },
-  vipMember: {
+  "vip-member": {
     id: "vip-member",
     name: "Nebula Halo",
     description: "Purple nebula aura with holographic edge",
@@ -90,7 +90,7 @@ export const AVATAR_FRAMES = {
     rarity: "epic",
     theme: "cool",
   },
-  aiExpert: {
+  "ai-expert": {
     id: "ai-expert",
     name: "Holo Matrix",
     description: "Silver holographic edge with AI shimmer",
@@ -233,7 +233,8 @@ export const USERNAME_STYLES = {
     nameClass: "spark-username-gradient-legendary",
     glowClass: "spark-username-glow-legendary",
     shimmerClass: "spark-username-shimmer",
-    hoverEffect: "hover:spark-username-hover-legendary",
+    auraClass: "spark-username-legendary-aura",
+    hoverEffect: "spark-username-hover-legendary",
     nameplateClass: "spark-nameplate-legendary",
   },
 } as const;
@@ -295,3 +296,25 @@ export const getFrameById = (id: AvatarFrameId) => AVATAR_FRAMES[id];
 
 // Helper function to get role badge
 export const getRoleBadgeById = (id: RoleBadgeId) => ROLE_BADGES[id];
+
+/**
+ * Maps Avatar Frame to Username Style
+ */
+export const getUsernameStyleByFrame = (frameId?: string | null) => {
+  if (!frameId) return null;
+
+  // Direct mappings
+  if (frameId === "admin") return USERNAME_STYLES.admin;
+  if (frameId === "developer") return USERNAME_STYLES.developer;
+  if (frameId === "premium") return USERNAME_STYLES.premium;
+  if (frameId === "verified") return USERNAME_STYLES.verified;
+  if (frameId === "vip-member") return USERNAME_STYLES.vip;
+
+  // Rarity based mappings for others
+  const frame = AVATAR_FRAMES[frameId as AvatarFrameId];
+  if (frame?.rarity === ("legendary" as any)) return USERNAME_STYLES.legendary;
+  if (frame?.rarity === ("epic" as any)) return USERNAME_STYLES.vip;
+  if (frame?.rarity === ("rare" as any)) return USERNAME_STYLES.premium;
+
+  return null;
+};

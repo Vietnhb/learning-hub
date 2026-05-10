@@ -38,6 +38,7 @@ export type AnnouncementRow = {
   title?: string | null;
   content?: string | null;
   author_name?: string | null;
+  created_by?: string | null;
   created_at?: string | null;
 };
 

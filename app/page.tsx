@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Username } from "@/components/community/Username";
 import {
   Card,
   CardContent,
@@ -214,7 +215,16 @@ export default function Home() {
                 aria-hidden="true"
                 className="h-9 w-9 rounded-md bg-white object-contain p-1 shadow-sm"
               />
-              {displayName && <span>Chúc bạn học tốt {displayName}</span>}
+              {displayName && (
+                <span>
+                  Chúc bạn học tốt{" "}
+                  <Username
+                    userId={user?.id}
+                    name={displayName}
+                    className="font-bold text-blue-50"
+                  />
+                </span>
+              )}
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-normal text-white sm:text-6xl lg:text-[4.5rem]">

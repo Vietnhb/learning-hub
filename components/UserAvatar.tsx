@@ -116,7 +116,7 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
   }, [premiumBorderUnlocked]);
 
   // Determine if should show shimmer effect
-  const showShimmer = showFrameEffects && isPremium && frameId;
+  const showShimmer = showFrameEffects && !!frameId;
 
   // Base avatar content
   const avatarContent = avatarUrl ? (
