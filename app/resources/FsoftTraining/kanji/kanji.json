@@ -3868,6 +3868,99 @@
           ]
         }
       ]
+    },
+    {
+      "id": 27,
+      "title": "Niệm - Lệ - Khấp - Tàn",
+      "kanji": [
+        {
+          "character": "念",
+          "meaning": "Niệm",
+          "onyomi": "ネン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "残念",
+              "reading": "ざんねん",
+              "meaning": "Đáng tiếc"
+            },
+            {
+              "word": "記念日",
+              "reading": "きねんび",
+              "meaning": "Ngày kỷ niệm"
+            },
+            {
+              "word": "念願",
+              "reading": "ねんがん",
+              "meaning": "Tâm nguyện"
+            }
+          ]
+        },
+        {
+          "character": "涙",
+          "meaning": "Lệ",
+          "onyomi": "ルイ",
+          "kunyomi": "なみだ",
+          "examples": [
+            {
+              "word": "感涙",
+              "reading": "かんるい",
+              "meaning": "Rơi lệ cảm động"
+            },
+            {
+              "word": "涙腺",
+              "reading": "るいせん",
+              "meaning": "Tuyến lệ"
+            },
+            {
+              "word": "すずめの涙",
+              "reading": "すずめのなみだ",
+              "meaning": "Ít ỏi như nước mắt chim sẻ"
+            }
+          ]
+        },
+        {
+          "character": "泣",
+          "meaning": "Khấp",
+          "onyomi": "キュウ",
+          "kunyomi": "な-く",
+          "examples": [
+            {
+              "word": "泣く",
+              "reading": "なく",
+              "meaning": "Khóc"
+            }
+          ]
+        },
+        {
+          "character": "残",
+          "meaning": "Tàn",
+          "onyomi": "ザン",
+          "kunyomi": "のこ-る",
+          "examples": [
+            {
+              "word": "残念",
+              "reading": "ざんねん",
+              "meaning": "Đáng tiếc"
+            },
+            {
+              "word": "残る",
+              "reading": "のこる",
+              "meaning": "Còn lại"
+            },
+            {
+              "word": "残業",
+              "reading": "ざんぎょう",
+              "meaning": "Làm thêm giờ"
+            },
+            {
+              "word": "残り物",
+              "reading": "のこりもの",
+              "meaning": "Đồ còn dư"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
