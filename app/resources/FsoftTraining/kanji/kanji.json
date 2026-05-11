@@ -3959,6 +3959,325 @@
               "meaning": "Đồ còn dư"
             }
           ]
+        },
+        {
+          "id": 28,
+          "title": "Kết - Hôn - Giới - Thiệu",
+          "kanji": [
+            {
+              "character": "結",
+              "meaning": "Kết",
+              "onyomi": "ケツ",
+              "kunyomi": "むす-ぶ",
+              "examples": [
+                {
+                  "word": "結ぶ",
+                  "reading": "むすぶ",
+                  "meaning": "Buộc, kết nối"
+                },
+                {
+                  "word": "結う",
+                  "reading": "ゆう",
+                  "meaning": "Buộc tóc"
+                },
+                {
+                  "word": "結果",
+                  "reading": "けっか",
+                  "meaning": "Kết quả"
+                },
+                {
+                  "word": "結論",
+                  "reading": "けつろん",
+                  "meaning": "Kết luận"
+                },
+                {
+                  "word": "結婚",
+                  "reading": "けっこん",
+                  "meaning": "Kết hôn"
+                }
+              ]
+            },
+            {
+              "character": "婚",
+              "meaning": "Hôn",
+              "onyomi": "コン",
+              "kunyomi": "",
+              "examples": [
+                {
+                  "word": "結婚",
+                  "reading": "けっこん",
+                  "meaning": "Kết hôn"
+                },
+                {
+                  "word": "婚姻届",
+                  "reading": "こんいんとどけ",
+                  "meaning": "Giấy đăng ký kết hôn"
+                }
+              ]
+            },
+            {
+              "character": "介",
+              "meaning": "Giới",
+              "onyomi": "カイ",
+              "kunyomi": "",
+              "examples": [
+                {
+                  "word": "仲介料",
+                  "reading": "ちゅうかいりょう",
+                  "meaning": "Phí môi giới"
+                },
+                {
+                  "word": "魚介類",
+                  "reading": "ぎょかいるい",
+                  "meaning": "Hải sản"
+                }
+              ]
+            },
+            {
+              "character": "紹",
+              "meaning": "Thiệu",
+              "onyomi": "ショウ",
+              "kunyomi": "",
+              "examples": [
+                {
+                  "word": "自己紹介",
+                  "reading": "じこしょうかい",
+                  "meaning": "Tự giới thiệu"
+                },
+                {
+                  "word": "人材紹介",
+                  "reading": "じんざいしょうかい",
+                  "meaning": "Giới thiệu nhân sự"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "title": "Ước - Thúc - Tất - Thủ",
+          "kanji": [
+            {
+              "character": "約",
+              "meaning": "Ước",
+              "onyomi": "ヤク",
+              "kunyomi": "",
+              "examples": [
+                {
+                  "word": "予約",
+                  "reading": "よやく",
+                  "meaning": "Đặt trước"
+                },
+                {
+                  "word": "婚約",
+                  "reading": "こんやく",
+                  "meaning": "Đính hôn"
+                },
+                {
+                  "word": "約束",
+                  "reading": "やくそく",
+                  "meaning": "Lời hứa"
+                }
+              ]
+            },
+            {
+              "character": "束",
+              "meaning": "Thúc",
+              "onyomi": "ソク",
+              "kunyomi": "たば",
+              "examples": [
+                {
+                  "word": "約束",
+                  "reading": "やくそく",
+                  "meaning": "Lời hứa"
+                },
+                {
+                  "word": "束",
+                  "reading": "たば",
+                  "meaning": "Bó, chùm"
+                },
+                {
+                  "word": "花束",
+                  "reading": "はなたば",
+                  "meaning": "Bó hoa"
+                },
+                {
+                  "word": "光束",
+                  "reading": "こうそく",
+                  "meaning": "Chùm sáng"
+                }
+              ]
+            },
+            {
+              "character": "必",
+              "meaning": "Tất",
+              "onyomi": "ヒツ",
+              "kunyomi": "かなら-ず",
+              "examples": [
+                {
+                  "word": "必ず",
+                  "reading": "かならず",
+                  "meaning": "Nhất định"
+                },
+                {
+                  "word": "必勝",
+                  "reading": "ひっしょう",
+                  "meaning": "Chắc thắng"
+                },
+                {
+                  "word": "必死",
+                  "reading": "ひっし",
+                  "meaning": "Liều mạng"
+                }
+              ]
+            },
+            {
+              "character": "守",
+              "meaning": "Thủ",
+              "onyomi": "シュ",
+              "kunyomi": "まも-る",
+              "examples": [
+                {
+                  "word": "守る",
+                  "reading": "まもる",
+                  "meaning": "Bảo vệ, tuân thủ"
+                },
+                {
+                  "word": "お守り",
+                  "reading": "おまもり",
+                  "meaning": "Bùa hộ mệnh"
+                },
+                {
+                  "word": "子守歌",
+                  "reading": "こもりうた",
+                  "meaning": "Bài hát ru"
+                },
+                {
+                  "word": "留守",
+                  "reading": "るす",
+                  "meaning": "Vắng nhà"
+                },
+                {
+                  "word": "守備",
+                  "reading": "しゅび",
+                  "meaning": "Phòng thủ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "title": "Vĩnh - Nguyện - Hạnh - Phúc",
+          "kanji": [
+            {
+              "character": "永",
+              "meaning": "Vĩnh",
+              "onyomi": "エイ",
+              "kunyomi": "なが-い",
+              "examples": [
+                {
+                  "word": "末永い",
+                  "reading": "すえながい",
+                  "meaning": "Lâu dài mãi mãi"
+                },
+                {
+                  "word": "永遠",
+                  "reading": "えいえん",
+                  "meaning": "Vĩnh viễn"
+                },
+                {
+                  "word": "永住",
+                  "reading": "えいじゅう",
+                  "meaning": "Định cư lâu dài"
+                }
+              ]
+            },
+            {
+              "character": "願",
+              "meaning": "Nguyện",
+              "onyomi": "ガン",
+              "kunyomi": "ねが-う",
+              "examples": [
+                {
+                  "word": "願う",
+                  "reading": "ねがう",
+                  "meaning": "Cầu nguyện, mong muốn"
+                },
+                {
+                  "word": "お願い",
+                  "reading": "おねがい",
+                  "meaning": "Nhờ vả, yêu cầu"
+                },
+                {
+                  "word": "願書",
+                  "reading": "がんしょ",
+                  "meaning": "Đơn xin"
+                },
+                {
+                  "word": "念願",
+                  "reading": "ねんがん",
+                  "meaning": "Tâm nguyện"
+                }
+              ]
+            },
+            {
+              "character": "幸",
+              "meaning": "Hạnh",
+              "onyomi": "コウ",
+              "kunyomi": "さいわ-い",
+              "examples": [
+                {
+                  "word": "幸せ",
+                  "reading": "しあわせ",
+                  "meaning": "Hạnh phúc"
+                },
+                {
+                  "word": "幸い",
+                  "reading": "さいわい",
+                  "meaning": "May mắn"
+                },
+                {
+                  "word": "幸多かれ",
+                  "reading": "さちおおかれ",
+                  "meaning": "Chúc nhiều may mắn"
+                },
+                {
+                  "word": "幸運",
+                  "reading": "こううん",
+                  "meaning": "May mắn"
+                },
+                {
+                  "word": "幸福",
+                  "reading": "こうふく",
+                  "meaning": "Hạnh phúc"
+                }
+              ]
+            },
+            {
+              "character": "福",
+              "meaning": "Phúc",
+              "onyomi": "フク",
+              "kunyomi": "",
+              "examples": [
+                {
+                  "word": "幸福",
+                  "reading": "こうふく",
+                  "meaning": "Hạnh phúc"
+                },
+                {
+                  "word": "福祉",
+                  "reading": "ふくし",
+                  "meaning": "Phúc lợi"
+                },
+                {
+                  "word": "福島",
+                  "reading": "ふくしま",
+                  "meaning": "Fukushima"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
