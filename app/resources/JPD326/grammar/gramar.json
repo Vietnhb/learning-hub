@@ -64,6 +64,25 @@
               "vi": "Cô ấy dè dặt nói: “Chỗ này có ai ngồi không?”"
             }
           ]
+        },
+        {
+          "id": "4",
+          "pattern": "～に比べ（て）",
+          "usage": "N／Vる＋に比べ（て）",
+          "meaning": "“so với”, dùng trong mẫu câu so sánh.",
+          "description": "Dùng để so sánh sự khác biệt giữa hai đối tượng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "北海道に比べて沖縄では１年の平均気温が１５度も高い年があります。",
+              "vi": "So với Hokkaido thì ở Okinawa có năm nhiệt độ trung bình trong một năm cao hơn đến 15 độ."
+            },
+            {
+              "index": 2,
+              "jp": "今年の夏は例年に比べ、暑くなるでしょう。",
+              "vi": "Mùa hè năm nay có lẽ sẽ nóng hơn so với mọi năm."
+            }
+          ]
         }
       ]
     }
