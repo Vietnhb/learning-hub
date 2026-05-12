@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { AlertCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { getSafeRedirectPath } from "@/lib/auth-config";
+import { handleOAuthError, logAuthError } from "@/lib/errorHandler";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -39,7 +40,13 @@ function OAuthCallbackContent() {
           getHashAuthError();
 
         if (redirectError) {
-          throw new Error(redirectError);
+          logAuthError("OAuth Redirect Error", redirectError);
+          const { message, redirectUrl } = handleOAuthError(redirectError);
+          setError(message);
+          if (redirectUrl) {
+            router.replace(redirectUrl);
+          }
+          return;
         }
 
         const code = searchParams.get("code");
@@ -51,14 +58,23 @@ function OAuthCallbackContent() {
           const { data, error: exchangeError } =
             await supabase.auth.exchangeCodeForSession(code);
 
-          if (exchangeError) throw exchangeError;
+          if (exchangeError) {
+            logAuthError("Code Exchange Error", exchangeError);
+            const { message, redirectUrl } = handleOAuthError(exchangeError);
+            setError(message);
+            if (redirectUrl) {
+              router.replace(redirectUrl);
+            }
+            return;
+          }
           session = data.session;
         }
 
         if (!session?.user) {
-          throw new Error(
-            "Không thể tạo phiên đăng nhập Google. Vui lòng thử lại.",
-          );
+          const errorMsg = "Session not created";
+          logAuthError("No Session", errorMsg);
+          setError("Không thể tạo phiên đăng nhập. Vui lòng thử lại.");
+          return;
         }
 
         const { data: userProfile, error: profileError } = await supabase
@@ -67,11 +83,21 @@ function OAuthCallbackContent() {
           .eq("id", session.user.id)
           .maybeSingle();
 
-        if (profileError) throw profileError;
+        if (profileError) {
+          logAuthError("Profile Fetch Error", profileError);
+          const { message } = handleOAuthError(profileError);
+          setError(message);
+          return;
+        }
 
         if (userProfile?.is_banned) {
+          logAuthError("User Banned", { userId: session.user.id });
           await supabase.auth.signOut();
-          router.replace("/auth/login?error=banned");
+          const { message, redirectUrl } = handleOAuthError(null, "banned");
+          setError(message);
+          if (redirectUrl) {
+            router.replace(redirectUrl);
+          }
           return;
         }
 
@@ -91,9 +117,12 @@ function OAuthCallbackContent() {
         router.refresh();
       } catch (err: any) {
         if (!mounted) return;
-        setError(
-          err.message || "Không thể hoàn tất đăng nhập với Google.",
-        );
+        logAuthError("OAuth SignIn Exception", err);
+        const { message, redirectUrl } = handleOAuthError(err);
+        setError(message);
+        if (redirectUrl) {
+          router.replace(redirectUrl);
+        }
       }
     };
 

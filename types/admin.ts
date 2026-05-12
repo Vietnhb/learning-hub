@@ -73,15 +73,6 @@ export interface UserWithRole {
   created_at: string;
 }
 
-// Admin Dashboard Stats
-export interface AdminStats {
-  totalUsers: number;
-  totalFeedback: number;
-  pendingFeedback: number;
-  activeConversations: number;
-  unreadMessages: number;
-}
-
 // Conversation with latest message and user info
 export interface ConversationWithDetails extends Conversation {
   user: {

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { validatePassword } from "@/lib/validation";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
@@ -82,7 +83,7 @@ export default function ResetPasswordPage() {
         router.push("/auth/login");
       }, 3000);
     } catch (err: any) {
-      setError(err.message || "Đặt lại mật khẩu thất bại");
+      setError(getUserSafeError(err));
       setLoading(false);
     }
   };

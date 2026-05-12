@@ -117,7 +117,7 @@ export default function ForumPage() {
           () => void loadAnnouncementsRef.current(),
         )
         .subscribe((status) => {
-          console.log("[Forum Realtime] channel status:", status);
+          // Debug: realtime channel status
         });
     }
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
 import { getAuthRedirectUrls } from "@/lib/auth-config";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { validateEmail } from "@/lib/validation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -70,7 +71,7 @@ export default function ForgotPasswordPage() {
       startCooldown();
       setSuccess(true);
     } catch (err: any) {
-      setError(err.message || "Gửi yêu cầu thất bại");
+      setError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }

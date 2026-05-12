@@ -8,6 +8,7 @@ import { Mail, Lock, AlertCircle, Loader2, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
 import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { validateEmail, validatePassword } from "@/lib/validation";
 import { GoogleAuthButton } from "@/components/GoogleAuthButton";
 import { Button } from "@/components/ui/button";
@@ -83,7 +84,7 @@ function LoginPageContent() {
         } else if (signInError.message.includes("Email not found")) {
           setError("Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.");
         } else {
-          setError(signInError.message || "Đăng nhập thất bại");
+          setError(getUserSafeError(signInError));
         }
         setLoading(false);
         return;
@@ -114,7 +115,7 @@ function LoginPageContent() {
       router.push(redirectPath);
       router.refresh();
     } catch (err: any) {
-      setError(err.message || "Đăng nhập thất bại");
+      setError(getUserSafeError(err));
       setLoading(false);
     }
   };
@@ -141,7 +142,7 @@ function LoginPageContent() {
       startCooldown();
       setError("Email xác nhận đã được gửi lại. Vui lòng kiểm tra hộp thư.");
     } catch (err: any) {
-      setError(err.message || "Gửi lại email thất bại");
+      setError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }

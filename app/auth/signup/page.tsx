@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useCooldown } from "@/hooks/useCooldown";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { getAuthRedirectUrls } from "@/lib/auth-config";
 import {
   validateEmail,
@@ -98,31 +99,13 @@ export default function SignUpPage() {
       });
 
       if (signUpError) {
-        // Xử lý các loại lỗi cụ thể
-        if (signUpError.message.includes("User already registered")) {
-          throw new Error(
-            "Email này đã được đăng ký. Vui lòng đăng nhập hoặc sử dụng email khác.",
-          );
-        } else if (
-          signUpError.message.includes("already registered") ||
-          signUpError.message.includes("already exists")
-        ) {
-          throw new Error(
-            "Email này đã tồn tại trong hệ thống. Vui lòng đăng nhập.",
-          );
-        } else if (signUpError.message.includes("Invalid email")) {
-          throw new Error("Email không hợp lệ. Vui lòng kiểm tra lại.");
-        } else {
-          throw signUpError;
-        }
+        throw signUpError;
       }
 
       if (data.user) {
         // Kiểm tra nếu user đã tồn tại nhưng chưa verify
         if (data.user.identities && data.user.identities.length === 0) {
-          throw new Error(
-            "Email này đã được đăng ký nhưng chưa xác thực. Vui lòng kiểm tra email để xác thực tài khoản.",
-          );
+          throw new Error("Email này đã được đăng ký nhưng chưa xác thực.");
         }
 
         // Bắt đầu cooldown
@@ -130,7 +113,7 @@ export default function SignUpPage() {
         setSuccess(true);
       }
     } catch (err: any) {
-      setError(err.message || "Đăng ký thất bại");
+      setError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }
@@ -158,7 +141,7 @@ export default function SignUpPage() {
       startCooldown();
       setError("");
     } catch (err: any) {
-      setError(err.message || "Gửi lại email thất bại");
+      setError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }

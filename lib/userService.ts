@@ -1,5 +1,5 @@
 import { supabase } from "./supabase";
-import { User, UpdateUserData } from "@/types/user";
+import { User, UpdateUserData } from "@/types";
 
 /**
  * Lấy thông tin user từ bảng users

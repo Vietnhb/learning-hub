@@ -6,7 +6,9 @@ import {
   SendMessageData,
 } from "@/types";
 
-async function getFallbackAdminId(excludeUserId?: string): Promise<string | null> {
+async function getFallbackAdminId(
+  excludeUserId?: string,
+): Promise<string | null> {
   try {
     let query = supabase
       .from("users")
@@ -104,55 +106,6 @@ export async function getOrCreateConversation(): Promise<{
 }
 
 /**
- * Ensure conversation has an admin assigned
- */
-export async function ensureConversationAdmin(
-  conversationId: string,
-): Promise<{ adminId: string | null; error: string | null }> {
-  try {
-    const { data: conv, error: convError } = await supabase
-      .from("conversations")
-      .select("id, user_id, admin_id")
-      .eq("id", conversationId)
-      .single();
-
-    if (convError) {
-      console.error("Get conversation error:", convError);
-      return { adminId: null, error: convError.message };
-    }
-
-    if (conv.admin_id) {
-      return { adminId: conv.admin_id, error: null };
-    }
-
-    const fallbackAdminId = await getFallbackAdminId(conv.user_id);
-    if (!fallbackAdminId) {
-      return { adminId: null, error: "No admin available" };
-    }
-
-    const { data: updated, error: updateError } = await supabase
-      .from("conversations")
-      .update({ admin_id: fallbackAdminId })
-      .eq("id", conversationId)
-      .select("admin_id")
-      .single();
-
-    if (updateError) {
-      console.error("Assign admin to conversation error:", updateError);
-      return { adminId: null, error: updateError.message };
-    }
-
-    return { adminId: updated.admin_id, error: null };
-  } catch (err) {
-    console.error("Ensure conversation admin exception:", err);
-    return {
-      adminId: null,
-      error: err instanceof Error ? err.message : "Unknown error",
-    };
-  }
-}
-
-/**
  * Assign current admin to conversation (for "Start Chat" action)
  */
 export async function assignConversationToCurrentAdmin(
@@ -228,16 +181,19 @@ export async function getAllConversations(): Promise<{
     }
 
     const userIds = Array.from(new Set(data.map((conv) => conv.user_id)));
-    const { data: usersData, error: usersError } = await supabase.rpc(
-      "get_all_users",
-    );
+    const { data: usersData, error: usersError } =
+      await supabase.rpc("get_all_users");
 
     if (usersError) {
       console.error("Get users for conversations error:", usersError);
     }
 
     const usersMap = new Map(
-      ((usersData as { id: string; full_name: string; email: string }[] | null) || [])
+      (
+        (usersData as
+          | { id: string; full_name: string; email: string }[]
+          | null) || []
+      )
         .filter((u) => userIds.includes(u.id))
         .map((u) => [
           u.id,
@@ -383,31 +339,6 @@ export async function markMessagesAsRead(
     console.error("Mark messages as read exception:", err);
     return {
       success: false,
-      error: err instanceof Error ? err.message : "Unknown error",
-    };
-  }
-}
-
-/**
- * Get unread message count
- */
-export async function getUnreadCount(): Promise<{
-  count: number;
-  error: string | null;
-}> {
-  try {
-    const { data, error } = await supabase.rpc("get_unread_message_count");
-
-    if (error) {
-      console.error("Get unread count error:", error);
-      return { count: 0, error: error.message };
-    }
-
-    return { count: data || 0, error: null };
-  } catch (err) {
-    console.error("Get unread count exception:", err);
-    return {
-      count: 0,
       error: err instanceof Error ? err.message : "Unknown error",
     };
   }

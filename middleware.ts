@@ -2,11 +2,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function middleware(req: NextRequest) {
-  // Admin routes protection will be handled in layout
-  // This is a placeholder for future enhancements
+  // Note: Admin routes protection is handled in app/admin/layout.tsx
+  // This middleware is kept as a placeholder for potential future enhancements
+  // such as request logging, authentication checks, etc.
   return NextResponse.next();
 }
 
-export const config = {
-  matcher: ["/admin/:path*"],
-};
+// Matcher disabled since admin protection is handled in layout
+// Uncomment and update when middleware functionality is needed
+// export const config = {
+//   matcher: ["/admin/:path*"],
+// };

@@ -5,8 +5,22 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
 import { supabase } from "@/lib/supabase";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { cn } from "@/lib/utils";
 
+/**
+ * Google OAuth Button Component
+ *
+ * ⚠️  SECURITY NOTE: Currently uses Supabase OAuth provider
+ * This means Google's consent screen shows Supabase domain:
+ * "to continue to qaszfchiy wlcqhkondmu.supabase.co"
+ *
+ * Recommended fixes (see SECURITY.md):
+ * 1. Setup Supabase Custom Domain (quickest)
+ * 2. Implement app-level Google OAuth (more control)
+ *
+ * Once fixed, the domain shown will be your app domain instead.
+ */
 interface GoogleAuthButtonProps {
   className?: string;
   disabled?: boolean;
@@ -47,7 +61,7 @@ export function GoogleAuthButton({
     } catch (err: any) {
       setLoading(false);
       onError?.(
-        err.message || "Không thể đăng nhập với Google. Vui lòng thử lại.",
+        getUserSafeError(err),
       );
     }
   };

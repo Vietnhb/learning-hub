@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { motion } from "framer-motion";
 import {
   User,
@@ -92,7 +93,7 @@ export default function CompleteProfilePage() {
       router.push("/");
       router.refresh();
     } catch (err: any) {
-      setGeneralError(err.message || "Cập nhật thông tin thất bại");
+      setGeneralError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }

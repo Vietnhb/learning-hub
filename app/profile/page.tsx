@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { getUserSafeError } from "@/lib/errorHandler";
 import { motion } from "framer-motion";
 import {
   User,
@@ -149,7 +150,7 @@ export default function ProfilePage() {
       window.dispatchEvent(new Event("learning-hub:user-profile-updated"));
       setTimeout(() => setSuccessMessage(""), 3000);
     } catch (err: any) {
-      setGeneralError(err.message || "Lỗi khi tải ảnh lên");
+      setGeneralError(getUserSafeError(err));
     } finally {
       setUploadingAvatar(false);
     }
@@ -196,7 +197,7 @@ export default function ProfilePage() {
       // Clear success message after 3s
       setTimeout(() => setSuccessMessage(""), 3000);
     } catch (err: any) {
-      setGeneralError(err.message || "Cập nhật thông tin thất bại");
+      setGeneralError(getUserSafeError(err));
     } finally {
       setLoading(false);
     }
