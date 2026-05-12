@@ -5,30 +5,33 @@
  * - Limits message length
  */
 export function getUserSafeError(error: any): string {
-  if (!error) return "Có lỗi xảy ra. Vui lòng thử lại."
+  if (!error) return "Có lỗi xảy ra. Vui lòng thử lại.";
 
   const message =
     typeof error === "string"
       ? error
-      : error.message || error.error_description || String(error)
+      : error.message || error.error_description || String(error);
 
   // Safe patterns that are user-friendly
   const errorMappings: Record<string, string> = {
-    "user already registered": "Email này đã được đăng ký. Vui lòng đăng nhập hoặc sử dụng email khác.",
-    "already exists": "Email này đã tồn tại trong hệ thống. Vui lòng đăng nhập.",
+    "user already registered":
+      "Email này đã được đăng ký. Vui lòng đăng nhập hoặc sử dụng email khác.",
+    "already exists":
+      "Email này đã tồn tại trong hệ thống. Vui lòng đăng nhập.",
     "invalid email": "Email không hợp lệ. Vui lòng kiểm tra lại.",
     "invalid password": "Mật khẩu không đủ mạnh. Vui lòng chọn mật khẩu khác.",
     "weak password": "Mật khẩu không đủ mạnh. Vui lòng chọn mật khẩu khác.",
     "invalid credentials": "Email hoặc mật khẩu không chính xác.",
-    "email not confirmed": "Email của bạn chưa được xác thực. Vui lòng kiểm tra email.",
+    "email not confirmed":
+      "Email của bạn chưa được xác thực. Vui lòng kiểm tra email.",
     "invalid grant": "Phiên đăng nhập hết hạn. Vui lòng thử lại.",
     "access denied": "Bạn đã từ chối cấp quyền.",
-  }
+  };
 
-  const lowerMessage = message.toLowerCase()
+  const lowerMessage = message.toLowerCase();
   for (const [key, value] of Object.entries(errorMappings)) {
     if (lowerMessage.includes(key)) {
-      return value
+      return value;
     }
   }
 
@@ -38,23 +41,23 @@ export function getUserSafeError(error: any): string {
     /\.supabase\.co/gi, // Supabase domains
     /eyJ[\w-]*\.eyJ[\w-]*\.[\w-]*/gi, // JWTs
     /sk-[\w]+/gi, // API keys
-  ]
+  ];
 
-  let sanitized = message
+  let sanitized = message;
   for (const pattern of sensitivePatterns) {
-    sanitized = sanitized.replace(pattern, "[internal]")
+    sanitized = sanitized.replace(pattern, "[internal]");
   }
 
   if (sanitized.includes("[internal]")) {
-    return "Có lỗi xảy ra. Vui lòng thử lại."
+    return "Có lỗi xảy ra. Vui lòng thử lại.";
   }
 
   // Limit length
   if (sanitized.length > 200) {
-    return "Có lỗi xảy ra. Vui lòng thử lại."
+    return "Có lỗi xảy ra. Vui lòng thử lại.";
   }
 
-  return sanitized.trim()
+  return sanitized.trim();
 }
 
 /**
@@ -69,7 +72,7 @@ export function handleOAuthError(
     errorCode ||
     error?.error_code ||
     error?.error ||
-    (typeof error === "string" ? error : "")
+    (typeof error === "string" ? error : "");
 
   // Map known error codes to safe messages
   const errorMap: Record<string, { message: string; redirectUrl?: string }> = {
@@ -95,37 +98,34 @@ export function handleOAuthError(
       message: "Tài khoản của bạn đã bị vô hiệu hóa.",
       redirectUrl: "/auth/login?error=banned",
     },
-  }
+  };
 
   // Check if error message contains 'banned'
-  if (
-    typeof error === "string" &&
-    error.toLowerCase().includes("banned")
-  ) {
+  if (typeof error === "string" && error.toLowerCase().includes("banned")) {
     return {
       message: errorMap.banned.message,
       shouldRedirect: true,
       redirectUrl: errorMap.banned.redirectUrl,
-    }
+    };
   }
 
   // Check for known error codes
   if (errorMap[errorType as string]) {
-    const mapped = errorMap[errorType as string]
+    const mapped = errorMap[errorType as string];
     return {
       message: mapped.message,
       shouldRedirect: !!mapped.redirectUrl,
       redirectUrl: mapped.redirectUrl,
-    }
+    };
   }
 
   // Use generic safe error message
-  const safeMessage = getUserSafeError(error)
+  const safeMessage = getUserSafeError(error);
 
   return {
     message: safeMessage,
     shouldRedirect: false,
-  }
+  };
 }
 
 /**
@@ -140,12 +140,12 @@ export function logAuthError(
 ): void {
   if (!isDevelopment && process.env.NODE_ENV !== "development") {
     // Only log detailed errors in development
-    return
+    return;
   }
 
   console.error(`[Auth Error - ${errorContext}]`, {
     message: error?.message || error,
     code: error?.error_code || error?.code,
     timestamp: new Date().toISOString(),
-  })
+  });
 }

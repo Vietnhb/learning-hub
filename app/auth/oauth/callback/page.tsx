@@ -174,9 +174,7 @@ function OAuthCallbackContent() {
 export default function OAuthCallbackPage() {
   return (
     <Suspense
-      fallback={
-        <div className="min-h-screen bg-slate-50 dark:bg-gray-900" />
-      }
+      fallback={<div className="min-h-screen bg-slate-50 dark:bg-gray-900" />}
     >
       <OAuthCallbackContent />
     </Suspense>

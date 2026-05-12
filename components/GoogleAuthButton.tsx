@@ -60,9 +60,7 @@ export function GoogleAuthButton({
       if (error) throw error;
     } catch (err: any) {
       setLoading(false);
-      onError?.(
-        getUserSafeError(err),
-      );
+      onError?.(getUserSafeError(err));
     }
   };
 
@@ -82,11 +80,7 @@ export function GoogleAuthButton({
         <Loader2 className="mr-2 h-5 w-5 animate-spin text-blue-600" />
       ) : (
         <span className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-gray-200">
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-          >
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4">
             <path
               fill="#4285F4"
               d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"

@@ -5,11 +5,11 @@
 
 // Get from environment variable or use hardcoded value
 // This is safe to expose - Client ID is meant to be public
-export const GOOGLE_OAUTH_CLIENT_ID = 
+export const GOOGLE_OAUTH_CLIENT_ID =
   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "";
 
 // This should be in server-only environment variables
-export const GOOGLE_OAUTH_CLIENT_SECRET = 
+export const GOOGLE_OAUTH_CLIENT_SECRET =
   process.env.GOOGLE_OAUTH_CLIENT_SECRET || "";
 
 /**

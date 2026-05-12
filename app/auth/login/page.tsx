@@ -70,19 +70,24 @@ function LoginPageContent() {
     }
 
     try {
-      const { data, error: signInError } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
+      const { data, error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
 
       if (signInError) {
         if (signInError.message.includes("Email not confirmed")) {
           setNeedsVerification(true);
-          setError("Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.");
+          setError(
+            "Email chưa được xác nhận. Vui lòng kiểm tra email của bạn.",
+          );
         } else if (signInError.message.includes("Invalid login credentials")) {
           setError("Email hoặc mật khẩu không đúng. Vui lòng thử lại.");
         } else if (signInError.message.includes("Email not found")) {
-          setError("Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.");
+          setError(
+            "Email này chưa được đăng ký. Vui lòng đăng ký tài khoản mới.",
+          );
         } else {
           setError(getUserSafeError(signInError));
         }
@@ -106,7 +111,9 @@ function LoginPageContent() {
 
       if (userRow?.is_banned) {
         await supabase.auth.signOut();
-        setError("Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.");
+        setError(
+          "Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.",
+        );
         setLoading(false);
         return;
       }
@@ -293,7 +300,9 @@ function LoginPageContent() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-slate-50 dark:bg-gray-900" />}>
+    <Suspense
+      fallback={<div className="min-h-screen bg-slate-50 dark:bg-gray-900" />}
+    >
       <LoginPageContent />
     </Suspense>
   );

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 /**
  * Generic hook for fetching data with loading and error states
@@ -14,34 +14,34 @@ export function useDataFetch<T>(
   fetchFn: () => Promise<{ data: T[] | null; error: string | null }>,
   dependencies: any[] = [],
 ) {
-  const [data, setData] = useState<T[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [data, setData] = useState<T[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const refetch = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const { data: result, error: err } = await fetchFn()
+      const { data: result, error: err } = await fetchFn();
       if (err) {
-        setError(err)
-        setData([])
+        setError(err);
+        setData([]);
       } else {
-        setData(result || [])
-        setError(null)
+        setData(result || []);
+        setError(null);
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Unknown error")
-      setData([])
+      setError(e instanceof Error ? e.message : "Unknown error");
+      setData([]);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
-    refetch()
-  }, dependencies)
+    refetch();
+  }, dependencies);
 
-  return { data, loading, error, refetch }
+  return { data, loading, error, refetch };
 }
 
 /**
@@ -52,32 +52,32 @@ export function useDataFetchSingle<T>(
   fetchFn: () => Promise<{ data: T | null; error: string | null }>,
   dependencies: any[] = [],
 ) {
-  const [data, setData] = useState<T | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const refetch = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const { data: result, error: err } = await fetchFn()
+      const { data: result, error: err } = await fetchFn();
       if (err) {
-        setError(err)
-        setData(null)
+        setError(err);
+        setData(null);
       } else {
-        setData(result)
-        setError(null)
+        setData(result);
+        setError(null);
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Unknown error")
-      setData(null)
+      setError(e instanceof Error ? e.message : "Unknown error");
+      setData(null);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
-    refetch()
-  }, dependencies)
+    refetch();
+  }, dependencies);
 
-  return { data, loading, error, refetch }
+  return { data, loading, error, refetch };
 }

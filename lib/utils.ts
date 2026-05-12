@@ -1,8 +1,8 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 /**
@@ -15,22 +15,22 @@ export async function handleServiceOperation<T>(
   options: { logError?: boolean } = { logError: true },
 ): Promise<{ success: boolean; error: string | null; data?: T }> {
   try {
-    const result = await operation()
+    const result = await operation();
 
     if (result.error) {
-      const errorMessage = result.error.message || String(result.error)
+      const errorMessage = result.error.message || String(result.error);
       if (options.logError) {
-        console.error(`${operationName} error:`, result.error)
+        console.error(`${operationName} error:`, result.error);
       }
-      return { success: false, error: errorMessage }
+      return { success: false, error: errorMessage };
     }
 
-    return { success: true, error: null, data: result.data }
+    return { success: true, error: null, data: result.data };
   } catch (err) {
-    const errorMessage = err instanceof Error ? err.message : "Unknown error"
+    const errorMessage = err instanceof Error ? err.message : "Unknown error";
     if (options.logError) {
-      console.error(`${operationName} exception:`, err)
+      console.error(`${operationName} exception:`, err);
     }
-    return { success: false, error: errorMessage }
+    return { success: false, error: errorMessage };
   }
 }

@@ -79,14 +79,14 @@ export default function ProfilePage() {
           setFullName(userProfile.full_name || "");
           setDateOfBirth(userProfile.date_of_birth || "");
           setUserRole(userProfile.role_id || null);
-          
+
           // Load avatar frame and inventory
           const { data } = await supabase
             .from("users")
             .select("avatar_frame_id, role_id, avatar_frames_inventory")
             .eq("id", authUser.id)
             .single();
-          
+
           setCurrentAvatarFrameId(data?.avatar_frame_id || null);
           setInventory(data?.avatar_frames_inventory || []);
 
@@ -223,7 +223,10 @@ export default function ProfilePage() {
           className="mb-8"
         >
           <Link href="/">
-            <Button variant="outline" className="gap-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+            <Button
+              variant="outline"
+              className="gap-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm"
+            >
               <ArrowLeft className="w-4 h-4" />
               Quay lại Forum
             </Button>
@@ -274,9 +277,9 @@ export default function ProfilePage() {
                     />
                   </div>
                   <div className="mb-1">
-                    <Username 
-                      userId={authUser.id} 
-                      name={fullName || "User"} 
+                    <Username
+                      userId={authUser.id}
+                      name={fullName || "User"}
                       frameId={currentAvatarFrameId}
                       className="text-xl"
                     />
@@ -333,8 +336,12 @@ export default function ProfilePage() {
                       <Crown className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-blue-900 dark:text-blue-300">Premium Active</h4>
-                      <p className="text-[11px] text-blue-700 dark:text-blue-400">Viền avatar của bạn đã lấp lánh!</p>
+                      <h4 className="text-sm font-bold text-blue-900 dark:text-blue-300">
+                        Premium Active
+                      </h4>
+                      <p className="text-[11px] text-blue-700 dark:text-blue-400">
+                        Viền avatar của bạn đã lấp lánh!
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -356,12 +363,17 @@ export default function ProfilePage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-[10px] text-cyan-700/70 dark:text-cyan-500/60 mb-3 leading-tight">
-                    Khám phá bộ sưu tập khung hình độc quyền và làm mới hồ sơ của bạn.
+                    Khám phá bộ sưu tập khung hình độc quyền và làm mới hồ sơ
+                    của bạn.
                   </p>
                   <div className="flex items-center gap-2 mb-4 p-2 bg-white/50 dark:bg-gray-800/50 rounded-lg border border-cyan-100 dark:border-cyan-800">
-                    <div className="text-[10px] uppercase font-bold text-cyan-600 dark:text-cyan-400">Hiện tại</div>
+                    <div className="text-[10px] uppercase font-bold text-cyan-600 dark:text-cyan-400">
+                      Hiện tại
+                    </div>
                     <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 truncate">
-                      {currentAvatarFrameId ? AVATAR_FRAMES[currentAvatarFrameId]?.name : "Mặc định"}
+                      {currentAvatarFrameId
+                        ? AVATAR_FRAMES[currentAvatarFrameId]?.name
+                        : "Mặc định"}
                     </div>
                   </div>
                   <Button
@@ -388,13 +400,18 @@ export default function ProfilePage() {
                     <User className="w-6 h-6 text-blue-500" />
                     Thông tin cá nhân
                   </CardTitle>
-                  <CardDescription>Cập nhật hồ sơ công khai của bạn</CardDescription>
+                  <CardDescription>
+                    Cập nhật hồ sơ công khai của bạn
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Full Name */}
                     <div className="grid gap-2">
-                      <label htmlFor="fullName" className="text-sm font-semibold flex items-center gap-2">
+                      <label
+                        htmlFor="fullName"
+                        className="text-sm font-semibold flex items-center gap-2"
+                      >
                         Họ và tên <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -403,16 +420,25 @@ export default function ProfilePage() {
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         className={`w-full px-4 py-2.5 border rounded-xl focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                          errors.full_name ? "border-red-300 focus:ring-red-100" : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
+                          errors.full_name
+                            ? "border-red-300 focus:ring-red-100"
+                            : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
                         }`}
                         placeholder="Nguyễn Văn A"
                       />
-                      {errors.full_name && <p className="text-xs text-red-500">{errors.full_name}</p>}
+                      {errors.full_name && (
+                        <p className="text-xs text-red-500">
+                          {errors.full_name}
+                        </p>
+                      )}
                     </div>
 
                     {/* Date of Birth */}
                     <div className="grid gap-2">
-                      <label htmlFor="dateOfBirth" className="text-sm font-semibold flex items-center gap-2">
+                      <label
+                        htmlFor="dateOfBirth"
+                        className="text-sm font-semibold flex items-center gap-2"
+                      >
                         Ngày sinh <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -421,23 +447,33 @@ export default function ProfilePage() {
                         value={dateOfBirth}
                         onChange={(e) => setDateOfBirth(e.target.value)}
                         className={`w-full px-4 py-2.5 border rounded-xl focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                          errors.date_of_birth ? "border-red-300 focus:ring-red-100" : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
+                          errors.date_of_birth
+                            ? "border-red-300 focus:ring-red-100"
+                            : "border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30"
                         }`}
                       />
-                      {errors.date_of_birth && <p className="text-xs text-red-500">{errors.date_of_birth}</p>}
+                      {errors.date_of_birth && (
+                        <p className="text-xs text-red-500">
+                          {errors.date_of_birth}
+                        </p>
+                      )}
                     </div>
 
                     {/* Success/Error Alerts */}
                     {successMessage && (
                       <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl p-4 flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                        <p className="text-sm text-emerald-700 dark:text-emerald-300 font-medium">{successMessage}</p>
+                        <p className="text-sm text-emerald-700 dark:text-emerald-300 font-medium">
+                          {successMessage}
+                        </p>
                       </div>
                     )}
                     {generalError && (
                       <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 rounded-xl p-4 flex items-center gap-3">
                         <AlertCircle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
-                        <p className="text-sm text-rose-700 dark:text-rose-300 font-medium">{generalError}</p>
+                        <p className="text-sm text-rose-700 dark:text-rose-300 font-medium">
+                          {generalError}
+                        </p>
                       </div>
                     )}
 
@@ -446,7 +482,11 @@ export default function ProfilePage() {
                       disabled={loading}
                       className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-12 rounded-xl font-bold shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98]"
                     >
-                      {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Lưu Thay Đổi"}
+                      {loading ? (
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                      ) : (
+                        "Lưu Thay Đổi"
+                      )}
                     </Button>
                   </form>
                 </CardContent>
@@ -473,8 +513,12 @@ export default function ProfilePage() {
                         <Key className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-gray-900 dark:text-white">Mật khẩu</h4>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Bảo vệ tài khoản của bạn</p>
+                        <h4 className="font-bold text-gray-900 dark:text-white">
+                          Mật khẩu
+                        </h4>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          Bảo vệ tài khoản của bạn
+                        </p>
                       </div>
                     </div>
                     <Button
@@ -489,13 +533,19 @@ export default function ProfilePage() {
 
                   <div className="grid grid-cols-2 gap-4 text-xs">
                     <div className="p-3 bg-slate-50 dark:bg-gray-700/50 rounded-xl">
-                      <div className="text-gray-500 dark:text-gray-400 mb-1">Ngày gia nhập</div>
+                      <div className="text-gray-500 dark:text-gray-400 mb-1">
+                        Ngày gia nhập
+                      </div>
                       <div className="font-bold text-gray-900 dark:text-white">
-                        {new Date(profile.created_at).toLocaleDateString("vi-VN")}
+                        {new Date(profile.created_at).toLocaleDateString(
+                          "vi-VN",
+                        )}
                       </div>
                     </div>
                     <div className="p-3 bg-slate-50 dark:bg-gray-700/50 rounded-xl overflow-hidden">
-                      <div className="text-gray-500 dark:text-gray-400 mb-1">ID Người dùng</div>
+                      <div className="text-gray-500 dark:text-gray-400 mb-1">
+                        ID Người dùng
+                      </div>
                       <div className="font-mono text-[10px] text-gray-900 dark:text-white truncate">
                         {profile.id}
                       </div>

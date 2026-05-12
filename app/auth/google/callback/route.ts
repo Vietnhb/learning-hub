@@ -55,7 +55,10 @@ export async function GET(request: NextRequest) {
 
     // Create response with auth cookie
     const response = NextResponse.redirect(
-      new URL(`/auth/oauth/callback?next=${encodeURIComponent(next)}`, request.url),
+      new URL(
+        `/auth/oauth/callback?next=${encodeURIComponent(next)}`,
+        request.url,
+      ),
     );
 
     // Set auth cookies (Supabase handles this automatically)
