@@ -81,206 +81,206 @@
               "index": 2,
               "jp": "今年の夏は例年に比べ、暑くなるでしょう。",
               "vi": "Mùa hè năm nay có lẽ sẽ nóng hơn so với mọi năm."
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "pattern": "～に備えて",
+          "usage": "N＋に備えて",
+          "meaning": "“để chuẩn bị cho…”, “đề phòng…”",
+          "description": "Diễn tả việc chuẩn bị hoặc thực hiện hành động nào đó trước để đối phó với tình huống dự kiến sẽ xảy ra.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "大雨に備えて、最新の気象情報に気を付けています。",
+              "vi": "Để đề phòng mưa lớn, tôi chú ý đến các thông tin khí tượng mới nhất."
             },
             {
-              "id": "5",
-              "pattern": "～に備えて",
-              "usage": "N＋に備えて",
-              "meaning": "“để chuẩn bị cho…”, “đề phòng…”",
-              "description": "Diễn tả việc chuẩn bị hoặc thực hiện hành động nào đó trước để đối phó với tình huống dự kiến sẽ xảy ra.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "大雨に備えて、最新の気象情報に気を付けています。",
-                  "vi": "Để đề phòng mưa lớn, tôi chú ý đến các thông tin khí tượng mới nhất."
-                },
-                {
-                  "index": 2,
-                  "jp": "大学受験に備えて、「小論文の書き方」という本で勉強しています。",
-                  "vi": "Để chuẩn bị cho kỳ thi đại học, tôi học bằng cuốn sách tên là “Cách viết tiểu luận ngắn”."
-                }
-              ]
+              "index": 2,
+              "jp": "大学受験に備えて、「小論文の書き方」という本で勉強しています。",
+              "vi": "Để chuẩn bị cho kỳ thi đại học, tôi học bằng cuốn sách tên là “Cách viết tiểu luận ngắn”."
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "pattern": "～に代わって／～に代わり",
+          "usage": "N＋に代わって／N＋に代わり",
+          "meaning": "“thay cho”, “thay thế cho”",
+          "description": "Diễn tả việc một sự vật hoặc sự việc khác thay thế cho cái cũ, hoặc một người đại diện cho người khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "最近の家は畳に代わって、フローリングの部屋が増えてきた。",
+              "vi": "Những ngôi nhà gần đây thay cho chiếu tatami thì phòng lát sàn gỗ đang tăng lên."
             },
             {
-              "id": "6",
-              "pattern": "～に代わって／～に代わり",
-              "usage": "N＋に代わって／N＋に代わり",
-              "meaning": "“thay cho”, “thay thế cho”",
-              "description": "Diễn tả việc một sự vật hoặc sự việc khác thay thế cho cái cũ, hoặc một người đại diện cho người khác.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "最近の家は畳に代わって、フローリングの部屋が増えてきた。",
-                  "vi": "Những ngôi nhà gần đây thay cho chiếu tatami thì phòng lát sàn gỗ đang tăng lên."
-                },
-                {
-                  "index": 2,
-                  "jp": "現金に代わり、電子マネーが使われるようになった。",
-                  "vi": "Tiền điện tử đã dần được sử dụng thay cho tiền mặt."
-                }
-              ]
+              "index": 2,
+              "jp": "現金に代わり、電子マネーが使われるようになった。",
+              "vi": "Tiền điện tử đã dần được sử dụng thay cho tiền mặt."
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "pattern": "～のような／～のように",
+          "usage": "N＋のような／N＋のように",
+          "meaning": "“giống như”, “như là”",
+          "description": "Dùng để ví dụ, so sánh hoặc diễn tả trạng thái tương tự với một sự vật/sự việc khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "京都のような歴史のある町に住んでみたいです。",
+              "vi": "Tôi muốn thử sống ở một thành phố có lịch sử như Kyoto."
             },
             {
-              "id": "7",
-              "pattern": "～のような／～のように",
-              "usage": "N＋のような／N＋のように",
-              "meaning": "“giống như”, “như là”",
-              "description": "Dùng để ví dụ, so sánh hoặc diễn tả trạng thái tương tự với một sự vật/sự việc khác.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "京都のような歴史のある町に住んでみたいです。",
-                  "vi": "Tôi muốn thử sống ở một thành phố có lịch sử như Kyoto."
-                },
-                {
-                  "index": 2,
-                  "jp": "私はケーキや和菓子のように甘い食べ物が大好きです。",
-                  "vi": "Tôi rất thích những món ngọt như bánh kem hay bánh ngọt Nhật Bản."
-                }
-              ]
+              "index": 2,
+              "jp": "私はケーキや和菓子のように甘い食べ物が大好きです。",
+              "vi": "Tôi rất thích những món ngọt như bánh kem hay bánh ngọt Nhật Bản."
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "pattern": "～として",
+          "usage": "N＋として",
+          "meaning": "“với tư cách là”, “trong vai trò là”",
+          "description": "Dùng để chỉ lập trường, tư cách, vai trò hoặc chức năng của người/vật.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "彼はたった１人の医者としてこの島で働いています。",
+              "vi": "Anh ấy làm việc trên hòn đảo này với tư cách là bác sĩ duy nhất."
             },
             {
-              "id": "8",
-              "pattern": "～として",
-              "usage": "N＋として",
-              "meaning": "“với tư cách là”, “trong vai trò là”",
-              "description": "Dùng để chỉ lập trường, tư cách, vai trò hoặc chức năng của người/vật.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "彼はたった１人の医者としてこの島で働いています。",
-                  "vi": "Anh ấy làm việc trên hòn đảo này với tư cách là bác sĩ duy nhất."
-                },
-                {
-                  "index": 2,
-                  "jp": "北海道小樽市は、明治時代に港町として栄えていました。",
-                  "vi": "Thành phố Otaru của Hokkaido đã từng phát triển thịnh vượng với vai trò là thành phố cảng vào thời Minh Trị."
-                }
-              ]
+              "index": 2,
+              "jp": "北海道小樽市は、明治時代に港町として栄えていました。",
+              "vi": "Thành phố Otaru của Hokkaido đã từng phát triển thịnh vượng với vai trò là thành phố cảng vào thời Minh Trị."
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "pattern": "～に限る",
+          "usage": "V-辞書形・ナイ形ない／イAい／ナA／N＋に限る",
+          "meaning": "“là nhất”, “không gì bằng”, “tốt nhất là”",
+          "description": "Dùng để nhấn mạnh rằng trong một tình huống cụ thể thì điều gì đó là tốt nhất hoặc thích hợp nhất.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "冬は鍋に限るね。",
+              "vi": "Mùa đông thì lẩu là tuyệt nhất nhỉ."
             },
             {
-              "id": "9",
-              "pattern": "～に限る",
-              "usage": "V-辞書形・ナイ形ない／イAい／ナA／N＋に限る",
-              "meaning": "“là nhất”, “không gì bằng”, “tốt nhất là”",
-              "description": "Dùng để nhấn mạnh rằng trong một tình huống cụ thể thì điều gì đó là tốt nhất hoặc thích hợp nhất.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "冬は鍋に限るね。",
-                  "vi": "Mùa đông thì lẩu là tuyệt nhất nhỉ."
-                },
-                {
-                  "index": 2,
-                  "jp": "体の調子が悪いときには早く寝るに限る。",
-                  "vi": "Khi cơ thể không khỏe thì tốt nhất là ngủ sớm."
-                },
-                {
-                  "index": 3,
-                  "jp": "危ないところには近づかないに限る。",
-                  "vi": "Tốt nhất là không nên đến gần những nơi nguy hiểm."
-                },
-                {
-                  "index": 4,
-                  "jp": "ビールは冷たいに限る。",
-                  "vi": "Bia thì phải lạnh mới ngon nhất."
-                }
-              ]
+              "index": 2,
+              "jp": "体の調子が悪いときには早く寝るに限る。",
+              "vi": "Khi cơ thể không khỏe thì tốt nhất là ngủ sớm."
             },
             {
-              "id": "10",
-              "pattern": "～を中心に（して）／～を中心として",
-              "usage": "N＋を中心に（して）／N＋を中心として",
-              "meaning": "“lấy … làm trung tâm”, “chủ yếu xoay quanh …”",
-              "description": "Dùng để diễn tả một sự vật, địa điểm hoặc người làm trung tâm và các sự việc khác phát triển, tập trung xung quanh nó.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "横浜はみなとみらい21地区を中心に商業地区が広がっています。",
-                  "vi": "Ở Yokohama, khu thương mại mở rộng chủ yếu quanh khu Minato Mirai 21."
-                },
-                {
-                  "index": 2,
-                  "jp": "私のクラスはパクさんを中心として、よくまとまっています。",
-                  "vi": "Lớp tôi rất đoàn kết với bạn Park làm trung tâm."
-                }
-              ]
+              "index": 3,
+              "jp": "危ないところには近づかないに限る。",
+              "vi": "Tốt nhất là không nên đến gần những nơi nguy hiểm."
             },
             {
-              "id": "11",
-              "pattern": "～をはじめ（として）／～をはじめとする",
-              "usage": "N＋をはじめ（として）／N＋をはじめとする",
-              "meaning": "“bắt đầu từ…”, “tiêu biểu như…”",
-              "description": "Dùng để nêu ra một ví dụ tiêu biểu trước, sau đó bao gồm nhiều đối tượng cùng loại khác.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "横浜には中華街をはじめ、山下公園など多くの人が訪れる場所がある。",
-                  "vi": "Ở Yokohama có nhiều nơi được nhiều người ghé thăm như khu phố Trung Hoa, công viên Yamashita, v.v."
-                },
-                {
-                  "index": 2,
-                  "jp": "このお店ではこの地方の名産品をはじめとするさまざまなお土産品が売られている。",
-                  "vi": "Ở cửa hàng này có bán nhiều loại quà lưu niệm khác nhau, tiêu biểu là các đặc sản nổi tiếng của vùng này."
-                }
-              ]
+              "index": 4,
+              "jp": "ビールは冷たいに限る。",
+              "vi": "Bia thì phải lạnh mới ngon nhất."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "pattern": "～を中心に（して）／～を中心として",
+          "usage": "N＋を中心に（して）／N＋を中心として",
+          "meaning": "“lấy … làm trung tâm”, “chủ yếu xoay quanh …”",
+          "description": "Dùng để diễn tả một sự vật, địa điểm hoặc người làm trung tâm và các sự việc khác phát triển, tập trung xung quanh nó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "横浜はみなとみらい21地区を中心に商業地区が広がっています。",
+              "vi": "Ở Yokohama, khu thương mại mở rộng chủ yếu quanh khu Minato Mirai 21."
             },
             {
-              "id": "12",
-              "pattern": "～を通して／～を通じて",
-              "usage": "N＋を通して／N＋を通じて",
-              "meaning": "“suốt…”, “thông qua…”",
-              "description": "Dùng để diễn tả hành động/sự việc diễn ra xuyên suốt một khoảng thời gian hoặc thông qua một phương tiện, cách thức nào đó.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "この地域は１年を通してたくさんの人でにぎわっています。",
-                  "vi": "Khu vực này nhộn nhịp đông người suốt cả năm."
-                },
-                {
-                  "index": 2,
-                  "jp": "祖父は一生を通して、頑固な職人であり続けた。",
-                  "vi": "Ông tôi suốt cuộc đời vẫn luôn là một người thợ thủ công cứng đầu."
-                }
-              ]
+              "index": 2,
+              "jp": "私のクラスはパクさんを中心として、よくまとまっています。",
+              "vi": "Lớp tôi rất đoàn kết với bạn Park làm trung tâm."
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "pattern": "～をはじめ（として）／～をはじめとする",
+          "usage": "N＋をはじめ（として）／N＋をはじめとする",
+          "meaning": "“bắt đầu từ…”, “tiêu biểu như…”",
+          "description": "Dùng để nêu ra một ví dụ tiêu biểu trước, sau đó bao gồm nhiều đối tượng cùng loại khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "横浜には中華街をはじめ、山下公園など多くの人が訪れる場所がある。",
+              "vi": "Ở Yokohama có nhiều nơi được nhiều người ghé thăm như khu phố Trung Hoa, công viên Yamashita, v.v."
             },
             {
-              "id": "13",
-              "pattern": "～ことから",
-              "usage": "普通形（ナAな・ナAである／Nである）＋ことから",
-              "meaning": "“vì…”, “do…”",
-              "description": "Dùng để nêu căn cứ, lý do hoặc nguyên nhân dẫn đến một nhận định hay kết luận.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "横に砂浜が長く延びていたことから、横浜村と呼ばれていました。",
-                  "vi": "Vì bãi cát kéo dài theo chiều ngang nên nơi này được gọi là làng Yokohama."
-                },
-                {
-                  "index": 2,
-                  "jp": "海洋生物の化石が発見されたことから、この辺りは昔、海だったと考えられる。",
-                  "vi": "Do phát hiện hóa thạch sinh vật biển nên người ta cho rằng khu vực này ngày xưa từng là biển."
-                }
-              ]
+              "index": 2,
+              "jp": "このお店ではこの地方の名産品をはじめとするさまざまなお土産品が売られている。",
+              "vi": "Ở cửa hàng này có bán nhiều loại quà lưu niệm khác nhau, tiêu biểu là các đặc sản nổi tiếng của vùng này."
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "pattern": "～を通して／～を通じて",
+          "usage": "N＋を通して／N＋を通じて",
+          "meaning": "“suốt…”, “thông qua…”",
+          "description": "Dùng để diễn tả hành động/sự việc diễn ra xuyên suốt một khoảng thời gian hoặc thông qua một phương tiện, cách thức nào đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この地域は１年を通してたくさんの人でにぎわっています。",
+              "vi": "Khu vực này nhộn nhịp đông người suốt cả năm."
             },
             {
-              "id": "14",
-              "pattern": "～といえば／～というと",
-              "usage": "N／普通形＋といえば／～というと",
-              "meaning": "“nói đến… thì…”, “nhắc đến… là nghĩ đến…”",
-              "description": "Dùng khi nhắc đến một chủ đề nào đó và liên tưởng ngay đến một sự vật, sự việc tiêu biểu liên quan.",
-              "examples": [
-                {
-                  "index": 1,
-                  "jp": "横浜といえば、中華街が有名です。",
-                  "vi": "Nói đến Yokohama thì khu phố Trung Hoa rất nổi tiếng."
-                },
-                {
-                  "index": 2,
-                  "jp": "冬のスポーツというと、スキーを思い浮かべます。",
-                  "vi": "Nhắc đến môn thể thao mùa đông thì tôi nghĩ ngay đến trượt tuyết."
-                }
-              ]
+              "index": 2,
+              "jp": "祖父は一生を通して、頑固な職人であり続けた。",
+              "vi": "Ông tôi suốt cuộc đời vẫn luôn là một người thợ thủ công cứng đầu."
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "pattern": "～ことから",
+          "usage": "普通形（ナAな・ナAである／Nである）＋ことから",
+          "meaning": "“vì…”, “do…”",
+          "description": "Dùng để nêu căn cứ, lý do hoặc nguyên nhân dẫn đến một nhận định hay kết luận.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "横に砂浜が長く延びていたことから、横浜村と呼ばれていました。",
+              "vi": "Vì bãi cát kéo dài theo chiều ngang nên nơi này được gọi là làng Yokohama."
+            },
+            {
+              "index": 2,
+              "jp": "海洋生物の化石が発見されたことから、この辺りは昔、海だったと考えられる。",
+              "vi": "Do phát hiện hóa thạch sinh vật biển nên người ta cho rằng khu vực này ngày xưa từng là biển."
+            }
+          ]
+        },
+        {
+          "id": "14",
+          "pattern": "～といえば／～というと",
+          "usage": "N／普通形＋といえば／～というと",
+          "meaning": "“nói đến… thì…”, “nhắc đến… là nghĩ đến…”",
+          "description": "Dùng khi nhắc đến một chủ đề nào đó và liên tưởng ngay đến một sự vật, sự việc tiêu biểu liên quan.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "横浜といえば、中華街が有名です。",
+              "vi": "Nói đến Yokohama thì khu phố Trung Hoa rất nổi tiếng."
+            },
+            {
+              "index": 2,
+              "jp": "冬のスポーツというと、スキーを思い浮かべます。",
+              "vi": "Nhắc đến môn thể thao mùa đông thì tôi nghĩ ngay đến trượt tuyết."
             }
           ]
         }
