@@ -1,3 +1,71 @@
 {
-  "lessons": []
+  "lessons": [
+    {
+      "lesson": "1",
+      "grammar": [
+        {
+          "id": "1",
+          "pattern": "～に囲まれている／～に囲まれた",
+          "usage": "N＋にかこまれている",
+          "meaning": "Được bao quanh bởi N",
+          "description": "Diễn tả một vật, địa điểm được bao quanh bởi thứ gì đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本は南北に長い島で、周りを海に囲まれています。",
+              "vi": "Nhật Bản là một hòn đảo dài từ bắc xuống nam và được bao quanh bởi biển."
+            },
+            {
+              "index": 2,
+              "jp": "花と緑に囲まれた小さなペンションが並んでいます。",
+              "vi": "Những nhà nghỉ nhỏ được bao quanh bởi hoa và cây xanh đang nối tiếp nhau."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "pattern": "（～が）～を占める／～が占める",
+          "usage": "N＋を占める",
+          "meaning": "chiếm ...",
+          "description": "Diễn tả tỷ lệ, diện tích hoặc số lượng chiếm phần lớn trong tổng thể.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本は山林が国土の約３分の２を占めている。",
+              "vi": "Rừng núi chiếm khoảng hai phần ba diện tích lãnh thổ Nhật Bản."
+            },
+            {
+              "index": 2,
+              "jp": "この会社で外国人が占める割合は４０％です。",
+              "vi": "Tỷ lệ người nước ngoài chiếm trong công ty này là 40%."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "pattern": "～がち",
+          "usage": "V-マス形／N＋がち",
+          "meaning": "Thường, hay...",
+          "description": "Diễn tả một sự việc dễ xảy ra, thường hay xảy ra nhiều lần hay xu hướng thường như thế. Thường là những hành vi không tốt, không nên.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本海側は冬は曇りがちの日が続き、大雪が降りやすい。",
+              "vi": "Vào mùa đông, phía biển Nhật Bản thường có nhiều ngày nhiều mây liên tiếp và dễ có tuyết lớn."
+            },
+            {
+              "index": 2,
+              "jp": "雪が降ると、電車が遅れがちだ。",
+              "vi": "Khi tuyết rơi, tàu điện thường hay bị trễ."
+            },
+            {
+              "index": 3,
+              "jp": "彼女は「この席は空いていますか」と遠慮がちに言った。",
+              "vi": "Cô ấy dè dặt nói: “Chỗ này có ai ngồi không?”"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
