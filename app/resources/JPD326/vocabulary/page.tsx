@@ -1,162 +1,275 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
   RotateCcw,
+  Search,
   Shuffle,
-  BookOpen,
-  ArrowDown,
 } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
-import Image from "next/image";
-import { useAuth } from "@/contexts/AuthContext";
 import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { useAuth } from "@/contexts/AuthContext";
 import vocabularyData from "./kotoba.json";
 
-interface VocabCard {
+type PosTag =
+  | "verb"
+  | "noun"
+  | "adjective"
+  | "adverb"
+  | "adnominal"
+  | "conjunction"
+  | "other";
+
+type TransitivityTag =
+  | "transitive"
+  | "intransitive"
+  | "both"
+  | "unknown"
+  | null;
+
+type TransitivityFilter =
+  | "all"
+  | "transitive"
+  | "intransitive"
+  | "both"
+  | "unknown";
+
+interface VocabItem {
+  id: string;
+  slot: number;
+  lesson: string;
+  lessonOrder: number;
   term: string;
+  reading: string | null;
   definition: string;
+  pos: PosTag;
+  transitivity: TransitivityTag;
   image: string | null;
 }
 
-export default function VocabularyPage() {
+const data = vocabularyData as VocabItem[];
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const clone = [...arr];
+  for (let i = clone.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [clone[i], clone[j]] = [clone[j], clone[i]];
+  }
+  return clone;
+}
+
+function posLabel(pos: PosTag): string {
+  switch (pos) {
+    case "verb":
+      return "Động từ";
+    case "noun":
+      return "Danh từ";
+    case "adjective":
+      return "Tính từ";
+    case "adverb":
+      return "Phó từ";
+    case "adnominal":
+      return "Liên thể từ";
+    case "conjunction":
+      return "Liên từ";
+    default:
+      return "Khác";
+  }
+}
+
+function transitivityLabel(tag: TransitivityTag): string | null {
+  switch (tag) {
+    case "transitive":
+      return "他動詞 (tha động từ)";
+    case "intransitive":
+      return "自動詞 (tự động từ)";
+    case "both":
+      return "自・他動詞 (cả hai)";
+    case "unknown":
+      return "Động từ (chưa phân loại)";
+    default:
+      return null;
+  }
+}
+
+function transitivityClass(tag: TransitivityTag): string {
+  switch (tag) {
+    case "transitive":
+      return "bg-rose-100 text-rose-700 border-rose-300";
+    case "intransitive":
+      return "bg-emerald-100 text-emerald-700 border-emerald-300";
+    case "both":
+      return "bg-violet-100 text-violet-700 border-violet-300";
+    case "unknown":
+      return "bg-gray-100 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600";
+    default:
+      return "";
+  }
+}
+
+export default function JPD326VocabularyPage() {
   const { user, loading } = useAuth();
-  const [currentIndex, setCurrentIndex] = useState(() => {
-    if (typeof window === "undefined") return 0;
-    const saved = localStorage.getItem("vocabulary-current-index");
-    return saved ? parseInt(saved, 10) : 0;
-  });
+  const groupedListRef = useRef<HTMLDivElement | null>(null);
+
+  const slots = useMemo(
+    () => Array.from(new Set(data.map((item) => item.slot))).sort((a, b) => a - b),
+    [],
+  );
+
+  const [selectedSlot, setSelectedSlot] = useState<number | "all">("all");
+  const [selectedLesson, setSelectedLesson] = useState<string>("all");
+  const [search, setSearch] = useState("");
+  const [posFilter, setPosFilter] = useState<PosTag | "all">("all");
+  const [transFilter, setTransFilter] = useState<TransitivityFilter>("all");
   const [isFlipped, setIsFlipped] = useState(false);
-  const [shuffled, setShuffled] = useState(false);
-  const [cards, setCards] = useState(() => {
-    if (typeof window === "undefined") return vocabularyData;
-    const savedShuffled = localStorage.getItem("vocabulary-shuffled");
-    const savedCards = localStorage.getItem("vocabulary-cards");
-    if (savedShuffled === "true" && savedCards) {
-      try { return JSON.parse(savedCards); } catch { return vocabularyData; }
-    }
-    return vocabularyData;
-  });
-  const [shuffledInit] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem("vocabulary-shuffled") === "true";
-  });
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const [indexInput, setIndexInput] = useState("");
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [isReadingBlurred, setIsReadingBlurred] = useState(true);
+  const [isShuffled, setIsShuffled] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [deck, setDeck] = useState<VocabItem[]>([]);
 
-  // Sync shuffled state from lazy init
-  useEffect(() => {
-    if (shuffledInit) setShuffled(true);
-  }, []);
-
-  const hasCards = cards.length > 0;
-  const currentCard = hasCards ? cards[currentIndex] : null;
-  const progress = hasCards ? ((currentIndex + 1) / cards.length) * 100 : 0;
-
-  // Lưu trạng thái vào localStorage mỗi khi thay đổi
-  useEffect(() => {
-    localStorage.setItem("vocabulary-current-index", currentIndex.toString());
-  }, [currentIndex]);
+  const lessons = useMemo(() => {
+    const base =
+      selectedSlot === "all"
+        ? data
+        : data.filter((item) => item.slot === selectedSlot);
+    return Array.from(new Set(base.map((item) => item.lesson))).sort((a, b) =>
+      a.localeCompare(b, "vi", { numeric: true }),
+    );
+  }, [selectedSlot]);
 
   useEffect(() => {
-    localStorage.setItem("vocabulary-shuffled", shuffled.toString());
-    if (shuffled) {
-      localStorage.setItem("vocabulary-cards", JSON.stringify(cards));
-    } else {
-      localStorage.removeItem("vocabulary-cards");
-    }
-  }, [shuffled, cards]);
+    setSelectedLesson("all");
+  }, [selectedSlot]);
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+
+    return data
+      .filter((item) =>
+        selectedSlot === "all" ? true : item.slot === selectedSlot,
+      )
+      .filter((item) =>
+        selectedLesson === "all" ? true : item.lesson === selectedLesson,
+      )
+      .filter((item) => (posFilter === "all" ? true : item.pos === posFilter))
+      .filter((item) =>
+        transFilter === "all" ? true : item.transitivity === transFilter,
+      )
+      .filter((item) => {
+        if (!q) return true;
+        return (
+          item.term.toLowerCase().includes(q) ||
+          (item.reading ?? "").toLowerCase().includes(q) ||
+          item.definition.toLowerCase().includes(q)
+        );
+      })
+      .sort((a, b) => {
+        if (a.slot !== b.slot) return a.slot - b.slot;
+        const aOrder = a.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : a.lessonOrder;
+        const bOrder = b.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : b.lessonOrder;
+        if (aOrder !== bOrder) return aOrder - bOrder;
+        return a.id.localeCompare(b.id);
+      });
+  }, [selectedSlot, selectedLesson, posFilter, transFilter, search]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show button when scrolled down more than 200px
-      setShowScrollButton(window.scrollY > 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setDeck(isShuffled ? shuffleArray(filtered) : filtered);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  }, [filtered, isShuffled]);
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Space") {
         e.preventDefault();
-        handleNext();
+        if (!isFlipped && deck[currentIndex]?.reading) {
+          setIsReadingBlurred((prev) => !prev);
+        }
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        setCurrentIndex((prev) =>
+          Math.min(prev + 1, Math.max(deck.length - 1, 0)),
+        );
+        setIsFlipped(false);
       } else if (e.key === "ArrowLeft") {
         e.preventDefault();
-        handlePrevious();
+        setCurrentIndex((prev) => Math.max(prev - 1, 0));
+        setIsFlipped(false);
       } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
         e.preventDefault();
-        handleFlip();
+        setIsFlipped((prev) => !prev);
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, cards.length]);
 
-  const scrollToCurrentCard = () => {
-    const cardElement = cardRefs.current[currentIndex];
-    if (cardElement) {
-      const offset = 100; // Offset from top
-      const elementPosition = cardElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [deck, currentIndex, isFlipped]);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+  useEffect(() => {
+    if (groupedListRef.current) {
+      groupedListRef.current.scrollTop = 0;
     }
-  };
+  }, [selectedSlot, selectedLesson, search, posFilter, transFilter]);
 
-  const handleNext = () => {
-    if (currentIndex < cards.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setIsFlipped(false);
+  const current = deck[currentIndex] ?? null;
+  const progress =
+    deck.length > 0 ? ((currentIndex + 1) / deck.length) * 100 : 0;
+
+  const grouped = useMemo(() => {
+    type GroupBucket = {
+      title: string;
+      items: VocabItem[];
+      slot: number;
+      lesson: string;
+      lessonOrder: number;
+    };
+
+    const map = new Map<string, GroupBucket>();
+
+    for (const item of deck) {
+      const key = `${item.slot}|||${item.lesson}`;
+      const existing = map.get(key);
+
+      if (!existing) {
+        map.set(key, {
+          title: `Slot ${item.slot} - ${item.lesson}`,
+          items: [item],
+          slot: item.slot,
+          lesson: item.lesson,
+          lessonOrder: item.lessonOrder,
+        });
+        continue;
+      }
+
+      existing.items.push(item);
+      if (item.lessonOrder < existing.lessonOrder) {
+        existing.lessonOrder = item.lessonOrder;
+      }
     }
-  };
 
-  const handlePrevious = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setIsFlipped(false);
-    }
-  };
+    return Array.from(map.values()).sort((a, b) => {
+      if (a.slot !== b.slot) return a.slot - b.slot;
 
-  const handleFlip = () => {
-    setIsFlipped((prev) => !prev);
-  };
+      const aIsExtra = a.lessonOrder === 0;
+      const bIsExtra = b.lessonOrder === 0;
+      if (aIsExtra !== bIsExtra) return aIsExtra ? 1 : -1;
 
-  const handleReset = () => {
-    setCurrentIndex(0);
-    setIsFlipped(false);
-    setCards(vocabularyData);
-    setShuffled(false);
-    // Xóa dữ liệu đã lưu trong localStorage
-    localStorage.removeItem("vocabulary-current-index");
-    localStorage.removeItem("vocabulary-shuffled");
-    localStorage.removeItem("vocabulary-cards");
-  };
+      if (a.lessonOrder !== b.lessonOrder) return a.lessonOrder - b.lessonOrder;
 
-  const handleShuffle = () => {
-    const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
-    setCards(shuffledCards);
-    setCurrentIndex(0);
-    setIsFlipped(false);
-    setShuffled(true);
-  };
+      return a.lesson.localeCompare(b.lesson, "vi", { numeric: true });
+    });
+  }, [deck]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-japan-cream dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-japan-indigo mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-japan-indigo mx-auto mb-4" />
           <p className="text-gray-600 dark:text-gray-400">Đang tải...</p>
         </div>
       </div>
@@ -167,410 +280,430 @@ export default function VocabularyPage() {
     return <AuthRequiredModal show={true} />;
   }
 
-  if (!hasCards) {
-    return (
-      <div className="min-h-screen bg-japan-cream dark:bg-gray-900 py-8 px-4">
-        <div className="max-w-4xl mx-auto">
-          <Link href="/resources/JPD326">
-            <Button variant="outline" className="gap-2 mb-6 font-japanese">
-              <ArrowLeft className="w-4 h-4" />
-              Quay lại
-            </Button>
-          </Link>
-
-          <Card className="p-10 text-center border-2 border-dashed border-amber-400 bg-white/90 dark:bg-gray-800/90">
-            <h1 className="text-3xl font-bold text-amber-600 mb-3">Coming soon</h1>
-            <p className="text-gray-700 dark:text-gray-300 font-japanese">
-              Dữ liệu từ vựng đang được cập nhật. Vui lòng quay lại sau.
-            </p>
-          </Card>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-japan-cream dark:bg-gray-900 bg-seigaiha py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-6">
+      <div className="max-w-7xl mx-auto space-y-6">
+        <div className="flex items-center justify-between gap-3 flex-wrap">
           <Link href="/resources/JPD326">
-            <Button
-              variant="outline"
-              className="gap-2 shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:border-japan-indigo dark:hover:border-indigo-600 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
-            >
+            <Button variant="outline" className="gap-2">
               <ArrowLeft className="w-4 h-4" />
-              Quay lại
+              Quay lại JPD326
             </Button>
           </Link>
-          <div className="flex gap-2">
+
+          <div className="flex items-center gap-2 flex-wrap">
             <Button
               variant="outline"
               size="icon"
-              onClick={handleReset}
-              title="Bắt đầu lại"
-              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
+              onClick={() => {
+                setSelectedSlot("all");
+                setSelectedLesson("all");
+                setSearch("");
+                setPosFilter("all");
+                setTransFilter("all");
+                setIsShuffled(false);
+                setCurrentIndex(0);
+                setIsFlipped(false);
+              }}
+              title="Reset bộ lọc"
             >
               <RotateCcw className="w-4 h-4" />
             </Button>
             <Button
-              variant="outline"
+              variant={isShuffled ? "default" : "outline"}
               size="icon"
-              onClick={handleShuffle}
+              onClick={() => setIsShuffled((prev) => !prev)}
               title="Xáo trộn"
-              className="shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700"
             >
               <Shuffle className="w-4 h-4" />
             </Button>
           </div>
         </div>
 
-        {/* Title with Japanese aesthetic */}
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="text-center mb-6 relative"
-        >
-          <div className="inline-block relative">
-            {/* Japanese stamp/seal style background */}
-            <div className="absolute inset-0 bg-japan-indigo opacity-10 rounded-full blur-2xl"></div>
-            <div className="relative bg-white dark:bg-gray-800 border-4 border-japan-indigo dark:border-indigo-700 rounded-2xl px-8 py-6 shadow-2xl">
-              <div className="flex items-center justify-center gap-4 mb-2">
-                <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
-                  <BookOpen className="w-7 h-7 text-white" />
-                </div>
-                <h1 className="text-5xl font-black font-japanese-serif text-japan-charcoal dark:text-white tracking-wider">
-                  語彙 JPD326
-                </h1>
-                <div className="w-12 h-12 bg-japan-indigo rounded-full flex items-center justify-center">
-                  <span className="text-2xl text-white font-bold">語</span>
-                </div>
+        <Card className="p-5 bg-white/95 dark:bg-gray-800/95">
+          <h1 className="text-2xl md:text-3xl font-bold text-japan-indigo dark:text-indigo-300 mb-4">
+            語彙 JPD326
+          </h1>
+
+          <div className="space-y-4">
+            <div>
+              <p className="text-sm font-semibold mb-2">Chọn Slot</p>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedSlot("all")}
+                  className={`px-3 py-1.5 rounded-full border text-sm ${
+                    selectedSlot === "all"
+                      ? "bg-japan-indigo text-white border-japan-indigo"
+                      : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                  }`}
+                >
+                  Tất cả
+                </button>
+                {slots.map((slot) => (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`px-3 py-1.5 rounded-full border text-sm ${
+                      selectedSlot === slot
+                        ? "bg-japan-indigo text-white border-japan-indigo"
+                        : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                    }`}
+                  >
+                    Slot {slot}
+                  </button>
+                ))}
               </div>
-              <p className="text-base text-japan-charcoal dark:text-gray-300 font-medium font-japanese flex items-center justify-center gap-1">
-                Từ số{" "}
+            </div>
+
+            <div>
+              <p className="text-sm font-semibold mb-2">Chọn Bài</p>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedLesson("all")}
+                  className={`px-3 py-1.5 rounded-full border text-sm ${
+                    selectedLesson === "all"
+                      ? "bg-japan-red text-white border-japan-red"
+                      : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                  }`}
+                >
+                  Tất cả bài
+                </button>
+                {lessons.map((lesson) => (
+                  <button
+                    key={lesson}
+                    type="button"
+                    onClick={() => setSelectedLesson(lesson)}
+                    className={`px-3 py-1.5 rounded-full border text-sm ${
+                      selectedLesson === lesson
+                        ? "bg-japan-red text-white border-japan-red"
+                        : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                    }`}
+                  >
+                    {lesson}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-3">
+              <div className="md:col-span-2 relative">
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300" />
                 <input
-                  type="number"
-                  min={1}
-                  max={cards.length}
-                  title="Nhập số thẻ"
-                  aria-label="Số thẻ hiện tại"
-                  value={indexInput !== "" ? indexInput : currentIndex + 1}
-                  onChange={(e) => setIndexInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      const val = parseInt(indexInput, 10);
-                      if (!isNaN(val) && val >= 1 && val <= cards.length) {
-                        setCurrentIndex(val - 1);
-                        setIsFlipped(false);
-                      }
-                      setIndexInput("");
-                      e.currentTarget.blur();
-                    }
-                  }}
-                  onBlur={() => setIndexInput("")}
-                  className="w-14 text-center border-b-2 border-japan-indigo dark:border-indigo-400 bg-transparent outline-none font-bold text-japan-indigo dark:text-indigo-300"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Tìm theo từ Nhật / cách đọc / nghĩa Việt..."
+                  className="w-full h-10 pl-9 pr-3 rounded-md border border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
                 />
-                {" "}/ {cards.length}
-              </p>
+              </div>
+
+              <select
+                value={posFilter}
+                onChange={(e) => setPosFilter(e.target.value as PosTag | "all")}
+                aria-label="Lọc theo từ loại"
+                title="Lọc theo từ loại"
+                className="h-10 rounded-md border border-gray-300 bg-white px-3 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+              >
+                <option value="all">Tất cả từ loại</option>
+                <option value="verb">Động từ</option>
+                <option value="noun">Danh từ</option>
+                <option value="adjective">Tính từ</option>
+                <option value="adverb">Phó từ</option>
+                <option value="adnominal">Liên thể từ</option>
+                <option value="conjunction">Liên từ</option>
+                <option value="other">Khác</option>
+              </select>
+
+              <select
+                value={transFilter}
+                onChange={(e) =>
+                  setTransFilter(
+                    e.target.value === "all"
+                      ? "all"
+                      : (e.target.value as TransitivityFilter),
+                  )
+                }
+                aria-label="Lọc theo loại động từ"
+                title="Lọc theo loại động từ"
+                className="h-10 rounded-md border border-gray-300 bg-white px-3 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+              >
+                <option value="all">Tất cả</option>
+                <option value="transitive">他動詞 (tha động từ)</option>
+                <option value="intransitive">自動詞 (tự động từ)</option>
+                <option value="both">自・他動詞</option>
+                <option value="unknown">Động từ chưa phân loại</option>
+              </select>
             </div>
           </div>
-        </motion.div>
+        </Card>
 
-        {/* Progress Bar - Traditional Japanese style */}
-        <div className="w-full bg-white dark:bg-gray-800 rounded-full h-4 mb-8 shadow-inner border-2 border-japan-indigo/20 dark:border-indigo-700/20">
-          <motion.div
-            className="bg-gradient-to-r from-japan-indigo to-japan-green h-full rounded-full shadow-md relative overflow-hidden"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="absolute inset-0 bg-seigaiha opacity-20"></div>
-          </motion.div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+              Số từ đang học
+            </p>
+            <p className="text-3xl font-bold text-japan-indigo dark:text-indigo-300">
+              {deck.length}
+            </p>
+          </Card>
+          <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+              Vị trí hiện tại
+            </p>
+            <p className="text-3xl font-bold text-japan-red">
+              {deck.length > 0 ? `${currentIndex + 1}/${deck.length}` : "0/0"}
+            </p>
+          </Card>
+          <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
+            <p className="text-sm text-gray-500 dark:text-gray-300">Ghi chú</p>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-100">
+              Bấm Space để ẩn/hiện reading, mũi tên trái/phải để chuyển từ.
+            </p>
+          </Card>
         </div>
 
-        {/* Flashcard - Washi paper style */}
-        <div className="mb-10 perspective-1000">
-          <motion.div
-            className="relative w-full h-[500px] cursor-pointer"
-            onClick={handleFlip}
-            whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.2 }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex + (isFlipped ? "-back" : "-front")}
-                initial={{ rotateY: isFlipped ? -180 : 0, opacity: 0 }}
-                animate={{ rotateY: 0, opacity: 1 }}
-                exit={{ rotateY: isFlipped ? 180 : -180, opacity: 0 }}
-                transition={{ duration: 0.1 }}
-                className="absolute inset-0"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <Card className="w-full h-full flex flex-col items-center justify-center p-12 bg-white dark:bg-gray-800 shadow-2xl hover:shadow-3xl transition-shadow border-4 border-japan-indigo dark:border-indigo-700 relative overflow-hidden">
-                  {/* Washi paper texture overlay */}
-                  <div className="absolute inset-0 bg-seigaiha opacity-5"></div>
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-japan-indigo rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold font-japanese-serif text-2xl">
-                      語
-                    </span>
-                  </div>
+        <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
+          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
+            <div
+              className="h-full bg-gradient-to-r from-japan-indigo to-japan-red transition-all"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
 
+          {!current ? (
+            <div className="py-10 text-center text-gray-600 dark:text-gray-300">
+              Không có dữ liệu phù hợp bộ lọc hiện tại.
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <button
+                type="button"
+                onClick={() => setIsFlipped((prev) => !prev)}
+                className="w-full text-left"
+              >
+                <Card className="p-6 min-h-[260px] border-2 border-indigo-200 bg-white hover:shadow-md transition dark:bg-gray-900 dark:border-indigo-700">
                   {!isFlipped ? (
-                    // Front - Japanese term with traditional styling
-                    <div className="text-center space-y-6 relative z-10">
-                      {currentCard.image && (
-                        <div className="relative w-72 h-72 mx-auto mb-4 rounded-lg overflow-hidden shadow-xl border-4 border-japan-gold/30">
-                          <Image
-                            src={currentCard.image}
-                            alt={currentCard.term}
-                            fill
-                            className="object-cover"
-                            unoptimized
+                    <div className="flex gap-6 h-full">
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
+                          <span className="px-2 py-1 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-300 dark:bg-indigo-950 dark:text-indigo-300 dark:border-indigo-800">
+                            Slot {current.slot}
+                          </span>
+                          <span className="px-2 py-1 rounded-full border bg-rose-50 text-rose-700 border-rose-300 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-800">
+                            {current.lesson}
+                          </span>
+                          <span className="px-2 py-1 rounded-full border bg-gray-50 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600">
+                            {posLabel(current.pos)}
+                          </span>
+                          {current.transitivity && (
+                            <span
+                              className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
+                            >
+                              {transitivityLabel(current.transitivity)}
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="flex-1">
+                          <p className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100">
+                            {current.term}
+                          </p>
+                          {current.reading && (
+                            <p
+                              className={`mt-2 text-xl md:text-2xl text-gray-600 dark:text-gray-300 transition ${
+                                isReadingBlurred
+                                  ? "blur-sm select-none"
+                                  : "blur-none"
+                              }`}
+                            >
+                              {current.reading}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      {current.image && (
+                        <div className="flex items-center justify-end">
+                          <img
+                            src={current.image}
+                            alt={current.term}
+                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none";
+                            }}
                           />
                         </div>
                       )}
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-japan-indigo/5 blur-3xl"></div>
-                        <h2 className="text-7xl font-black font-japanese-serif text-japan-charcoal dark:text-white leading-tight relative">
-                          {currentCard.term}
-                        </h2>
-                      </div>
                     </div>
                   ) : (
-                    // Back - Vietnamese definition with traditional style
-                    <div className="text-center space-y-6 relative z-10">
-                      <div className="bg-gradient-to-br from-japan-green/20 via-japan-cream to-japan-green/10 dark:from-green-900/40 dark:via-gray-700 dark:to-green-900/20 border-4 border-japan-green dark:border-green-600 rounded-3xl p-10 shadow-2xl">
-                        {/* Vietnamese meaning - highlighted */}
-                        <div className="mb-6 bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-japan-green/40">
-                          <div className="flex items-center justify-center gap-3 mb-3">
-                            <span className="text-4xl">🇻🇳</span>
-                            <div className="h-1 flex-1 bg-gradient-to-r from-transparent via-japan-green to-transparent rounded"></div>
-                            <span className="text-4xl">📖</span>
-                          </div>
-                          <h2 className="text-6xl font-black text-japan-green dark:text-green-400 leading-relaxed font-japanese text-center">
-                            {currentCard.definition}
-                          </h2>
+                    <div className="flex gap-6 h-full">
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
+                          <span className="px-2 py-1 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-300 dark:bg-indigo-950 dark:text-indigo-300 dark:border-indigo-800">
+                            Slot {current.slot}
+                          </span>
+                          <span className="px-2 py-1 rounded-full border bg-rose-50 text-rose-700 border-rose-300 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-800">
+                            {current.lesson}
+                          </span>
+                          {current.transitivity && (
+                            <span
+                              className={`px-2 py-1 rounded-full border ${transitivityClass(current.transitivity)}`}
+                            >
+                              {transitivityLabel(current.transitivity)}
+                            </span>
+                          )}
                         </div>
 
-                        {/* Japanese term - reference */}
-                        <div className="pt-6 border-t-4 border-japan-gold/50 dark:border-yellow-600/50">
-                          <div className="bg-japan-indigo/10 dark:bg-indigo-900/30 rounded-xl p-6 border-2 border-japan-indigo/30">
-                            <p className="text-sm font-semibold text-japan-charcoal/60 dark:text-gray-400 mb-2 text-center font-japanese">
-                              Từ tiếng Nhật
-                            </p>
-                            <p className="text-5xl text-japan-charcoal dark:text-white font-black font-japanese-serif text-center tracking-wider">
-                              {currentCard.term}
-                            </p>
-                          </div>
+                        <div className="flex-1">
+                          <p className="text-3xl md:text-4xl font-semibold text-emerald-700 dark:text-emerald-300">
+                            {current.definition}
+                          </p>
                         </div>
                       </div>
+
+                      {current.image && (
+                        <div className="flex items-center justify-end">
+                          <img
+                            src={current.image}
+                            alt={current.term}
+                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none";
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
                   )}
                 </Card>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-        </div>
+              </button>
 
-        {/* Navigation */}
-        <div className="flex justify-between items-center mb-10">
-          <Button
-            onClick={handlePrevious}
-            disabled={currentIndex === 0}
-            size="lg"
-            variant="outline"
-            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
-          >
-            <ChevronLeft className="w-6 h-6" />
-            Trước
-          </Button>
-
-          {/* Mazii lookup */}
-          <a
-            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(currentCard.term)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              size="lg"
-              variant="outline"
-              className="gap-2 px-6 py-5 text-base font-semibold shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800 border-japan-green dark:border-green-700 hover:bg-japan-cream dark:hover:bg-gray-700 text-japan-green dark:text-green-400 font-japanese"
-            >
-              <BookOpen className="w-5 h-5" />
-              Giải nghĩa trên Mazii
-            </Button>
-          </a>
-
-          <Button
-            onClick={handleNext}
-            disabled={currentIndex === cards.length - 1}
-            size="lg"
-            variant="outline"
-            className="gap-2 px-6 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 bg-white dark:bg-gray-800 border-japan-indigo dark:border-indigo-700 hover:bg-japan-cream dark:hover:bg-gray-700 font-japanese"
-          >
-            Sau
-            <ChevronRight className="w-6 h-6" />
-          </Button>
-        </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-8 grid grid-cols-3 gap-6 mb-16"
-        >
-          <Card className="p-6 text-center bg-gradient-to-br from-japan-indigo/10 to-japan-indigo/20 dark:from-indigo-950/30 dark:to-indigo-900/30 border-2 border-japan-indigo dark:border-indigo-700 shadow-lg hover:shadow-xl transition-shadow">
-            <p className="text-4xl font-bold text-japan-indigo mb-2 font-japanese-serif">
-              {cards.length}
-            </p>
-            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
-              Tổng từ
-            </p>
-          </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 border-2 border-japan-green dark:border-green-700 shadow-lg hover:shadow-xl transition-shadow">
-            <p className="text-4xl font-bold text-japan-green mb-2 font-japanese-serif">
-              {currentIndex + 1}
-            </p>
-            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
-              Đang học
-            </p>
-          </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/30 dark:to-orange-900/30 border-2 border-japan-gold dark:border-orange-700 shadow-lg hover:shadow-xl transition-shadow">
-            <p className="text-4xl font-bold text-japan-gold mb-2 font-japanese-serif">
-              {cards.length - currentIndex - 1}
-            </p>
-            <p className="text-base font-semibold text-japan-charcoal dark:text-gray-300 font-japanese">
-              Còn lại
-            </p>
-          </Card>
-        </motion.div>
-
-        {/* Divider */}
-        <div className="relative mb-12">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t-2 border-japan-gold/30 dark:border-yellow-700/30"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <span className="bg-japan-cream dark:bg-gray-800 px-6 py-2 text-xl font-bold text-japan-charcoal dark:text-gray-300 rounded-full shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
-              📖 Danh sách đầy đủ
-            </span>
-          </div>
-        </div>
-
-        {/* Vocabulary List */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-        >
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-3xl font-bold text-japan-charcoal dark:text-white font-japanese-serif">
-              📚 Danh sách từ vựng
-            </h2>
-            <span className="text-lg font-semibold text-japan-charcoal dark:text-gray-300 bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-md border-2 border-japan-gold/30 dark:border-yellow-700/30 font-japanese">
-              {cards.length} từ
-            </span>
-          </div>
-
-          <div className="space-y-4">
-            {cards.map((card: VocabCard, index: number) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.005 }}
-                ref={(el) => {
-                  cardRefs.current[index] = el;
-                }}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setIsFlipped(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                <Card
-                  className={`p-8 hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1 bg-white dark:bg-gray-800 ${
-                    index === currentIndex
-                      ? "border-4 border-japan-indigo bg-gradient-to-r from-japan-indigo/10 to-japan-green/10 dark:from-indigo-950/50 dark:to-green-950/50 shadow-lg"
-                      : "border-2 border-gray-200 dark:border-gray-700 hover:border-japan-indigo/50 dark:hover:border-indigo-700"
-                  }`}
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setCurrentIndex((prev) => Math.max(prev - 1, 0));
+                    setIsFlipped(false);
+                  }}
+                  disabled={currentIndex === 0}
+                  className="gap-2"
                 >
-                  <div className="flex items-center gap-8">
-                    {/* Number Badge */}
-                    <div
-                      className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl shadow-lg ${
-                        index === currentIndex
-                          ? "bg-japan-indigo text-white"
-                          : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
-                      }`}
-                    >
-                      {index + 1}
-                    </div>
+                  <ChevronLeft className="w-4 h-4" />
+                  Trước
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsFlipped((prev) => !prev)}
+                >
+                  Lật thẻ
+                </Button>
+                <a
+                  href={`https://mazii.net/vi-VN/search/kanji/javi/${encodeURIComponent(current.term)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline">Giải nghĩa</Button>
+                </a>
+                <Button
+                  variant={isReadingBlurred ? "outline" : "default"}
+                  onClick={() => setIsReadingBlurred((prev) => !prev)}
+                  disabled={!current?.reading}
+                >
+                  {isReadingBlurred ? "Mở reading" : "Làm mờ reading"}
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setCurrentIndex((prev) =>
+                      Math.min(prev + 1, Math.max(deck.length - 1, 0)),
+                    );
+                    setIsFlipped(false);
+                  }}
+                  disabled={currentIndex >= deck.length - 1}
+                  className="gap-2"
+                >
+                  Sau
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </Card>
 
-                    {/* Image */}
-                    {card.image && (
-                      <div className="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-3 border-japan-gold/40">
-                        <Image
-                          src={card.image}
-                          alt={card.term}
-                          fill
-                          className="object-cover"
-                          unoptimized
-                        />
-                      </div>
-                    )}
-
-                    {/* Content */}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-4xl font-black text-japan-charcoal dark:text-white mb-2 leading-tight font-japanese-serif tracking-wide">
-                        {card.term}
-                      </h3>
-                      <p className="text-2xl text-japan-charcoal/90 dark:text-gray-300 font-semibold font-japanese leading-relaxed">
-                        {card.definition}
-                      </p>
-                    </div>
-
-                    {/* Arrow Indicator */}
-                    {index === currentIndex && (
-                      <div className="flex-shrink-0">
-                        <div className="bg-japan-indigo text-white p-2 rounded-full">
-                          <ChevronRight className="w-6 h-6" />
+        <Card className="p-5 bg-white/95 dark:bg-gray-800/95">
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+            Danh sách theo Slot/Bài
+          </h2>
+          <div
+            ref={groupedListRef}
+            className="space-y-4 max-h-[520px] overflow-auto pr-2"
+          >
+            {grouped.map((group) => (
+              <div
+                key={group.title}
+                className="border rounded-lg overflow-hidden dark:border-gray-700"
+              >
+                <div className="px-3 py-2 bg-indigo-50 border-b text-sm font-semibold text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 dark:border-indigo-800">
+                  {group.title}
+                </div>
+                <div className="divide-y dark:divide-gray-700">
+                  {group.items.map((item) => {
+                    const idx = deck.findIndex((x) => x.id === item.id);
+                    const active = idx === currentIndex;
+                    return (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => {
+                          if (idx >= 0) {
+                            setCurrentIndex(idx);
+                            setIsFlipped(false);
+                          }
+                        }}
+                        className={`w-full text-left px-3 py-2 hover:bg-rose-50 dark:hover:bg-rose-900/30 transition ${
+                          active
+                            ? "bg-rose-100 dark:bg-rose-900/40"
+                            : "bg-white dark:bg-gray-900"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="min-w-0">
+                            <p className="font-bold text-xl md:text-2xl leading-tight truncate text-gray-900 dark:text-gray-100">
+                              {item.term}
+                            </p>
+                            {item.reading && (
+                              <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                                {item.reading}
+                              </p>
+                            )}
+                            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 truncate mt-1">
+                              {item.definition}
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 flex-wrap justify-end">
+                            <span className="text-xs px-2 py-1 rounded-full border bg-gray-50 text-gray-700 border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600">
+                              {posLabel(item.pos)}
+                            </span>
+                            {item.transitivity && (
+                              <span
+                                className={`text-xs px-2 py-1 rounded-full border ${transitivityClass(item.transitivity)}`}
+                              >
+                                {transitivityLabel(item.transitivity)}
+                              </span>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              </motion.div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </Card>
       </div>
-
-      {/* Floating scroll to current card button */}
-      <AnimatePresence>
-        {showScrollButton && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed bottom-8 right-8 z-50"
-          >
-            <Button
-              onClick={scrollToCurrentCard}
-              size="lg"
-              className="rounded-full w-16 h-16 shadow-2xl bg-japan-indigo hover:bg-japan-indigo/90 border-4 border-white group relative"
-              title="Cuộn đến từ đang học"
-            >
-              <ArrowDown className="w-7 h-7 text-white animate-bounce" />
-              <span className="absolute -top-12 right-0 bg-japan-charcoal text-white px-3 py-1 rounded-lg text-sm font-japanese opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
-                Cuộn đến từ đang học
-              </span>
-            </Button>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
