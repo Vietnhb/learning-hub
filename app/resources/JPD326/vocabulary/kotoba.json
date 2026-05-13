@@ -1,1718 +1,1718 @@
 [
   {
-    "id": "s01-l01-001",
+    "id": "l01-s01-001",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "気候",
     "reading": "きこう",
     "definition": "khí hậu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/X4BcseFBbsreUMI-yIxpQA.jpg"
+    "image": "https://o.quizlet.com/i/X4BcseFBbsreUMI-yIxpQA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-002",
+    "id": "l01-s01-002",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "コーナー",
     "reading": "こーなー",
     "definition": "góc, khu vực",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/ynwkXbeOR6EK2tXXcXOoXg.png"
+    "image": "https://o.quizlet.com/ynwkXbeOR6EK2tXXcXOoXg.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-003",
+    "id": "l01-s01-003",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "南北",
     "reading": "なんぼく",
     "definition": "nam bắc",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/8pOWWhJfMZ4i3KoVgu7Xww.png"
+    "image": "https://o.quizlet.com/8pOWWhJfMZ4i3KoVgu7Xww.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-004",
+    "id": "l01-s01-004",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "島",
     "reading": "しま",
     "definition": "đảo",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/ifc8TpzCvzosxpDdKuKYqw.jpg"
+    "image": "https://o.quizlet.com/i/ifc8TpzCvzosxpDdKuKYqw.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-005",
+    "id": "l01-s01-005",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "山林",
     "reading": "さんりん",
     "definition": "rừng núi",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/zy6dS-1-mtw.-IlTmz6xcQ.jpg"
+    "image": "https://o.quizlet.com/zy6dS-1-mtw.-IlTmz6xcQ.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-006",
+    "id": "l01-s01-006",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地形",
     "reading": "ちけい",
     "definition": "địa hình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/ScX1-RxaQVuYmD5OfaPTYg.jpg"
+    "image": "https://o.quizlet.com/i/ScX1-RxaQVuYmD5OfaPTYg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-007",
+    "id": "l01-s01-007",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "温帯",
     "reading": "おんたい",
     "definition": "ôn đới",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/v91Rh4IeeZqJVf6ji1LzFA.jpg"
+    "image": "https://o.quizlet.com/v91Rh4IeeZqJVf6ji1LzFA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-008",
+    "id": "l01-s01-008",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "位置する",
     "reading": "いちする",
     "definition": "tọa lạc, nằm ở",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/TlGKTCtk1F8isiPPX.0hyw.png"
+    "image": "https://o.quizlet.com/TlGKTCtk1F8isiPPX.0hyw.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-009",
+    "id": "l01-s01-009",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "蒸し暑い",
     "reading": "むしあつい",
     "definition": "oi bức, nóng ẩm",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/pyppoYDQvXUO-4XuMk.SDg.png"
+    "image": "https://o.quizlet.com/pyppoYDQvXUO-4XuMk.SDg.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-010",
+    "id": "l01-s01-010",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "太平洋側",
     "reading": "たいへいようがわ",
     "definition": "phía Thái Bình Dương",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/ySCegfKr1Xy4LJk3Aga0jw.png"
+    "image": "https://o.quizlet.com/ySCegfKr1Xy4LJk3Aga0jw.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-011",
+    "id": "l01-s01-011",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "ペンション",
     "reading": "ぺんしょん",
     "definition": "nhà nghỉ kiểu Âu",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://cdn.jalan.jp/jalan/images/pict2L/Y8/Y318728/Y318728175.jpg"
+    "image": "https://cdn.jalan.jp/jalan/images/pict2L/Y8/Y318728/Y318728175.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-012",
+    "id": "l01-s01-012",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "割合",
     "reading": "わりあい",
     "definition": "tỷ lệ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/DuLxC6J8MVBVe4yaq7Y8bA.jpg"
+    "image": "https://o.quizlet.com/DuLxC6J8MVBVe4yaq7Y8bA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-013",
+    "id": "l01-s01-013",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "例年",
     "reading": "れいねん",
     "definition": "hàng năm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/Scmxo.lllTYqW4jWrCBLFg.jpg"
+    "image": "https://o.quizlet.com/Scmxo.lllTYqW4jWrCBLFg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-014",
+    "id": "l01-s01-014",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "連なる",
     "reading": "つらなる",
     "definition": "nối tiếp, kéo dài",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/H0GzBc.PCw7HS.a9JXiKJw.jpg"
+    "image": "https://o.quizlet.com/H0GzBc.PCw7HS.a9JXiKJw.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-015",
+    "id": "l01-s01-015",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "恵まれる",
     "reading": "めぐまれる",
     "definition": "được ưu đãi, được ban cho",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/e8M7MzREtN55ipYJqiiMag.jpg"
+    "image": "https://o.quizlet.com/e8M7MzREtN55ipYJqiiMag.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-016",
+    "id": "l01-s01-016",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "展望台",
     "reading": "てんぼうだい",
     "definition": "đài quan sát",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/SnHOnKT1qtm3hUXKvgzbAg.jpg"
+    "image": "https://o.quizlet.com/SnHOnKT1qtm3hUXKvgzbAg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-017",
+    "id": "l01-s01-017",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "美しい",
     "reading": "うつくしい",
     "definition": "đẹp",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/qXY2aU6ZK13bJkhsrlarUg.jpg"
+    "image": "https://o.quizlet.com/qXY2aU6ZK13bJkhsrlarUg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-018",
+    "id": "l01-s01-018",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "平野",
     "reading": "へいや",
     "definition": "đồng bằng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/mf2AU.w7cynwe.7UtUQUeA.png"
+    "image": "https://o.quizlet.com/mf2AU.w7cynwe.7UtUQUeA.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-019",
+    "id": "l01-s01-019",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "庭",
     "reading": "にわ",
     "definition": "vườn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/yod03itYdKvNXiISEfv4Cg.jpg"
+    "image": "https://o.quizlet.com/yod03itYdKvNXiISEfv4Cg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-020",
+    "id": "l01-s01-020",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "家庭",
     "reading": "かてい",
     "definition": "gia đình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/yod03itYdKvNXiISEfv4Cg.jpg"
+    "image": "https://o.quizlet.com/yod03itYdKvNXiISEfv4Cg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-021",
+    "id": "l01-s01-021",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "石垣",
     "reading": "いしがき",
     "definition": "tường đá",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/8jiSLrSaP.4D7mNyGnwYOA.jpg"
+    "image": "https://o.quizlet.com/8jiSLrSaP.4D7mNyGnwYOA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-022",
+    "id": "l01-s01-022",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "名園",
     "reading": "めいえん",
     "definition": "danh viên, khu vườn nổi tiếng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/frRNhWN2lMEnhOZE4uOcpg.jpg"
+    "image": "https://o.quizlet.com/frRNhWN2lMEnhOZE4uOcpg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-023",
+    "id": "l01-s01-023",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "囲む",
     "reading": "かこむ",
     "definition": "bao quanh",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/TF8-LH11A6E3iMi3XERFZg.jpg"
+    "image": "https://o.quizlet.com/TF8-LH11A6E3iMi3XERFZg.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-024",
+    "id": "l01-s01-024",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "複雑",
     "reading": "ふくざつ",
     "definition": "phức tạp",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/gg8Go6PdxUGgK97g9KwmOw.jpg"
+    "image": "https://o.quizlet.com/gg8Go6PdxUGgK97g9KwmOw.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-025",
+    "id": "l01-s01-025",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地域",
     "reading": "ちいき",
     "definition": "khu vực",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/mrqRL5LydqdZdL6T1OKslg.png"
+    "image": "https://o.quizlet.com/mrqRL5LydqdZdL6T1OKslg.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-026",
+    "id": "l01-s01-026",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "温帯",
     "reading": "おんたい",
     "definition": "ôn đới",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/v91Rh4IeeZqJVf6ji1LzFA.jpg"
+    "image": "https://o.quizlet.com/v91Rh4IeeZqJVf6ji1LzFA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-027",
+    "id": "l01-s01-027",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "乾燥する",
     "reading": "かんそうする",
     "definition": "khô hanh",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/1rE7.6IXgnJ5zYIVMzmLGw.png"
+    "image": "https://o.quizlet.com/1rE7.6IXgnJ5zYIVMzmLGw.png",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-028",
+    "id": "l01-s01-028",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "乾く",
     "reading": "かわく",
     "definition": "khô",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i3KsVhRHC.YQ1RiEk63JsA.jpg"
+    "image": "https://o.quizlet.com/i3KsVhRHC.YQ1RiEk63JsA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-029",
+    "id": "l01-s01-029",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "曇り",
     "reading": "くもり",
     "definition": "trời nhiều mây",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/n9A0E8MisN4R3xbRpcIBaA.jpg"
+    "image": "https://o.quizlet.com/i/n9A0E8MisN4R3xbRpcIBaA.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-030",
+    "id": "l01-s01-030",
     "slot": 1,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "平均",
     "reading": "へいきん",
     "definition": "trung bình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/S9VoEdtkKzpQlkqYX2eV1A.jpg"
+    "image": "https://o.quizlet.com/S9VoEdtkKzpQlkqYX2eV1A.jpg",
+    "slotOrder": 1
   },
   {
-    "id": "s01-l01-031",
+    "id": "l01-s02-031",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "音声",
     "reading": "おんせい",
     "definition": "âm thanh, giọng nói",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/UX8zYBCz2kUR6J1dUHt9Kg.jpg"
+    "image": "https://o.quizlet.com/UX8zYBCz2kUR6J1dUHt9Kg.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-032",
+    "id": "l01-s02-032",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "瓦",
     "reading": "かわら",
     "definition": "ngói",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/41LCoDykNTi1c5LcnpgFww.jpg"
+    "image": "https://o.quizlet.com/i/41LCoDykNTi1c5LcnpgFww.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-033",
+    "id": "l01-s02-033",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "軒",
     "reading": "のき",
     "definition": "mái hiên",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/Er-ky59xwXCidkvdyneilw.jpg"
+    "image": "https://o.quizlet.com/i/Er-ky59xwXCidkvdyneilw.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-034",
+    "id": "l01-s02-034",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "塀",
     "reading": "へい",
     "definition": "tường rào",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/xICjToMmfq60nQtHiQ.Vpw.jpg"
+    "image": "https://o.quizlet.com/xICjToMmfq60nQtHiQ.Vpw.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-035",
+    "id": "l01-s02-035",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "石",
     "reading": "いし",
     "definition": "đá",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/nF0Zc5YS9woQFGnuehPDUQ.jpg"
+    "image": "https://o.quizlet.com/nF0Zc5YS9woQFGnuehPDUQ.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-036",
+    "id": "l01-s02-036",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "日差し",
     "reading": "ひざし",
     "definition": "ánh nắng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/VVN3g7Bomds1VJhTnGAETQ.png"
+    "image": "https://o.quizlet.com/VVN3g7Bomds1VJhTnGAETQ.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-037",
+    "id": "l01-s02-037",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "固める",
     "reading": "かためる",
     "definition": "làm cứng, cố định",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/EeLJ-AucK5RWxyCv6bTuMQ.jpg"
+    "image": "https://o.quizlet.com/EeLJ-AucK5RWxyCv6bTuMQ.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-038",
+    "id": "l01-s02-038",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "鉄筋",
     "reading": "てっきん",
     "definition": "cốt thép",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/QPH6q-rljfn8tVfLj3wtQg.png"
+    "image": "https://o.quizlet.com/QPH6q-rljfn8tVfLj3wtQg.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-039",
+    "id": "l01-s02-039",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "筋肉",
     "reading": "きんにく",
     "definition": "cơ bắp",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/yqGIHy4M3TvzJO1qOa0VaA.jpg"
+    "image": "https://o.quizlet.com/yqGIHy4M3TvzJO1qOa0VaA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-040",
+    "id": "l01-s02-040",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "気象",
     "reading": "きしょう",
     "definition": "khí tượng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/1cCsJX6HERmQsLFP84Db5w.jpg"
+    "image": "https://o.quizlet.com/1cCsJX6HERmQsLFP84Db5w.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-041",
+    "id": "l01-s02-041",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "小論文",
     "reading": "しょうろんぶん",
     "definition": "bài tiểu luận ngắn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/uhUbpxcYLjjUTK4R7OWi4g.png"
+    "image": "https://o.quizlet.com/uhUbpxcYLjjUTK4R7OWi4g.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-042",
+    "id": "l01-s02-042",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "畳み",
     "reading": "たたみ",
     "definition": "chiếu tatami",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/OhnR-Yzw1fO3Akj7pIjePg.png"
+    "image": "https://o.quizlet.com/OhnR-Yzw1fO3Akj7pIjePg.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-043",
+    "id": "l01-s02-043",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "畳む",
     "reading": "たたむ",
     "definition": "gấp lại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/VRRxlItwSqIbjlDMT9lTCQ.jpg"
+    "image": "https://o.quizlet.com/VRRxlItwSqIbjlDMT9lTCQ.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-044",
+    "id": "l01-s02-044",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "現金",
     "reading": "げんきん",
     "definition": "tiền mặt",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/si0bogUysn-VTHLYFD4y5A.jpg"
+    "image": "https://o.quizlet.com/si0bogUysn-VTHLYFD4y5A.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-045",
+    "id": "l01-s02-045",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "現代",
     "reading": "げんだい",
     "definition": "thời hiện đại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/QM5h1ojX6PI6te.gRooirw.png"
+    "image": "https://o.quizlet.com/QM5h1ojX6PI6te.gRooirw.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-046",
+    "id": "l01-s02-046",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "電子マネー",
     "reading": "でんしまねー",
     "definition": "tiền điện tử",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/hI-M.7XGDv9-60WRuaCyow.png"
+    "image": "https://o.quizlet.com/hI-M.7XGDv9-60WRuaCyow.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-047",
+    "id": "l01-s02-047",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "セメント",
     "reading": "せめんと",
     "definition": "xi măng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/OMr5bZDhwgNdjl49yCJ4NA.jpg"
+    "image": "https://o.quizlet.com/OMr5bZDhwgNdjl49yCJ4NA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-048",
+    "id": "l01-s02-048",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "コンクリート",
     "reading": "こんくりーと",
     "definition": "bê tông",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/xiCI-UM9VKc0MTidMK-zgg.png"
+    "image": "https://o.quizlet.com/xiCI-UM9VKc0MTidMK-zgg.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-049",
+    "id": "l01-s02-049",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "フローリング",
     "reading": "ふろーりんぐ",
     "definition": "sàn gỗ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/s8IS2cTljIWnQzE.rSrhsA.jpg"
+    "image": "https://o.quizlet.com/s8IS2cTljIWnQzE.rSrhsA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-050",
+    "id": "l01-s02-050",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "しっくい",
     "reading": "しっくい",
     "definition": "vữa trát tường",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/eXwSZfQPG7TsVu0Gc9Rf2w.jpg"
+    "image": "https://o.quizlet.com/eXwSZfQPG7TsVu0Gc9Rf2w.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-051",
+    "id": "l01-s02-051",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "屋根",
     "reading": "やね",
     "definition": "mái nhà",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/Qt-Z3hz2O5UOVw8XXLFALQ.jpg"
+    "image": "https://o.quizlet.com/Qt-Z3hz2O5UOVw8XXLFALQ.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-052",
+    "id": "l01-s02-052",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "床",
     "reading": "ゆか",
     "definition": "sàn nhà",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/Z-pG9Db4fNaxVKqPyA7bQA.jpg"
+    "image": "https://o.quizlet.com/i/Z-pG9Db4fNaxVKqPyA7bQA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-053",
+    "id": "l01-s02-053",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "柱",
     "reading": "はしら",
     "definition": "cột, trụ",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/fNmsQZahy7R.2W9Q0vfZYA.jpg"
+    "image": "https://o.quizlet.com/fNmsQZahy7R.2W9Q0vfZYA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-054",
+    "id": "l01-s02-054",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "天井",
     "reading": "てんじょう",
     "definition": "trần nhà",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/uyaRnDblM1rcSd.vSnBCzg.jpg"
+    "image": "https://o.quizlet.com/uyaRnDblM1rcSd.vSnBCzg.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-055",
+    "id": "l01-s02-055",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "壁",
     "reading": "かべ",
     "definition": "tường",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/XtpptvohJpy06XcRRPJiTg.jpg"
+    "image": "https://o.quizlet.com/XtpptvohJpy06XcRRPJiTg.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-056",
+    "id": "l01-s02-056",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "金属",
     "reading": "きんぞく",
     "definition": "kim loại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/a4T-6-6C95vBauuqOCCZDg.jpg"
+    "image": "https://o.quizlet.com/a4T-6-6C95vBauuqOCCZDg.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-057",
+    "id": "l01-s02-057",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "光",
     "reading": "ひかり",
     "definition": "ánh sáng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/GGeQSYFduum3wYFnwtbngA.jpg"
+    "image": "https://o.quizlet.com/GGeQSYFduum3wYFnwtbngA.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-058",
+    "id": "l01-s02-058",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "備える",
     "reading": "そなえる",
     "definition": "trang bị, chuẩn bị",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/kq7K3wq-xp-KCSP1ETmHgw.jpg"
+    "image": "https://o.quizlet.com/kq7K3wq-xp-KCSP1ETmHgw.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-059",
+    "id": "l01-s02-059",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "加える",
     "reading": "くわえる",
     "definition": "thêm vào",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/52AAir8Px-bAfxuEpSKIoA.png"
+    "image": "https://o.quizlet.com/52AAir8Px-bAfxuEpSKIoA.png",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-060",
+    "id": "l01-s02-060",
     "slot": 2,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "工夫",
     "reading": "くふう",
     "definition": "sự cải tiến, sáng tạo",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/Gs4aHxm85ziLaF.U-8krhQ.jpg"
+    "image": "https://o.quizlet.com/Gs4aHxm85ziLaF.U-8krhQ.jpg",
+    "slotOrder": 2
   },
   {
-    "id": "s01-l01-061",
+    "id": "l01-s03-061",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "体調",
     "reading": "たいちょう",
     "definition": "thể trạng, tình trạng sức khỏe",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/k1KvE42K6h6rH3N.erp3cQ.jpg"
+    "image": "https://o.quizlet.com/k1KvE42K6h6rH3N.erp3cQ.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-062",
+    "id": "l01-s03-062",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "調子",
     "reading": "ちょうし",
     "definition": "trạng thái, tình hình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/G5g6ZN8yQpdLnFu8puy3-Q.jpg"
+    "image": "https://o.quizlet.com/i/G5g6ZN8yQpdLnFu8puy3-Q.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-063",
+    "id": "l01-s03-063",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "調査",
     "reading": "ちょうさ",
     "definition": "điều tra, khảo sát",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/-EL-q2lVp4bZwcdkbOj4Xw.jpg"
+    "image": "https://o.quizlet.com/-EL-q2lVp4bZwcdkbOj4Xw.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-064",
+    "id": "l01-s03-064",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "和菓子",
     "reading": "わがし",
     "definition": "bánh ngọt Nhật",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/VfABSOe72JajPPRJTEz1fw.jpg"
+    "image": "https://o.quizlet.com/VfABSOe72JajPPRJTEz1fw.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-065",
+    "id": "l01-s03-065",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "崩す",
     "reading": "くずす",
     "definition": "làm hỏng, phá vỡ",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/umtlk6E.pkKc8qQeMg8now.jpg"
+    "image": "https://o.quizlet.com/umtlk6E.pkKc8qQeMg8now.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-066",
+    "id": "l01-s03-066",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "港",
     "reading": "みなと",
     "definition": "cảng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/GG8HgmW7r91WjCuKUSEWPQ.jpg"
+    "image": "https://o.quizlet.com/i/GG8HgmW7r91WjCuKUSEWPQ.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-067",
+    "id": "l01-s03-067",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "空港",
     "reading": "くうこう",
     "definition": "sân bay",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/DugqxT3pHtpEMWVpazunnA.png"
+    "image": "https://o.quizlet.com/DugqxT3pHtpEMWVpazunnA.png",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-068",
+    "id": "l01-s03-068",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "栄える",
     "reading": "さかえる",
     "definition": "phồn thịnh, phát triển",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/F41FCh.MJfjsE8x7HybNtQ.jpg"
+    "image": "https://o.quizlet.com/F41FCh.MJfjsE8x7HybNtQ.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-069",
+    "id": "l01-s03-069",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "栄養",
     "reading": "えいよう",
     "definition": "dinh dưỡng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/rYrpSCNrU1LdQbYFZI30SQ.jpg"
+    "image": "https://o.quizlet.com/rYrpSCNrU1LdQbYFZI30SQ.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-070",
+    "id": "l01-s03-070",
     "slot": 3,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "食欲",
     "reading": "しょくよく",
     "definition": "cảm giác thèm ăn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/S2eJhDWfLKx6gG2hQp-aBA.jpg"
+    "image": "https://o.quizlet.com/S2eJhDWfLKx6gG2hQp-aBA.jpg",
+    "slotOrder": 3
   },
   {
-    "id": "s01-l01-071",
+    "id": "l01-s04-071",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "現在",
     "reading": "げんざい",
     "definition": "hiện tại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/UfEUPAON1V.aeiV9ZHXwlQ.jpg"
+    "image": "https://o.quizlet.com/UfEUPAON1V.aeiV9ZHXwlQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-072",
+    "id": "l01-s04-072",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "人口",
     "reading": "じんこう",
     "definition": "dân số",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/i/KKgTcbGu4-1oP2GTxcKpkg.jpg"
+    "image": "https://o.quizlet.com/i/KKgTcbGu4-1oP2GTxcKpkg.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-073",
+    "id": "l01-s04-073",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "都市",
     "reading": "とし",
     "definition": "thành phố",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/xSiS7wrtkPdfGe2FRFcOpw.jpg"
+    "image": "https://o.quizlet.com/xSiS7wrtkPdfGe2FRFcOpw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-074",
+    "id": "l01-s04-074",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "都会",
     "reading": "とかい",
     "definition": "đô thị",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/DNZRUuAr.jMYaI5394DAPQ.jpg"
+    "image": "https://o.quizlet.com/DNZRUuAr.jMYaI5394DAPQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-075",
+    "id": "l01-s04-075",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "県庁",
     "reading": "けんちょう",
     "definition": "trụ sở tỉnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/-8XhfMq4ZQRL3fHeqRHp8Q.jpg"
+    "image": "https://o.quizlet.com/-8XhfMq4ZQRL3fHeqRHp8Q.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-076",
+    "id": "l01-s04-076",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "周辺",
     "reading": "しゅうへん",
     "definition": "vùng xung quanh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/iqjvIYaDi4Z7KPBHVzEOuA.png"
+    "image": "https://o.quizlet.com/iqjvIYaDi4Z7KPBHVzEOuA.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-077",
+    "id": "l01-s04-077",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地区",
     "reading": "ちく",
     "definition": "khu vực",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/nhkwYJRYNyS.x0nVZFWwwA.jpg"
+    "image": "https://o.quizlet.com/nhkwYJRYNyS.x0nVZFWwwA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-078",
+    "id": "l01-s04-078",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "商業",
     "reading": "しょうぎょう",
     "definition": "thương nghiệp",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/XFluf-GKGEFzfvFF0Ni2Eg.jpg"
+    "image": "https://o.quizlet.com/XFluf-GKGEFzfvFF0Ni2Eg.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-079",
+    "id": "l01-s04-079",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "砂浜",
     "reading": "すなはま",
     "definition": "bãi cát",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/iv-tdIYVouVy6WSRnnJaRQ.jpg"
+    "image": "https://o.quizlet.com/iv-tdIYVouVy6WSRnnJaRQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-080",
+    "id": "l01-s04-080",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "～年代",
     "reading": "～ねんだい",
     "definition": "thập niên ~",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/zgYWyonV9ejHwdoOaEDvMQ.jpg"
+    "image": "https://o.quizlet.com/zgYWyonV9ejHwdoOaEDvMQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-081",
+    "id": "l01-s04-081",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "中華街",
     "reading": "ちゅうかがい",
     "definition": "phố người Hoa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/t9vNHe4UbbDKGGxmwE2IIg.jpg"
+    "image": "https://o.quizlet.com/t9vNHe4UbbDKGGxmwE2IIg.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-082",
+    "id": "l01-s04-082",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "商店街",
     "reading": "しょうてんがい",
     "definition": "phố mua sắm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/lo1DLB3.-HlcpPvL79mJrA.jpg"
+    "image": "https://o.quizlet.com/lo1DLB3.-HlcpPvL79mJrA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-083",
+    "id": "l01-s04-083",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "都市",
     "reading": "とし",
     "definition": "thành phố",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/xSiS7wrtkPdfGe2FRFcOpw.jpg"
+    "image": "https://o.quizlet.com/xSiS7wrtkPdfGe2FRFcOpw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-084",
+    "id": "l01-s04-084",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "訪れる",
     "reading": "おとずれる",
     "definition": "ghé thăm",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/feeFKA6mXe8XknlMhl2VBQ.jpg"
+    "image": "https://o.quizlet.com/feeFKA6mXe8XknlMhl2VBQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-085",
+    "id": "l01-s04-085",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "訪問する",
     "reading": "ほうもんする",
     "definition": "thăm viếng",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/9gXDYsBFG680WXXjCohFtw.jpg"
+    "image": "https://o.quizlet.com/9gXDYsBFG680WXXjCohFtw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-086",
+    "id": "l01-s04-086",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "延びる",
     "reading": "のびる",
     "definition": "kéo dài",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/hLQfkvn5Qf8AK3JTjPod.w.png"
+    "image": "https://o.quizlet.com/hLQfkvn5Qf8AK3JTjPod.w.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-087",
+    "id": "l01-s04-087",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "伸びる",
     "reading": "のびる",
     "definition": "vươn dài, phát triển",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/.8HDw7ijjBM-OyPY7YYy3Q.jpg"
+    "image": "https://o.quizlet.com/.8HDw7ijjBM-OyPY7YYy3Q.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-088",
+    "id": "l01-s04-088",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "名づける",
     "reading": "なづける",
     "definition": "đặt tên",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/z5joZx5ZGE0oXUpBF.nWjQ.png"
+    "image": "https://o.quizlet.com/z5joZx5ZGE0oXUpBF.nWjQ.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-089",
+    "id": "l01-s04-089",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "村",
     "reading": "むら",
     "definition": "làng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/xqgsoyI1lIU.C6Q6quSsuA.jpg"
+    "image": "https://o.quizlet.com/xqgsoyI1lIU.C6Q6quSsuA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-090",
+    "id": "l01-s04-090",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "農村",
     "reading": "のうそん",
     "definition": "nông thôn",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/VhyhICuXxj99Ov2lmzNTmA.jpg"
+    "image": "https://o.quizlet.com/VhyhICuXxj99Ov2lmzNTmA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-091",
+    "id": "l01-s04-091",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "埋める",
     "reading": "うめる",
     "definition": "lấp, chôn",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/KX40Iy9ZXSChT-bJJpw8lw.png"
+    "image": "https://o.quizlet.com/KX40Iy9ZXSChT-bJJpw8lw.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-092",
+    "id": "l01-s04-092",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "掘る",
     "reading": "ほる",
     "definition": "đào",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/TmuiXHKXoXSNz3d0rYbGrw.jpg"
+    "image": "https://o.quizlet.com/TmuiXHKXoXSNz3d0rYbGrw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-093",
+    "id": "l01-s04-093",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "埋め立てる",
     "reading": "うめたてる",
     "definition": "lấn biển, lấp đất",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/B3LA-2KLYXIOKPYAPbAucQ.jpg"
+    "image": "https://o.quizlet.com/B3LA-2KLYXIOKPYAPbAucQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-094",
+    "id": "l01-s04-094",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "浜",
     "reading": "はま",
     "definition": "bãi biển",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/3rNjp-vxpIn5JPgPMnnmwg.jpg"
+    "image": "https://o.quizlet.com/3rNjp-vxpIn5JPgPMnnmwg.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-095",
+    "id": "l01-s04-095",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地名",
     "reading": "ちめい",
     "definition": "địa danh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/-vE68OYxGTvmC841Mq6.bQ.png"
+    "image": "https://o.quizlet.com/-vE68OYxGTvmC841Mq6.bQ.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-096",
+    "id": "l01-s04-096",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "風景",
     "reading": "ふうけい",
     "definition": "phong cảnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/8N.uTC3F5NJHy9Z7f7Um-w.jpg"
+    "image": "https://o.quizlet.com/8N.uTC3F5NJHy9Z7f7Um-w.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-097",
+    "id": "l01-s04-097",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "光景",
     "reading": "こうけい",
     "definition": "quang cảnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/W0XKepyccb1kM6qT4rwsAw.jpg"
+    "image": "https://o.quizlet.com/W0XKepyccb1kM6qT4rwsAw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-098",
+    "id": "l01-s04-098",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "景色",
     "reading": "けしき",
     "definition": "cảnh sắc",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/PRQOKoELhZEFpG5XY.FZYA.jpg"
+    "image": "https://o.quizlet.com/PRQOKoELhZEFpG5XY.FZYA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-099",
+    "id": "l01-s04-099",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "纏まる",
     "reading": "まとまる",
     "definition": "được thống nhất, được tổng hợp",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/i/qSUHGgU0rel4ShZUwm9d0w.jpg"
+    "image": "https://o.quizlet.com/i/qSUHGgU0rel4ShZUwm9d0w.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-100",
+    "id": "l01-s04-100",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "纏める",
     "reading": "まとめる",
     "definition": "tổng hợp, gom lại",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/i/qSUHGgU0rel4ShZUwm9d0w.jpg"
+    "image": "https://o.quizlet.com/i/qSUHGgU0rel4ShZUwm9d0w.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-101",
+    "id": "l01-s04-101",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地方",
     "reading": "ちほう",
     "definition": "địa phương, vùng miền",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/bzWtlaCAlGaYVQP9xQNk6A.jpg"
+    "image": "https://o.quizlet.com/bzWtlaCAlGaYVQP9xQNk6A.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-102",
+    "id": "l01-s04-102",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "名産品",
     "reading": "めいさんひん",
     "definition": "đặc sản nổi tiếng",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/iOT5wVVAvCG6RwqdYg2T3A.jpg"
+    "image": "https://o.quizlet.com/iOT5wVVAvCG6RwqdYg2T3A.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-103",
+    "id": "l01-s04-103",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "頑固",
     "reading": "がんこ",
     "definition": "cứng đầu",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/tBMZgSNmHwMdnfgNJlQjAQ.png"
+    "image": "https://o.quizlet.com/tBMZgSNmHwMdnfgNJlQjAQ.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-104",
+    "id": "l01-s04-104",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "職人",
     "reading": "しょくにん",
     "definition": "thợ thủ công",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/cE-W4Rj1CCA-TXZUm5qBNw.jpg"
+    "image": "https://o.quizlet.com/cE-W4Rj1CCA-TXZUm5qBNw.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-105",
+    "id": "l01-s04-105",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "海洋",
     "reading": "かいよう",
     "definition": "đại dương",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/bg7X4Ry8DgyMpQ3IWvNmmA.jpg"
+    "image": "https://o.quizlet.com/bg7X4Ry8DgyMpQ3IWvNmmA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-106",
+    "id": "l01-s04-106",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "生物",
     "reading": "せいぶつ",
     "definition": "sinh vật",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/et90HdBb2XHFilKBMMwNqw.png"
+    "image": "https://o.quizlet.com/et90HdBb2XHFilKBMMwNqw.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-107",
+    "id": "l01-s04-107",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "化石",
     "reading": "かせき",
     "definition": "hóa thạch",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/EQc6brV-13-yhMO8andu-g.jpg"
+    "image": "https://o.quizlet.com/EQc6brV-13-yhMO8andu-g.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-108",
+    "id": "l01-s04-108",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "辺り",
     "reading": "あたり",
     "definition": "xung quanh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/GfMIDhGQB6Zv90F2C7vBuA.jpg"
+    "image": "https://o.quizlet.com/GfMIDhGQB6Zv90F2C7vBuA.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-109",
+    "id": "l01-s04-109",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "産業",
     "reading": "さんぎょう",
     "definition": "công nghiệp, ngành nghề",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/8v3aENtF3vjaaOeoNHTZ6A.jpg"
+    "image": "https://o.quizlet.com/8v3aENtF3vjaaOeoNHTZ6A.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-110",
+    "id": "l01-s04-110",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "盛ん",
     "reading": "さかん",
     "definition": "phát triển mạnh, thịnh vượng",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/vJzyayV86wGZTz4PkXAoFQ.jpg"
+    "image": "https://o.quizlet.com/vJzyayV86wGZTz4PkXAoFQ.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-111",
+    "id": "l01-s04-111",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "企業",
     "reading": "きぎょう",
     "definition": "doanh nghiệp",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/Jol8rZ-teIBMcu4gd6UmMg.jpg"
+    "image": "https://o.quizlet.com/Jol8rZ-teIBMcu4gd6UmMg.jpg",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-112",
+    "id": "l01-s04-112",
     "slot": 4,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "発展",
     "reading": "はってん",
     "definition": "phát triển",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/9gQhLhD7f357Gybi82XBsA.png"
+    "image": "https://o.quizlet.com/9gQhLhD7f357Gybi82XBsA.png",
+    "slotOrder": 4
   },
   {
-    "id": "s01-l01-113",
+    "id": "l01-s05-113",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "特産物",
     "reading": "とくさんぶつ",
     "definition": "đặc sản",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/BUNwfotBdAdBVxJXwxSbFQ.jpg"
+    "image": "https://o.quizlet.com/BUNwfotBdAdBVxJXwxSbFQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-114",
+    "id": "l01-s05-114",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "空っ風",
     "reading": "からっかぜ",
     "definition": "gió khô",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/ukrKFOgweu2HwjnkklNmjA.png"
+    "image": "https://o.quizlet.com/ukrKFOgweu2HwjnkklNmjA.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-115",
+    "id": "l01-s05-115",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "吹く",
     "reading": "ふく",
     "definition": "thổi",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/i/AvV4bnukZ7QBscho4-nITw.jpg"
+    "image": "https://o.quizlet.com/i/AvV4bnukZ7QBscho4-nITw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-116",
+    "id": "l01-s05-116",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "湿る",
     "reading": "しめる",
     "definition": "ẩm",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/tHoryA0UeH3cp7wI7Oespg.png"
+    "image": "https://o.quizlet.com/tHoryA0UeH3cp7wI7Oespg.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-117",
+    "id": "l01-s05-117",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "湿気",
     "reading": "しっけ",
     "definition": "độ ẩm",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/075aZ2LbsHdB7XZ8ZU69Bw.jpg"
+    "image": "https://o.quizlet.com/075aZ2LbsHdB7XZ8ZU69Bw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-118",
+    "id": "l01-s05-118",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "風力",
     "reading": "ふうりょく",
     "definition": "sức gió",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/j.axxp79AT-Lh8J4HehtuA.jpg"
+    "image": "https://o.quizlet.com/j.axxp79AT-Lh8J4HehtuA.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-119",
+    "id": "l01-s05-119",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "凧揚げ",
     "reading": "たこあげ",
     "definition": "thả diều",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/zKMLIsjlL.HN1zGUVeFT8g.jpg"
+    "image": "https://o.quizlet.com/zKMLIsjlL.HN1zGUVeFT8g.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-120",
+    "id": "l01-s05-120",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "揚げる",
     "reading": "あげる",
     "definition": "nâng lên",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/DDeFL53M9syCXUeNtmFs4Q.jpg"
+    "image": "https://o.quizlet.com/DDeFL53M9syCXUeNtmFs4Q.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-121",
+    "id": "l01-s05-121",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "思い浮べる",
     "reading": "おもいうかべる",
     "definition": "gợi nhớ, hình dung",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/l4-IzLaqNMvIDvFtLMzpWA.jpg"
+    "image": "https://o.quizlet.com/l4-IzLaqNMvIDvFtLMzpWA.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-122",
+    "id": "l01-s05-122",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "越える",
     "reading": "こえる",
     "definition": "vượt qua",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/9A.Jr26uyX0MVqbELJw64g.jpg"
+    "image": "https://o.quizlet.com/9A.Jr26uyX0MVqbELJw64g.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-123",
+    "id": "l01-s05-123",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "超える",
     "reading": "こえる",
     "definition": "vượt quá",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/9A.Jr26uyX0MVqbELJw64g.jpg"
+    "image": "https://o.quizlet.com/9A.Jr26uyX0MVqbELJw64g.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-124",
+    "id": "l01-s05-124",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "快適",
     "reading": "かいてき",
     "definition": "thoải mái",
     "pos": "adjective",
     "transitivity": null,
-    "image": "https://o.quizlet.com/zqfyJfLtLwLKjkMT-tNuTw.jpg"
+    "image": "https://o.quizlet.com/zqfyJfLtLwLKjkMT-tNuTw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-125",
+    "id": "l01-s05-125",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "梅雨",
     "reading": "つゆ",
     "definition": "mùa mưa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/JsuREbT3.RaF9ksvmNauHw.jpg"
+    "image": "https://o.quizlet.com/JsuREbT3.RaF9ksvmNauHw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-126",
+    "id": "l01-s05-126",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "焼ける",
     "reading": "やける",
     "definition": "bị cháy, rám nắng",
     "pos": "verb",
     "transitivity": "intransitive",
-    "image": "https://o.quizlet.com/C82S6gN5e5Z6Tjs05hctdw.jpg"
+    "image": "https://o.quizlet.com/C82S6gN5e5Z6Tjs05hctdw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-127",
+    "id": "l01-s05-127",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "太陽",
     "reading": "たいよう",
     "definition": "mặt trời",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/EfcB.tgBwOuHhVvHgdJC7A.png"
+    "image": "https://o.quizlet.com/EfcB.tgBwOuHhVvHgdJC7A.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-128",
+    "id": "l01-s05-128",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "普及する",
     "reading": "ふきゅうする",
     "definition": "phổ biến",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/iqQIn94yhq55TKfcqU4xog.jpg"
+    "image": "https://o.quizlet.com/iqQIn94yhq55TKfcqU4xog.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-129",
+    "id": "l01-s05-129",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "魔除け",
     "reading": "まよけ",
     "definition": "bùa trừ tà",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/irW1ddQ-mwnwWVSV4TylWA.jpg"
+    "image": "https://o.quizlet.com/irW1ddQ-mwnwWVSV4TylWA.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-130",
+    "id": "l01-s05-130",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "打ち水",
     "reading": "うちみず",
     "definition": "tưới nước",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/JOLU.UpMWw6IuYkcma8pAA.png"
+    "image": "https://o.quizlet.com/JOLU.UpMWw6IuYkcma8pAA.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-131",
+    "id": "l01-s05-131",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "地面",
     "reading": "じめん",
     "definition": "mặt đất",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/aDrryw64.QrOEXxgzWR4YQ.jpg"
+    "image": "https://o.quizlet.com/aDrryw64.QrOEXxgzWR4YQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-132",
+    "id": "l01-s05-132",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "水をまく",
     "reading": "みずをまく",
     "definition": "rải nước, tưới nước",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/JOLU.UpMWw6IuYkcma8pAA.png"
+    "image": "https://o.quizlet.com/JOLU.UpMWw6IuYkcma8pAA.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-133",
+    "id": "l01-s05-133",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "光景",
     "reading": "こうけい",
     "definition": "quang cảnh",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/W0XKepyccb1kM6qT4rwsAw.jpg"
+    "image": "https://o.quizlet.com/W0XKepyccb1kM6qT4rwsAw.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-134",
+    "id": "l01-s05-134",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "蒸発する",
     "reading": "じょうはつする",
     "definition": "bay hơi",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/omYQU9sIFKSUaNTg99T1cQ.jpg"
+    "image": "https://o.quizlet.com/omYQU9sIFKSUaNTg99T1cQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-135",
+    "id": "l01-s05-135",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "奪う",
     "reading": "うばう",
     "definition": "cướp lấy",
     "pos": "verb",
     "transitivity": "transitive",
-    "image": "https://o.quizlet.com/52PPAEciGYlAdf4STFU43Q.jpg"
+    "image": "https://o.quizlet.com/52PPAEciGYlAdf4STFU43Q.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-136",
+    "id": "l01-s05-136",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "近年",
     "reading": "きんねん",
     "definition": "những năm gần đây",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/ZVIzZXBQt12PLK4mMxZFoQ.jpg"
+    "image": "https://o.quizlet.com/ZVIzZXBQt12PLK4mMxZFoQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-137",
+    "id": "l01-s05-137",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "作戦",
     "reading": "さくせん",
     "definition": "chiến lược",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/AOlU61g7CGD5Wp5JF4VusQ.jpg"
+    "image": "https://o.quizlet.com/AOlU61g7CGD5Wp5JF4VusQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-138",
+    "id": "l01-s05-138",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "開催する",
     "reading": "かいさいする",
     "definition": "tổ chức",
     "pos": "verb",
     "transitivity": null,
-    "image": "https://o.quizlet.com/l1EKXCdI8QtVUuK9qIAuCQ.png"
+    "image": "https://o.quizlet.com/l1EKXCdI8QtVUuK9qIAuCQ.png",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-139",
+    "id": "l01-s05-139",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "水道水",
     "reading": "すいどうすい",
     "definition": "nước máy",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/W6qkpKgcEuXVi7Vtx6Hd0g.jpg"
+    "image": "https://o.quizlet.com/W6qkpKgcEuXVi7Vtx6Hd0g.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-140",
+    "id": "l01-s05-140",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "残り湯",
     "reading": "のこりゆ",
     "definition": "nước tắm còn lại",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/g9ATbYVv3uibTVNrJIOfrQ.jpg"
+    "image": "https://o.quizlet.com/g9ATbYVv3uibTVNrJIOfrQ.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-141",
+    "id": "l01-s05-141",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "雨水",
     "reading": "あまみず",
     "definition": "nước mưa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/kgNqohrIG8TCbQtg5vDj7g.jpg"
+    "image": "https://o.quizlet.com/kgNqohrIG8TCbQtg5vDj7g.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-142",
+    "id": "l01-s05-142",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "平均",
     "reading": "へいきん",
     "definition": "trung bình",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/S9VoEdtkKzpQlkqYX2eV1A.jpg"
+    "image": "https://o.quizlet.com/S9VoEdtkKzpQlkqYX2eV1A.jpg",
+    "slotOrder": 5
   },
   {
-    "id": "s01-l01-143",
+    "id": "l01-s05-143",
     "slot": 5,
     "lesson": "Bài 1",
-    "lessonOrder": 1,
     "term": "降水量",
     "reading": "こうすいりょう",
     "definition": "lượng mưa",
     "pos": "noun",
     "transitivity": null,
-    "image": "https://o.quizlet.com/8cRPJKL3XJI7zhDIULchGw.png"
+    "image": "https://o.quizlet.com/8cRPJKL3XJI7zhDIULchGw.png",
+    "slotOrder": 5
   }
 ]

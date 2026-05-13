@@ -43,7 +43,7 @@ interface VocabItem {
   id: string;
   slot: number;
   lesson: string;
-  lessonOrder: number;
+  slotOrder: number;
   term: string;
   reading: string | null;
   definition: string;
@@ -117,7 +117,8 @@ export default function JPD326VocabularyPage() {
   const groupedListRef = useRef<HTMLDivElement | null>(null);
 
   const slots = useMemo(
-    () => Array.from(new Set(data.map((item) => item.slot))).sort((a, b) => a - b),
+    () =>
+      Array.from(new Set(data.map((item) => item.slot))).sort((a, b) => a - b),
     [],
   );
 
@@ -170,8 +171,10 @@ export default function JPD326VocabularyPage() {
       })
       .sort((a, b) => {
         if (a.slot !== b.slot) return a.slot - b.slot;
-        const aOrder = a.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : a.lessonOrder;
-        const bOrder = b.lessonOrder === 0 ? Number.MAX_SAFE_INTEGER : b.lessonOrder;
+        const aOrder =
+          a.slotOrder === 0 ? Number.MAX_SAFE_INTEGER : a.slotOrder;
+        const bOrder =
+          b.slotOrder === 0 ? Number.MAX_SAFE_INTEGER : b.slotOrder;
         if (aOrder !== bOrder) return aOrder - bOrder;
         return a.id.localeCompare(b.id);
       });
@@ -226,7 +229,7 @@ export default function JPD326VocabularyPage() {
       items: VocabItem[];
       slot: number;
       lesson: string;
-      lessonOrder: number;
+      slotOrder: number;
     };
 
     const map = new Map<string, GroupBucket>();
@@ -241,25 +244,25 @@ export default function JPD326VocabularyPage() {
           items: [item],
           slot: item.slot,
           lesson: item.lesson,
-          lessonOrder: item.lessonOrder,
+          slotOrder: item.slotOrder,
         });
         continue;
       }
 
       existing.items.push(item);
-      if (item.lessonOrder < existing.lessonOrder) {
-        existing.lessonOrder = item.lessonOrder;
+      if (item.slotOrder < existing.slotOrder) {
+        existing.slotOrder = item.slotOrder;
       }
     }
 
     return Array.from(map.values()).sort((a, b) => {
       if (a.slot !== b.slot) return a.slot - b.slot;
 
-      const aIsExtra = a.lessonOrder === 0;
-      const bIsExtra = b.lessonOrder === 0;
+      const aIsExtra = a.slotOrder === 0;
+      const bIsExtra = b.slotOrder === 0;
       if (aIsExtra !== bIsExtra) return aIsExtra ? 1 : -1;
 
-      if (a.lessonOrder !== b.lessonOrder) return a.lessonOrder - b.lessonOrder;
+      if (a.slotOrder !== b.slotOrder) return a.slotOrder - b.slotOrder;
 
       return a.lesson.localeCompare(b.lesson, "vi", { numeric: true });
     });
@@ -327,37 +330,6 @@ export default function JPD326VocabularyPage() {
 
           <div className="space-y-4">
             <div>
-              <p className="text-sm font-semibold mb-2">Chọn Slot</p>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => setSelectedSlot("all")}
-                  className={`px-3 py-1.5 rounded-full border text-sm ${
-                    selectedSlot === "all"
-                      ? "bg-japan-indigo text-white border-japan-indigo"
-                      : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-                  }`}
-                >
-                  Tất cả
-                </button>
-                {slots.map((slot) => (
-                  <button
-                    key={slot}
-                    type="button"
-                    onClick={() => setSelectedSlot(slot)}
-                    className={`px-3 py-1.5 rounded-full border text-sm ${
-                      selectedSlot === slot
-                        ? "bg-japan-indigo text-white border-japan-indigo"
-                        : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-                    }`}
-                  >
-                    Slot {slot}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
               <p className="text-sm font-semibold mb-2">Chọn Bài</p>
               <div className="flex flex-wrap gap-2">
                 <button
@@ -383,6 +355,36 @@ export default function JPD326VocabularyPage() {
                     }`}
                   >
                     {lesson}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-semibold mb-2">Chọn Slot</p>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedSlot("all")}
+                  className={`px-3 py-1.5 rounded-full border text-sm ${
+                    selectedSlot === "all"
+                      ? "bg-japan-indigo text-white border-japan-indigo"
+                      : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                  }`}
+                >
+                  Tất cả
+                </button>
+                {slots.map((slot) => (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`px-3 py-1.5 rounded-full border text-sm ${
+                      selectedSlot === slot
+                        ? "bg-japan-indigo text-white border-japan-indigo"
+                        : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                    }`}
+                  >
+                    Slot {slot}
                   </button>
                 ))}
               </div>
