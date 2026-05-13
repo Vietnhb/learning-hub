@@ -361,7 +361,7 @@
   },
   {
     "id": "s01-l01-031",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "音声",
@@ -373,7 +373,7 @@
   },
   {
     "id": "s01-l01-032",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "瓦",
@@ -385,7 +385,7 @@
   },
   {
     "id": "s01-l01-033",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "軒",
@@ -397,7 +397,7 @@
   },
   {
     "id": "s01-l01-034",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "塀",
@@ -409,7 +409,7 @@
   },
   {
     "id": "s01-l01-035",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "石",
@@ -421,7 +421,7 @@
   },
   {
     "id": "s01-l01-036",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "日差し",
@@ -433,7 +433,7 @@
   },
   {
     "id": "s01-l01-037",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "固める",
@@ -445,7 +445,7 @@
   },
   {
     "id": "s01-l01-038",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "鉄筋",
@@ -457,7 +457,7 @@
   },
   {
     "id": "s01-l01-039",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "筋肉",
@@ -469,7 +469,7 @@
   },
   {
     "id": "s01-l01-040",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "気象",
@@ -481,7 +481,7 @@
   },
   {
     "id": "s01-l01-041",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "小論文",
@@ -493,7 +493,7 @@
   },
   {
     "id": "s01-l01-042",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "畳み",
@@ -505,7 +505,7 @@
   },
   {
     "id": "s01-l01-043",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "畳む",
@@ -517,7 +517,7 @@
   },
   {
     "id": "s01-l01-044",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "現金",
@@ -529,7 +529,7 @@
   },
   {
     "id": "s01-l01-045",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "現代",
@@ -541,7 +541,7 @@
   },
   {
     "id": "s01-l01-046",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "電子マネー",
@@ -553,7 +553,7 @@
   },
   {
     "id": "s01-l01-047",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "セメント",
@@ -565,7 +565,7 @@
   },
   {
     "id": "s01-l01-048",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "コンクリート",
@@ -577,7 +577,7 @@
   },
   {
     "id": "s01-l01-049",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "フローリング",
@@ -589,7 +589,7 @@
   },
   {
     "id": "s01-l01-050",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "しっくい",
@@ -601,7 +601,7 @@
   },
   {
     "id": "s01-l01-051",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "屋根",
@@ -613,7 +613,7 @@
   },
   {
     "id": "s01-l01-052",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "床",
@@ -625,7 +625,7 @@
   },
   {
     "id": "s01-l01-053",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "柱",
@@ -637,7 +637,7 @@
   },
   {
     "id": "s01-l01-054",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "天井",
@@ -649,7 +649,7 @@
   },
   {
     "id": "s01-l01-055",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "壁",
@@ -661,7 +661,7 @@
   },
   {
     "id": "s01-l01-056",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "金属",
@@ -673,7 +673,7 @@
   },
   {
     "id": "s01-l01-057",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "光",
@@ -685,7 +685,7 @@
   },
   {
     "id": "s01-l01-058",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "備える",
@@ -697,7 +697,7 @@
   },
   {
     "id": "s01-l01-059",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "加える",
@@ -709,7 +709,7 @@
   },
   {
     "id": "s01-l01-060",
-    "slot": 1,
+    "slot": 2,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "工夫",
@@ -721,7 +721,7 @@
   },
   {
     "id": "s01-l01-061",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "体調",
@@ -733,7 +733,7 @@
   },
   {
     "id": "s01-l01-062",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "調子",
@@ -745,7 +745,7 @@
   },
   {
     "id": "s01-l01-063",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "調査",
@@ -757,7 +757,7 @@
   },
   {
     "id": "s01-l01-064",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "和菓子",
@@ -769,7 +769,7 @@
   },
   {
     "id": "s01-l01-065",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "崩す",
@@ -781,7 +781,7 @@
   },
   {
     "id": "s01-l01-066",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "港",
@@ -793,7 +793,7 @@
   },
   {
     "id": "s01-l01-067",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "空港",
@@ -805,7 +805,7 @@
   },
   {
     "id": "s01-l01-068",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "栄える",
@@ -817,7 +817,7 @@
   },
   {
     "id": "s01-l01-069",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "栄養",
@@ -829,7 +829,7 @@
   },
   {
     "id": "s01-l01-070",
-    "slot": 1,
+    "slot": 3,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "食欲",
@@ -841,7 +841,7 @@
   },
   {
     "id": "s01-l01-071",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "現在",
@@ -853,7 +853,7 @@
   },
   {
     "id": "s01-l01-072",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "人口",
@@ -865,7 +865,7 @@
   },
   {
     "id": "s01-l01-073",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "都市",
@@ -877,7 +877,7 @@
   },
   {
     "id": "s01-l01-074",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "都会",
@@ -889,7 +889,7 @@
   },
   {
     "id": "s01-l01-075",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "県庁",
@@ -901,7 +901,7 @@
   },
   {
     "id": "s01-l01-076",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "周辺",
@@ -913,7 +913,7 @@
   },
   {
     "id": "s01-l01-077",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "地区",
@@ -925,7 +925,7 @@
   },
   {
     "id": "s01-l01-078",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "商業",
@@ -937,7 +937,7 @@
   },
   {
     "id": "s01-l01-079",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "砂浜",
@@ -949,7 +949,7 @@
   },
   {
     "id": "s01-l01-080",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "～年代",
@@ -961,7 +961,7 @@
   },
   {
     "id": "s01-l01-081",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "中華街",
@@ -973,7 +973,7 @@
   },
   {
     "id": "s01-l01-082",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "商店街",
@@ -985,7 +985,7 @@
   },
   {
     "id": "s01-l01-083",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "都市",
@@ -997,7 +997,7 @@
   },
   {
     "id": "s01-l01-084",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "訪れる",
@@ -1009,7 +1009,7 @@
   },
   {
     "id": "s01-l01-085",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "訪問する",
@@ -1021,7 +1021,7 @@
   },
   {
     "id": "s01-l01-086",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "延びる",
@@ -1033,7 +1033,7 @@
   },
   {
     "id": "s01-l01-087",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "伸びる",
@@ -1045,7 +1045,7 @@
   },
   {
     "id": "s01-l01-088",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "名づける",
@@ -1057,7 +1057,7 @@
   },
   {
     "id": "s01-l01-089",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "村",
@@ -1069,7 +1069,7 @@
   },
   {
     "id": "s01-l01-090",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "農村",
@@ -1081,7 +1081,7 @@
   },
   {
     "id": "s01-l01-091",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "埋める",
@@ -1093,7 +1093,7 @@
   },
   {
     "id": "s01-l01-092",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "掘る",
@@ -1105,7 +1105,7 @@
   },
   {
     "id": "s01-l01-093",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "埋め立てる",
@@ -1117,7 +1117,7 @@
   },
   {
     "id": "s01-l01-094",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "浜",
@@ -1129,7 +1129,7 @@
   },
   {
     "id": "s01-l01-095",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "地名",
@@ -1141,7 +1141,7 @@
   },
   {
     "id": "s01-l01-096",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "風景",
@@ -1153,7 +1153,7 @@
   },
   {
     "id": "s01-l01-097",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "光景",
@@ -1165,7 +1165,7 @@
   },
   {
     "id": "s01-l01-098",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "景色",
@@ -1177,7 +1177,7 @@
   },
   {
     "id": "s01-l01-099",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "纏まる",
@@ -1189,7 +1189,7 @@
   },
   {
     "id": "s01-l01-100",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "纏める",
@@ -1201,7 +1201,7 @@
   },
   {
     "id": "s01-l01-101",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "地方",
@@ -1213,7 +1213,7 @@
   },
   {
     "id": "s01-l01-102",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "名産品",
@@ -1225,7 +1225,7 @@
   },
   {
     "id": "s01-l01-103",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "頑固",
@@ -1237,7 +1237,7 @@
   },
   {
     "id": "s01-l01-104",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "職人",
@@ -1249,7 +1249,7 @@
   },
   {
     "id": "s01-l01-105",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "海洋",
@@ -1261,7 +1261,7 @@
   },
   {
     "id": "s01-l01-106",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "生物",
@@ -1273,7 +1273,7 @@
   },
   {
     "id": "s01-l01-107",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "化石",
@@ -1285,7 +1285,7 @@
   },
   {
     "id": "s01-l01-108",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "辺り",
@@ -1297,7 +1297,7 @@
   },
   {
     "id": "s01-l01-109",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "産業",
@@ -1309,7 +1309,7 @@
   },
   {
     "id": "s01-l01-110",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "盛ん",
@@ -1321,7 +1321,7 @@
   },
   {
     "id": "s01-l01-111",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "企業",
@@ -1333,7 +1333,7 @@
   },
   {
     "id": "s01-l01-112",
-    "slot": 1,
+    "slot": 4,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "発展",
@@ -1345,7 +1345,7 @@
   },
   {
     "id": "s01-l01-113",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "特産物",
@@ -1357,7 +1357,7 @@
   },
   {
     "id": "s01-l01-114",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "空っ風",
@@ -1369,7 +1369,7 @@
   },
   {
     "id": "s01-l01-115",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "吹く",
@@ -1381,7 +1381,7 @@
   },
   {
     "id": "s01-l01-116",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "湿る",
@@ -1393,7 +1393,7 @@
   },
   {
     "id": "s01-l01-117",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "湿気",
@@ -1405,7 +1405,7 @@
   },
   {
     "id": "s01-l01-118",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "風力",
@@ -1417,7 +1417,7 @@
   },
   {
     "id": "s01-l01-119",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "凧揚げ",
@@ -1429,7 +1429,7 @@
   },
   {
     "id": "s01-l01-120",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "揚げる",
@@ -1441,7 +1441,7 @@
   },
   {
     "id": "s01-l01-121",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "思い浮べる",
@@ -1453,7 +1453,7 @@
   },
   {
     "id": "s01-l01-122",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "越える",
@@ -1465,7 +1465,7 @@
   },
   {
     "id": "s01-l01-123",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "超える",
@@ -1477,7 +1477,7 @@
   },
   {
     "id": "s01-l01-124",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "快適",
@@ -1489,7 +1489,7 @@
   },
   {
     "id": "s01-l01-125",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "梅雨",
@@ -1501,7 +1501,7 @@
   },
   {
     "id": "s01-l01-126",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "焼ける",
@@ -1513,7 +1513,7 @@
   },
   {
     "id": "s01-l01-127",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "太陽",
@@ -1525,7 +1525,7 @@
   },
   {
     "id": "s01-l01-128",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "普及する",
@@ -1537,7 +1537,7 @@
   },
   {
     "id": "s01-l01-129",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "魔除け",
@@ -1549,7 +1549,7 @@
   },
   {
     "id": "s01-l01-130",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "打ち水",
@@ -1561,7 +1561,7 @@
   },
   {
     "id": "s01-l01-131",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "地面",
@@ -1573,7 +1573,7 @@
   },
   {
     "id": "s01-l01-132",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "水をまく",
@@ -1585,7 +1585,7 @@
   },
   {
     "id": "s01-l01-133",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "光景",
@@ -1597,7 +1597,7 @@
   },
   {
     "id": "s01-l01-134",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "蒸発する",
@@ -1609,7 +1609,7 @@
   },
   {
     "id": "s01-l01-135",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "奪う",
@@ -1621,7 +1621,7 @@
   },
   {
     "id": "s01-l01-136",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "近年",
@@ -1633,7 +1633,7 @@
   },
   {
     "id": "s01-l01-137",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "作戦",
@@ -1645,7 +1645,7 @@
   },
   {
     "id": "s01-l01-138",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "開催する",
@@ -1657,7 +1657,7 @@
   },
   {
     "id": "s01-l01-139",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "水道水",
@@ -1669,7 +1669,7 @@
   },
   {
     "id": "s01-l01-140",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "残り湯",
@@ -1681,7 +1681,7 @@
   },
   {
     "id": "s01-l01-141",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "雨水",
@@ -1693,7 +1693,7 @@
   },
   {
     "id": "s01-l01-142",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "平均",
@@ -1705,7 +1705,7 @@
   },
   {
     "id": "s01-l01-143",
-    "slot": 1,
+    "slot": 5,
     "lesson": "Bài 1",
     "lessonOrder": 1,
     "term": "降水量",

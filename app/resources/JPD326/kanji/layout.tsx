@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Learning Hub",
-  description: "JPD326 kanji content is being updated.",
-  robots: {
-    index: false,
-    follow: false,
+  title: "Kanji JPD326 | Learning Hub",
+  description: "Kanji practice cards for JPD326 Japanese course.",
+  keywords: ["jpd326 kanji", "jpd 326 han tu", "jpd326 chu han"],
+  alternates: {
+    canonical: "/resources/JPD326/kanji",
   },
 };
 

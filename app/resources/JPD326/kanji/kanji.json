@@ -1,3 +1,1925 @@
 {
-  "lessons": []
+  "series": "JPD326",
+  "lessons": [
+    {
+      "lesson": 1,
+      "kanji": [
+        {
+          "term": "形",
+          "definition": "HÌNH ケイ かたち",
+          "image": null
+        },
+        {
+          "term": "地形",
+          "definition": "（ちけい）địa hình",
+          "image": null
+        },
+        {
+          "term": "形成",
+          "definition": "（けいせい）hình thành, tạo thành",
+          "image": null
+        },
+        {
+          "term": "外形",
+          "definition": "（がいけい）ngoại hình, hình dáng bên ngoài",
+          "image": null
+        },
+        {
+          "term": "人形",
+          "definition": "（にんぎょう）búp bê",
+          "image": null
+        },
+        {
+          "term": "位",
+          "definition": "VỊ イ くらい",
+          "image": null
+        },
+        {
+          "term": "位置",
+          "definition": "（いち）vị trí",
+          "image": null
+        },
+        {
+          "term": "地位",
+          "definition": "（ちい）địa vị",
+          "image": null
+        },
+        {
+          "term": "置",
+          "definition": "TRÍ チ お・く",
+          "image": null
+        },
+        {
+          "term": "設置",
+          "definition": "（せっち）lắp đặt, thiết lập",
+          "image": null
+        },
+        {
+          "term": "置物",
+          "definition": "（おきもの）đồ trang trí, vật trang trí",
+          "image": null
+        },
+        {
+          "term": "連",
+          "definition": "LIÊN レン つ・れる つら・なる",
+          "image": null
+        },
+        {
+          "term": "連合",
+          "definition": "（れんごう）liên hợp, liên minh",
+          "image": null
+        },
+        {
+          "term": "連結",
+          "definition": "（れんけつ）sự liên kết, nối liền",
+          "image": null
+        },
+        {
+          "term": "連休",
+          "definition": "（れんきゅう）kỳ nghỉ liên tiếp",
+          "image": null
+        },
+        {
+          "term": "関連",
+          "definition": "（かんれん）liên quan",
+          "image": null
+        },
+        {
+          "term": "国連",
+          "definition": "（こくれん）Liên Hợp Quốc",
+          "image": null
+        },
+        {
+          "term": "固",
+          "definition": "CỐ コ かた・い かた・める",
+          "image": null
+        },
+        {
+          "term": "固定",
+          "definition": "（こてい）cố định",
+          "image": null
+        },
+        {
+          "term": "固形",
+          "definition": "（こけい）dạng rắn, thể rắn",
+          "image": null
+        },
+        {
+          "term": "固有",
+          "definition": "（こゆう）cố hữu, riêng biệt",
+          "image": null
+        },
+        {
+          "term": "確固",
+          "definition": "（かっこ）vững chắc, kiên định",
+          "image": null
+        },
+        {
+          "term": "強固",
+          "definition": "（きょうこ）kiên cố, vững chắc",
+          "image": null
+        },
+        {
+          "term": "展",
+          "definition": "TRIỂN テン",
+          "image": null
+        },
+        {
+          "term": "展開",
+          "definition": "（てんかい）triển khai, mở rộng",
+          "image": null
+        },
+        {
+          "term": "展示",
+          "definition": "（てんじ）trưng bày, triển lãm",
+          "image": null
+        },
+        {
+          "term": "発展",
+          "definition": "（はってん）phát triển",
+          "image": null
+        },
+        {
+          "term": "展覧会",
+          "definition": "（てんらんかい）cuộc triển lãm",
+          "image": null
+        },
+        {
+          "term": "望",
+          "definition": "VỌNG ボウ のぞ・む",
+          "image": null
+        },
+        {
+          "term": "展望台",
+          "definition": "（てんぼうだい）đài quan sát",
+          "image": null
+        },
+        {
+          "term": "願望",
+          "definition": "（がんぼう）nguyện vọng, mong ước",
+          "image": null
+        },
+        {
+          "term": "待望",
+          "definition": "（たいぼう）sự mong đợi, trông mong",
+          "image": null
+        },
+        {
+          "term": "論",
+          "definition": "LUẬN ロン",
+          "image": null
+        },
+        {
+          "term": "論文",
+          "definition": "（ろんぶん）luận văn, bài luận",
+          "image": null
+        },
+        {
+          "term": "論議",
+          "definition": "（ろんぎ）thảo luận, tranh luận",
+          "image": null
+        },
+        {
+          "term": "論証",
+          "definition": "（ろんしょう）luận chứng, chứng minh",
+          "image": null
+        },
+        {
+          "term": "理論",
+          "definition": "（りろん）lý luận, lý thuyết",
+          "image": null
+        },
+        {
+          "term": "立論",
+          "definition": "（りつろん）lập luận",
+          "image": null
+        },
+        {
+          "term": "世論",
+          "definition": "（よろん）dư luận",
+          "image": null
+        },
+        {
+          "term": "論理的な考え",
+          "definition": "（ろんりてきなかんがえ）suy nghĩ logic, tư duy logic",
+          "image": null
+        },
+        {
+          "term": "現",
+          "definition": "HIỆN ゲン あらわ・れる あらわ・す",
+          "image": null
+        },
+        {
+          "term": "現代",
+          "definition": "（げんだい）hiện đại, thời hiện đại",
+          "image": null
+        },
+        {
+          "term": "現地",
+          "definition": "（げんち）hiện trường, địa phương",
+          "image": null
+        },
+        {
+          "term": "現場",
+          "definition": "（げんば）hiện trường, công trường",
+          "image": null
+        },
+        {
+          "term": "表現",
+          "definition": "（ひょうげん）biểu hiện, diễn đạt",
+          "image": null
+        },
+        {
+          "term": "象",
+          "definition": "TƯỢNG ショウ ゾウ",
+          "image": null
+        },
+        {
+          "term": "現象",
+          "definition": "（げんしょう）hiện tượng",
+          "image": null
+        },
+        {
+          "term": "気象",
+          "definition": "（きしょう）khí tượng, thời tiết",
+          "image": null
+        },
+        {
+          "term": "在",
+          "definition": "TẠI ザイ",
+          "image": null
+        },
+        {
+          "term": "在職",
+          "definition": "（ざいしょく）đang tại chức, đang làm việc",
+          "image": null
+        },
+        {
+          "term": "在学証明書",
+          "definition": "（ざいがくしょうめいしょ）giấy chứng nhận đang học",
+          "image": null
+        },
+        {
+          "term": "東京在勤中に",
+          "definition": "（とうきょうざいきんちゅうに）trong thời gian làm việc tại Tokyo",
+          "image": null
+        },
+        {
+          "term": "日本在留の外国人",
+          "definition": "（にほんざいりゅうのがいこくじん）người nước ngoài cư trú tại Nhật",
+          "image": null
+        },
+        {
+          "term": "現在",
+          "definition": "（げんざい）hiện tại",
+          "image": null
+        },
+        {
+          "term": "在〜",
+          "definition": "（ざい〜）ở tại, cư trú tại",
+          "image": null
+        },
+        {
+          "term": "港",
+          "definition": "CẢNG コウ みなと",
+          "image": null
+        },
+        {
+          "term": "海港",
+          "definition": "（かいこう）hải cảng",
+          "image": null
+        },
+        {
+          "term": "出港",
+          "definition": "（しゅっこう）rời cảng, xuất cảng",
+          "image": null
+        },
+        {
+          "term": "入港",
+          "definition": "（にゅうこう）vào cảng, nhập cảng",
+          "image": null
+        },
+        {
+          "term": "帰港",
+          "definition": "（きこう）trở về cảng",
+          "image": null
+        },
+        {
+          "term": "空港",
+          "definition": "（くうこう）sân bay",
+          "image": null
+        },
+        {
+          "term": "訪",
+          "definition": "PHỎNG ホウ たず・ねる おとず・れる",
+          "image": null
+        },
+        {
+          "term": "訪問",
+          "definition": "（ほうもん）thăm, viếng thăm",
+          "image": null
+        },
+        {
+          "term": "訪日",
+          "definition": "（ほうにち）đến thăm Nhật Bản",
+          "image": null
+        },
+        {
+          "term": "訪米",
+          "definition": "（ほうべい）thăm Mỹ",
+          "image": null
+        },
+        {
+          "term": "探訪",
+          "definition": "（たんぼう）thăm dò, tìm hiểu thực địa",
+          "image": null
+        },
+        {
+          "term": "来訪",
+          "definition": "（らいほう）đến thăm",
+          "image": null
+        },
+        {
+          "term": "景",
+          "definition": "CẢNH ケイ",
+          "image": null
+        },
+        {
+          "term": "景気",
+          "definition": "（けいき）tình hình kinh tế, cảnh khí",
+          "image": null
+        },
+        {
+          "term": "景品",
+          "definition": "（けいひん）quà tặng, phần thưởng",
+          "image": null
+        },
+        {
+          "term": "景色",
+          "definition": "（けしき）phong cảnh",
+          "image": null
+        },
+        {
+          "term": "風景",
+          "definition": "（ふうけい）phong cảnh",
+          "image": null
+        },
+        {
+          "term": "遠景",
+          "definition": "（えんけい）cảnh xa",
+          "image": null
+        },
+        {
+          "term": "光景",
+          "definition": "（こうけい）quang cảnh, cảnh tượng",
+          "image": null
+        },
+        {
+          "term": "辺",
+          "definition": "BIÊN ヘン あた・り",
+          "image": null
+        },
+        {
+          "term": "駅周辺",
+          "definition": "（えきしゅうへん）khu vực xung quanh nhà ga",
+          "image": null
+        },
+        {
+          "term": "海辺",
+          "definition": "（うみべ）bờ biển",
+          "image": null
+        },
+        {
+          "term": "山辺",
+          "definition": "（やまべ）vùng núi, ven núi",
+          "image": null
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "kanji": [
+        {
+          "term": "談",
+          "definition": "ĐÀM ダン",
+          "image": null
+        },
+        {
+          "term": "会談",
+          "definition": "（かいだん）hội đàm",
+          "image": null
+        },
+        {
+          "term": "面談",
+          "definition": "（めんだん）phỏng vấn, nói chuyện trực tiếp",
+          "image": null
+        },
+        {
+          "term": "体験談",
+          "definition": "（たいけんだん）câu chuyện trải nghiệm",
+          "image": null
+        },
+        {
+          "term": "相談",
+          "definition": "（そうだん）trao đổi, bàn bạc, tư vấn",
+          "image": null
+        },
+        {
+          "term": "配",
+          "definition": "PHỐI ハイ くば・る",
+          "image": null
+        },
+        {
+          "term": "配置",
+          "definition": "（はいち）bố trí, sắp xếp",
+          "image": null
+        },
+        {
+          "term": "配達",
+          "definition": "（はいたつ）giao hàng",
+          "image": null
+        },
+        {
+          "term": "心配",
+          "definition": "（しんぱい）lo lắng",
+          "image": null
+        },
+        {
+          "term": "手配",
+          "definition": "（てはい）sắp xếp, chuẩn bị",
+          "image": null
+        },
+        {
+          "term": "宅配",
+          "definition": "（たくはい）giao tận nhà",
+          "image": null
+        },
+        {
+          "term": "配給",
+          "definition": "（はいきゅう）phân phối, cung cấp",
+          "image": null
+        },
+        {
+          "term": "年配",
+          "definition": "（ねんぱい）lớn tuổi",
+          "image": null
+        },
+        {
+          "term": "努",
+          "definition": "NỖ ド つと・める",
+          "image": null
+        },
+        {
+          "term": "努力",
+          "definition": "（どりょく）nỗ lực, cố gắng",
+          "image": null
+        },
+        {
+          "term": "助",
+          "definition": "TRỢ ジョ たす・かる たす・ける",
+          "image": null
+        },
+        {
+          "term": "助言",
+          "definition": "（じょげん）lời khuyên",
+          "image": null
+        },
+        {
+          "term": "介助犬",
+          "definition": "（かいじょけん）chó hỗ trợ",
+          "image": null
+        },
+        {
+          "term": "助役",
+          "definition": "（じょやく）phó thị trưởng, trợ lý",
+          "image": null
+        },
+        {
+          "term": "団",
+          "definition": "ĐOÀN ダン",
+          "image": null
+        },
+        {
+          "term": "団体",
+          "definition": "（だんたい）đoàn thể, tổ chức",
+          "image": null
+        },
+        {
+          "term": "団結",
+          "definition": "（だんけつ）đoàn kết",
+          "image": null
+        },
+        {
+          "term": "団地",
+          "definition": "（だんち）khu nhà tập thể",
+          "image": null
+        },
+        {
+          "term": "団子",
+          "definition": "（だんご）bánh dango",
+          "image": null
+        },
+        {
+          "term": "集団",
+          "definition": "（しゅうだん）tập thể, nhóm",
+          "image": null
+        },
+        {
+          "term": "社団",
+          "definition": "（しゃだん）hiệp hội",
+          "image": null
+        },
+        {
+          "term": "旅団",
+          "definition": "（りょだん）lữ đoàn",
+          "image": null
+        },
+        {
+          "term": "苦",
+          "definition": "KHỔ ク にが・い くる・しむ",
+          "image": null
+        },
+        {
+          "term": "苦情を言う",
+          "definition": "（くじょうをいう）phàn nàn",
+          "image": null
+        },
+        {
+          "term": "苦痛を感じる",
+          "definition": "（くつうをかんじる）cảm thấy đau khổ",
+          "image": null
+        },
+        {
+          "term": "苦心",
+          "definition": "（くしん）khổ tâm, vất vả",
+          "image": null
+        },
+        {
+          "term": "苦手",
+          "definition": "（にがて）không giỏi, yếu",
+          "image": null
+        },
+        {
+          "term": "退",
+          "definition": "THOÁI タイ しりぞ・く しりぞ・ける",
+          "image": null
+        },
+        {
+          "term": "退院",
+          "definition": "（たいいん）xuất viện",
+          "image": null
+        },
+        {
+          "term": "退社",
+          "definition": "（たいしゃ）tan làm, rời công ty",
+          "image": null
+        },
+        {
+          "term": "退去",
+          "definition": "（たいきょ）rời đi",
+          "image": null
+        },
+        {
+          "term": "退職",
+          "definition": "（たいしょく）nghỉ việc, nghỉ hưu",
+          "image": null
+        },
+        {
+          "term": "進退",
+          "definition": "（しんたい）tiến thoái",
+          "image": null
+        },
+        {
+          "term": "早退",
+          "definition": "（そうたい）về sớm",
+          "image": null
+        },
+        {
+          "term": "後退",
+          "definition": "（こうたい）thụt lùi",
+          "image": null
+        },
+        {
+          "term": "夢",
+          "definition": "MỘNG ム ゆめ",
+          "image": null
+        },
+        {
+          "term": "夢中",
+          "definition": "（むちゅう）mê mẩn, say mê",
+          "image": null
+        },
+        {
+          "term": "悪夢",
+          "definition": "（あくむ）ác mộng",
+          "image": null
+        },
+        {
+          "term": "若",
+          "definition": "NHƯỢC ジャク わか・い",
+          "image": null
+        },
+        {
+          "term": "若者",
+          "definition": "（わかもの）người trẻ",
+          "image": null
+        },
+        {
+          "term": "若年",
+          "definition": "（じゃくねん）tuổi trẻ",
+          "image": null
+        },
+        {
+          "term": "若々しい",
+          "definition": "（わかわかしい）trẻ trung",
+          "image": null
+        },
+        {
+          "term": "期",
+          "definition": "KỲ キ",
+          "image": null
+        },
+        {
+          "term": "期間",
+          "definition": "（きかん）khoảng thời gian",
+          "image": null
+        },
+        {
+          "term": "期待",
+          "definition": "（きたい）kỳ vọng",
+          "image": null
+        },
+        {
+          "term": "期限",
+          "definition": "（きげん）thời hạn",
+          "image": null
+        },
+        {
+          "term": "学期",
+          "definition": "（がっき）học kỳ",
+          "image": null
+        },
+        {
+          "term": "初期",
+          "definition": "（しょき）giai đoạn đầu",
+          "image": null
+        },
+        {
+          "term": "時期",
+          "definition": "（じき）thời kỳ",
+          "image": null
+        },
+        {
+          "term": "定期",
+          "definition": "（ていき）định kỳ",
+          "image": null
+        },
+        {
+          "term": "反",
+          "definition": "PHẢN ハン そ・らす",
+          "image": null
+        },
+        {
+          "term": "反動",
+          "definition": "（はんどう）phản động, phản lực",
+          "image": null
+        },
+        {
+          "term": "反証",
+          "definition": "（はんしょう）phản chứng",
+          "image": null
+        },
+        {
+          "term": "対",
+          "definition": "ĐỐI タイ",
+          "image": null
+        },
+        {
+          "term": "反対",
+          "definition": "（はんたい）phản đối",
+          "image": null
+        },
+        {
+          "term": "対談",
+          "definition": "（たいだん）đối thoại",
+          "image": null
+        },
+        {
+          "term": "対面",
+          "definition": "（たいめん）gặp mặt trực tiếp",
+          "image": null
+        },
+        {
+          "term": "対立",
+          "definition": "（たいりつ）đối lập",
+          "image": null
+        },
+        {
+          "term": "絶対",
+          "definition": "（ぜったい）tuyệt đối",
+          "image": null
+        },
+        {
+          "term": "対応",
+          "definition": "（たいおう）đối ứng, xử lý",
+          "image": null
+        },
+        {
+          "term": "賛",
+          "definition": "TÁN サン",
+          "image": null
+        },
+        {
+          "term": "賛成",
+          "definition": "（さんせい）tán thành",
+          "image": null
+        },
+        {
+          "term": "賛美",
+          "definition": "（さんび）ca ngợi",
+          "image": null
+        },
+        {
+          "term": "賛助",
+          "definition": "（さんじょ）hỗ trợ, tài trợ",
+          "image": null
+        },
+        {
+          "term": "賛意",
+          "definition": "（さんい）ý kiến tán thành",
+          "image": null
+        },
+        {
+          "term": "協賛",
+          "definition": "（きょうさん）đồng tài trợ",
+          "image": null
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "kanji": [
+        {
+          "term": "許",
+          "definition": "HỨA キョ ゆる・す",
+          "image": null
+        },
+        {
+          "term": "許可",
+          "definition": "（きょか）cho phép, sự cho phép",
+          "image": null
+        },
+        {
+          "term": "特許",
+          "definition": "（とっきょ）đặc quyền, bằng sáng chế",
+          "image": null
+        },
+        {
+          "term": "収",
+          "definition": "THU シュウ おさ・まる おさ・める",
+          "image": null
+        },
+        {
+          "term": "収入",
+          "definition": "（しゅうにゅう）thu nhập",
+          "image": null
+        },
+        {
+          "term": "買収",
+          "definition": "（ばいしゅう）mua chuộc, thu mua",
+          "image": null
+        },
+        {
+          "term": "回収",
+          "definition": "（かいしゅう）thu hồi",
+          "image": null
+        },
+        {
+          "term": "収集",
+          "definition": "（しゅうしゅう）sưu tập, thu thập",
+          "image": null
+        },
+        {
+          "term": "収税",
+          "definition": "（しゅうぜい）thu thuế",
+          "image": null
+        },
+        {
+          "term": "年収",
+          "definition": "（ねんしゅう）thu nhập năm",
+          "image": null
+        },
+        {
+          "term": "礼",
+          "definition": "LỄ レイ",
+          "image": null
+        },
+        {
+          "term": "礼金",
+          "definition": "（れいきん）tiền lễ",
+          "image": null
+        },
+        {
+          "term": "朝礼",
+          "definition": "（ちょうれい）chào buổi sáng, họp sáng",
+          "image": null
+        },
+        {
+          "term": "返礼",
+          "definition": "（へんれい）đáp lễ",
+          "image": null
+        },
+        {
+          "term": "礼式",
+          "definition": "（れいしき）nghi thức lễ",
+          "image": null
+        },
+        {
+          "term": "礼服",
+          "definition": "（れいふく）lễ phục",
+          "image": null
+        },
+        {
+          "term": "礼法",
+          "definition": "（れいほう）phép lịch sự, lễ nghi",
+          "image": null
+        },
+        {
+          "term": "無礼",
+          "definition": "（ぶれい）vô lễ",
+          "image": null
+        },
+        {
+          "term": "細",
+          "definition": "TẾ サイ ほそ・い こま・かい",
+          "image": null
+        },
+        {
+          "term": "細工",
+          "definition": "（さいく）gia công, thủ đoạn",
+          "image": null
+        },
+        {
+          "term": "明細",
+          "definition": "（めいさい）chi tiết",
+          "image": null
+        },
+        {
+          "term": "細部",
+          "definition": "（さいぶ）chi tiết nhỏ",
+          "image": null
+        },
+        {
+          "term": "細長い",
+          "definition": "（ほそながい）thon dài",
+          "image": null
+        },
+        {
+          "term": "汚",
+          "definition": "Ô オ よご・れる よご・す きたな・い",
+          "image": null
+        },
+        {
+          "term": "汚職",
+          "definition": "（おしょく）tham nhũng",
+          "image": null
+        },
+        {
+          "term": "汚水",
+          "definition": "（おすい）nước bẩn",
+          "image": null
+        },
+        {
+          "term": "汚名",
+          "definition": "（おめい）ô danh",
+          "image": null
+        },
+        {
+          "term": "汚染",
+          "definition": "（おせん）ô nhiễm",
+          "image": null
+        },
+        {
+          "term": "倒",
+          "definition": "ĐẢO トウ たお・れる たお・す",
+          "image": null
+        },
+        {
+          "term": "倒産",
+          "definition": "（とうさん）phá sản",
+          "image": null
+        },
+        {
+          "term": "到着",
+          "definition": "（とうちゃく）đến nơi",
+          "image": null
+        },
+        {
+          "term": "破",
+          "definition": "PHÁ ハ やぶ・れる やぶ・る",
+          "image": null
+        },
+        {
+          "term": "破産",
+          "definition": "（はさん）phá sản",
+          "image": null
+        },
+        {
+          "term": "破線",
+          "definition": "（はせん）đường nét đứt",
+          "image": null
+        },
+        {
+          "term": "論破",
+          "definition": "（ろんぱ）bác bỏ bằng lý luận",
+          "image": null
+        },
+        {
+          "term": "壊",
+          "definition": "HOẠI カイ こわ・れる こわ・す",
+          "image": null
+        },
+        {
+          "term": "破壊",
+          "definition": "（はかい）phá hoại",
+          "image": null
+        },
+        {
+          "term": "半壊",
+          "definition": "（はんかい）hư hỏng một nửa",
+          "image": null
+        },
+        {
+          "term": "全壊",
+          "definition": "（ぜんかい）sụp đổ hoàn toàn",
+          "image": null
+        },
+        {
+          "term": "横",
+          "definition": "HOÀNH オウ よこ",
+          "image": null
+        },
+        {
+          "term": "横顔",
+          "definition": "（よこがお）gương mặt nghiêng",
+          "image": null
+        },
+        {
+          "term": "横着",
+          "definition": "（おうちゃく）lười biếng",
+          "image": null
+        },
+        {
+          "term": "横書き",
+          "definition": "（よこがき）viết ngang",
+          "image": null
+        },
+        {
+          "term": "横長",
+          "definition": "（よこなが）chiều ngang dài",
+          "image": null
+        },
+        {
+          "term": "縦",
+          "definition": "TUNG ジュウ たて",
+          "image": null
+        },
+        {
+          "term": "縦書",
+          "definition": "（たてがき）viết dọc",
+          "image": null
+        },
+        {
+          "term": "縦列",
+          "definition": "（じゅうれつ）hàng dọc",
+          "image": null
+        },
+        {
+          "term": "縦線",
+          "definition": "（じゅうせん）đường dọc",
+          "image": null
+        },
+        {
+          "term": "印",
+          "definition": "ẤN イン しるし",
+          "image": null
+        },
+        {
+          "term": "印画",
+          "definition": "（いんが）in ảnh",
+          "image": null
+        },
+        {
+          "term": "印象",
+          "definition": "（いんしょう）ấn tượng",
+          "image": null
+        },
+        {
+          "term": "刷",
+          "definition": "LOÁT サツ す・る",
+          "image": null
+        },
+        {
+          "term": "刷新",
+          "definition": "（さっしん）đổi mới, cải tổ",
+          "image": null
+        },
+        {
+          "term": "印刷",
+          "definition": "（いんさつ）in ấn",
+          "image": null
+        },
+        {
+          "term": "類",
+          "definition": "LOẠI ルイ",
+          "image": null
+        },
+        {
+          "term": "類似",
+          "definition": "（るいじ）tương tự",
+          "image": null
+        },
+        {
+          "term": "同類",
+          "definition": "（どうるい）cùng loại",
+          "image": null
+        },
+        {
+          "term": "人類",
+          "definition": "（じんるい）nhân loại",
+          "image": null
+        },
+        {
+          "term": "親類",
+          "definition": "（しんるい）họ hàng",
+          "image": null
+        },
+        {
+          "term": "書類",
+          "definition": "（しょるい）tài liệu, giấy tờ",
+          "image": null
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "kanji": [
+        {
+          "term": "暮",
+          "definition": "MỘ ボ く・れる く・らす",
+          "image": null
+        },
+        {
+          "term": "暮秋",
+          "definition": "（ぼしゅう）cuối thu",
+          "image": null
+        },
+        {
+          "term": "暮色",
+          "definition": "（ぼしょく）cảnh chiều tà",
+          "image": null
+        },
+        {
+          "term": "日暮れ",
+          "definition": "（ひぐれ）hoàng hôn, chiều tối",
+          "image": null
+        },
+        {
+          "term": "一人暮らし",
+          "definition": "（ひとりぐらし）sống một mình",
+          "image": null
+        },
+        {
+          "term": "個",
+          "definition": "CÁ コ",
+          "image": null
+        },
+        {
+          "term": "個別",
+          "definition": "（こべつ）cá biệt, riêng lẻ",
+          "image": null
+        },
+        {
+          "term": "個人",
+          "definition": "（こじん）cá nhân",
+          "image": null
+        },
+        {
+          "term": "個体",
+          "definition": "（こたい）cá thể",
+          "image": null
+        },
+        {
+          "term": "個性",
+          "definition": "（こせい）cá tính",
+          "image": null
+        },
+        {
+          "term": "個室",
+          "definition": "（こしつ）phòng riêng",
+          "image": null
+        },
+        {
+          "term": "個展",
+          "definition": "（こてん）triển lãm cá nhân",
+          "image": null
+        },
+        {
+          "term": "疑",
+          "definition": "NGHI ギ うたが・う うたがわ・しい",
+          "image": null
+        },
+        {
+          "term": "疑問",
+          "definition": "（ぎもん）nghi vấn, câu hỏi",
+          "image": null
+        },
+        {
+          "term": "半信半疑",
+          "definition": "（はんしんはんぎ）nửa tin nửa ngờ",
+          "image": null
+        },
+        {
+          "term": "平",
+          "definition": "BÌNH ヘイ ひら・たい",
+          "image": null
+        },
+        {
+          "term": "水平",
+          "definition": "（すいへい）mặt phẳng ngang",
+          "image": null
+        },
+        {
+          "term": "平日",
+          "definition": "（へいじつ）ngày thường",
+          "image": null
+        },
+        {
+          "term": "平価",
+          "definition": "（へいか）mệnh giá ngang bằng",
+          "image": null
+        },
+        {
+          "term": "等",
+          "definition": "ĐẲNG トウ など ひと・しい",
+          "image": null
+        },
+        {
+          "term": "平等",
+          "definition": "（びょうどう）bình đẳng",
+          "image": null
+        },
+        {
+          "term": "等分",
+          "definition": "（とうぶん）chia đều",
+          "image": null
+        },
+        {
+          "term": "誤",
+          "definition": "NGỘ ゴ あやま・る",
+          "image": null
+        },
+        {
+          "term": "誤解",
+          "definition": "（ごかい）hiểu lầm",
+          "image": null
+        },
+        {
+          "term": "誤読",
+          "definition": "（ごどく）đọc sai",
+          "image": null
+        },
+        {
+          "term": "正誤",
+          "definition": "（せいご）đúng sai",
+          "image": null
+        },
+        {
+          "term": "誤信",
+          "definition": "（ごしん）tin nhầm",
+          "image": null
+        },
+        {
+          "term": "笑",
+          "definition": "TIẾU ショウ わら・う え・む",
+          "image": null
+        },
+        {
+          "term": "笑い話",
+          "definition": "（わらいばなし）câu chuyện cười",
+          "image": null
+        },
+        {
+          "term": "笑顔",
+          "definition": "（えがお）nụ cười",
+          "image": null
+        },
+        {
+          "term": "笑い声",
+          "definition": "（わらいごえ）tiếng cười",
+          "image": null
+        },
+        {
+          "term": "可笑しい",
+          "definition": "（おかしい）buồn cười, kỳ lạ",
+          "image": null
+        },
+        {
+          "term": "苦笑",
+          "definition": "（くしょう）cười gượng",
+          "image": null
+        },
+        {
+          "term": "訳",
+          "definition": "DỊCH ヤク わけ やく・す",
+          "image": null
+        },
+        {
+          "term": "訳者",
+          "definition": "（やくしゃ）dịch giả",
+          "image": null
+        },
+        {
+          "term": "訳解",
+          "definition": "（やっかい）giải thích bản dịch",
+          "image": null
+        },
+        {
+          "term": "訳書",
+          "definition": "（やくしょ）sách dịch",
+          "image": null
+        },
+        {
+          "term": "訳名",
+          "definition": "（やくめい）tên dịch",
+          "image": null
+        },
+        {
+          "term": "通訳",
+          "definition": "（つうやく）thông dịch",
+          "image": null
+        },
+        {
+          "term": "直訳",
+          "definition": "（ちょくやく）dịch sát nghĩa",
+          "image": null
+        },
+        {
+          "term": "翻訳",
+          "definition": "（ほんやく）biên dịch",
+          "image": null
+        },
+        {
+          "term": "捨",
+          "definition": "SÁ シャ す・てる",
+          "image": null
+        },
+        {
+          "term": "捨子を育てる",
+          "definition": "（すてごをそだてる）nuôi trẻ bị bỏ rơi",
+          "image": null
+        },
+        {
+          "term": "四捨五入",
+          "definition": "（ししゃごにゅう）làm tròn số",
+          "image": null
+        },
+        {
+          "term": "詩",
+          "definition": "THI シ",
+          "image": null
+        },
+        {
+          "term": "詩人",
+          "definition": "（しじん）nhà thơ",
+          "image": null
+        },
+        {
+          "term": "詩歌",
+          "definition": "（しか）thơ ca",
+          "image": null
+        },
+        {
+          "term": "詩集",
+          "definition": "（ししゅう）tập thơ",
+          "image": null
+        },
+        {
+          "term": "想",
+          "definition": "TƯỞNG ソウ",
+          "image": null
+        },
+        {
+          "term": "想定",
+          "definition": "（そうてい）giả định",
+          "image": null
+        },
+        {
+          "term": "想見",
+          "definition": "（そうけん）suy đoán, tưởng tượng",
+          "image": null
+        },
+        {
+          "term": "予想",
+          "definition": "（よそう）dự đoán",
+          "image": null
+        },
+        {
+          "term": "思想",
+          "definition": "（しそう）tư tưởng",
+          "image": null
+        },
+        {
+          "term": "理想",
+          "definition": "（りそう）lý tưởng",
+          "image": null
+        },
+        {
+          "term": "空想",
+          "definition": "（くうそう）ảo tưởng, tưởng tượng",
+          "image": null
+        },
+        {
+          "term": "最",
+          "definition": "TỐI サイ もっと・も",
+          "image": null
+        },
+        {
+          "term": "最高",
+          "definition": "（さいこう）cao nhất, tuyệt vời nhất",
+          "image": null
+        },
+        {
+          "term": "最低",
+          "definition": "（さいてい）thấp nhất, tệ nhất",
+          "image": null
+        },
+        {
+          "term": "最多",
+          "definition": "（さいた）nhiều nhất",
+          "image": null
+        },
+        {
+          "term": "最少",
+          "definition": "（さいしょう）ít nhất",
+          "image": null
+        },
+        {
+          "term": "最近",
+          "definition": "（さいきん）gần đây",
+          "image": null
+        },
+        {
+          "term": "最初",
+          "definition": "（さいしょ）đầu tiên",
+          "image": null
+        },
+        {
+          "term": "最後",
+          "definition": "（さいご）cuối cùng",
+          "image": null
+        },
+        {
+          "term": "浴",
+          "definition": "DỤC ヨク あ・びる",
+          "image": null
+        },
+        {
+          "term": "浴室",
+          "definition": "（よくしつ）phòng tắm",
+          "image": null
+        },
+        {
+          "term": "浴場",
+          "definition": "（よくじょう）nhà tắm công cộng",
+          "image": null
+        },
+        {
+          "term": "衣",
+          "definition": "Y イ",
+          "image": null
+        },
+        {
+          "term": "衣服",
+          "definition": "（いふく）quần áo",
+          "image": null
+        },
+        {
+          "term": "浴衣",
+          "definition": "（ゆかた）yukata",
+          "image": null
+        },
+        {
+          "term": "衣類",
+          "definition": "（いるい）y phục",
+          "image": null
+        },
+        {
+          "term": "衣料",
+          "definition": "（いりょう）vải vóc, nguyên liệu may mặc",
+          "image": null
+        },
+        {
+          "term": "衣食住",
+          "definition": "（いしょくじゅう）ăn mặc ở",
+          "image": null
+        },
+        {
+          "term": "曲",
+          "definition": "KHÚC キョク ま・がる ま・げる",
+          "image": null
+        },
+        {
+          "term": "曲線",
+          "definition": "（きょくせん）đường cong",
+          "image": null
+        },
+        {
+          "term": "曲面",
+          "definition": "（きょくめん）mặt cong",
+          "image": null
+        },
+        {
+          "term": "歌曲",
+          "definition": "（かきょく）ca khúc",
+          "image": null
+        },
+        {
+          "term": "作曲",
+          "definition": "（さっきょく）sáng tác nhạc",
+          "image": null
+        },
+        {
+          "term": "失",
+          "definition": "THẤT シツ うしな・う",
+          "image": null
+        },
+        {
+          "term": "失業",
+          "definition": "（しつぎょう）thất nghiệp",
+          "image": null
+        },
+        {
+          "term": "失礼",
+          "definition": "（しつれい）thất lễ, xin phép",
+          "image": null
+        },
+        {
+          "term": "失言",
+          "definition": "（しつげん）lỡ lời",
+          "image": null
+        },
+        {
+          "term": "失望",
+          "definition": "（しつぼう）thất vọng",
+          "image": null
+        },
+        {
+          "term": "過失",
+          "definition": "（かしつ）sai lầm, lỗi lầm",
+          "image": null
+        },
+        {
+          "term": "得失",
+          "definition": "（とくしつ）được mất",
+          "image": null
+        },
+        {
+          "term": "流失",
+          "definition": "（りゅうしつ）bị cuốn trôi",
+          "image": null
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "kanji": [
+        {
+          "term": "然",
+          "definition": "NHIÊN ゼン しか・し",
+          "image": null
+        },
+        {
+          "term": "当然",
+          "definition": "（とうぜん）đương nhiên",
+          "image": null
+        },
+        {
+          "term": "自然",
+          "definition": "（しぜん）tự nhiên",
+          "image": null
+        },
+        {
+          "term": "全然",
+          "definition": "（ぜんぜん）hoàn toàn",
+          "image": null
+        },
+        {
+          "term": "偶然",
+          "definition": "（ぐうぜん）ngẫu nhiên",
+          "image": null
+        },
+        {
+          "term": "突然",
+          "definition": "（とつぜん）đột nhiên",
+          "image": null
+        },
+        {
+          "term": "姿",
+          "definition": "TƯ シ すがた",
+          "image": null
+        },
+        {
+          "term": "立ち姿",
+          "definition": "（たちすがた）dáng đứng",
+          "image": null
+        },
+        {
+          "term": "寝姿",
+          "definition": "（ねすがた）dáng ngủ",
+          "image": null
+        },
+        {
+          "term": "姿勢",
+          "definition": "（しせい）tư thế",
+          "image": null
+        },
+        {
+          "term": "神",
+          "definition": "THẦN シン かみ",
+          "image": null
+        },
+        {
+          "term": "神様",
+          "definition": "（かみさま）thần linh",
+          "image": null
+        },
+        {
+          "term": "死神",
+          "definition": "（しにがみ）thần chết",
+          "image": null
+        },
+        {
+          "term": "神道",
+          "definition": "（しんとう）Thần đạo",
+          "image": null
+        },
+        {
+          "term": "神意",
+          "definition": "（しんい）ý trời, ý thần",
+          "image": null
+        },
+        {
+          "term": "神社",
+          "definition": "（じんじゃ）đền thần đạo",
+          "image": null
+        },
+        {
+          "term": "女神",
+          "definition": "（めがみ）nữ thần",
+          "image": null
+        },
+        {
+          "term": "天神",
+          "definition": "（てんじん）thiên thần",
+          "image": null
+        },
+        {
+          "term": "心神",
+          "definition": "（しんしん）tinh thần, tâm thần",
+          "image": null
+        },
+        {
+          "term": "積",
+          "definition": "TÍCH セキ つ・む つ・もる",
+          "image": null
+        },
+        {
+          "term": "積雪",
+          "definition": "（せきせつ）tuyết tích tụ",
+          "image": null
+        },
+        {
+          "term": "集積",
+          "definition": "（しゅうせき）tích lũy, tập hợp",
+          "image": null
+        },
+        {
+          "term": "積算",
+          "definition": "（せきさん）cộng dồn, tính tổng",
+          "image": null
+        },
+        {
+          "term": "面積",
+          "definition": "（めんせき）diện tích",
+          "image": null
+        },
+        {
+          "term": "体積",
+          "definition": "（たいせき）thể tích",
+          "image": null
+        },
+        {
+          "term": "積極的",
+          "definition": "（せっきょくてき）tích cực",
+          "image": null
+        },
+        {
+          "term": "材",
+          "definition": "TÀI ザイ",
+          "image": null
+        },
+        {
+          "term": "材料",
+          "definition": "（ざいりょう）nguyên liệu",
+          "image": null
+        },
+        {
+          "term": "材質",
+          "definition": "（ざいしつ）chất liệu",
+          "image": null
+        },
+        {
+          "term": "人材",
+          "definition": "（じんざい）nhân tài",
+          "image": null
+        },
+        {
+          "term": "教材",
+          "definition": "（きょうざい）giáo trình, tài liệu học",
+          "image": null
+        },
+        {
+          "term": "満",
+          "definition": "MÃN マン み・ちる み・たす",
+          "image": null
+        },
+        {
+          "term": "満足",
+          "definition": "（まんぞく）thỏa mãn, hài lòng",
+          "image": null
+        },
+        {
+          "term": "未満",
+          "definition": "（みまん）chưa đến, dưới",
+          "image": null
+        },
+        {
+          "term": "満員",
+          "definition": "（まんいん）đầy người",
+          "image": null
+        },
+        {
+          "term": "満開",
+          "definition": "（まんかい）nở rộ",
+          "image": null
+        },
+        {
+          "term": "満点",
+          "definition": "（まんてん）điểm tối đa",
+          "image": null
+        },
+        {
+          "term": "不満",
+          "definition": "（ふまん）bất mãn",
+          "image": null
+        },
+        {
+          "term": "戦",
+          "definition": "CHIẾN セン たたか・う",
+          "image": null
+        },
+        {
+          "term": "戦術",
+          "definition": "（せんじゅつ）chiến thuật",
+          "image": null
+        },
+        {
+          "term": "戦後",
+          "definition": "（せんご）sau chiến tranh",
+          "image": null
+        },
+        {
+          "term": "内戦",
+          "definition": "（ないせん）nội chiến",
+          "image": null
+        },
+        {
+          "term": "戦略",
+          "definition": "（せんりゃく）chiến lược",
+          "image": null
+        },
+        {
+          "term": "決勝戦",
+          "definition": "（けっしょうせん）trận chung kết",
+          "image": null
+        },
+        {
+          "term": "争",
+          "definition": "TRANH ソウ あらそ・う",
+          "image": null
+        },
+        {
+          "term": "争論",
+          "definition": "（そうろん）tranh luận",
+          "image": null
+        },
+        {
+          "term": "内争",
+          "definition": "（ないそう）xung đột nội bộ",
+          "image": null
+        },
+        {
+          "term": "戦争",
+          "definition": "（せんそう）chiến tranh",
+          "image": null
+        },
+        {
+          "term": "競争",
+          "definition": "（きょうそう）cạnh tranh",
+          "image": null
+        },
+        {
+          "term": "再",
+          "definition": "TÁI サイ ふたた・び",
+          "image": null
+        },
+        {
+          "term": "再度",
+          "definition": "（さいど）lần nữa",
+          "image": null
+        },
+        {
+          "term": "再生",
+          "definition": "（さいせい）tái sinh, phát lại",
+          "image": null
+        },
+        {
+          "term": "再建",
+          "definition": "（さいけん）tái thiết",
+          "image": null
+        },
+        {
+          "term": "再出",
+          "definition": "（さいしゅつ）xuất hiện lại",
+          "image": null
+        },
+        {
+          "term": "再利用",
+          "definition": "（さいりよう）tái sử dụng",
+          "image": null
+        },
+        {
+          "term": "再発",
+          "definition": "（さいはつ）tái phát",
+          "image": null
+        },
+        {
+          "term": "列",
+          "definition": "LIỆT レツ",
+          "image": null
+        },
+        {
+          "term": "列車",
+          "definition": "（れっしゃ）tàu hỏa",
+          "image": null
+        },
+        {
+          "term": "行列",
+          "definition": "（ぎょうれつ）hàng người, ma trận",
+          "image": null
+        },
+        {
+          "term": "座",
+          "definition": "TỌA ザ すわ・る",
+          "image": null
+        },
+        {
+          "term": "座席",
+          "definition": "（ざせき）ghế ngồi",
+          "image": null
+        },
+        {
+          "term": "口座",
+          "definition": "（こうざ）tài khoản ngân hàng",
+          "image": null
+        },
+        {
+          "term": "正座",
+          "definition": "（せいざ）ngồi kiểu Nhật",
+          "image": null
+        },
+        {
+          "term": "鉄",
+          "definition": "THIẾT テツ",
+          "image": null
+        },
+        {
+          "term": "鉄道",
+          "definition": "（てつどう）đường sắt",
+          "image": null
+        },
+        {
+          "term": "国鉄",
+          "definition": "（こくてつ）đường sắt quốc gia",
+          "image": null
+        },
+        {
+          "term": "私鉄",
+          "definition": "（してつ）đường sắt tư nhân",
+          "image": null
+        },
+        {
+          "term": "刻",
+          "definition": "KHẮC コク きざ・む",
+          "image": null
+        },
+        {
+          "term": "遅刻",
+          "definition": "（ちこく）đi trễ",
+          "image": null
+        },
+        {
+          "term": "時刻",
+          "definition": "（じこく）thời gian, giờ giấc",
+          "image": null
+        },
+        {
+          "term": "彫刻",
+          "definition": "（ちょうこく）điêu khắc",
+          "image": null
+        },
+        {
+          "term": "岸",
+          "definition": "NGẠN ガン きし",
+          "image": null
+        },
+        {
+          "term": "岸辺",
+          "definition": "（きしべ）bờ biển, ven bờ",
+          "image": null
+        },
+        {
+          "term": "海岸",
+          "definition": "（かいがん）bờ biển",
+          "image": null
+        },
+        {
+          "term": "両岸",
+          "definition": "（りょうがん）hai bờ",
+          "image": null
+        },
+        {
+          "term": "製",
+          "definition": "CHẾ セイ",
+          "image": null
+        },
+        {
+          "term": "製品",
+          "definition": "（せいひん）sản phẩm",
+          "image": null
+        },
+        {
+          "term": "製作",
+          "definition": "（せいさく）chế tác, sản xuất",
+          "image": null
+        },
+        {
+          "term": "～製",
+          "definition": "（～せい）sản xuất tại ~",
+          "image": null
+        },
+        {
+          "term": "製造",
+          "definition": "（せいぞう）chế tạo, sản xuất",
+          "image": null
+        },
+        {
+          "term": "造",
+          "definition": "TẠO ゾウ つく・る",
+          "image": null
+        },
+        {
+          "term": "製造",
+          "definition": "（せいぞう）sản xuất, chế tạo",
+          "image": null
+        },
+        {
+          "term": "造形",
+          "definition": "（ぞうけい）tạo hình",
+          "image": null
+        },
+        {
+          "term": "造林",
+          "definition": "（ぞうりん）trồng rừng",
+          "image": null
+        },
+        {
+          "term": "造反",
+          "definition": "（ぞうはん）nổi loạn, phản loạn",
+          "image": null
+        }
+      ]
+    }
+  ]
 }
