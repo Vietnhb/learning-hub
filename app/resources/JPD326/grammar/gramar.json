@@ -285,6 +285,380 @@
           ]
         }
       ]
+    },
+    {
+      "lesson": "2",
+      "title": "世代を超えた交流",
+      "grammar": [
+        {
+          "id": "1.1",
+          "pattern": "～どころではない／どころじゃない",
+          "usage": "V-辞書形／N＋どころではない／どころじゃない",
+          "meaning": "Không phải lúc để…, không thể làm…",
+          "description": "Dùng khi muốn nhấn mạnh rằng vì có lý do nào đó nên không thể làm việc gì hoặc không có thời gian để làm việc đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本に来たばかりのころは生活に慣れるのに一生懸命でボランティアどころではありませんでした。",
+              "vi": "Lúc mới đến Nhật, tôi phải cố gắng làm quen với cuộc sống nên không còn tâm trí đâu mà làm tình nguyện."
+            },
+            {
+              "index": 2,
+              "jp": "今度の休み、どこか遊びに行こうよ。\n今は仕事が忙しくて、遊びに行くどころじゃないんだ。ごめんね。",
+              "vi": "Kỳ nghỉ tới đi chơi đâu đó nhé.\nBây giờ công việc bận quá nên không phải lúc để đi chơi đâu. Xin lỗi nhé."
+            },
+            {
+              "index": 3,
+              "jp": "工場で火事があり、仕事どころではなかった。",
+              "vi": "Nhà máy xảy ra hỏa hoạn nên chẳng còn tâm trí đâu mà làm việc."
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "pattern": "～たところ",
+          "usage": "V-タ形＋ところ",
+          "meaning": "Sau khi thử làm…, kết quả là…",
+          "description": "Diễn tả sau khi thực hiện hành động nào đó thì phát hiện ra kết quả hoặc hiểu ra điều gì.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ボランティアに参加してみたところ、とても楽しくてあっという間に時間がたちました。",
+              "vi": "Sau khi thử tham gia hoạt động tình nguyện, tôi thấy rất vui và thời gian trôi qua trong chốc lát."
+            },
+            {
+              "index": 2,
+              "jp": "初めて見た料理なので、おいしいかどうか心配だった。でも、食べてみたところ、とてもおいしかった。",
+              "vi": "Vì là món ăn lần đầu thấy nên tôi lo không biết có ngon không. Nhưng khi thử ăn thì rất ngon."
+            }
+          ]
+        },
+        {
+          "id": "1.2-2",
+          "pattern": "～たところが",
+          "usage": "V-タ形＋ところが",
+          "meaning": "Nhưng mà…, thế nhưng…",
+          "description": "Dùng để diễn tả kết quả thực tế trái ngược với điều đã mong đợi hoặc suy nghĩ trước đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "教室に入ってみたところが、学生は一人も来ていなかった。",
+              "vi": "Khi thử vào lớp học thì chẳng có học sinh nào đến cả."
+            },
+            {
+              "index": 2,
+              "jp": "田中さんは私より若いと思っていた。ところが私より５歳も年上（としうえ）だった。",
+              "vi": "Tôi nghĩ anh Tanaka trẻ hơn mình. Thế nhưng anh ấy lại lớn hơn tôi tới 5 tuổi."
+            }
+          ]
+        },
+        {
+          "id": "1.2-3",
+          "pattern": "ところで",
+          "usage": "",
+          "meaning": "Nhân tiện…, mà này…",
+          "description": "Dùng để chuyển sang một chủ đề khác trong hội thoại.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "明日、試験でしょ。がんばってね。ところで、来週の月曜日は空いてる？",
+              "vi": "Ngày mai thi đúng không? Cố lên nhé. Mà này, thứ hai tuần sau cậu có rảnh không?"
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "pattern": "ことになった",
+          "usage": "Ｖる／Ｖない／Ａい／Ｎという＋ことになった",
+          "meaning": "Được quyết định là…, cuối cùng thành ra…",
+          "description": "Dùng để diễn tả việc gì đó đã được quyết định bởi người khác hoặc do mọi người cùng quyết định.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "私は年配の女性と中学生と３人で一緒にごみ拾いをすることになりました。",
+              "vi": "Tôi đã được phân công nhặt rác cùng với một phụ nữ lớn tuổi và một học sinh cấp hai."
+            },
+            {
+              "index": 2,
+              "jp": "景気が悪いので、社員旅行はしないことになった。残念だ。",
+              "vi": "Vì kinh tế không tốt nên đã quyết định không tổ chức du lịch công ty. Thật tiếc."
+            },
+            {
+              "index": 3,
+              "jp": "学校のパーティーで、お酒を飲んでもいいことになりました。",
+              "vi": "Trong buổi tiệc của trường đã được quyết định là có thể uống rượu."
+            },
+            {
+              "index": 4,
+              "jp": "今日の試合は台風のため、中止ということになった。",
+              "vi": "Trận đấu hôm nay đã được quyết định hủy do bão."
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "pattern": "～限り・限りは",
+          "usage": "Ｖる／Ｖない／Ａな・である／Ｎである＋限り・限りは",
+          "meaning": "Chừng nào còn…, miễn là còn…",
+          "description": "Dùng để diễn tả trong khoảng thời gian hoặc điều kiện nào đó còn tồn tại thì trạng thái phía sau vẫn tiếp diễn.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "その女性は体が動く限り、このボランティアを続けたいと言っていました。",
+              "vi": "Người phụ nữ đó nói rằng miễn là cơ thể còn hoạt động được thì bà vẫn muốn tiếp tục công việc tình nguyện này."
+            },
+            {
+              "index": 2,
+              "jp": "東京の都心に住んでいる限りは、車は必要ないだろう。",
+              "vi": "Miễn là còn sống ở trung tâm Tokyo thì chắc không cần xe hơi."
+            },
+            {
+              "index": 3,
+              "jp": "プロの選手である限り、努力するのは当然だ。",
+              "vi": "Miễn là vận động viên chuyên nghiệp thì việc nỗ lực là điều đương nhiên."
+            },
+            {
+              "index": 4,
+              "jp": "やせない限り、このドレスは着られない。",
+              "vi": "Nếu không giảm cân thì sẽ không mặc được chiếc váy này."
+            }
+          ]
+        },
+        {
+          "id": "1.4-2",
+          "pattern": "～ない限り",
+          "usage": "Vない＋限り",
+          "meaning": "Nếu không…, trừ khi…",
+          "description": "Diễn tả nếu điều A không xảy ra thì điều B cũng không thể xảy ra.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この人数では、残業しない限り仕事は終らない。",
+              "vi": "Với số lượng người này thì nếu không tăng ca công việc sẽ không xong."
+            },
+            {
+              "index": 2,
+              "jp": "魚は新鮮でない限りは、刺身にはできない。",
+              "vi": "Nếu cá không tươi thì không thể làm sashimi."
+            }
+          ]
+        },
+        {
+          "id": "2.1",
+          "pattern": "～かなと思って",
+          "usage": "",
+          "meaning": "Tôi nghĩ là…, hay là…",
+          "description": "Dùng khi rủ rê hoặc đề nghị ai đó một cách nhẹ nhàng, lịch sự và có ý dè dặt.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ケーキ作ってみたんだけど、Ｂさん、食べるかなと思って。これ。",
+              "vi": "Tôi thử làm bánh đó, nên nghĩ không biết B có ăn không. Đây này."
+            },
+            {
+              "index": 2,
+              "jp": "もしもし、今度みんなでお花見するんだけど、Ｂさんも行かないかなと思って電話したんだ。",
+              "vi": "Alo, lần này mọi người định đi ngắm hoa nên tôi gọi thử xem B có muốn đi không."
+            },
+            {
+              "index": 3,
+              "jp": "これ、あげる。\nわあ、かわいい。どうしたの？\nたまたま店で見つけたんだけど、Ｂさんが好きなんじゃないかなって思って。",
+              "vi": "Tặng cậu này.\nWoa dễ thương quá. Sao vậy?\nTôi tình cờ thấy ở cửa hàng và nghĩ có lẽ cậu sẽ thích."
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "pattern": "～にしては",
+          "usage": "普通形＋にしては\nナＡだ→である\nＮだ→（である）",
+          "meaning": "So với…, xét theo… thì…",
+          "description": "Dùng khi kết quả hoặc trạng thái thực tế khác với điều người nói dự đoán từ đối tượng đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "例年の今ごろはもっと寒い。今日は１１月にしては暖かい。",
+              "vi": "Thông thường thời điểm này lạnh hơn nhiều. Hôm nay so với tháng 11 thì khá ấm."
+            },
+            {
+              "index": 2,
+              "jp": "全然勉強しなかったにしてはいい点が取れた。",
+              "vi": "Dù hầu như không học nhưng so với thế thì đã đạt điểm khá tốt."
+            },
+            {
+              "index": 3,
+              "jp": "中古品にしてはいい物があるって評判なんです。",
+              "vi": "Nghe nói so với hàng cũ thì có nhiều món khá tốt."
+            },
+            {
+              "index": 4,
+              "jp": "80歳にしてはよく食べる。",
+              "vi": "So với người 80 tuổi thì ăn rất khỏe."
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "pattern": "～につき",
+          "usage": "（N）＋数量詞＋につき、数量詞",
+          "meaning": "Mỗi…, tính theo…",
+          "description": "Dùng để chỉ tiêu chuẩn tính toán theo đơn vị hoặc số lượng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ピザお買い上げ２枚につき次回サービス券１枚さしあげます。",
+              "vi": "Mỗi khi mua 2 chiếc pizza sẽ được tặng 1 phiếu dịch vụ cho lần sau."
+            },
+            {
+              "index": 2,
+              "jp": "しまなみ水族館の団体入場券は、１人につき１００円の割引があるそうだ。",
+              "vi": "Vé vào cửa theo đoàn của thủy cung Shimanami được giảm 100 yên mỗi người."
+            },
+            {
+              "index": 3,
+              "jp": "水道代は一ヶ月につき３０００円かかります。",
+              "vi": "Tiền nước tốn 3000 yên mỗi tháng."
+            }
+          ]
+        },
+        {
+          "id": "3.1",
+          "pattern": "～もんだ／～ものだ",
+          "usage": "V-辞書形／Ａい／Ａな＋もんだ／～ものだ",
+          "meaning": "Đúng là…, thật là…",
+          "description": "Dùng khi người nói cảm thấy sâu sắc, xúc động hoặc ngạc nhiên về một sự việc.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "北海道の知床って自然が素晴らしい所らしいよ。\nへえ、いつか行ってみたいもんだね。",
+              "vi": "Nghe nói Shiretoko ở Hokkaido là nơi thiên nhiên tuyệt đẹp.\nỒ, thật muốn một lần được đến đó nhỉ."
+            },
+            {
+              "index": 2,
+              "jp": "月日のたつのは早いものだ。この間お正月だと思ったら、もう半年たってしまった。",
+              "vi": "Thời gian trôi nhanh thật. Mới nghĩ vừa là năm mới mà đã nửa năm trôi qua rồi."
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "pattern": "～ながら（も）",
+          "usage": "Ｖます／Ａい／Ａな・Ｎ＋ながら（も）",
+          "meaning": "Mặc dù…, tuy… nhưng…",
+          "description": "Dùng để diễn tả hai nội dung trái ngược nhau. Chủ ngữ của hai vế phải giống nhau.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "健康によくないとは知りながらも、ついたばこを吸ってしまう。",
+              "vi": "Dù biết không tốt cho sức khỏe nhưng tôi vẫn hút thuốc."
+            },
+            {
+              "index": 2,
+              "jp": "楽しみにしていた旅行だが、残念ながら病気で行けなくなってしまった。",
+              "vi": "Dù là chuyến du lịch đã rất mong đợi nhưng tiếc là tôi bị bệnh nên không đi được."
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "pattern": "～につけ（て）",
+          "usage": "V-辞書形＋につけ（て）",
+          "meaning": "Mỗi khi…, cứ hễ… là lại…",
+          "description": "Dùng khi mỗi lần làm gì đó thì luôn gợi lên cùng một cảm xúc hoặc ký ức.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この音楽を聞くにつけ、子どものころを思い出す。",
+              "vi": "Mỗi khi nghe bản nhạc này tôi lại nhớ về thời thơ ấu."
+            },
+            {
+              "index": 2,
+              "jp": "母からの手紙を読むにつけて、頑張らなければと思う。",
+              "vi": "Mỗi lần đọc thư mẹ gửi tôi lại nghĩ mình phải cố gắng hơn."
+            }
+          ]
+        },
+        {
+          "id": "3.4",
+          "pattern": "～さえ",
+          "usage": "Ｎ(＋助詞)＋さえ",
+          "meaning": "Ngay cả…, đến cả…",
+          "description": "Dùng để nhấn mạnh rằng ngay cả điều ở mức độ thấp nhất cũng như vậy nên những điều khác đương nhiên cũng thế.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "夢中になっておしゃべりしていたら、食事することさえ忘れていた。",
+              "vi": "Mải mê nói chuyện đến mức ngay cả việc ăn cơm cũng quên mất."
+            },
+            {
+              "index": 2,
+              "jp": "この料理は作り方が簡単です。子どもでさえ作れます。",
+              "vi": "Món ăn này cách làm rất đơn giản. Ngay cả trẻ con cũng làm được."
+            },
+            {
+              "index": 3,
+              "jp": "大学をやめることを両親にさえ相談しないで決めた。",
+              "vi": "Tôi đã quyết định nghỉ đại học mà ngay cả bố mẹ cũng không bàn bạc."
+            }
+          ]
+        },
+        {
+          "id": "4.1",
+          "pattern": "～に反し（て）／～に反する／～に反した",
+          "usage": "Ｎ＋～に反し（て）／～に反する／～に反した",
+          "meaning": "Trái với…, ngược với…",
+          "description": "Dùng để diễn tả kết quả hoặc hành động trái ngược với dự đoán, kỳ vọng, quy tắc hoặc chỉ thị.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今年は気象庁の予想に反して、暖冬になった。",
+              "vi": "Năm nay trái với dự đoán của cơ quan khí tượng, mùa đông lại ấm."
+            },
+            {
+              "index": 2,
+              "jp": "親の期待に反することばかりしてきたので、これからは親孝行したい。",
+              "vi": "Vì trước giờ tôi toàn làm trái kỳ vọng của bố mẹ nên từ giờ muốn báo hiếu cho họ."
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "pattern": "～うちに",
+          "usage": "V-辞書形・テ形いる・ナイ形＋うちに",
+          "meaning": "Trong lúc…, trong khi…",
+          "description": "Dùng để diễn tả trong lúc một trạng thái hay hành động đang diễn ra thì có sự thay đổi xảy ra.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "昨日の夜は音楽を聞いているうちに眠ってしまった。",
+              "vi": "Tối qua trong lúc nghe nhạc tôi đã ngủ quên."
+            },
+            {
+              "index": 2,
+              "jp": "夢中になって本を読んでいたら、知らないうちに外が暗くなっていた。",
+              "vi": "Mải mê đọc sách nên lúc nhận ra thì bên ngoài đã tối mất rồi."
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "pattern": "～からして",
+          "usage": "N＋からして",
+          "meaning": "Ngay từ…, chỉ cần nhìn vào… cũng thấy…",
+          "description": "Đưa ra một ví dụ tiêu biểu để cho thấy những mặt khác cũng đương nhiên khác thường.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この本はタイトルからして難しそうだ。",
+              "vi": "Cuốn sách này ngay từ tiêu đề đã có vẻ khó."
+            },
+            {
+              "index": 2,
+              "jp": "この旅館は歴史があるそうだよ。\nなるほど。玄関からして立派だね。",
+              "vi": "Nghe nói nhà trọ này có lịch sử lâu đời đấy.\nRa vậy. Ngay từ cửa vào đã thấy rất hoành tráng rồi."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
