@@ -116,12 +116,6 @@ export default function JPD326VocabularyPage() {
   const { user, loading } = useAuth();
   const groupedListRef = useRef<HTMLDivElement | null>(null);
 
-  const slots = useMemo(
-    () =>
-      Array.from(new Set(data.map((item) => item.slot))).sort((a, b) => a - b),
-    [],
-  );
-
   const [selectedSlot, setSelectedSlot] = useState<number | "all">("all");
   const [selectedLesson, setSelectedLesson] = useState<string>("all");
   const [search, setSearch] = useState("");
@@ -134,28 +128,33 @@ export default function JPD326VocabularyPage() {
   const [deck, setDeck] = useState<VocabItem[]>([]);
 
   const lessons = useMemo(() => {
-    const base =
-      selectedSlot === "all"
-        ? data
-        : data.filter((item) => item.slot === selectedSlot);
-    return Array.from(new Set(base.map((item) => item.lesson))).sort((a, b) =>
+    return Array.from(new Set(data.map((item) => item.lesson))).sort((a, b) =>
       a.localeCompare(b, "vi", { numeric: true }),
     );
-  }, [selectedSlot]);
+  }, []);
+
+  const slots = useMemo(() => {
+    if (selectedLesson === "all") return [];
+
+    const base =
+      data.filter((item) => item.lesson === selectedLesson);
+
+    return Array.from(new Set(base.map((item) => item.slot))).sort((a, b) => a - b);
+  }, [selectedLesson]);
 
   useEffect(() => {
-    setSelectedLesson("all");
-  }, [selectedSlot]);
+    setSelectedSlot("all");
+  }, [selectedLesson]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
 
     return data
       .filter((item) =>
-        selectedSlot === "all" ? true : item.slot === selectedSlot,
+        selectedLesson === "all" ? true : item.lesson === selectedLesson,
       )
       .filter((item) =>
-        selectedLesson === "all" ? true : item.lesson === selectedLesson,
+        selectedSlot === "all" ? true : item.slot === selectedSlot,
       )
       .filter((item) => (posFilter === "all" ? true : item.pos === posFilter))
       .filter((item) =>
@@ -170,6 +169,10 @@ export default function JPD326VocabularyPage() {
         );
       })
       .sort((a, b) => {
+        const lessonCompare = a.lesson.localeCompare(b.lesson, "vi", {
+          numeric: true,
+        });
+        if (lessonCompare !== 0) return lessonCompare;
         if (a.slot !== b.slot) return a.slot - b.slot;
         const aOrder =
           a.slotOrder === 0 ? Number.MAX_SAFE_INTEGER : a.slotOrder;
@@ -240,7 +243,7 @@ export default function JPD326VocabularyPage() {
 
       if (!existing) {
         map.set(key, {
-          title: `Slot ${item.slot} - ${item.lesson}`,
+          title: `${item.lesson} - Slot ${item.slot}`,
           items: [item],
           slot: item.slot,
           lesson: item.lesson,
@@ -256,6 +259,11 @@ export default function JPD326VocabularyPage() {
     }
 
     return Array.from(map.values()).sort((a, b) => {
+      const lessonCompare = a.lesson.localeCompare(b.lesson, "vi", {
+        numeric: true,
+      });
+      if (lessonCompare !== 0) return lessonCompare;
+
       if (a.slot !== b.slot) return a.slot - b.slot;
 
       const aIsExtra = a.slotOrder === 0;
@@ -264,7 +272,7 @@ export default function JPD326VocabularyPage() {
 
       if (a.slotOrder !== b.slotOrder) return a.slotOrder - b.slotOrder;
 
-      return a.lesson.localeCompare(b.lesson, "vi", { numeric: true });
+      return 0;
     });
   }, [deck]);
 
@@ -359,36 +367,38 @@ export default function JPD326VocabularyPage() {
                 ))}
               </div>
             </div>
-            <div>
-              <p className="text-sm font-semibold mb-2">Chọn Slot</p>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => setSelectedSlot("all")}
-                  className={`px-3 py-1.5 rounded-full border text-sm ${
-                    selectedSlot === "all"
-                      ? "bg-japan-indigo text-white border-japan-indigo"
-                      : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-                  }`}
-                >
-                  Tất cả
-                </button>
-                {slots.map((slot) => (
+            {selectedLesson !== "all" && (
+              <div>
+                <p className="text-sm font-semibold mb-2">Chọn Slot</p>
+                <div className="flex flex-wrap gap-2">
                   <button
-                    key={slot}
                     type="button"
-                    onClick={() => setSelectedSlot(slot)}
+                    onClick={() => setSelectedSlot("all")}
                     className={`px-3 py-1.5 rounded-full border text-sm ${
-                      selectedSlot === slot
+                      selectedSlot === "all"
                         ? "bg-japan-indigo text-white border-japan-indigo"
                         : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
                     }`}
                   >
-                    Slot {slot}
+                    Tất cả slot
                   </button>
-                ))}
+                  {slots.map((slot) => (
+                    <button
+                      key={slot}
+                      type="button"
+                      onClick={() => setSelectedSlot(slot)}
+                      className={`px-3 py-1.5 rounded-full border text-sm ${
+                        selectedSlot === slot
+                          ? "bg-japan-indigo text-white border-japan-indigo"
+                          : "bg-white border-gray-300 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                      }`}
+                    >
+                      Slot {slot}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="grid md:grid-cols-4 gap-3">
               <div className="md:col-span-2 relative">
@@ -636,7 +646,7 @@ export default function JPD326VocabularyPage() {
 
         <Card className="p-5 bg-white/95 dark:bg-gray-800/95">
           <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-            Danh sách theo Slot/Bài
+            Danh sách theo Bài/Slot
           </h2>
           <div
             ref={groupedListRef}
