@@ -4057,6 +4057,104 @@
     },
     {
       "id": 29,
+      "title": "Độc - Thân - Trữ - Kì",
+      "kanji": [
+        {
+          "character": "独",
+          "meaning": "Độc",
+          "onyomi": "ドク",
+          "kunyomi": "ひと-り",
+          "examples": [
+            {
+              "word": "独り言",
+              "reading": "ひとりごと",
+              "meaning": "Nói một mình"
+            },
+            {
+              "word": "独立",
+              "reading": "どくりつ",
+              "meaning": "Độc lập"
+            },
+            {
+              "word": "独身",
+              "reading": "どくしん",
+              "meaning": "Độc thân"
+            }
+          ]
+        },
+        {
+          "character": "身",
+          "meaning": "Thân",
+          "onyomi": "シン",
+          "kunyomi": "み",
+          "examples": [
+            {
+              "word": "独身",
+              "reading": "どくしん",
+              "meaning": "Độc thân"
+            },
+            {
+              "word": "身長",
+              "reading": "しんちょう",
+              "meaning": "Chiều cao"
+            },
+            {
+              "word": "身だしなみ",
+              "reading": "みだしなみ",
+              "meaning": "Diện mạo, cách ăn mặc"
+            }
+          ]
+        },
+        {
+          "character": "貯",
+          "meaning": "Trữ",
+          "onyomi": "チョ",
+          "kunyomi": "た-める",
+          "examples": [
+            {
+              "word": "貯金",
+              "reading": "ちょきん",
+              "meaning": "Tiết kiệm tiền"
+            },
+            {
+              "word": "貯蔵",
+              "reading": "ちょぞう",
+              "meaning": "Lưu trữ"
+            }
+          ]
+        },
+        {
+          "character": "期",
+          "meaning": "Kì",
+          "onyomi": "キ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "最期",
+              "reading": "さいご",
+              "meaning": "Giây phút cuối"
+            },
+            {
+              "word": "期限",
+              "reading": "きげん",
+              "meaning": "Kỳ hạn"
+            },
+            {
+              "word": "期末",
+              "reading": "きまつ",
+              "meaning": "Cuối kỳ"
+            },
+            {
+              "word": "期待",
+              "reading": "きたい",
+              "meaning": "Kỳ vọng"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
       "title": "Ước - Thúc - Tất - Thủ",
       "kanji": [
         {
@@ -4169,7 +4267,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "Vĩnh - Nguyện - Hạnh - Phúc",
       "kanji": [
         {
