@@ -259,6 +259,11 @@
               "index": 2,
               "jp": "このお店ではこの地方の名産品をはじめとするさまざまなお土産品が売られている。",
               "vi": "Ở cửa hàng này có bán nhiều loại quà lưu niệm khác nhau, tiêu biểu là các đặc sản nổi tiếng của vùng này."
+            },
+            {
+              "index": 3,
+              "jp": "大学で日本をはじめアジア諸国について研究していた。",
+              "vi": "Ở đại học, tôi đã nghiên cứu về các nước châu Á, trước hết là Nhật Bản."
             }
           ]
         },
@@ -278,6 +283,31 @@
               "index": 2,
               "jp": "祖父は一生を通して、頑固な職人であり続けた。",
               "vi": "Ông tôi suốt cuộc đời vẫn luôn là một người thợ thủ công cứng đầu."
+            },
+            {
+              "index": 3,
+              "jp": "子供たちはスポーツを通じて、色々なことを学ぶことができます。",
+              "vi": "Trẻ em có thể học được nhiều điều thông qua thể thao."
+            },
+            {
+              "index": 4,
+              "jp": "現在はインターネットを通して、すぐに世界中にニュースが広まる。",
+              "vi": "Hiện nay, thông qua Internet, tin tức lan truyền ngay lập tức khắp thế giới."
+            },
+            {
+              "index": 5,
+              "jp": "私たちは読書を通していろいろな人の考え方を知ることができます。",
+              "vi": "Chúng ta có thể biết được cách suy nghĩ của nhiều người thông qua việc đọc sách."
+            },
+            {
+              "index": 6,
+              "jp": "取材は、弁護士を通して申し込んでください。",
+              "vi": "Vui lòng đăng ký phỏng vấn thông qua luật sư."
+            },
+            {
+              "index": 7,
+              "jp": "私は海外留学の経験を通じて多くのことを学んだ。",
+              "vi": "Tôi đã học được nhiều điều thông qua trải nghiệm du học nước ngoài."
             }
           ]
         },
@@ -316,6 +346,11 @@
               "index": 2,
               "jp": "冬のスポーツというと、スキーを思い浮かべます。",
               "vi": "Nhắc đến môn thể thao mùa đông thì tôi nghĩ ngay đến trượt tuyết."
+            },
+            {
+              "index": 3,
+              "jp": "京都といえば、お寺が有名です。",
+              "vi": "Nói đến Kyoto thì chùa chiền rất nổi tiếng."
             }
           ]
         }
