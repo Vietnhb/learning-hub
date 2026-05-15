@@ -169,21 +169,41 @@
           "examples": [
             {
               "index": 1,
+              "jp": "この券をご持参のお客様に限り、200円割引いたします。",
+              "vi": "Chỉ những khách hàng mang theo phiếu này mới được giảm 200 yên."
+            },
+            {
+              "index": 2,
+              "jp": "参加者は女性に限る。",
+              "vi": "Người tham gia chỉ giới hạn ở nữ."
+            },
+            {
+              "index": 3,
+              "jp": "傘を持っていない日に限って、雨が降る。",
+              "vi": "Cứ đúng vào ngày không mang ô thì trời lại mưa."
+            },
+            {
+              "index": 4,
+              "jp": "遅刻してはいけないときに限って、寝坊してしまう。",
+              "vi": "Cứ đúng lúc không được đi muộn thì lại ngủ quên."
+            },
+            {
+              "index": 5,
               "jp": "冬は鍋に限るね。",
               "vi": "Mùa đông thì lẩu là tuyệt nhất nhỉ."
             },
             {
-              "index": 2,
+              "index": 6,
               "jp": "体の調子が悪いときには早く寝るに限る。",
               "vi": "Khi cơ thể không khỏe thì tốt nhất là ngủ sớm."
             },
             {
-              "index": 3,
+              "index": 7,
               "jp": "危ないところには近づかないに限る。",
               "vi": "Tốt nhất là không nên đến gần những nơi nguy hiểm."
             },
             {
-              "index": 4,
+              "index": 8,
               "jp": "ビールは冷たいに限る。",
               "vi": "Bia thì phải lạnh mới ngon nhất."
             }
