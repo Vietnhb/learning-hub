@@ -871,6 +871,294 @@
               "vi": "Nghe nói ngày mai có nơi sẽ mưa."
             }
           ]
+        },
+        {
+          "id": "n-nitaishite-nitaishi-nitaisuru",
+          "pattern": "N + に対して・に対し・に対する",
+          "meaning": "Về việc / Đối với / Hướng tới một đối tượng, sự việc",
+          "note": "Diễn tả hướng tới sự việc, con người, ý kiến, yêu cầu hoặc vấn đề nào đó.\nDùng để nói hành vi, thái độ, phản ứng, sự đối lập hoặc tỉ lệ hướng về đối tượng ấy.\nMẫu thường gặp:\n1) N + に対して / に対し: đối với N, về phía N.\n2) N + に対する + N: N bổ nghĩa cho danh từ phía sau.\n3) N + 数量詞 + に対して + 数量詞: tỉ lệ, tương ứng số lượng.\n4) ...のに対して: trong khi / trái lại.",
+          "examples": [
+            {
+              "jp": "彼女はだれ\"\"に対しても\"\"親切です。",
+              "vi": "Cô ấy đối với ai cũng thân thiện cả."
+            },
+            {
+              "jp": "目上の人\"\"に対して\"\"は敬語を使いましょう。",
+              "vi": "Đối với cấp trên thì chúng ta hãy dùng kính ngữ."
+            },
+            {
+              "jp": "私費留学生\"\"に対する\"\"奨学金などの援助はまだ十分ではないと思う。",
+              "vi": "Đối với sinh viên du học tự túc, tôi nghĩ hỗ trợ như học bổng vẫn chưa đủ."
+            },
+            {
+              "jp": "この病気\"\"に対する\"\"効果的な治療法はまだ見つかっていない。",
+              "vi": "Đối với căn bệnh này, vẫn chưa tìm ra phương pháp điều trị hiệu quả."
+            },
+            {
+              "jp": "お客様\"\"に対して\"\"失礼なことを言ってはいけません。",
+              "vi": "Đối với khách hàng, không được nói điều thất lễ."
+            },
+            {
+              "jp": "彼の親切\"\"に対して\"\"は、いくら感謝しても足らない。",
+              "vi": "Đối với lòng tốt của anh ấy, cảm ơn bao nhiêu cũng không đủ."
+            },
+            {
+              "jp": "教師は、どんな学生\"\"に対しても\"\"わけへだてなく付き合う必要がある。",
+              "vi": "Giáo viên cần đối xử với mọi học sinh không phân biệt."
+            },
+            {
+              "jp": "私の質問\"\"に対して\"\"何も答えてくれなかった。",
+              "vi": "Đối với câu hỏi của tôi, họ đã không trả lời gì cả."
+            },
+            {
+              "jp": "彼は女性\"\"に対して\"\"は親切に指導してくれる。",
+              "vi": "Anh ấy luôn hướng dẫn ân cần đối với phụ nữ."
+            },
+            {
+              "jp": "研究員1人\"\"に対して\"\"年間40万円の補助金が与えられる。",
+              "vi": "Mỗi một nhà nghiên cứu được cấp khoản trợ cấp 40 man yên mỗi năm."
+            },
+            {
+              "jp": "学生20人\"\"に対して\"\"教員一人が配置されている。",
+              "vi": "Cứ 20 học sinh thì bố trí một giáo viên."
+            },
+            {
+              "jp": "砂3\"\"に対して\"\"土1の割合で土を混ぜます。",
+              "vi": "Trộn đất theo tỉ lệ 1 phần đất đối với 3 phần cát."
+            },
+            {
+              "jp": "学生1人\"\"に対して\"\"20平米のスペースが確保されている。",
+              "vi": "Mỗi một học sinh được đảm bảo 20 mét vuông không gian."
+            },
+            {
+              "jp": "彼が自民党を支持している\"\"のに対して\"\"、彼女は共産党を支援している。",
+              "vi": "Trong khi anh ấy ủng hộ Đảng Dân chủ Tự do, cô ấy lại ủng hộ Đảng Cộng sản."
+            },
+            {
+              "jp": "兄が背が高い\"\"のに対して\"\"、弟の方はクラスで一番低い。",
+              "vi": "Trong khi anh trai cao, em trai lại thấp nhất lớp."
+            },
+            {
+              "jp": "私の質問\"\"に対する\"\"答えはなかなか得られない。",
+              "vi": "Tôi mãi vẫn chưa nhận được câu trả lời cho câu hỏi của mình."
+            },
+            {
+              "jp": "子供\"\"に対する\"\"親の愛情を量るということができない。",
+              "vi": "Không thể đo đếm được tình yêu thương của cha mẹ dành cho con cái."
+            },
+            {
+              "jp": "書画\"\"に対する\"\"造詣が深い。",
+              "vi": "Đối với thư họa thì phải có hiểu biết sâu sắc."
+            }
+          ]
+        },
+        {
+          "id": "tame-ni-reason-purpose",
+          "pattern": "Thể thông thường / TT-な + な / N + の + ために",
+          "meaning": "Bởi vì / Vì lý do / Vì lợi ích / Để làm gì đó",
+          "note": "Dùng khi nói nguyên nhân, lý do làm việc gì đó hoặc điều gì đó xảy ra.\nKhông dùng với ý muốn, dự định như たい・つもりだ ở cuối câu khi mang nghĩa nguyên nhân.\nNếu trước ために là mệnh đề thì mệnh đề đó phải thể hiện ý chí, không dùng thể khả năng và thể ない.\nCách dùng chính:\n1) N + のため: vì lợi ích, điều tốt cho N.\n2) ...ために: để, nhằm mục đích làm gì đó.\n3) ...ために: vì nguyên nhân, lý do.",
+          "examples": [
+            {
+              "jp": "雨の\"\"ために\"\"ハイキングは中止になりました。",
+              "vi": "Vì mưa nên việc leo núi đã bị hoãn."
+            },
+            {
+              "jp": "外国人が増えた\"\"ため\"\"、外国語のパンフレットを作ることになった。",
+              "vi": "Vì du khách nước ngoài tăng nên đã quyết định làm tờ giới thiệu bằng tiếng nước ngoài."
+            },
+            {
+              "jp": "事故の\"\"ため\"\"、電車が遅れております。",
+              "vi": "Vì tai nạn nên tàu đang bị chậm."
+            },
+            {
+              "jp": "理由：ABK大学受験の\"\"ため\"\"",
+              "vi": "Lý do: Vì dự thi trường ABK."
+            },
+            {
+              "jp": "みんなの\"\"ため\"\"を思ってやったことだ。",
+              "vi": "Những việc tôi đã làm đều nghĩ cho mọi người."
+            },
+            {
+              "jp": "こんなにきついことを言うのも君の\"\"ため\"\"だ。",
+              "vi": "Cũng vì bạn mà tôi mới nói những lời nghiêm khắc như thế này."
+            },
+            {
+              "jp": "子供たちの\"\"ためには\"\"自然のある田舎で暮らすほうがいい。",
+              "vi": "Vì bọn trẻ thì tốt hơn hết là sống ở một miền quê có thiên nhiên."
+            },
+            {
+              "jp": "就職試験を受けなかった\"\"ために\"\"、父をすっかり怒らせてしまった。",
+              "vi": "Vì tôi không dự thi xin việc nên đã khiến ba tôi rất tức giận."
+            },
+            {
+              "jp": "家族の\"\"ために\"\"働いている。",
+              "vi": "Tôi đang làm việc vì gia đình."
+            },
+            {
+              "jp": "世界平和の\"\"ために\"\"国際会議が開かれる。",
+              "vi": "Vì hòa bình thế giới nên hội nghị quốc tế được mở."
+            },
+            {
+              "jp": "家を買う\"\"ために\"\"朝から晩まで働く。",
+              "vi": "Làm việc từ sáng tới tối để mua nhà."
+            },
+            {
+              "jp": "入場券を手に入れる\"\"ために\"\"朝早くから並んだ。",
+              "vi": "Tôi đã xếp hàng từ sáng sớm để lấy được vé vào."
+            },
+            {
+              "jp": "疲れをいやす\"\"ために\"\"サウナへ行った。",
+              "vi": "Tôi đã đi tắm xông hơi để xua tan mệt mỏi."
+            },
+            {
+              "jp": "生きんが\"\"ための\"\"仕事。",
+              "vi": "Công việc để tồn tại."
+            },
+            {
+              "jp": "子供を救わんが\"\"ため\"\"命を落とした。",
+              "vi": "Đánh mất mạng sống vì cứu đứa trẻ."
+            },
+            {
+              "jp": "事故の\"\"ために\"\"現在5キロの渋滞です。",
+              "vi": "Vì vụ tai nạn mà hiện tại đang tắc 5 km."
+            },
+            {
+              "jp": "これはファストフードの\"\"ために\"\"すぐに食べられるようにしてあります。",
+              "vi": "Vì thứ này là đồ ăn nhanh nên được chuẩn bị để có thể ăn ngay lập tức."
+            },
+            {
+              "jp": "台風がついている\"\"ために\"\"波が高くなっている。",
+              "vi": "Vì cơn bão nên sóng trở nên cao."
+            },
+            {
+              "jp": "去年の夏は気温が低かった\"\"ために\"\"、この地方では米は不作だった。",
+              "vi": "Vì mùa hè năm ngoái nhiệt độ thấp nên vùng này lúa bị mất mùa."
+            }
+          ]
+        },
+        {
+          "id": "n-nitsuki-nitsuite",
+          "pattern": "N1 につき・について N2 / N + 数量詞 + につき",
+          "meaning": "Cứ N1 là N2 / Về N",
+          "note": "N + 数量詞 + につき dùng để nói tỉ lệ, đơn giá, giới hạn hoặc số lượng tương ứng: cứ mỗi N thì N2.\nについて có nghĩa là về, liên quan đến N.",
+          "examples": [
+            {
+              "jp": "当スポーツクラブ会員以外の方でも、1回\"\"につき\"\"2000円で施設をご利用いただけます。",
+              "vi": "Bất cứ vị nào ngoài hội viên của câu lạc bộ thể thao này cũng có thể sử dụng trang thiết bị với giá 2000 yên cho mỗi lần."
+            },
+            {
+              "jp": "今回のチャリティーコンサートは、ハガキ1枚\"\"につき\"\"2名様までお申し込みいただけます。",
+              "vi": "Sự kiện từ thiện lần này, cứ mỗi một tấm thiệp thì đăng kí tối đa 2 vị khách."
+            },
+            {
+              "jp": "ランニングマシンは予約制で、ご利用はお1人\"\"につき\"\"30分までとなっております。",
+              "vi": "Máy chạy hẹn giờ theo chế độ đặt trước, mỗi người sử dụng tối đa 30 phút."
+            },
+            {
+              "jp": "食費は1人\"\"につき\"\"2千円かかる。",
+              "vi": "Tiền ăn cứ 1 người thì tốn 2000 yên."
+            },
+            {
+              "jp": "テニスコートの使用料は1時間\"\"につき\"\"千円ちょうだいします。",
+              "vi": "Xin vui lòng trả phí sử dụng sân tennis 1000 yên cho mỗi giờ."
+            },
+            {
+              "jp": "参加者200人\"\"につき\"\"、5人の随行員がついた。",
+              "vi": "Cứ 200 người tham gia thì có 5 người đi theo."
+            },
+            {
+              "jp": "車1台\"\"について\"\"5千円の使用料をちょうだいします。",
+              "vi": "Xin vui lòng trả phí sử dụng 5000 yên cho một chiếc xe."
+            }
+          ]
+        },
+        {
+          "id": "toori-da-toori-ni",
+          "pattern": "Vる / Vた / N + の + とおりだ・とおりに / N + どおりに",
+          "meaning": "Như đã... vậy / Đúng như N",
+          "note": "Dùng khi nói một việc xảy ra hoặc hiện hữu giống như điều đã nói, đã viết, đã dự đoán hoặc đã tưởng tượng trước đó.\nCấu trúc tương đương: N + どおりに, nghĩa là giống như N.",
+          "examples": [
+            {
+              "jp": "今日の映画は本当に面白かった。友達が言った\"\"とおりだった\"\"。",
+              "vi": "Bộ phim hôm nay thật thú vị, đúng như bạn tôi đã nói."
+            },
+            {
+              "jp": "初めて見た富士山は私が想像していた\"\"とおりに\"\"きれいだった。",
+              "vi": "Lần đầu ngắm núi Phú Sĩ, nó đẹp như tôi đã tưởng tượng."
+            },
+            {
+              "jp": "料理の本に書いてある\"\"とおりに\"\"作ったら、おいしくできました。",
+              "vi": "Tôi nấu đúng như cuốn sách nấu ăn viết, và món ăn đã ngon thật."
+            },
+            {
+              "jp": "ミラーさんがおっしゃる\"\"とおりです\"\"。",
+              "vi": "Đúng như anh Miller đã nói."
+            },
+            {
+              "jp": "私の言う\"\"とおりに\"\"繰り返して言ってください。",
+              "vi": "Hãy nhắc lại đúng như những gì tôi nói nhé."
+            },
+            {
+              "jp": "先生の奥さんは私が想像していた\"\"とおり\"\"の美人でした。",
+              "vi": "Vợ của thầy là người đẹp đúng như tôi đã tưởng tượng."
+            },
+            {
+              "jp": "今日は予定\"\"どおりに\"\"仕事が進んだ。",
+              "vi": "Hôm nay công việc tiến triển như dự định."
+            },
+            {
+              "jp": "あいちゃんとじゅんくんが結婚するそうだ。やっぱり私の予想\"\"どおり\"\"だった。",
+              "vi": "Nghe nói Ai và Jun sẽ kết hôn. Quả nhiên đúng như tôi đã dự đoán."
+            }
+          ]
+        },
+        {
+          "id": "n-noyouni-noyouna",
+          "pattern": "N + のように / N + のような + N",
+          "meaning": "Như là / Giống như N",
+          "note": "Dùng khi nói về một ví dụ điển hình để làm rõ ý của người nói.\nのように thường bổ nghĩa cho động từ, tính từ hoặc cả mệnh đề phía sau.\nのような + N dùng để bổ nghĩa cho danh từ.",
+          "examples": [
+            {
+              "jp": "インフルエンザ\"\"のような\"\"ほかの人にうつる病気になったら、治るまで学校へはいけないことになっている。",
+              "vi": "Nếu mắc những bệnh lây sang người khác như cúm thì cho tới lúc khỏi không được tới trường."
+            },
+            {
+              "jp": "我々\"\"のような\"\"プロのスポーツ選手には食事も練習と同じぐらい大切です。",
+              "vi": "Với những vận động viên chuyên nghiệp như chúng tôi thì bữa ăn cũng quan trọng không kém việc luyện tập."
+            },
+            {
+              "jp": "梅雨\"\"のように\"\"雨の多い季節が洗濯物乾かなく困りました。",
+              "vi": "Mùa mà mưa nhiều như mùa mưa thì đồ không khô được, thật khó khăn."
+            },
+            {
+              "jp": "退院したばかりなので、テニス\"\"のように\"\"激しいスポーツはまだできません。",
+              "vi": "Vì vừa mới xuất viện nên tôi chưa thể chơi những môn thể thao mạnh như tennis được."
+            },
+            {
+              "jp": "君はバラ\"\"のように\"\"美しいね。",
+              "vi": "Em đẹp như hoa hồng vậy."
+            },
+            {
+              "jp": "先生は30近いのに、高校生\"\"のように\"\"見える。",
+              "vi": "Thầy gần 30 rồi mà trông như học sinh cấp 3."
+            },
+            {
+              "jp": "Aさん\"\"のように\"\"遊んでばかりいてはだめだ。",
+              "vi": "Không được cứ mải chơi như anh A."
+            },
+            {
+              "jp": "5月なのに真夏\"\"のように\"\"暑い。",
+              "vi": "Dù mới tháng 5 mà nóng như giữa mùa hè vậy."
+            },
+            {
+              "jp": "極楽にでもいるか\"\"のような\"\"幸せな気分だ。",
+              "vi": "Cảm thấy hạnh phúc giống như đang ở trên thiên đường vậy."
+            },
+            {
+              "jp": "風邪をひいたときは、みかん\"\"のような\"\"ビタミンCを多く含む果物を食べるといい。",
+              "vi": "Khi bị cảm thì nên ăn những loại trái cây chứa nhiều vitamin C như quýt."
+            }
+          ]
         }
       ]
     }
