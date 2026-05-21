@@ -97,6 +97,17 @@ function ResourcesPageContent() {
         "Luyện tập kiến thức khởi nghiệp: opportunity, innovation, customer value, fundraising",
       link: "/resources/SYB302c",
     },
+    {
+      id: 7,
+      title: "MLN111 - Triết học Mác - Lênin",
+      category: "Triết học",
+      type: "Game",
+      size: "Đã Hoàn Thành",
+      downloads: 0,
+      rating: 5.0,
+      description: "Nội dung của phép biện chứng duy vật: Các cặp phạm trù cơ bản",
+      link: "/resources/MLN111",
+    },
   ];
 
   const resourceIds = useMemo(
