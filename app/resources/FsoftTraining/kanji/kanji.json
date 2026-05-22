@@ -4268,6 +4268,119 @@
     },
     {
       "id": 31,
+      "title": "Chính - Liệt - Chúc - Túy",
+      "kanji": [
+        {
+          "character": "式",
+          "meaning": "Thức",
+          "onyomi": "シキ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "正式",
+              "reading": "せいしき",
+              "meaning": "Chính thức"
+            },
+            {
+              "word": "書式",
+              "reading": "しょしき",
+              "meaning": "Biểu mẫu, mẫu văn bản"
+            },
+            {
+              "word": "結婚式",
+              "reading": "けっこんしき",
+              "meaning": "Lễ cưới"
+            },
+            {
+              "word": "お葬式",
+              "reading": "おそうしき",
+              "meaning": "Tang lễ"
+            }
+          ]
+        },
+        {
+          "character": "列",
+          "meaning": "Liệt",
+          "onyomi": "レツ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "列",
+              "reading": "れつ",
+              "meaning": "Hàng, dãy"
+            },
+            {
+              "word": "行列",
+              "reading": "ぎょうれつ",
+              "meaning": "Hàng người"
+            },
+            {
+              "word": "列島",
+              "reading": "れっとう",
+              "meaning": "Quần đảo"
+            },
+            {
+              "word": "列車",
+              "reading": "れっしゃ",
+              "meaning": "Tàu hỏa"
+            }
+          ]
+        },
+        {
+          "character": "祝",
+          "meaning": "Chúc",
+          "onyomi": "シュク",
+          "kunyomi": "いわ-う",
+          "examples": [
+            {
+              "word": "祝う",
+              "reading": "いわう",
+              "meaning": "Chúc mừng"
+            },
+            {
+              "word": "祝い",
+              "reading": "いわい",
+              "meaning": "Lễ chúc mừng"
+            },
+            {
+              "word": "祝日",
+              "reading": "しゅくじつ",
+              "meaning": "Ngày lễ"
+            },
+            {
+              "word": "祝賀",
+              "reading": "しゅくが",
+              "meaning": "Chúc mừng, khánh chúc"
+            }
+          ]
+        },
+        {
+          "character": "酔",
+          "meaning": "Túy",
+          "onyomi": "スイ",
+          "kunyomi": "よ-う",
+          "examples": [
+            {
+              "word": "泥酔",
+              "reading": "でいすい",
+              "meaning": "Say bí tỉ"
+            },
+            {
+              "word": "酔う",
+              "reading": "よう",
+              "meaning": "Say"
+            },
+            {
+              "word": "酔っぱらう",
+              "reading": "よっぱらう",
+              "meaning": "Say xỉn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
       "title": "Vĩnh - Nguyện - Hạnh - Phúc",
       "kanji": [
         {
