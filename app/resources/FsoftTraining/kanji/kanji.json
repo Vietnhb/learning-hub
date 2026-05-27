@@ -4599,6 +4599,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 34,
+      "title": "Tính - Lão - Phụ - Nương",
+      "kanji": [
+        {
+          "character": "姓",
+          "meaning": "Tính",
+          "onyomi": "セイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "姓",
+              "reading": "せい",
+              "meaning": "Họ"
+            }
+          ]
+        },
+        {
+          "character": "老",
+          "meaning": "Lão",
+          "onyomi": "ロウ",
+          "kunyomi": "お-いる、ふ-ける",
+          "examples": [
+            {
+              "word": "老人",
+              "reading": "ろうじん",
+              "meaning": "Người già"
+            },
+            {
+              "word": "老いる",
+              "reading": "おいる",
+              "meaning": "Già đi"
+            },
+            {
+              "word": "老ける",
+              "reading": "ふける",
+              "meaning": "Trông già đi"
+            }
+          ]
+        },
+        {
+          "character": "婦",
+          "meaning": "Phụ",
+          "onyomi": "フ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "婦人",
+              "reading": "ふじん",
+              "meaning": "Phụ nữ"
+            },
+            {
+              "word": "主婦",
+              "reading": "しゅふ",
+              "meaning": "Nội trợ"
+            },
+            {
+              "word": "夫婦",
+              "reading": "ふうふ",
+              "meaning": "Vợ chồng"
+            },
+            {
+              "word": "新婦",
+              "reading": "しんぷ",
+              "meaning": "Cô dâu"
+            }
+          ]
+        },
+        {
+          "character": "娘",
+          "meaning": "Nương",
+          "onyomi": "",
+          "kunyomi": "むすめ",
+          "examples": [
+            {
+              "word": "娘",
+              "reading": "むすめ",
+              "meaning": "Con gái"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
