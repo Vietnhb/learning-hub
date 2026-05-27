@@ -4491,6 +4491,114 @@
           ]
         }
       ]
+    },
+    {
+      "id": 33,
+      "title": "Phó - Quan - Hòa - Hệ",
+      "kanji": [
+        {
+          "character": "付",
+          "meaning": "Phó",
+          "onyomi": "フ",
+          "kunyomi": "つ-ける、つ-く",
+          "examples": [
+            {
+              "word": "付近",
+              "reading": "ふきん",
+              "meaning": "Khu vực lân cận"
+            },
+            {
+              "word": "付着",
+              "reading": "ふちゃく",
+              "meaning": "Bám dính"
+            },
+            {
+              "word": "受付",
+              "reading": "うけつけ",
+              "meaning": "Quầy tiếp tân"
+            }
+          ]
+        },
+        {
+          "character": "関",
+          "meaning": "Quan",
+          "onyomi": "カン",
+          "kunyomi": "せき、かか-わる",
+          "examples": [
+            {
+              "word": "関心",
+              "reading": "かんしん",
+              "meaning": "Quan tâm"
+            },
+            {
+              "word": "関係",
+              "reading": "かんけい",
+              "meaning": "Quan hệ"
+            },
+            {
+              "word": "玄関",
+              "reading": "げんかん",
+              "meaning": "Lối vào, cửa chính"
+            }
+          ]
+        },
+        {
+          "character": "和",
+          "meaning": "Hòa",
+          "onyomi": "ワ",
+          "kunyomi": "やわ-らぐ、なご-む",
+          "examples": [
+            {
+              "word": "平和",
+              "reading": "へいわ",
+              "meaning": "Hòa bình"
+            },
+            {
+              "word": "和食",
+              "reading": "わしょく",
+              "meaning": "Ẩm thực Nhật Bản"
+            },
+            {
+              "word": "和室",
+              "reading": "わしつ",
+              "meaning": "Phòng kiểu Nhật"
+            },
+            {
+              "word": "和やかな",
+              "reading": "なごやかな",
+              "meaning": "Ôn hòa, hòa nhã"
+            },
+            {
+              "word": "和む",
+              "reading": "なごむ",
+              "meaning": "Trở nên dịu lại"
+            }
+          ]
+        },
+        {
+          "character": "係",
+          "meaning": "Hệ",
+          "onyomi": "ケイ",
+          "kunyomi": "かか-る",
+          "examples": [
+            {
+              "word": "係員",
+              "reading": "かかりいん",
+              "meaning": "Nhân viên phụ trách"
+            },
+            {
+              "word": "係長",
+              "reading": "かかりちょう",
+              "meaning": "Trưởng bộ phận"
+            },
+            {
+              "word": "関係",
+              "reading": "かんけい",
+              "meaning": "Quan hệ"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
