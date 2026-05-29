@@ -4687,6 +4687,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 35,
+      "title": "Tha - Quân - Bỉ - Trọng",
+      "kanji": [
+        {
+          "character": "他",
+          "meaning": "Tha",
+          "onyomi": "タ",
+          "kunyomi": "ほか",
+          "examples": [
+            {
+              "word": "他人",
+              "reading": "たにん",
+              "meaning": "Người khác"
+            },
+            {
+              "word": "他に",
+              "reading": "ほかに",
+              "meaning": "Ngoài ra"
+            }
+          ]
+        },
+        {
+          "character": "君",
+          "meaning": "Quân",
+          "onyomi": "クン",
+          "kunyomi": "きみ",
+          "examples": [
+            {
+              "word": "君",
+              "reading": "きみ",
+              "meaning": "Bạn, cậu"
+            },
+            {
+              "word": "～君",
+              "reading": "～くん",
+              "meaning": "Hậu tố gọi tên nam giới"
+            }
+          ]
+        },
+        {
+          "character": "彼",
+          "meaning": "Bỉ",
+          "onyomi": "",
+          "kunyomi": "かれ",
+          "examples": [
+            {
+              "word": "彼氏",
+              "reading": "かれし",
+              "meaning": "Bạn trai"
+            },
+            {
+              "word": "彼ら",
+              "reading": "かれら",
+              "meaning": "Họ"
+            }
+          ]
+        },
+        {
+          "character": "仲",
+          "meaning": "Trọng",
+          "onyomi": "チュウ",
+          "kunyomi": "なか",
+          "examples": [
+            {
+              "word": "仲間",
+              "reading": "なかま",
+              "meaning": "Bạn bè, đồng đội"
+            },
+            {
+              "word": "仲がいい",
+              "reading": "なかがいい",
+              "meaning": "Có quan hệ tốt, thân thiết"
+            },
+            {
+              "word": "仲介",
+              "reading": "ちゅうかい",
+              "meaning": "Môi giới, trung gian"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
