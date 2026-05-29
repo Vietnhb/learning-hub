@@ -4770,6 +4770,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 36,
+      "title": "Cửu - Tái - Sơ - Đạt",
+      "kanji": [
+        {
+          "character": "久",
+          "meaning": "Cửu",
+          "onyomi": "キュウ",
+          "kunyomi": "ひさ-しい",
+          "examples": [
+            {
+              "word": "久しい",
+              "reading": "ひさしい",
+              "meaning": "Lâu rồi"
+            },
+            {
+              "word": "永久",
+              "reading": "えいきゅう",
+              "meaning": "Vĩnh cửu"
+            },
+            {
+              "word": "永久歯",
+              "reading": "えいきゅうし",
+              "meaning": "Răng vĩnh viễn"
+            }
+          ]
+        },
+        {
+          "character": "再",
+          "meaning": "Tái",
+          "onyomi": "サイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "再び",
+              "reading": "ふたたび",
+              "meaning": "Lại, một lần nữa"
+            },
+            {
+              "word": "再開",
+              "reading": "さいかい",
+              "meaning": "Mở lại, tái khởi động"
+            }
+          ]
+        },
+        {
+          "character": "初",
+          "meaning": "Sơ",
+          "onyomi": "ショ",
+          "kunyomi": "はじ-め",
+          "examples": [
+            {
+              "word": "最初",
+              "reading": "さいしょ",
+              "meaning": "Đầu tiên"
+            },
+            {
+              "word": "初期",
+              "reading": "しょき",
+              "meaning": "Giai đoạn đầu, thời kỳ đầu"
+            }
+          ]
+        },
+        {
+          "character": "達",
+          "meaning": "Đạt",
+          "onyomi": "タツ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "上達",
+              "reading": "じょうたつ",
+              "meaning": "Tiến bộ, thành thạo hơn"
+            },
+            {
+              "word": "友達",
+              "reading": "ともだち",
+              "meaning": "Bạn bè"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
