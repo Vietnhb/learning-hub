@@ -728,6 +728,382 @@
           ]
         }
       ]
+    },
+    {
+      "lesson": "3",
+      "grammar": [
+        {
+          "id": "1.1",
+          "pattern": "～のことなんですが",
+          "usage": "N＋のことなんですが",
+          "meaning": "Về chuyện..., nhân tiện nói về...",
+          "description": "Cách mở đầu khi bắt đầu nói với đối phương về một việc nào đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "あのう、明日のシフトのことなんですが、田中さんが代わってくれることになりました。",
+              "vi": "À, về ca làm ngày mai thì anh Tanaka đã quyết định đổi ca giúp rồi."
+            },
+            {
+              "index": 2,
+              "jp": "パーティーの会費のことなんだけど……。",
+              "vi": "Về tiền tham gia bữa tiệc thì..."
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "pattern": "～(さ)せていただけませんか",
+          "usage": "V～(さ)せていただけませんか",
+          "meaning": "Xin phép được..., cho tôi được... được không",
+          "description": "Cách nhờ vả hoặc xin phép rất lịch sự. Tương đương cách nói lịch sự hơn của ～たいです、～てもいいですか。",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "すみません、頭が痛いので早く帰らせていただけませんか。",
+              "vi": "Xin lỗi, tôi bị đau đầu nên cho tôi về sớm được không ạ?"
+            },
+            {
+              "index": 2,
+              "jp": "すみません、あさっての回収日まで古い冷蔵庫をごみ置き場に置かせていただけませんか。",
+              "vi": "Xin lỗi, cho tôi để chiếc tủ lạnh cũ ở chỗ tập kết rác đến ngày thu gom mốt được không ạ?"
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "pattern": "～ものですから／～ものだから／～もので",
+          "usage": "普通形（ナAな／Nな）＋ものですから",
+          "meaning": "Vì..., bởi vì...",
+          "description": "Dùng để nêu lý do mang tính cá nhân hoặc biện minh. Không dùng với ý chí hay mệnh lệnh.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この茶色のかばん、色違いがありますか。",
+              "vi": "Chiếc túi màu nâu này có màu khác không ạ?"
+            },
+            {
+              "index": 2,
+              "jp": "あ、黒があったんですが。今ちょうど売れてしまったものですから……申し訳ありません。",
+              "vi": "À, trước đây có màu đen đấy ạ. Nhưng vừa mới bán mất rồi nên... thật xin lỗi."
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "pattern": "～の代わりに／～に代わって",
+          "usage": "N＋の代わりに／N＋に代わって",
+          "meaning": "Thay cho..., thay thế cho...",
+          "description": "Diễn tả việc một người hoặc vật thay thế cho người hoặc vật khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "出張中の部長の代わりに課長が朝礼でスピーチをした。",
+              "vi": "Trưởng phòng đã phát biểu trong buổi họp sáng thay cho giám đốc đang đi công tác."
+            },
+            {
+              "index": 2,
+              "jp": "今日、山本さんに代わってＡさんがレジ係をしてください。",
+              "vi": "Hôm nay hãy để anh A làm thu ngân thay cho anh Yamamoto."
+            }
+          ]
+        },
+        {
+          "id": "2.1",
+          "pattern": "～おかげで",
+          "usage": "V普通形／Aい／Aな／N＋の＋おかげで",
+          "meaning": "Nhờ..., nhờ có...",
+          "description": "Dùng để diễn tả nguyên nhân tích cực dẫn đến kết quả tốt. Thể hiện sự biết ơn hoặc đánh giá tích cực của người nói.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "田中さんのおかげで仕事がうまくいきました。",
+              "vi": "Nhờ anh Tanaka mà công việc đã tiến triển thuận lợi."
+            },
+            {
+              "index": 2,
+              "jp": "山田さんが地図を書いてくれたおかげで迷わず会場へ行けた。",
+              "vi": "Nhờ anh Yamada vẽ bản đồ cho nên tôi đã đến địa điểm mà không bị lạc."
+            },
+            {
+              "index": 3,
+              "jp": "いつもおいしい物が食べられるのは、ルームメイトが料理が上手なおかげです。",
+              "vi": "Việc lúc nào cũng được ăn món ngon là nhờ bạn cùng phòng nấu ăn giỏi."
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "pattern": "～せいで",
+          "usage": "V普通形／Aい／Aな／N＋の＋せいで",
+          "meaning": "Tại..., do...",
+          "description": "Dùng để diễn tả nguyên nhân dẫn đến kết quả không tốt hoặc điều mà người nói không hài lòng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "渋滞のせいで、帰宅が予定よりも３時間も遅くなってしまった。",
+              "vi": "Do kẹt xe nên tôi đã về nhà muộn hơn dự định tới 3 tiếng."
+            },
+            {
+              "index": 2,
+              "jp": "暑さのせいか最近食欲がない。",
+              "vi": "Không biết có phải do thời tiết nóng hay không mà gần đây tôi không có cảm giác thèm ăn."
+            },
+            {
+              "index": 3,
+              "jp": "今日足が痛いのは、昨日久しぶりに運動したせいだ。",
+              "vi": "Hôm nay chân đau là do hôm qua lâu rồi mới vận động."
+            }
+          ]
+        },
+        {
+          "id": "2.2-1",
+          "pattern": "～せいか",
+          "usage": "N＋の／普通形＋せいか",
+          "meaning": "Không biết có phải do... hay không...",
+          "description": "Dùng khi người nói suy đoán nguyên nhân nhưng không hoàn toàn chắc chắn.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "暑いせいか、食欲がない。",
+              "vi": "Không biết có phải vì trời nóng hay không mà tôi không có cảm giác thèm ăn."
+            },
+            {
+              "index": 2,
+              "jp": "天気のせいか、気分が悪い。",
+              "vi": "Không biết có phải do thời tiết hay không mà tôi cảm thấy khó chịu."
+            }
+          ]
+        },
+        {
+          "id": "2.2-2",
+          "pattern": "～せいだ",
+          "usage": "N＋の／普通形＋せいだ",
+          "meaning": "Là do...",
+          "description": "Dùng để khẳng định nguyên nhân của một kết quả thường mang sắc thái tiêu cực.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "目は悪くなったのはテレビを見すぎたせいだ。",
+              "vi": "Mắt trở nên kém đi là do xem tivi quá nhiều."
+            },
+            {
+              "index": 2,
+              "jp": "夜眠れないのは騒音のせいだ。",
+              "vi": "Việc ban đêm không ngủ được là do tiếng ồn."
+            }
+          ]
+        },
+        {
+          "id": "3.1",
+          "pattern": "～くせに",
+          "usage": "V普通形／Aい／Aな・Nの＋くせに",
+          "meaning": "Mặc dù..., thế mà...",
+          "description": "Dùng khi phê phán, khó chịu hoặc bất mãn về điểm xấu, hành động hoặc thái độ của người khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お兄ちゃん、自分では何もしないくせに、人にはやれやれって言うんだから嫌になっちゃう。",
+              "vi": "Anh trai mình bản thân chẳng làm gì mà cứ bảo người khác làm nên thật phát chán."
+            },
+            {
+              "index": 2,
+              "jp": "自分で全部やるって言ったくせに、途中でやめて帰っちゃうなんて！",
+              "vi": "Đã nói là tự mình làm hết thế mà lại bỏ giữa chừng rồi về!"
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "pattern": "～にきまっている",
+          "usage": "V普通形／Aい／Aな・N＋にきまっている",
+          "meaning": "Chắc chắn là..., nhất định là...",
+          "description": "Dùng khi người nói tin chắc điều mình nói là đúng và không có nghi ngờ gì.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "田中さん、遅刻？どうしたんだろう。",
+              "vi": "Anh Tanaka đi muộn à? Không biết có chuyện gì nhỉ."
+            },
+            {
+              "index": 2,
+              "jp": "二日酔いにきまってるよ。昨日、たくさんお酒を飲んでたから。",
+              "vi": "Chắc chắn là bị say rượu rồi. Hôm qua anh ấy uống rất nhiều mà."
+            },
+            {
+              "index": 3,
+              "jp": "そんなに無理をしたら、体を壊すにきまってる。休んだほうがいいよ。",
+              "vi": "Cố quá như thế thì chắc chắn sẽ hỏng sức khỏe. Cậu nên nghỉ ngơi thì hơn."
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "pattern": "～(さ)せる",
+          "usage": "V－使役形",
+          "meaning": "Làm cho..., khiến cho...",
+          "description": "Dùng với các động từ biểu thị cảm xúc để diễn tả nguyên nhân làm thay đổi cảm xúc hoặc tâm trạng của người khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "お客さんの目の前でお皿を割って驚かせてしまった。",
+              "vi": "Tôi đã làm khách hàng giật mình vì làm vỡ đĩa ngay trước mặt họ."
+            },
+            {
+              "index": 2,
+              "jp": "彼は恋人を喜ばせるために、サプライズパーティーの準備をした。",
+              "vi": "Anh ấy đã chuẩn bị một bữa tiệc bất ngờ để làm người yêu vui."
+            }
+          ]
+        },
+        {
+          "id": "4.1",
+          "pattern": "～ことはない",
+          "usage": "Vる（辞書形）＋ことはない",
+          "meaning": "Không cần phải..., không đến mức phải...",
+          "description": "Dùng khi khuyên ai đó rằng không cần thiết phải làm điều gì hoặc không cần lo lắng quá mức.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "できなくても、がっかりすることはないよ。これから覚えればいいから。",
+              "vi": "Dù không làm được cũng không cần thất vọng đâu. Từ giờ học là được mà."
+            },
+            {
+              "index": 2,
+              "jp": "旅行に行くのにスーツケースを買わなくちゃ。",
+              "vi": "Đi du lịch nên phải mua vali thôi."
+            },
+            {
+              "index": 3,
+              "jp": "わざわざ買うことはないよ。私のを貸してあげるから。",
+              "vi": "Không cần phải cất công mua đâu. Tôi cho cậu mượn cái của tôi mà."
+            }
+          ]
+        },
+        {
+          "id": "4.1-2",
+          "pattern": "Vないことはない",
+          "usage": "Vない＋ことはない",
+          "meaning": "Không phải là không..., vẫn có thể...",
+          "description": "Cách nói phủ định kép, diễn tả khả năng hoặc mức độ có nhưng không nhiều, không hoàn toàn tích cực.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "納豆は食べないことはないですが、あまり好きではありません。",
+              "vi": "Không phải là tôi không ăn natto, nhưng tôi không thích lắm."
+            },
+            {
+              "index": 2,
+              "jp": "走れば間に合わないことはないよ。急ごう！",
+              "vi": "Nếu chạy thì không phải là không kịp đâu. Mau lên!"
+            },
+            {
+              "index": 3,
+              "jp": "車を運転できないことはないんですが、ほとんどしません。",
+              "vi": "Không phải là tôi không lái xe được, nhưng hầu như không lái."
+            },
+            {
+              "index": 4,
+              "jp": "お酒が飲めないことはないんですが、あまり好きじゃない。",
+              "vi": "Không phải là tôi không uống được rượu, nhưng tôi không thích lắm."
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "pattern": "～ことになると／～こととなると",
+          "usage": "Vる・Nの＋ことになると／こととなると",
+          "meaning": "Hễ nói đến..., cứ liên quan đến... thì...",
+          "description": "Dùng khi đề cập đến một chủ đề hoặc lĩnh vực cụ thể thì xuất hiện phản ứng, thái độ hoặc đặc điểm đặc trưng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "母は食事のマナーのことになるとうるさい。",
+              "vi": "Mẹ tôi rất nghiêm khắc khi nói đến phép tắc trong bữa ăn."
+            },
+            {
+              "index": 2,
+              "jp": "佐藤さんは好きな料理のこととなると話が止まらなくなる。",
+              "vi": "Cứ hễ nói đến món ăn yêu thích là anh Sato nói mãi không ngừng."
+            },
+            {
+              "index": 3,
+              "jp": "太郎は食べることになると、急に元気になる。",
+              "vi": "Cứ hễ nói đến chuyện ăn uống là Taro bỗng trở nên đầy sức sống."
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "pattern": "～にしたら／～にすれば／～にすると／～にしてみたら／～にしてみれば",
+          "usage": "N＋にしたら／にすれば／にすると／にしてみたら／にしてみれば",
+          "meaning": "Đứng trên lập trường của..., xét từ góc độ của...",
+          "description": "Dùng để trình bày suy nghĩ, cảm xúc hoặc đánh giá từ lập trường của một người hoặc một nhóm người.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "日本人にすれば簡単な挨拶でも、外国の人にしてみたらとても難しいかもしれない。",
+              "vi": "Đối với người Nhật thì lời chào đơn giản, nhưng đối với người nước ngoài có thể lại rất khó."
+            },
+            {
+              "index": 2,
+              "jp": "うちの母親、口うるさくて嫌になっちゃうよ。",
+              "vi": "Mẹ tôi hay cằn nhằn nên phát chán luôn."
+            },
+            {
+              "index": 3,
+              "jp": "でも、お母さんにしてみればＡさんのことが心配なんじゃないの。",
+              "vi": "Nhưng nếu đứng ở góc độ của mẹ thì chẳng phải bà đang lo cho cậu sao?"
+            }
+          ]
+        },
+        {
+          "id": "5.1",
+          "pattern": "～たびに",
+          "usage": "V－辞書形／Nの＋たびに",
+          "meaning": "Cứ mỗi lần..., mỗi khi...",
+          "description": "Dùng khi một sự việc xảy ra thì một sự việc khác cũng xảy ra theo. Không dùng cho hành động mang tính thói quen hằng ngày hoặc hiện tượng tự nhiên thông thường.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "彼女は恋人から電話がかかってくるたびに笑顔になる。",
+              "vi": "Cứ mỗi lần nhận được điện thoại từ người yêu là cô ấy lại mỉm cười."
+            },
+            {
+              "index": 2,
+              "jp": "この地域は台風のたびに大きな被害が出る。",
+              "vi": "Khu vực này cứ mỗi lần có bão là lại chịu thiệt hại lớn."
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "pattern": "～ば／～たら～たのに",
+          "usage": "V／イA／ナA／N－条件形・タ形＋たのに",
+          "meaning": "Giá như..., nếu như... thì đã...",
+          "description": "Dùng để diễn tả sự tiếc nuối hoặc hối hận về một việc đã không xảy ra trong quá khứ.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "もっと優しい話し方をすればよかったのに、なんであんなに冷たい言い方をしてしまったんだろう。",
+              "vi": "Giá mà mình nói chuyện nhẹ nhàng hơn thì tốt rồi, sao lại nói lạnh lùng như thế nhỉ."
+            },
+            {
+              "index": 2,
+              "jp": "すぐタクシーで行ったら間に合ったのに、バスに乗ったから遅れてしまった。",
+              "vi": "Giá mà đi taxi ngay thì đã kịp rồi, nhưng vì đi xe buýt nên đã bị muộn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": "4",
+      "grammar": []
+    },
+    {
+      "lesson": "5",
+      "grammar": []
     }
   ]
 }
