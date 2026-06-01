@@ -4853,6 +4853,104 @@
           ]
         }
       ]
+    },
+    {
+      "id": 37,
+      "title": "Cách - Tính - Các - Cá",
+      "kanji": [
+        {
+          "character": "格",
+          "meaning": "Cách",
+          "onyomi": "カク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "格好",
+              "reading": "かっこう",
+              "meaning": "Dáng vẻ, bề ngoài"
+            },
+            {
+              "word": "性格",
+              "reading": "せいかく",
+              "meaning": "Tính cách"
+            },
+            {
+              "word": "失格",
+              "reading": "しっかく",
+              "meaning": "Mất tư cách, bị loại"
+            }
+          ]
+        },
+        {
+          "character": "性",
+          "meaning": "Tính",
+          "onyomi": "セイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "性質",
+              "reading": "せいしつ",
+              "meaning": "Tính chất"
+            },
+            {
+              "word": "性別",
+              "reading": "せいべつ",
+              "meaning": "Giới tính"
+            },
+            {
+              "word": "性格",
+              "reading": "せいかく",
+              "meaning": "Tính cách"
+            },
+            {
+              "word": "相性",
+              "reading": "あいしょう",
+              "meaning": "Sự hợp nhau"
+            },
+            {
+              "word": "個性",
+              "reading": "こせい",
+              "meaning": "Cá tính"
+            }
+          ]
+        },
+        {
+          "character": "各",
+          "meaning": "Các",
+          "onyomi": "カク",
+          "kunyomi": "おのおの",
+          "examples": [
+            {
+              "word": "各々",
+              "reading": "おのおの",
+              "meaning": "Mỗi người, từng người"
+            },
+            {
+              "word": "各自",
+              "reading": "かくじ",
+              "meaning": "Mỗi người, từng cá nhân"
+            }
+          ]
+        },
+        {
+          "character": "個",
+          "meaning": "Cá",
+          "onyomi": "コ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "個性",
+              "reading": "こせい",
+              "meaning": "Cá tính"
+            },
+            {
+              "word": "個室",
+              "reading": "こしつ",
+              "meaning": "Phòng riêng"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
