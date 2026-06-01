@@ -1450,7 +1450,261 @@
     },
     {
       "lesson": "5",
-      "grammar": []
+      "grammar": [
+        {
+          "id": "1.1",
+          "pattern": "～といったら（といえば・というと）",
+          "usage": "N＋といったら（といえば・というと）",
+          "meaning": "Nói đến..., nhắc đến... thì...",
+          "description": "Dùng để nhấn mạnh mức độ ngạc nhiên, cảm thán hoặc ấn tượng về một sự vật, sự việc.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "屋久島の自然の豊かさといったら、他に比べるものがないほどです。",
+              "vi": "Nói đến sự phong phú của thiên nhiên Yakushima thì gần như không có gì sánh bằng."
+            },
+            {
+              "index": 2,
+              "jp": "山の頂上から見た朝日の美しさといったら、忘れられません。",
+              "vi": "Vẻ đẹp của bình minh nhìn từ đỉnh núi thì thật không thể nào quên được."
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "pattern": "～とても～ない",
+          "usage": "とても＋V可能形ない",
+          "meaning": "Hoàn toàn không thể..., không tài nào...",
+          "description": "Dùng để nhấn mạnh mức độ không thể thực hiện được một việc gì đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "縄文杉の神秘的な姿を見たときの感動はとても言葉では言い表せません。",
+              "vi": "Sự xúc động khi nhìn thấy dáng vẻ huyền bí của cây Jomon Sugi hoàn toàn không thể diễn tả bằng lời."
+            },
+            {
+              "index": 2,
+              "jp": "こんなにたくさん雪が積もると、とても外には出られません。",
+              "vi": "Tuyết chất nhiều như thế này thì hoàn toàn không thể ra ngoài được."
+            },
+            {
+              "index": 3,
+              "jp": "500ページもある本は１日ではとても読めない。",
+              "vi": "Cuốn sách dày tới 500 trang thì một ngày hoàn toàn không thể đọc hết được."
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "pattern": "～はもちろん／～はもとより",
+          "usage": "N1＋はもちろん／はもとより＋N2",
+          "meaning": "Không chỉ..., mà còn...",
+          "description": "Dùng để nhấn mạnh rằng ngoài đối tượng được nêu trước thì các đối tượng khác cũng tương tự như vậy.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "屋久島には豊かな森はもちろん、豊かな海もあります。",
+              "vi": "Yakushima không chỉ có những khu rừng phong phú mà còn có biển cả phong phú."
+            },
+            {
+              "index": 2,
+              "jp": "はなまるランドは、子どもはもちろん、大人も楽しめる遊園地です。",
+              "vi": "Hanamaru Land là công viên giải trí mà không chỉ trẻ em mà cả người lớn cũng có thể vui chơi."
+            },
+            {
+              "index": 3,
+              "jp": "この豆はおやつにはもちろん、ビールのおつまみにもぴったりです。",
+              "vi": "Loại đậu này không chỉ thích hợp làm đồ ăn vặt mà còn rất hợp để ăn cùng bia."
+            },
+            {
+              "index": 4,
+              "jp": "私のふるさとは、電気はもとより、水道も通っていない。",
+              "vi": "Quê tôi không chỉ không có điện mà ngay cả nước máy cũng chưa được lắp đặt."
+            }
+          ]
+        },
+        {
+          "id": "2.1",
+          "pattern": "～（さ）せていただきます",
+          "usage": "V使役形＋ていただきます",
+          "meaning": "Xin phép được..., cho phép tôi...",
+          "description": "Cách nói rất lịch sự để diễn đạt hành động của bản thân.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "では、Ａグループの発表をさせていただきます。",
+              "vi": "Vậy thì cho phép tôi trình bày phần của nhóm A."
+            },
+            {
+              "index": 2,
+              "jp": "本日は社会旅行につき、休ませていただきます。",
+              "vi": "Hôm nay vì đi du lịch công ty nên tôi xin phép nghỉ."
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "pattern": "ご～いたします／お～いたします",
+          "usage": "ご＋N＋いたします／お＋Vマス形＋いたします",
+          "meaning": "Xin được..., tôi sẽ...",
+          "description": "Mẫu khiêm nhường ngữ dùng để nói về hành động của bản thân một cách lịch sự.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "先輩の田中さんをご紹介いたします。",
+              "vi": "Tôi xin giới thiệu anh Tanaka, tiền bối của chúng ta."
+            },
+            {
+              "index": 2,
+              "jp": "上り列車をお待ちのお客様にお知らせいたします。次の急行は２番線から発車の予定です。",
+              "vi": "Xin thông báo tới quý khách đang chờ tàu chiều lên. Chuyến tàu nhanh tiếp theo dự kiến khởi hành từ sân ga số 2."
+            }
+          ]
+        },
+        {
+          "id": "3.1",
+          "pattern": "～つもりだ",
+          "usage": "V-タ形・ている形／イAい／ナAな／Nの＋つもりだ",
+          "meaning": "Cứ tưởng là..., nghĩ rằng...",
+          "description": "Dùng khi bản thân nghĩ như vậy nhưng thực tế lại khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "あっ！宿題が入っていない。今朝鞄に入れたつもりだったんだけど。",
+              "vi": "Á! Không có bài tập trong cặp. Tôi cứ tưởng sáng nay đã bỏ vào cặp rồi."
+            },
+            {
+              "index": 2,
+              "jp": "まだまだ若いつもりでいたが、思ったように速く走れない。",
+              "vi": "Tôi cứ nghĩ mình vẫn còn trẻ nhưng không thể chạy nhanh như đã nghĩ."
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "pattern": "～ように思う",
+          "usage": "N＋の／ナAな／V普通形＋ように思う",
+          "meaning": "Tôi nghĩ là..., có vẻ như...",
+          "description": "Dùng khi muốn nêu ý kiến hoặc suy đoán một cách mềm mại, không khẳng định chắc chắn.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "今月の請求金額、ちょっと違うように思うんですが、確認してもらえませんか。",
+              "vi": "Tôi nghĩ hóa đơn tháng này hơi có gì đó không đúng, anh/chị có thể kiểm tra giúp được không?"
+            },
+            {
+              "index": 2,
+              "jp": "山田さん、いる？",
+              "vi": "Anh Yamada có ở đây không?"
+            },
+            {
+              "index": 3,
+              "jp": "あれ？さっきまでここにいたように思うけど。",
+              "vi": "Ủa? Tôi nghĩ là vừa nãy anh ấy còn ở đây mà."
+            }
+          ]
+        },
+        {
+          "id": "4.1",
+          "pattern": "～ております",
+          "usage": "Vております",
+          "meaning": "Đang..., kính ngữ của ～ています",
+          "description": "Là cách nói khiêm nhường/lịch sự của ～ています.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "またのご来店を心よりお待ちしております。",
+              "vi": "Chúng tôi chân thành mong được đón tiếp quý khách lần sau."
+            },
+            {
+              "index": 2,
+              "jp": "渋谷駅での車両故障のため、山手線内周りはただ今、運転を見合わせております。",
+              "vi": "Do sự cố phương tiện tại ga Shibuya, tuyến Yamanote chiều vòng trong hiện đang tạm ngừng hoạt động."
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "pattern": "～かねます",
+          "usage": "V－ます形＋かねます",
+          "meaning": "Rất tiếc không thể..., khó có thể...",
+          "description": "Cách nói lịch sự dùng trong dịch vụ khách hàng hoặc công việc để từ chối hoặc nói không thể thực hiện.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "こちらに電話をいただいても、ツアー当日のバスの出発時間の変更は致しかねます。",
+              "vi": "Dù quý khách gọi tới đây thì chúng tôi cũng không thể thay đổi giờ khởi hành xe buýt trong ngày diễn ra tour."
+            },
+            {
+              "index": 2,
+              "jp": "箱根行きのバスは何時に出発しますか。",
+              "vi": "Xe buýt đi Hakone khởi hành lúc mấy giờ ạ?"
+            },
+            {
+              "index": 3,
+              "jp": "申し訳ございませんが、こちらでは分かりかねますので、あちらの窓口でお尋ねください。",
+              "vi": "Rất xin lỗi nhưng bên chúng tôi không rõ việc đó, xin hãy hỏi ở quầy bên kia."
+            }
+          ]
+        },
+        {
+          "id": "5.1",
+          "pattern": "～ことに（は）",
+          "usage": "V-タ形／イAい／ナAな＋ことに（は）",
+          "meaning": "Thật là..., điều ... là...",
+          "description": "Dùng để nhấn mạnh cảm xúc của người nói trước khi nêu sự việc thực tế.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "驚いたことに、旅行先で10年ぶりに中学のクラスメイトと再会した。",
+              "vi": "Điều đáng ngạc nhiên là tôi đã gặp lại bạn học cấp hai sau 10 năm ở nơi du lịch."
+            },
+            {
+              "index": 2,
+              "jp": "大学に合格できた。さらにうれしいことには、奨学金がもらえることになった。",
+              "vi": "Tôi đã đỗ đại học. Điều vui hơn nữa là tôi còn nhận được học bổng."
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "pattern": "～だけあって",
+          "usage": "普通形／ナAな／であるN（である）＋だけあって",
+          "meaning": "Đúng là..., quả nhiên là...",
+          "description": "Dùng khi đánh giá tích cực rằng kết quả đúng như mong đợi hoặc đúng với danh tiếng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "石井さんはフランスに留学していただけあって、フランス語が上手だ。",
+              "vi": "Đúng là đã từng du học Pháp nên anh Ishii nói tiếng Pháp rất giỏi."
+            },
+            {
+              "index": 2,
+              "jp": "彼は車が好きなだけあって、車についてよく知っている。",
+              "vi": "Đúng là người yêu xe nên anh ấy biết rất nhiều về xe hơi."
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "pattern": "～ついでに",
+          "usage": "V-る・た＋ついでに／Nの＋ついでに",
+          "meaning": "Nhân tiện..., tiện thể...",
+          "description": "Dùng khi lợi dụng cơ hội làm một việc để làm thêm một việc khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "駅前のスーパーへ行くついでに、たばこを買ってきてくれませんか。",
+              "vi": "Nhân tiện đi siêu thị trước ga, cậu mua giúp tôi thuốc lá được không?"
+            },
+            {
+              "index": 2,
+              "jp": "出張のついでに、高校の時の友達に会いに行った。",
+              "vi": "Nhân chuyến công tác, tôi đã đi gặp người bạn thời cấp ba."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
