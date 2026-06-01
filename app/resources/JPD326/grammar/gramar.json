@@ -1099,7 +1099,354 @@
     },
     {
       "lesson": "4",
-      "grammar": []
+      "grammar": [
+        {
+          "id": "1.1",
+          "pattern": "～がたい",
+          "usage": "Vます＋がたい",
+          "meaning": "Khó mà..., khó có thể...",
+          "description": "Dùng để diễn tả cảm giác khó chấp nhận, khó tin, khó tha thứ, khó tưởng tượng... của người nói. Thường đi với các động từ liên quan đến cảm xúc, nhận thức như 信じる、許す、理解する、受け入れる、想像する. Không dùng để diễn tả khả năng đơn thuần.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この詩に出会ったときの感動は忘れがたいものです。",
+              "vi": "Sự xúc động khi gặp bài thơ này là điều khó quên."
+            },
+            {
+              "index": 2,
+              "jp": "ペットを捨てるなんて、許しがたいことだ。",
+              "vi": "Việc vứt bỏ thú cưng là điều khó có thể tha thứ."
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "pattern": "～ように",
+          "usage": "V普通形／Nの＋ように",
+          "meaning": "Giống như..., theo như...",
+          "description": "Dùng để diễn tả sự tương đồng hoặc làm theo cách thức, trạng thái được nêu trước đó.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "どうしてみんなと同じようにできないのだろうと悩んでいました。",
+              "vi": "Tôi đã băn khoăn không hiểu tại sao mình không thể làm được như mọi người."
+            },
+            {
+              "index": 2,
+              "jp": "母が教えてくれたように作ってみたら、おいしいスープができた。",
+              "vi": "Khi thử làm theo như mẹ chỉ thì đã nấu được món súp ngon."
+            },
+            {
+              "index": 3,
+              "jp": "来月から、ごみ回収日は以下のように変わります。",
+              "vi": "Từ tháng sau, ngày thu gom rác sẽ thay đổi như dưới đây."
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "pattern": "～とともに",
+          "usage": "V辞書形／N＋とともに",
+          "meaning": "Cùng với..., đồng thời..., càng... càng...",
+          "description": "Diễn tả hai sự thay đổi hoặc hai sự việc xảy ra cùng lúc, đồng thời với nhau.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "時間がたつとともに、私の悩みも消えていきました。",
+              "vi": "Cùng với thời gian trôi qua, nỗi lo của tôi cũng dần biến mất."
+            },
+            {
+              "index": 2,
+              "jp": "インターネットの普及とともに、情報が簡単に手に入るようになった。",
+              "vi": "Cùng với sự phổ biến của Internet, việc tiếp cận thông tin trở nên dễ dàng hơn."
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "pattern": "～をもとに（して）",
+          "usage": "N＋をもとに（して）／N＋をもとにした＋N",
+          "meaning": "Dựa trên..., lấy ... làm cơ sở",
+          "description": "Dùng khi viết, nói, tạo ra, phát triển một thứ gì đó dựa trên dữ liệu, kinh nghiệm hoặc ý kiến làm nền tảng.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "この詩は彼女の経験をもとにして書かれているように感じました。",
+              "vi": "Tôi cảm thấy bài thơ này được viết dựa trên kinh nghiệm của cô ấy."
+            },
+            {
+              "index": 2,
+              "jp": "消費者の意見をもとに、新しい商品の開発が行われる。",
+              "vi": "Việc phát triển sản phẩm mới được thực hiện dựa trên ý kiến của người tiêu dùng."
+            },
+            {
+              "index": 3,
+              "jp": "これは実話をもとにした小説です。",
+              "vi": "Đây là tiểu thuyết dựa trên câu chuyện có thật."
+            }
+          ]
+        },
+        {
+          "id": "2.1",
+          "pattern": "～でしょう？",
+          "usage": "V普通形／Aい／Aな／N＋でしょう？",
+          "meaning": "Có phải không?, đúng không?",
+          "description": "Dùng để xác nhận điều người nói cho là đúng và mong người nghe đồng tình.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "３月３日は耳の日って聞いたんだけど、どうして？",
+              "vi": "Tôi nghe nói ngày 3 tháng 3 là ngày Tai, tại sao vậy?"
+            },
+            {
+              "index": 2,
+              "jp": "ああ、３は数えるとき「みっつ」って言うでしょう？",
+              "vi": "À, khi đếm số 3 thì nói là 'mittsu' đúng không?"
+            },
+            {
+              "index": 3,
+              "jp": "来週の水曜日、遠足だね。Ｂさんも行くでしょう？",
+              "vi": "Thứ tư tuần sau đi dã ngoại nhỉ. B cũng đi đúng không?"
+            },
+            {
+              "index": 4,
+              "jp": "明日の飲み会、７時からでしょう？",
+              "vi": "Buổi nhậu ngày mai bắt đầu từ 7 giờ đúng không?"
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "pattern": "～っけ",
+          "usage": "V・Aな・Aい・N過去形＋っけ",
+          "meaning": "Nhỉ?, ấy nhỉ?",
+          "description": "Dùng khi tự hỏi lại điều mình quên hoặc xác nhận ký ức với người khác.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "Ｂさんの弟、中学生だっけ？",
+              "vi": "Em trai của B là học sinh cấp 2 nhỉ?"
+            },
+            {
+              "index": 2,
+              "jp": "今日、宿題あったっけ？",
+              "vi": "Hôm nay có bài tập về nhà nhỉ?"
+            },
+            {
+              "index": 3,
+              "jp": "先輩、「こころ」を書いた作家は誰でしたっけ？",
+              "vi": "Anh/chị ơi, tác giả viết tác phẩm Kokoro là ai nhỉ?"
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "pattern": "～というわけだ／～わけだ",
+          "usage": "V普通形／Aい／Aな／N＋というわけだ／わけだ",
+          "meaning": "Thảo nào..., hóa ra..., vậy nên...",
+          "description": "Dùng để kết luận hoặc hiểu ra nguyên nhân sau khi nghe giải thích.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "８月３１日は「野菜の日」なんだって。",
+              "vi": "Nghe nói ngày 31 tháng 8 là ngày Rau củ."
+            },
+            {
+              "index": 2,
+              "jp": "８は「やっつ」の「や」で、３は「さ」、１は「い」でしょ？",
+              "vi": "8 là 'ya' trong 'yattsu', 3 là 'sa', 1 là 'i' đúng không?"
+            },
+            {
+              "index": 3,
+              "jp": "ああ、そっか。それで、「やさい」になるというわけだね。",
+              "vi": "À ra vậy. Thảo nào ghép lại thành 'yasai'."
+            },
+            {
+              "index": 4,
+              "jp": "あ、今日、さくら市の花火大会があるんだって。",
+              "vi": "À, hôm nay có lễ hội pháo hoa ở thành phố Sakura đấy."
+            },
+            {
+              "index": 5,
+              "jp": "ああ、それで、浴衣を着た人がたくさん歩いているわけだ。",
+              "vi": "À, thảo nào có nhiều người mặc yukata đi ngoài đường như vậy."
+            }
+          ]
+        },
+        {
+          "id": "3.1",
+          "pattern": "～っこない",
+          "usage": "Vます＋っこない",
+          "meaning": "Chắc chắn không thể..., tuyệt đối không...",
+          "description": "Cách nói thân mật dùng khi người nói tin chắc điều gì đó không thể xảy ra.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "ねえ、この曲、歌える？",
+              "vi": "Này, cậu hát được bài này không?"
+            },
+            {
+              "index": 2,
+              "jp": "わあ、音が高いね。だめだめ、僕には歌えっこないよ。",
+              "vi": "Ôi, tông cao quá. Không được đâu, tớ chắc chắn không hát nổi."
+            },
+            {
+              "index": 3,
+              "jp": "北海道旅行に小林さんを誘ったら、一緒に行くかな？",
+              "vi": "Nếu rủ anh Kobayashi đi du lịch Hokkaido thì anh ấy có đi cùng không nhỉ?"
+            },
+            {
+              "index": 4,
+              "jp": "小林さん？行きっこないよ。寒い所、嫌いって言ってたから。",
+              "vi": "Anh Kobayashi à? Chắc chắn không đi đâu. Vì anh ấy bảo ghét nơi lạnh mà."
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "pattern": "～もん／～んだもん",
+          "usage": "普通形＋もん／Aな・Nな＋んだもん",
+          "meaning": "Vì mà..., tại vì...",
+          "description": "Dùng để đưa ra lý do hoặc biện minh mang tính cá nhân, khẩu ngữ, trẻ con.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "どうしてジェットコースターに乗らないの？おもしろいよ。",
+              "vi": "Sao cậu không đi tàu lượn? Vui mà."
+            },
+            {
+              "index": 2,
+              "jp": "だって、怖いもん。",
+              "vi": "Tại vì đáng sợ mà."
+            },
+            {
+              "index": 3,
+              "jp": "あれ？なんでニンジン残してるの？",
+              "vi": "Ủa? Sao cậu để lại cà rốt thế?"
+            },
+            {
+              "index": 4,
+              "jp": "だって、嫌いなんだもん。",
+              "vi": "Tại vì tớ ghét mà."
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "pattern": "～ほど／～くらい／～ぐらい",
+          "usage": "普通形／N＋ほど／くらい／ぐらい",
+          "meaning": "Đến mức..., tới mức...",
+          "description": "Dùng để diễn tả mức độ cao của một trạng thái hoặc cảm xúc.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "考えなければならないことが山ほどある。",
+              "vi": "Có rất nhiều việc phải suy nghĩ."
+            },
+            {
+              "index": 2,
+              "jp": "スピーチ大会で優勝して、飛び上がりたいくらいうれしかった。",
+              "vi": "Tôi vui đến mức muốn nhảy cẫng lên vì đoạt giải nhất cuộc thi hùng biện."
+            },
+            {
+              "index": 3,
+              "jp": "この料理はほっぺたが落ちるぐらいおいしいです。",
+              "vi": "Món ăn này ngon đến mức muốn rớt cả má."
+            }
+          ]
+        },
+        {
+          "id": "4.1",
+          "pattern": "～ところだった",
+          "usage": "Vる／ない＋ところだった",
+          "meaning": "Suýt nữa thì..., chút nữa là...",
+          "description": "Diễn tả tình huống gần xảy ra nhưng cuối cùng không xảy ra.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "自転車で走っていたら、急に子どもが飛び出してきて、もうちょっとで事故になるところでした。",
+              "vi": "Khi đang đi xe đạp thì một đứa trẻ bất ngờ lao ra, suýt nữa đã xảy ra tai nạn."
+            },
+            {
+              "index": 2,
+              "jp": "電車が遅れて、もう少しで集合時間に間に合わないところだった。",
+              "vi": "Vì tàu bị trễ nên suýt nữa tôi đã không kịp giờ tập trung."
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "pattern": "～てたまらない",
+          "usage": "～て＋たまらない",
+          "meaning": "Rất..., vô cùng..., không chịu nổi...",
+          "description": "Dùng để diễn tả cảm xúc hoặc cảm giác mạnh đến mức không thể kiềm chế.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "国にいる恋人に会いたくてたまらない。",
+              "vi": "Tôi nhớ người yêu ở quê đến mức không chịu nổi."
+            },
+            {
+              "index": 2,
+              "jp": "祖母が入院したと聞いて、心配でたまらない。",
+              "vi": "Nghe tin bà nhập viện nên tôi lo lắng vô cùng."
+            }
+          ]
+        },
+        {
+          "id": "5.1",
+          "pattern": "～わけではない／～じゃない",
+          "usage": "普通形／Aな・である／Nの・である＋わけではない／じゃない",
+          "meaning": "Không hẳn là..., không phải lúc nào cũng...",
+          "description": "Dùng để phủ định một phần hoặc điều chỉnh nhận định của người nghe.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "遠慮しないで、もっと食べてください。",
+              "vi": "Đừng ngại, hãy ăn thêm đi."
+            },
+            {
+              "index": 2,
+              "jp": "遠慮しているわけじゃないんですが、もうおなかがいっぱいなんです。",
+              "vi": "Không phải là tôi ngại đâu, mà là tôi no rồi."
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "pattern": "～くらい／～ぐらい",
+          "usage": "普通形／Aな／N＋くらい／ぐらい",
+          "meaning": "Ít nhất là..., đến cả...",
+          "description": "Dùng khi người nói cho rằng việc đó là nhỏ nhặt hoặc tối thiểu cũng phải làm được.",
+          "examples": [
+            {
+              "index": 1,
+              "jp": "メール、見た？",
+              "vi": "Cậu xem email chưa?"
+            },
+            {
+              "index": 2,
+              "jp": "ごめん！忙しくて、メールのチェックしてなかった。",
+              "vi": "Xin lỗi! Bận quá nên tôi chưa kiểm tra email."
+            },
+            {
+              "index": 3,
+              "jp": "え？忙しくても、メールをチェックする時間くらいはあるだろう？",
+              "vi": "Hả? Dù bận thì ít nhất cũng có thời gian kiểm tra email chứ?"
+            },
+            {
+              "index": 4,
+              "jp": "ああ、暑い、暑い。エアコン、つけよう。",
+              "vi": "Ôi nóng quá nóng quá. Bật điều hòa đi."
+            },
+            {
+              "index": 5,
+              "jp": "でも、今28度だよ。ちょっと暑いくらい我慢しようよ。",
+              "vi": "Nhưng bây giờ mới 28 độ thôi. Nóng một chút thì chịu đựng đi."
+            }
+          ]
+        }
+      ]
     },
     {
       "lesson": "5",
