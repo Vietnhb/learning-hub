@@ -44,7 +44,7 @@ function ResourcesPageContent() {
       title: "JPD326 - Giáo trình Tiếng Nhật",
       category: "Ngoại ngữ",
       type: "Folder",
-      size: "Đang cập nhật",
+      size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
       description: "Giáo trình Tiếng Nhật Trung Cấp (N4-N3)",
@@ -105,7 +105,8 @@ function ResourcesPageContent() {
       size: "Đã Hoàn Thành",
       downloads: 0,
       rating: 5.0,
-      description: "Nội dung của phép biện chứng duy vật: Các cặp phạm trù cơ bản",
+      description:
+        "Nội dung của phép biện chứng duy vật: Các cặp phạm trù cơ bản",
       link: "/resources/MLN111",
     },
   ];
