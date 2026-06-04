@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import { useAuth } from "@/contexts/AuthContext";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import vocabularyData from "./kotoba.json";
 
 type PosTag =
@@ -716,6 +717,7 @@ export default function JPD326VocabularyPage() {
           </div>
         </Card>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

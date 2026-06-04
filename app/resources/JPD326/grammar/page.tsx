@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import grammarData from "./gramar.json";
 
 interface Example {
@@ -292,6 +293,7 @@ export default function GrammarPage() {
           </div>
         </div>
       </div>
+      <ScrollToTopButton className="bg-green-600 hover:bg-green-700 focus-visible:ring-green-300" />
     </div>
   );
 }

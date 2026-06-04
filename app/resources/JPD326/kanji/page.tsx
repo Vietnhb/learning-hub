@@ -7,6 +7,7 @@ import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import kanjiData from "./kanji.json";
 
 type KanjiCard = {
@@ -123,6 +124,7 @@ export default function JPD326KanjiPage() {
           ))}
         </div>
       </div>
+      <ScrollToTopButton className="bg-red-600 hover:bg-red-700 focus-visible:ring-red-300" />
     </main>
   );
 }
