@@ -4951,6 +4951,119 @@
           ]
         }
       ]
+    },
+    {
+      "id": 38,
+      "title": "Đơn - Phức - Toàn - Dĩ",
+      "kanji": [
+        {
+          "character": "単",
+          "meaning": "Đơn",
+          "onyomi": "タン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "単独",
+              "reading": "たんどく",
+              "meaning": "Đơn độc"
+            },
+            {
+              "word": "簡単",
+              "reading": "かんたん",
+              "meaning": "Đơn giản"
+            },
+            {
+              "word": "単位",
+              "reading": "たんい",
+              "meaning": "Đơn vị"
+            },
+            {
+              "word": "単価",
+              "reading": "たんか",
+              "meaning": "Đơn giá"
+            }
+          ]
+        },
+        {
+          "character": "複",
+          "meaning": "Phức",
+          "onyomi": "フク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "複数",
+              "reading": "ふくすう",
+              "meaning": "Số nhiều"
+            },
+            {
+              "word": "複雑",
+              "reading": "ふくざつ",
+              "meaning": "Phức tạp"
+            }
+          ]
+        },
+        {
+          "character": "全",
+          "meaning": "Toàn",
+          "onyomi": "ゼン",
+          "kunyomi": "まったく、すべて",
+          "examples": [
+            {
+              "word": "全く",
+              "reading": "まったく",
+              "meaning": "Hoàn toàn"
+            },
+            {
+              "word": "全て",
+              "reading": "すべて",
+              "meaning": "Tất cả"
+            },
+            {
+              "word": "全部",
+              "reading": "ぜんぶ",
+              "meaning": "Toàn bộ"
+            },
+            {
+              "word": "全然",
+              "reading": "ぜんぜん",
+              "meaning": "Hoàn toàn"
+            },
+            {
+              "word": "安全",
+              "reading": "あんぜん",
+              "meaning": "An toàn"
+            }
+          ]
+        },
+        {
+          "character": "以",
+          "meaning": "Dĩ",
+          "onyomi": "イ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "以上",
+              "reading": "いじょう",
+              "meaning": "Trở lên"
+            },
+            {
+              "word": "以下",
+              "reading": "いか",
+              "meaning": "Trở xuống"
+            },
+            {
+              "word": "以内",
+              "reading": "いない",
+              "meaning": "Trong phạm vi"
+            },
+            {
+              "word": "以後",
+              "reading": "いご",
+              "meaning": "Sau đó"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
