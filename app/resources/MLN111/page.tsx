@@ -341,8 +341,8 @@ export default function DialecticalUniverseGame() {
       {/* Premium Space Dust & Nebulas */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(14,165,233,0.18),transparent_34%),radial-gradient(circle_at_15%_35%,rgba(168,85,247,0.16),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(16,185,129,0.12),transparent_32%)]" />
-        <div className="absolute top-10 left-1/4 w-[700px] h-[700px] bg-indigo-500/10 rounded-full blur-[140px] animate-pulse duration-[12000ms]" />
-        <div className="absolute bottom-10 right-1/4 w-[800px] h-[800px] bg-cyan-500/10 rounded-full blur-[160px] animate-pulse duration-[14000ms]" />
+        <div className="absolute top-10 left-1/4 w-[700px] h-[700px] bg-indigo-500/10 rounded-full blur-[140px] animate-pulse [animation-duration:12000ms]" />
+        <div className="absolute bottom-10 right-1/4 w-[800px] h-[800px] bg-cyan-500/10 rounded-full blur-[160px] animate-pulse [animation-duration:14000ms]" />
         <div className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.03] animate-spin-slow" />
         <div className="absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-cyan-200/[0.04] animate-[spin_42s_linear_infinite_reverse]" />
         <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:52px_52px]" />
