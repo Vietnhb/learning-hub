@@ -5064,6 +5064,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 39,
+      "title": "Vị - Mãn - Vô - Phi",
+      "kanji": [
+        {
+          "character": "未",
+          "meaning": "Vị, chưa",
+          "onyomi": "ミ",
+          "kunyomi": "ま-だ",
+          "examples": [
+            {
+              "word": "未来",
+              "reading": "みらい",
+              "meaning": "Tương lai"
+            },
+            {
+              "word": "未婚",
+              "reading": "みこん",
+              "meaning": "Chưa kết hôn"
+            },
+            {
+              "word": "未定",
+              "reading": "みてい",
+              "meaning": "Chưa quyết định"
+            },
+            {
+              "word": "未成年",
+              "reading": "みせいねん",
+              "meaning": "Vị thành niên"
+            }
+          ]
+        },
+        {
+          "character": "満",
+          "meaning": "Mãn, đầy",
+          "onyomi": "マン",
+          "kunyomi": "み-ちる、み-たす",
+          "examples": [
+            {
+              "word": "満ちる",
+              "reading": "みちる",
+              "meaning": "Đầy, tràn đầy"
+            },
+            {
+              "word": "満たす",
+              "reading": "みたす",
+              "meaning": "Làm đầy, thỏa mãn"
+            },
+            {
+              "word": "不満",
+              "reading": "ふまん",
+              "meaning": "Bất mãn, không hài lòng"
+            },
+            {
+              "word": "満点",
+              "reading": "まんてん",
+              "meaning": "Điểm tối đa"
+            },
+            {
+              "word": "満車",
+              "reading": "まんしゃ",
+              "meaning": "Hết chỗ đỗ xe"
+            }
+          ]
+        },
+        {
+          "character": "無",
+          "meaning": "Vô, không",
+          "onyomi": "ム、ブ",
+          "kunyomi": "な-い",
+          "examples": [
+            {
+              "word": "無い",
+              "reading": "ない",
+              "meaning": "Không có"
+            },
+            {
+              "word": "無し",
+              "reading": "なし",
+              "meaning": "Không có, không"
+            },
+            {
+              "word": "無理",
+              "reading": "むり",
+              "meaning": "Vô lý, quá sức"
+            },
+            {
+              "word": "無事",
+              "reading": "ぶじ",
+              "meaning": "Bình an, vô sự"
+            }
+          ]
+        },
+        {
+          "character": "非",
+          "meaning": "Phi, không phải",
+          "onyomi": "ヒ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "非常",
+              "reading": "ひじょう",
+              "meaning": "Khẩn cấp, bất thường"
+            },
+            {
+              "word": "是非",
+              "reading": "ぜひ",
+              "meaning": "Nhất định, đúng sai"
+            },
+            {
+              "word": "非難",
+              "reading": "ひなん",
+              "meaning": "Chỉ trích, phê phán"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
