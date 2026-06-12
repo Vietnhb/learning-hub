@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MascotScene } from "@/components/MascotScene";
 import { Username } from "@/components/community/Username";
 import {
   Card,
@@ -301,23 +302,15 @@ export default function Home() {
             initial={{ scale: 0.96, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative"
+            className="relative min-h-[360px] overflow-visible lg:min-h-[540px]"
           >
-            <div className="relative mx-auto max-w-2xl rounded-[1.75rem] border border-white/20 bg-white/10 p-3 shadow-2xl shadow-blue-950/30 backdrop-blur-md lg:max-w-none">
-              <div className="absolute -left-4 top-8 hidden rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-900 shadow-lg md:block">
-                Lưu mục quan trọng
-              </div>
-              <div className="absolute -right-4 bottom-10 hidden rounded-lg border border-amber-200/50 bg-amber-300 px-4 py-3 text-sm font-bold text-blue-950 shadow-xl md:block">
-                Ôn tập nhanh
-              </div>
-              <div className="rounded-[1.35rem] bg-white/95 p-3 shadow-inner shadow-blue-950/10">
-                <img
-                  src="/learninghub-home-hero.svg"
-                  alt="Minh họa Learning Hub với tài liệu, quiz và tiến độ học tập"
-                  className="mx-auto w-full"
-                />
-              </div>
+            <div className="pointer-events-none absolute inset-y-4 left-0 right-0 bg-[radial-gradient(circle_at_58%_34%,rgba(255,205,64,0.22),transparent_24%),radial-gradient(circle_at_55%_60%,rgba(112,168,255,0.18),transparent_34%)]" />
+            <div className="pointer-events-none absolute bottom-8 left-[24%] right-[10%] h-24 rounded-[50%] bg-blue-950/35 blur-3xl" />
+
+            <div className="absolute right-10 top-8 z-10 rounded-lg border border-amber-200/70 bg-amber-300 px-4 py-3 text-sm font-black text-blue-950 shadow-xl shadow-blue-950/20">
+              Xin chào, học thôi!
             </div>
+            <MascotScene />
           </motion.div>
         </div>
       </section>
