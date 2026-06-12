@@ -113,6 +113,17 @@ function transitivityClass(tag: TransitivityTag): string {
   }
 }
 
+function isTypingTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+
+  return (
+    target.isContentEditable ||
+    target.tagName === "INPUT" ||
+    target.tagName === "TEXTAREA" ||
+    target.tagName === "SELECT"
+  );
+}
+
 export default function FsoftTrainingVocabularyPage() {
   const { user, loading } = useAuth();
 
@@ -183,11 +194,11 @@ export default function FsoftTrainingVocabularyPage() {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      if (isTypingTarget(e.target)) return;
+
       if (e.code === "Space") {
         e.preventDefault();
-        if (!isFlipped && deck[currentIndex]?.reading) {
-          setIsReadingBlurred((prev) => !prev);
-        }
+        setIsFlipped((prev) => !prev);
       } else if (e.key === "ArrowRight") {
         e.preventDefault();
         setCurrentIndex((prev) =>
@@ -205,7 +216,7 @@ export default function FsoftTrainingVocabularyPage() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [deck, currentIndex, isFlipped]);
+  }, [deck, currentIndex]);
 
   const current = deck[currentIndex] ?? null;
   const progress =
@@ -461,7 +472,7 @@ export default function FsoftTrainingVocabularyPage() {
           <Card className="p-4 bg-white/95 dark:bg-gray-800/95">
             <p className="text-sm text-gray-500 dark:text-gray-300">Ghi chú</p>
             <p className="text-sm font-medium text-gray-700 dark:text-gray-100">
-              Nhãn 自動詞 / 他動詞 được gắn tự động bằng từ điển.
+              Space lật thẻ xem nghĩa. Reading bật/tắt bằng công tắc riêng.
             </p>
           </Card>
         </div>
@@ -608,13 +619,30 @@ export default function FsoftTrainingVocabularyPage() {
                 >
                   <Button variant="outline">Giải nghĩa</Button>
                 </a>
-                <Button
-                  variant={isReadingBlurred ? "outline" : "default"}
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={!isReadingBlurred}
                   onClick={() => setIsReadingBlurred((prev) => !prev)}
                   disabled={!current?.reading}
+                  className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
                 >
-                  {isReadingBlurred ? "Mở reading" : "Làm mờ reading"}
-                </Button>
+                  <span>Reading</span>
+                  <span
+                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition ${
+                      isReadingBlurred ? "bg-gray-300" : "bg-orange-500"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 rounded-full bg-white shadow transition ${
+                        isReadingBlurred ? "translate-x-0.5" : "translate-x-4"
+                      }`}
+                    />
+                  </span>
+                  <span className="min-w-[28px] text-xs">
+                    {isReadingBlurred ? "Off" : "On"}
+                  </span>
+                </button>
                 <Button
                   variant="outline"
                   onClick={() => {

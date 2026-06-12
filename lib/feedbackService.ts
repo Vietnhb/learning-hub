@@ -1,5 +1,22 @@
 import { supabase } from "./supabase";
-import { Feedback, FeedbackWithUser, CreateFeedbackData } from "@/types";
+import { Feedback, CreateFeedbackData } from "@/types";
+
+function getFriendlyFeedbackError(err: unknown): string {
+  if (err instanceof Error) {
+    const message = err.message.toLowerCase();
+
+    if (
+      err instanceof TypeError &&
+      (message.includes("fetch") || message.includes("network"))
+    ) {
+      return "Không thể kết nối máy chủ. Vui lòng kiểm tra mạng rồi thử lại.";
+    }
+
+    return err.message;
+  }
+
+  return "Unknown error";
+}
 
 /**
  * Create new feedback
@@ -8,6 +25,16 @@ export async function createFeedback(
   data: CreateFeedbackData,
 ): Promise<{ success: boolean; error: string | null; data?: Feedback }> {
   try {
+    const subject = data.subject.trim();
+    const message = data.message.trim();
+
+    if (!subject || !message) {
+      return {
+        success: false,
+        error: "Vui lòng nhập đầy đủ tiêu đề và nội dung.",
+      };
+    }
+
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -16,21 +43,13 @@ export async function createFeedback(
       return { success: false, error: "User not authenticated" };
     }
 
-    const { data: fallbackAdmin } = await supabase
-      .from("users")
-      .select("id")
-      .eq("role_id", 1)
-      .order("created_at", { ascending: true })
-      .limit(1)
-      .maybeSingle();
-
     const { data: feedback, error } = await supabase
       .from("feedback")
       .insert({
         user_id: user.id,
-        admin_id: fallbackAdmin?.id || null,
-        subject: data.subject,
-        message: data.message,
+        admin_id: null,
+        subject,
+        message,
         category: data.category || "general",
       })
       .select()
@@ -46,7 +65,7 @@ export async function createFeedback(
     console.error("Create feedback exception:", err);
     return {
       success: false,
-      error: err instanceof Error ? err.message : "Unknown error",
+      error: getFriendlyFeedbackError(err),
     };
   }
 }
@@ -83,7 +102,7 @@ export async function getMyFeedback(): Promise<{
     console.error("Get my feedback exception:", err);
     return {
       data: null,
-      error: err instanceof Error ? err.message : "Unknown error",
+      error: getFriendlyFeedbackError(err),
     };
   }
 }
