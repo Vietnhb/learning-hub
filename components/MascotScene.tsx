@@ -320,13 +320,7 @@ export function MascotScene() {
         className="absolute inset-0"
         aria-hidden={loadState !== "error"}
       />
-      {loadState === "ready" && (
-        <div className="pointer-events-none absolute left-[61%] top-[27%] hidden h-24 w-24 -rotate-12 sm:block">
-          <span className="absolute left-0 top-10 h-6 w-10 animate-ping rounded-r-full border-r-2 border-t-2 border-amber-300/80" />
-          <span className="absolute left-4 top-5 h-10 w-14 animate-pulse rounded-r-full border-r-2 border-t-2 border-amber-200/80" />
-          <span className="absolute left-8 top-0 h-14 w-20 animate-pulse rounded-r-full border-r-2 border-t-2 border-white/45" />
-        </div>
-      )}
+
       <div className="pointer-events-none absolute inset-x-[12%] bottom-4 h-16 rounded-[50%] bg-blue-950/35 blur-2xl" />
       {loadState === "loading" && (
         <div className="absolute inset-0 grid place-items-center text-sm font-semibold text-blue-100">

@@ -21,10 +21,9 @@ import type { LucideIcon } from "lucide-react";
 import AnimatedContent from "@/components/AnimatedContent";
 import Aurora from "@/components/Aurora";
 import CountUp from "@/components/CountUp";
+import Lightfall from "@/components/Lightfall";
 import ElectricBorder from "@/components/ElectricBorder";
 import GlareHover from "@/components/GlareHover";
-import GradientText from "@/components/GradientText";
-import Lightfall from "@/components/Lightfall";
 import { MascotScene } from "@/components/MascotScene";
 import ShinyText from "@/components/ShinyText";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -183,59 +182,40 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f7fbff] text-slate-950 dark:bg-[#050815] dark:text-white">
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#040914] text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-80">
+        <div className="pointer-events-none absolute inset-0">
           <Lightfall
-            colors={["#7dd3fc", "#fbbf24", "#f472b6", "#a78bfa"]}
-            backgroundColor="#06101f"
-            speed={0.34}
-            streakCount={7}
-            streakWidth={0.78}
-            streakLength={0.82}
-            glow={0.82}
-            density={0.72}
-            twinkle={0.62}
-            zoom={2.7}
-            backgroundGlow={0.42}
-            opacity={0.9}
-            mouseInteraction
-            mouseStrength={0.25}
-            mouseRadius={0.85}
-            mouseDampening={0.2}
+            backgroundColor="#040914"
+            colors={["#38bdf8", "#fbbf24", "#f472b6", "#818cf8"]}
           />
         </div>
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(4,9,20,0.96)_0%,rgba(7,16,31,0.62)_46%,rgba(4,9,20,0.9)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(4,9,20,0.6)_100%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:56px_56px]" />
 
         <div className="relative z-10 mx-auto grid max-w-[96rem] gap-8 px-4 pb-8 pt-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(520px,0.94fr)] lg:items-center lg:gap-12 lg:px-10 lg:pb-10 lg:pt-10 xl:px-14">
           <AnimatedContent distance={50} duration={0.65}>
             <div className="max-w-4xl pt-2 lg:pt-0">
-              <p className="mb-4 inline-flex items-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-3 py-1.5 text-sm font-bold uppercase tracking-normal text-cyan-100">
-                <Sparkles className="h-4 w-4 text-amber-300" />
-                Không gian học tập
-              </p>
-
-              <h1 className="max-w-5xl text-4xl font-black leading-[1.08] tracking-normal sm:text-5xl lg:text-[4.35rem] xl:text-[4.85rem]">
+              <h1 className="max-w-5xl pb-2 text-4xl font-black leading-[1.16] tracking-normal sm:text-5xl sm:leading-[1.14] lg:text-[4.15rem] lg:leading-[1.1] xl:text-[4.55rem]">
                 <span className="bg-gradient-to-r from-white via-amber-200 to-cyan-300 bg-clip-text text-transparent">
-                  Mở tài liệu nhanh, làm quiz gọn, lưu lại bài hay.
+                  Tài liệu, quiz và mục đã lưu
                 </span>
               </h1>
 
-              <p className="mt-5 max-w-3xl text-base leading-8 text-cyan-50/82 sm:text-lg">
-                Vào đúng môn đang học, chọn phần cần ôn và quay lại những mục đã
-                đánh dấu mà không phải lục từng trang.
+              <p className="mt-4 max-w-3xl text-base leading-8 text-cyan-50/82 sm:text-lg">
+                Chọn môn đang học, mở tài liệu hoặc quiz. Các mục đã đánh dấu nằm
+                trong phần Yêu thích.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
                 <StarBorder
                   as="div"
                   color="#fbbf24"
                   speed="6s"
                   thickness={1}
-                  className="w-full rounded-lg sm:w-auto"
+                  className="w-full rounded-[18px] sm:w-auto"
                 >
                   <Link
                     href="/resources"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-[18px] bg-amber-400 px-6 py-3 font-bold text-slate-950 transition-colors hover:bg-amber-300 sm:w-auto"
+                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-[18px] bg-amber-400 px-6 font-bold text-slate-950 transition-colors hover:bg-amber-300 sm:w-auto"
                   >
                     Khám phá tài liệu
                     <ArrowRight className="h-5 w-5" />
@@ -297,14 +277,7 @@ export default function Home() {
           <AnimatedContent distance={55} duration={0.7} delay={0.06}>
             <div className="relative mx-auto h-[420px] w-full max-w-[640px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-cyan-950/25 backdrop-blur-[2px] sm:h-[480px] lg:h-[560px]">
               <div className="pointer-events-none absolute inset-x-8 top-8 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent shadow-[0_0_18px_rgba(244,114,182,0.9)]" />
-              <div className="absolute right-5 top-8 z-10 rounded-lg border border-amber-200/70 bg-amber-300 px-4 py-3 text-sm font-black text-slate-950 shadow-xl shadow-black/20">
-                <ShinyText
-                  text="Vào bài thôi!"
-                  color="#111827"
-                  shineColor="#ffffff"
-                  speed={2.8}
-                />
-              </div>
+
               <MascotScene />
             </div>
           </AnimatedContent>
@@ -321,14 +294,10 @@ export default function Home() {
                   <Library className="h-4 w-4" />
                   Tài nguyên nổi bật
                 </p>
-                <h2 className="mt-4 max-w-3xl text-3xl font-black tracking-normal text-slate-950 dark:text-white sm:text-4xl">
-                  <GradientText
-                    colors={["#0f172a", "#0891b2", "#db2777", "#f59e0b"]}
-                    animationSpeed={9}
-                    className="mx-0 dark:[&>div]:text-transparent"
-                  >
-                    Chọn môn học rồi vào thẳng phần cần ôn
-                  </GradientText>
+                <h2 className="mt-4 max-w-4xl pb-2 text-3xl font-black leading-[1.22] tracking-normal text-slate-950 dark:text-white sm:text-4xl sm:leading-[1.2]">
+                  <span className="bg-gradient-to-r from-rose-500 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+                    Chọn môn rồi vào thẳng phần cần ôn
+                  </span>
                 </h2>
                 <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
                   Mỗi thẻ là một môn hoặc bộ học liệu. Nhìn tên, trạng thái và
@@ -407,14 +376,8 @@ export default function Home() {
                 <Sparkles className="h-4 w-4" />
                 Dùng hằng ngày
               </p>
-              <h2 className="mt-4 max-w-xl text-3xl font-black tracking-normal text-slate-950 dark:text-white sm:text-4xl">
-                <ShinyText
-                  text="Tìm bài, làm quiz, lưu lại"
-                  color="#020617"
-                  shineColor="#0ea5e9"
-                  speed={4}
-                  className="dark:[-webkit-text-fill-color:transparent]"
-                />
+              <h2 className="mt-4 max-w-xl pb-2 text-3xl font-black leading-[1.22] tracking-normal text-slate-950 dark:text-white sm:text-4xl sm:leading-[1.2]">
+                Tìm bài, làm quiz, lưu lại
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
                 Những thao tác hay dùng được đặt gần nhau để bạn không mất nhịp
@@ -483,7 +446,7 @@ export default function Home() {
                   <BookOpen className="h-4 w-4 text-amber-300" />
                   Đi tiếp
                 </div>
-                <h2 className="max-w-2xl text-3xl font-black tracking-normal sm:text-4xl">
+                <h2 className="max-w-2xl pb-2 text-3xl font-black leading-[1.22] tracking-normal sm:text-4xl sm:leading-[1.2]">
                   Cần học thì mở thư viện, thấy thiếu thì góp ý
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-cyan-50/80">
