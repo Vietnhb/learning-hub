@@ -11,14 +11,8 @@ import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
 import { getUserSafeError } from "@/lib/errorHandler";
 import { validateEmail, validatePassword } from "@/lib/validation";
 import { GoogleAuthButton } from "@/components/GoogleAuthButton";
+import { DotPatternBackground } from "@/components/DotPatternBackground";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 function LoginPageContent() {
   const router = useRouter();
@@ -156,108 +150,81 @@ function LoginPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="max-w-md w-full"
-      >
-        <Card className="border shadow-lg dark:bg-gray-800 dark:border-gray-700">
-          <CardHeader className="text-center">
-            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4">
-              <LogIn className="w-10 h-10 text-white" />
+    <div className="flex h-screen w-full overflow-hidden bg-white dark:bg-[#09090b]">
+      {/* Cột trái: Pattern Background — ~55% width như Notra */}
+      <div className="hidden lg:block lg:w-[55%] h-full flex-shrink-0">
+        <DotPatternBackground />
+      </div>
+
+      {/* Cột phải: Form — ~45% width */}
+      <div className="flex w-full flex-col justify-center overflow-y-auto px-4 py-12 sm:px-6 lg:w-[45%] lg:px-8 xl:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto w-full max-w-[360px]"
+        >
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Chào mừng trở lại
+            </h2>
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Vui lòng đăng nhập để tiếp tục.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <div className="grid grid-cols-1 gap-3">
+              <GoogleAuthButton
+                disabled={loading}
+                redirectPath={redirectPath}
+                onError={setError}
+              />
             </div>
-            <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
-              Đăng nhập
-            </CardTitle>
-            <CardDescription className="text-base mt-2">
-              Chào mừng trở lại với Learning Hub
-            </CardDescription>
-          </CardHeader>
 
-          <CardContent>
-            <GoogleAuthButton
-              disabled={loading}
-              redirectPath={redirectPath}
-              onError={setError}
-            />
-
-            <div className="my-5 flex items-center gap-3">
-              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
-              <span className="text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">
-                hoặc
-              </span>
-              <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
+            <div className="relative mt-6 flex items-center py-5">
+              <div className="flex-grow border-t border-gray-200 dark:border-gray-800"></div>
+              <span className="mx-4 flex-shrink-0 text-xs text-gray-400 dark:text-gray-500 uppercase">HOẶC</span>
+              <div className="flex-grow border-t border-gray-200 dark:border-gray-800"></div>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                    placeholder="email@example.com"
-                    required
-                  />
-                </div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex h-9 w-full rounded-md border border-gray-200 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-indigo-500/50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:placeholder:text-gray-400"
+                  placeholder="Email"
+                  required
+                />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Mật khẩu
-                </label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 focus:outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                    placeholder="••••••••"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="text-right">
-                <Link
-                  href="/auth/forgot-password"
-                  className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                >
-                  Quên mật khẩu?
-                </Link>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="flex h-9 w-full rounded-md border border-gray-200 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-indigo-500/50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:placeholder:text-gray-400"
+                  placeholder="Mật khẩu"
+                  required
+                />
               </div>
 
               {error && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex items-start gap-2">
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <div className="rounded-md border border-red-200/50 bg-red-50/50 p-3 text-sm text-red-600 dark:border-red-900/50 dark:bg-red-900/10 dark:text-red-400 flex items-start gap-2">
+                  <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
-                    <p className="text-sm text-red-600">{error}</p>
-
+                    <p>{error}</p>
                     {needsVerification && (
                       <Button
                         onClick={handleResendVerification}
                         disabled={loading || isActive}
-                        variant="outline"
+                        variant="link"
                         size="sm"
-                        className="mt-2 w-full"
+                        className="h-auto p-0 text-red-600 dark:text-red-400 underline mt-1"
                       >
-                        {loading ? (
-                          <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                            Đang gửi...
-                          </>
-                        ) : isActive ? (
-                          `Đợi ${secondsLeft}s để gửi lại`
-                        ) : (
-                          "Gửi lại email xác nhận"
-                        )}
+                        {loading ? "Đang gửi..." : isActive ? `Đợi ${secondsLeft}s` : "Gửi lại email xác nhận"}
                       </Button>
                     )}
                   </div>
@@ -267,33 +234,33 @@ function LoginPageContent() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 text-lg font-semibold shadow-md transition-all"
+                className="mt-2 h-9 w-full rounded-md bg-[#8b5cf6] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#7c3aed] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#8b5cf6]/50"
               >
-                {loading ? (
-                  <>
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    Đang đăng nhập...
-                  </>
-                ) : (
-                  "Đăng nhập"
-                )}
+                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Tiếp tục"}
               </Button>
             </form>
 
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 dark:text-gray-400">
-                Chưa có tài khoản?{" "}
-                <Link
-                  href="/auth/signup"
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors"
-                >
-                  Đăng ký ngay
-                </Link>
-              </p>
+            <div className="mt-6 flex flex-col items-center justify-center space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <Link
+                href="/auth/forgot-password"
+                className="hover:text-gray-900 dark:hover:text-gray-100 hover:underline underline-offset-4"
+              >
+                Quên mật khẩu? Lấy lại mật khẩu
+              </Link>
+              <Link
+                href="/auth/signup"
+                className="hover:text-gray-900 dark:hover:text-gray-100 hover:underline underline-offset-4"
+              >
+                Chưa có tài khoản? Đăng ký
+              </Link>
             </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+            
+            <div className="mt-12 text-center text-xs text-gray-400 dark:text-gray-500">
+              Bằng việc tiếp tục, bạn đồng ý với <Link href="#" className="underline hover:text-gray-900 dark:hover:text-gray-300">Điều khoản dịch vụ</Link> và <Link href="#" className="underline hover:text-gray-900 dark:hover:text-gray-300">Chính sách bảo mật</Link> của chúng tôi.
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
