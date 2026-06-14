@@ -14,7 +14,7 @@ type WaveRig = {
 };
 type LookRig = {
   neck: THREE.Object3D;
-  head: THREE.Object3D;
+  chest: THREE.Object3D | null;
   base: Map<THREE.Object3D, THREE.Quaternion>;
 };
 type ArmPose = {
@@ -40,6 +40,22 @@ function applyLocalRotation(
   );
 
   object.quaternion.copy(base).multiply(delta);
+}
+
+function setLocalEuler(
+  object: THREE.Object3D,
+  x: number,
+  y: number,
+  z: number,
+) {
+  object.rotation.set(x, y, z, "XYZ");
+}
+
+function enableTransformUpdates(objects: THREE.Object3D[]) {
+  objects.forEach((object) => {
+    object.matrixAutoUpdate = true;
+    object.matrixWorldAutoUpdate = true;
+  });
 }
 
 function lerpPose(a: ArmPose, b: ArmPose, amount: number): ArmPose {
@@ -106,6 +122,7 @@ export function MascotScene() {
     const pointer = new THREE.Vector2(0, 0);
     const smoothPointer = new THREE.Vector2(0, 0);
     let waveRig: WaveRig | null = null;
+    let restingRig: WaveRig | null = null;
     let lookRig: LookRig | null = null;
     let frameId = 0;
     let disposed = false;
@@ -123,14 +140,14 @@ export function MascotScene() {
       const size = box.getSize(new THREE.Vector3());
       const center = box.getCenter(new THREE.Vector3());
       const maxAxis = Math.max(size.x, size.y, size.z) || 1;
-      const scale = 2.95 / maxAxis;
+      const scale = 2.56 / maxAxis;
 
       object.position.sub(center);
       object.scale.setScalar(scale);
-      object.position.y -= size.y * scale * 0.08;
+      object.position.y += size.y * scale * 0.02;
 
-      camera.position.set(0, 0.75, 4.6);
-      camera.lookAt(0, 0.55, 0);
+      camera.position.set(0, 0.68, 4.9);
+      camera.lookAt(0, 0.46, 0);
     };
 
     loader.load(
@@ -142,15 +159,20 @@ export function MascotScene() {
         fitModel(gltf.scene);
         modelRoot.rotation.y = -0.18;
 
-        const shoulder = findObjectByName(gltf.scene, "shoulder.R_039");
-        const arm = findObjectByName(gltf.scene, "arm.R_040");
-        const forearm = findObjectByName(gltf.scene, "forearm.R_041");
-        const palm = findObjectByName(gltf.scene, "palm.R_042");
+        const shoulder = findObjectByName(gltf.scene, "shoulder.L_015");
+        const arm = findObjectByName(gltf.scene, "arm.L_00");
+        const forearm = findObjectByName(gltf.scene, "forearm.L_016");
+        const palm = findObjectByName(gltf.scene, "palm.L_017");
+        const restingShoulder = findObjectByName(gltf.scene, "shoulder.R_039");
+        const restingArm = findObjectByName(gltf.scene, "arm.R_040");
+        const restingForearm = findObjectByName(gltf.scene, "forearm.R_041");
+        const restingPalm = findObjectByName(gltf.scene, "palm.R_042");
         const neck = findObjectByName(gltf.scene, "neck_010");
-        const head = findObjectByName(gltf.scene, "head_011");
+        const chest = findObjectByName(gltf.scene, "spine.003_08");
 
         if (shoulder && arm && forearm && palm) {
           const parts = [shoulder, arm, forearm, palm];
+          enableTransformUpdates(parts);
           waveRig = {
             shoulder,
             arm,
@@ -160,11 +182,29 @@ export function MascotScene() {
           };
         }
 
-        if (neck && head) {
-          const parts = [neck, head];
+        if (restingShoulder && restingArm && restingForearm && restingPalm) {
+          const parts = [
+            restingShoulder,
+            restingArm,
+            restingForearm,
+            restingPalm,
+          ];
+          enableTransformUpdates(parts);
+          restingRig = {
+            shoulder: restingShoulder,
+            arm: restingArm,
+            forearm: restingForearm,
+            palm: restingPalm,
+            base: new Map(parts.map((part) => [part, part.quaternion.clone()])),
+          };
+        }
+
+        if (neck) {
+          const parts = [neck, ...(chest ? [chest] : [])];
+          enableTransformUpdates(parts);
           lookRig = {
             neck,
-            head,
+            chest,
             base: new Map(parts.map((part) => [part, part.quaternion.clone()])),
           };
         }
@@ -180,76 +220,56 @@ export function MascotScene() {
 
     const animate = () => {
       const elapsed = clock.getElapsedTime();
-      modelRoot.rotation.y = -0.18 + Math.sin(elapsed * 1.2) * 0.035;
       modelRoot.position.y = Math.sin(elapsed * 2) * 0.025;
+      smoothPointer.lerp(pointer, 0.08);
+      const lookX = THREE.MathUtils.clamp(smoothPointer.x, -1, 1);
+      const lookY = THREE.MathUtils.clamp(smoothPointer.y, -1, 1);
+
+      modelRoot.rotation.y = -0.18 + lookX * 0.12 + Math.sin(elapsed * 1.2) * 0.025;
 
       if (waveRig) {
-        const cycle = elapsed % 3.2;
-        const waveWindow =
-          cycle < 2.45
-            ? THREE.MathUtils.smoothstep(cycle, 0.15, 0.55) *
-              (1 - THREE.MathUtils.smoothstep(cycle, 2.05, 2.45))
-            : 0;
-        const wave = Math.sin(elapsed * 9.2) * waveWindow;
-        const smallWave = Math.sin(elapsed * 18.4) * waveWindow;
-        const restPose: ArmPose = {
-          shoulder: [-0.2, 0.05, -0.45],
-          arm: [-0.24, -0.06, -0.72],
-          forearm: [-0.58, 0.08, -0.16],
-          palm: [0.02, 0.08, 0.08],
-        };
-        const helloPose: ArmPose = {
-          shoulder: [-0.5, 0.2, -1.12],
-          arm: [-0.74, -0.22, -1.72],
-          forearm: [-1.16, 0.34 + wave * 0.78, -0.08],
-          palm: [0.04, wave * 0.9 + smallWave * 0.12, 0.34],
-        };
-        const pose = lerpPose(restPose, helloPose, waveWindow);
+        const wave = Math.sin(elapsed * 9.2);
+        const smallWave = Math.sin(elapsed * 18.4);
 
-        applyLocalRotation(
-          waveRig.shoulder,
-          waveRig.base.get(waveRig.shoulder)!,
-          ...pose.shoulder,
-        );
-        applyLocalRotation(
-          waveRig.arm,
-          waveRig.base.get(waveRig.arm)!,
-          ...pose.arm,
-        );
-        applyLocalRotation(
-          waveRig.forearm,
-          waveRig.base.get(waveRig.forearm)!,
-          ...pose.forearm,
-        );
-        applyLocalRotation(
+        setLocalEuler(waveRig.shoulder, -0.05, 0.0, 0.12);
+        setLocalEuler(waveRig.arm, -0.58, -0.18, -2.28);
+        setLocalEuler(waveRig.forearm, -1.05, 0.58 + wave * 0.78, -0.38);
+        setLocalEuler(
           waveRig.palm,
-          waveRig.base.get(waveRig.palm)!,
-          ...pose.palm,
+          0.08,
+          -0.55 + wave * 0.95 + smallWave * 0.12,
+          -0.72,
         );
       }
 
-      smoothPointer.lerp(pointer, 0.08);
+      if (restingRig) {
+        setLocalEuler(restingRig.shoulder, -0.03, 0.0, -0.02);
+        setLocalEuler(restingRig.arm, 0.06, 0.08, 0.95);
+        setLocalEuler(restingRig.forearm, -2.76, -0.54, 0.4);
+        setLocalEuler(restingRig.palm, 0.1, 0.38, 0.9);
+      }
 
       if (lookRig) {
-        const lookX = THREE.MathUtils.clamp(smoothPointer.x, -1, 1);
-        const lookY = THREE.MathUtils.clamp(smoothPointer.y, -1, 1);
+        if (lookRig.chest) {
+          applyLocalRotation(
+            lookRig.chest,
+            lookRig.base.get(lookRig.chest)!,
+            -lookY * 0.04,
+            lookX * 0.07,
+            0,
+          );
+        }
 
         applyLocalRotation(
           lookRig.neck,
           lookRig.base.get(lookRig.neck)!,
-          lookY * 0.12,
-          -lookX * 0.18,
+          -lookY * 0.1,
+          lookX * 0.14,
           lookX * 0.03,
-        );
-        applyLocalRotation(
-          lookRig.head,
-          lookRig.base.get(lookRig.head)!,
-          lookY * 0.18,
-          -lookX * 0.34,
-          lookX * 0.05,
         );
       }
 
+      modelRoot.updateMatrixWorld(true);
       renderer.render(scene, camera);
       frameId = window.requestAnimationFrame(animate);
     };
@@ -294,7 +314,7 @@ export function MascotScene() {
   }, []);
 
   return (
-    <div className="relative min-h-[340px] overflow-hidden sm:min-h-[420px] lg:min-h-[520px]">
+    <div className="relative h-full min-h-[360px] overflow-hidden sm:min-h-[420px] lg:min-h-[520px]">
       <div
         ref={mountRef}
         className="absolute inset-0"

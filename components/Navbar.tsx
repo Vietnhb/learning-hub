@@ -1,27 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Bell,
-  Home,
-  Library,
+  CheckCheck,
   FolderOpen,
-  User,
-  LogOut,
-  LogIn,
+  Home,
   LayoutDashboard,
+  Library,
+  LogIn,
+  LogOut,
+  Menu,
   MessageSquare,
   MessagesSquare,
-  CheckCheck,
   Sparkles,
+  User,
 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useAuth } from "@/contexts/AuthContext";
-import { Button } from "@/components/ui/button";
+import type { LucideIcon } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { NavbarAvatar } from "@/components/UserAvatar";
-import { isUserAdmin } from "@/lib/authHelper";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,9 +31,26 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/AuthContext";
 import { useUserNotifications } from "@/hooks/useUserNotifications";
+import { isUserAdmin } from "@/lib/authHelper";
 import { supabase } from "@/lib/supabase";
+
+type NavLink = {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+};
+
+const navLinks: NavLink[] = [
+  { href: "/", label: "Trang chủ", icon: Home },
+  { href: "/resources", label: "Tài nguyên", icon: Library },
+  { href: "/forum", label: "Diễn đàn", icon: MessagesSquare },
+  { href: "/about", label: "Giới thiệu", icon: FolderOpen },
+];
+
+const navLinkClass =
+  "flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400";
 
 export default function Navbar() {
   const { user, loading, signOut } = useAuth();
@@ -115,6 +133,8 @@ export default function Navbar() {
     };
   }, [user?.id]);
 
+  const profileName = profileDisplayName || user?.email || "User";
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -123,10 +143,10 @@ export default function Navbar() {
       className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 shadow-md backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/80"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between gap-3">
           <Link
             href="/"
-            className="flex shrink-0 items-center gap-2 whitespace-nowrap text-xl font-bold text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400 lg:text-2xl"
+            className="flex min-w-0 shrink-0 items-center gap-2 whitespace-nowrap text-xl font-bold text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400 lg:text-2xl"
           >
             <img
               src="/android-chrome-192x192.png"
@@ -137,51 +157,27 @@ export default function Navbar() {
             <span>Learning Hub</span>
           </Link>
 
-          <div className="flex items-center gap-2 lg:gap-3">
-            <Link
-              href="/"
-              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <Home className="h-4 w-4" />
-              Trang chủ
-            </Link>
-            <Link
-              href="/resources"
-              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <Library className="h-4 w-4" />
-              Tài nguyên
-            </Link>
-            <Link
-              href="/forum"
-              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <MessagesSquare className="h-4 w-4" />
-              Diễn đàn
-            </Link>
-            <Link
-              href="/about"
-              className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <FolderOpen className="h-4 w-4" />
-              Giới thiệu
-            </Link>
+          <div className="hidden items-center gap-2 md:flex lg:gap-3">
+            {navLinks.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Link key={item.href} href={item.href} className={navLinkClass}>
+                  <Icon className="h-4 w-4" />
+                  {item.label}
+                </Link>
+              );
+            })}
 
             {user && (
-              <Link
-                href="/feedback"
-                className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-              >
+              <Link href="/feedback" className={navLinkClass}>
                 <MessageSquare className="h-4 w-4" />
                 Feedback
               </Link>
             )}
 
             {isAdmin && (
-              <Link
-                href="/admin"
-                className="flex items-center gap-1.5 whitespace-nowrap px-1 text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-              >
+              <Link href="/admin" className={navLinkClass}>
                 <LayoutDashboard className="h-4 w-4" />
                 Dashboard
               </Link>
@@ -212,7 +208,7 @@ export default function Navbar() {
                         onClick={markAllAsSeen}
                       >
                         <CheckCheck className="mr-1 h-3.5 w-3.5" />
-                        Đánh dấu đã đọc
+                        Đã đọc
                       </Button>
                     )}
                   </DropdownMenuLabel>
@@ -268,14 +264,13 @@ export default function Navbar() {
                     href="/profile"
                     className="flex items-center gap-2 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                   >
-                    {/* Avatar - Centralized Component */}
                     <NavbarAvatar
                       userId={user.id}
                       avatarUrl={avatarUrl || undefined}
-                      userName={profileDisplayName || user.email || "User"}
+                      userName={profileName}
                     />
-                    <span className="max-w-[120px] truncate whitespace-nowrap font-medium text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-                      {profileDisplayName || user.email}
+                    <span className="max-w-[120px] truncate whitespace-nowrap text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                      {profileName}
                     </span>
                   </Link>
                   <Button
@@ -301,6 +296,88 @@ export default function Navbar() {
                 </Link>
               )}
             </div>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label="Mở menu điều hướng"
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-60">
+                <DropdownMenuLabel>Menu</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+
+                {navLinks.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <DropdownMenuItem key={item.href} asChild>
+                      <Link href={item.href} className="gap-2">
+                        <Icon className="h-4 w-4" />
+                        {item.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
+
+                {user && (
+                  <DropdownMenuItem asChild>
+                    <Link href="/feedback" className="gap-2">
+                      <MessageSquare className="h-4 w-4" />
+                      Feedback
+                    </Link>
+                  </DropdownMenuItem>
+                )}
+
+                {isAdmin && (
+                  <DropdownMenuItem asChild>
+                    <Link href="/admin" className="gap-2">
+                      <LayoutDashboard className="h-4 w-4" />
+                      Dashboard
+                    </Link>
+                  </DropdownMenuItem>
+                )}
+
+                <DropdownMenuSeparator />
+
+                {loading ? (
+                  <DropdownMenuItem disabled>Đang tải...</DropdownMenuItem>
+                ) : user ? (
+                  <>
+                    <DropdownMenuItem asChild>
+                      <Link href="/profile" className="gap-2">
+                        <User className="h-4 w-4" />
+                        Hồ sơ
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      className="gap-2 text-red-600 focus:text-red-600"
+                      onSelect={(event) => {
+                        event.preventDefault();
+                        void signOut();
+                      }}
+                    >
+                      <LogOut className="h-4 w-4" />
+                      Đăng xuất
+                    </DropdownMenuItem>
+                  </>
+                ) : (
+                  <DropdownMenuItem asChild>
+                    <Link href="/auth/login" className="gap-2">
+                      <LogIn className="h-4 w-4" />
+                      Đăng nhập
+                    </Link>
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
