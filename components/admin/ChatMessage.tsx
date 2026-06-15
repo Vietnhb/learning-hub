@@ -12,6 +12,13 @@ interface ChatMessageProps {
 export default function ChatMessage({ message }: ChatMessageProps) {
   const { user } = useAuth();
   const isOwnMessage = user?.id === message.sender_id;
+  const sentAt = new Date(message.created_at).toLocaleString("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   return (
     <div
@@ -39,10 +46,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
               : "text-muted-foreground",
           )}
         >
-          {new Date(message.created_at).toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          })}
+          {sentAt}
         </p>
       </div>
     </div>
