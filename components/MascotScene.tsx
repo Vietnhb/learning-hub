@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
 
 type LoadState = "loading" | "ready" | "error";
 type WaveRig = {
@@ -23,6 +24,19 @@ type ArmPose = {
   forearm: [number, number, number];
   palm: [number, number, number];
 };
+type TextureSlot =
+  | "map"
+  | "emissiveMap"
+  | "normalMap"
+  | "roughnessMap"
+  | "metalnessMap"
+  | "aoMap";
+type TexturedMaterial = THREE.Material & Partial<Record<TextureSlot, THREE.Texture>>;
+
+const HERO_MODEL_URL = "/hero-optimized.glb";
+const HERO_VISUAL_OFFSET = new THREE.Vector3(0, -0.02, 0);
+const MAX_PIXEL_RATIO = 1.75;
+const TARGET_FRAME_MS = 1000 / 45;
 
 function findObjectByName(root: THREE.Object3D, name: string) {
   return root.getObjectByName(name) ?? null;
@@ -58,6 +72,44 @@ function enableTransformUpdates(objects: THREE.Object3D[]) {
   });
 }
 
+function sharpenMaterialTextures(
+  object: THREE.Object3D,
+  renderer: THREE.WebGLRenderer,
+) {
+  const maxAnisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 8);
+
+  object.traverse((child) => {
+    const mesh = child as THREE.Mesh;
+    if (!mesh.isMesh) return;
+
+    const materials = Array.isArray(mesh.material)
+      ? mesh.material
+      : [mesh.material];
+
+    materials.forEach((material) => {
+      const materialWithTextures = material as TexturedMaterial;
+      const textureSlots: TextureSlot[] = [
+        "map",
+        "emissiveMap",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+      ];
+
+      textureSlots.forEach((slot) => {
+        const texture = materialWithTextures[slot];
+        if (!texture) return;
+
+        texture.anisotropy = maxAnisotropy;
+        texture.minFilter = THREE.LinearMipmapLinearFilter;
+        texture.magFilter = THREE.LinearFilter;
+        texture.needsUpdate = true;
+      });
+    });
+  });
+}
+
 function lerpPose(a: ArmPose, b: ArmPose, amount: number): ArmPose {
   const lerpTuple = (
     from: [number, number, number],
@@ -85,7 +137,7 @@ export function MascotScene() {
     if (!mount) return;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
     camera.position.set(0, 1.2, 5);
 
     const renderer = new THREE.WebGLRenderer({
@@ -94,9 +146,9 @@ export function MascotScene() {
       powerPreference: "high-performance",
     });
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, MAX_PIXEL_RATIO));
     renderer.setClearColor(0x000000, 0);
-    renderer.domElement.setAttribute("aria-label", "Learning Hub mascot 3D");
+    renderer.domElement.setAttribute("aria-label", "Learning Hub hero 3D scene");
     renderer.domElement.className = "h-full w-full";
     mount.appendChild(renderer.domElement);
 
@@ -118,13 +170,17 @@ export function MascotScene() {
     scene.add(modelRoot);
 
     const loader = new GLTFLoader();
-    const clock = new THREE.Clock();
+    loader.setMeshoptDecoder(MeshoptDecoder);
+    const timer = new THREE.Timer();
+    timer.connect(document);
     const pointer = new THREE.Vector2(0, 0);
     const smoothPointer = new THREE.Vector2(0, 0);
     let waveRig: WaveRig | null = null;
     let restingRig: WaveRig | null = null;
     let lookRig: LookRig | null = null;
+    let mixer: THREE.AnimationMixer | null = null;
     let frameId = 0;
+    let lastFrameTime = 0;
     let disposed = false;
 
     const resize = () => {
@@ -140,24 +196,33 @@ export function MascotScene() {
       const size = box.getSize(new THREE.Vector3());
       const center = box.getCenter(new THREE.Vector3());
       const maxAxis = Math.max(size.x, size.y, size.z) || 1;
-      const scale = 2.56 / maxAxis;
+      const scale = 3.08 / maxAxis;
 
-      object.position.sub(center);
       object.scale.setScalar(scale);
-      object.position.y += size.y * scale * 0.02;
+      object.position
+        .set(-center.x * scale, -center.y * scale, -center.z * scale)
+        .add(HERO_VISUAL_OFFSET);
 
-      camera.position.set(0, 0.68, 4.9);
-      camera.lookAt(0, 0.46, 0);
+      camera.position.set(0, 0.18, 5.25);
+      camera.lookAt(0, 0, 0);
     };
 
     loader.load(
-      "/mascot.glb",
+      HERO_MODEL_URL,
       (gltf) => {
         if (disposed) return;
 
         modelRoot.add(gltf.scene);
         fitModel(gltf.scene);
-        modelRoot.rotation.y = -0.18;
+        sharpenMaterialTextures(gltf.scene, renderer);
+        modelRoot.rotation.y = -0.08;
+
+        if (gltf.animations.length > 0) {
+          mixer = new THREE.AnimationMixer(gltf.scene);
+          gltf.animations.forEach((clip) => {
+            mixer?.clipAction(clip).play();
+          });
+        }
 
         const shoulder = findObjectByName(gltf.scene, "shoulder.L_015");
         const arm = findObjectByName(gltf.scene, "arm.L_00");
@@ -213,19 +278,26 @@ export function MascotScene() {
       },
       undefined,
       (error) => {
-        console.error("Failed to load mascot.glb", error);
+        console.error(`Failed to load ${HERO_MODEL_URL}`, error);
         setLoadState("error");
       },
     );
 
-    const animate = () => {
-      const elapsed = clock.getElapsedTime();
-      modelRoot.position.y = Math.sin(elapsed * 2) * 0.025;
+    const animate = (time = 0) => {
+      frameId = window.requestAnimationFrame(animate);
+      if (time - lastFrameTime < TARGET_FRAME_MS) return;
+      lastFrameTime = time;
+
+      timer.update(time);
+      const delta = timer.getDelta();
+      const elapsed = timer.getElapsed();
+      mixer?.update(delta);
+      modelRoot.position.y = Math.sin(elapsed * 1.45) * 0.012;
       smoothPointer.lerp(pointer, 0.08);
       const lookX = THREE.MathUtils.clamp(smoothPointer.x, -1, 1);
       const lookY = THREE.MathUtils.clamp(smoothPointer.y, -1, 1);
 
-      modelRoot.rotation.y = -0.18 + lookX * 0.12 + Math.sin(elapsed * 1.2) * 0.025;
+      modelRoot.rotation.y = -0.08 + lookX * 0.055 + Math.sin(elapsed * 0.9) * 0.012;
 
       if (waveRig) {
         const wave = Math.sin(elapsed * 9.2);
@@ -271,7 +343,6 @@ export function MascotScene() {
 
       modelRoot.updateMatrixWorld(true);
       renderer.render(scene, camera);
-      frameId = window.requestAnimationFrame(animate);
     };
 
     const handlePointerMove = (event: PointerEvent) => {
@@ -287,17 +358,19 @@ export function MascotScene() {
     };
 
     resize();
-    animate();
+    frameId = window.requestAnimationFrame(animate);
     window.addEventListener("resize", resize);
-    window.addEventListener("pointermove", handlePointerMove);
-    window.addEventListener("pointerleave", handlePointerLeave);
+    mount.addEventListener("pointermove", handlePointerMove);
+    mount.addEventListener("pointerleave", handlePointerLeave);
 
     return () => {
       disposed = true;
       window.cancelAnimationFrame(frameId);
       window.removeEventListener("resize", resize);
-      window.removeEventListener("pointermove", handlePointerMove);
-      window.removeEventListener("pointerleave", handlePointerLeave);
+      mount.removeEventListener("pointermove", handlePointerMove);
+      mount.removeEventListener("pointerleave", handlePointerLeave);
+      mixer?.stopAllAction();
+      timer.dispose();
       scene.traverse((object) => {
         const mesh = object as THREE.Mesh;
         if (!mesh.isMesh) return;

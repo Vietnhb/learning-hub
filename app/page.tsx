@@ -184,8 +184,13 @@ export default function Home() {
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#040914] text-white">
         <div className="pointer-events-none absolute inset-0">
           <Lightfall
+            dpr={1}
             backgroundColor="#040914"
             colors={["#38bdf8", "#fbbf24", "#f472b6", "#818cf8"]}
+            streakCount={10}
+            glow={0.78}
+            mouseInteraction={false}
+            opacity={0.82}
           />
         </div>
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(4,9,20,0.6)_100%)]" />

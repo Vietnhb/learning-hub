@@ -5182,6 +5182,109 @@
           ]
         }
       ]
+    },
+    {
+      "id": 40,
+      "title": "Ấu - Nhi - Đồng - Đồ",
+      "kanji": [
+        {
+          "character": "幼",
+          "meaning": "Ấu, nhỏ tuổi",
+          "onyomi": "ヨウ",
+          "kunyomi": "おさな-い",
+          "examples": [
+            {
+              "word": "幼い",
+              "reading": "おさない",
+              "meaning": "Còn nhỏ, non nớt"
+            },
+            {
+              "word": "幼稚園",
+              "reading": "ようちえん",
+              "meaning": "Trường mẫu giáo"
+            },
+            {
+              "word": "幼稚",
+              "reading": "ようち",
+              "meaning": "Ấu trĩ"
+            }
+          ]
+        },
+        {
+          "character": "児",
+          "meaning": "Nhi, trẻ em",
+          "onyomi": "ジ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "児童",
+              "reading": "じどう",
+              "meaning": "Trẻ em, nhi đồng"
+            },
+            {
+              "word": "育児",
+              "reading": "いくじ",
+              "meaning": "Nuôi dạy con"
+            },
+            {
+              "word": "小児科",
+              "reading": "しょうにか",
+              "meaning": "Khoa nhi"
+            }
+          ]
+        },
+        {
+          "character": "童",
+          "meaning": "Đồng, trẻ nhỏ",
+          "onyomi": "ドウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "児童",
+              "reading": "じどう",
+              "meaning": "Trẻ em, nhi đồng"
+            },
+            {
+              "word": "童話",
+              "reading": "どうわ",
+              "meaning": "Truyện thiếu nhi"
+            },
+            {
+              "word": "童歌",
+              "reading": "どうか",
+              "meaning": "Đồng dao, bài hát trẻ em"
+            }
+          ]
+        },
+        {
+          "character": "徒",
+          "meaning": "Đồ, người theo, học trò",
+          "onyomi": "ト",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "生徒",
+              "reading": "せいと",
+              "meaning": "Học sinh"
+            },
+            {
+              "word": "教徒",
+              "reading": "きょうと",
+              "meaning": "Tín đồ"
+            },
+            {
+              "word": "徒労",
+              "reading": "とろう",
+              "meaning": "Công cốc, uổng công"
+            },
+            {
+              "word": "仏教徒",
+              "reading": "ぶっきょうと",
+              "meaning": "Tín đồ Phật giáo"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
