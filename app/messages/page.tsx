@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { useAuth } from "@/contexts/AuthContext";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useChat } from "@/hooks/useChat";
-import { getOrCreateConversation } from "@/lib/chatService";
+import { useAdminConversation } from "@/hooks/useAdminConversation";
 import ChatMessage from "@/components/admin/ChatMessage";
 import MessageInput from "@/components/admin/MessageInput";
 import { MessageCircle, ArrowLeft } from "lucide-react";
@@ -13,12 +12,15 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function UserMessagesPage() {
-  const { user, loading: authLoading } = useAuth();
   const router = useRouter();
-  const [conversationId, setConversationId] = useState<string | null>(null);
-  const [adminId, setAdminId] = useState<string | null>(null);
-  const [loadingConversation, setLoadingConversation] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const {
+    user,
+    authLoading,
+    conversationId,
+    loadingConversation,
+    getReceiverId,
+  } = useAdminConversation({ redirectUnauthenticatedTo: "/messages" });
 
   const {
     messages,
@@ -28,47 +30,21 @@ export default function UserMessagesPage() {
   } = useChat(conversationId);
 
   useEffect(() => {
-    async function initConversation() {
-      if (authLoading) return;
-
-      if (!user) {
-        router.replace("/auth/login?redirect=/messages");
-        setLoadingConversation(false);
-        return;
-      }
-
-      const { data, error } = await getOrCreateConversation();
-      if (data) {
-        setConversationId(data.id);
-        setAdminId(data.admin_id || null);
-      } else {
-        console.error("Không thể tạo/lấy cuộc trò chuyện:", error);
-      }
-
-      setLoadingConversation(false);
-    }
-
-    void initConversation();
-  }, [authLoading, user, router]);
-
-  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSend = async (message: string) => {
-    if (!conversationId || !user) return;
+    const receiverId = getReceiverId();
+    if (!conversationId || !receiverId) return;
 
-    // Nếu chưa được gán admin, vẫn cho phép user gửi để admin thấy realtime
-    // và bấm "Bắt đầu chat" ở trang admin.
-    const receiverId = adminId || user.id;
     await send(message, receiverId);
   };
 
   if (authLoading || loadingConversation) {
     return (
-      <div className="container max-w-4xl mx-auto py-12 px-4">
+      <div className="container mx-auto max-w-4xl px-4 py-12">
         <div className="flex justify-center py-12">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
         </div>
       </div>
     );
@@ -76,7 +52,7 @@ export default function UserMessagesPage() {
 
   if (!user) {
     return (
-      <div className="container max-w-4xl mx-auto py-12 px-4">
+      <div className="container mx-auto max-w-4xl px-4 py-12">
         <Alert>
           <AlertDescription>
             Vui lòng{" "}
@@ -91,20 +67,20 @@ export default function UserMessagesPage() {
   }
 
   return (
-    <div className="container max-w-4xl mx-auto py-8 px-4">
+    <div className="container mx-auto max-w-4xl px-4 py-8">
       <div className="mb-6 flex items-center gap-4">
         <Button variant="ghost" size="icon" onClick={() => router.back()}>
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <div>
           <h1 className="text-3xl font-bold">Nhắn Tin Với Quản Trị Viên</h1>
-          <p className="text-muted-foreground mt-1">
+          <p className="mt-1 text-muted-foreground">
             Nhận hỗ trợ trực tiếp từ đội ngũ quản trị
           </p>
         </div>
       </div>
 
-      <Card className="h-[600px] flex flex-col">
+      <Card className="flex h-[600px] flex-col">
         <CardHeader className="border-b">
           <CardTitle className="flex items-center gap-2">
             <MessageCircle className="h-5 w-5" />
@@ -112,15 +88,15 @@ export default function UserMessagesPage() {
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="flex-1 flex flex-col p-0 min-h-0">
-          <div className="flex-1 h-0 overflow-y-auto p-4">
+        <CardContent className="flex min-h-0 flex-1 flex-col p-0">
+          <div className="h-0 flex-1 overflow-y-auto p-4">
             {loadingMessages ? (
               <div className="flex justify-center py-8">
-                <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent"></div>
+                <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
               </div>
             ) : messages.length === 0 ? (
-              <div className="text-center py-12">
-                <MessageCircle className="h-12 w-12 mx-auto mb-4 text-muted-foreground opacity-50" />
+              <div className="py-12 text-center">
+                <MessageCircle className="mx-auto mb-4 h-12 w-12 text-muted-foreground opacity-50" />
                 <p className="text-muted-foreground">
                   Chưa có tin nhắn nào. Hãy bắt đầu cuộc trò chuyện!
                 </p>
@@ -145,7 +121,7 @@ export default function UserMessagesPage() {
         </CardContent>
       </Card>
 
-      <div className="mt-4 text-sm text-muted-foreground text-center">
+      <div className="mt-4 text-center text-sm text-muted-foreground">
         <p>Đội ngũ quản trị thường phản hồi trong vòng 24 giờ</p>
       </div>
     </div>
