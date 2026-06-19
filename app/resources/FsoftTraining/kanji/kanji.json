@@ -5451,6 +5451,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 43,
+      "title": "Thân - Tương - Cụ - Bổng",
+      "kanji": [
+        {
+          "character": "伸",
+          "meaning": "Thân, duỗi ra, kéo dài",
+          "onyomi": "シン",
+          "kunyomi": "の-びる, の-ばす",
+          "examples": [
+            {
+              "word": "屈伸",
+              "reading": "くっしん",
+              "meaning": "Co duỗi"
+            },
+            {
+              "word": "伸びる",
+              "reading": "のびる",
+              "meaning": "Duỗi ra, dài ra"
+            },
+            {
+              "word": "伸ばす",
+              "reading": "のばす",
+              "meaning": "Duỗi, kéo dài"
+            }
+          ]
+        },
+        {
+          "character": "箱",
+          "meaning": "Tương, cái hộp",
+          "onyomi": "",
+          "kunyomi": "はこ",
+          "examples": [
+            {
+              "word": "箱",
+              "reading": "はこ",
+              "meaning": "Cái hộp"
+            },
+            {
+              "word": "ゴミ箱",
+              "reading": "ごみばこ",
+              "meaning": "Thùng rác"
+            }
+          ]
+        },
+        {
+          "character": "具",
+          "meaning": "Cụ, dụng cụ, đồ dùng",
+          "onyomi": "グ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "具体的",
+              "reading": "ぐたいてき",
+              "meaning": "Cụ thể"
+            },
+            {
+              "word": "道具",
+              "reading": "どうぐ",
+              "meaning": "Dụng cụ"
+            }
+          ]
+        },
+        {
+          "character": "棒",
+          "meaning": "Bổng, cây gậy, que",
+          "onyomi": "ボウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "泥棒",
+              "reading": "どろぼう",
+              "meaning": "Kẻ trộm"
+            },
+            {
+              "word": "棒",
+              "reading": "ぼう",
+              "meaning": "Cây gậy, cây que"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
