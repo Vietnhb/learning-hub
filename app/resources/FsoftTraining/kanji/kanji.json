@@ -5285,6 +5285,172 @@
           ]
         }
       ]
+    },
+    {
+      "id": 41,
+      "title": "Kỷ - Bản - Bút - Tọa",
+      "kanji": [
+        {
+          "character": "机",
+          "meaning": "Kỷ, cái bàn",
+          "onyomi": "キ",
+          "kunyomi": "つくえ",
+          "examples": [
+            {
+              "word": "机",
+              "reading": "つくえ",
+              "meaning": "Cái bàn"
+            },
+            {
+              "word": "机上",
+              "reading": "きじょう",
+              "meaning": "Trên bàn"
+            }
+          ]
+        },
+        {
+          "character": "板",
+          "meaning": "Bản, tấm ván, tấm bảng",
+          "onyomi": "バン",
+          "kunyomi": "いた",
+          "examples": [
+            {
+              "word": "黒板",
+              "reading": "こくばん",
+              "meaning": "Bảng đen"
+            },
+            {
+              "word": "板前",
+              "reading": "いたまえ",
+              "meaning": "Đầu bếp"
+            },
+            {
+              "word": "まな板",
+              "reading": "まないた",
+              "meaning": "Thớt"
+            }
+          ]
+        },
+        {
+          "character": "筆",
+          "meaning": "Bút",
+          "onyomi": "ヒツ",
+          "kunyomi": "ふで",
+          "examples": [
+            {
+              "word": "鉛筆",
+              "reading": "えんぴつ",
+              "meaning": "Bút chì"
+            },
+            {
+              "word": "万年筆",
+              "reading": "まんねんひつ",
+              "meaning": "Bút máy"
+            }
+          ]
+        },
+        {
+          "character": "座",
+          "meaning": "Tọa, ngồi, chỗ ngồi",
+          "onyomi": "ザ",
+          "kunyomi": "すわ-る",
+          "examples": [
+            {
+              "word": "星座",
+              "reading": "せいざ",
+              "meaning": "Chòm sao"
+            },
+            {
+              "word": "座る",
+              "reading": "すわる",
+              "meaning": "Ngồi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Phản - Tá - Thải - Sách",
+      "kanji": [
+        {
+          "character": "返",
+          "meaning": "Phản, trả lại, quay lại",
+          "onyomi": "ヘン",
+          "kunyomi": "かえ-す, かえ-る",
+          "examples": [
+            {
+              "word": "返す",
+              "reading": "かえす",
+              "meaning": "Trả lại"
+            },
+            {
+              "word": "返品",
+              "reading": "へんぴん",
+              "meaning": "Trả hàng"
+            },
+            {
+              "word": "返金",
+              "reading": "へんきん",
+              "meaning": "Hoàn tiền"
+            },
+            {
+              "word": "振り返る",
+              "reading": "ふりかえる",
+              "meaning": "Ngoảnh lại, nhìn lại"
+            }
+          ]
+        },
+        {
+          "character": "借",
+          "meaning": "Tá, mượn, vay",
+          "onyomi": "シャク",
+          "kunyomi": "か-りる",
+          "examples": [
+            {
+              "word": "借金",
+              "reading": "しゃっきん",
+              "meaning": "Nợ, tiền vay"
+            },
+            {
+              "word": "借りる",
+              "reading": "かりる",
+              "meaning": "Mượn, vay"
+            }
+          ]
+        },
+        {
+          "character": "貸",
+          "meaning": "Thải, cho mượn, cho vay",
+          "onyomi": "タイ",
+          "kunyomi": "か-す",
+          "examples": [
+            {
+              "word": "貸す",
+              "reading": "かす",
+              "meaning": "Cho mượn, cho vay"
+            },
+            {
+              "word": "賃貸",
+              "reading": "ちんたい",
+              "meaning": "Cho thuê"
+            }
+          ]
+        },
+        {
+          "character": "冊",
+          "meaning": "Sách, quyển, cuốn",
+          "onyomi": "サツ, サク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "何冊",
+              "reading": "なんさつ",
+              "meaning": "Mấy quyển, bao nhiêu cuốn"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
