@@ -5534,6 +5534,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 44,
+      "title": "Đảm - Nhiệm - Tổ - Phụ",
+      "kanji": [
+        {
+          "character": "担",
+          "meaning": "Đảm, gánh vác",
+          "onyomi": "タン",
+          "kunyomi": "かつ-ぐ、にな-う",
+          "examples": [
+            {
+              "word": "担当",
+              "reading": "たんとう",
+              "meaning": "Phụ trách, đảm nhiệm"
+            },
+            {
+              "word": "負担",
+              "reading": "ふたん",
+              "meaning": "Gánh nặng, sự chịu trách nhiệm"
+            },
+            {
+              "word": "担う",
+              "reading": "になう",
+              "meaning": "Gánh vác, đảm nhận"
+            },
+            {
+              "word": "担ぐ",
+              "reading": "かつぐ",
+              "meaning": "Vác, khiêng"
+            }
+          ]
+        },
+        {
+          "character": "任",
+          "meaning": "Nhiệm, giao phó",
+          "onyomi": "ニン",
+          "kunyomi": "まか-す、まか-せる",
+          "examples": [
+            {
+              "word": "担任",
+              "reading": "たんにん",
+              "meaning": "Giáo viên chủ nhiệm"
+            },
+            {
+              "word": "責任",
+              "reading": "せきにん",
+              "meaning": "Trách nhiệm"
+            },
+            {
+              "word": "任す",
+              "reading": "まかす",
+              "meaning": "Giao phó, ủy thác"
+            },
+            {
+              "word": "任せる",
+              "reading": "まかせる",
+              "meaning": "Để cho, giao cho"
+            }
+          ]
+        },
+        {
+          "character": "組",
+          "meaning": "Tổ, nhóm, lắp ghép",
+          "onyomi": "ソ",
+          "kunyomi": "く-む、くみ",
+          "examples": [
+            {
+              "word": "組合",
+              "reading": "くみあい",
+              "meaning": "Hiệp hội, công đoàn"
+            },
+            {
+              "word": "組織",
+              "reading": "そしき",
+              "meaning": "Tổ chức"
+            },
+            {
+              "word": "組む",
+              "reading": "くむ",
+              "meaning": "Ghép, hợp tác, lập nhóm"
+            },
+            {
+              "word": "取り組む",
+              "reading": "とりくむ",
+              "meaning": "Nỗ lực làm, bắt tay vào"
+            }
+          ]
+        },
+        {
+          "character": "負",
+          "meaning": "Phụ, chịu, thua",
+          "onyomi": "フ",
+          "kunyomi": "ま-ける、ま-かす、お-う",
+          "examples": [
+            {
+              "word": "負担",
+              "reading": "ふたん",
+              "meaning": "Gánh nặng, sự chịu trách nhiệm"
+            },
+            {
+              "word": "負ける",
+              "reading": "まける",
+              "meaning": "Thua"
+            },
+            {
+              "word": "負かす",
+              "reading": "まかす",
+              "meaning": "Đánh bại"
+            },
+            {
+              "word": "背負う",
+              "reading": "せおう",
+              "meaning": "Mang trên lưng, gánh chịu"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
