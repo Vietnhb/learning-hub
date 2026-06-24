@@ -5652,6 +5652,182 @@
           ]
         }
       ]
+    },
+    {
+      "id": 45,
+      "title": "Chú - Mộng - Hy - Vọng",
+      "kanji": [
+        {
+          "character": "注",
+          "meaning": "Chú, chú ý",
+          "onyomi": "チュウ",
+          "kunyomi": "そそ-ぐ",
+          "examples": [
+            {
+              "word": "注目",
+              "reading": "ちゅうもく",
+              "meaning": "Chú ý, để ý"
+            }
+          ]
+        },
+        {
+          "character": "夢",
+          "meaning": "Mộng, giấc mơ",
+          "onyomi": "ム",
+          "kunyomi": "ゆめ",
+          "examples": [
+            {
+              "word": "夢",
+              "reading": "ゆめ",
+              "meaning": "Giấc mơ, ước mơ"
+            },
+            {
+              "word": "夢中",
+              "reading": "むちゅう",
+              "meaning": "Say mê, mê mải"
+            },
+            {
+              "word": "悪夢",
+              "reading": "あくむ",
+              "meaning": "Ác mộng"
+            }
+          ]
+        },
+        {
+          "character": "希",
+          "meaning": "Hy, hiếm, mong",
+          "onyomi": "キ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "希望",
+              "reading": "きぼう",
+              "meaning": "Hy vọng, mong muốn"
+            },
+            {
+              "word": "希少",
+              "reading": "きしょう",
+              "meaning": "Hiếm, ít có"
+            },
+            {
+              "word": "希望者",
+              "reading": "きぼうしゃ",
+              "meaning": "Người mong muốn, người đăng ký"
+            }
+          ]
+        },
+        {
+          "character": "望",
+          "meaning": "Vọng, mong muốn",
+          "onyomi": "ボウ",
+          "kunyomi": "のぞ-む",
+          "examples": [
+            {
+              "word": "希望",
+              "reading": "きぼう",
+              "meaning": "Hy vọng, mong muốn"
+            },
+            {
+              "word": "希望者",
+              "reading": "きぼうしゃ",
+              "meaning": "Người mong muốn, người đăng ký"
+            },
+            {
+              "word": "望遠鏡",
+              "reading": "ぼうえんきょう",
+              "meaning": "Kính viễn vọng"
+            },
+            {
+              "word": "望む",
+              "reading": "のぞむ",
+              "meaning": "Mong muốn, hy vọng"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "title": "Hứa - Điều - Tuyển - Năng",
+      "kanji": [
+        {
+          "character": "許",
+          "meaning": "Hứa, cho phép",
+          "onyomi": "キョ",
+          "kunyomi": "ゆる-す",
+          "examples": [
+            {
+              "word": "許可",
+              "reading": "きょか",
+              "meaning": "Sự cho phép, giấy phép"
+            }
+          ]
+        },
+        {
+          "character": "調",
+          "meaning": "Điều, điều tra, điều chỉnh",
+          "onyomi": "チョウ",
+          "kunyomi": "しら-べる、ととの-う、ととの-える",
+          "examples": [
+            {
+              "word": "調べる",
+              "reading": "しらべる",
+              "meaning": "Điều tra, tra cứu, kiểm tra"
+            },
+            {
+              "word": "順調",
+              "reading": "じゅんちょう",
+              "meaning": "Thuận lợi, suôn sẻ"
+            },
+            {
+              "word": "調査",
+              "reading": "ちょうさ",
+              "meaning": "Điều tra, khảo sát"
+            }
+          ]
+        },
+        {
+          "character": "選",
+          "meaning": "Tuyển, chọn",
+          "onyomi": "セン",
+          "kunyomi": "えら-ぶ",
+          "examples": [
+            {
+              "word": "選択肢",
+              "reading": "せんたくし",
+              "meaning": "Lựa chọn, phương án"
+            },
+            {
+              "word": "選ぶ",
+              "reading": "えらぶ",
+              "meaning": "Chọn, lựa chọn"
+            }
+          ]
+        },
+        {
+          "character": "能",
+          "meaning": "Năng, khả năng",
+          "onyomi": "ノウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "可能性",
+              "reading": "かのうせい",
+              "meaning": "Khả năng, tính có thể"
+            },
+            {
+              "word": "能力",
+              "reading": "のうりょく",
+              "meaning": "Năng lực, khả năng"
+            },
+            {
+              "word": "才能",
+              "reading": "さいのう",
+              "meaning": "Tài năng"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

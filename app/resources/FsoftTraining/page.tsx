@@ -39,10 +39,7 @@ export default function FsoftTrainingPage() {
     (sum: number, lesson: any) => sum + lesson.kanji.length,
     0,
   );
-  const grammarCount = grammarData.lessons.reduce(
-    (sum: number, lesson: any) => sum + lesson.grammar.length,
-    0,
-  );
+  const grammarCount = grammarData.grammar.length;
 
   const categories = [
     {
