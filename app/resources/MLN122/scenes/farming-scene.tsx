@@ -1,11 +1,11 @@
 /**
  * Farming scene with real TMX map rendering
  *
- * ✅ Renders ACTUAL Stardew Valley farm maps from .tmx files
- * ✅ Parses XML tile data and renders using real tilesheet PNGs
- * ✅ Each of the 7 farm types has unique terrain (rivers, cliffs, forests, etc.)
- * ✅ Workers can farm on any of the 7 farm types
- * ✅ Automatically switches between tilling, planting, growing, harvesting cycles
+ * âœ… Renders ACTUAL Stardew Valley farm maps from .tmx files
+ * âœ… Parses XML tile data and renders using real tilesheet PNGs
+ * âœ… Each of the 7 farm types has unique terrain (rivers, cliffs, forests, etc.)
+ * âœ… Workers can farm on any of the 7 farm types
+ * âœ… Automatically switches between tilling, planting, growing, harvesting cycles
  *
  * The TMX files (Farm.tmx, Farm_Fishing.tmx, etc.) define the actual map layout.
  * Tilesheets (spring_outdoorsTileSheet.png, paths.png, etc.) provide the visual tiles.
@@ -25,11 +25,13 @@ import { FarmMapView, FARM_VIEWPORTS, useFarmableTiles } from "../maps/tmx-rende
 import { MLN122_SHARED_SCENE_BASE, FARM_TMX_PATHS } from "../core/paths";
 
 const SCENE_ASSET_BASE = MLN122_SHARED_SCENE_BASE;
-const TILE_SIZE = 16;
+const TILE_SIZE = 16; // Keep at 16px (standard tile size)
 const PHASE_CYCLE_SPEED = 1200; // ms between checking for new work (slower to see actions)
 const WORKER_ACTION_DURATION = 2000; // ms per work action (hoeing, watering, etc.)
 const WORKER_MOVE_SPEED = 80; // ms per movement frame
 const GROWTH_SPEED = 1500; // ms per growth stage update
+const WORKER_SPACING = 1.5; // Minimum distance between workers (in tiles)
+const FARMING_AREA_SIZE = 36; // Target number of farmable tiles (will try to get close to this)
 
 type TileState =
   | "grass"
@@ -73,9 +75,24 @@ const WORKER_SPRITES = [
   "characters/worker-v3-3.png",
   "characters/worker-v3-4.png",
   "characters/worker-v3-5.png",
-  "characters/worker-v3-6.png",
-  "characters/worker-v3-7.png",
 ];
+
+// Helper function to check if a position is too close to other workers
+function isTooCloseToOtherWorkers(
+  x: number,
+  y: number,
+  workerId: number,
+  workers: Worker[],
+  minDistance: number
+): boolean {
+  return workers.some((w) => {
+    if (w.id === workerId) return false;
+    const dx = w.targetTileX - x;
+    const dy = w.targetTileY - y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    return distance < minDistance;
+  });
+}
 
 function sceneAsset(path: string) {
   return `${SCENE_ASSET_BASE}/${path.split("/").map(encodeURIComponent).join("/")}`;
@@ -150,12 +167,16 @@ export function FarmingScene({
     const diggableSet = new Set(visible.map((p) => `${p.x},${p.y}`));
     const centerX = vpDef.x + vpDef.cols / 2;
     const centerY = vpDef.y + vpDef.rows / 2;
+
+    // Try to create a farming area close to FARMING_AREA_SIZE tiles
     const blockSizes = [
-      { cols: 4, rows: 4 },
-      { cols: 4, rows: 3 },
-      { cols: 3, rows: 3 },
-      { cols: 3, rows: 2 },
-      { cols: 2, rows: 2 },
+      { cols: 9, rows: 4 },  // 36 tiles (ideal)
+      { cols: 8, rows: 5 },  // 40 tiles
+      { cols: 7, rows: 5 },  // 35 tiles
+      { cols: 6, rows: 6 },  // 36 tiles (square)
+      { cols: 8, rows: 4 },  // 32 tiles
+      { cols: 7, rows: 4 },  // 28 tiles
+      { cols: 6, rows: 5 },  // 30 tiles (fallback)
     ];
 
     let initialTiles: Tile[] = [];
@@ -213,7 +234,7 @@ export function FarmingScene({
   // Initialize workers
   useEffect(() => {
     const initialWorkers: Worker[] = [];
-    const workerCount = Math.min(investment.workers, 6);
+    const workerCount = investment.workers; // Use actual worker count from investment (no limit)
     const spawnTiles = tiles.length > 0 ? tiles : [];
 
     for (let i = 0; i < workerCount; i++) {
@@ -262,14 +283,30 @@ export function FarmingScene({
               });
 
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              
-              // Assign workers to nearest tiles
-              availableWorkers.slice(0, Math.min(2, untilledTiles.length)).forEach((worker, workerIndex) => {
-                // Get the next tile in order
-                const targetTile = untilledTiles[workerIndex];
+
+              // Assign workers to tiles, ensuring they don't crowd together
+              const workersToAssign = Math.min(
+                availableWorkers.length, // Use ALL available workers
+                untilledTiles.length
+              );
+
+              availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
+                // Find next available tile that's not too close to other workers
+                let targetTile = null;
+                for (const tile of untilledTiles) {
+                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
+                    targetTile = tile;
+                    break;
+                  }
+                }
+
+                if (!targetTile) {
+                  targetTile = untilledTiles[workerIndex]; // Fallback to sequential assignment
+                }
+
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === targetTile.x && t.y === targetTile.y
+                    (t) => t.x === targetTile!.x && t.y === targetTile!.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "tilled";
@@ -280,8 +317,8 @@ export function FarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "hoeing";
-                        newWorkers[workerIdx].targetTileX = targetTile.x;
-                        newWorkers[workerIdx].targetTileY = targetTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile!.x;
+                        newWorkers[workerIdx].targetTileY = targetTile!.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -292,12 +329,12 @@ export function FarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
+                          (tile) => tile.x === targetTile!.x && tile.y === targetTile!.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
                       });
-                      
+
                       setWorkers((prevWorkers) => {
                         const newWorkers = [...prevWorkers];
                         const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
@@ -326,11 +363,27 @@ export function FarmingScene({
               });
 
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(2, tilledTiles.length)).forEach((worker, workerIndex) => {
-                const targetTile = tilledTiles[workerIndex];
+              const workersToAssign = Math.min(
+                availableWorkers.length,
+                tilledTiles.length
+              );
+
+              availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
+                let targetTile = null;
+                for (const tile of tilledTiles) {
+                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
+                    targetTile = tile;
+                    break;
+                  }
+                }
+
+                if (!targetTile) {
+                  targetTile = tilledTiles[workerIndex];
+                }
+
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === targetTile.x && t.y === targetTile.y
+                    (t) => t.x === targetTile!.x && t.y === targetTile!.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "watered";
@@ -341,8 +394,8 @@ export function FarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "watering";
-                        newWorkers[workerIdx].targetTileX = targetTile.x;
-                        newWorkers[workerIdx].targetTileY = targetTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile!.x;
+                        newWorkers[workerIdx].targetTileY = targetTile!.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -352,12 +405,12 @@ export function FarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
+                          (tile) => tile.x === targetTile!.x && tile.y === targetTile!.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
                       });
-                      
+
                       setWorkers((prevWorkers) => {
                         const newWorkers = [...prevWorkers];
                         const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
@@ -387,11 +440,27 @@ export function FarmingScene({
               });
 
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(2, wateredTiles.length)).forEach((worker, workerIndex) => {
-                const targetTile = wateredTiles[workerIndex];
+              const workersToAssign = Math.min(
+                availableWorkers.length,
+                wateredTiles.length
+              );
+
+              availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
+                let targetTile = null;
+                for (const tile of wateredTiles) {
+                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
+                    targetTile = tile;
+                    break;
+                  }
+                }
+
+                if (!targetTile) {
+                  targetTile = wateredTiles[workerIndex];
+                }
+
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === targetTile.x && t.y === targetTile.y
+                    (t) => t.x === targetTile!.x && t.y === targetTile!.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "seeded";
@@ -403,8 +472,8 @@ export function FarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "planting";
-                        newWorkers[workerIdx].targetTileX = targetTile.x;
-                        newWorkers[workerIdx].targetTileY = targetTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile!.x;
+                        newWorkers[workerIdx].targetTileY = targetTile!.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -414,12 +483,12 @@ export function FarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
+                          (tile) => tile.x === targetTile!.x && tile.y === targetTile!.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
                       });
-                      
+
                       setWorkers((prevWorkers) => {
                         const newWorkers = [...prevWorkers];
                         const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
@@ -474,11 +543,27 @@ export function FarmingScene({
               });
 
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(2, harvestableTiles.length)).forEach((worker, workerIndex) => {
-                const targetTile = harvestableTiles[workerIndex];
+              const workersToAssign = Math.min(
+                availableWorkers.length,
+                harvestableTiles.length
+              );
+
+              availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
+                let targetTile = null;
+                for (const tile of harvestableTiles) {
+                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
+                    targetTile = tile;
+                    break;
+                  }
+                }
+
+                if (!targetTile) {
+                  targetTile = harvestableTiles[workerIndex];
+                }
+
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === targetTile.x && t.y === targetTile.y
+                    (t) => t.x === targetTile!.x && t.y === targetTile!.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "grass";
@@ -490,8 +575,8 @@ export function FarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "harvesting";
-                        newWorkers[workerIdx].targetTileX = targetTile.x;
-                        newWorkers[workerIdx].targetTileY = targetTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile!.x;
+                        newWorkers[workerIdx].targetTileY = targetTile!.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -501,12 +586,12 @@ export function FarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
+                          (tile) => tile.x === targetTile!.x && tile.y === targetTile!.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
                       });
-                      
+
                       setWorkers((prevWorkers) => {
                         const newWorkers = [...prevWorkers];
                         const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
@@ -646,17 +731,17 @@ export function FarmingScene({
       <div className="grid content-start gap-3">
         <FarmStatusCard
           icon={<Users className="h-5 w-5 text-[#f5cf72]" />}
-          title={investment.workers + " Cong nhan"}
-          text="Lao dong song tao ra gia tri moi thong qua lao dong nong nghiep."
+          title={investment.workers + " Công nhân"}
+          text="Lao động sống tạo ra giá trị mới thông qua lao động nông nghiệp."
         />
         <FarmStatusCard
           icon={<Sprout className="h-5 w-5 text-[#7fc66a]" />}
-          title={investment.seeds + " Goi hat giong"}
-          text="Hat giong va cong cu chuyen giao gia tri, dong thoi nang cao nang suat."
+          title={investment.seeds + " Gói hạt giống"}
+          text="Hạt giống và công cụ chuyển giao giá trị, đồng thời nâng cao năng suất."
         />
         <div className="border-4 border-[#0b1209] bg-[#10190d] p-4 shadow-[4px_4px_0_#0b1209]">
           <p className="text-xs font-black uppercase tracking-wide text-[#f5cf72]">
-            Chat luong lo dat
+            Chất lượng lô đất
           </p>
           <h3 className="mt-3 text-2xl font-black leading-tight text-white">
             {plot.title}
@@ -664,7 +749,7 @@ export function FarmingScene({
           <div className="mt-4 grid grid-cols-2 gap-3 text-center">
             <div>
               <p className="text-[10px] font-bold text-[#fff5cf]/60">
-                Nang suat
+                Năng suất
               </p>
               <p className="font-mono text-lg font-black text-[#7fc66a]">
                 {Math.round(plot.productivity * 100)}%
@@ -788,11 +873,11 @@ function TileView({
 function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
   const ws = 20 * scale;
   const hs = 38 * scale;
-  
+
   // Calculate tool position and rotation based on action progress
   const getToolTransform = () => {
     const progress = worker.actionProgress;
-    
+
     switch (worker.action) {
       case "hoeing":
         // Swing motion: raise up, then down (more dramatic arc)
@@ -806,7 +891,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
           y: hoeY * scale,
           rotation: hoeAngle,
         };
-      
+
       case "watering":
         // Tilt motion for watering (smooth pour)
         const waterAngle = Math.sin(progress * Math.PI) * 75; // 0° to 75° and back
@@ -818,7 +903,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
           y: waterY * scale,
           rotation: waterAngle,
         };
-      
+
       case "planting":
         // Bend down motion (no tool, just body animation)
         return {
@@ -828,7 +913,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
           y: 0,
           rotation: 0,
         };
-      
+
       case "harvesting":
         // Cutting motion (side sweep)
         const harvestAngle = -45 + (Math.sin(progress * Math.PI * 2) * 45); // Swing motion
@@ -840,7 +925,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
           y: -4 * scale,
           rotation: harvestAngle,
         };
-      
+
       default:
         return {
           visible: false,
@@ -851,9 +936,9 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
         };
     }
   };
-  
+
   const toolTransform = getToolTransform();
-  
+
   // Body bob animation during working (more pronounced)
   const bodyOffsetY = ["hoeing", "planting", "harvesting"].includes(worker.action)
     ? Math.sin(worker.actionProgress * Math.PI) * 4 * scale
@@ -988,7 +1073,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
         {worker.action !== "idle" && worker.action !== "walking" && (
           <div
             className="absolute -top-6 left-1/2 -translate-x-1/2 animate-bounce"
-            style={{ 
+            style={{
               fontSize: 14 * scale,
               animationDuration: "1s",
               textShadow: "0 0 3px rgba(0,0,0,0.5)",
@@ -1026,7 +1111,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
         )}
 
         {/* Completion sparkle */}
-        {["hoeing", "watering", "planting", "harvesting"].includes(worker.action) && 
+        {["hoeing", "watering", "planting", "harvesting"].includes(worker.action) &&
          worker.actionProgress > 0.9 && (
           <div
             className="absolute left-1/2 top-0 -translate-x-1/2 animate-ping"

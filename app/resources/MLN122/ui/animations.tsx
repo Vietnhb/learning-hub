@@ -112,8 +112,8 @@ export function StaggerItem({ children, delay = 0 }: { children: ReactNode; dela
  */
 export function CoinTransferAnimation({
   amount,
-  fromLabel = "Capitalist",
-  toLabel = "Landlord",
+  fromLabel = "Nhà tư bản",
+  toLabel = "Địa chủ",
   onComplete,
 }: {
   amount: number;
@@ -191,7 +191,7 @@ export function CoinTransferAnimation({
         transition={{ duration: 0.3, delay: 0.8 }}
       >
         <div className="border-2 border-[#f5cf72] bg-black/80 px-4 py-2 backdrop-blur-sm">
-          <p className="text-xs font-bold uppercase text-[#f5cf72]">Ground Rent</p>
+          <p className="text-xs font-bold uppercase text-[#f5cf72]">Tô điền</p>
           <p className="font-mono text-2xl font-black text-white">{amount}c</p>
         </div>
       </motion.div>

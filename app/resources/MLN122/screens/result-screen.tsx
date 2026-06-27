@@ -190,7 +190,7 @@ function SurplusValueCard({ result }: { result: Calculation }) {
                 {result.surplusValue}
               </p>
             </div>
-            <p className="mt-1 text-xs font-bold text-[#f5cf72]/70">coins</p>
+            <p className="mt-1 text-xs font-bold text-[#f5cf72]/70">xu</p>
           </div>
         </div>
 

@@ -173,7 +173,7 @@ function InvestmentSummaryBar({
           <div className="mt-1 flex items-center gap-2">
             <CoinIcon scale={2.5} />
             <p className="font-mono text-4xl font-black text-white">{total}</p>
-            <span className="text-lg font-bold text-[#fff5cf]/60">coins</span>
+            <span className="text-lg font-bold text-[#fff5cf]/60">xu</span>
           </div>
         </div>
         <Coins className="h-16 w-16 text-[#f5cf72] opacity-40" />
@@ -291,7 +291,7 @@ function InvestmentBreakdown({
         ))}
         
         <div className="mt-2 flex items-center justify-between border-t-2 border-[#f5cf72] pt-3">
-          <span className="text-base font-black text-[#f5cf72]">Total Investment</span>
+          <span className="text-base font-black text-[#f5cf72]">Tổng vốn đầu tư</span>
           <span className="font-mono text-2xl font-black text-[#f5cf72]">{total}c</span>
         </div>
       </div>

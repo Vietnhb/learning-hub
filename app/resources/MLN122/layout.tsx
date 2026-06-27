@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pixel Rent Farm: The Season of Ground Rent",
+  title: "Nông trang tô điền: Một mùa thu hoạch",
   description:
-    "A small original pixel-style educational farming simulation about capitalist ground rent.",
-  keywords: ["mln122", "ground rent", "marxist political economy", "game pixel", "fpt"],
+    "Trò chơi mô phỏng nông trại phong cách pixel về tô điền trong kinh tế chính trị Mác - Lênin.",
+  keywords: ["mln122", "tô điền", "kinh tế chính trị Mác - Lênin", "game pixel", "fpt"],
   alternates: {
     canonical: "/resources/MLN122",
   },
   openGraph: {
-    title: "Pixel Rent Farm: The Season of Ground Rent",
+    title: "Nông trang tô điền: Một mùa thu hoạch",
     description:
-      "Original classroom mini game about differential rent, absolute rent, labor, capital, and AI productivity.",
+      "Mini game lớp học về tô điền vi phân, tô điền tuyệt đối, lao động, tư bản và năng suất AI.",
     url: "/resources/MLN122",
     type: "website",
   },

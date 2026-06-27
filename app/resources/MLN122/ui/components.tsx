@@ -71,20 +71,16 @@ function getRoleMedia(title: string) {
   let fileName: string | null = null;
   let alt = title;
 
-  if (lowerTitle.includes("Ä‘á»‹a") || lowerTitle.includes("địa")) {
+  if (lowerTitle.includes("địa")) {
     fileName = "role-landlord-card.png";
-  } else if (lowerTitle.includes("báº¡n") || lowerTitle.includes("bạn")) {
+  } else if (lowerTitle.includes("bạn")) {
     fileName = "role-agricultural-capitalist-card.png";
     alt = "Nhà tư bản nông nghiệp";
-  } else if (lowerTitle.includes("quáº£n") || lowerTitle.includes("quản")) {
+  } else if (lowerTitle.includes("quản")) {
     fileName = "role-manager-card.png";
   }
 
-  if (
-    lowerTitle.includes("cÃ´ng nh") ||
-    lowerTitle.includes("cã´ng nh") ||
-    lowerTitle.includes("công nh")
-  ) {
+  if (lowerTitle.includes("công nh")) {
     fileName = "role-worker-card.png";
   }
 
@@ -134,12 +130,12 @@ interface MetricProps {
 
 export function Metric({ label, value, icon }: MetricProps) {
   return (
-    <div className="metric-box border-2 border-[#0b1209] bg-[#10190d]/80 p-2 text-center">
+    <div className="metric-box grid min-h-[94px] grid-rows-[42px_1fr] border-2 border-[#0b1209] bg-[#10190d]/80 p-2 text-center">
       {icon && <div className="mx-auto mb-1 flex justify-center">{icon}</div>}
-      <p className="text-[10px] font-bold uppercase tracking-wide text-[#f5cf72]">
+      <p className="flex items-center justify-center text-[10px] font-bold uppercase leading-tight tracking-wide text-[#f5cf72]">
         {label}
       </p>
-      <p className="mt-0.5 font-mono text-base font-black text-white">
+      <p className="flex items-center justify-center font-mono text-base font-black leading-none text-white">
         {value}
       </p>
     </div>
@@ -244,8 +240,8 @@ export function Stepper({ icon, label, value, min, max, onChange }: StepperProps
         </button>
       </div>
       <div className="mt-1 flex justify-between text-[10px] font-bold text-[#fff5cf]/50">
-        <span>Min: {min}</span>
-        <span>Max: {max}</span>
+        <span>Tối thiểu: {min}</span>
+        <span>Tối đa: {max}</span>
       </div>
     </div>
   );

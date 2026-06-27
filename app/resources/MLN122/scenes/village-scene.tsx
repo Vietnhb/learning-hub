@@ -31,7 +31,7 @@ export function VillageHero() {
         <div className="absolute inset-0" style={{ zIndex: Z_LAYERS.BACKGROUND }}>
           <AssetImage
             fileName="LooseSprites__stardewPanorama.png"
-            alt="Village Panorama"
+            alt="Toàn cảnh ngôi làng"
             className="h-full w-full object-cover"
           />
         </div>
@@ -76,7 +76,7 @@ export function VillageMinimap({ currentPlot }: { currentPlot: Plot }) {
 
   return (
     <div className="village-minimap border-4 border-[#0b1209] bg-[#20361d] p-4 shadow-[6px_6px_0_#0b1209]">
-      <p className="pixel-eyebrow mb-3">Village Map</p>
+      <p className="pixel-eyebrow mb-3">Sơ đồ làng</p>
       
       <div className="grid grid-cols-3 gap-2">
         {plots.map((plot) => (
@@ -146,7 +146,7 @@ export function EconomicRelationshipDiagram() {
           markerEnd="url(#arrowhead)"
         />
         <text x="140" y="90" fill="#fff5cf" fontSize="12" fontWeight="bold">
-          Living Labor
+          Lao động sống
         </text>
 
         {/* Production -> Capitalist */}
@@ -158,7 +158,7 @@ export function EconomicRelationshipDiagram() {
           markerEnd="url(#arrowhead)"
         />
         <text x="370" y="90" fill="#fff5cf" fontSize="12" fontWeight="bold">
-          Surplus Value
+          Giá trị thặng dư
         </text>
 
         {/* Capitalist -> Landlord */}
@@ -171,7 +171,7 @@ export function EconomicRelationshipDiagram() {
           strokeDasharray="5,5"
         />
         <text x="360" y="40" fill="#fff5cf" fontSize="12" fontWeight="bold">
-          Ground Rent
+          Tô điền
         </text>
 
         {/* Nodes */}
@@ -213,11 +213,11 @@ export function FarmPath() {
 /**
  * Season indicator banner
  */
-export function SeasonBanner({ season = "Growing Season" }: { season?: string }) {
+export function SeasonBanner({ season = "Mùa sinh trưởng" }: { season?: string }) {
   return (
     <div className="season-banner relative mx-auto w-fit">
       <div className="border-4 border-[#0b1209] bg-gradient-to-r from-[#d94b35] to-[#ef634b] px-8 py-3 shadow-[5px_5px_0_#0b1209]">
-        <p className="pixel-eyebrow text-white/80">Current Phase</p>
+        <p className="pixel-eyebrow text-white/80">Giai đoạn hiện tại</p>
         <h3 className="mt-1 text-2xl font-black text-white drop-shadow-[2px_2px_0_rgba(11,18,9,0.5)]">
           {season}
         </h3>

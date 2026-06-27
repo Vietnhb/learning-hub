@@ -311,9 +311,9 @@ function FarmTypePicker({
     <div className="grid gap-3 border-4 border-[#0b1209] bg-[#20361d] p-3 shadow-[4px_4px_0_#0b1209]">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <p className="pixel-eyebrow">Ki&#7875;u trang tr&#7841;i</p>
+          <p className="pixel-eyebrow">Kiểu trang trại</p>
           <h3 className="text-xl font-black text-white">
-            Ch&#7885;n b&#7843;n &#273;&#7891; canh t&#225;c
+            Chọn bản đồ canh tác
           </h3>
         </div>
         <span className="border-2 border-[#0b1209] bg-[#f5cf72] px-3 py-2 font-mono text-xs font-black text-[#2d2114]">
@@ -341,13 +341,13 @@ function FarmTypePicker({
                   {config.nameVi}
                 </span>
                 <p className="mt-1 text-[10px] font-bold leading-snug text-[#fff5cf]/60">
-                  {config.farmingZones.length} khu canh tac
+                  {config.farmingZones.length} khu canh tác
                 </p>
               </div>
               <div className="shrink-0">
                 {selected && (
                   <span className="border border-[#f5cf72] px-1.5 py-0.5 text-[10px] font-black text-[#f5cf72]">
-                    Ch&#7885;n
+                    Chọn
                   </span>
                 )}
               </div>
@@ -513,5 +513,4 @@ function MiniMap({ plot }: { plot: Plot }) {
     </div>
   );
 }
-
 

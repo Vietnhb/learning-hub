@@ -398,7 +398,7 @@ export function LandlordEstate({
   return (
     <Building
       assetId={assetMap[plotId] || "landlord_big_barn"}
-      label="Landlord"
+      label="Địa chủ"
       size={size}
       showLabel={showLabel}
     />
@@ -429,7 +429,7 @@ export function MarketBuilding({
         <span className="absolute bottom-1 left-1/2 h-5 w-[82%] -translate-x-1/2 rounded-[50%] bg-[#0b1209]/28 blur-[1px]" />
         <AssetImage
           assetId="market_shed"
-          alt="Market"
+          alt="Chợ"
           className="absolute bottom-0 left-1/2 max-h-full max-w-full -translate-x-1/2 object-contain object-bottom drop-shadow-[3px_3px_0_rgba(11,18,9,0.45)]"
         />
         <div className="absolute bottom-2 left-3" style={{ width: dim.binSize, height: dim.binSize }}>
@@ -438,7 +438,7 @@ export function MarketBuilding({
       </div>
       {showLabel && (
         <span className="market-label border-2 border-[#0b1209] bg-[#10190d] px-2 py-0.5 text-[10px] font-black uppercase text-[#fff5cf]">
-          Market
+          Chợ
         </span>
       )}
     </div>
@@ -446,7 +446,7 @@ export function MarketBuilding({
 }
 
 export function FarmHouse({ size = "large" }: { size?: "small" | "medium" | "large" }) {
-  return <Building assetId="market_shed" label="Farm House" size={size} showLabel={false} />;
+  return <Building assetId="market_shed" label="Nhà nông trại" size={size} showLabel={false} />;
 }
 
 // ===== CROP COMPONENTS =====
