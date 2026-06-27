@@ -42,7 +42,7 @@ const ReactorCore = ({
       ? "bg-emerald-500/15"
       : reactorState === "error"
         ? "bg-rose-500/20"
-        : `bg-gradient-to-r ${sector.nebulaGlow}`;
+        : `bg-gradient-to-r ${sector?.nebulaGlow || "from-indigo-600/30 via-violet-600/20 to-transparent"}`;
 
   return (
     <div
@@ -65,9 +65,9 @@ const ReactorCore = ({
           Tinh Hệ: {sectorIndex + 1}&nbsp;/&nbsp;{totalSectors}
         </span>
         <span
-          className={`px-3 py-1 bg-gradient-to-r ${sector.color} text-white text-xs font-bold rounded-full tracking-wider shadow-lg`}
+          className={`px-3 py-1 bg-gradient-to-r ${sector?.color || "from-indigo-600 to-violet-700"} text-white text-xs font-bold rounded-full tracking-wider shadow-lg`}
         >
-          {sector.badge}
+          {sector?.badge || "Đang tải..."}
         </span>
       </div>
 
@@ -77,8 +77,8 @@ const ReactorCore = ({
           Hồ sơ hiện tượng không gian
         </p>
         <blockquote className="relative rounded-2xl border border-slate-800/80 bg-slate-950/45 px-4 py-5 text-base md:text-lg text-slate-200 leading-relaxed font-serif italic font-medium shadow-inner">
-          <span className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${sector.color} opacity-70`} />
-          &ldquo;{sector.scenario}&rdquo;
+          <span className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${sector?.color || "from-indigo-600 to-violet-700"} opacity-70`} />
+          &ldquo;{sector?.scenario || "Đang tải tình huống..."}&rdquo;
         </blockquote>
       </div>
 

@@ -6,6 +6,7 @@ import {
   ArrowLeft,
   Award,
   BookOpen,
+  ClipboardCheck,
   Info,
   RotateCcw,
   Sparkles,
@@ -403,6 +404,15 @@ export default function DialecticalUniverseGame() {
                 </>
               )}
             </Button>
+            <Link href="/resources/MLN111/quiz">
+              <Button
+                variant="outline"
+                className="gap-2 rounded-full border-slate-700 px-4 py-2 text-xs font-bold transition-all bg-cyan-500/10 text-cyan-200 hover:bg-cyan-500/20"
+              >
+                <ClipboardCheck className="h-4 w-4" />
+                Lõi Quiz
+              </Button>
+            </Link>
             <div className="text-right">
               <span className="text-xs text-slate-500 block">
                 Lượt truyền dẫn:

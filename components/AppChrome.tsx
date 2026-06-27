@@ -13,6 +13,8 @@ interface AppChromeProps {
 export default function AppChrome({ children }: AppChromeProps) {
   const pathname = usePathname();
   const isAdminRoute = pathname?.startsWith("/admin");
+  const isMLN111Route = pathname?.startsWith("/resources/MLN111");
+  const isMLN122Route = pathname?.startsWith("/resources/MLN122");
   const showHelpWidget =
     pathname === "/" ||
     pathname === "/feedback" ||
@@ -21,10 +23,10 @@ export default function AppChrome({ children }: AppChromeProps) {
 
   return (
     <>
-      {!isAdminRoute && <Navbar />}
+      {!isAdminRoute && !isMLN111Route && !isMLN122Route && <Navbar />}
       <main className="flex-1">{children}</main>
-      {!isAdminRoute && showHelpWidget && <HelpChatWidget />}
-      {!isAdminRoute && <Footer />}
+      {!isAdminRoute && !isMLN111Route && !isMLN122Route && showHelpWidget && <HelpChatWidget />}
+      {!isAdminRoute && !isMLN111Route && !isMLN122Route && <Footer />}
     </>
   );
 }

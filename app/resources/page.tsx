@@ -109,6 +109,18 @@ function ResourcesPageContent() {
         "Nội dung của phép biện chứng duy vật: Các cặp phạm trù cơ bản",
       link: "/resources/MLN111",
     },
+    {
+      id: 8,
+      title: "MLN122 - Kinh tế chính trị Mác - Lênin",
+      category: "Kinh tế chính trị",
+      type: "Game",
+      size: "Đã Hoàn Thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Game pixel mô phỏng địa tô tư bản chủ nghĩa: thuê đất, sản xuất và thu tô",
+      link: "/resources/MLN122",
+    },
   ];
 
   const resourceIds = useMemo(
@@ -185,7 +197,7 @@ function ResourcesPageContent() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật, SWD392, PMG201c và SYB302c
+            Giáo trình Tiếng Nhật, SWD392, PMG201c, SYB302c và MLN
           </p>
         </motion.div>
 
