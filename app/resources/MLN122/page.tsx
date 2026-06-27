@@ -28,16 +28,17 @@ import {
   type Plot,
   type PlotId,
   type Screen,
-} from "./game-model";
+} from "./core/game-model";
 
 // Import new polished components
-import { VillageHero } from "./village-scene";
-import { MultiMapFarmingScene } from "./multi-map-farming";
-import { FARM_MAPS, type FarmType } from "./farm-maps-config";
-import { ScreenTransition } from "./animations";
-import { ResultScreen as NewResultScreen } from "./result-screen";
-import { InvestmentScreen as NewInvestmentScreen } from "./investment-screen";
-import { TheoryExplanation, ValueFlowDiagram } from "./economic-storytelling";
+import { VillageHero } from "./scenes/village-scene";
+import { MultiMapFarmingScene } from "./scenes/farming-scene";
+import { FARM_MAPS, type FarmType } from "./core/farm-types";
+import { MLN122_SPRITE_BASE } from "./core/paths";
+import { ScreenTransition } from "./ui/animations";
+import { ResultScreen as NewResultScreen } from "./screens/result-screen";
+import { InvestmentScreen as NewInvestmentScreen } from "./screens/investment-screen";
+import { TheoryExplanation, ValueFlowDiagram } from "./screens/theory-content";
 import { 
   ScreenHeading, 
   RoleCard, 
@@ -46,10 +47,10 @@ import {
   PanelLine,
   Metric,
   LoadingSpinner
-} from "./ui-components";
+} from "./ui/components";
 
 // Import CSS
-import "./game-styles.css";
+import "./styles/game.css";
 
 export default function PixelRentFarmGame() {
   const { user, loading } = useAuth();
@@ -267,7 +268,7 @@ function LandScreen({
           >
             <div className="relative h-32 overflow-hidden border-2 border-[#0b1209]">
               <img 
-                src={`/resources/MLN122/asset/${plot.mapAsset}`}
+                src={`${MLN122_SPRITE_BASE}/${plot.mapAsset}`}
                 alt={plot.title}
                 className="pixelated h-full w-full object-cover"
               />
@@ -503,7 +504,7 @@ function MiniMap({ plot }: { plot: Plot }) {
             }`}
           >
             <img
-              src={`/resources/MLN122/asset/${item.mapAsset}`}
+              src={`${MLN122_SPRITE_BASE}/${item.mapAsset}`}
               alt={item.title}
               className="pixelated h-full w-full border border-black/20 object-cover"
             />
@@ -513,7 +514,6 @@ function MiniMap({ plot }: { plot: Plot }) {
     </div>
   );
 }
-
 
 
 
