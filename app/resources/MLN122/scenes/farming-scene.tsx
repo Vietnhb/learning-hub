@@ -20,6 +20,7 @@ import {
   FARM_MAPS,
   type FarmType,
   getFarmingZone,
+  isFarmablePosition,
 } from "../core/farm-types";
 import { FarmMapView, FARM_VIEWPORTS, useFarmableTiles } from "../maps/tmx-renderer";
 import { MLN122_SHARED_SCENE_BASE, FARM_TMX_PATHS } from "../core/paths";
@@ -31,7 +32,7 @@ const WORKER_ACTION_DURATION = 2000; // ms per work action (hoeing, watering, et
 const WORKER_MOVE_SPEED = 80; // ms per movement frame
 const GROWTH_SPEED = 1500; // ms per growth stage update
 const WORKER_SPACING = 1.5; // Minimum distance between workers (in tiles)
-const FARMING_AREA_SIZE = 36; // Target number of farmable tiles (will try to get close to this)
+const FARMING_AREA_SIZE = 40; // Target number of farmable tiles (will try to get close to this)
 
 type TileState =
   | "grass"
@@ -133,6 +134,8 @@ export function FarmingScene({
 }) {
   const [tiles, setTiles] = useState<Tile[]>([]);
   const [workers, setWorkers] = useState<Worker[]>([]);
+  // Manager pacing position (pixel x,y in tile-map space)
+  const [managerPos, setManagerPos] = useState({ x: 0, y: 0, dir: 1 as 1 | -1 });
   const [cyclePhase, setCyclePhase] = useState<
     "thiết lập" | "đào đất" | "tưới nước" | "trồng hạt" | "đang lớn" | "thu hoạch"
   >("thiết lập");
@@ -159,7 +162,12 @@ export function FarmingScene({
     const vy1 = vpDef.y + vpDef.rows;
 
     const visible = allDiggable.filter(
-      (p) => p.x >= vx0 && p.x < vx1 && p.y >= vy0 && p.y < vy1
+      (p) =>
+        p.x >= vx0 &&
+        p.x < vx1 &&
+        p.y >= vy0 &&
+        p.y < vy1 &&
+        isFarmablePosition(farmType, p.x, p.y)
     );
 
     if (visible.length === 0) return;
@@ -168,15 +176,14 @@ export function FarmingScene({
     const centerX = vpDef.x + vpDef.cols / 2;
     const centerY = vpDef.y + vpDef.rows / 2;
 
-    // Try to create a farming area close to FARMING_AREA_SIZE tiles
+    // Try to find a clean block close to 36 tiles near the center
     const blockSizes = [
-      { cols: 9, rows: 4 },  // 36 tiles (ideal)
-      { cols: 8, rows: 5 },  // 40 tiles
-      { cols: 7, rows: 5 },  // 35 tiles
-      { cols: 6, rows: 6 },  // 36 tiles (square)
-      { cols: 8, rows: 4 },  // 32 tiles
-      { cols: 7, rows: 4 },  // 28 tiles
-      { cols: 6, rows: 5 },  // 30 tiles (fallback)
+      { cols: 9, rows: 4 }, // 36 tiles (ideal)
+      { cols: 8, rows: 5 }, // 40 tiles
+      { cols: 7, rows: 5 }, // 35 tiles
+      { cols: 6, rows: 6 }, // 36 tiles (square)
+      { cols: 8, rows: 4 }, // 32 tiles
+      { cols: 6, rows: 5 }, // 30 tiles (fallback)
     ];
 
     let initialTiles: Tile[] = [];
@@ -207,21 +214,36 @@ export function FarmingScene({
       }
 
       const best = candidates.sort((a, b) => a.score - b.score)[0];
-      if (!best) continue;
-
-      initialTiles = [];
-      for (let dy = 0; dy < size.rows; dy++) {
-        for (let dx = 0; dx < size.cols; dx++) {
-          initialTiles.push({
-            x: best.x + dx,
-            y: best.y + dy,
-            state: "grass",
-            growthStage: 0,
-            hasWorker: false,
-          });
+      if (best) {
+        for (let dy = 0; dy < size.rows; dy++) {
+          for (let dx = 0; dx < size.cols; dx++) {
+            initialTiles.push({
+              x: best.x + dx,
+              y: best.y + dy,
+              state: "grass",
+              growthStage: 0,
+              hasWorker: false,
+            });
+          }
         }
+        break;
       }
-      break;
+    }
+
+    // Fallback: If no perfect block is found, take the 36 closest tiles to the center
+    if (initialTiles.length === 0) {
+      const sorted = [...visible].sort(
+        (a, b) =>
+          (a.x - centerX) ** 2 + (a.y - centerY) ** 2 -
+          ((b.x - centerX) ** 2 + (b.y - centerY) ** 2)
+      );
+      initialTiles = sorted.slice(0, 36).map((p) => ({
+        x: p.x,
+        y: p.y,
+        state: "grass",
+        growthStage: 0,
+        hasWorker: false,
+      }));
     }
 
     if (initialTiles.length === 0) return;
@@ -231,23 +253,26 @@ export function FarmingScene({
     setDayCounter(0);
   }, [farmType, allDiggable.length]);
 
-  // Initialize workers
+  // Initialize workers – each spawns at their own column tile
   useEffect(() => {
+    if (tiles.length === 0) return;
     const initialWorkers: Worker[] = [];
-    const workerCount = investment.workers; // Use actual worker count from investment (no limit)
-    const spawnTiles = tiles.length > 0 ? tiles : [];
+    const workerCount = investment.workers;
+    const uniqueXs = Array.from(new Set(tiles.map((t) => t.x))).sort((a, b) => a - b);
+    const FARM_COLS = uniqueXs.length || 4;
 
     for (let i = 0; i < workerCount; i++) {
-      const spawnTile = spawnTiles[i % Math.max(1, spawnTiles.length)];
-      const startX = spawnTile?.x ?? visibleZone.x;
-      const startY = spawnTile?.y ?? visibleZone.y;
+      const col = i % FARM_COLS;
+      const row = Math.floor(i / FARM_COLS);
+      const colTiles = tiles.filter((_, idx) => idx % FARM_COLS === col);
+      const homeTile = colTiles[row % Math.max(1, colTiles.length)] ?? tiles[i % tiles.length];
 
       initialWorkers.push({
         id: i,
-        x: startX * TILE_SIZE,
-        y: startY * TILE_SIZE,
-        targetTileX: startX,
-        targetTileY: startY,
+        x: homeTile.x * TILE_SIZE,
+        y: homeTile.y * TILE_SIZE,
+        targetTileX: homeTile.x,
+        targetTileY: homeTile.y,
         action: "idle",
         sprite: WORKER_SPRITES[i % WORKER_SPRITES.length],
         facing: "down",
@@ -257,6 +282,26 @@ export function FarmingScene({
     }
     setWorkers(initialWorkers);
   }, [investment.workers, farmType, tiles.length]);
+
+  // Manager pacing: walks slowly left-right along top edge of the farm block
+  useEffect(() => {
+    if (!investment.manager || tiles.length === 0) return;
+    const xMin = Math.min(...tiles.map(t => t.x)) * TILE_SIZE;
+    const xMax = Math.max(...tiles.map(t => t.x)) * TILE_SIZE;
+    const topY   = (Math.min(...tiles.map(t => t.y)) - 2) * TILE_SIZE; // 2 tiles above
+    setManagerPos({ x: xMin, y: topY, dir: 1 });
+
+    const pace = setInterval(() => {
+      setManagerPos(prev => {
+        let nextX = prev.x + prev.dir * 2; // 2px/tick
+        let nextDir = prev.dir;
+        if (nextX >= xMax) { nextX = xMax; nextDir = -1; }
+        if (nextX <= xMin) { nextX = xMin; nextDir =  1; }
+        return { x: nextX, y: topY, dir: nextDir };
+      });
+    }, 120);
+    return () => clearInterval(pace);
+  }, [investment.manager, tiles.length]);
 
   // Main automation loop
   useEffect(() => {
@@ -291,18 +336,8 @@ export function FarmingScene({
               );
 
               availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
-                // Find next available tile that's not too close to other workers
-                let targetTile = null;
-                for (const tile of untilledTiles) {
-                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
-                    targetTile = tile;
-                    break;
-                  }
-                }
-
-                if (!targetTile) {
-                  targetTile = untilledTiles[workerIndex]; // Fallback to sequential assignment
-                }
+                // Assign each worker to a unique tile in a 1-to-1 mapping
+                const targetTile = untilledTiles[workerIndex];
 
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
@@ -369,17 +404,8 @@ export function FarmingScene({
               );
 
               availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
-                let targetTile = null;
-                for (const tile of tilledTiles) {
-                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
-                    targetTile = tile;
-                    break;
-                  }
-                }
-
-                if (!targetTile) {
-                  targetTile = tilledTiles[workerIndex];
-                }
+                // Assign each worker to a unique tile in a 1-to-1 mapping
+                const targetTile = tilledTiles[workerIndex];
 
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
@@ -446,17 +472,8 @@ export function FarmingScene({
               );
 
               availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
-                let targetTile = null;
-                for (const tile of wateredTiles) {
-                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
-                    targetTile = tile;
-                    break;
-                  }
-                }
-
-                if (!targetTile) {
-                  targetTile = wateredTiles[workerIndex];
-                }
+                // Assign each worker to a unique tile in a 1-to-1 mapping
+                const targetTile = wateredTiles[workerIndex];
 
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
@@ -549,17 +566,8 @@ export function FarmingScene({
               );
 
               availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
-                let targetTile = null;
-                for (const tile of harvestableTiles) {
-                  if (!isTooCloseToOtherWorkers(tile.x, tile.y, worker.id, workers, WORKER_SPACING)) {
-                    targetTile = tile;
-                    break;
-                  }
-                }
-
-                if (!targetTile) {
-                  targetTile = harvestableTiles[workerIndex];
-                }
+                // Assign each worker to a unique tile in a 1-to-1 mapping
+                const targetTile = harvestableTiles[workerIndex];
 
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
@@ -617,11 +625,54 @@ export function FarmingScene({
   }, [tiles.length, workers.length, cyclePhase, farmType]);
 
   useEffect(() => {
+    const uniqueXs = Array.from(new Set(tiles.map((t) => t.x))).sort((a, b) => a - b);
+    const FARM_COLS = uniqueXs.length || 4;
     const moveInterval = setInterval(() => {
       setWorkers((prevWorkers) =>
         prevWorkers.map((worker) => {
-          const targetX = worker.targetTileX * TILE_SIZE;
-          const targetY = worker.targetTileY * TILE_SIZE;
+          let targetTileX = worker.targetTileX;
+          let targetTileY = worker.targetTileY;
+          let action = worker.action;
+
+          if (worker.action === "idle" && tiles.length > 0) {
+            // During growing: each worker patrols their assigned COLUMN (lane)
+            // They walk up their column then back down, one tile at a time
+            if (cyclePhase === "đang lớn") {
+              if (Math.random() < 0.025) {
+                const col = worker.id % FARM_COLS;
+                const laneTiles = tiles.filter((_, idx) => idx % FARM_COLS === col);
+                if (laneTiles.length > 0) {
+                  const randomLaneTile = laneTiles[Math.floor(Math.random() * laneTiles.length)];
+                  targetTileX = randomLaneTile.x;
+                  targetTileY = randomLaneTile.y;
+                  action = "walking";
+                }
+              }
+            } else {
+              // Outside growing: return to home tile (column top) and wait
+              const col = worker.id % FARM_COLS;
+              const row = Math.floor(worker.id / FARM_COLS);
+              const colTiles = tiles.filter((_, idx) => idx % FARM_COLS === col);
+              const home = colTiles[row % Math.max(1, colTiles.length)];
+              if (home && (worker.targetTileX !== home.x || worker.targetTileY !== home.y)) {
+                targetTileX = home.x;
+                targetTileY = home.y;
+                action = "walking";
+              }
+            }
+          }
+
+          // Snap to idle once walking worker reaches target
+          if (worker.action === "walking") {
+            const dist = Math.sqrt(
+              (targetTileX * TILE_SIZE - worker.x) ** 2 +
+              (targetTileY * TILE_SIZE - worker.y) ** 2
+            );
+            if (dist <= 4) action = "idle";
+          }
+
+          const targetX = targetTileX * TILE_SIZE;
+          const targetY = targetTileY * TILE_SIZE;
           const dx = targetX - worker.x;
           const dy = targetY - worker.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -649,9 +700,12 @@ export function FarmingScene({
             x: nextX,
             y: nextY,
             facing,
+            targetTileX,
+            targetTileY,
+            action,
             animationFrame: (worker.animationFrame + 1) % 4,
             actionProgress:
-              worker.action === "idle"
+              action === "idle"
                 ? 0
                 : Math.min(1, worker.actionProgress + 0.08),
           };
@@ -660,7 +714,7 @@ export function FarmingScene({
     }, WORKER_MOVE_SPEED);
 
     return () => clearInterval(moveInterval);
-  }, []);
+  }, [cyclePhase, tiles]);
 
   const vpScale = Math.min(
     viewportWidth / (vpDef.cols * TILE_SIZE),
@@ -711,6 +765,17 @@ export function FarmingScene({
             {workers.map((worker) => (
               <WorkerView key={worker.id} worker={worker} scale={vpScale} />
             ))}
+
+            {/* Manager: paces at the edge watching workers */}
+            {investment.manager && tiles.length > 0 && (
+              <ManagerView
+                px={managerPos.x}
+                py={managerPos.y}
+                facingDir={managerPos.dir}
+                scale={vpScale}
+                cyclePhase={cyclePhase}
+              />
+            )}
 
             {investment.aiRobot && (
               <div
@@ -1132,6 +1197,92 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
             width: 16 * scale,
             height: 8 * scale,
             backgroundColor: "rgba(11, 18, 9, 0.3)",
+            borderRadius: "50%",
+            filter: "blur(2px)",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ── Manager pacing along the farm edge ────────────────────────────────────────
+function ManagerView({
+  px, py, facingDir, scale, cyclePhase,
+}: {
+  px: number;
+  py: number;
+  facingDir: 1 | -1;
+  scale: number;
+  cyclePhase: string;
+}) {
+  const s = Math.max(0.9, scale);
+  const w = 20 * s;
+  const h = 38 * s;
+
+  const BUBBLE_ICONS: Record<string, string> = {
+    "thiết lập": "📋",
+    "đào đất":   "👀",
+    "tưới nước": "👀",
+    "trồng hạt": "📋",
+    "đang lớn":  "🧐",
+    "thu hoạch": "📋",
+  };
+  const icon = BUBBLE_ICONS[cyclePhase] ?? "📋";
+
+  return (
+    <div
+      className="absolute"
+      style={{
+        left: px * scale,
+        top: py * scale,
+        zIndex: Z_LAYERS.CHARACTERS_BASE + 5,
+        transform: facingDir === -1 ? "scaleX(-1)" : "scaleX(1)",
+        transition: "left 0.12s linear",
+      }}
+    >
+      {/* Thought bubble */}
+      <div
+        style={{
+          position: "absolute",
+          top: -9 * s,
+          left: "50%",
+          transform: "translateX(-50%)",
+          background: "rgba(255,255,255,0.93)",
+          border: `${Math.max(1, s * 0.8)}px solid #0b1209`,
+          borderRadius: 4,
+          padding: `1px ${3 * s}px`,
+          fontSize: 11 * Math.max(s, 0.8),
+          whiteSpace: "nowrap",
+          boxShadow: "2px 2px 0 #0b1209",
+          pointerEvents: "none",
+        }}
+      >
+        {icon}
+      </div>
+
+      {/* Real Manager PNG */}
+      <div style={{ position: "relative", width: w, height: h }}>
+        <img
+          src={sceneAsset("characters/manager-v3.png")}
+          alt="Manager"
+          className="pixelated"
+          style={{
+            width: w,
+            height: h,
+            imageRendering: "pixelated",
+          }}
+        />
+        {/* Shadow */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -3 * s,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 14 * s,
+            height: 5 * s,
+            backgroundColor: "rgba(11,18,9,0.28)",
             borderRadius: "50%",
             filter: "blur(2px)",
           }}
