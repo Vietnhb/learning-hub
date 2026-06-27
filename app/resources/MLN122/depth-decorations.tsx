@@ -30,30 +30,51 @@ interface BirdsProps {
 }
 
 export function FlyingBirds({ count = 3, animated = true }: BirdsProps) {
+  const [frame, setFrame] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!animated) return;
+    const interval = setInterval(() => {
+      setFrame((f) => (f + 1) % 4);
+    }, 150);
+    return () => clearInterval(interval);
+  }, [animated]);
+
   return (
-    <div className="flying-birds-container">
+    <div className="flying-birds-container absolute inset-0 overflow-hidden pointer-events-none">
       {Array.from({ length: count }).map((_, i) => (
         <motion.div
           key={i}
           className="absolute"
           style={{
-            left: `${20 + i * 25}%`,
-            top: `${10 + i * 5}%`,
+            // Start from right side off-screen, varying heights
+            top: `${15 + i * 12}%`,
             zIndex: Z_LAYERS.EFFECTS,
+            // Flip sprite to face left if they are facing right, or just keep them moving left
+            transform: 'scaleX(-1)' // Assuming the sprite faces right; flip to face left. If it faces left naturally, remove this.
           }}
           animate={animated ? {
-            x: [0, 100, 200],
-            y: [0, -10, -5],
-          } : {}}
+            left: ['110%', '-20%'],
+            y: [0, -15, 0, -10, 0], // Gentle bobbing
+          } : {
+            left: `${20 + i * 15}%`
+          }}
           transition={{
-            duration: 8 + i * 2,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "linear",
-            delay: i * 1.5,
+            left: {
+              duration: 12 + i * 3,
+              repeat: Infinity,
+              ease: "linear",
+              delay: i * 2.5,
+            },
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }
           }}
         >
-          <Sprite {...BIRD_SPRITES.bird1(i % 4, 1.5)} />
+          {/* Use BIRD_SPRITES which extracts the correct frame */}
+          <Sprite {...BIRD_SPRITES.bird1(frame, 2)} />
         </motion.div>
       ))}
     </div>

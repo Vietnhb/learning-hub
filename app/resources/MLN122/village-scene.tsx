@@ -3,7 +3,7 @@
  * Hero scenes showing the village, economic relationships, and story context
  */
 
-import { AssetImage, LandlordEstate, MarketBuilding, TreeSprite } from "./pixel-components";
+import { AssetImage, LandlordEstate, MarketBuilding, TreeSprite, WorkerSprite, AnimalSprite, CropBed } from "./pixel-components";
 import { type Plot } from "./game-model";
 import {
   FlyingBirds,
@@ -25,88 +25,28 @@ import { Z_LAYERS } from "./rendering-utils";
 export function VillageHero() {
   return (
     <div className="village-hero relative mx-auto w-full max-w-4xl overflow-hidden border-4 border-[#0b1209] bg-gradient-to-b from-[#9ed7ef] to-[#5c8d52] shadow-[6px_6px_0_#0b1209]">
-      <div className="relative min-h-[320px]">
-        {/* Sky Background */}
+      <div className="relative min-h-[360px] w-full">
+        
+        {/* 1. Full Landscape (Deep Background) */}
         <div className="absolute inset-0" style={{ zIndex: Z_LAYERS.BACKGROUND }}>
           <AssetImage
             fileName="LooseSprites__stardewPanorama.png"
-            alt=""
-            className="h-full w-full object-cover opacity-85"
+            alt="Village Panorama"
+            className="h-full w-full object-cover"
           />
         </div>
 
-        {/* Atmospheric gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#20361d]/40 to-transparent" style={{ zIndex: Z_LAYERS.TERRAIN_BACKGROUND }} />
+        {/* Moving clouds in the sky */}
+        <MovingClouds animated={true} />
 
-        {/* Background Trees */}
-        <div className="absolute bottom-[35%] left-[5%] opacity-35" style={{ zIndex: Z_LAYERS.TERRAIN_DECORATIONS }}>
-          <TreeSprite variant="pine" scale={0.85} />
-        </div>
-        <div className="absolute bottom-[35%] right-[8%] opacity-35" style={{ zIndex: Z_LAYERS.TERRAIN_DECORATIONS }}>
-          <TreeSprite variant="oak" scale={0.9} />
+        {/* Flying birds */}
+        <div className="absolute left-0 top-4 w-full h-[30%]">
+          <FlyingBirds count={3} animated={true} />
         </div>
 
-        {/* Main Village Layout */}
-        <div className="relative grid h-full min-h-[320px] grid-cols-3 items-end gap-6 p-6" style={{ zIndex: Z_LAYERS.BUILDINGS_BACK }}>
-          {/* Left: Plot Preview */}
-          <div className="justify-self-start">
-            <PlotMiniPreview
-              title="Fertile Land"
-              soil="#7a4a2a"
-              mapAsset="LooseSprites__Farm_ranching_map.png"
-            />
-          </div>
-
-          {/* Center: Key Buildings */}
-          <div className="grid justify-items-center gap-4">
-            <LandlordEstate plotId="fertile" size="medium" />
-            <div className="hidden text-center md:block">
-              <AssetImage
-                fileName="LooseSprites__farm_ranching_icon.png"
-                alt=""
-                className="mx-auto h-12 w-12 object-contain drop-shadow-[2px_2px_0_#0b1209]"
-              />
-              <p className="mt-1 text-xs font-black uppercase text-white drop-shadow-[1px_1px_0_#0b1209]">
-                Village
-              </p>
-            </div>
-          </div>
-
-          {/* Right: Market */}
-          <div className="justify-self-end">
-            <MarketBuilding size="medium" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Mini plot preview for village scenes
- */
-function PlotMiniPreview({
-  title,
-  soil,
-  mapAsset,
-}: {
-  title: string;
-  soil: string;
-  mapAsset: string;
-}) {
-  return (
-    <div className="grid gap-2 border-2 border-[#0b1209] bg-[#6aad62] p-2 shadow-[3px_3px_0_#0b1209]">
-      <div className="relative h-20 w-24 overflow-hidden border-2 border-[#0b1209] bg-[#274a24]">
-        <AssetImage fileName={mapAsset} alt="" className="h-full w-full object-cover" />
-      </div>
-      <div className="grid grid-cols-3 gap-1">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="h-6 border border-black/20"
-            style={{ backgroundColor: soil }}
-          />
-        ))}
+        {/* Light rays shining from the sun */}
+        <LightRays opacity={0.25} />
+        
       </div>
     </div>
   );

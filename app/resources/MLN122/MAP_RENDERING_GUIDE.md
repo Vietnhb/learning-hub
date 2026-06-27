@@ -6,7 +6,7 @@ The MLN122 farming simulation now renders **real Stardew Valley farm maps** from
 
 ## Architecture
 
-### 1. TMX Files (`/public/resources/MLN122/maps/`)
+### 1. TMX Files (`/public/resources/MLN122/assets/farms/<farm-id>/`)
 - `Farm.tmx` - Standard farm
 - `Farm_Mining.tmx` - Hilltop farm (with ore veins)
 - `Farm_Fishing.tmx` - Riverland farm (with rivers and islands)
@@ -21,11 +21,10 @@ Each TMX file is an XML document containing:
 - Layer data (tile IDs for each position)
 - Tile properties (walkable, buildable, diggable, etc.)
 
-### 2. Tilesheet Images (`/public/resources/MLN122/generated/`)
+### 2. Tilesheet Images (`/public/resources/MLN122/assets/shared/tilesheets/`)
 - `Maps__spring_outdoorsTileSheet.png` (400×1264) - Main terrain tiles
 - `Maps__spring_outdoorTileSheet_extra.png` (128×128) - Extra tiles
 - `Maps__spring_outdoorsTileSheet2.png` (400×576) - Additional terrain
-- `Maps__paths.png` (64×256) - Path/road tiles
 - `Maps__spring_island_tilesheet_1.png` (400×528) - Island/beach tiles
 - `Maps__spring_Waterfalls.png` (80×352) - Animated water tiles
 
@@ -39,7 +38,7 @@ These are sprite sheets where each 16×16 tile is clipped using CSS `background-
 - Fetches and parses TMX XML files
 - Extracts map dimensions, tilesets, and layer data
 - Renders tiles using viewport system
-- Supports multiple layers (Back, Paths, Buildings, Front, etc.)
+- Supports multiple layers (Back, Buildings, Front, etc.)
 
 #### `TmxLayerRenderer`
 - Renders individual map layers
@@ -62,7 +61,7 @@ The main game scene that combines TMX rendering with gameplay:
 │  FarmMapView (TMX Background)       │ ← z-index: 0
 │  - Renders actual farm terrain      │
 │  - Grass, water, cliffs, trees      │
-│  - Buildings, paths, decorations    │
+│  - Buildings, decorations    │
 └─────────────────────────────────────┘
                 ↓
 ┌─────────────────────────────────────┐
@@ -91,7 +90,7 @@ The main game scene that combines TMX rendering with gameplay:
 
 1. **Load TMX File**
    ```typescript
-   fetchAndParseTmx("/resources/MLN122/maps/Farm.tmx")
+   fetchAndParseTmx("/resources/MLN122/assets/farms/standard/map.tmx")
    ```
 
 2. **Parse XML**
@@ -101,13 +100,12 @@ The main game scene that combines TMX rendering with gameplay:
 
 3. **Render Layers**
    - Back layers (terrain foundation)
-   - Paths (walkable paths)
    - Buildings (structures)
    - Front layers (overlay decorations)
 
 4. **Render Each Tile**
    ```css
-   background-image: url("/resources/MLN122/generated/Maps__spring_outdoorsTileSheet.png");
+   background-image: url("/resources/MLN122/assets/shared/tilesheets/Maps__spring_outdoorsTileSheet.png");
    background-position: -32px -64px; /* Clips specific tile */
    background-size: 800px 2528px; /* Scaled 2× */
    ```
@@ -155,7 +153,7 @@ Example:
 
 ✅ **7 Unique Farm Maps** - Each with distinct terrain  
 ✅ **Real Tilesheet Rendering** - Uses actual Stardew Valley assets  
-✅ **Multi-Layer Support** - Back, Paths, Buildings, Front layers  
+✅ **Multi-Layer Support** - Back, Buildings, Front layers  
 ✅ **Viewport System** - Shows relevant farming area for each map  
 ✅ **Performance Optimized** - Only renders visible tiles  
 ✅ **Pixel-Perfect Scaling** - Maintains crisp pixel art at 2-3× scale  
@@ -165,19 +163,19 @@ Example:
 
 ```
 /public/resources/MLN122/
-├── maps/                  # TMX map files
-│   ├── Farm.tmx
-│   ├── Farm_Mining.tmx
-│   ├── Farm_Fishing.tmx
-│   └── ...
-├── generated/             # Tilesheet sprites
-│   ├── Maps__spring_outdoorsTileSheet.png
-│   ├── Maps__paths.png
-│   └── ...
-├── scene-assets/          # Game object sprites
-│   ├── crops/
-│   ├── characters/
-│   └── ...
+assets/
+  farms/
+    standard/map.tmx
+    hilltop/map.tmx
+    riverland/map.tmx
+    ...
+  shared/
+    tilesheets/
+      Maps__spring_outdoorsTileSheet.png
+    scene/
+      crops/
+      characters/
+      map-tiles/
 └── asset/                 # UI preview images
 
 /app/resources/MLN122/
@@ -201,7 +199,7 @@ import { FarmMapView } from "./tmx-map-renderer";
 ```
 
 This will:
-1. Load `/resources/MLN122/maps/Farm_Fishing.tmx`
+1. Load `/resources/MLN122/assets/farms/riverland/map.tmx`
 2. Parse tileset references and layer data
 3. Render visible tiles from viewport (x=5, y=8, 40×32 tiles)
 4. Scale to fit 640×480 pixel canvas

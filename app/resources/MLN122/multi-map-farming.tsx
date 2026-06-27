@@ -12,23 +12,24 @@
  */
 
 import { useEffect, useState } from "react";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { Sprout, Users } from "lucide-react";
 import { type InvestmentState, type Plot } from "./game-model";
 import { Z_LAYERS, calculateYSortedZIndex } from "./rendering-utils";
 import {
   FARM_MAPS,
   type FarmType,
-  getAllFarmableTiles,
   getFarmingZone,
 } from "./farm-maps-config";
-import { FarmMapSelector, MapInfoCard } from "./farm-map-selector";
-import { FarmMapView, FARM_VIEWPORTS } from "./tmx-map-renderer";
+import { FarmMapView, FARM_VIEWPORTS, useFarmableTiles } from "./tmx-map-renderer";
+import { MLN122_SHARED_SCENE_BASE, FARM_TMX_PATHS } from "./asset-paths";
 
-const SCENE_ASSET_BASE = "/resources/MLN122/scene-assets";
+const SCENE_ASSET_BASE = MLN122_SHARED_SCENE_BASE;
 const TILE_SIZE = 16;
-const ANIMATION_SPEED = 400; // ms per action
-const WORKER_MOVE_SPEED = 100; // ms per tile
-const GROWTH_SPEED = 800; // ms per growth stage
+const PHASE_CYCLE_SPEED = 1200; // ms between checking for new work (slower to see actions)
+const WORKER_ACTION_DURATION = 2000; // ms per work action (hoeing, watering, etc.)
+const WORKER_MOVE_SPEED = 80; // ms per movement frame
+const GROWTH_SPEED = 1500; // ms per growth stage update
 
 type TileState =
   | "grass"
@@ -80,65 +81,145 @@ function sceneAsset(path: string) {
   return `${SCENE_ASSET_BASE}/${path.split("/").map(encodeURIComponent).join("/")}`;
 }
 
+function getVisibleZone(
+  zone: { x: number; y: number; cols: number; rows: number; soilType?: "dry" | "dark" | "sand" },
+  viewport: { x: number; y: number; cols: number; rows: number },
+) {
+  const x = Math.max(zone.x, viewport.x);
+  const y = Math.max(zone.y, viewport.y);
+  const right = Math.min(zone.x + zone.cols, viewport.x + viewport.cols);
+  const bottom = Math.min(zone.y + zone.rows, viewport.y + viewport.rows);
+  const cols = right - x;
+  const rows = bottom - y;
+
+  if (cols > 4 && rows > 4) {
+    return { ...zone, x, y, cols, rows };
+  }
+
+  return {
+    ...zone,
+    x: viewport.x + 3,
+    y: viewport.y + 3,
+    cols: Math.max(6, viewport.cols - 6),
+    rows: Math.max(6, viewport.rows - 6),
+  };
+}
+
 export function MultiMapFarmingScene({
   plot,
   investment,
+  farmType,
 }: {
   plot: Plot;
   investment: InvestmentState;
+  farmType: FarmType;
 }) {
-  const [farmType, setFarmType] = useState<FarmType>("standard");
   const [tiles, setTiles] = useState<Tile[]>([]);
   const [workers, setWorkers] = useState<Worker[]>([]);
   const [cyclePhase, setCyclePhase] = useState<
-    "setup" | "tilling" | "watering" | "planting" | "growing" | "harvesting"
-  >("setup");
+    "thiết lập" | "đào đất" | "tưới nước" | "trồng hạt" | "đang lớn" | "thu hoạch"
+  >("thiết lập");
   const [dayCounter, setDayCounter] = useState(0);
-  const [showMapInfo, setShowMapInfo] = useState(false);
-
   const farmConfig = FARM_MAPS[farmType];
   const mainZone = getFarmingZone(farmType);
+  const viewportWidth = 640;
+  const viewportHeight = 480;
+  const vpDef = FARM_VIEWPORTS[farmType] ?? FARM_VIEWPORTS.standard;
+  const visibleZone = getVisibleZone(mainZone, vpDef);
 
-  // Initialize farm tiles when map changes
+  // Fetch real farmable positions from TMX Diggable tile properties
+  const tmxUrl = FARM_TMX_PATHS[farmType] ?? FARM_TMX_PATHS.standard;
+  const allDiggable = useFarmableTiles(tmxUrl);
+
+  // Initialize farm tiles when TMX diggable positions are loaded
   useEffect(() => {
-    const farmableTiles = getAllFarmableTiles(farmType);
-    
-    // Use only first zone for demo (to keep it manageable)
-    const zone = mainZone;
-    const initialTiles: Tile[] = [];
-    
-    // Create a smaller subset for demo
-    const maxTiles = 80; // Limit tiles for performance
-    const step = Math.max(1, Math.floor((zone.cols * zone.rows) / maxTiles));
-    
-    let tileCount = 0;
-    for (let row = 0; row < zone.rows && tileCount < maxTiles; row += step) {
-      for (let col = 0; col < zone.cols && tileCount < maxTiles; col += step) {
-        initialTiles.push({
-          x: zone.x + col,
-          y: zone.y + row,
-          state: "grass",
-          growthStage: 0,
-          hasWorker: false,
-        });
-        tileCount++;
+    if (allDiggable.length === 0) return;
+
+    // Filter to visible viewport only
+    const vx0 = vpDef.x;
+    const vy0 = vpDef.y;
+    const vx1 = vpDef.x + vpDef.cols;
+    const vy1 = vpDef.y + vpDef.rows;
+
+    const visible = allDiggable.filter(
+      (p) => p.x >= vx0 && p.x < vx1 && p.y >= vy0 && p.y < vy1
+    );
+
+    if (visible.length === 0) return;
+
+    const diggableSet = new Set(visible.map((p) => `${p.x},${p.y}`));
+    const centerX = vpDef.x + vpDef.cols / 2;
+    const centerY = vpDef.y + vpDef.rows / 2;
+    const blockSizes = [
+      { cols: 4, rows: 4 },
+      { cols: 4, rows: 3 },
+      { cols: 3, rows: 3 },
+      { cols: 3, rows: 2 },
+      { cols: 2, rows: 2 },
+    ];
+
+    let initialTiles: Tile[] = [];
+
+    for (const size of blockSizes) {
+      const candidates: Array<{ x: number; y: number; score: number }> = [];
+
+      for (const p of visible) {
+        let isFullBlock = true;
+        for (let dy = 0; dy < size.rows && isFullBlock; dy++) {
+          for (let dx = 0; dx < size.cols; dx++) {
+            if (!diggableSet.has(`${p.x + dx},${p.y + dy}`)) {
+              isFullBlock = false;
+              break;
+            }
+          }
+        }
+
+        if (isFullBlock) {
+          const blockCenterX = p.x + size.cols / 2;
+          const blockCenterY = p.y + size.rows / 2;
+          candidates.push({
+            x: p.x,
+            y: p.y,
+            score: (blockCenterX - centerX) ** 2 + (blockCenterY - centerY) ** 2,
+          });
+        }
       }
+
+      const best = candidates.sort((a, b) => a.score - b.score)[0];
+      if (!best) continue;
+
+      initialTiles = [];
+      for (let dy = 0; dy < size.rows; dy++) {
+        for (let dx = 0; dx < size.cols; dx++) {
+          initialTiles.push({
+            x: best.x + dx,
+            y: best.y + dy,
+            state: "grass",
+            growthStage: 0,
+            hasWorker: false,
+          });
+        }
+      }
+      break;
     }
 
+    if (initialTiles.length === 0) return;
+
     setTiles(initialTiles);
-    setCyclePhase("setup");
+    setCyclePhase("thiết lập");
     setDayCounter(0);
-  }, [farmType]);
+  }, [farmType, allDiggable.length]);
 
   // Initialize workers
   useEffect(() => {
     const initialWorkers: Worker[] = [];
     const workerCount = Math.min(investment.workers, 6);
-    const zone = mainZone;
+    const spawnTiles = tiles.length > 0 ? tiles : [];
 
     for (let i = 0; i < workerCount; i++) {
-      const startX = zone.x + (i % 5) * 3;
-      const startY = zone.y + Math.floor(i / 5) * 3;
+      const spawnTile = spawnTiles[i % Math.max(1, spawnTiles.length)];
+      const startX = spawnTile?.x ?? visibleZone.x;
+      const startY = spawnTile?.y ?? visibleZone.y;
 
       initialWorkers.push({
         id: i,
@@ -154,7 +235,7 @@ export function MultiMapFarmingScene({
       });
     }
     setWorkers(initialWorkers);
-  }, [investment.workers, farmType]);
+  }, [investment.workers, farmType, tiles]);
 
   // Main automation loop
   useEffect(() => {
@@ -165,22 +246,30 @@ export function MultiMapFarmingScene({
         const updatedTiles = [...prevTiles];
 
         switch (cyclePhase) {
-          case "setup":
-            setCyclePhase("tilling");
+          case "thiết lập":
+            setCyclePhase("đào đất");
             break;
 
-          case "tilling": {
+          case "đào đất": {
             const untilledTiles = updatedTiles.filter((t) => t.state === "grass" && !t.hasWorker);
             if (untilledTiles.length === 0) {
-              setCyclePhase("watering");
+              setCyclePhase("tưới nước");
             } else {
-              // Each worker picks a random untilled tile
+              // Sort tiles by position (left to right, top to bottom) for organized farming
+              untilledTiles.sort((a, b) => {
+                if (a.y !== b.y) return a.y - b.y; // Top to bottom
+                return a.x - b.x; // Left to right
+              });
+
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(3, untilledTiles.length)).forEach((worker) => {
-                const randomTile = untilledTiles[Math.floor(Math.random() * untilledTiles.length)];
-                if (randomTile) {
+              
+              // Assign workers to nearest tiles
+              availableWorkers.slice(0, Math.min(2, untilledTiles.length)).forEach((worker, workerIndex) => {
+                // Get the next tile in order
+                const targetTile = untilledTiles[workerIndex];
+                if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === randomTile.x && t.y === randomTile.y
+                    (t) => t.x === targetTile.x && t.y === targetTile.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "tilled";
@@ -191,8 +280,8 @@ export function MultiMapFarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "hoeing";
-                        newWorkers[workerIdx].targetTileX = randomTile.x;
-                        newWorkers[workerIdx].targetTileY = randomTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile.x;
+                        newWorkers[workerIdx].targetTileY = targetTile.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -203,7 +292,7 @@ export function MultiMapFarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === randomTile.x && tile.y === randomTile.y
+                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
@@ -217,11 +306,7 @@ export function MultiMapFarmingScene({
                         }
                         return newWorkers;
                       });
-                    }, ANIMATION_SPEED * 2); // Give time for animation to complete
-
-                    // Remove from available
-                    const idx = untilledTiles.indexOf(randomTile);
-                    if (idx > -1) untilledTiles.splice(idx, 1);
+                    }, WORKER_ACTION_DURATION);
                   }
                 }
               });
@@ -229,17 +314,23 @@ export function MultiMapFarmingScene({
             break;
           }
 
-          case "watering": {
+          case "tưới nước": {
             const tilledTiles = updatedTiles.filter((t) => t.state === "tilled" && !t.hasWorker);
             if (tilledTiles.length === 0) {
-              setCyclePhase("planting");
+              setCyclePhase("trồng hạt");
             } else {
+              // Sort tiles by position for organized watering
+              tilledTiles.sort((a, b) => {
+                if (a.y !== b.y) return a.y - b.y;
+                return a.x - b.x;
+              });
+
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(3, tilledTiles.length)).forEach((worker) => {
-                const randomTile = tilledTiles[Math.floor(Math.random() * tilledTiles.length)];
-                if (randomTile) {
+              availableWorkers.slice(0, Math.min(2, tilledTiles.length)).forEach((worker, workerIndex) => {
+                const targetTile = tilledTiles[workerIndex];
+                if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === randomTile.x && t.y === randomTile.y
+                    (t) => t.x === targetTile.x && t.y === targetTile.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "watered";
@@ -250,8 +341,8 @@ export function MultiMapFarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "watering";
-                        newWorkers[workerIdx].targetTileX = randomTile.x;
-                        newWorkers[workerIdx].targetTileY = randomTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile.x;
+                        newWorkers[workerIdx].targetTileY = targetTile.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -261,7 +352,7 @@ export function MultiMapFarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === randomTile.x && tile.y === randomTile.y
+                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
@@ -275,10 +366,7 @@ export function MultiMapFarmingScene({
                         }
                         return newWorkers;
                       });
-                    }, ANIMATION_SPEED * 2);
-
-                    const idx = tilledTiles.indexOf(randomTile);
-                    if (idx > -1) tilledTiles.splice(idx, 1);
+                    }, WORKER_ACTION_DURATION);
                   }
                 }
               });
@@ -286,18 +374,24 @@ export function MultiMapFarmingScene({
             break;
           }
 
-          case "planting": {
+          case "trồng hạt": {
             const wateredTiles = updatedTiles.filter((t) => t.state === "watered" && !t.hasWorker);
             if (wateredTiles.length === 0) {
-              setCyclePhase("growing");
+              setCyclePhase("đang lớn");
               setDayCounter(0);
             } else {
+              // Sort tiles by position for organized planting
+              wateredTiles.sort((a, b) => {
+                if (a.y !== b.y) return a.y - b.y;
+                return a.x - b.x;
+              });
+
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(3, wateredTiles.length)).forEach((worker) => {
-                const randomTile = wateredTiles[Math.floor(Math.random() * wateredTiles.length)];
-                if (randomTile) {
+              availableWorkers.slice(0, Math.min(2, wateredTiles.length)).forEach((worker, workerIndex) => {
+                const targetTile = wateredTiles[workerIndex];
+                if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === randomTile.x && t.y === randomTile.y
+                    (t) => t.x === targetTile.x && t.y === targetTile.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "seeded";
@@ -309,8 +403,8 @@ export function MultiMapFarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "planting";
-                        newWorkers[workerIdx].targetTileX = randomTile.x;
-                        newWorkers[workerIdx].targetTileY = randomTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile.x;
+                        newWorkers[workerIdx].targetTileY = targetTile.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -320,7 +414,7 @@ export function MultiMapFarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === randomTile.x && tile.y === randomTile.y
+                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
@@ -334,10 +428,7 @@ export function MultiMapFarmingScene({
                         }
                         return newWorkers;
                       });
-                    }, ANIMATION_SPEED * 2);
-
-                    const idx = wateredTiles.indexOf(randomTile);
-                    if (idx > -1) wateredTiles.splice(idx, 1);
+                    }, WORKER_ACTION_DURATION);
                   }
                 }
               });
@@ -345,7 +436,7 @@ export function MultiMapFarmingScene({
             break;
           }
 
-          case "growing": {
+          case "đang lớn": {
             setDayCounter((prev) => prev + 1);
 
             updatedTiles.forEach((tile, index) => {
@@ -363,25 +454,31 @@ export function MultiMapFarmingScene({
               (t) => t.state === "harvestable" || t.state === "grass"
             );
             if (allHarvestable) {
-              setCyclePhase("harvesting");
+              setCyclePhase("thu hoạch");
             }
             break;
           }
 
-          case "harvesting": {
+          case "thu hoạch": {
             const harvestableTiles = updatedTiles.filter(
               (t) => t.state === "harvestable" && !t.hasWorker
             );
             if (harvestableTiles.length === 0) {
-              setCyclePhase("tilling");
+              setCyclePhase("đào đất");
               setDayCounter(0);
             } else {
+              // Sort tiles by position for organized harvesting
+              harvestableTiles.sort((a, b) => {
+                if (a.y !== b.y) return a.y - b.y;
+                return a.x - b.x;
+              });
+
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
-              availableWorkers.slice(0, Math.min(3, harvestableTiles.length)).forEach((worker) => {
-                const randomTile = harvestableTiles[Math.floor(Math.random() * harvestableTiles.length)];
-                if (randomTile) {
+              availableWorkers.slice(0, Math.min(2, harvestableTiles.length)).forEach((worker, workerIndex) => {
+                const targetTile = harvestableTiles[workerIndex];
+                if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
-                    (t) => t.x === randomTile.x && t.y === randomTile.y
+                    (t) => t.x === targetTile.x && t.y === targetTile.y
                   );
                   if (tileIndex !== -1) {
                     updatedTiles[tileIndex].state = "grass";
@@ -393,8 +490,8 @@ export function MultiMapFarmingScene({
                       const workerIdx = newWorkers.findIndex((w) => w.id === worker.id);
                       if (workerIdx !== -1) {
                         newWorkers[workerIdx].action = "harvesting";
-                        newWorkers[workerIdx].targetTileX = randomTile.x;
-                        newWorkers[workerIdx].targetTileY = randomTile.y;
+                        newWorkers[workerIdx].targetTileX = targetTile.x;
+                        newWorkers[workerIdx].targetTileY = targetTile.y;
                         newWorkers[workerIdx].actionProgress = 0;
                       }
                       return newWorkers;
@@ -404,7 +501,7 @@ export function MultiMapFarmingScene({
                       setTiles((t) => {
                         const copy = [...t];
                         const idx = copy.findIndex(
-                          (tile) => tile.x === randomTile.x && tile.y === randomTile.y
+                          (tile) => tile.x === targetTile.x && tile.y === targetTile.y
                         );
                         if (idx !== -1) copy[idx].hasWorker = false;
                         return copy;
@@ -418,10 +515,7 @@ export function MultiMapFarmingScene({
                         }
                         return newWorkers;
                       });
-                    }, ANIMATION_SPEED * 2);
-
-                    const idx = harvestableTiles.indexOf(randomTile);
-                    if (idx > -1) harvestableTiles.splice(idx, 1);
+                    }, WORKER_ACTION_DURATION);
                   }
                 }
               });
@@ -432,213 +526,178 @@ export function MultiMapFarmingScene({
 
         return updatedTiles;
       });
-    }, ANIMATION_SPEED);
+    }, PHASE_CYCLE_SPEED);
 
     return () => clearInterval(interval);
   }, [tiles.length, workers.length, cyclePhase, farmType]);
 
-  // Worker movement and action animation
   useEffect(() => {
     const moveInterval = setInterval(() => {
-      setWorkers((prevWorkers) => {
-        return prevWorkers.map((worker) => {
+      setWorkers((prevWorkers) =>
+        prevWorkers.map((worker) => {
           const targetX = worker.targetTileX * TILE_SIZE;
           const targetY = worker.targetTileY * TILE_SIZE;
-
-          let newX = worker.x;
-          let newY = worker.y;
-          let newAction = worker.action;
-          let newFacing = worker.facing;
-          let newActionProgress = worker.actionProgress;
-
           const dx = targetX - worker.x;
           const dy = targetY - worker.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
+          const step = 4;
 
-          // Movement logic
-          if (distance > 2) {
-            const moveSpeed = 2;
-            newX += (dx / distance) * moveSpeed;
-            newY += (dy / distance) * moveSpeed;
-            newAction = "walking";
-            newActionProgress = 0;
-
-            if (Math.abs(dx) > Math.abs(dy)) {
-              newFacing = dx > 0 ? "right" : "left";
-            } else {
-              newFacing = dy > 0 ? "down" : "up";
-            }
+          let nextX = worker.x;
+          let nextY = worker.y;
+          if (distance > step) {
+            nextX += (dx / distance) * step;
+            nextY += (dy / distance) * step;
           } else {
-            // Reached target
-            newX = targetX;
-            newY = targetY;
-            
-            // Update action progress for working actions
-            if (["hoeing", "watering", "planting", "harvesting"].includes(worker.action)) {
-              newActionProgress = Math.min(1, worker.actionProgress + 0.05);
-              
-              // Action complete
-              if (newActionProgress >= 1) {
-                newAction = "idle";
-                newActionProgress = 0;
-              }
-            } else if (worker.action === "walking") {
-              newAction = "idle";
-              newActionProgress = 0;
-            }
+            nextX = targetX;
+            nextY = targetY;
+          }
+
+          let facing = worker.facing;
+          if (Math.abs(dx) > Math.abs(dy)) {
+            facing = dx > 0 ? "right" : "left";
+          } else if (Math.abs(dy) > 0.5) {
+            facing = dy > 0 ? "down" : "up";
           }
 
           return {
             ...worker,
-            x: newX,
-            y: newY,
-            action: newAction,
-            facing: newFacing,
-            actionProgress: newActionProgress,
-            animationFrame: (worker.animationFrame + 1) % 8,
+            x: nextX,
+            y: nextY,
+            facing,
+            animationFrame: (worker.animationFrame + 1) % 4,
+            actionProgress:
+              worker.action === "idle"
+                ? 0
+                : Math.min(1, worker.actionProgress + 0.08),
           };
-        });
-      });
+        }),
+      );
     }, WORKER_MOVE_SPEED);
 
     return () => clearInterval(moveInterval);
   }, []);
 
-  // Calculate overlay offset so workers appear correctly on top of the TMX background.
-  // FarmMapView renders starting at FARM_VIEWPORTS[farmType] tile origin.
-  // We must shift the overlay div so that map pixel (vpOriginX * 16, vpOriginY * 16)
-  // maps to screen pixel (0, 0).
-  const viewportWidth = 640;
-  const viewportHeight = 480;
-
-  const vpDef = FARM_VIEWPORTS[farmType] ?? FARM_VIEWPORTS.standard;
-  // Pixel scale that FarmMapView uses (same formula as FarmMapView)
   const vpScale = Math.min(
-    viewportWidth  / (vpDef.cols * TILE_SIZE),
+    viewportWidth / (vpDef.cols * TILE_SIZE),
     viewportHeight / (vpDef.rows * TILE_SIZE),
-    3
+    3,
   );
-  // Offset = -(viewport origin in map pixels) × scale
   const overlayOffsetX = -(vpDef.x * TILE_SIZE * vpScale);
   const overlayOffsetY = -(vpDef.y * TILE_SIZE * vpScale);
 
   return (
-    <div className="multi-map-farming border-4 border-[#0b1209] bg-[#4f8547] p-4 shadow-[6px_6px_0_#0b1209]">
-      {/* Header with map selector */}
-      <div className="mb-3 flex items-center gap-3">
-        <div className="flex-1">
-          <FarmMapSelector
-            currentMap={farmType}
-            onMapChange={(newMap) => setFarmType(newMap)}
-          />
-        </div>
-        <button
-          onClick={() => setShowMapInfo(!showMapInfo)}
-          className="rounded-none border-2 border-[#0b1209] bg-[#10190d] px-3 py-2 text-sm font-bold text-[#fff5cf] shadow-[2px_2px_0_#0b1209] transition-all hover:shadow-[4px_4px_0_#0b1209]"
-        >
-          {showMapInfo ? "Ẩn" : "Chi tiết"}
-        </button>
-      </div>
-
-      {/* Map info card */}
-      {showMapInfo && (
-        <div className="mb-3">
-          <MapInfoCard mapType={farmType} />
-        </div>
-      )}
-
-      {/* Status bar */}
-      <div className="mb-3 flex items-center justify-between rounded-none border-2 border-[#0b1209] bg-[#f5cf72] px-4 py-2">
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-sm font-black text-[#2d2114]">
-            Giai đoạn: <span className="capitalize">{cyclePhase}</span>
-          </span>
-          {cyclePhase === "growing" && (
-            <span className="font-mono text-sm font-black text-[#2d2114]">
-              Ngày: {dayCounter}
-            </span>
-          )}
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-black text-[#2d2114]">
-            {workers.length} Công nhân | {tiles.length} tiles
-          </span>
-        </div>
-      </div>
-
-      {/* Farm viewport - renders real TMX tiles */}
-      <div
-        className="relative overflow-hidden border-4 border-[#0b1209]"
-        style={{
-          width: viewportWidth,
-          height: viewportHeight,
-          background: "#4f8547",
-        }}
-      >
-        {/* Real TMX map background - parsed from TMX files with actual tiles */}
-        <FarmMapView
-          farmType={farmType}
-          pixelWidth={viewportWidth}
-          pixelHeight={viewportHeight}
-          style={{ position: "absolute", inset: 0, zIndex: 0 }}
-        />
-
-        {/* Overlay: farm tiles (soil / crop states)
-             Positioned so map pixel (0,0) → screen pixel (overlayOffsetX, overlayOffsetY)
-             Workers and tiles use map-space coords (tile × TILE_SIZE), scaled by vpScale. */}
+    <div className="multi-map-farming grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]">
+      <div className="border-4 border-[#0b1209] bg-[#4f8547] p-4 shadow-[6px_6px_0_#0b1209]">
         <div
-          className="absolute"
+          className="relative max-w-full overflow-hidden border-4 border-[#0b1209]"
           style={{
-            left: overlayOffsetX,
-            top: overlayOffsetY,
-            width: farmConfig.width * TILE_SIZE * vpScale,
-            height: farmConfig.height * TILE_SIZE * vpScale,
-            zIndex: 10,
-            pointerEvents: "none",
+            width: viewportWidth,
+            height: viewportHeight,
+            background: "#4f8547",
           }}
         >
-          {/* Farm tiles (soil + crops) */}
-          {tiles.map((tile, index) => (
-            <TileView
-              key={index}
-              tile={tile}
-              soilType={mainZone.soilType || (plot.id === "poor" ? "dark" : "dry")}
-              scale={vpScale}
-            />
-          ))}
+          <FarmMapView
+            farmType={farmType}
+            pixelWidth={viewportWidth}
+            pixelHeight={viewportHeight}
+            style={{ position: "absolute", inset: 0, zIndex: 0 }}
+          />
 
-          {/* Workers */}
-          {workers.map((worker) => (
-            <WorkerView key={worker.id} worker={worker} scale={vpScale} />
-          ))}
+          <div
+            className="absolute"
+            style={{
+              left: overlayOffsetX,
+              top: overlayOffsetY,
+              width: farmConfig.width * TILE_SIZE * vpScale,
+              height: farmConfig.height * TILE_SIZE * vpScale,
+              zIndex: 10,
+              pointerEvents: "none",
+            }}
+          >
+            {tiles.map((tile, index) => (
+              <TileView
+                key={index}
+                tile={tile}
+                soilType={mainZone.soilType || (plot.id === "poor" ? "dark" : "dry")}
+                scale={vpScale}
+              />
+            ))}
 
-          {/* Robot if enabled */}
-          {investment.aiRobot && (
-            <div
-              className="absolute"
-              style={{
-                left: (mainZone.x + 5) * TILE_SIZE * vpScale,
-                top: (mainZone.y + 5) * TILE_SIZE * vpScale,
-                zIndex: Z_LAYERS.CHARACTERS_BASE + 1,
-              }}
-            >
-              <RobotView />
+            {workers.map((worker) => (
+              <WorkerView key={worker.id} worker={worker} scale={vpScale} />
+            ))}
+
+            {investment.aiRobot && (
+              <div
+                className="absolute"
+                style={{
+                  left: (visibleZone.x + 5) * TILE_SIZE * vpScale,
+                  top: (visibleZone.y + 5) * TILE_SIZE * vpScale,
+                  zIndex: Z_LAYERS.CHARACTERS_BASE + 1,
+                }}
+              >
+                <RobotView />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="grid content-start gap-3">
+        <FarmStatusCard
+          icon={<Users className="h-5 w-5 text-[#f5cf72]" />}
+          title={investment.workers + " Cong nhan"}
+          text="Lao dong song tao ra gia tri moi thong qua lao dong nong nghiep."
+        />
+        <FarmStatusCard
+          icon={<Sprout className="h-5 w-5 text-[#7fc66a]" />}
+          title={investment.seeds + " Goi hat giong"}
+          text="Hat giong va cong cu chuyen giao gia tri, dong thoi nang cao nang suat."
+        />
+        <div className="border-4 border-[#0b1209] bg-[#10190d] p-4 shadow-[4px_4px_0_#0b1209]">
+          <p className="text-xs font-black uppercase tracking-wide text-[#f5cf72]">
+            Chat luong lo dat
+          </p>
+          <h3 className="mt-3 text-2xl font-black leading-tight text-white">
+            {plot.title}
+          </h3>
+          <div className="mt-4 grid grid-cols-2 gap-3 text-center">
+            <div>
+              <p className="text-[10px] font-bold text-[#fff5cf]/60">
+                Nang suat
+              </p>
+              <p className="font-mono text-lg font-black text-[#7fc66a]">
+                {Math.round(plot.productivity * 100)}%
+              </p>
             </div>
-          )}
+            <div>
+              <p className="text-[10px] font-bold text-[#fff5cf]/60">
+                Thi truong
+              </p>
+              <p className="font-mono text-lg font-black text-[#f5cf72]">
+                {Math.round(plot.marketBonus * 100)}%
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Legend */}
-      <div className="mt-3 flex flex-wrap items-center gap-3 rounded-none border-2 border-[#0b1209] bg-[#10190d] px-4 py-2">
-        <LegendItem color="#7a5c3e" label="Đất cày" />
-        <LegendItem color="#4a3a2e" label="Tưới nước" />
-        <LegendItem color="#7fc66a" label="Hạt giống" />
-        <LegendItem color="#5ca545" label="Đang lớn" />
-        <LegendItem color="#f5cf72" label="Thu hoạch" />
-        <div className="ml-auto text-xs text-[#fff5cf]/60">
-          💡 Chu trình: Đào → Tưới → Trồng → Lớn → Thu hoạch
-        </div>
-      </div>
+    </div>
+  );
+}
+function FarmStatusCard({
+  icon,
+  title,
+  text,
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="border-4 border-[#0b1209] bg-[#10190d] p-4 shadow-[4px_4px_0_#0b1209]">
+      <div>{icon}</div>
+      <h3 className="mt-3 text-lg font-black text-white">{title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-[#fff5cf]/78">{text}</p>
     </div>
   );
 }
@@ -722,34 +781,6 @@ function TileView({
           }}
         />
       )}
-
-      {/* Water droplet effect for watered tiles */}
-      {tile.state === "watered" && (
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{
-            width: 6 * scale,
-            height: 6 * scale,
-            backgroundColor: "#5ca1d8",
-            borderRadius: "50%",
-            opacity: 0.7,
-            animation: "pulse 1.5s ease-in-out infinite",
-          }}
-        />
-      )}
-
-      {tile.hasWorker && (
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{
-            width: 4 * scale,
-            height: 4 * scale,
-            backgroundColor: "#f5cf72",
-            borderRadius: "50%",
-            boxShadow: `0 0 ${4 * scale}px #f5cf72`,
-          }}
-        />
-      )}
     </div>
   );
 }
@@ -764,25 +795,27 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
     
     switch (worker.action) {
       case "hoeing":
-        // Swing motion: raise up, then down
-        const hoeAngle = -45 + (progress * 90); // -45° to +45°
-        const hoeY = -8 - (Math.sin(progress * Math.PI) * 8); // Arc motion
+        // Swing motion: raise up, then down (more dramatic arc)
+        const hoeAngle = -60 + (progress * 120); // -60° to +60°
+        const hoeY = -12 - (Math.sin(progress * Math.PI) * 12); // Bigger arc motion
+        const hoeX = 6 + (Math.sin(progress * Math.PI * 2) * 4); // Side-to-side
         return {
           visible: true,
           tool: "hoe",
-          x: 8 * scale,
+          x: hoeX * scale,
           y: hoeY * scale,
           rotation: hoeAngle,
         };
       
       case "watering":
-        // Tilt motion for watering
-        const waterAngle = progress * 60; // 0° to 60° tilt
+        // Tilt motion for watering (smooth pour)
+        const waterAngle = Math.sin(progress * Math.PI) * 75; // 0° to 75° and back
+        const waterY = -6 + (progress * 4); // Lower as pouring
         return {
           visible: true,
           tool: "watering",
           x: 10 * scale,
-          y: -6 * scale,
+          y: waterY * scale,
           rotation: waterAngle,
         };
       
@@ -797,12 +830,13 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
         };
       
       case "harvesting":
-        // Cutting motion
-        const harvestAngle = -30 + (progress * 60); // -30° to +30°
+        // Cutting motion (side sweep)
+        const harvestAngle = -45 + (Math.sin(progress * Math.PI * 2) * 45); // Swing motion
+        const harvestX = 8 + (progress * 6); // Sweep forward
         return {
           visible: true,
           tool: "hoe", // Reuse hoe as scythe
-          x: 8 * scale,
+          x: harvestX * scale,
           y: -4 * scale,
           rotation: harvestAngle,
         };
@@ -820,9 +854,9 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
   
   const toolTransform = getToolTransform();
   
-  // Body bob animation during working
+  // Body bob animation during working (more pronounced)
   const bodyOffsetY = ["hoeing", "planting", "harvesting"].includes(worker.action)
-    ? Math.sin(worker.actionProgress * Math.PI) * 3 * scale
+    ? Math.sin(worker.actionProgress * Math.PI) * 4 * scale
     : 0;
 
   return (
@@ -867,7 +901,7 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
               height: 16 * scale,
               transform: `rotate(${toolTransform.rotation}deg)`,
               transformOrigin: "bottom center",
-              transition: "all 0.1s ease-out",
+              transition: "all 0.15s cubic-bezier(0.4, 0, 0.2, 1)", // Smooth easing
               zIndex: worker.action === "hoeing" ? 1 : -1, // Hoe in front, watering behind
             }}
           >
@@ -950,18 +984,20 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
           </div>
         )}
 
-        {/* Action indicator text (for planting which has no tool) */}
-        {worker.action === "planting" && (
+        {/* Action indicator icon above head */}
+        {worker.action !== "idle" && worker.action !== "walking" && (
           <div
-            className="absolute -top-3 left-1/2 -translate-x-1/2 text-center"
-            style={{ fontSize: 10 * scale }}
+            className="absolute -top-6 left-1/2 -translate-x-1/2 animate-bounce"
+            style={{ 
+              fontSize: 14 * scale,
+              animationDuration: "1s",
+              textShadow: "0 0 3px rgba(0,0,0,0.5)",
+            }}
           >
-            <span
-              className="inline-block animate-bounce"
-              style={{ animationDuration: "0.6s" }}
-            >
-              🌱
-            </span>
+            {worker.action === "hoeing" && "🔨"}
+            {worker.action === "watering" && "💧"}
+            {worker.action === "planting" && "🌱"}
+            {worker.action === "harvesting" && "✂️"}
           </div>
         )}
 
@@ -982,11 +1018,26 @@ function WorkerView({ worker, scale = 1 }: { worker: Worker; scale?: number }) {
               style={{
                 width: `${worker.actionProgress * 100}%`,
                 height: "100%",
-                backgroundColor: "#7fc66a",
-                transition: "width 0.1s linear",
+                backgroundColor: worker.actionProgress > 0.8 ? "#f5cf72" : "#7fc66a",
+                transition: "width 0.1s linear, background-color 0.3s ease",
               }}
             />
           </div>
+        )}
+
+        {/* Completion sparkle */}
+        {["hoeing", "watering", "planting", "harvesting"].includes(worker.action) && 
+         worker.actionProgress > 0.9 && (
+          <div
+            className="absolute left-1/2 top-0 -translate-x-1/2 animate-ping"
+            style={{
+              width: 8 * scale,
+              height: 8 * scale,
+              backgroundColor: "#f5cf72",
+              borderRadius: "50%",
+              opacity: 0.6,
+            }}
+          />
         )}
 
         {/* Shadow */}

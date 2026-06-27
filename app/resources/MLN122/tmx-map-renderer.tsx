@@ -10,6 +10,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FARM_TMX_PATHS, MLN122_TILESET_BASE } from "./asset-paths";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -47,19 +48,18 @@ export interface ParsedTmxMap {
 // Maps the "source" field from TMX <tileset><image> to our public asset URLs.
 // The TMX files reference tilesheets by base name (no extension, relative path).
 
-const TILESHEET_BASE = "/resources/MLN122/generated";
+const TILESHEET_BASE = MLN122_TILESET_BASE;
 
 /** Map from the tileset "source" attribute (lowercase, no extension) → public URL + dimensions */
 const TILESET_IMAGE_MAP: Record<string, { url: string; width: number; height: number }> = {
   // Farm.tmx / Farm_*.tmx share the same tilesheets
   spring_outdoortilesheet_extra:     { url: `${TILESHEET_BASE}/Maps__spring_outdoorTileSheet_extra.png`, width: 128,  height: 128  },
-  "spring_outdoortilesheet_extra":   { url: `${TILESHEET_BASE}/Maps__spring_outdoorTileSheet_extra.png`, width: 128,  height: 128  },
   paths:                             { url: `${TILESHEET_BASE}/Maps__paths.png`,                         width: 64,   height: 256  },
   spring_outdoorstilesheet:          { url: `${TILESHEET_BASE}/Maps__spring_outdoorsTileSheet.png`,      width: 400,  height: 1264 },
   "untitled tile sheet":             { url: `${TILESHEET_BASE}/Maps__spring_outdoorsTileSheet.png`,      width: 400,  height: 1264 },
-  spring_outdoorstilesheet2:         { url: `${TILESHEET_BASE}/Maps__spring_outdoorsTileSheet2.png`,     width: 400,  height: 576  },
-  spring_island_tilesheet_1:         { url: `${TILESHEET_BASE}/Maps__spring_island_tilesheet_1.png`,    width: 400,  height: 528  },
-  spring_waterfalls:                 { url: `${TILESHEET_BASE}/Maps__spring_Waterfalls.png`,             width: 80,   height: 352  },
+  spring_outdoorstilesheet2:         { url: `${TILESHEET_BASE}/Maps__spring_outdoorsTileSheet2.png`,     width: 256,  height: 1120 },
+  spring_island_tilesheet_1:         { url: `${TILESHEET_BASE}/Maps__spring_island_tilesheet_1.png`,    width: 512,  height: 640  },
+  spring_waterfalls:                 { url: `${TILESHEET_BASE}/Maps__spring_Waterfalls.png`,             width: 576,  height: 400  },
 };
 
 /** Normalize a tileset image source string to a lookup key */
@@ -76,13 +76,146 @@ function normalizeTilesetSource(source: string): string {
 const RENDER_LAYER_ORDER = [
   "Back",
   "Back2",
-  "Paths",
   "Buildings",
   "Buildings2",
   "Front",
   "AlwaysFront",
   "AlwaysFront2",
 ];
+
+const HIDDEN_LAYER_NAMES = new Set(["Paths"]);
+
+// ─── Farmable tile extraction ─────────────────────────────────────────────────
+
+/**
+ * Parse a TMX file and return every (col, row) grid position whose Back-layer
+ * tile has the Stardew property  Diggable = "T".
+ *
+ * The algorithm:
+ *  1. Parse all <tileset> elements and collect, per tileset, the set of
+ *     local tile-IDs that carry <property name="Diggable" value="T"/>.
+ *  2. Walk the "Back" layer data; for each global-ID look up its tileset and
+ *     check whether the local-ID is in that tileset's diggable set.
+ *  3. Return the matching (col, row) pairs.
+ */
+export async function fetchFarmableTilePositions(
+  tmxUrl: string
+): Promise<Array<{ x: number; y: number }>> {
+  const res = await fetch(tmxUrl);
+  if (!res.ok) return [];
+  const text = await res.text();
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(text, "text/xml");
+
+  const mapEl = doc.querySelector("map");
+  if (!mapEl) return [];
+
+  const mapWidth = parseInt(mapEl.getAttribute("width") ?? "80", 10);
+
+  // ── Step 1: build a per-tileset set of diggable localIds ──────────────────
+  interface TilesetDigInfo {
+    firstgid: number;
+    /** local tile IDs (0-based) that have Diggable=T */
+    diggableIds: Set<number>;
+    /** total tile count – used to compute upper bound of this tileset */
+    tilecount: number;
+  }
+  const tilesets: TilesetDigInfo[] = [];
+
+  for (const tsEl of Array.from(doc.querySelectorAll("map > tileset"))) {
+    const firstgid = parseInt(tsEl.getAttribute("firstgid") ?? "1", 10);
+    const tilecount = parseInt(tsEl.getAttribute("tilecount") ?? "0", 10);
+    const diggableIds = new Set<number>();
+
+    for (const tileEl of Array.from(tsEl.querySelectorAll("tile"))) {
+      const localId = parseInt(tileEl.getAttribute("id") ?? "-1", 10);
+      if (localId < 0) continue;
+      const diggableProp = tileEl.querySelector(
+        'properties > property[name="Diggable"]'
+      );
+      if (diggableProp?.getAttribute("value") === "T") {
+        diggableIds.add(localId);
+      }
+    }
+
+    tilesets.push({ firstgid, diggableIds, tilecount });
+  }
+  tilesets.sort((a, b) => a.firstgid - b.firstgid);
+
+  function isGidDiggable(gid: number): boolean {
+    const cleanGid = gid & 0x1fffffff;
+    if (cleanGid === 0) return false;
+    // find tileset
+    for (let i = tilesets.length - 1; i >= 0; i--) {
+      if (cleanGid >= tilesets[i].firstgid) {
+        const localId = cleanGid - tilesets[i].firstgid;
+        return tilesets[i].diggableIds.has(localId);
+      }
+    }
+    return false;
+  }
+
+  // ── Step 2: read "Back" layer ─────────────────────────────────────────────
+  function parseLayerData(layerEl: Element) {
+    const dataEl = layerEl.querySelector("data");
+    const encoding = dataEl?.getAttribute("encoding") ?? "csv";
+    const rawData = dataEl?.textContent ?? "";
+
+    if (encoding !== "csv") return [];
+
+    return rawData
+      .split(",")
+      .map((s) => parseInt(s.trim(), 10))
+      .filter((n) => !isNaN(n));
+  }
+
+  const backLayerEl = Array.from(doc.querySelectorAll("map > layer")).find(
+    (l) => l.getAttribute("name") === "Back"
+  );
+  if (!backLayerEl) return [];
+
+  const layerWidth = parseInt(
+    backLayerEl.getAttribute("width") ?? String(mapWidth),
+    10
+  );
+  const gids = parseLayerData(backLayerEl);
+  const blockingLayerNames = new Set([
+    "Buildings",
+    "Buildings2",
+    "Front",
+    "AlwaysFront",
+    "AlwaysFront2",
+  ]);
+  const blockingLayers = Array.from(doc.querySelectorAll("map > layer"))
+    .filter((layerEl) => blockingLayerNames.has(layerEl.getAttribute("name") ?? ""))
+    .map(parseLayerData);
+
+  // ── Step 3: collect diggable positions ────────────────────────────────────
+  const result: Array<{ x: number; y: number }> = [];
+  for (let i = 0; i < gids.length; i++) {
+    const hasBlockingTile = blockingLayers.some((layer) => (layer[i] ?? 0) !== 0);
+    if (isGidDiggable(gids[i]) && !hasBlockingTile) {
+      result.push({ x: i % layerWidth, y: Math.floor(i / layerWidth) });
+    }
+  }
+  return result;
+}
+
+/**
+ * React hook: fetches farmable positions for a given TMX URL.
+ * Returns an empty array while loading.
+ */
+export function useFarmableTiles(tmxUrl: string): Array<{ x: number; y: number }> {
+  const [positions, setPositions] = useState<Array<{ x: number; y: number }>>([]);
+
+  useEffect(() => {
+    setPositions([]);
+    fetchFarmableTilePositions(tmxUrl).then(setPositions).catch(() => setPositions([]));
+  }, [tmxUrl]);
+
+  return positions;
+}
 
 // ─── TMX Parser ───────────────────────────────────────────────────────────────
 
@@ -215,7 +348,7 @@ function getTileBackgroundPosition(
 // ─── React Component ──────────────────────────────────────────────────────────
 
 interface TmxMapRendererProps {
-  /** Path relative to /public, e.g. "/resources/MLN122/maps/Farm.tmx" */
+  /** Public URL, e.g. "/resources/MLN122/assets/farms/standard/map.tmx" */
   tmxPath: string;
   /** Viewport in tile coordinates */
   viewportX: number;
@@ -304,11 +437,14 @@ export function TmxMapRenderer({
   // Determine which layers to render and in what order
   const orderedLayers = RENDER_LAYER_ORDER
     .map((name) => map.layers.find((l) => l.name === name))
-    .filter(Boolean) as TmxLayer[];
+    .filter(
+      (layer): layer is TmxLayer =>
+        layer !== undefined && !HIDDEN_LAYER_NAMES.has(layer.name),
+    );
 
   // Also include any layers not in our explicit order
   const extraLayers = map.layers.filter(
-    (l) => !RENDER_LAYER_ORDER.includes(l.name)
+    (l) => !RENDER_LAYER_ORDER.includes(l.name) && !HIDDEN_LAYER_NAMES.has(l.name)
   );
   const allLayers = [...orderedLayers, ...extraLayers];
 
@@ -421,16 +557,6 @@ function TmxLayerRenderer({
 // ─── Convenience wrappers ─────────────────────────────────────────────────────
 
 /** Farm type → TMX path mapping */
-export const FARM_TMX_PATHS: Record<string, string> = {
-  standard:       "/resources/MLN122/maps/Farm.tmx",
-  hilltop:        "/resources/MLN122/maps/Farm_Mining.tmx",
-  riverland:      "/resources/MLN122/maps/Farm_Fishing.tmx",
-  forest:         "/resources/MLN122/maps/Farm_Foraging.tmx",
-  wilderness:     "/resources/MLN122/maps/Farm_Combat.tmx",
-  "four-corners": "/resources/MLN122/maps/Farm_FourCorners.tmx",
-  beach:          "/resources/MLN122/maps/Farm_Ranching.tmx",
-};
-
 /** Recommended viewport for each farm type (in tile coordinates) */
 export const FARM_VIEWPORTS: Record<
   string,

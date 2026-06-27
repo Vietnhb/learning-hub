@@ -5,8 +5,9 @@
 
 import { type ReactNode } from "react";
 import { CoinIcon } from "./pixel-components";
+import { MLN122_SHARED_SCENE_BASE } from "./asset-paths";
 
-const CHARACTER_ASSET_BASE = "/resources/MLN122/scene-assets/characters";
+const CHARACTER_ASSET_BASE = `${MLN122_SHARED_SCENE_BASE}/characters`;
 
 // ===== LAYOUT COMPONENTS =====
 
@@ -51,7 +52,7 @@ export function RoleCard({
       style={{ backgroundColor: color }}
     >
       {roleMedia ? (
-        <div className="flex h-24 items-end justify-center border-2 border-[#0b1209] bg-[#f5cf72]/20">
+        <div className="relative w-full aspect-square overflow-hidden border-2 border-[#0b1209] bg-[#0b1209]">
           {roleMedia}
         </div>
       ) : (
@@ -87,13 +88,17 @@ function getRoleMedia(title: string) {
     fileName = "role-worker-card.png";
   }
 
+  if (lowerTitle.includes("công cụ") || lowerTitle.includes("ai")) {
+    fileName = "role-ai-tool-card.png";
+  }
+
   if (!fileName) return null;
 
   return (
     <img
       src={`${CHARACTER_ASSET_BASE}/${fileName}`}
       alt={alt}
-      className="pixelated h-24 w-24 object-contain object-bottom"
+      className="pixelated h-full w-full object-cover"
       draggable={false}
     />
   );
@@ -363,7 +368,73 @@ export function TheoryStep({ number, text }: TheoryStepProps) {
 export function LoadingSpinner() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#182614]">
-      <div className="pixel-loading" />
+      <div className="grid gap-6 text-center">
+        {/* Animated pixel art hoe */}
+        <div className="mx-auto relative" style={{ width: 80, height: 80 }}>
+          <div 
+            className="absolute inset-0 flex items-center justify-center"
+            style={{
+              animation: "swing 1.2s ease-in-out infinite",
+            }}
+          >
+            <div 
+              className="border-4 border-[#f5cf72] bg-[#8b6f47]" 
+              style={{ 
+                width: 12, 
+                height: 40,
+                transformOrigin: "bottom center",
+              }} 
+            />
+            <div 
+              className="absolute bottom-0 border-4 border-[#f5cf72] bg-[#5a4a3a]" 
+              style={{ 
+                width: 32, 
+                height: 12,
+                left: -10,
+              }} 
+            />
+          </div>
+        </div>
+        
+        {/* Loading text */}
+        <div>
+          <p className="pixel-eyebrow text-[#f5cf72]">Đang tải</p>
+          <p className="mt-2 font-mono text-2xl font-black text-white">
+            Chuẩn bị nông trại
+            <span 
+              className="inline-block ml-1"
+              style={{
+                animation: "dots 1.5s steps(4, end) infinite",
+              }}
+            >
+              ...
+            </span>
+          </p>
+        </div>
+      </div>
+      
+      <style jsx>{`
+        @keyframes swing {
+          0%, 100% {
+            transform: rotate(-30deg);
+          }
+          50% {
+            transform: rotate(30deg);
+          }
+        }
+        
+        @keyframes dots {
+          0%, 20% {
+            opacity: 0;
+          }
+          40% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 }

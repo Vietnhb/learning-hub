@@ -32,9 +32,8 @@ import {
 
 // Import new polished components
 import { VillageHero } from "./village-scene";
-import { FarmScene } from "./farm-scene";
-import { AutomatedFarmingScene } from "./automated-farming";
 import { MultiMapFarmingScene } from "./multi-map-farming";
+import { FARM_MAPS, type FarmType } from "./farm-maps-config";
 import { ScreenTransition } from "./animations";
 import { ResultScreen as NewResultScreen } from "./result-screen";
 import { InvestmentScreen as NewInvestmentScreen } from "./investment-screen";
@@ -56,9 +55,10 @@ export default function PixelRentFarmGame() {
   const { user, loading } = useAuth();
   const [screen, setScreen] = useState<Screen>("title");
   const [selectedPlotId, setSelectedPlotId] = useState<PlotId>("fertile");
+  const [selectedFarmType, setSelectedFarmType] =
+    useState<FarmType>("standard");
   const [investment, setInvestment] =
     useState<InvestmentState>(DEFAULT_INVESTMENT);
-  const [useAutomatedFarming, setUseAutomatedFarming] = useState(true);
 
   const selectedPlot = getPlot(selectedPlotId);
   const result = useMemo(
@@ -75,6 +75,7 @@ export default function PixelRentFarmGame() {
   const resetGame = () => {
     setScreen("title");
     setSelectedPlotId("fertile");
+    setSelectedFarmType("standard");
     setInvestment(DEFAULT_INVESTMENT);
   };
 
@@ -131,16 +132,6 @@ export default function PixelRentFarmGame() {
             ))}
           </div>
 
-          {screen === "farming" && (
-            <Button
-              type="button"
-              variant="ghost"
-              onClick={() => setUseAutomatedFarming(!useAutomatedFarming)}
-              className="pixel-button ml-2 gap-2 border-2 border-[#0b1209] bg-[#9ed7ef] px-3 py-2 text-xs font-black text-[#2d2114] hover:bg-[#b9d7e8]"
-            >
-              {useAutomatedFarming ? "🗺️ Multi-Map" : "🖼️ Simple"}
-            </Button>
-          )}
         </header>
 
         <div className="grid flex-1 gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -164,7 +155,8 @@ export default function PixelRentFarmGame() {
                 <FarmingScreen 
                   plot={selectedPlot} 
                   investment={investment}
-                  useAutomated={useAutomatedFarming}
+                  farmType={selectedFarmType}
+                  onFarmTypeSelect={setSelectedFarmType}
                 />
               )}
               {screen === "result" && (
@@ -235,12 +227,10 @@ function StoryScreen() {
         title="Ba giai cấp gặp nhau trong làng"
         text="Bạn vào vai nhà tư bản nông nghiệp. Bạn thuê đất, thuê công nhân, đầu tư vốn, bán nông sản, rồi trả tô điền cho địa chủ."
       />
-      <div className="grid gap-4 md:grid-cols-5">
+      <div className="grid gap-4 md:grid-cols-3">
         <RoleCard icon={<Landmark />} title="Địa chủ" text="Sở hữu đất và thu tô điền." />
         <RoleCard icon={<BriefcaseBusiness />} title="Bạn" text="Thuê đất và tổ chức sản xuất." />
         <RoleCard icon={<Users />} title="Công nhân" text="Tạo ra giá trị mới qua lao động sống." />
-        <RoleCard icon={<Factory />} title="Quản lý" text="Cải thiện điều phối và hiệu quả." />
-        <RoleCard icon={<Bot />} title="Công cụ AI" text="Nâng cao năng suất, nhưng không phải nguồn giá trị." />
       </div>
       <TheoryNote>
         Ý tưởng chính: giá trị thặng dư đến từ lao động sống trong sản xuất. Công cụ, quản lý và AI có thể nâng cao năng suất, nhưng chúng không thay thế vai trò của lao động làm nguồn giá trị thặng dư.
@@ -305,6 +295,66 @@ function LandScreen({
           </button>
         ))}
       </div>
+
+    </div>
+  );
+}
+
+function FarmTypePicker({
+  selectedFarmType,
+  onSelect,
+}: {
+  selectedFarmType: FarmType;
+  onSelect: (id: FarmType) => void;
+}) {
+  return (
+    <div className="grid gap-3 border-4 border-[#0b1209] bg-[#20361d] p-3 shadow-[4px_4px_0_#0b1209]">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="pixel-eyebrow">Ki&#7875;u trang tr&#7841;i</p>
+          <h3 className="text-xl font-black text-white">
+            Ch&#7885;n b&#7843;n &#273;&#7891; canh t&#225;c
+          </h3>
+        </div>
+        <span className="border-2 border-[#0b1209] bg-[#f5cf72] px-3 py-2 font-mono text-xs font-black text-[#2d2114]">
+          {FARM_MAPS[selectedFarmType].nameVi}
+        </span>
+      </div>
+      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+        {(Object.keys(FARM_MAPS) as FarmType[]).map((farmType) => {
+          const config = FARM_MAPS[farmType];
+          const selected = selectedFarmType === farmType;
+
+          return (
+            <button
+              key={farmType}
+              type="button"
+              onClick={() => onSelect(farmType)}
+              className={`flex min-h-[76px] items-center justify-between gap-3 border-2 p-3 text-left transition ${
+                selected
+                  ? "border-[#f5cf72] bg-[#10190d]"
+                  : "border-[#0b1209] bg-[#263f22] hover:border-[#f5cf72]"
+              }`}
+            >
+              <div className="min-w-0">
+                <span className="text-xs font-black leading-tight text-white">
+                  {config.nameVi}
+                </span>
+                <p className="mt-1 text-[10px] font-bold leading-snug text-[#fff5cf]/60">
+                  {config.farmingZones.length} khu canh tac
+                </p>
+              </div>
+              <div className="shrink-0">
+                {selected && (
+                  <span className="border border-[#f5cf72] px-1.5 py-0.5 text-[10px] font-black text-[#f5cf72]">
+                    Ch&#7885;n
+                  </span>
+                )}
+              </div>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -312,11 +362,13 @@ function LandScreen({
 function FarmingScreen({
   plot,
   investment,
-  useAutomated = true,
+  farmType,
+  onFarmTypeSelect,
 }: {
   plot: Plot;
   investment: InvestmentState;
-  useAutomated?: boolean;
+  farmType: FarmType;
+  onFarmTypeSelect: (id: FarmType) => void;
 }) {
   return (
     <div className="grid gap-5">
@@ -326,11 +378,16 @@ function FarmingScreen({
         text="Xem quá trình sản xuất. Công nhân tạo ra giá trị, đầu tư định hình năng suất."
       />
       
-      {useAutomated ? (
-        <MultiMapFarmingScene plot={plot} investment={investment} />
-      ) : (
-        <FarmScene plot={plot} investment={investment} animated={true} />
-      )}
+      <FarmTypePicker
+        selectedFarmType={farmType}
+        onSelect={onFarmTypeSelect}
+      />
+
+      <MultiMapFarmingScene
+        plot={plot}
+        investment={investment}
+        farmType={farmType}
+      />
     </div>
   );
 }
@@ -453,22 +510,10 @@ function MiniMap({ plot }: { plot: Plot }) {
           </div>
         ))}
       </div>
-      <div className="mt-3 grid grid-cols-2 gap-2">
-        <div className="scale-75 origin-top-left">
-          <img 
-            src={`/resources/MLN122/asset/${plot.buildingAsset}`}
-            alt="Địa chủ"
-            className="pixelated h-16 w-20 object-contain"
-          />
-        </div>
-        <div className="scale-75 origin-top-right">
-          <img 
-            src="/resources/MLN122/asset/Buildings__Shed.png"
-            alt="Chợ"
-            className="pixelated h-16 w-20 object-contain"
-          />
-        </div>
-      </div>
     </div>
   );
 }
+
+
+
+

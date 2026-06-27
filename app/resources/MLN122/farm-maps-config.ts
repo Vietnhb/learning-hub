@@ -3,6 +3,8 @@
  * Metadata for all 7 farm types from Stardew Valley
  */
 
+import { FARM_TMX_PATHS } from "./asset-paths";
+
 export type FarmType =
   | "standard"
   | "hilltop"
@@ -48,7 +50,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Tiêu chuẩn",
     description: "Largest crop area - perfect for farming focus",
     descriptionVi: "Diện tích trồng trọt lớn nhất - hoàn hảo cho nông nghiệp",
-    tmxFile: "Farm.tmx",
+    tmxFile: FARM_TMX_PATHS.standard,
     width: 80,
     height: 65,
     recommended: true,
@@ -84,7 +86,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Đồi núi (Khai mỏ)",
     description: "Good for crops + mining ore deposits",
     descriptionVi: "Tốt cho cây trồng + khai thác quặng",
-    tmxFile: "Farm_Mining.tmx",
+    tmxFile: FARM_TMX_PATHS.hilltop,
     width: 100,
     height: 75,
     farmingZones: [
@@ -119,7 +121,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Ven sông (Câu cá)",
     description: "Limited crop space, great for fishing",
     descriptionVi: "Diện tích trồng trọt hạn chế, tuyệt vời cho câu cá",
-    tmxFile: "Farm_Fishing.tmx",
+    tmxFile: FARM_TMX_PATHS.riverland,
     width: 100,
     height: 75,
     farmingZones: [
@@ -160,7 +162,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Rừng (Hái lượm)",
     description: "Trees and forageable items, moderate crop space",
     descriptionVi: "Cây cối và vật phẩm hái lượm, diện tích trồng trọt vừa phải",
-    tmxFile: "Farm_Foraging.tmx",
+    tmxFile: FARM_TMX_PATHS.forest,
     width: 100,
     height: 75,
     farmingZones: [
@@ -195,7 +197,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Hoang dã (Chiến đấu)",
     description: "Monsters spawn at night, good crop space",
     descriptionVi: "Quái vật xuất hiện vào đêm, diện tích trồng trọt tốt",
-    tmxFile: "Farm_Combat.tmx",
+    tmxFile: FARM_TMX_PATHS.wilderness,
     width: 100,
     height: 75,
     farmingZones: [
@@ -230,7 +232,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Bốn góc",
     description: "Four distinct areas for co-op play",
     descriptionVi: "Bốn khu vực riêng biệt cho chơi cùng nhau",
-    tmxFile: "Farm_FourCorners.tmx",
+    tmxFile: FARM_TMX_PATHS["four-corners"],
     width: 100,
     height: 75,
     farmingZones: [
@@ -281,7 +283,7 @@ export const FARM_MAPS: Record<FarmType, FarmMapConfig> = {
     nameVi: "Trang trại Bãi biển (Chăn nuôi)",
     description: "Sandy soil, perfect for animals",
     descriptionVi: "Đất cát, hoàn hảo cho chăn nuôi",
-    tmxFile: "Farm_Ranching.tmx",
+    tmxFile: FARM_TMX_PATHS.beach,
     width: 100,
     height: 75,
     farmingZones: [

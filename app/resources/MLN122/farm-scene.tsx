@@ -2,7 +2,7 @@
  * Clean MLN122 farm scene.
  *
  * The main scene uses only cropped files from:
- * public/resources/MLN122/scene-assets
+ * public/resources/MLN122/assets/shared/scene
  */
 
 import type { CSSProperties, ReactNode } from "react";
@@ -11,6 +11,7 @@ import farmRanchingViewport from "./farm-ranching-viewport.json";
 import { type InvestmentState, type Plot } from "./game-model";
 import { InfoTile } from "./ui-components";
 import { Z_LAYERS, calculateYSortedZIndex } from "./rendering-utils";
+import { MLN122_SHARED_SCENE_BASE } from "./asset-paths";
 
 interface FarmSceneProps {
   plot: Plot;
@@ -18,7 +19,7 @@ interface FarmSceneProps {
   animated?: boolean;
 }
 
-const SCENE_ASSET_BASE = "/resources/MLN122/scene-assets";
+const SCENE_ASSET_BASE = MLN122_SHARED_SCENE_BASE;
 const TILE_SIZE = 16;
 const SCENE_WIDTH = 576;
 const SCENE_HEIGHT = 512;
@@ -35,16 +36,12 @@ const WORKER_SPRITES = [
 const FARM_MAP_LAYER_ORDER = [
   "Back",
   "Back2",
-  "Paths",
   "Buildings",
   "Buildings2",
   "Front",
   "AlwaysFront",
   "AlwaysFront2",
 ];
-const UNUSED_PATH_TILE_INDEXES = new Set([
-  7, 9, 10, 11, 21, 22, 24, 25, 26, 29, 30, 36, 18,
-]);
 
 type FarmMapTile = {
   Sheet: string;
@@ -224,7 +221,7 @@ function FarmMapTileSprite({
   x: number;
   y: number;
 }) {
-  if (tile.Sheet === "Paths" && UNUSED_PATH_TILE_INDEXES.has(tile.Index)) {
+  if (tile.Sheet === "Paths") {
     return null;
   }
 

@@ -11,8 +11,9 @@ import type { CSSProperties } from "react";
 import farmRanchingViewport from "./farm-ranching-viewport.json";
 import { type InvestmentState, type Plot } from "./game-model";
 import { Z_LAYERS, calculateYSortedZIndex } from "./rendering-utils";
+import { MLN122_SHARED_SCENE_BASE } from "./asset-paths";
 
-const SCENE_ASSET_BASE = "/resources/MLN122/scene-assets";
+const SCENE_ASSET_BASE = MLN122_SHARED_SCENE_BASE;
 const TILE_SIZE = 16;
 const SCENE_WIDTH = 576;
 const SCENE_HEIGHT = 512;

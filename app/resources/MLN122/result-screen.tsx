@@ -247,19 +247,19 @@ function GroundRentSection({ result, plot }: { result: Calculation; plot: Plot }
 
       <div className="grid gap-3 md:grid-cols-3">
         <RentBox
-          title="Differential Rent I"
+          title="Tô điền vi phân I"
           value={result.differentialRentI}
-          text="Extra profit from better natural fertility and location compared to poor land."
+          text="Lợi nhuận thêm từ độ phì nhiêu tự nhiên và vị trí tốt hơn so với đất xấu."
         />
         <RentBox
-          title="Differential Rent II"
+          title="Tô điền vi phân II"
           value={result.differentialRentII}
-          text="Extra profit from additional capital investment on the same plot."
+          text="Lợi nhuận thêm từ đầu tư vốn bổ sung trên cùng một lô đất."
         />
         <RentBox
-          title="Absolute Rent"
+          title="Tô điền tuyệt đối"
           value={result.absoluteRent}
-          text="Basic rent paid on all land because of private land ownership."
+          text="Tô điền cơ bản phải trả cho tất cả đất vì sở hữu đất tư nhân."
         />
       </div>
 
