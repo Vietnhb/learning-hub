@@ -1,5 +1,5 @@
 /**
- * Multi-Map Automated Farming with Real TMX Rendering
+ * Farming scene with real TMX map rendering
  *
  * ✅ Renders ACTUAL Stardew Valley farm maps from .tmx files
  * ✅ Parses XML tile data and renders using real tilesheet PNGs
@@ -105,7 +105,7 @@ function getVisibleZone(
   };
 }
 
-export function MultiMapFarmingScene({
+export function FarmingScene({
   plot,
   investment,
   farmType,
@@ -586,7 +586,7 @@ export function MultiMapFarmingScene({
   const overlayOffsetY = -(vpDef.y * TILE_SIZE * vpScale);
 
   return (
-    <div className="multi-map-farming grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]">
+    <div className="farming-scene grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]">
       <div className="border-4 border-[#0b1209] bg-[#4f8547] p-4 shadow-[6px_6px_0_#0b1209]">
         <div
           className="relative max-w-full overflow-hidden border-4 border-[#0b1209]"

@@ -882,7 +882,7 @@ export function PixelStyles() {
       .sprite-inner {
         image-rendering: pixelated;
         image-rendering: -moz-crisp-edges;
-        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
       }
 
       @keyframes walkPixel {

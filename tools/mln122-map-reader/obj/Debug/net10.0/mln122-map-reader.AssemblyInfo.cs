@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mln122-map-reader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2c773d5faedfa83f4a3db1fb5a02952f8207773")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c39ef5291090d7206d6ded22ba4233d12b690c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("mln122-map-reader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mln122-map-reader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

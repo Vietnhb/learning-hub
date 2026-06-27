@@ -30,9 +30,8 @@ import {
   type Screen,
 } from "./core/game-model";
 
-// Import new polished components
 import { VillageHero } from "./scenes/village-scene";
-import { MultiMapFarmingScene } from "./scenes/farming-scene";
+import { FarmingScene } from "./scenes/farming-scene";
 import { FARM_MAPS, type FarmType } from "./core/farm-types";
 import { MLN122_SPRITE_BASE } from "./core/paths";
 import { ScreenTransition } from "./ui/animations";
@@ -384,7 +383,7 @@ function FarmingScreen({
         onSelect={onFarmTypeSelect}
       />
 
-      <MultiMapFarmingScene
+      <FarmingScene
         plot={plot}
         investment={investment}
         farmType={farmType}
@@ -514,6 +513,5 @@ function MiniMap({ plot }: { plot: Plot }) {
     </div>
   );
 }
-
 
 
