@@ -235,7 +235,7 @@ export function MultiMapFarmingScene({
       });
     }
     setWorkers(initialWorkers);
-  }, [investment.workers, farmType, tiles]);
+  }, [investment.workers, farmType, tiles.length]);
 
   // Main automation loop
   useEffect(() => {
