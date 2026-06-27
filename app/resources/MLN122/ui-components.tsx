@@ -6,6 +6,8 @@
 import { type ReactNode } from "react";
 import { CoinIcon } from "./pixel-components";
 
+const CHARACTER_ASSET_BASE = "/resources/MLN122/scene-assets/characters";
+
 // ===== LAYOUT COMPONENTS =====
 
 interface ScreenHeadingProps {
@@ -28,23 +30,72 @@ export function ScreenHeading({ eyebrow, title, text }: ScreenHeadingProps) {
 
 interface RoleCardProps {
   icon: ReactNode;
+  media?: ReactNode;
   title: string;
   text: string;
   color?: string;
 }
 
-export function RoleCard({ icon, title, text, color = "#10190d" }: RoleCardProps) {
+export function RoleCard({
+  icon,
+  media,
+  title,
+  text,
+  color = "#10190d",
+}: RoleCardProps) {
+  const roleMedia = media ?? getRoleMedia(title);
+
   return (
     <div 
       className="pixel-card grid gap-3 p-4"
       style={{ backgroundColor: color }}
     >
-      <span className="flex h-12 w-12 items-center justify-center border-2 border-[#0b1209] bg-[#f5cf72] text-[#2d2114]">
-        {icon}
-      </span>
+      {roleMedia ? (
+        <div className="flex h-24 items-end justify-center border-2 border-[#0b1209] bg-[#f5cf72]/20">
+          {roleMedia}
+        </div>
+      ) : (
+        <span className="flex h-12 w-12 items-center justify-center border-2 border-[#0b1209] bg-[#f5cf72] text-[#2d2114]">
+          {icon}
+        </span>
+      )}
       <h3 className="text-lg font-black text-white">{title}</h3>
       <p className="pixel-text text-sm">{text}</p>
     </div>
+  );
+}
+
+function getRoleMedia(title: string) {
+  const lowerTitle = title.toLowerCase();
+  let fileName: string | null = null;
+  let alt = title;
+
+  if (lowerTitle.includes("Ä‘á»‹a") || lowerTitle.includes("địa")) {
+    fileName = "role-landlord-card.png";
+  } else if (lowerTitle.includes("báº¡n") || lowerTitle.includes("bạn")) {
+    fileName = "role-agricultural-capitalist-card.png";
+    alt = "Nhà tư bản nông nghiệp";
+  } else if (lowerTitle.includes("quáº£n") || lowerTitle.includes("quản")) {
+    fileName = "role-manager-card.png";
+  }
+
+  if (
+    lowerTitle.includes("cÃ´ng nh") ||
+    lowerTitle.includes("cã´ng nh") ||
+    lowerTitle.includes("công nh")
+  ) {
+    fileName = "role-worker-card.png";
+  }
+
+  if (!fileName) return null;
+
+  return (
+    <img
+      src={`${CHARACTER_ASSET_BASE}/${fileName}`}
+      alt={alt}
+      className="pixelated h-24 w-24 object-contain object-bottom"
+      draggable={false}
+    />
   );
 }
 

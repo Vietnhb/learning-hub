@@ -33,6 +33,8 @@ import {
 // Import new polished components
 import { VillageHero } from "./village-scene";
 import { FarmScene } from "./farm-scene";
+import { AutomatedFarmingScene } from "./automated-farming";
+import { MultiMapFarmingScene } from "./multi-map-farming";
 import { ScreenTransition } from "./animations";
 import { ResultScreen as NewResultScreen } from "./result-screen";
 import { InvestmentScreen as NewInvestmentScreen } from "./investment-screen";
@@ -56,6 +58,7 @@ export default function PixelRentFarmGame() {
   const [selectedPlotId, setSelectedPlotId] = useState<PlotId>("fertile");
   const [investment, setInvestment] =
     useState<InvestmentState>(DEFAULT_INVESTMENT);
+  const [useAutomatedFarming, setUseAutomatedFarming] = useState(true);
 
   const selectedPlot = getPlot(selectedPlotId);
   const result = useMemo(
@@ -127,6 +130,17 @@ export default function PixelRentFarmGame() {
               </button>
             ))}
           </div>
+
+          {screen === "farming" && (
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={() => setUseAutomatedFarming(!useAutomatedFarming)}
+              className="pixel-button ml-2 gap-2 border-2 border-[#0b1209] bg-[#9ed7ef] px-3 py-2 text-xs font-black text-[#2d2114] hover:bg-[#b9d7e8]"
+            >
+              {useAutomatedFarming ? "🗺️ Multi-Map" : "🖼️ Simple"}
+            </Button>
+          )}
         </header>
 
         <div className="grid flex-1 gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -147,7 +161,11 @@ export default function PixelRentFarmGame() {
                 />
               )}
               {screen === "farming" && (
-                <FarmingScreen plot={selectedPlot} investment={investment} />
+                <FarmingScreen 
+                  plot={selectedPlot} 
+                  investment={investment}
+                  useAutomated={useAutomatedFarming}
+                />
               )}
               {screen === "result" && (
                 <NewResultScreen result={result} plot={selectedPlot} />
@@ -173,6 +191,7 @@ export default function PixelRentFarmGame() {
               onReset={resetGame}
               nextDisabled={screen === "summary"}
             />
+            
             <MiniMap plot={selectedPlot} />
           </aside>
         </div>
@@ -293,9 +312,11 @@ function LandScreen({
 function FarmingScreen({
   plot,
   investment,
+  useAutomated = true,
 }: {
   plot: Plot;
   investment: InvestmentState;
+  useAutomated?: boolean;
 }) {
   return (
     <div className="grid gap-5">
@@ -304,7 +325,12 @@ function FarmingScreen({
         title="Nông sản phát triển qua lao động và đầu tư"
         text="Xem quá trình sản xuất. Công nhân tạo ra giá trị, đầu tư định hình năng suất."
       />
-      <FarmScene plot={plot} investment={investment} animated={true} />
+      
+      {useAutomated ? (
+        <MultiMapFarmingScene plot={plot} investment={investment} />
+      ) : (
+        <FarmScene plot={plot} investment={investment} animated={true} />
+      )}
     </div>
   );
 }

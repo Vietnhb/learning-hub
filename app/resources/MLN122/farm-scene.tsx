@@ -23,10 +23,14 @@ const TILE_SIZE = 16;
 const SCENE_WIDTH = 576;
 const SCENE_HEIGHT = 512;
 const WORKER_SPRITES = [
-  "characters/worker-v2-male-0.png",
-  "characters/worker-v2-female-1.png",
-  "characters/worker-v2-male-2.png",
-  "characters/worker-v2-female-3.png",
+  "characters/worker-v3-0.png",
+  "characters/worker-v3-1.png",
+  "characters/worker-v3-2.png",
+  "characters/worker-v3-3.png",
+  "characters/worker-v3-4.png",
+  "characters/worker-v3-5.png",
+  "characters/worker-v3-6.png",
+  "characters/worker-v3-7.png",
 ];
 const FARM_MAP_LAYER_ORDER = [
   "Back",
@@ -317,7 +321,7 @@ function CharacterLayer({
         <SceneWorker
           variant={0}
           scale={1}
-          sprite="characters/manager-v2-male.png"
+          sprite="characters/manager-v3.png"
         />
       ),
     });
