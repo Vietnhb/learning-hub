@@ -5828,6 +5828,290 @@
           ]
         }
       ]
+    },
+    {
+      "id": 47,
+      "title": "Thụ - Lạc - Diện - Tiếp",
+      "kanji": [
+        {
+          "character": "受",
+          "meaning": "Thụ, nhận, đậu",
+          "onyomi": "ジュ",
+          "kunyomi": "う-ける、う-かる",
+          "examples": [
+            {
+              "word": "受験",
+              "reading": "じゅけん",
+              "meaning": "Dự thi, thi cử"
+            },
+            {
+              "word": "受かる",
+              "reading": "うかる",
+              "meaning": "Đậu, thi đỗ"
+            },
+            {
+              "word": "受ける",
+              "reading": "うける",
+              "meaning": "Nhận, tham gia, chịu"
+            }
+          ]
+        },
+        {
+          "character": "落",
+          "meaning": "Lạc, rơi, rớt",
+          "onyomi": "ラク",
+          "kunyomi": "お-ちる、お-とす",
+          "examples": [
+            {
+              "word": "転落",
+              "reading": "てんらく",
+              "meaning": "Rơi xuống, ngã xuống"
+            },
+            {
+              "word": "落とす",
+              "reading": "おとす",
+              "meaning": "Làm rơi, đánh rơi"
+            },
+            {
+              "word": "落ちる",
+              "reading": "おちる",
+              "meaning": "Rơi, rớt, trượt"
+            }
+          ]
+        },
+        {
+          "character": "面",
+          "meaning": "Diện, mặt, bề mặt",
+          "onyomi": "メン",
+          "kunyomi": "おも、おもて、つら",
+          "examples": [
+            {
+              "word": "面接",
+              "reading": "めんせつ",
+              "meaning": "Phỏng vấn"
+            },
+            {
+              "word": "面白い",
+              "reading": "おもしろい",
+              "meaning": "Thú vị, hay"
+            },
+            {
+              "word": "面",
+              "reading": "めん",
+              "meaning": "Mặt, bề mặt"
+            },
+            {
+              "word": "画面",
+              "reading": "がめん",
+              "meaning": "Màn hình"
+            }
+          ]
+        },
+        {
+          "character": "接",
+          "meaning": "Tiếp, nối, tiếp xúc",
+          "onyomi": "セツ",
+          "kunyomi": "つ-ぐ",
+          "examples": [
+            {
+              "word": "面接",
+              "reading": "めんせつ",
+              "meaning": "Phỏng vấn"
+            },
+            {
+              "word": "接ぐ",
+              "reading": "つぐ",
+              "meaning": "Nối, ghép"
+            },
+            {
+              "word": "接客",
+              "reading": "せっきゃく",
+              "meaning": "Tiếp khách, phục vụ khách"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Bình - Đẳng - Quân - Suất",
+      "kanji": [
+        {
+          "character": "平",
+          "meaning": "Bình, bằng phẳng, bình thường",
+          "onyomi": "ヘイ、ビョウ",
+          "kunyomi": "たい-ら、ひら",
+          "examples": [
+            {
+              "word": "平等",
+              "reading": "びょうどう",
+              "meaning": "Bình đẳng"
+            },
+            {
+              "word": "平均台",
+              "reading": "へいきんだい",
+              "meaning": "Xà thăng bằng"
+            },
+            {
+              "word": "平ら",
+              "reading": "たいら",
+              "meaning": "Bằng phẳng"
+            },
+            {
+              "word": "平和",
+              "reading": "へいわ",
+              "meaning": "Hòa bình"
+            },
+            {
+              "word": "平日",
+              "reading": "へいじつ",
+              "meaning": "Ngày thường"
+            }
+          ]
+        },
+        {
+          "character": "等",
+          "meaning": "Đẳng, bằng nhau, hạng",
+          "onyomi": "トウ",
+          "kunyomi": "ひと-しい、など",
+          "examples": [
+            {
+              "word": "平等",
+              "reading": "びょうどう",
+              "meaning": "Bình đẳng"
+            }
+          ]
+        },
+        {
+          "character": "均",
+          "meaning": "Quân, đều, cân bằng",
+          "onyomi": "キン",
+          "kunyomi": "なら-す",
+          "examples": [
+            {
+              "word": "百均",
+              "reading": "ひゃっきん",
+              "meaning": "Cửa hàng đồng giá 100 yên"
+            },
+            {
+              "word": "平均台",
+              "reading": "へいきんだい",
+              "meaning": "Xà thăng bằng"
+            }
+          ]
+        },
+        {
+          "character": "率",
+          "meaning": "Suất, tỉ lệ, dẫn dắt",
+          "onyomi": "リツ、ソツ",
+          "kunyomi": "ひき-いる",
+          "examples": [
+            {
+              "word": "確率",
+              "reading": "かくりつ",
+              "meaning": "Xác suất"
+            },
+            {
+              "word": "倍率",
+              "reading": "ばいりつ",
+              "meaning": "Tỉ lệ, độ phóng đại"
+            },
+            {
+              "word": "率いる",
+              "reading": "ひきいる",
+              "meaning": "Dẫn dắt, chỉ huy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Thành - Lương - Ác - Tích",
+      "kanji": [
+        {
+          "character": "成",
+          "meaning": "Thành, trở thành, hoàn thành",
+          "onyomi": "セイ、ジョウ",
+          "kunyomi": "な-る、な-す",
+          "examples": [
+            {
+              "word": "成る",
+              "reading": "なる",
+              "meaning": "Trở thành"
+            },
+            {
+              "word": "成績",
+              "reading": "せいせき",
+              "meaning": "Thành tích, điểm số"
+            },
+            {
+              "word": "成功",
+              "reading": "せいこう",
+              "meaning": "Thành công"
+            }
+          ]
+        },
+        {
+          "character": "良",
+          "meaning": "Lương, tốt",
+          "onyomi": "リョウ",
+          "kunyomi": "よ-い",
+          "examples": [
+            {
+              "word": "仲良し",
+              "reading": "なかよし",
+              "meaning": "Bạn thân, thân thiết"
+            },
+            {
+              "word": "良い",
+              "reading": "よい",
+              "meaning": "Tốt"
+            }
+          ]
+        },
+        {
+          "character": "悪",
+          "meaning": "Ác, xấu",
+          "onyomi": "アク、オ",
+          "kunyomi": "わる-い",
+          "examples": [
+            {
+              "word": "悪意",
+              "reading": "あくい",
+              "meaning": "Ác ý"
+            },
+            {
+              "word": "悪口",
+              "reading": "わるぐち",
+              "meaning": "Nói xấu"
+            },
+            {
+              "word": "悪魔",
+              "reading": "あくま",
+              "meaning": "Ác ma"
+            }
+          ]
+        },
+        {
+          "character": "績",
+          "meaning": "Tích, thành tích, kết quả",
+          "onyomi": "セキ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "業績",
+              "reading": "ぎょうせき",
+              "meaning": "Thành tích, kết quả công việc"
+            },
+            {
+              "word": "成績",
+              "reading": "せいせき",
+              "meaning": "Thành tích, điểm số"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
