@@ -806,7 +806,24 @@ export function SeedIcon({ scale = 1.8 }: { scale?: number }) {
  * Coin/Money icon
  */
 export function CoinIcon({ scale = 1.5 }: { scale?: number }) {
-  return <Sprite assetId="icon_coin" scale={scale} />;
+  const size = 16 * scale;
+
+  return (
+    <img
+      src={getAssetUrl("icon-coin.png")}
+      alt=""
+      aria-hidden="true"
+      className="pixelated"
+      draggable={false}
+      style={{
+        display: "block",
+        flexShrink: 0,
+        width: size,
+        height: size,
+        imageRendering: "pixelated",
+      }}
+    />
+  );
 }
 
 // ===== PLOT VISUALIZATION =====
