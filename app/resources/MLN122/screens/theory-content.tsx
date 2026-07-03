@@ -5,10 +5,22 @@
 
 import { motion } from "framer-motion";
 import { type ReactNode } from "react";
-import { type Calculation, type Plot, type InvestmentState, money } from "../core/game-model";
+import {
+  type Calculation,
+  type Plot,
+  type InvestmentState,
+  money,
+} from "../core/game-model";
 import { CoinIcon } from "../ui/pixel-art";
 import { TheoryStep } from "../ui/components";
-import { Users, Factory, TrendingUp, ArrowRight, Coins, Home } from "lucide-react";
+import {
+  Users,
+  Factory,
+  TrendingUp,
+  ArrowRight,
+  Coins,
+  Home,
+} from "lucide-react";
 
 // ===== VALUE FLOW DIAGRAM =====
 
@@ -52,7 +64,7 @@ export function ValueFlowDiagram({ result }: { result: Calculation }) {
             subtitle="Tô điền"
             value={result.groundRent}
             color="#d94b35"
-            description="Chiết từ giá trị thặng dư vì chủ đất sở hữu đất"
+            description="Phần chủ đất nhận nhờ quyền cho thuê đất"
             compact
           />
           <FlowNode
@@ -70,11 +82,13 @@ export function ValueFlowDiagram({ result }: { result: Calculation }) {
       {/* Giải thích */}
       <div className="mt-6 border-l-4 border-[#f5cf72] bg-[#10190d] p-4">
         <p className="text-sm leading-relaxed text-[#fff5cf]/85">
-          <strong className="text-[#f5cf72]">Ý tưởng chính:</strong> Công nhân tạo ra{" "}
-          {money(result.livingLaborValue)} giá trị mới. Sau khi trả lương{" "}
-          {money(result.variableCapital)}, {money(result.surplusValue)} giá trị thặng dư còn lại.
-          Chủ đất chiếm {money(result.groundRent)} làm tô điền (vì sở hữu đất),
-          để lại nhà tư bản với {money(result.remainingProfit)}.
+          <strong className="text-[#f5cf72]">Ý tưởng chính:</strong> Công nhân
+          tạo ra {money(result.livingLaborValue)} giá trị mới. Sau khi trả lương{" "}
+          {money(result.variableCapital)}, {money(result.surplusValue)} giá trị
+          thặng dư còn lại. Nếu lô đất làm ra nhiều hơn mức chuẩn, bạn có thêm{" "}
+          {money(result.surplusProfit)} lợi nhuận phụ trội. Chủ đất nhận{" "}
+          {money(result.groundRent)} làm tô điền; nhà tư bản còn{" "}
+          {money(result.remainingProfit)}.
         </p>
       </div>
     </div>
@@ -122,10 +136,15 @@ function FlowNode({
           <span style={{ color }}>{icon}</span>
         </div>
         <div className="flex-1">
-          <h4 className="text-xs font-bold uppercase tracking-wide" style={{ color }}>
+          <h4
+            className="text-xs font-bold uppercase tracking-wide"
+            style={{ color }}
+          >
             {subtitle}
           </h4>
-          <h3 className={`font-black text-white ${compact ? "text-base" : "text-lg"}`}>
+          <h3
+            className={`font-black text-white ${compact ? "text-base" : "text-lg"}`}
+          >
             {title}
           </h3>
         </div>
@@ -133,13 +152,17 @@ function FlowNode({
 
       <div className="flex items-center gap-2">
         <CoinIcon scale={compact ? 1.5 : 2} />
-        <p className={`font-mono font-black text-white ${compact ? "text-xl" : "text-2xl"}`}>
+        <p
+          className={`font-mono font-black text-white ${compact ? "text-xl" : "text-2xl"}`}
+        >
           {value}
         </p>
       </div>
 
       {!compact && (
-        <p className="text-xs leading-relaxed text-[#fff5cf]/70">{description}</p>
+        <p className="text-xs leading-relaxed text-[#fff5cf]/70">
+          {description}
+        </p>
       )}
     </motion.div>
   );
@@ -162,13 +185,20 @@ function FlowArrow({ label }: { label: string }) {
 /**
  * Visual explanation of ground rent components
  */
-export function GroundRentExplanation({ result, plot }: { result: Calculation; plot: Plot }) {
+export function GroundRentExplanation({
+  result,
+  plot,
+}: {
+  result: Calculation;
+  plot: Plot;
+}) {
   return (
     <div className="ground-rent-explanation grid gap-4">
       <div className="text-center">
         <h3 className="text-2xl font-black text-white">Hiểu về Tô điền</h3>
         <p className="mt-2 text-sm text-[#fff5cf]/80">
-          Tô điền = {money(result.groundRent)} được chiết từ giá trị thặng dư
+          Tô điền = {money(result.groundRent)} là phần chủ đất nhận từ lợi nhuận
+          trước địa tô
         </p>
       </div>
 
@@ -180,8 +210,8 @@ export function GroundRentExplanation({ result, plot }: { result: Calculation; p
           value={result.absoluteRent}
           color="#d94b35"
           icon="🏛️"
-          explanation="Tất cả đất đều phải trả tô điền cơ bản này vì đất được sở hữu riêng. Ngay cả đất xấu cũng phải trả tô điền tuyệt đối."
-          formula="Cố định theo lô"
+          explanation="Khoản tô bắt nguồn từ quyền sở hữu đất. Game lấy một mức cơ sở theo từng lô, rồi phần vượt bình quân chưa phân vào tô vi phân cũng được quy về quyền sở hữu đất."
+          formula="Cơ sở + phần vượt bình quân"
         />
 
         {/* Tô điền vi phân I */}
@@ -213,7 +243,7 @@ export function GroundRentExplanation({ result, plot }: { result: Calculation; p
             "Đất là phương tiện sản xuất nhưng được sở hữu riêng",
             "Chủ đất kiểm soát quyền truy cập đất cần thiết cho nông nghiệp",
             "Nhà tư bản phải trả tô điền để sử dụng đất",
-            "Tô điền là chuyển giao giá trị thặng dư, không phải tạo ra giá trị mới",
+            "Tô điền là phần lợi nhuận chuyển sang chủ đất, không phải giá trị mới tự sinh ra từ đất",
           ]}
           color="#d94b35"
         />
@@ -224,7 +254,7 @@ export function GroundRentExplanation({ result, plot }: { result: Calculation; p
             "AI và máy móc là lao động chết (giá trị trong quá khứ được chuyển)",
             "Chỉ lao động sống tạo ra giá trị mới",
             "AI nâng cao năng suất nhưng không tạo giá trị thặng dư",
-            "Năng suất cao hơn ảnh hưởng đến phân phối tô điền, không phải tạo giá trị",
+            "Năng suất cao hơn có thể tạo lợi nhuận phụ trội, nhưng không tự tạo giá trị mới",
           ]}
           color="#9ed7ef"
         />
@@ -296,8 +326,14 @@ function ConceptCard({
       <h4 className="text-base font-black text-white">{title}</h4>
       <ul className="grid gap-2">
         {points.map((point, i) => (
-          <li key={i} className="flex gap-2 text-xs leading-relaxed text-[#fff5cf]/80">
-            <span className="mt-0.5 h-1.5 w-1.5 shrink-0" style={{ backgroundColor: color }} />
+          <li
+            key={i}
+            className="flex gap-2 text-xs leading-relaxed text-[#fff5cf]/80"
+          >
+            <span
+              className="mt-0.5 h-1.5 w-1.5 shrink-0"
+              style={{ backgroundColor: color }}
+            />
             <span>{point}</span>
           </li>
         ))}
@@ -324,7 +360,8 @@ export function InvestmentImpactVisualization({
       count: investment.workers,
       icon: <Users className="h-5 w-5" />,
       color: "#7fc66a",
-      impact: "Những người sáng tạo trực tiếp giá trị thặng dư. Công nhân nhiều hơn = giá trị thặng dư nhiều hơn.",
+      impact:
+        "Những người sáng tạo trực tiếp giá trị thặng dư. Công nhân nhiều hơn = giá trị thặng dư nhiều hơn.",
       contribution: `Tạo ra ${money(result.livingLaborValue)} giá trị tổng cộng`,
     },
     {
@@ -332,7 +369,8 @@ export function InvestmentImpactVisualization({
       count: investment.seeds + investment.tools,
       icon: <TrendingUp className="h-5 w-5" />,
       color: "#9ed7ef",
-      impact: "Vốn không đổi cải thiện năng suất nhưng chuyển giao giá trị hiện có.",
+      impact:
+        "Hạt giống, công cụ và máy móc giúp làm ra nhiều sản phẩm hơn, nhưng chỉ chuyển giá trị sẵn có.",
       contribution: `Hệ số năng suất: ${Math.round(result.productivityMultiplier * 100)}%`,
     },
   ];
@@ -344,7 +382,7 @@ export function InvestmentImpactVisualization({
       icon: <Factory className="h-5 w-5" />,
       color: "#f5a65a",
       impact: "Phối hợp công việc, nâng cao hiệu quả 14%.",
-      contribution: "Phần thưởng tổ chức được áp dụng",
+      contribution: "Tổ chức tốt hơn, năng suất cao hơn",
     });
   }
 
@@ -354,15 +392,18 @@ export function InvestmentImpactVisualization({
       count: 1,
       icon: <span className="text-base">🤖</span>,
       color: "#b9d7e8",
-      impact: "Nâng cao năng suất 22%, nhưng lao động sống vẫn là nguồn duy nhất tạo giá trị thặng dư.",
-      contribution: "Phần thưởng năng suất được áp dụng",
+      impact:
+        "Nâng cao năng suất 22%, nhưng lao động sống vẫn là nguồn duy nhất tạo giá trị thặng dư.",
+      contribution: "Năng suất cao hơn",
     });
   }
 
   return (
     <div className="investment-impact-visualization grid gap-4">
       <div className="text-center">
-        <h3 className="text-2xl font-black text-white">Cách đầu tư của bạn ảnh hưởng đến sản xuất</h3>
+        <h3 className="text-2xl font-black text-white">
+          Cách đầu tư của bạn ảnh hưởng đến sản xuất
+        </h3>
         <p className="mt-2 text-sm text-[#fff5cf]/80">
           Mỗi yếu tố đầu vào có vai trò khác nhau trong tạo giá trị
         </p>
@@ -380,25 +421,34 @@ export function InvestmentImpactVisualization({
             <div className="flex items-center gap-3">
               <div
                 className="flex h-12 w-12 items-center justify-center rounded-full border-2"
-                style={{ borderColor: item.color, backgroundColor: `${item.color}20` }}
+                style={{
+                  borderColor: item.color,
+                  backgroundColor: `${item.color}20`,
+                }}
               >
                 <span style={{ color: item.color }}>{item.icon}</span>
               </div>
               <div className="flex-1">
-                <h4 className="text-base font-black text-white">{item.factor}</h4>
+                <h4 className="text-base font-black text-white">
+                  {item.factor}
+                </h4>
                 <p className="text-xs font-bold" style={{ color: item.color }}>
                   × {item.count}
                 </p>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-[#fff5cf]/85">{item.impact}</p>
+            <p className="text-sm leading-relaxed text-[#fff5cf]/85">
+              {item.impact}
+            </p>
 
             <div
               className="rounded-none border-l-4 bg-[#20361d] px-3 py-2"
               style={{ borderColor: item.color }}
             >
-              <p className="text-xs font-bold text-[#fff5cf]/90">{item.contribution}</p>
+              <p className="text-xs font-bold text-[#fff5cf]/90">
+                {item.contribution}
+              </p>
             </div>
           </motion.div>
         ))}
@@ -426,7 +476,9 @@ export function TheoryExplanation({
   return (
     <div className="theory-explanation grid gap-4">
       <div className="text-center">
-        <h3 className="text-2xl font-black text-white">Tóm tắt Lý thuyết kinh tế</h3>
+        <h3 className="text-2xl font-black text-white">
+          Tóm tắt Lý thuyết kinh tế
+        </h3>
         <p className="mt-2 text-sm text-[#fff5cf]/80">
           Giải thích lớp học ngắn gọn về tô điền và tạo giá trị
         </p>
@@ -447,9 +499,11 @@ export function TheoryExplanation({
           <div>
             <h4 className="text-base font-black text-[#f5cf72]">Ý chính</h4>
             <p className="mt-2 text-sm leading-relaxed text-[#fff5cf]/90">
-              Tô điền nông nghiệp tư bản là một phần giá trị thặng dư được tạo ra bởi công nhân nông nghiệp được thuê, 
-              được chuyển giao cho chủ đất thông qua quyền sở hữu đất riêng. Công cụ, công nghệ và AI nâng cao năng suất 
-              nhưng không thay thế lao động sống như nguồn giá trị thặng dư.
+              Tô điền nông nghiệp tư bản là phần lợi nhuận chủ đất nhận được vì
+              họ nắm quyền cho thuê ruộng đất. Tô vi phân đến từ lợi thế đất đai
+              hoặc thâm canh; tô tuyệt đối đến từ quyền sở hữu đất. Công cụ,
+              công nghệ và AI giúp tăng năng suất, nhưng lao động sống vẫn là
+              nguồn tạo giá trị mới.
             </p>
           </div>
         </div>
@@ -464,53 +518,59 @@ export function TheoryExplanation({
 function buildExplanations(
   plot: Plot,
   investment: InvestmentState,
-  result: Calculation
+  result: Calculation,
 ): string[] {
   const explanations: string[] = [];
 
   // Nguồn gốc giá trị thặng dư
   explanations.push(
-    `Giá trị thặng dư (${money(result.surplusValue)}) được tạo ra bởi ${investment.workers} công nhân nông nghiệp thông qua lao động sống, không phải do công cụ hay công nghệ.`
+    `Giá trị thặng dư (${money(result.surplusValue)}) được tạo ra bởi ${investment.workers} công nhân nông nghiệp thông qua lao động sống, không phải do công cụ hay công nghệ.`,
   );
+
+  if (result.surplusProfit > 0) {
+    explanations.push(
+      `Lợi nhuận phụ trội (${money(result.surplusProfit)}) xuất hiện vì lô đất này làm ra nhiều sản phẩm hơn mức đất xấu làm chuẩn thị trường. Đây là lợi thế trong bán hàng, không phải giá trị mới do AI hay công cụ tự tạo ra.`,
+    );
+  }
 
   // Tác động chất lượng lô đất
   if (result.differentialRentI > 0) {
     explanations.push(
-      `Tô điền vi phân I (${money(result.differentialRentI)}) xuất hiện vì ${plot.title.toLowerCase()} có độ phì nhiêu tự nhiên tốt hơn và vị trí tốt hơn so với đất xấu.`
+      `Tô điền vi phân I (${money(result.differentialRentI)}) xuất hiện vì ${plot.title.toLowerCase()} có độ phì nhiêu tự nhiên tốt hơn và vị trí tốt hơn so với đất xấu.`,
     );
   } else {
     explanations.push(
-      `Tô điền vi phân I thấp (${money(result.differentialRentI)}) vì lô đất này không vượt trội hơn đất xấu về điều kiện tự nhiên.`
+      `Tô điền vi phân I thấp (${money(result.differentialRentI)}) vì lô đất này không vượt trội hơn đất xấu về điều kiện tự nhiên.`,
     );
   }
 
   // Tác động đầu tư
   if (result.differentialRentII > 0) {
     explanations.push(
-      `Tô điền vi phân II (${money(result.differentialRentII)}) xuất hiện vì đầu tư vốn bổ sung nâng cao năng suất trên cùng lô đất.`
+      `Tô điền vi phân II (${money(result.differentialRentII)}) xuất hiện vì đầu tư vốn bổ sung nâng cao năng suất trên cùng lô đất.`,
     );
   } else {
     explanations.push(
-      `Tô điền vi phân II tối thiểu (${money(result.differentialRentII)}) vì đầu tư thâm canh trên lô đất này bị hạn chế.`
+      `Tô điền vi phân II tối thiểu (${money(result.differentialRentII)}) vì đầu tư thâm canh trên lô đất này bị hạn chế.`,
     );
   }
 
   // Tô điền tuyệt đối
   explanations.push(
-    `Tô điền tuyệt đối (${money(result.absoluteRent)}) được trả bất kể chất lượng lô đất vì chủ đất sở hữu riêng đất đai.`
+    `Tô điền tuyệt đối (${money(result.absoluteRent)}) bắt nguồn từ quyền sở hữu đất. Trong game, nó gồm mức tô cơ sở của lô đất và phần lợi nhuận vượt bình quân chưa được phân loại vào tô vi phân.`,
   );
 
   // AI/công nghệ nếu sử dụng
   if (investment.aiRobot) {
     explanations.push(
-      `Robot AI nâng cao năng suất 22% và giảm thời gian lao động cần thiết, nhưng lao động sống vẫn là nguồn duy nhất tạo giá trị thặng dư. AI là lao động chết chuyển giao giá trị trong quá khứ.`
+      `Robot AI nâng năng suất 22% và làm giảm thời gian lao động cá biệt trên mỗi sản phẩm. Nhưng lao động sống vẫn là nguồn tạo giá trị thặng dư; AI chỉ chuyển giá trị đã có từ trước.`,
     );
   }
 
   // Quản lý nếu sử dụng
   if (investment.manager) {
     explanations.push(
-      `Quản lý cải thiện tổ chức công việc và phối hợp, nâng cao hiệu quả tổng thể 14%. Điều này ảnh hưởng đến năng suất nhưng không tạo ra giá trị mới.`
+      `Quản lý cải thiện tổ chức công việc và phối hợp, nâng cao hiệu quả tổng thể 14%. Điều này ảnh hưởng đến năng suất nhưng không tạo ra giá trị mới.`,
     );
   }
 
@@ -529,12 +589,14 @@ export function PlotComparisonChart({
   plots: Array<{ plot: Plot; result: Calculation }>;
   currentPlot: Plot;
 }) {
-  const maxValue = Math.max(...plots.map((p) => p.result.surplusValue));
+  const maxValue = Math.max(
+    ...plots.map((p) => p.result.surplusValue + p.result.surplusProfit),
+  );
 
   return (
     <div className="plot-comparison-chart grid gap-4">
       <h4 className="text-center text-lg font-black text-white">
-        So sánh lô đất: Phân phối giá trị thặng dư
+        So sánh lô đất: Thặng dư và lợi nhuận phụ trội
       </h4>
 
       <div className="grid gap-3">
@@ -542,16 +604,20 @@ export function PlotComparisonChart({
           <div
             key={plot.id}
             className={`pixel-card p-4 ${
-              plot.id === currentPlot.id ? "border-[#f5cf72]" : "border-[#0b1209]"
+              plot.id === currentPlot.id
+                ? "border-[#f5cf72]"
+                : "border-[#0b1209]"
             }`}
           >
             <div className="mb-3 flex items-center justify-between">
               <div>
-                <h5 className="text-base font-black text-white">{plot.title}</h5>
+                <h5 className="text-base font-black text-white">
+                  {plot.title}
+                </h5>
                 <p className="text-xs text-[#fff5cf]/60">Lô {plot.short}</p>
               </div>
               <span className="font-mono text-xl font-black text-[#f5cf72]">
-                {money(result.surplusValue)}
+                {money(result.surplusValue + result.surplusProfit)}
               </span>
             </div>
 
@@ -560,7 +626,9 @@ export function PlotComparisonChart({
               <motion.div
                 className="h-full bg-[#7fc66a]"
                 initial={{ width: 0 }}
-                animate={{ width: `${(result.surplusValue / maxValue) * 100}%` }}
+                animate={{
+                  width: `${((result.surplusValue + result.surplusProfit) / maxValue) * 100}%`,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               />
             </div>

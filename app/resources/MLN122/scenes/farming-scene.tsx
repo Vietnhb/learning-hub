@@ -329,15 +329,28 @@ export function FarmingScene({
 
               const availableWorkers = workers.filter((w) => w.action === "idle" || w.action === "walking");
 
-              // Assign workers to tiles, ensuring they don't crowd together
-              const workersToAssign = Math.min(
-                availableWorkers.length, // Use ALL available workers
-                untilledTiles.length
-              );
-
-              availableWorkers.slice(0, workersToAssign).forEach((worker, workerIndex) => {
-                // Assign each worker to a unique tile in a 1-to-1 mapping
-                const targetTile = untilledTiles[workerIndex];
+              // Group tiles by row (y coordinate) - each worker gets their own row
+              const tilesByRow = new Map<number, typeof untilledTiles>();
+              untilledTiles.forEach(tile => {
+                if (!tilesByRow.has(tile.y)) {
+                  tilesByRow.set(tile.y, []);
+                }
+                tilesByRow.get(tile.y)!.push(tile);
+              });
+              
+              const availableRows = Array.from(tilesByRow.keys());
+              
+              // Assign each worker to a different row
+              availableWorkers.forEach((worker, workerIndex) => {
+                // Pick a row for this worker (distribute workers across rows)
+                const rowIndex = workerIndex % availableRows.length;
+                const targetRow = availableRows[rowIndex];
+                const rowTiles = tilesByRow.get(targetRow)!.filter(t => !t.hasWorker);
+                
+                if (rowTiles.length === 0) return; // No tiles left in this row
+                
+                // Pick the first untilled tile in this row
+                const targetTile = rowTiles[0];
 
                 if (targetTile) {
                   const tileIndex = updatedTiles.findIndex(
@@ -822,7 +835,7 @@ export function FarmingScene({
             </div>
             <div>
               <p className="text-[10px] font-bold text-[#fff5cf]/60">
-                Thi truong
+                Thị trường
               </p>
               <p className="font-mono text-lg font-black text-[#f5cf72]">
                 {Math.round(plot.marketBonus * 100)}%

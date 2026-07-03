@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import type { User } from "@supabase/supabase-js";
 import {
   ArrowLeft,
   Bot,
@@ -18,6 +19,7 @@ import { AuthRequiredModal } from "@/components/AuthRequiredModal";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   DEFAULT_INVESTMENT,
+  INVESTMENT_COSTS,
   PLOTS,
   calculateSeason,
   getPlot,
@@ -32,33 +34,54 @@ import {
 
 import { VillageHero } from "./scenes/village-scene";
 import { FarmingScene } from "./scenes/farming-scene";
-import { FARM_MAPS, type FarmType } from "./core/farm-types";
+import { type FarmType } from "./core/farm-types";
 import { MLN122_SPRITE_BASE } from "./core/paths";
 import { ScreenTransition } from "./ui/animations";
 import { ResultScreen as NewResultScreen } from "./screens/result-screen";
 import { InvestmentScreen as NewInvestmentScreen } from "./screens/investment-screen";
 import { TheoryExplanation, ValueFlowDiagram } from "./screens/theory-content";
-import { 
-  ScreenHeading, 
-  RoleCard, 
+import { LeaderboardScreen } from "./screens/leaderboard-screen";
+import {
+  resetMln122LeaderboardEntry,
+  saveMln122LeaderboardEntry,
+} from "./screens/leaderboard-db";
+import {
+  QUIZ_QUESTIONS,
+  type QuizAnswers,
+  QuizScreen,
+  getQuizScore,
+} from "./screens/quiz-screen";
+import {
+  ScreenHeading,
+  RoleCard,
   TheoryNote,
   SummaryStat,
   PanelLine,
   Metric,
-  LoadingSpinner
+  LoadingSpinner,
 } from "./ui/components";
 
 // Import CSS
 import "./styles/game.css";
 
+const QUIZ_DURATION_MS = 30 * 60 * 1000;
+
 export default function PixelRentFarmGame() {
   const { user, loading } = useAuth();
   const [screen, setScreen] = useState<Screen>("title");
   const [selectedPlotId, setSelectedPlotId] = useState<PlotId>("fertile");
-  const [selectedFarmType, setSelectedFarmType] =
-    useState<FarmType>("standard");
+  const selectedFarmType: FarmType = "standard";
   const [investment, setInvestment] =
     useState<InvestmentState>(DEFAULT_INVESTMENT);
+  const [quizAnswers, setQuizAnswers] = useState<QuizAnswers>({});
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [quizStartedAt, setQuizStartedAt] = useState(() => Date.now());
+  const [quizRemainingMs, setQuizRemainingMs] = useState(QUIZ_DURATION_MS);
+  const [submittedQuizDurationMs, setSubmittedQuizDurationMs] = useState<
+    number | null
+  >(null);
+  const [leaderboardRefreshKey, setLeaderboardRefreshKey] = useState(0);
 
   const selectedPlot = getPlot(selectedPlotId);
   const result = useMemo(
@@ -66,17 +89,109 @@ export default function PixelRentFarmGame() {
     [selectedPlot, investment],
   );
   const screenIndex = screenOrder.indexOf(screen);
+  const quizScore = getQuizScore(quizAnswers);
+  const submittedQuizScore = quizSubmitted ? quizScore : 0;
+  const refreshLeaderboard = useCallback(() => {
+    setLeaderboardRefreshKey((current) => current + 1);
+  }, []);
+
+  const removeCurrentLeaderboardEntry = () => {
+    if (!user?.id) return;
+
+    void resetMln122LeaderboardEntry(user.id)
+      .catch((error) => {
+        console.error("Could not reset MLN122 leaderboard entry:", error);
+      })
+      .finally(refreshLeaderboard);
+  };
+
+  const resetQuizAttempt = () => {
+    const startedAt = Date.now();
+    setQuizAnswers({});
+    setQuizStarted(false);
+    setQuizSubmitted(false);
+    setSubmittedQuizDurationMs(null);
+    setQuizStartedAt(startedAt);
+    setQuizRemainingMs(QUIZ_DURATION_MS);
+    removeCurrentLeaderboardEntry();
+  };
+
+  const submitQuizAttempt = useCallback(() => {
+    if (quizSubmitted) return;
+
+    const durationMs = Math.min(
+      QUIZ_DURATION_MS,
+      Math.max(1, Date.now() - quizStartedAt),
+    );
+    const score = getQuizScore(quizAnswers);
+
+    setQuizSubmitted(true);
+    setQuizStarted(false);
+    setSubmittedQuizDurationMs(durationMs);
+    setQuizRemainingMs(Math.max(0, QUIZ_DURATION_MS - durationMs));
+    setScreen("leaderboard");
+
+    if (!user?.id) return;
+
+    void saveMln122LeaderboardEntry({
+      userId: user.id,
+      displayName: getUserDisplayName(user),
+      score,
+      totalQuestions: QUIZ_QUESTIONS.length,
+      durationMs,
+    })
+      .catch((error) => {
+        console.error("Could not save MLN122 leaderboard entry:", error);
+      })
+      .finally(refreshLeaderboard);
+  }, [quizAnswers, quizStartedAt, quizSubmitted, refreshLeaderboard, user]);
+
+  const startQuizAttempt = () => {
+    const startedAt = Date.now();
+    setQuizStartedAt(startedAt);
+    setQuizRemainingMs(QUIZ_DURATION_MS);
+    setQuizStarted(true);
+    setQuizSubmitted(false);
+    setSubmittedQuizDurationMs(null);
+  };
+
+  useEffect(() => {
+    if (!quizStarted || quizSubmitted) return;
+
+    const updateRemainingTime = () => {
+      const nextRemainingMs = Math.max(
+        0,
+        QUIZ_DURATION_MS - (Date.now() - quizStartedAt),
+      );
+
+      setQuizRemainingMs(nextRemainingMs);
+
+      if (nextRemainingMs <= 0) {
+        submitQuizAttempt();
+      }
+    };
+
+    updateRemainingTime();
+    const timerId = window.setInterval(updateRemainingTime, 1000);
+
+    return () => window.clearInterval(timerId);
+  }, [quizStarted, quizStartedAt, quizSubmitted, submitQuizAttempt]);
 
   const goNext = () => {
+    if (screenIndex < 0) return;
     const next = screenOrder[Math.min(screenIndex + 1, screenOrder.length - 1)];
     setScreen(next);
+  };
+
+  const openQuizScreen = () => {
+    setScreen("quiz");
   };
 
   const resetGame = () => {
     setScreen("title");
     setSelectedPlotId("fertile");
-    setSelectedFarmType("standard");
     setInvestment(DEFAULT_INVESTMENT);
+    resetQuizAttempt();
   };
 
   if (loading) {
@@ -111,27 +226,52 @@ export default function PixelRentFarmGame() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-8 gap-1">
-            {screenOrder.map((item, index) => (
+          <div className="grid justify-items-start gap-2 md:justify-items-end">
+            <div className="grid grid-cols-8 gap-1">
+              {screenOrder.map((item, index) => (
+                <button
+                  key={item}
+                  type="button"
+                  title={getScreenTitle(item)}
+                  aria-label={`Đi tới ${getScreenTitle(item)}`}
+                  onClick={() => setScreen(item)}
+                  className={`h-8 w-8 border-2 border-[#0b1209] font-mono text-[10px] font-black uppercase ${
+                    index === screenIndex
+                      ? "bg-[#f5cf72] text-[#2d2114]"
+                      : index < screenIndex
+                        ? "bg-[#7fc66a] text-[#0b1209]"
+                        : "bg-[#10190d] text-[#fff5cf]/50"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-start gap-2 md:justify-end">
               <button
-                key={item}
                 type="button"
-                title={item}
-                aria-label={`Đi tới ${item}`}
-                onClick={() => setScreen(item)}
-                className={`h-8 w-8 border-2 border-[#0b1209] font-mono text-[10px] font-black uppercase ${
-                  index === screenIndex
+                onClick={openQuizScreen}
+                className={`h-9 border-2 border-[#0b1209] px-4 font-black shadow-[3px_3px_0_#0b1209] transition ${
+                  screen === "quiz"
                     ? "bg-[#f5cf72] text-[#2d2114]"
-                    : index < screenIndex
-                      ? "bg-[#7fc66a] text-[#0b1209]"
-                      : "bg-[#10190d] text-[#fff5cf]/50"
+                    : "bg-[#10190d] text-[#f5cf72] hover:bg-[#20361d]"
                 }`}
               >
-                {index + 1}
+                Làm Quiz
               </button>
-            ))}
+              <button
+                type="button"
+                onClick={() => setScreen("leaderboard")}
+                className={`h-9 border-2 border-[#0b1209] px-4 font-black shadow-[3px_3px_0_#0b1209] transition ${
+                  screen === "leaderboard"
+                    ? "bg-[#f5cf72] text-[#2d2114]"
+                    : "bg-[#10190d] text-[#f5cf72] hover:bg-[#20361d]"
+                }`}
+              >
+                Bảng xếp hạng
+              </button>
+            </div>
           </div>
-
         </header>
 
         <div className="grid flex-1 gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -152,11 +292,10 @@ export default function PixelRentFarmGame() {
                 />
               )}
               {screen === "farming" && (
-                <FarmingScreen 
-                  plot={selectedPlot} 
+                <FarmingScreen
+                  plot={selectedPlot}
                   investment={investment}
                   farmType={selectedFarmType}
-                  onFarmTypeSelect={setSelectedFarmType}
                 />
               )}
               {screen === "result" && (
@@ -170,6 +309,47 @@ export default function PixelRentFarmGame() {
                 />
               )}
               {screen === "summary" && <SummaryScreen result={result} />}
+              {screen === "quiz" && (
+                <QuizScreen
+                  answers={quizAnswers}
+                  submitted={quizSubmitted}
+                  started={quizStarted}
+                  remainingMs={quizRemainingMs}
+                  onAnswer={(questionId, selectedAnswers) => {
+                    setQuizAnswers((current) => {
+                      if (selectedAnswers.length === 0) {
+                        const next = { ...current };
+                        delete next[questionId];
+                        return next;
+                      }
+
+                      return {
+                        ...current,
+                        [questionId]: selectedAnswers,
+                      };
+                    });
+                    setQuizSubmitted(false);
+                    setSubmittedQuizDurationMs(null);
+                  }}
+                  onClear={resetQuizAttempt}
+                  onStart={startQuizAttempt}
+                  onSubmit={submitQuizAttempt}
+                  onGoLeaderboard={() => setScreen("leaderboard")}
+                />
+              )}
+              {screen === "leaderboard" && (
+                <LeaderboardScreen
+                  currentUserId={user.id}
+                  currentScore={submittedQuizScore}
+                  totalQuestions={QUIZ_QUESTIONS.length}
+                  currentDurationMs={submittedQuizDurationMs}
+                  refreshKey={leaderboardRefreshKey}
+                  onRestartQuiz={() => {
+                    resetQuizAttempt();
+                    setScreen("quiz");
+                  }}
+                />
+              )}
             </ScreenTransition>
           </section>
 
@@ -179,12 +359,19 @@ export default function PixelRentFarmGame() {
               plot={selectedPlot}
               investment={investment}
               result={result}
+              quizScore={submittedQuizScore}
               onNext={goNext}
               onReset={resetGame}
-              nextDisabled={screen === "summary"}
+              nextDisabled={
+                screen === "summary" ||
+                screen === "quiz" ||
+                screen === "leaderboard"
+              }
             />
-            
-            <MiniMap plot={selectedPlot} />
+
+            {screenIndex >= screenOrder.indexOf("land") && (
+              <MiniMap plot={selectedPlot} />
+            )}
           </aside>
         </div>
       </div>
@@ -192,19 +379,36 @@ export default function PixelRentFarmGame() {
   );
 }
 
+function getUserDisplayName(user: User) {
+  const metadata = user.user_metadata ?? {};
+  const metadataName =
+    metadata.full_name ??
+    metadata.name ??
+    metadata.user_name ??
+    metadata.username;
+
+  if (typeof metadataName === "string" && metadataName.trim()) {
+    return metadataName.trim();
+  }
+
+  if (user.email) return user.email.split("@")[0];
+
+  return "Bạn";
+}
+
 function TitleScreen({ onStart }: { onStart: () => void }) {
   return (
     <div className="grid h-full content-center gap-6">
       <VillageHero />
       <div className="mx-auto max-w-3xl text-center">
-        <p className="pixel-eyebrow">
-          Trò chơi mô phỏng
-        </p>
+        <p className="pixel-eyebrow">Trò chơi mô phỏng</p>
         <h2 className="pixel-heading mt-3 text-4xl md:text-6xl">
           Nông trang tô điền
         </h2>
         <p className="pixel-text mx-auto mt-4 max-w-2xl text-sm md:text-base">
-          Tô điền không phải xuất hiện thần kỳ từ đất đai. Nó là một phần của giá trị thặng dư được các công nhân nông nghiệp trả công tạo ra, rồi chuyển cho địa chủ vì địa chủ sở hữu đất đai.
+          Tô điền không tự sinh ra từ đất. Trong game này, đó là phần lợi nhuận
+          chủ đất nhận được vì họ nắm quyền cho thuê ruộng đất. Đất tốt hoặc đầu
+          tư thâm canh có thể tạo thêm lợi nhuận phụ trội.
         </p>
         <Button
           type="button"
@@ -228,12 +432,26 @@ function StoryScreen() {
         text="Bạn vào vai nhà tư bản nông nghiệp. Bạn thuê đất, thuê công nhân, đầu tư vốn, bán nông sản, rồi trả tô điền cho địa chủ."
       />
       <div className="grid gap-4 md:grid-cols-3">
-        <RoleCard icon={<Landmark />} title="Địa chủ" text="Sở hữu đất và thu tô điền." />
-        <RoleCard icon={<BriefcaseBusiness />} title="Bạn" text="Thuê đất và tổ chức sản xuất." />
-        <RoleCard icon={<Users />} title="Công nhân" text="Tạo ra giá trị mới qua lao động sống." />
+        <RoleCard
+          icon={<Landmark />}
+          title="Địa chủ"
+          text="Sở hữu đất và thu tô điền."
+        />
+        <RoleCard
+          icon={<BriefcaseBusiness />}
+          title="Bạn"
+          text="Thuê đất và tổ chức sản xuất."
+        />
+        <RoleCard
+          icon={<Users />}
+          title="Công nhân"
+          text="Tạo ra giá trị mới qua lao động sống."
+        />
       </div>
       <TheoryNote>
-        Ý tưởng chính: giá trị thặng dư đến từ lao động sống trong sản xuất. Công cụ, quản lý và AI có thể nâng cao năng suất, nhưng chúng không thay thế vai trò của lao động làm nguồn giá trị thặng dư.
+        Ý tưởng chính: giá trị thặng dư đến từ lao động sống trong sản xuất.
+        Công cụ, quản lý và AI có thể nâng cao năng suất, nhưng chúng không thay
+        thế vai trò của lao động làm nguồn giá trị thặng dư.
       </TheoryNote>
     </div>
   );
@@ -266,7 +484,7 @@ function LandScreen({
             }`}
           >
             <div className="relative h-32 overflow-hidden border-2 border-[#0b1209]">
-              <img 
+              <img
                 src={`${MLN122_SPRITE_BASE}/${plot.mapAsset}`}
                 alt={plot.title}
                 className="pixelated h-full w-full object-cover"
@@ -288,72 +506,18 @@ function LandScreen({
               {plot.description}
             </p>
             <div className="grid grid-cols-3 gap-2 text-center">
-              <Metric label="Năng suất" value={`${Math.round(plot.productivity * 100)}%`} />
-              <Metric label="Thị trường" value={`${Math.round(plot.marketBonus * 100)}%`} />
-              <Metric label="Tô điền" value={money(plot.absoluteRent)} />
+              <Metric
+                label="Năng suất"
+                value={`${Math.round(plot.productivity * 100)}%`}
+              />
+              <Metric
+                label="Thị trường"
+                value={`${Math.round(plot.marketBonus * 100)}%`}
+              />
+              <Metric label="Tô cơ sở" value={money(plot.absoluteRent)} />
             </div>
           </button>
         ))}
-      </div>
-
-    </div>
-  );
-}
-
-function FarmTypePicker({
-  selectedFarmType,
-  onSelect,
-}: {
-  selectedFarmType: FarmType;
-  onSelect: (id: FarmType) => void;
-}) {
-  return (
-    <div className="grid gap-3 border-4 border-[#0b1209] bg-[#20361d] p-3 shadow-[4px_4px_0_#0b1209]">
-      <div className="flex items-center justify-between gap-3">
-        <div>
-          <p className="pixel-eyebrow">Kiểu trang trại</p>
-          <h3 className="text-xl font-black text-white">
-            Chọn bản đồ canh tác
-          </h3>
-        </div>
-        <span className="border-2 border-[#0b1209] bg-[#f5cf72] px-3 py-2 font-mono text-xs font-black text-[#2d2114]">
-          {FARM_MAPS[selectedFarmType].nameVi}
-        </span>
-      </div>
-      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
-        {(Object.keys(FARM_MAPS) as FarmType[]).map((farmType) => {
-          const config = FARM_MAPS[farmType];
-          const selected = selectedFarmType === farmType;
-
-          return (
-            <button
-              key={farmType}
-              type="button"
-              onClick={() => onSelect(farmType)}
-              className={`flex min-h-[76px] items-center justify-between gap-3 border-2 p-3 text-left transition ${
-                selected
-                  ? "border-[#f5cf72] bg-[#10190d]"
-                  : "border-[#0b1209] bg-[#263f22] hover:border-[#f5cf72]"
-              }`}
-            >
-              <div className="min-w-0">
-                <span className="text-xs font-black leading-tight text-white">
-                  {config.nameVi}
-                </span>
-                <p className="mt-1 text-[10px] font-bold leading-snug text-[#fff5cf]/60">
-                  {config.farmingZones.length} khu canh tác
-                </p>
-              </div>
-              <div className="shrink-0">
-                {selected && (
-                  <span className="border border-[#f5cf72] px-1.5 py-0.5 text-[10px] font-black text-[#f5cf72]">
-                    Chọn
-                  </span>
-                )}
-              </div>
-            </button>
-          );
-        })}
       </div>
     </div>
   );
@@ -363,12 +527,10 @@ function FarmingScreen({
   plot,
   investment,
   farmType,
-  onFarmTypeSelect,
 }: {
   plot: Plot;
   investment: InvestmentState;
   farmType: FarmType;
-  onFarmTypeSelect: (id: FarmType) => void;
 }) {
   return (
     <div className="grid gap-5">
@@ -377,17 +539,8 @@ function FarmingScreen({
         title="Nông sản phát triển qua lao động và đầu tư"
         text="Xem quá trình sản xuất. Công nhân tạo ra giá trị, đầu tư định hình năng suất."
       />
-      
-      <FarmTypePicker
-        selectedFarmType={farmType}
-        onSelect={onFarmTypeSelect}
-      />
 
-      <FarmingScene
-        plot={plot}
-        investment={investment}
-        farmType={farmType}
-      />
+      <FarmingScene plot={plot} investment={investment} farmType={farmType} />
     </div>
   );
 }
@@ -421,13 +574,20 @@ function SummaryScreen({ result }: { result: Calculation }) {
           Mùa vụ hoàn thành
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#fff5cf]/82">
-          Công nhân tạo ra giá trị mới. Vốn và công nghệ định hình năng suất. Địa chủ nhận được tô điền vì sở hữu đất đai.
+          Công nhân tạo ra giá trị mới. Vốn và công nghệ định hình năng suất.
+          Địa chủ nhận được tô điền vì sở hữu đất đai.
         </p>
       </div>
       <div className="mx-auto grid w-full max-w-3xl gap-3 md:grid-cols-3">
-        <SummaryStat label="Giá trị thặng dư" value={money(result.surplusValue)} />
+        <SummaryStat
+          label="Giá trị thặng dư"
+          value={money(result.surplusValue)}
+        />
         <SummaryStat label="Tô điền" value={money(result.groundRent)} />
-        <SummaryStat label="Nhà tư bản giữ lại" value={money(result.remainingProfit)} />
+        <SummaryStat
+          label="Nhà tư bản giữ lại"
+          value={money(result.remainingProfit)}
+        />
       </div>
     </div>
   );
@@ -438,6 +598,7 @@ function ControlPanel({
   plot,
   investment,
   result,
+  quizScore,
   onNext,
   onReset,
   nextDisabled,
@@ -446,16 +607,26 @@ function ControlPanel({
   plot: Plot;
   investment: InvestmentState;
   result: Calculation;
+  quizScore: number;
   onNext: () => void;
   onReset: () => void;
   nextDisabled: boolean;
 }) {
+  const screenTitle = getScreenTitle(screen);
+  const panelLines = getControlPanelLines(
+    screen,
+    plot,
+    investment,
+    result,
+    quizScore,
+  );
+
   return (
     <div className="pixel-panel bg-[#f5cf72] p-4 text-[#2d2114]">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="pixel-eyebrow text-[#2d2114]">Màn hình hiện tại</p>
-          <h2 className="mt-1 text-2xl font-black capitalize">{screen}</h2>
+          <h2 className="mt-1 text-2xl font-black">{screenTitle}</h2>
         </div>
         <Button
           type="button"
@@ -471,10 +642,9 @@ function ControlPanel({
       </div>
 
       <div className="mt-4 grid gap-2">
-        <PanelLine label="Đất" value={plot.title} />
-        <PanelLine label="Công nhân" value={String(investment.workers)} />
-        <PanelLine label="Công cụ AI" value={investment.aiRobot ? "Bật" : "Tắt"} />
-        <PanelLine label="Tô điền" value={money(result.groundRent)} />
+        {panelLines.map((line) => (
+          <PanelLine key={line.label} label={line.label} value={line.value} />
+        ))}
       </div>
 
       <Button
@@ -488,6 +658,92 @@ function ControlPanel({
       </Button>
     </div>
   );
+}
+
+function getScreenTitle(screen: Screen) {
+  const titles: Record<Screen, string> = {
+    title: "Bắt đầu",
+    story: "Bối cảnh",
+    land: "Chọn đất",
+    investment: "Đầu tư",
+    farming: "Canh tác",
+    result: "Kết quả",
+    theory: "Lý thuyết",
+    summary: "Tổng kết",
+    quiz: "Quiz",
+    leaderboard: "Bảng xếp hạng",
+  };
+
+  return titles[screen];
+}
+
+function getControlPanelLines(
+  screen: Screen,
+  plot: Plot,
+  investment: InvestmentState,
+  result: Calculation,
+  quizScore: number,
+) {
+  const totalCapital = result.constantCapital + result.variableCapital;
+  const constantCapital =
+    investment.seeds * INVESTMENT_COSTS.seedCost +
+    investment.tools * INVESTMENT_COSTS.toolCost +
+    (investment.manager ? INVESTMENT_COSTS.managerCost : 0) +
+    (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0);
+
+  switch (screen) {
+    case "title":
+      return [
+        { label: "Vai trò", value: "Nhà tư bản" },
+        { label: "Mục tiêu", value: "Bắt đầu mùa vụ" },
+      ];
+    case "story":
+      return [
+        { label: "Địa chủ", value: "Thu tô" },
+        { label: "Công nhân", value: "Tạo giá trị" },
+        { label: "Bạn", value: "Tổ chức sản xuất" },
+      ];
+    case "land":
+      return [
+        { label: "Đất đang xem", value: plot.title },
+        { label: "Vị trí", value: plot.location },
+        { label: "Tô cơ sở", value: money(plot.absoluteRent) },
+      ];
+    case "investment":
+      return [
+        { label: "Công nhân", value: String(investment.workers) },
+        { label: "Vốn không đổi", value: money(constantCapital) },
+        { label: "Tổng vốn", value: money(totalCapital) },
+      ];
+    case "farming":
+      return [
+        { label: "Đất", value: plot.title },
+        { label: "Công nhân", value: String(investment.workers) },
+        { label: "AI", value: investment.aiRobot ? "Đang dùng" : "Không dùng" },
+      ];
+    case "result":
+    case "theory":
+    case "summary":
+      return [
+        { label: "Giá trị thặng dư", value: money(result.surplusValue) },
+        { label: "Tô điền", value: money(result.groundRent) },
+        { label: "Còn lại", value: money(result.remainingProfit) },
+      ];
+    case "quiz":
+      return [
+        { label: "Số câu", value: `${QUIZ_QUESTIONS.length}` },
+        { label: "Điểm", value: `${quizScore}/${QUIZ_QUESTIONS.length}` },
+      ];
+    case "leaderboard":
+      return [
+        { label: "Bảng", value: "Điểm quiz" },
+        {
+          label: "Điểm của bạn",
+          value: `${quizScore}/${QUIZ_QUESTIONS.length}`,
+        },
+        { label: "Cách tăng điểm", value: "Làm Quiz" },
+      ];
+  }
 }
 
 function MiniMap({ plot }: { plot: Plot }) {
@@ -513,4 +769,3 @@ function MiniMap({ plot }: { plot: Plot }) {
     </div>
   );
 }
-

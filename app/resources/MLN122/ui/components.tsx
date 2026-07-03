@@ -261,15 +261,15 @@ export function ToggleOption({ icon, title, text, active, onToggle, cost }: Togg
     <button
       type="button"
       onClick={onToggle}
-      className={`pixel-card grid gap-3 p-4 text-left transition-all ${
+      className={`pixel-card grid min-h-[220px] grid-rows-[auto_1fr_auto] gap-3 p-4 text-left transition-all ${
         active
           ? "border-[#f5cf72] bg-[#20361d]"
           : "border-[#0b1209] bg-[#10190d] opacity-75 hover:opacity-100"
       }`}
     >
-      <div className="flex items-start justify-between">
+      <div className="flex items-start gap-3">
         <span
-          className={`flex h-12 w-12 items-center justify-center border-2 ${
+          className={`flex h-12 w-12 shrink-0 items-center justify-center border-2 ${
             active
               ? "border-[#f5cf72] bg-[#f5cf72] text-[#2d2114]"
               : "border-[#0b1209] bg-[#263f22] text-[#fff5cf]/60"
@@ -277,18 +277,26 @@ export function ToggleOption({ icon, title, text, active, onToggle, cost }: Togg
         >
           {icon}
         </span>
-        {cost !== undefined && (
-          <div className="flex items-center gap-1 border-2 border-[#0b1209] bg-[#f5cf72] px-2 py-1">
-            <CoinIcon scale={1} />
-            <span className="font-mono text-sm font-black text-[#2d2114]">{cost}</span>
-          </div>
-        )}
+        <div className="min-w-0">
+          <h3 className="text-base font-black leading-tight text-white">{title}</h3>
+          {cost !== undefined && (
+            <div
+              className="mt-2 inline-flex h-7 items-center gap-1 border-2 border-[#0b1209] bg-[#f5cf72] px-2 text-[#2d2114]"
+              title={`Chi phí ${cost}c`}
+              aria-label={`Chi phí ${cost}c`}
+            >
+              <CoinIcon scale={1} />
+              <span className="font-mono text-xs font-black leading-none">
+                {cost}c
+              </span>
+            </div>
+          )}
+        </div>
       </div>
-      <h3 className="text-base font-black text-white">{title}</h3>
       <p className="text-xs leading-relaxed text-[#fff5cf]/75">{text}</p>
-      <div className="mt-1 text-right">
+      <div className="flex justify-end">
         <span
-          className={`rounded-none border-2 px-3 py-1 text-[10px] font-black uppercase ${
+          className={`inline-flex min-h-8 items-center border-2 px-3 py-1 text-[10px] font-black uppercase ${
             active
               ? "border-[#f5cf72] bg-[#f5cf72] text-[#2d2114]"
               : "border-[#0b1209] bg-[#263f22] text-[#fff5cf]/50"

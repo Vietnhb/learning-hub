@@ -6,7 +6,9 @@ export type Screen =
   | "farming"
   | "result"
   | "theory"
-  | "summary";
+  | "summary"
+  | "quiz"
+  | "leaderboard";
 
 export type PlotId = "fertile" | "average" | "poor";
 
@@ -48,7 +50,11 @@ export type Calculation = {
   constantCapital: number;
   variableCapital: number;
   livingLaborValue: number;
+  commodityValue: number;
   surplusValue: number;
+  surplusProfit: number;
+  differentialSurplusProfitI: number;
+  differentialSurplusProfitII: number;
   averageProfit: number;
   differentialRentI: number;
   differentialRentII: number;
@@ -86,7 +92,8 @@ export const PLOTS: Plot[] = [
     rentPressure: "Tô điền trung bình",
     soil: "#9a6236",
     crop: "#91c949",
-    description: "Mảnh đất này là mức chuẩn trong lớp học cho sản xuất thông thường.",
+    description:
+      "Mảnh đất này là mức giữa để so sánh trực quan; giá thị trường vẫn lấy đất xấu làm mốc.",
     mapAsset: "LooseSprites__Farm_ranching_map_summer.png",
     buildingAsset: "Buildings__Big Barn.png",
   },
@@ -98,11 +105,11 @@ export const PLOTS: Plot[] = [
     productivity: 0.74,
     marketBonus: 0.86,
     absoluteRent: 35,
-    rentPressure: "Vẫn phải trả tô cơ bản",
+    rentPressure: "Có yêu cầu tô cơ bản",
     soil: "#6a4b34",
     crop: "#b6b06a",
     description:
-      "Ngay cả đất xấu vẫn phải trả tô cơ bản vì địa chủ sở hữu đất.",
+      "Đất xấu vẫn có yêu cầu tô cơ bản vì địa chủ nắm quyền cho thuê đất.",
     mapAsset: "LooseSprites__Farm_ranching_map_fall.png",
     buildingAsset: "Buildings__Coop.png",
   },
@@ -115,6 +122,10 @@ export const DEFAULT_INVESTMENT: InvestmentState = {
   manager: false,
   aiRobot: false,
 };
+
+const LIVING_LABOR_VALUE_PER_WORKER = 88;
+const AVERAGE_PROFIT_RATE = 0.22;
+const BASE_OUTPUT_PER_WORKER = 28;
 
 export const screenOrder: Screen[] = [
   "title",
@@ -135,54 +146,46 @@ export function calculateSeason(
   plot: Plot,
   investment: InvestmentState,
 ): Calculation {
-  const seedCost = investment.seeds * INVESTMENT_COSTS.seedCost;
-  const toolCost = investment.tools * INVESTMENT_COSTS.toolCost;
-  const managerCost = investment.manager ? INVESTMENT_COSTS.managerCost : 0;
-  const aiCost = investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0;
-  const constantCapital = seedCost + toolCost + managerCost + aiCost;
+  const constantCapital = calculateConstantCapital(investment);
 
   const variableCapital = investment.workers * INVESTMENT_COSTS.workerWage;
 
-  const managerMultiplier = investment.manager ? 1.14 : 1;
-  const aiMultiplier = investment.aiRobot ? 1.22 : 1;
-  const toolMultiplier = 1 + investment.tools * 0.06;
-  const seedMultiplier = 1 + investment.seeds * 0.04;
-  const productivityMultiplier =
-    plot.productivity *
-    plot.marketBonus *
-    managerMultiplier *
-    aiMultiplier *
-    toolMultiplier *
-    seedMultiplier;
-
-  const output = Math.round(investment.workers * 28 * productivityMultiplier);
-  const revenue = output * 8;
-
-  const livingLaborValue = Math.round(
-    investment.workers * 88 * managerMultiplier * aiMultiplier,
+  const productivityMultiplier = calculateProductivityMultiplier(
+    plot,
+    investment,
   );
+  const output = calculateOutput(plot, investment);
+
+  const livingLaborValue = investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+  const commodityValue = constantCapital + livingLaborValue;
   const surplusValue = Math.max(0, livingLaborValue - variableCapital);
-  const averageProfit = Math.round((constantCapital + variableCapital) * 0.22);
-
-  const baselineInvestment: InvestmentState = {
-    workers: investment.workers,
-    seeds: investment.seeds,
-    tools: investment.tools,
-    manager: false,
-    aiRobot: false,
-  };
-  const poorBaseline = calculateSimpleProfit(getPlot("poor"), baselineInvestment);
-  const currentNaturalProfit = calculateSimpleProfit(plot, baselineInvestment);
-  const currentFullProfit = revenue - constantCapital - variableCapital;
-
-  const differentialRentI = Math.max(0, currentNaturalProfit - poorBaseline);
-  const differentialRentII = Math.max(
-    0,
-    currentFullProfit - currentNaturalProfit - averageProfit,
+  const {
+    differentialSurplusProfitI,
+    differentialSurplusProfitII,
+    surplusProfit,
+  } = calculateDifferentialSurplusProfits(
+    plot,
+    investment,
+    output,
+    commodityValue,
   );
-  const absoluteRent = plot.absoluteRent;
+  const revenue = commodityValue + surplusProfit;
+  const profitBeforeRent = revenue - constantCapital - variableCapital;
+  const averageProfit = Math.min(
+    profitBeforeRent,
+    Math.round((constantCapital + variableCapital) * AVERAGE_PROFIT_RATE),
+  );
+
+  const rentBudget = Math.max(0, profitBeforeRent - averageProfit);
+  const { absoluteRent, differentialRentI, differentialRentII } =
+    calculateRentComponents(
+      plot,
+      rentBudget,
+      differentialSurplusProfitI,
+      differentialSurplusProfitII,
+    );
   const groundRent = absoluteRent + differentialRentI + differentialRentII;
-  const remainingProfit = currentFullProfit - groundRent;
+  const remainingProfit = profitBeforeRent - groundRent;
 
   return {
     output,
@@ -190,7 +193,11 @@ export function calculateSeason(
     constantCapital,
     variableCapital,
     livingLaborValue,
+    commodityValue,
     surplusValue,
+    surplusProfit,
+    differentialSurplusProfitI,
+    differentialSurplusProfitII,
     averageProfit,
     differentialRentI,
     differentialRentII,
@@ -201,28 +208,152 @@ export function calculateSeason(
   };
 }
 
-function calculateSimpleProfit(plot: Plot, investment: InvestmentState) {
-  const constantCapital =
+function calculateProductivityMultiplier(
+  plot: Plot,
+  investment: InvestmentState,
+) {
+  return (
+    calculateNaturalProductivity(plot) *
+    calculateIntensiveProductivity(investment)
+  );
+}
+
+function calculateOutput(plot: Plot, investment: InvestmentState) {
+  return Math.round(
+    investment.workers *
+      BASE_OUTPUT_PER_WORKER *
+      calculateProductivityMultiplier(plot, investment),
+  );
+}
+
+function calculateConstantCapital(investment: InvestmentState) {
+  return (
     investment.seeds * INVESTMENT_COSTS.seedCost +
     investment.tools * INVESTMENT_COSTS.toolCost +
     (investment.manager ? INVESTMENT_COSTS.managerCost : 0) +
-    (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0);
-  const variableCapital = investment.workers * INVESTMENT_COSTS.workerWage;
+    (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0)
+  );
+}
+
+function calculateNaturalProductivity(plot: Plot) {
+  return plot.productivity * plot.marketBonus;
+}
+
+function calculateIntensiveProductivity(investment: InvestmentState) {
   const managerMultiplier = investment.manager ? 1.14 : 1;
   const aiMultiplier = investment.aiRobot ? 1.22 : 1;
   const toolMultiplier = 1 + investment.tools * 0.06;
   const seedMultiplier = 1 + investment.seeds * 0.04;
-  const output = Math.round(
-    investment.workers *
-      28 *
-      plot.productivity *
-      plot.marketBonus *
-      managerMultiplier *
-      aiMultiplier *
-      toolMultiplier *
-      seedMultiplier,
+
+  return managerMultiplier * aiMultiplier * toolMultiplier * seedMultiplier;
+}
+
+function calculateDifferentialSurplusProfits(
+  plot: Plot,
+  investment: InvestmentState,
+  output: number,
+  commodityValue: number,
+) {
+  const marketUnitValue = calculateMarketUnitValue(investment);
+  const marketValue = Math.round(output * marketUnitValue);
+  const surplusProfit = Math.max(0, marketValue - commodityValue);
+  const minimumInvestment = getMinimumInvestment(investment);
+  const naturalOutput = calculateOutput(plot, minimumInvestment);
+  const naturalCommodityValue =
+    calculateConstantCapital(minimumInvestment) +
+    investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+  const naturalMarketValue = Math.round(naturalOutput * marketUnitValue);
+  const naturalSurplusProfit = Math.max(
+    0,
+    naturalMarketValue - naturalCommodityValue,
   );
-  return output * 8 - constantCapital - variableCapital;
+  const differentialSurplusProfitI = Math.min(
+    surplusProfit,
+    naturalSurplusProfit,
+  );
+  const differentialSurplusProfitII =
+    surplusProfit - differentialSurplusProfitI;
+
+  return {
+    differentialSurplusProfitI,
+    differentialSurplusProfitII,
+    surplusProfit,
+  };
+}
+
+function calculateMarketUnitValue(investment: InvestmentState) {
+  const minimumInvestment = getMinimumInvestment(investment);
+  const marginalOutput = calculateOutput(getPlot("poor"), minimumInvestment);
+  const marginalCommodityValue =
+    calculateConstantCapital(minimumInvestment) +
+    investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+
+  return marginalCommodityValue / Math.max(1, marginalOutput);
+}
+
+function getMinimumInvestment(investment: InvestmentState): InvestmentState {
+  return {
+    ...investment,
+    seeds: 1,
+    tools: 1,
+    manager: false,
+    aiRobot: false,
+  };
+}
+
+function calculateRentComponents(
+  plot: Plot,
+  rentBudget: number,
+  differentialSurplusProfitI: number,
+  differentialSurplusProfitII: number,
+) {
+  if (rentBudget <= 0) {
+    return {
+      absoluteRent: 0,
+      differentialRentI: 0,
+      differentialRentII: 0,
+    };
+  }
+
+  const baseAbsoluteRent = Math.min(plot.absoluteRent, rentBudget);
+  const differentialRentBudget = rentBudget - baseAbsoluteRent;
+  const [differentialRentI, differentialRentII] = scaleToBudget(
+    [differentialSurplusProfitI, differentialSurplusProfitII],
+    differentialRentBudget,
+  );
+  // Any surplus above average profit that is not explained by differential
+  // rent still belongs to land ownership in this simplified model.
+  const absoluteRent =
+    rentBudget - differentialRentI - differentialRentII;
+
+  return {
+    absoluteRent,
+    differentialRentI,
+    differentialRentII,
+  };
+}
+
+function scaleToBudget(values: number[], budget: number) {
+  const desiredTotal = values.reduce((sum, value) => sum + value, 0);
+  if (desiredTotal <= budget) return values;
+
+  const scale = budget / desiredTotal;
+  const scaled = values.map((value) => Math.floor(value * scale));
+  let remaining = budget - scaled.reduce((sum, value) => sum + value, 0);
+  const remainders = values
+    .map((value, index) => ({
+      index,
+      remainder: value * scale - scaled[index],
+    }))
+    .sort((a, b) => b.remainder - a.remainder);
+
+  for (const item of remainders) {
+    if (remaining <= 0) break;
+    scaled[item.index] += 1;
+    remaining -= 1;
+  }
+
+  return scaled;
 }
 
 export const money = (value: number) => `${value}c`;

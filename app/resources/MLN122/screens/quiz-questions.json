@@ -1,0 +1,328 @@
+[
+  {
+    "id": "q-01",
+    "question": "Khi nhà tư bản cho vay nhận được lợi tức, điều đó nên hiểu đúng nhất như thế nào?",
+    "options": [
+      "Tiền tự sinh ra tiền trong quá trình cho vay",
+      "Người cho vay nhận một phần lợi nhuận do người đi vay thu được",
+      "Lợi tức là tiền công của người cho vay",
+      "Lợi tức là phần địa tô chuyển sang hình thức tiền"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-02",
+    "question": "Vì sao tư bản cho vay dễ tạo cảm giác rằng 'tiền tự đẻ ra tiền'?",
+    "options": [
+      "Vì hình thức vận động của nó rút gọn thành T - T'",
+      "Vì người cho vay trực tiếp sản xuất hàng hóa",
+      "Vì lợi tức không liên quan gì đến giá trị thặng dư",
+      "Vì người đi vay không cần sử dụng tư bản vào sản xuất"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-03",
+    "question": "Trong quan hệ tư bản cho vay, người cho vay thực chất chuyển cho người đi vay cái gì?",
+    "options": [
+      "Quyền sở hữu vĩnh viễn đối với tư bản",
+      "Quyền sử dụng tư bản trong một thời gian nhất định",
+      "Toàn bộ lợi nhuận bình quân",
+      "Quyền sở hữu ruộng đất"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-04",
+    "question": "Điểm đặc biệt của tư bản cho vay so với hàng hóa thông thường là gì?",
+    "options": [
+      "Bán xong thì người bán mất luôn quyền sở hữu",
+      "Người mua chỉ được quyền sử dụng, còn quyền sở hữu vẫn thuộc người cho vay",
+      "Nó không có giá trị sử dụng",
+      "Nó chỉ được dùng trong nông nghiệp"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-05",
+    "question": "Lợi tức có nguồn gốc sâu xa từ đâu?",
+    "options": [
+      "Từ bản thân tiền cho vay",
+      "Từ một phần giá trị thặng dư được phân chia cho người cho vay",
+      "Từ giá cả ruộng đất",
+      "Từ tiền tiết kiệm của người tiêu dùng"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-06",
+    "question": "Nếu một nhà tư bản vay tiền để sản xuất rồi trả lợi tức cho người cho vay, phần lợi tức đó được lấy từ đâu là hợp lý nhất?",
+    "options": [
+      "Từ tiền lương của người cho vay",
+      "Từ phần lợi nhuận người đi vay thu được sau khi sử dụng tư bản",
+      "Từ địa tô tuyệt đối",
+      "Từ giá trị của máy móc còn nguyên vẹn"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-07",
+    "question": "Tỷ suất lợi tức phản ánh điều gì?",
+    "options": [
+      "Tỷ lệ giữa lợi tức và tư bản cho vay",
+      "Tỷ lệ giữa địa tô và giá đất",
+      "Tỷ lệ giữa tiền lương và tư bản khả biến",
+      "Tỷ lệ giữa chi phí sản xuất và giá trị hàng hóa"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-08",
+    "question": "Tỷ suất lợi tức chịu ảnh hưởng trực tiếp bởi những yếu tố nào?",
+    "options": [
+      "Tỷ suất lợi nhuận bình quân",
+      "Quan hệ cung - cầu về tư bản cho vay",
+      "Độ màu mỡ tự nhiên của đất",
+      "Tên gọi của ngân hàng cho vay"
+    ],
+    "answer": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "q-09",
+    "question": "Vì sao tỷ suất lợi tức thường không thể cao hơn tỷ suất lợi nhuận bình quân trong điều kiện bình thường?",
+    "options": [
+      "Vì nếu lợi tức lấy hết hoặc vượt lợi nhuận thì người đi vay không còn động lực vay để kinh doanh",
+      "Vì người cho vay luôn trực tiếp sản xuất hàng hóa",
+      "Vì lợi tức không liên quan đến lợi nhuận",
+      "Vì ngân hàng luôn do địa chủ kiểm soát"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-10",
+    "question": "Nếu một người chỉ nhìn công thức T - T' của tư bản cho vay rồi kết luận rằng tiền tự tạo ra lợi tức, sai ở đâu?",
+    "options": [
+      "Chỉ nhìn hình thức bên ngoài mà bỏ qua quá trình sản xuất nơi giá trị thặng dư được tạo ra",
+      "Chưa tính địa tô chênh lệch I",
+      "Chưa tính giá trị sử dụng của đất",
+      "Chưa tính số lượng người tiêu dùng"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-11",
+    "question": "Cổ phiếu, trái phiếu được gọi là tư bản giả vì lý do nào là hợp lý nhất?",
+    "options": [
+      "Vì chúng không bao giờ có giá",
+      "Vì chúng là giấy tờ có thể mua bán và có giá cả riêng, tách tương đối khỏi tư bản thực đang sản xuất",
+      "Vì chúng chỉ tồn tại trong nông nghiệp",
+      "Vì chúng luôn làm doanh nghiệp phá sản"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-12",
+    "question": "Một cổ phiếu tăng giá mạnh trên thị trường có chắc chứng minh doanh nghiệp đã mở rộng sản xuất thực không?",
+    "options": [
+      "Chắc chắn có, vì giá cổ phiếu tăng là sản xuất tăng",
+      "Không chắc, vì giá chứng khoán có thể tăng do kỳ vọng, đầu cơ hoặc phân phối lợi ích tài chính",
+      "Chắc chắn không, vì cổ phiếu không liên quan doanh nghiệp",
+      "Chỉ đúng nếu doanh nghiệp kinh doanh nông nghiệp"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-13",
+    "question": "Trong quan hệ lợi tức, nếu bỏ qua nguồn gốc giá trị thặng dư thì dễ dẫn đến cách hiểu nào?",
+    "options": [
+      "Cho rằng tiền vốn tự sinh ra lợi tức một cách tự nhiên",
+      "Cho rằng địa tô chênh lệch II biến mất",
+      "Cho rằng người tiêu dùng tạo ra lợi tức",
+      "Cho rằng lợi tức chỉ là tiền thuê đất"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-14",
+    "question": "Trong nông nghiệp tư bản chủ nghĩa, ba chủ thể cơ bản liên quan đến địa tô là những ai?",
+    "options": [
+      "Địa chủ, nhà tư bản kinh doanh nông nghiệp, công nhân nông nghiệp làm thuê",
+      "Ngân hàng, người gửi tiền, người tiêu dùng",
+      "Nhà tư bản thương nghiệp, người mua hàng, người bán hàng",
+      "Công nhân công nghiệp, người tiêu dùng, nhà nước"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-15",
+    "question": "Địa tô tư bản chủ nghĩa về bản chất là gì?",
+    "options": [
+      "Toàn bộ lợi nhuận của nhà tư bản nông nghiệp",
+      "Một phần giá trị thặng dư mà nhà tư bản nông nghiệp phải trả cho địa chủ",
+      "Tiền lương của công nhân nông nghiệp",
+      "Giá trị tự nhiên do đất tự tạo ra"
+    ],
+    "answer": [
+      1
+    ]
+  },
+  {
+    "id": "q-16",
+    "question": "Vì sao địa chủ có thể thu địa tô dù không trực tiếp sản xuất?",
+    "options": [
+      "Vì địa chủ nắm quyền sở hữu ruộng đất",
+      "Vì địa chủ trực tiếp tạo ra giá trị thặng dư",
+      "Vì địa chủ là người bán nông sản cuối cùng",
+      "Vì địa chủ quyết định tiền lương của công nhân"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-17",
+    "question": "Nhà tư bản kinh doanh nông nghiệp phải trả địa tô cho địa chủ vì lý do nào?",
+    "options": [
+      "Vì muốn sử dụng ruộng đất thuộc quyền sở hữu của địa chủ",
+      "Vì địa chủ là người cho vay tư bản tiền tệ",
+      "Vì công nhân nông nghiệp yêu cầu trả thêm lương",
+      "Vì lợi tức luôn bằng địa tô"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-18",
+    "question": "Địa tô chênh lệch I thường xuất hiện từ đâu?",
+    "options": [
+      "Sự khác nhau về độ màu mỡ hoặc vị trí của ruộng đất",
+      "Việc phát hành cổ phiếu của công ty nông nghiệp",
+      "Việc người cho vay nhận lợi tức",
+      "Việc công nhân được trả lương cao hơn"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-19",
+    "question": "Một mảnh đất gần thị trường hơn nên chi phí vận chuyển thấp, lợi nhuận cao hơn mảnh đất xa thị trường. Phần chênh lệch đó gần nhất với hình thức nào?",
+    "options": [
+      "Địa tô chênh lệch I",
+      "Địa tô chênh lệch II",
+      "Lợi tức",
+      "Tư bản giả"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-20",
+    "question": "Địa tô chênh lệch II khác địa tô chênh lệch I ở điểm nào?",
+    "options": [
+      "Nó gắn với đầu tư thêm, thâm canh trên cùng một mảnh đất",
+      "Nó chỉ do đất tự nhiên màu mỡ hơn",
+      "Nó là phần lợi tức ngân hàng thu được",
+      "Nó chỉ xuất hiện khi không có lao động làm thuê"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-21",
+    "question": "Nếu nhà tư bản đầu tư thêm hệ thống tưới, phân bón, máy móc vào cùng một mảnh đất làm năng suất tăng, phần địa tô phát sinh gần nhất với hình thức nào?",
+    "options": [
+      "Địa tô chênh lệch II",
+      "Địa tô tuyệt đối",
+      "Lợi tức",
+      "Tư bản cho vay"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-22",
+    "question": "Địa tô tuyệt đối cho thấy điều gì trong quan hệ ruộng đất tư bản chủ nghĩa?",
+    "options": [
+      "Dù đất tốt hay xấu, muốn sử dụng đất vẫn phải trả tô do quyền sở hữu ruộng đất",
+      "Chỉ đất tốt nhất mới phải trả tô",
+      "Địa tô chỉ xuất hiện khi có ngân hàng cho vay",
+      "Địa tô tuyệt đối là tiền công của địa chủ"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-23",
+    "question": "Nếu một nhà tư bản thuê mảnh đất xấu, năng suất không cao nhưng vẫn phải trả tô, trường hợp này phù hợp nhất với khái niệm nào?",
+    "options": [
+      "Địa tô tuyệt đối",
+      "Địa tô chênh lệch II",
+      "Lợi nhuận thương nghiệp",
+      "Tỷ suất lợi tức"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-24",
+    "question": "Điểm chung giữa các hình thức địa tô tư bản chủ nghĩa là gì?",
+    "options": [
+      "Đều là một phần giá trị thặng dư gắn với quan hệ sở hữu và sử dụng ruộng đất",
+      "Đều là tiền do đất tự sinh ra",
+      "Đều là lợi tức của tư bản cho vay",
+      "Đều không liên quan đến lao động làm thuê"
+    ],
+    "answer": [
+      0
+    ]
+  },
+  {
+    "id": "q-25",
+    "question": "Nếu chỉ nói 'đất tốt nên địa chủ có tiền' thì cách hiểu đó thiếu điểm nào quan trọng nhất?",
+    "options": [
+      "Thiếu việc chỉ ra địa tô là phần giá trị thặng dư do lao động làm thuê tạo ra và bị phân chia cho địa chủ",
+      "Thiếu việc nói địa chủ trực tiếp sản xuất ra nông sản",
+      "Thiếu việc nói lợi tức luôn lớn hơn lợi nhuận",
+      "Thiếu việc nói cổ phiếu là tư bản cố định"
+    ],
+    "answer": [
+      0
+    ]
+  }
+]
