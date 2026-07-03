@@ -276,18 +276,6 @@ function GroundRentSection({
 }) {
   return (
     <div className="ground-rent-section grid gap-3">
-      <div className="pixel-card bg-[#10190d] p-4">
-        <h3 className="mb-3 text-lg font-black text-[#f5cf72]">
-          Phân tích Tô điền
-        </h3>
-        <p className="mb-4 text-sm leading-relaxed text-[#fff5cf]/80">
-          Trong mô hình này, nhà tư bản được ưu tiên giữ lợi nhuận bình quân.
-          Phần vượt mức bình quân được phân bổ thành tô điền cho chủ đất. Tô vi
-          phân đến từ lợi thế đất hoặc đầu tư thâm canh; tô tuyệt đối đến từ
-          quyền sở hữu ruộng đất.
-        </p>
-      </div>
-
       <div className="grid gap-3 md:grid-cols-3">
         <RentBox
           title="Tô điền vi phân I"
@@ -297,7 +285,7 @@ function GroundRentSection({
         <RentBox
           title="Tô điền vi phân II"
           value={result.differentialRentII}
-          text="Lợi nhuận thêm từ công cụ hoặc AI trên cùng lô đất."
+          text="Lợi nhuận thêm từ công cụ. Có thể bị thu vào mùa vụ trong tương lai."
         />
         <RentBox
           title="Tô điền tuyệt đối"
@@ -309,14 +297,13 @@ function GroundRentSection({
       <div className="pixel-card flex items-center justify-between gap-4 bg-[#d94b35] p-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-wide text-white/80">
-            Tô điền tổng cộng trả cho chủ đất
+            Tô điền trả trong mùa này
           </p>
           <p className="mt-1 font-mono text-3xl font-black text-white">
             {money(result.groundRent)}
           </p>
           <p className="mt-1 text-xs font-bold text-white/75">
-            {money(result.differentialRentI)} +{" "}
-            {money(result.differentialRentII)} + {money(result.absoluteRent)}
+            {money(result.differentialRentI)} + {money(result.absoluteRent)}
           </p>
         </div>
         <Factory className="h-12 w-12 text-white/60" />
@@ -353,8 +340,9 @@ function FinalProfitCard({ result }: { result: Calculation }) {
           </p>
           <p className="mt-2 text-sm leading-relaxed text-[#fff5cf]/75">
             Đây là phần còn lại sau khi trả tô cho chủ đất. Trong mô hình này,
-            phần này thường được giữ quanh mức lợi nhuận bình quân; phần vượt
-            bình quân được chuyển thành địa tô.
+            phần vượt do lợi thế đất được chuyển thành địa tô mùa này. Phần tô
+            vi phân II nếu có vẫn nằm trong lợi nhuận hiện tại, nhưng có thể bị
+            thu ở mùa sau.
           </p>
         </div>
         <div className="text-center">
@@ -398,7 +386,7 @@ function FinalProfitCard({ result }: { result: Calculation }) {
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-[#fff5cf]/70">Tô điền trả</span>
+          <span className="text-[#fff5cf]/70">Tô mùa này</span>
           <span className="font-mono font-bold text-[#d94b35]">
             −{money(result.groundRent)}
           </span>

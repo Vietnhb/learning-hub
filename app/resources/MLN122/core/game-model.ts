@@ -185,7 +185,7 @@ export function calculateSeason(
       differentialSurplusProfitI,
       differentialSurplusProfitII,
     );
-  const groundRent = absoluteRent + differentialRentI + differentialRentII;
+  const groundRent = absoluteRent + differentialRentI;
   const remainingProfit = profitBeforeRent - groundRent;
 
   return {

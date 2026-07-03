@@ -98,7 +98,7 @@ Màn này là phần quan trọng nhất. Game hiển thị:
 - Tổng tô điền trả cho địa chủ.
 - Lợi nhuận nhà tư bản giữ lại.
 
-Nếu bạn thấy nhà tư bản giữ lại ít, đó là do công thức mô phỏng đang cho địa chủ thu phần lớn lợi nhuận vượt bình quân.
+Nếu bạn thấy nhà tư bản giữ lại ít, đó là do công thức mô phỏng đang cho địa chủ thu phần lớn lợi nhuận vượt bình quân do lợi thế đất. Riêng tô vi phân II được ghi là khoản có thể bị thu ở mùa sau.
 
 ### 3.7. Màn lý thuyết
 
@@ -380,19 +380,21 @@ Hạt giống vẫn là vốn không đổi và có thể làm tăng sản lư�
 
 Nếu công cụ hoặc AI làm năng suất tăng và tạo thêm lợi nhuận phụ trội, phần đó có thể trở thành tô vi phân II. Quản lý sản xuất vẫn có thể tăng hiệu quả, nhưng trong game được phân loại là lao động sống thuộc vốn khả biến nên không tách vào tô vi phân II.
 
+Trong mùa hiện tại, tô vi phân II chỉ được ghi nhận để người chơi thấy nguy cơ địa chủ thu thêm ở mùa sau. Nó không bị trừ khỏi lợi nhuận ngay trong mùa này.
+
 ### 5.16. Tổng tô điền
 
 ```text
-Tổng tô điền = tô tuyệt đối + tô vi phân I + tô vi phân II
+Tổng tô điền mùa này = tô tuyệt đối + tô vi phân I
 ```
 
 ### 5.17. Lợi nhuận nhà tư bản giữ lại
 
 ```text
-Lợi nhuận giữ lại = lợi nhuận trước địa tô - tổng tô điền
+Lợi nhuận giữ lại = lợi nhuận trước địa tô - tổng tô điền mùa này
 ```
 
-Trong mô hình hiện tại, kết quả này thường gần với lợi nhuận bình quân. Đó là chủ ý mô phỏng: nhà tư bản nông nghiệp giữ phần lợi nhuận bình quân, còn phần vượt bình quân bị địa chủ thu dưới dạng địa tô.
+Trong mô hình hiện tại, phần lợi nhuận phụ trội do lợi thế đất có thể bị thu trong mùa này. Riêng tô vi phân II do công cụ hoặc AI được ghi là khoản có thể bị thu vào mùa vụ trong tương lai.
 
 ## 6. Ví dụ với cấu hình mặc định
 
@@ -415,11 +417,12 @@ Giá trị thặng dư: 172c
 Lợi nhuận phụ trội: 735c
 Lợi nhuận trước địa tô: 907c
 Lợi nhuận bình quân mục tiêu: 77c
-Tổng tô điền: 830c
-Nhà tư bản giữ lại: 77c
+Tô vi phân II có thể thu mùa sau: 22c
+Tổng tô điền mùa này: 808c
+Nhà tư bản giữ lại: 99c
 ```
 
-Nhìn qua có vẻ nhà tư bản bị lấy quá nhiều. Nhưng theo mô hình, phần lớn 907c không phải lợi nhuận bình quân bình thường. Nó bao gồm lợi nhuận phụ trội do đất tốt, vị trí tốt và năng suất cao. Địa chủ, vì nắm quyền cho thuê đất, có thể thu phần này thành địa tô.
+Nhìn qua có vẻ nhà tư bản bị lấy nhiều. Nhưng theo mô hình, phần lớn 907c không phải lợi nhuận bình quân bình thường. Nó bao gồm lợi nhuận phụ trội do đất tốt, vị trí tốt và năng suất cao. Địa chủ, vì nắm quyền cho thuê đất, có thể thu phần do lợi thế đất thành địa tô trong mùa này; phần vi phân II do công cụ hoặc AI có thể bị thu ở mùa sau.
 
 ## 7. Vì sao nhà tư bản giữ lại ít?
 
@@ -429,7 +432,8 @@ Game đang mô phỏng theo logic:
 
 ```text
 Nhà tư bản giữ lợi nhuận bình quân.
-Địa chủ thu phần vượt lợi nhuận bình quân dưới dạng địa tô.
+Địa chủ thu phần vượt lợi nhuận bình quân do lợi thế đất dưới dạng địa tô.
+Tô vi phân II có thể bị thu ở mùa sau.
 ```
 
 Do đó, khi đất tốt hoặc đầu tư làm lợi nhuận phụ trội tăng mạnh, phần địa tô cũng tăng mạnh.
@@ -608,14 +612,14 @@ Không phải ngay lập tức trong mọi hoàn cảnh. Nhưng trong mô hình 
 Game thể hiện xu hướng lý thuyết này bằng công thức:
 
 ```text
-Địa tô lấy từ phần lợi nhuận vượt lợi nhuận bình quân.
+Địa tô mùa này lấy từ phần lợi nhuận vượt lợi nhuận bình quân do lợi thế đất. Tô vi phân II được ghi riêng như khoản có thể thu ở mùa sau.
 ```
 
 ### 9.7. Phản biện: Nếu nhà tư bản còn quá ít, họ có còn động lực sản xuất không?
 
-Trong mô hình hiện tại, nhà tư bản vẫn giữ lợi nhuận bình quân. Nếu lợi nhuận còn lại thấp hơn mức bình quân hoặc âm, đó sẽ là dấu hiệu mô hình cần cân bằng lại.
+Trong mô hình hiện tại, nhà tư bản vẫn giữ lợi nhuận bình quân và có thể giữ thêm phần tô vi phân II trong mùa hiện tại. Nếu lợi nhuận còn lại thấp hơn mức bình quân hoặc âm, đó sẽ là dấu hiệu mô hình cần cân bằng lại.
 
-Với cấu hình hiện tại, nhà tư bản thường không mất hết lợi nhuận. Họ giữ phần gần lợi nhuận bình quân, nhưng không giữ phần phụ trội lớn.
+Với cấu hình hiện tại, nhà tư bản thường không mất hết lợi nhuận. Họ giữ phần gần lợi nhuận bình quân và phần vi phân II chưa thu ngay nếu có.
 
 ### 9.8. Phản biện: Game có đúng hoàn toàn với C. Mác không?
 
@@ -733,7 +737,8 @@ Thông điệp cốt lõi:
 Lao động sống tạo giá trị mới.
 Nhà tư bản tổ chức sản xuất và giữ lợi nhuận bình quân.
 Địa chủ nắm quyền sở hữu đất và có thể thu địa tô.
-Đất tốt và đầu tư thâm canh tạo lợi nhuận phụ trội, phần này có thể chuyển thành địa tô.
+Đất tốt tạo lợi nhuận phụ trội có thể chuyển thành địa tô mùa này.
+Tô vi phân II từ công cụ hoặc AI có thể bị thu ở mùa sau.
 ```
 
 Nếu thấy nhà tư bản giữ lại ít, đó không nhất thiết là lỗi. Đó là điểm mà game muốn làm nổi bật: trong quan hệ địa tô, quyền sở hữu đất có thể giúp địa chủ chiếm phần lợi nhuận phụ trội do điều kiện sản xuất nông nghiệp tạo ra.

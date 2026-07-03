@@ -11,12 +11,12 @@ Lõi mô hình hiện tại **đúng ở khung khái niệm chính của C. Mác
 - Hạt giống, công cụ, máy móc, AI được xử lý như vốn bất biến.
 - Giá trị thặng dư là phần giá trị mới vượt quá tiền lương.
 - Đất tốt hoặc đầu tư thâm canh tạo lợi nhuận phụ trội.
-- Nhà tư bản nông nghiệp giữ lợi nhuận bình quân.
-- Phần vượt lợi nhuận bình quân có thể chuyển thành địa tô cho địa chủ.
+- Nhà tư bản nông nghiệp giữ lợi nhuận bình quân và có thể giữ thêm tô vi phân II trong mùa hiện tại.
+- Phần vượt lợi nhuận bình quân do lợi thế đất có thể chuyển thành địa tô cho địa chủ.
 
 Điểm đã phải chỉnh lại sau audit: UI và lời giải thích trước đó dễ làm người chơi hiểu `absoluteRent` là "khoản cố định theo lô". Trong code hiện tại, nó không chỉ là mức cố định. Nó là **tô tuyệt đối thực trả**, gồm mức tô cơ sở do quyền sở hữu đất và phần lợi nhuận vượt bình quân chưa phân vào tô vi phân.
 
-Với đầu tư mặc định, game hiện **không còn làm đất xấu giúp nhà tư bản giữ nhiều lợi nhuận hơn**. Cả ba loại đất đều kéo phần tư bản giữ lại về lợi nhuận bình quân `77c`; khác nhau nằm ở sản lượng, lợi nhuận phụ trội và địa tô.
+Với đầu tư mặc định, game hiện **không còn làm đất xấu giúp nhà tư bản giữ nhiều lợi nhuận hơn**. Đất trung bình và đất xấu kéo phần tư bản giữ lại về lợi nhuận bình quân `77c`; đất tốt giữ `99c` vì có `22c` tô vi phân II chưa thu ngay trong mùa hiện tại.
 
 ## Công thức đang chạy
 
@@ -143,7 +143,7 @@ Tô vi phân I đến từ ưu thế tự nhiên hoặc vị trí của lô đ�
 
 Tô vi phân II đến từ đầu tư bổ sung trên cùng một lô đất.
 
-Đánh giá theo Mác: đúng hơn sau khi loại hạt giống và quản lý sản xuất khỏi phần phân loại tô vi phân II. Hạt giống là đầu vào thường xuyên của vụ mùa và thuộc vốn bất biến, nên game vẫn cho nó tăng sản lượng nhưng không tách riêng thành tô vi phân II. Quản lý sản xuất thuê ngoài là lao động sống thuộc vốn khả biến, nên cũng không được gom vào tô vi phân II. Phần tô vi phân II trong game chỉ còn đến từ công cụ hoặc AI làm tăng năng suất trên cùng lô đất. Thực tế cần xét thêm khấu hao, thời hạn thuê, ai sở hữu cải tiến, và địa chủ có tăng tô khi tái ký hợp đồng hay không.
+Đánh giá theo Mác: đúng hơn sau khi loại hạt giống và quản lý sản xuất khỏi phần phân loại tô vi phân II. Hạt giống là đầu vào thường xuyên của vụ mùa và thuộc vốn bất biến, nên game vẫn cho nó tăng sản lượng nhưng không tách riêng thành tô vi phân II. Quản lý sản xuất thuê ngoài là lao động sống thuộc vốn khả biến, nên cũng không được gom vào tô vi phân II. Phần tô vi phân II trong game chỉ còn đến từ công cụ hoặc AI làm tăng năng suất trên cùng lô đất. Khoản này không bị thu ngay trong mùa hiện tại, mà được ghi là phần có thể bị thu vào mùa vụ trong tương lai. Thực tế cần xét thêm khấu hao, thời hạn thuê, ai sở hữu cải tiến, và địa chủ có tăng tô khi tái ký hợp đồng hay không.
 
 ### 12. Tô tuyệt đối
 
@@ -162,8 +162,9 @@ Logic hiện tại:
 ```text
 1. Tính phần vượt lợi nhuận bình quân.
 2. Giữ trước một mức tô cơ sở theo lô đất.
-3. Phần còn lại phân cho tô vi phân I và II theo nguồn lợi nhuận phụ trội.
-4. Nếu vẫn còn phần vượt bình quân chưa phân loại vào tô vi phân, quy về tô tuyệt đối.
+3. Phần còn lại phân cho tô vi phân I theo lợi thế đất.
+4. Tô vi phân II được ghi riêng như khoản có thể thu trong mùa vụ tương lai.
+5. Nếu vẫn còn phần vượt bình quân chưa phân loại vào tô vi phân I hoặc II, quy về tô tuyệt đối.
 ```
 
 Đánh giá theo Mác: dùng được cho mục tiêu học tập. Nó phản ánh ý: quyền sở hữu đất có thể chặn quá trình bình quân hóa lợi nhuận và giữ lại một khoản địa tô ngay cả trên đất xấu. Tuy nhiên, cách quy toàn bộ phần vượt bình quân chưa phân loại vào tô tuyệt đối là một quyết định mô phỏng, không phải công thức kinh tế lượng nguyên văn của Mác.
@@ -187,17 +188,17 @@ Lợi nhuận bình quân: 77c
 
 Kết quả audit:
 
-| Đất            |  Sản lượng | Doanh thu | Lợi nhuận phụ trội | Tô tuyệt đối thực trả | Tô vi phân I | Tô vi phân II | Tổng địa tô | Tư bản giữ |
-| -------------- | ---------: | --------: | -----------------: | --------------------: | -----------: | ------------: | ----------: | ---------: |
-| Đất tốt        | 235 đơn vị |     1255c |               735c |                   95c |         713c |           22c |        830c |        77c |
-| Đất trung bình | 140 đơn vị |      748c |               228c |                   95c |         228c |            0c |        323c |        77c |
-| Đất xấu        |  89 đơn vị |      520c |                 0c |                   95c |           0c |            0c |         95c |        77c |
+| Đất            |  Sản lượng | Doanh thu | Lợi nhuận phụ trội | Tô tuyệt đối thực trả | Tô vi phân I | Tô vi phân II có thể thu mùa sau | Địa tô mùa này | Tư bản giữ |
+| -------------- | ---------: | --------: | -----------------: | --------------------: | -----------: | -------------------------------: | -------------: | ---------: |
+| Đất tốt        | 235 đơn vị |     1255c |               735c |                   95c |         713c |                              22c |           808c |        99c |
+| Đất trung bình | 140 đơn vị |      748c |               228c |                   95c |         228c |                               0c |           323c |        77c |
+| Đất xấu        |  89 đơn vị |      520c |                 0c |                   95c |           0c |                               0c |            95c |        77c |
 
 Kết luận từ bảng:
 
-- Đất tốt không làm tư bản giữ nhiều hơn, vì phần phụ trội bị chuyển thành địa tô.
+- Đất tốt làm tư bản giữ thêm `22c` trong mùa hiện tại vì phần đó là tô vi phân II có thể bị thu ở mùa sau, chưa thu ngay.
 - Đất xấu không làm tư bản giữ nhiều hơn, vì phần tư bản giữ vẫn là lợi nhuận bình quân `77c`.
-- Đất tốt làm địa chủ nhận nhiều hơn, vì có tô vi phân I và II.
+- Đất tốt làm địa chủ nhận nhiều hơn trong mùa này vì có tô vi phân I; tô vi phân II được ghi là nguy cơ mùa sau.
 - Đất xấu vẫn có tô tuyệt đối thực trả, vì còn phần giá trị thặng dư vượt lợi nhuận bình quân.
 
 ## Trả lời thẳng câu "đất xấu kiếm nhiều lợi nhuận hơn cho tư bản à?"
@@ -207,7 +208,7 @@ Không, theo mô hình hiện tại thì **không**.
 Nếu cùng đầu tư mặc định, nhà tư bản giữ:
 
 ```text
-Đất tốt: 77c
+Đất tốt: 99c
 Đất trung bình: 77c
 Đất xấu: 77c
 ```
@@ -215,7 +216,7 @@ Nếu cùng đầu tư mặc định, nhà tư bản giữ:
 Điều khác nhau là:
 
 ```text
-Đất tốt: địa chủ nhận rất nhiều địa tô do lợi thế đất.
+Đất tốt: địa chủ nhận rất nhiều địa tô do lợi thế đất, còn tô vi phân II là khoản có thể bị thu ở mùa sau.
 Đất xấu: địa chủ chỉ nhận phần tô tuyệt đối từ phần vượt lợi nhuận bình quân.
 ```
 
@@ -241,7 +242,7 @@ Tiền lương công nhân nằm ở vốn khả biến. Hạt giống, công c�
 
 ### Đúng 5: Tư bản nông nghiệp giữ lợi nhuận bình quân
 
-Trong lý luận Mác, nhà tư bản kinh doanh nông nghiệp tham gia sản xuất để thu lợi nhuận như các nhà tư bản khác. Phần vượt bình quân có thể bị địa chủ chiếm dưới dạng địa tô. Game đang mô phỏng đúng ý này.
+Trong lý luận Mác, nhà tư bản kinh doanh nông nghiệp tham gia sản xuất để thu lợi nhuận như các nhà tư bản khác. Phần vượt bình quân do lợi thế đất có thể bị địa chủ chiếm dưới dạng địa tô. Riêng tô vi phân II trong game được ghi là khoản có thể bị thu ở mùa sau, nên nhà tư bản có thể giữ phần đó trong mùa hiện tại.
 
 ## Các điểm cần lưu ý theo C. Mác
 
@@ -304,7 +305,7 @@ Game dùng `88c` giá trị mới cho mỗi công nhân. Thực tế năng suấ
 - Chỉnh giải thích màn kết quả: tô tuyệt đối thực trả gồm mức cơ sở và phần vượt bình quân chưa phân vào tô vi phân.
 - Chỉnh hướng dẫn game: bảng tô tuyệt đối ghi rõ là `Tô tuyệt đối cơ sở`.
 - Chỉnh quản lý sản xuất: không còn tính vào vốn bất biến; lương quản lý sản xuất thuộc vốn khả biến và được cộng vào lao động sống.
-- Chỉnh hạt giống và quản lý sản xuất: vẫn ảnh hưởng sản lượng theo mô hình, nhưng không còn được tách vào tô vi phân II.
+- Chỉnh tô vi phân II: không thu ngay trong mùa hiện tại; ghi là khoản có thể bị thu vào mùa vụ tương lai.
 
 ## Kết luận audit
 
@@ -315,7 +316,7 @@ Nếu cần nói thật gọn cho người chơi:
 ```text
 Lao động sống tạo giá trị mới.
 Nhà tư bản ứng vốn và tổ chức sản xuất, rồi giữ lợi nhuận bình quân.
-Địa chủ nắm quyền sở hữu đất, nên có thể lấy phần lợi nhuận vượt bình quân dưới dạng địa tô.
-Đất tốt không làm tư bản giữ nhiều hơn; nó chủ yếu làm địa tô của địa chủ tăng.
+Địa chủ nắm quyền sở hữu đất, nên có thể lấy phần lợi nhuận vượt bình quân do lợi thế đất dưới dạng địa tô.
+Tô vi phân II từ công cụ hoặc AI có thể bị thu ở mùa vụ tương lai.
 Đất xấu không "lời hơn" cho tư bản; trong mô hình hiện tại tư bản vẫn chỉ giữ quanh lợi nhuận bình quân.
 ```

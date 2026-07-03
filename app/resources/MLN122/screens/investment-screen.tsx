@@ -6,8 +6,17 @@
 import { type InvestmentState, INVESTMENT_COSTS } from "../core/game-model";
 import { Stepper, ToggleOption, ScreenHeading } from "../ui/components";
 import { CoinIcon } from "../ui/pixel-art";
-import { Users, Sprout, Shovel, Factory, Bot, Coins } from "lucide-react";
-import { type ReactNode } from "react";
+import {
+  Users,
+  Sprout,
+  Shovel,
+  Factory,
+  Bot,
+  Coins,
+  ScrollText,
+  X,
+} from "lucide-react";
+import { type ReactNode, useState } from "react";
 
 interface InvestmentScreenProps {
   investment: InvestmentState;
@@ -30,6 +39,10 @@ export function InvestmentScreen({
   investment,
   onChange,
 }: InvestmentScreenProps) {
+  const [showContract, setShowContract] = useState(false);
+  const contractPanelId = "investment-contract-audit";
+  const contractButtonClass =
+    "inline-flex min-h-12 items-center justify-center gap-2 border-4 border-[#0b1209] bg-[#f5cf72] px-4 py-2 text-sm font-black uppercase tracking-wide text-[#2d2114] shadow-[4px_4px_0_#0b1209] transition-transform hover:-translate-y-0.5 active:translate-y-0 md:min-w-48";
   const update = (patch: Partial<InvestmentState>) =>
     onChange({ ...investment, ...patch });
 
@@ -37,11 +50,27 @@ export function InvestmentScreen({
 
   return (
     <div className="investment-screen grid gap-5">
-      <ScreenHeading
-        eyebrow="Đầu tư vốn"
-        title="Chuẩn bị vốn trước sản xuất"
-        text="Thuê lao động sống rồi mua tư liệu sản xuất. Hạt giống, công cụ và AI là vốn không đổi. Lương công nhân và quản lý sản xuất là vốn biến đổi."
-      />
+      <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+        <ScreenHeading
+          eyebrow="Đầu tư vốn"
+          title="Chuẩn bị vốn trước sản xuất"
+          text="Thuê lao động sống rồi mua tư liệu sản xuất. Hạt giống, công cụ và AI là vốn không đổi. Lương công nhân và quản lý sản xuất là vốn biến đổi."
+        />
+        <button
+          type="button"
+          onClick={() => setShowContract((current) => !current)}
+          className={contractButtonClass}
+        >
+          {showContract ? (
+            <X className="h-4 w-4" />
+          ) : (
+            <ScrollText className="h-4 w-4" />
+          )}
+          Đọc hợp đồng
+        </button>
+      </div>
+
+      {showContract && <ContractAuditCard id={contractPanelId} />}
 
       {/* Investment Summary */}
       <InvestmentSummaryBar total={totalInvestment} investment={investment} />
@@ -121,6 +150,58 @@ export function InvestmentScreen({
 
       {/* Investment Breakdown */}
       <InvestmentBreakdown investment={investment} total={totalInvestment} />
+    </div>
+  );
+}
+
+function ContractAuditCard({ id }: { id: string }) {
+  const terms = [
+    {
+      title: "Tô mùa này",
+      text: "Chủ đất thu tô tuyệt đối và tô vi phân I do lợi thế đất.",
+    },
+    {
+      title: "Tô vi phân II",
+      text: "Chỉ do công cụ . Có thể bị thu ở mùa vụ tương lai.",
+    },
+    {
+      title: "Không tính vào vi phân II",
+      text: "Hạt giống và lao động sống.",
+    },
+  ];
+
+  return (
+    <div
+      id={id}
+      className="border-4 border-[#0b1209] bg-[#10190d] p-4 shadow-[5px_5px_0_#0b1209]"
+    >
+      <div className="flex items-start gap-3">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center border-2 border-[#0b1209] bg-[#f5cf72] text-[#2d2114]">
+          <ScrollText className="h-5 w-5" />
+        </div>
+        <div className="min-w-0">
+          <p className="text-xs font-black uppercase tracking-wide text-[#f5cf72]">
+            Hợp đồng thuê đất
+          </p>
+          <h3 className="mt-1 text-xl font-black text-white">
+            Logic phân chia địa tô
+          </h3>
+        </div>
+      </div>
+
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {terms.map((term) => (
+          <div
+            key={term.title}
+            className="border-2 border-[#0b1209] bg-[#20361d] p-3"
+          >
+            <p className="text-sm font-black text-[#f5cf72]">{term.title}</p>
+            <p className="mt-1 text-xs leading-relaxed text-[#fff5cf]/75">
+              {term.text}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
