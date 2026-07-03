@@ -124,6 +124,7 @@ export const DEFAULT_INVESTMENT: InvestmentState = {
 };
 
 const LIVING_LABOR_VALUE_PER_WORKER = 88;
+const MANAGER_LIVING_LABOR_VALUE = 88;
 const AVERAGE_PROFIT_RATE = 0.22;
 const BASE_OUTPUT_PER_WORKER = 28;
 
@@ -148,7 +149,7 @@ export function calculateSeason(
 ): Calculation {
   const constantCapital = calculateConstantCapital(investment);
 
-  const variableCapital = investment.workers * INVESTMENT_COSTS.workerWage;
+  const variableCapital = calculateVariableCapital(investment);
 
   const productivityMultiplier = calculateProductivityMultiplier(
     plot,
@@ -156,7 +157,7 @@ export function calculateSeason(
   );
   const output = calculateOutput(plot, investment);
 
-  const livingLaborValue = investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+  const livingLaborValue = calculateLivingLaborValue(investment);
   const commodityValue = constantCapital + livingLaborValue;
   const surplusValue = Math.max(0, livingLaborValue - variableCapital);
   const {
@@ -230,8 +231,21 @@ function calculateConstantCapital(investment: InvestmentState) {
   return (
     investment.seeds * INVESTMENT_COSTS.seedCost +
     investment.tools * INVESTMENT_COSTS.toolCost +
-    (investment.manager ? INVESTMENT_COSTS.managerCost : 0) +
     (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0)
+  );
+}
+
+function calculateVariableCapital(investment: InvestmentState) {
+  return (
+    investment.workers * INVESTMENT_COSTS.workerWage +
+    (investment.manager ? INVESTMENT_COSTS.managerCost : 0)
+  );
+}
+
+function calculateLivingLaborValue(investment: InvestmentState) {
+  return (
+    investment.workers * LIVING_LABOR_VALUE_PER_WORKER +
+    (investment.manager ? MANAGER_LIVING_LABOR_VALUE : 0)
   );
 }
 
@@ -261,7 +275,7 @@ function calculateDifferentialSurplusProfits(
   const naturalOutput = calculateOutput(plot, minimumInvestment);
   const naturalCommodityValue =
     calculateConstantCapital(minimumInvestment) +
-    investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+    calculateLivingLaborValue(minimumInvestment);
   const naturalMarketValue = Math.round(naturalOutput * marketUnitValue);
   const naturalSurplusProfit = Math.max(
     0,
@@ -286,7 +300,7 @@ function calculateMarketUnitValue(investment: InvestmentState) {
   const marginalOutput = calculateOutput(getPlot("poor"), minimumInvestment);
   const marginalCommodityValue =
     calculateConstantCapital(minimumInvestment) +
-    investment.workers * LIVING_LABOR_VALUE_PER_WORKER;
+    calculateLivingLaborValue(minimumInvestment);
 
   return marginalCommodityValue / Math.max(1, marginalOutput);
 }

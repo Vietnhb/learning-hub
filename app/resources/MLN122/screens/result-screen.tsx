@@ -175,7 +175,7 @@ function CostsSection({ result }: { result: Calculation }) {
         </div>
         <div className="flex justify-between text-xs">
           <span className="text-[#fff5cf]/70">
-            Vốn biến đổi (lương công nhân)
+            Vốn biến đổi (lương công nhân, quản lý)
           </span>
           <span className="font-mono font-bold text-[#fff5cf]">
             {money(result.variableCapital)}
@@ -207,8 +207,8 @@ function SurplusValueCard({ result }: { result: Calculation }) {
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-[#fff5cf]/80">
               Giá trị mới do lao động sống tạo ra vượt quá chi phí tiền lương.
-              Máy móc, công cụ và AI chỉ chuyển giá trị cũ và nâng năng suất;
-              chúng không tự tạo ra giá trị thặng dư.
+              Quản lý thuê ngoài cũng là lao động sống tổ chức sản xuất; máy
+              móc, công cụ và AI chỉ chuyển giá trị cũ và nâng năng suất.
             </p>
           </div>
           <div className="flex h-full flex-col items-end justify-start text-right md:items-center md:justify-center">

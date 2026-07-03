@@ -450,8 +450,9 @@ function StoryScreen() {
       </div>
       <TheoryNote>
         Ý tưởng chính: giá trị thặng dư đến từ lao động sống trong sản xuất.
-        Công cụ, quản lý và AI có thể nâng cao năng suất, nhưng chúng không thay
-        thế vai trò của lao động làm nguồn giá trị thặng dư.
+        Quản lý thuê ngoài cũng là lao động sống tổ chức sản xuất; công cụ và
+        AI chỉ hỗ trợ nâng năng suất, không thay thế lao động làm nguồn giá trị
+        mới.
       </TheoryNote>
     </div>
   );
@@ -685,11 +686,7 @@ function getControlPanelLines(
   quizScore: number,
 ) {
   const totalCapital = result.constantCapital + result.variableCapital;
-  const constantCapital =
-    investment.seeds * INVESTMENT_COSTS.seedCost +
-    investment.tools * INVESTMENT_COSTS.toolCost +
-    (investment.manager ? INVESTMENT_COSTS.managerCost : 0) +
-    (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0);
+  const constantCapital = result.constantCapital;
 
   switch (screen) {
     case "title":
@@ -712,6 +709,7 @@ function getControlPanelLines(
     case "investment":
       return [
         { label: "Công nhân", value: String(investment.workers) },
+        { label: "Quản lý", value: investment.manager ? "Lao động sống" : "Không thuê" },
         { label: "Vốn không đổi", value: money(constantCapital) },
         { label: "Tổng vốn", value: money(totalCapital) },
       ];

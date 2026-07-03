@@ -252,7 +252,7 @@ export function GroundRentExplanation({
           title="Nếu như AI và năng suất?"
           points={[
             "AI và máy móc là lao động chết (giá trị trong quá khứ được chuyển)",
-            "Chỉ lao động sống tạo ra giá trị mới",
+            "Lao động sống gồm công nhân trực tiếp và lao động quản lý thuê ngoài",
             "AI nâng cao năng suất nhưng không tạo giá trị thặng dư",
             "Năng suất cao hơn có thể tạo lợi nhuận phụ trội, nhưng không tự tạo giá trị mới",
           ]}
@@ -381,8 +381,10 @@ export function InvestmentImpactVisualization({
       count: 1,
       icon: <Factory className="h-5 w-5" />,
       color: "#f5a65a",
-      impact: "Phối hợp công việc, nâng cao hiệu quả 14%.",
-      contribution: "Tổ chức tốt hơn, năng suất cao hơn",
+      impact:
+        "Lao động sống làm thuê để phối hợp công việc, nâng cao hiệu quả 14%.",
+      contribution:
+        "Tổ chức tốt hơn, vừa là vốn biến đổi vừa làm năng suất cao hơn",
     });
   }
 
@@ -502,8 +504,9 @@ export function TheoryExplanation({
               Tô điền nông nghiệp tư bản là phần lợi nhuận chủ đất nhận được vì
               họ nắm quyền cho thuê ruộng đất. Tô vi phân đến từ lợi thế đất đai
               hoặc thâm canh; tô tuyệt đối đến từ quyền sở hữu đất. Công cụ,
-              công nghệ và AI giúp tăng năng suất, nhưng lao động sống vẫn là
-              nguồn tạo giá trị mới.
+              công nghệ và AI giúp tăng năng suất; quản lý thuê ngoài cũng là
+              lao động sống tổ chức sản xuất, và lao động sống vẫn là nguồn tạo
+              giá trị mới.
             </p>
           </div>
         </div>
@@ -570,7 +573,7 @@ function buildExplanations(
   // Quản lý nếu sử dụng
   if (investment.manager) {
     explanations.push(
-      `Quản lý cải thiện tổ chức công việc và phối hợp, nâng cao hiệu quả tổng thể 14%. Điều này ảnh hưởng đến năng suất nhưng không tạo ra giá trị mới.`,
+      `Quản lý là lao động sống làm thuê: tiền trả cho quản lý thuộc vốn biến đổi. Trong game, quản lý vừa cộng vào giá trị lao động sống vừa cải thiện tổ chức công việc, nâng hiệu quả tổng thể 14%.`,
     );
   }
 

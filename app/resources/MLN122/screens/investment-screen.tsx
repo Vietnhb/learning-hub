@@ -37,7 +37,7 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
       <ScreenHeading
         eyebrow="Đầu tư vốn"
         title="Chuẩn bị vốn trước sản xuất"
-        text="Tổ chức sản xuất bằng cách thuê công nhân (vốn biến đổi) và mua phương tiện sản xuất (vốn không đổi). Công cụ, hạt giống, quản lý và AI là vốn không đổi."
+        text="Tổ chức sản xuất bằng cách thuê lao động sống (công nhân và quản lý) rồi mua phương tiện sản xuất. Hạt giống, công cụ và AI là vốn không đổi; lương quản lý thuộc vốn biến đổi."
       />
 
       {/* Investment Summary */}
@@ -50,7 +50,7 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
           description="Lao động sống là nguồn duy nhất tạo ra giá trị mới và giá trị thặng dư"
           color="#7fc66a"
         />
-        <div className="grid gap-4 md:grid-cols-1">
+        <div className="grid gap-4 md:grid-cols-2">
           <Stepper
             icon={<Users className="h-5 w-5" />}
             label={`Thuê công nhân (${INVESTMENT_COSTS.workerWage}c mỗi người)`}
@@ -58,6 +58,14 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
             min={2}
             max={8}
             onChange={(workers) => update({ workers })}
+          />
+          <ToggleOption
+            icon={<Factory className="h-6 w-6" />}
+            title="Thuê Quản lý"
+            text="Lao động sống làm thuê để tổ chức và điều phối sản xuất, tăng hiệu suất tổng thể 14%."
+            active={investment.manager}
+            onToggle={() => update({ manager: !investment.manager })}
+            cost={INVESTMENT_COSTS.managerCost}
           />
         </div>
       </div>
@@ -89,22 +97,14 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
         </div>
       </div>
 
-      {/* Organization & Technology Section */}
+      {/* Technology Section */}
       <div className="grid gap-4">
         <SectionHeader
-          title="Tổ chức & Công nghệ"
-          description="Những đầu tư tùy chọn để cải thiện hiệu suất và năng suất"
+          title="Công nghệ"
+          description="Lao động chết hỗ trợ sản xuất, chuyển giá trị cũ và nâng năng suất"
           color="#f5cf72"
         />
-        <div className="grid gap-4 md:grid-cols-2">
-          <ToggleOption
-            icon={<Factory className="h-6 w-6" />}
-            title="Thuê Quản lý"
-            text="Tổ chức công việc và điều phối sản xuất, nâng cao hiệu suất tổng thể 14%."
-            active={investment.manager}
-            onToggle={() => update({ manager: !investment.manager })}
-            cost={INVESTMENT_COSTS.managerCost}
-          />
+        <div className="grid gap-4 md:grid-cols-1">
           <ToggleOption
             icon={<Bot className="h-6 w-6" />}
             title="Dùng Robot AI Nông nghiệp"
@@ -155,10 +155,11 @@ function InvestmentSummaryBar({
   const constantCapital =
     investment.seeds * INVESTMENT_COSTS.seedCost +
     investment.tools * INVESTMENT_COSTS.toolCost +
-    (investment.manager ? INVESTMENT_COSTS.managerCost : 0) +
     (investment.aiRobot ? INVESTMENT_COSTS.aiRobotCost : 0);
 
-  const variableCapital = investment.workers * INVESTMENT_COSTS.workerWage;
+  const variableCapital =
+    investment.workers * INVESTMENT_COSTS.workerWage +
+    (investment.manager ? INVESTMENT_COSTS.managerCost : 0);
 
   const constantPercent = (constantCapital / total) * 100;
   const variablePercent = (variableCapital / total) * 100;
@@ -248,7 +249,7 @@ function InvestmentBreakdown({
       unitCost: INVESTMENT_COSTS.managerCost,
       total: INVESTMENT_COSTS.managerCost,
       icon: <Factory className="h-4 w-4" />,
-      type: "constant",
+      type: "variable",
     });
   }
 
