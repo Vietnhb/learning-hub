@@ -8,11 +8,11 @@ Game này là một mô phỏng học tập về **địa tô tư bản chủ ng
 
 Mục tiêu chính không phải là "kiếm tiền càng nhiều càng tốt" theo nghĩa game kinh doanh thông thường. Mục tiêu là giúp người học nhìn thấy:
 
-- Giá trị mới trong sản xuất đến từ lao động sống của công nhân.
-- Máy móc, hạt giống, công cụ, quản lý và AI có thể làm tăng năng suất, nhưng không tự tạo ra giá trị thặng dư.
+- Giá trị mới trong sản xuất đến từ lao động sống của công nhân và quản lý sản xuất thuê ngoài nếu có.
+- Máy móc, hạt giống, công cụ và AI có thể làm tăng năng suất, nhưng không tự tạo ra giá trị thặng dư.
 - Đất tốt, vị trí tốt hoặc đầu tư thâm canh có thể tạo ra lợi nhuận phụ trội.
 - Lợi nhuận phụ trội trong nông nghiệp có thể chuyển thành địa tô cho địa chủ.
-- Nhà tư bản nông nghiệp thường chỉ giữ lại lợi nhuận bình quân, còn phần vượt bình quân có thể bị địa chủ thu dưới dạng tô điền.
+- Nhà tư bản nông nghiệp thường giữ lại lợi nhuận bình quân, còn phần vượt bình quân có thể bị địa chủ thu dưới dạng tô điền.
 
 Nói ngắn gọn: game giúp hiểu vì sao trong lý luận C. Mác, **địa chủ có thể nhận tiền dù không trực tiếp sản xuất**, còn **nhà tư bản giữ lại ít** trong một số trường hợp.
 
@@ -26,7 +26,7 @@ Bạn làm các việc sau:
 
 1. Thuê đất.
 2. Thuê công nhân.
-3. Mua hạt giống, công cụ, có thể thuê quản lý hoặc dùng robot AI.
+3. Mua hạt giống, công cụ, có thể thuê quản lý sản xuất hoặc dùng robot AI.
 4. Tổ chức sản xuất nông nghiệp.
 5. Bán nông sản.
 6. Trả địa tô cho địa chủ.
@@ -56,11 +56,11 @@ Màn này giải thích quan hệ xã hội trong game.
 
 Bạn chọn một trong các loại đất:
 
-| Loại đất | Ý nghĩa trong game | Tác động |
-|---|---|---|
-| Đất tốt | Đất có độ phì nhiêu cao, gần chợ | Năng suất cao, dễ tạo lợi nhuận phụ trội, tô điền cao |
-| Đất trung bình | Điều kiện sản xuất bình thường | Mức giữa để so sánh trực quan |
-| Đất xấu | Đất kém hơn, xa chợ | Năng suất thấp, ít lợi nhuận phụ trội, tô thấp hơn |
+| Loại đất       | Ý nghĩa trong game               | Tác động                                              |
+| -------------- | -------------------------------- | ----------------------------------------------------- |
+| Đất tốt        | Đất có độ phì nhiêu cao, gần chợ | Năng suất cao, dễ tạo lợi nhuận phụ trội, tô điền cao |
+| Đất trung bình | Điều kiện sản xuất bình thường   | Mức giữa để so sánh trực quan                         |
+| Đất xấu        | Đất kém hơn, xa chợ              | Năng suất thấp, ít lợi nhuận phụ trội, tô thấp hơn    |
 
 Điểm quan trọng: đất tốt không tự tạo ra giá trị mới. Đất tốt chỉ giúp cùng một lượng lao động có thể tạo ra nhiều sản phẩm hơn, nhờ đó nhà tư bản có thể bán hàng với lợi thế hơn so với sản xuất trên đất xấu.
 
@@ -68,15 +68,15 @@ Bạn chọn một trong các loại đất:
 
 Bạn chọn hoặc điều chỉnh các yếu tố đầu tư:
 
-| Yếu tố | Trong game là gì | Ý nghĩa lý thuyết |
-|---|---|---|
-| Công nhân | Người lao động làm thuê | Nguồn tạo ra giá trị mới và giá trị thặng dư |
-| Hạt giống | Đầu vào sản xuất | Vốn không đổi |
-| Công cụ | Tư liệu lao động | Vốn không đổi |
-| Quản lý | Tổ chức sản xuất tốt hơn | Làm tăng hiệu quả, tăng năng suất |
-| Robot AI | Công nghệ hỗ trợ sản xuất | Làm tăng năng suất, nhưng không tự tạo giá trị thặng dư |
+| Yếu tố           | Trong game là gì                                   | Ý nghĩa lý thuyết                                       |
+| ---------------- | -------------------------------------------------- | ------------------------------------------------------- |
+| Công nhân        | Người lao động làm thuê                            | Nguồn tạo ra giá trị mới và giá trị thặng dư            |
+| Hạt giống        | Đầu vào sản xuất                                   | Vốn không đổi                                           |
+| Công cụ          | Tư liệu lao động                                   | Vốn không đổi                                           |
+| Quản lý sản xuất | Lao động sống làm thuê để tổ chức sản xuất tốt hơn | Vốn khả biến; làm tăng hiệu quả, tăng năng suất         |
+| Robot AI         | Công nghệ hỗ trợ sản xuất                          | Làm tăng năng suất, nhưng không tự tạo giá trị thặng dư |
 
-Trong game, nếu bạn tăng hạt giống, công cụ, quản lý hoặc AI, sản lượng có thể tăng. Nhưng phần tạo ra giá trị mới vẫn được mô phỏng là do công nhân.
+Trong game, nếu bạn tăng hạt giống, công cụ, quản lý sản xuất hoặc AI, sản lượng có thể tăng. Phần tạo ra giá trị mới vẫn gắn với lao động sống: công nhân trực tiếp và quản lý sản xuất thuê ngoài nếu có bật.
 
 ### 3.5. Màn canh tác
 
@@ -88,7 +88,7 @@ Màn này giúp nhìn thấy rằng sản phẩm không tự xuất hiện từ 
 
 Màn này là phần quan trọng nhất. Game hiển thị:
 
-- Sản lượng nông sản, hiện được tính bằng **bao thóc**.
+- Sản lượng nông sản, tính bằng **đơn vị sản lượng**.
 - Doanh thu.
 - Tổng chi phí.
 - Giá trị thặng dư.
@@ -104,10 +104,10 @@ Nếu bạn thấy nhà tư bản giữ lại ít, đó là do công thức mô 
 
 Màn này giải thích lại bằng sơ đồ:
 
-1. Công nhân tạo giá trị mới.
+1. Lao động sống tạo giá trị mới.
 2. Sau khi trừ lương, phần còn lại là giá trị thặng dư.
 3. Nếu có lợi thế đất đai hoặc đầu tư, xuất hiện lợi nhuận phụ trội.
-4. Địa chủ có thể nhận địa tô từ phần lợi nhuận này.
+4. Địa chủ có thể nhận địa tô từ lợi thế đất và quyền sở hữu đất.
 5. Nhà tư bản giữ lại phần lợi nhuận còn lại.
 
 ### 3.8. Màn tổng kết
@@ -144,17 +144,17 @@ Ví dụ:
 
 Đây không phải tiền thật. Nó là đơn vị để so sánh chi phí, doanh thu, lợi nhuận và tô điền.
 
-### 4.2. Bao thóc là gì?
+### 4.2. Đơn vị sản lượng là gì?
 
-Sản lượng nông sản trong game được hiển thị bằng **bao thóc**.
+Sản lượng nông sản trong game được hiển thị bằng **đơn vị sản lượng**.
 
 Ví dụ:
 
 ```text
-235 bao thóc
+235 đơn vị sản lượng
 ```
 
-Nghĩa là mùa vụ tạo ra 235 bao thóc. Đây là đơn vị mô phỏng cụ thể cho dễ hình dung hơn các chữ chung chung như "đơn vị sản phẩm".
+Nghĩa là mùa vụ tạo ra 235 đơn vị sản lượng. Đây là đơn vị mô phỏng để tránh hiểu nhầm rằng game đang đo chính xác một loại nông sản cụ thể.
 
 ### 4.3. Năng suất phần trăm là gì?
 
@@ -164,7 +164,7 @@ Năng suất phần trăm là hệ số tổng hợp từ:
 - Vị trí thị trường.
 - Hạt giống.
 - Công cụ.
-- Quản lý.
+- Quản lý sản xuất.
 - Robot AI.
 
 Ví dụ năng suất 210% nghĩa là với cùng số công nhân cơ bản, hệ thống đang tạo ra sản lượng cao hơn mức chuẩn.
@@ -175,13 +175,13 @@ Các công thức dưới đây dựa trên logic hiện tại trong `core/game-
 
 ### 5.1. Chi phí đầu tư
 
-| Khoản | Giá trị |
-|---|---:|
-| Lương một công nhân | 45c |
-| Một phần hạt giống | 28c |
-| Một công cụ | 42c |
-| Quản lý | 70c |
-| Robot AI | 110c |
+| Khoản               | Giá trị |
+| ------------------- | ------: |
+| Lương một công nhân |     45c |
+| Một phần hạt giống  |     28c |
+| Một công cụ         |     42c |
+| Quản lý sản xuất    |     70c |
+| Robot AI            |    110c |
 
 ### 5.2. Vốn bất biến
 
@@ -190,19 +190,19 @@ Các công thức dưới đây dựa trên logic hiện tại trong `core/game-
 Trong game:
 
 ```text
-Vốn bất biến = chi phí hạt giống + chi phí công cụ + quản lý + robot AI
+Vốn bất biến = chi phí hạt giống + chi phí công cụ + robot AI
 ```
 
 Nó được gọi là bất biến vì theo lý luận Mác, nó không tự làm tăng giá trị. Nó chỉ chuyển giá trị sẵn có vào sản phẩm.
 
 ### 5.3. Vốn khả biến
 
-**Vốn khả biến** là tiền lương trả cho công nhân.
+**Vốn khả biến** là tiền lương trả cho lao động sống làm thuê, gồm công nhân và quản lý sản xuất nếu có thuê.
 
 Trong game:
 
 ```text
-Vốn khả biến = số công nhân × 45c
+Vốn khả biến = số công nhân × 45c + quản lý sản xuất nếu thuê × 70c
 ```
 
 Nó được gọi là khả biến vì khi mua sức lao động, nhà tư bản có thể thu được giá trị mới lớn hơn tiền lương đã trả.
@@ -215,10 +215,12 @@ Mỗi công nhân trong game tạo ra:
 88c giá trị mới
 ```
 
+Quản lý sản xuất thuê ngoài, nếu bật, cũng được mô phỏng là lao động sống và tạo thêm `88c` giá trị mới trong mô hình đơn giản của game. Đây là lao động tổ chức sản xuất trong quá trình lao động tập thể, không phải chức năng cai quản thuần túy của nhà tư bản.
+
 Do đó:
 
 ```text
-Giá trị lao động sống = số công nhân × 88c
+Giá trị lao động sống = số công nhân × 88c + quản lý sản xuất nếu thuê × 88c
 ```
 
 ### 5.5. Giá trị thặng dư
@@ -244,12 +246,12 @@ Giá trị thặng dư = 352c - 180c = 172c
 Trong game:
 
 ```text
-Sản lượng = số công nhân × 28 bao thóc × hệ số năng suất
+Sản lượng = số công nhân × 28 đơn vị × hệ số năng suất
 ```
 
 Trong đó:
 
-- `28 bao thóc` là sản lượng cơ bản của một công nhân.
+- `28 đơn vị` là sản lượng cơ bản của một công nhân.
 - Hệ số năng suất đến từ đất đai, vị trí và đầu tư.
 
 ### 5.7. Hệ số năng suất
@@ -265,12 +267,12 @@ Năng suất tự nhiên = độ phì nhiêu đất × lợi thế thị trườ
 **Năng suất thâm canh**
 
 ```text
-Năng suất thâm canh = quản lý × AI × công cụ × hạt giống
+Năng suất thâm canh = quản lý sản xuất × AI × công cụ × hạt giống
 ```
 
 Trong game:
 
-- Có quản lý: nhân 1.14.
+- Có quản lý sản xuất: nhân 1.14.
 - Có AI: nhân 1.22.
 - Mỗi công cụ: tăng 6%.
 - Mỗi phần hạt giống: tăng 4%.
@@ -290,7 +292,7 @@ Nghĩa là hàng hóa mang trong nó:
 
 ### 5.9. Giá thị trường và lợi nhuận phụ trội
 
-Game lấy đất xấu làm mốc để tính giá trị thị trường một bao thóc. Nếu lô đất của bạn tạo ra nhiều bao thóc hơn nhờ đất tốt hoặc đầu tư, doanh thu có thể cao hơn giá trị hàng hóa.
+Game lấy đất xấu làm mốc để tính giá trị thị trường một đơn vị sản lượng. Nếu lô đất của bạn tạo ra nhiều sản lượng hơn nhờ đất tốt hoặc đầu tư, doanh thu có thể cao hơn giá trị hàng hóa.
 
 ```text
 Lợi nhuận phụ trội = giá trị thị trường của sản lượng - giá trị hàng hóa
@@ -342,15 +344,15 @@ Ngân sách địa tô = lợi nhuận trước địa tô - lợi nhuận bình
 
 Trong game, mỗi loại đất có một mức tô tuyệt đối cơ sở:
 
-| Loại đất | Tô tuyệt đối cơ sở |
-|---|---:|
-| Đất tốt | 90c |
-| Đất trung bình | 60c |
-| Đất xấu | 35c |
+| Loại đất       | Tô tuyệt đối cơ sở |
+| -------------- | -----------------: |
+| Đất tốt        |                90c |
+| Đất trung bình |                60c |
+| Đất xấu        |                35c |
 
 Game chỉ trả tô tuyệt đối nếu còn đủ lợi nhuận vượt mức bình quân.
 
-Lưu ý: mức trong bảng là mức cơ sở để biểu thị quyền sở hữu đất. Nếu sau khi tính tô vi phân vẫn còn phần lợi nhuận vượt bình quân chưa được phân bổ, game quy phần còn lại đó vào tô tuyệt đối. Cách này giúp kết quả không bị hiểu sai thành "đất xấu làm nhà tư bản lời hơn đất tốt".
+Lưu ý: mức trong bảng là mức cơ sở để biểu thị quyền sở hữu đất. Nếu sau khi tính tô vi phân I vẫn còn phần lợi nhuận vượt bình quân không thuộc thâm canh của người thuê, game quy phần còn lại đó vào tô tuyệt đối. Cách này giúp kết quả không bị hiểu sai thành "đất xấu làm nhà tư bản lời hơn đất tốt".
 
 ### 5.14. Địa tô vi phân I
 
@@ -372,11 +374,11 @@ Trong game, phần lợi nhuận phụ trội do lợi thế đất đai tự nh
 Ví dụ:
 
 - Mua thêm công cụ.
-- Dùng nhiều hạt giống hơn.
-- Có quản lý.
 - Dùng robot AI.
 
-Nếu đầu tư bổ sung làm năng suất tăng và tạo thêm lợi nhuận phụ trội, phần đó có thể trở thành tô vi phân II.
+Hạt giống vẫn là vốn không đổi và có thể làm tăng sản lượng, nhưng trong game không tách phần tăng do mua thêm hạt giống vào tô vi phân II. Hạt giống là đầu vào thường xuyên của vụ mùa, không phải cải tiến thâm canh để địa chủ thu riêng dưới mục này.
+
+Nếu công cụ hoặc AI làm năng suất tăng và tạo thêm lợi nhuận phụ trội, phần đó có thể trở thành tô vi phân II. Quản lý sản xuất vẫn có thể tăng hiệu quả, nhưng trong game được phân loại là lao động sống thuộc vốn khả biến nên không tách vào tô vi phân II.
 
 ### 5.16. Tổng tô điền
 
@@ -405,7 +407,7 @@ Cấu hình mặc định:
 Với đất tốt, kết quả có thể gần như sau:
 
 ```text
-Sản lượng: 235 bao thóc
+Sản lượng: 235 đơn vị
 Vốn bất biến: 168c
 Vốn khả biến: 180c
 Giá trị lao động sống: 352c
@@ -460,7 +462,7 @@ Người thuê đất, ứng vốn, thuê công nhân, tổ chức sản xuất 
 
 ### 8.3. Công nhân nông nghiệp
 
-Người bán sức lao động cho nhà tư bản. Trong mô hình Mác, công nhân là nguồn tạo ra giá trị mới.
+Người bán sức lao động cho nhà tư bản. Trong mô hình Mác, công nhân là lực lượng lao động trực tiếp tạo giá trị mới.
 
 ### 8.4. Vốn bất biến
 
@@ -468,11 +470,11 @@ Phần vốn dùng để mua tư liệu sản xuất như hạt giống, công c
 
 ### 8.5. Vốn khả biến
 
-Phần vốn dùng để mua sức lao động, tức tiền lương trả cho công nhân. Gọi là khả biến vì sức lao động có thể tạo ra giá trị lớn hơn tiền lương.
+Phần vốn dùng để mua sức lao động, tức tiền lương trả cho công nhân và quản lý sản xuất thuê ngoài nếu có. Gọi là khả biến vì sức lao động có thể tạo ra giá trị lớn hơn tiền lương.
 
 ### 8.6. Lao động sống
 
-Lao động đang diễn ra của con người trong quá trình sản xuất. Đây là nguồn tạo ra giá trị mới trong lý luận Mác.
+Lao động đang diễn ra của con người trong quá trình sản xuất. Đây là nguồn tạo ra giá trị mới trong lý luận Mác. Trong game, lao động sống gồm công nhân trực tiếp và quản lý sản xuất thuê ngoài nếu được bật.
 
 ### 8.7. Lao động chết
 
@@ -480,7 +482,7 @@ Giá trị đã kết tinh trong máy móc, công cụ, nguyên liệu. Máy mó
 
 ### 8.8. Giá trị thặng dư
 
-Phần giá trị mới công nhân tạo ra vượt quá tiền lương họ nhận.
+Phần giá trị mới lao động sống tạo ra vượt quá tiền lương họ nhận.
 
 Ví dụ:
 
@@ -507,7 +509,7 @@ Trong game, lợi nhuận phụ trội có thể đến từ:
 - Đất tốt hơn.
 - Vị trí gần chợ hơn.
 - Đầu tư thâm canh.
-- Công cụ, quản lý, AI làm năng suất cao hơn.
+- Công cụ, AI làm năng suất cao hơn; quản lý sản xuất thuê ngoài tổ chức lao động tốt hơn.
 
 ### 8.12. Địa tô
 
@@ -551,7 +553,7 @@ Các giấy tờ như cổ phiếu, trái phiếu có giá cả riêng và có t
 
 Đây là điểm dễ nhầm.
 
-Công cụ và AI có thể làm năng suất tăng. Một công nhân có thể làm ra nhiều bao thóc hơn trong cùng thời gian. Nhưng theo lý luận Mác, công cụ và AI chỉ chuyển giá trị đã có của chúng vào sản phẩm. Nguồn tạo ra giá trị mới vẫn là lao động sống.
+Công cụ và AI có thể làm năng suất tăng. Một công nhân có thể làm ra nhiều sản lượng hơn trong cùng thời gian. Nhưng theo lý luận Mác, công cụ và AI chỉ chuyển giá trị đã có của chúng vào sản phẩm. Nguồn tạo ra giá trị mới vẫn là lao động sống.
 
 Nói cách khác:
 
@@ -565,7 +567,7 @@ Game cố tình tách hai chuyện:
 - Tăng sản lượng.
 - Tạo giá trị mới.
 
-### 9.2. Phản biện: Đất tốt tạo ra nhiều thóc hơn, sao nói đất không tạo giá trị?
+### 9.2. Phản biện: Đất tốt tạo ra nhiều sản lượng hơn, sao nói đất không tạo giá trị?
 
 Đất tốt giúp lao động hiệu quả hơn. Nhưng đất không tự lao động. Nếu không có công nhân, hạt giống, công cụ và tổ chức sản xuất, đất không tự biến thành hàng hóa đem bán.
 
@@ -641,10 +643,10 @@ Vì vậy, game nên được hiểu là **mô hình minh họa lý thuyết**, 
 
 Khi xem màn kết quả, nên đọc theo thứ tự sau:
 
-1. Sản lượng bao thóc là bao nhiêu?
+1. Sản lượng là bao nhiêu?
 2. Vốn bất biến đã ứng ra bao nhiêu?
 3. Vốn khả biến, tức lương công nhân, là bao nhiêu?
-4. Công nhân tạo ra bao nhiêu giá trị mới?
+4. Lao động sống tạo ra bao nhiêu giá trị mới?
 5. Giá trị thặng dư là bao nhiêu?
 6. Đất và đầu tư có tạo lợi nhuận phụ trội không?
 7. Lợi nhuận bình quân của nhà tư bản là bao nhiêu?
@@ -671,7 +673,7 @@ Bạn sẽ thấy:
 
 ### 11.2. Thử cùng đất, tăng đầu tư
 
-Giữ nguyên loại đất. Tăng hạt giống, công cụ, quản lý hoặc AI.
+Giữ nguyên loại đất. Tăng công cụ hoặc AI.
 
 Bạn sẽ thấy:
 
@@ -681,6 +683,10 @@ Bạn sẽ thấy:
 - Tô vi phân II có thể tăng.
 
 Điều này minh họa tô vi phân II.
+
+Nếu chỉ tăng hạt giống, bạn vẫn có thể thấy sản lượng và chi phí thay đổi, nhưng phần đó không được tách riêng thành tô vi phân II.
+
+Nếu bật quản lý sản xuất, sản lượng và giá trị lao động sống có thể thay đổi, nhưng phần đó thuộc lao động sống chứ không phải tô vi phân II.
 
 ### 11.3. Thử giảm công nhân
 
@@ -724,7 +730,7 @@ Game MLN122 không chỉ là trò chơi trồng trọt. Nó là một mô hình 
 Thông điệp cốt lõi:
 
 ```text
-Công nhân tạo giá trị mới.
+Lao động sống tạo giá trị mới.
 Nhà tư bản tổ chức sản xuất và giữ lợi nhuận bình quân.
 Địa chủ nắm quyền sở hữu đất và có thể thu địa tô.
 Đất tốt và đầu tư thâm canh tạo lợi nhuận phụ trội, phần này có thể chuyển thành địa tô.

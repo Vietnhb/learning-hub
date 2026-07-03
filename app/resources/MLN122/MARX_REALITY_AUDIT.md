@@ -7,7 +7,7 @@ Tài liệu này audit riêng phần mô hình kinh tế của game "Nông trang
 Lõi mô hình hiện tại **đúng ở khung khái niệm chính của C. Mác**:
 
 - Lao động sống tạo giá trị mới.
-- Tiền lương là vốn khả biến.
+- Tiền lương công nhân và quản lý sản xuất thuê ngoài là vốn khả biến.
 - Hạt giống, công cụ, máy móc, AI được xử lý như vốn bất biến.
 - Giá trị thặng dư là phần giá trị mới vượt quá tiền lương.
 - Đất tốt hoặc đầu tư thâm canh tạo lợi nhuận phụ trội.
@@ -25,33 +25,37 @@ Nguồn chính: `app/resources/MLN122/core/game-model.ts`.
 ### 1. Vốn bất biến
 
 ```text
-Vốn bất biến = hạt giống + công cụ + quản lý + AI
+Vốn bất biến = hạt giống + công cụ + AI
 ```
 
 Trong game:
 
 - Hạt giống: `28c` mỗi phần.
 - Công cụ: `42c` mỗi công cụ.
-- Quản lý: `70c` nếu bật.
 - Robot AI: `110c` nếu bật.
 
-Đánh giá theo Mác: tương đối đúng với hạt giống, công cụ, máy móc. Riêng `quản lý` phức tạp hơn, vì quản lý có thể là lao động sống, lao động giám sát, hoặc chức năng đại diện tư bản. Game đang đơn giản hóa bằng cách đưa quản lý vào vốn bất biến để nhấn mạnh vai trò tổ chức và năng suất.
+Đánh giá theo Mác: đúng hướng với hạt giống, công cụ, máy móc và AI. Chúng là tư liệu sản xuất hoặc công nghệ đã kết tinh lao động quá khứ, nên trong game chỉ chuyển giá trị cũ và nâng năng suất; chúng không tự tạo giá trị mới.
 
 ### 2. Vốn khả biến
 
 ```text
-Vốn khả biến = số công nhân x 45c
+Vốn khả biến = số công nhân x 45c + quản lý sản xuất nếu thuê
 ```
 
-Đánh giá theo Mác: đúng hướng. Tiền lương là khoản mua sức lao động.
+Trong game:
+
+- Công nhân: `45c` mỗi người.
+- Quản lý sản xuất: `70c` nếu bật.
+
+Đánh giá theo Mác: đúng hướng. Tiền lương là khoản mua sức lao động. Trong game, nút quản lý phải hiểu là **quản lý sản xuất làm thuê**, tham gia tổ chức quá trình lao động tập thể; vì vậy khoản lương đó thuộc vốn khả biến chứ không phải vốn bất biến. Nếu hiểu quản lý như chức năng giám sát/cai quản đại diện cho quyền lực tư bản thì không nên cho nó tạo giá trị mới; đó không phải nghĩa game đang dùng.
 
 ### 3. Giá trị mới do lao động sống
 
 ```text
-Giá trị lao động sống = số công nhân x 88c
+Giá trị lao động sống = số công nhân x 88c + giá trị lao động quản lý sản xuất nếu thuê
 ```
 
-Đánh giá theo Mác: đúng về mặt phạm trù. Game cố định mỗi công nhân tạo `88c` giá trị mới để dễ học. Thực tế thì giá trị mới phụ thuộc thời gian lao động xã hội cần thiết, trình độ kỹ thuật, cường độ lao động và điều kiện thị trường.
+Đánh giá theo Mác: đúng về mặt phạm trù nếu hiểu quản lý là quản lý sản xuất thuê ngoài thuộc "người lao động tập thể". Game cố định mỗi công nhân tạo `88c` giá trị mới để dễ học; quản lý sản xuất cũng được mô phỏng là lao động sống và cộng `88c` khi bật. Thực tế thì giá trị mới phụ thuộc thời gian lao động xã hội cần thiết, trình độ kỹ thuật, cường độ lao động và điều kiện thị trường.
 
 ### 4. Giá trị thặng dư
 
@@ -72,7 +76,7 @@ Giá trị thặng dư = 172c
 ### 5. Sản lượng
 
 ```text
-Sản lượng = công nhân x 28 bao thóc x hệ số năng suất
+Sản lượng = công nhân x 28 đơn vị x hệ số năng suất
 ```
 
 Hệ số năng suất gồm:
@@ -81,7 +85,7 @@ Hệ số năng suất gồm:
 - Lợi thế thị trường/vị trí.
 - Hạt giống.
 - Công cụ.
-- Quản lý.
+- Lao động quản lý sản xuất.
 - AI.
 
 Đánh giá theo Mác: dùng được cho mô phỏng. Nhưng theo thực tế, vị trí gần chợ thường ảnh hưởng đến chi phí vận chuyển hoặc giá bán ròng, không nhất thiết làm tăng sản lượng vật chất. Game đang gộp vị trí vào hệ số năng suất cho dễ nhìn.
@@ -96,7 +100,7 @@ Giá trị hàng hóa = vốn bất biến + giá trị lao động sống
 
 ### 7. Giá trị thị trường và lợi nhuận phụ trội
 
-Game lấy đất xấu làm mốc giá trị thị trường một bao thóc:
+Game lấy đất xấu làm mốc giá trị thị trường một đơn vị sản lượng:
 
 ```text
 Giá thị trường mỗi bao = giá trị hàng hóa của lô đất xấu tối thiểu / sản lượng của lô đất xấu tối thiểu
@@ -139,7 +143,7 @@ Tô vi phân I đến từ ưu thế tự nhiên hoặc vị trí của lô đ�
 
 Tô vi phân II đến từ đầu tư bổ sung trên cùng một lô đất.
 
-Đánh giá theo Mác: đúng ở mức mô phỏng. Hạt giống, công cụ, quản lý và AI làm tăng năng suất nên có thể tạo lợi nhuận phụ trội. Tuy nhiên, thực tế cần xét thêm khấu hao, thời hạn thuê, ai sở hữu cải tiến, và địa chủ có tăng tô khi tái ký hợp đồng hay không.
+Đánh giá theo Mác: đúng hơn sau khi loại hạt giống và quản lý sản xuất khỏi phần phân loại tô vi phân II. Hạt giống là đầu vào thường xuyên của vụ mùa và thuộc vốn bất biến, nên game vẫn cho nó tăng sản lượng nhưng không tách riêng thành tô vi phân II. Quản lý sản xuất thuê ngoài là lao động sống thuộc vốn khả biến, nên cũng không được gom vào tô vi phân II. Phần tô vi phân II trong game chỉ còn đến từ công cụ hoặc AI làm tăng năng suất trên cùng lô đất. Thực tế cần xét thêm khấu hao, thời hạn thuê, ai sở hữu cải tiến, và địa chủ có tăng tô khi tái ký hợp đồng hay không.
 
 ### 12. Tô tuyệt đối
 
@@ -183,11 +187,11 @@ Lợi nhuận bình quân: 77c
 
 Kết quả audit:
 
-| Đất | Sản lượng | Doanh thu | Lợi nhuận phụ trội | Tô tuyệt đối thực trả | Tô vi phân I | Tô vi phân II | Tổng địa tô | Tư bản giữ |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Đất tốt | 235 bao thóc | 1255c | 735c | 95c | 684c | 51c | 830c | 77c |
-| Đất trung bình | 140 bao thóc | 748c | 228c | 95c | 228c | 0c | 323c | 77c |
-| Đất xấu | 89 bao thóc | 520c | 0c | 95c | 0c | 0c | 95c | 77c |
+| Đất            |  Sản lượng | Doanh thu | Lợi nhuận phụ trội | Tô tuyệt đối thực trả | Tô vi phân I | Tô vi phân II | Tổng địa tô | Tư bản giữ |
+| -------------- | ---------: | --------: | -----------------: | --------------------: | -----------: | ------------: | ----------: | ---------: |
+| Đất tốt        | 235 đơn vị |     1255c |               735c |                   95c |         713c |           22c |        830c |        77c |
+| Đất trung bình | 140 đơn vị |      748c |               228c |                   95c |         228c |            0c |        323c |        77c |
+| Đất xấu        |  89 đơn vị |      520c |                 0c |                   95c |           0c |            0c |         95c |        77c |
 
 Kết luận từ bảng:
 
@@ -255,9 +259,9 @@ Phần vượt lợi nhuận bình quân chưa vào tô vi phân thì quy về t
 
 Điều này phù hợp với trực giác địa tô vi phân, nhưng game không mô phỏng cung cầu thật. Nếu sản lượng xã hội thay đổi, giá thị trường thực tế cũng có thể thay đổi.
 
-### Lưu ý 3: Quản lý bị xếp vào vốn bất biến
+### Lưu ý 3: Quản lý sản xuất được xử lý như lao động sống
 
-Nếu quản lý là một người lao động làm thuê, tiền trả cho quản lý có thể được tranh luận là một loại chi phí lao động. Nếu quản lý đại diện cho chức năng điều hành của tư bản, cách xử lý lại khác. Game đơn giản hóa để tránh làm người học bị quá tải.
+Sau audit, game không còn xếp quản lý sản xuất thuê ngoài vào vốn bất biến. Nếu người này là lao động làm thuê để điều phối sản xuất, tiền trả cho họ thuộc vốn khả biến và lao động đó là lao động sống. Game phải tránh hiểu sai: chức năng giám sát/cai quản thuần túy đại diện cho nhà tư bản không phải nguồn tạo giá trị mới. Item trong game được khóa nghĩa là lao động tổ chức sản xuất cần thiết trong quá trình lao động tập thể.
 
 ### Lưu ý 4: AI là khái niệm hiện đại
 
@@ -299,6 +303,8 @@ Game dùng `88c` giá trị mới cho mỗi công nhân. Thực tế năng suấ
 - Chỉnh giải thích tô tuyệt đối trong màn lý thuyết: không còn ghi là "cố định theo lô".
 - Chỉnh giải thích màn kết quả: tô tuyệt đối thực trả gồm mức cơ sở và phần vượt bình quân chưa phân vào tô vi phân.
 - Chỉnh hướng dẫn game: bảng tô tuyệt đối ghi rõ là `Tô tuyệt đối cơ sở`.
+- Chỉnh quản lý sản xuất: không còn tính vào vốn bất biến; lương quản lý sản xuất thuộc vốn khả biến và được cộng vào lao động sống.
+- Chỉnh hạt giống và quản lý sản xuất: vẫn ảnh hưởng sản lượng theo mô hình, nhưng không còn được tách vào tô vi phân II.
 
 ## Kết luận audit
 
@@ -307,10 +313,9 @@ Game hiện phù hợp để dạy bài MLN122 về địa tô ở mức nhập 
 Nếu cần nói thật gọn cho người chơi:
 
 ```text
-Công nhân tạo giá trị mới.
+Lao động sống tạo giá trị mới.
 Nhà tư bản ứng vốn và tổ chức sản xuất, rồi giữ lợi nhuận bình quân.
 Địa chủ nắm quyền sở hữu đất, nên có thể lấy phần lợi nhuận vượt bình quân dưới dạng địa tô.
 Đất tốt không làm tư bản giữ nhiều hơn; nó chủ yếu làm địa tô của địa chủ tăng.
 Đất xấu không "lời hơn" cho tư bản; trong mô hình hiện tại tư bản vẫn chỉ giữ quanh lợi nhuận bình quân.
 ```
-

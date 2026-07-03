@@ -79,6 +79,7 @@ export function Sprite({
       className={`sprite-container ${className}`}
       style={{
         display: "block",
+        flexShrink: 0,
         width: spriteWidth * scale,
         height: spriteHeight * scale,
         overflow: "hidden",
@@ -140,6 +141,7 @@ export function AnimatedSprite({
       className={`sprite-container ${className}`}
       style={{
         display: "block",
+        flexShrink: 0,
         width: spriteWidth * scale,
         height: spriteHeight * scale,
         overflow: "hidden",

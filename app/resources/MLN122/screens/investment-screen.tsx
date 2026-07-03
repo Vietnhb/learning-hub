@@ -5,7 +5,7 @@
 
 import { type InvestmentState, INVESTMENT_COSTS } from "../core/game-model";
 import { Stepper, ToggleOption, ScreenHeading } from "../ui/components";
-import { CoinIcon, SeedIcon, ToolIcon } from "../ui/pixel-art";
+import { CoinIcon } from "../ui/pixel-art";
 import { Users, Sprout, Shovel, Factory, Bot, Coins } from "lucide-react";
 import { type ReactNode } from "react";
 
@@ -26,7 +26,10 @@ type InvestmentSummaryItem = {
 /**
  * Main investment screen
  */
-export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps) {
+export function InvestmentScreen({
+  investment,
+  onChange,
+}: InvestmentScreenProps) {
   const update = (patch: Partial<InvestmentState>) =>
     onChange({ ...investment, ...patch });
 
@@ -37,7 +40,7 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
       <ScreenHeading
         eyebrow="Đầu tư vốn"
         title="Chuẩn bị vốn trước sản xuất"
-        text="Tổ chức sản xuất bằng cách thuê lao động sống (công nhân và quản lý) rồi mua phương tiện sản xuất. Hạt giống, công cụ và AI là vốn không đổi; lương quản lý thuộc vốn biến đổi."
+        text="Thuê lao động sống rồi mua tư liệu sản xuất. Hạt giống, công cụ và AI là vốn không đổi. Lương công nhân và quản lý sản xuất là vốn biến đổi."
       />
 
       {/* Investment Summary */}
@@ -61,8 +64,8 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
           />
           <ToggleOption
             icon={<Factory className="h-6 w-6" />}
-            title="Thuê Quản lý"
-            text="Lao động sống làm thuê để tổ chức và điều phối sản xuất, tăng hiệu suất tổng thể 14%."
+            title="Thuê Quản lý sản xuất"
+            text="Lao động sống làm thuê để tổ chức và điều phối quá trình sản xuất, tăng hiệu suất tổng thể 14%."
             active={investment.manager}
             onToggle={() => update({ manager: !investment.manager })}
             cost={INVESTMENT_COSTS.managerCost}
@@ -101,14 +104,14 @@ export function InvestmentScreen({ investment, onChange }: InvestmentScreenProps
       <div className="grid gap-4">
         <SectionHeader
           title="Công nghệ"
-          description="Lao động chết hỗ trợ sản xuất, chuyển giá trị cũ và nâng năng suất"
+          description="Hỗ trợ sản xuất và nâng năng suất"
           color="#f5cf72"
         />
         <div className="grid gap-4 md:grid-cols-1">
           <ToggleOption
             icon={<Bot className="h-6 w-6" />}
             title="Dùng Robot AI Nông nghiệp"
-            text="Nâng cao năng suất lao động 22%. AI là lao động chết và không tạo ra giá trị thặng dư."
+            text="Nâng cao năng suất lao động 22%. AI không tạo ra giá trị thặng dư."
             active={investment.aiRobot}
             onToggle={() => update({ aiRobot: !investment.aiRobot })}
             cost={INVESTMENT_COSTS.aiRobotCost}
@@ -180,11 +183,14 @@ function InvestmentSummaryBar({
         <Coins className="h-16 w-16 text-[#f5cf72] opacity-40" />
       </div>
 
-      {/* Progress bar visualization */}
       <div className="mt-4">
         <div className="mb-2 flex justify-between text-xs font-bold">
-          <span className="text-[#7fc66a]">Vốn biến đổi: {variableCapital}c</span>
-          <span className="text-[#9ed7ef]">Vốn không đổi: {constantCapital}c</span>
+          <span className="text-[#7fc66a]">
+            Vốn biến đổi: {variableCapital}c
+          </span>
+          <span className="text-[#9ed7ef]">
+            Vốn không đổi: {constantCapital}c
+          </span>
         </div>
         <div className="flex h-6 overflow-hidden border-2 border-[#0b1209]">
           <div
@@ -244,7 +250,7 @@ function InvestmentBreakdown({
 
   if (investment.manager) {
     items.push({
-      label: "Quản lý",
+      label: "Quản lý sản xuất",
       count: 1,
       unitCost: INVESTMENT_COSTS.managerCost,
       total: INVESTMENT_COSTS.managerCost,
@@ -267,7 +273,7 @@ function InvestmentBreakdown({
   return (
     <div className="pixel-card bg-[#10190d] p-4">
       <h3 className="mb-3 text-lg font-black text-[#f5cf72]">Tóm tắt đầu tư</h3>
-      
+
       <div className="grid gap-2">
         {items.map((item, index) => (
           <div
@@ -275,7 +281,9 @@ function InvestmentBreakdown({
             className="flex items-center justify-between border-b border-[#fff5cf]/10 pb-2"
           >
             <div className="flex items-center gap-2">
-              <span className={`${item.type === "variable" ? "text-[#7fc66a]" : "text-[#9ed7ef]"}`}>
+              <span
+                className={`${item.type === "variable" ? "text-[#7fc66a]" : "text-[#9ed7ef]"}`}
+              >
                 {item.icon}
               </span>
               <span className="text-sm font-bold text-[#fff5cf]/90">
@@ -290,10 +298,14 @@ function InvestmentBreakdown({
             </span>
           </div>
         ))}
-        
+
         <div className="mt-2 flex items-center justify-between border-t-2 border-[#f5cf72] pt-3">
-          <span className="text-base font-black text-[#f5cf72]">Tổng vốn đầu tư</span>
-          <span className="font-mono text-2xl font-black text-[#f5cf72]">{total}c</span>
+          <span className="text-base font-black text-[#f5cf72]">
+            Tổng vốn đầu tư
+          </span>
+          <span className="font-mono text-2xl font-black text-[#f5cf72]">
+            {total}c
+          </span>
         </div>
       </div>
     </div>

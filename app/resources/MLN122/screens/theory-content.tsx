@@ -27,18 +27,31 @@ import {
 /**
  * Visual flow showing how value is created and distributed
  */
-export function ValueFlowDiagram({ result }: { result: Calculation }) {
+export function ValueFlowDiagram({
+  result,
+  investment,
+}: {
+  result: Calculation;
+  investment: InvestmentState;
+}) {
+  const livingLaborTitle = investment.manager
+    ? "Công nhân + Quản lý SX"
+    : "Công nhân";
+  const livingLaborDescription = investment.manager
+    ? "Tạo ra giá trị mới thông qua lao động trực tiếp và lao động tổ chức sản xuất"
+    : "Tạo ra giá trị mới thông qua lao động nông nghiệp";
+
   return (
     <div className="value-flow-diagram mx-auto max-w-4xl">
       <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
-        {/* Giai đoạn 1: Công nhân tạo ra giá trị */}
+        {/* Giai đoạn 1: Lao động sống tạo ra giá trị */}
         <FlowNode
           icon={<Users className="h-6 w-6" />}
-          title="Công nhân"
+          title={livingLaborTitle}
           subtitle="Lao động sống"
           value={result.livingLaborValue}
           color="#7fc66a"
-          description="Tạo ra giá trị mới thông qua lao động nông nghiệp"
+          description={livingLaborDescription}
         />
 
         <FlowArrow label="Sản xuất" />
@@ -82,12 +95,12 @@ export function ValueFlowDiagram({ result }: { result: Calculation }) {
       {/* Giải thích */}
       <div className="mt-6 border-l-4 border-[#f5cf72] bg-[#10190d] p-4">
         <p className="text-sm leading-relaxed text-[#fff5cf]/85">
-          <strong className="text-[#f5cf72]">Ý tưởng chính:</strong> Công nhân
-          tạo ra {money(result.livingLaborValue)} giá trị mới. Sau khi trả lương{" "}
-          {money(result.variableCapital)}, {money(result.surplusValue)} giá trị
-          thặng dư còn lại. Nếu lô đất làm ra nhiều hơn mức chuẩn, bạn có thêm{" "}
-          {money(result.surplusProfit)} lợi nhuận phụ trội. Chủ đất nhận{" "}
-          {money(result.groundRent)} làm tô điền; nhà tư bản còn{" "}
+          <strong className="text-[#f5cf72]">Ý tưởng chính:</strong> Lao động
+          sống tạo ra {money(result.livingLaborValue)} giá trị mới. Sau khi trả
+          lương {money(result.variableCapital)}, {money(result.surplusValue)}{" "}
+          giá trị thặng dư còn lại. Nếu lô đất làm ra nhiều hơn mức chuẩn, bạn
+          có thêm {money(result.surplusProfit)} lợi nhuận phụ trội. Chủ đất nhận{" "}
+          {money(result.groundRent)} làm tô điền. Nhà tư bản còn{" "}
           {money(result.remainingProfit)}.
         </p>
       </div>
@@ -220,8 +233,8 @@ export function GroundRentExplanation({
           value={result.differentialRentI}
           color="#ef634b"
           icon="🌱"
-          explanation="Lợi nhuận thêm từ điều kiện tự nhiên tốt hơn (độ phì nhiêu, vị trí). Ưu điểm tự nhiên của lô này so với đất xấu."
-          formula={`${plot.title} so với Đất xấu`}
+          explanation="Lợi nhuận thêm từ điều kiện tự nhiên tốt hơn như độ phì nhiêu và vị trí."
+          formula="Lợi thế tự nhiên của lô"
         />
 
         {/* Tô điền vi phân II */}
@@ -230,8 +243,8 @@ export function GroundRentExplanation({
           value={result.differentialRentII}
           color="#f5a65a"
           icon="🔧"
-          explanation="Lợi nhuận thêm từ đầu tư vốn bổ sung trên cùng một lô đất. Nông nghiệp thâm canh nâng cao năng suất."
-          formula="Từ đầu tư bổ sung"
+          explanation="Lợi nhuận thêm từ công cụ hoặc AI trên cùng một lô đất. Hạt giống và quản lý sản xuất không được tách vào phần này."
+          formula="Công cụ + AI"
         />
       </div>
 
@@ -252,7 +265,7 @@ export function GroundRentExplanation({
           title="Nếu như AI và năng suất?"
           points={[
             "AI và máy móc là lao động chết (giá trị trong quá khứ được chuyển)",
-            "Lao động sống gồm công nhân trực tiếp và lao động quản lý thuê ngoài",
+            "Lao động sống gồm công nhân trực tiếp và quản lý sản xuất thuê ngoài",
             "AI nâng cao năng suất nhưng không tạo giá trị thặng dư",
             "Năng suất cao hơn có thể tạo lợi nhuận phụ trội, nhưng không tự tạo giá trị mới",
           ]}
@@ -361,8 +374,10 @@ export function InvestmentImpactVisualization({
       icon: <Users className="h-5 w-5" />,
       color: "#7fc66a",
       impact:
-        "Những người sáng tạo trực tiếp giá trị thặng dư. Công nhân nhiều hơn = giá trị thặng dư nhiều hơn.",
-      contribution: `Tạo ra ${money(result.livingLaborValue)} giá trị tổng cộng`,
+        "Những người lao động trực tiếp tạo giá trị mới. Công nhân nhiều hơn = nền tảng giá trị thặng dư lớn hơn.",
+      contribution: investment.manager
+        ? "Cộng với quản lý sản xuất, tạo phần giá trị lao động sống tổng cộng"
+        : `Tạo ra ${money(result.livingLaborValue)} giá trị tổng cộng`,
     },
     {
       factor: "Hạt giống & Công cụ",
@@ -370,14 +385,14 @@ export function InvestmentImpactVisualization({
       icon: <TrendingUp className="h-5 w-5" />,
       color: "#9ed7ef",
       impact:
-        "Hạt giống, công cụ và máy móc giúp làm ra nhiều sản phẩm hơn, nhưng chỉ chuyển giá trị sẵn có.",
+        "Hạt giống và công cụ giúp làm ra nhiều sản phẩm hơn, nhưng chỉ chuyển giá trị sẵn có. Hạt giống không được tách vào tô vi phân II.",
       contribution: `Hệ số năng suất: ${Math.round(result.productivityMultiplier * 100)}%`,
     },
   ];
 
   if (investment.manager) {
     impacts.push({
-      factor: "Quản lý",
+      factor: "Quản lý sản xuất",
       count: 1,
       icon: <Factory className="h-5 w-5" />,
       color: "#f5a65a",
@@ -503,10 +518,10 @@ export function TheoryExplanation({
             <p className="mt-2 text-sm leading-relaxed text-[#fff5cf]/90">
               Tô điền nông nghiệp tư bản là phần lợi nhuận chủ đất nhận được vì
               họ nắm quyền cho thuê ruộng đất. Tô vi phân đến từ lợi thế đất đai
-              hoặc thâm canh; tô tuyệt đối đến từ quyền sở hữu đất. Công cụ,
-              công nghệ và AI giúp tăng năng suất; quản lý thuê ngoài cũng là
-              lao động sống tổ chức sản xuất, và lao động sống vẫn là nguồn tạo
-              giá trị mới.
+              hoặc thâm canh. Tô tuyệt đối đến từ quyền sở hữu đất. Công cụ,
+              công nghệ và AI giúp tăng năng suất. Quản lý sản xuất thuê ngoài
+              cũng là lao động sống tổ chức sản xuất, và lao động sống vẫn là
+              nguồn tạo giá trị mới.
             </p>
           </div>
         </div>
@@ -527,19 +542,21 @@ function buildExplanations(
 
   // Nguồn gốc giá trị thặng dư
   explanations.push(
-    `Giá trị thặng dư (${money(result.surplusValue)}) được tạo ra bởi ${investment.workers} công nhân nông nghiệp thông qua lao động sống, không phải do công cụ hay công nghệ.`,
+    investment.manager
+      ? `Giá trị thặng dư (${money(result.surplusValue)}) được tạo ra bởi lao động sống: ${investment.workers} công nhân nông nghiệp và quản lý sản xuất thuê ngoài, không phải do công cụ hay công nghệ.`
+      : `Giá trị thặng dư (${money(result.surplusValue)}) được tạo ra bởi ${investment.workers} công nhân nông nghiệp thông qua lao động sống, không phải do công cụ hay công nghệ.`,
   );
 
   if (result.surplusProfit > 0) {
     explanations.push(
-      `Lợi nhuận phụ trội (${money(result.surplusProfit)}) xuất hiện vì lô đất này làm ra nhiều sản phẩm hơn mức đất xấu làm chuẩn thị trường. Đây là lợi thế trong bán hàng, không phải giá trị mới do AI hay công cụ tự tạo ra.`,
+      `Lợi nhuận phụ trội (${money(result.surplusProfit)}) xuất hiện vì lô đất này làm ra nhiều sản phẩm hơn điều kiện chuẩn của thị trường. Đây là lợi thế trong bán hàng, không phải giá trị mới do AI hay công cụ tự tạo ra.`,
     );
   }
 
   // Tác động chất lượng lô đất
   if (result.differentialRentI > 0) {
     explanations.push(
-      `Tô điền vi phân I (${money(result.differentialRentI)}) xuất hiện vì ${plot.title.toLowerCase()} có độ phì nhiêu tự nhiên tốt hơn và vị trí tốt hơn so với đất xấu.`,
+      `Tô điền vi phân I (${money(result.differentialRentI)}) xuất hiện vì ${plot.title.toLowerCase()} có độ phì nhiêu và vị trí thuận lợi hơn điều kiện chuẩn.`,
     );
   } else {
     explanations.push(
@@ -550,7 +567,7 @@ function buildExplanations(
   // Tác động đầu tư
   if (result.differentialRentII > 0) {
     explanations.push(
-      `Tô điền vi phân II (${money(result.differentialRentII)}) xuất hiện vì đầu tư vốn bổ sung nâng cao năng suất trên cùng lô đất.`,
+      `Tô điền vi phân II (${money(result.differentialRentII)}) xuất hiện từ công cụ hoặc AI trên cùng lô đất. Hạt giống vẫn là vốn không đổi thường xuyên, còn quản lý sản xuất là lao động sống nên không được tách vào phần này.`,
     );
   } else {
     explanations.push(
@@ -566,14 +583,14 @@ function buildExplanations(
   // AI/công nghệ nếu sử dụng
   if (investment.aiRobot) {
     explanations.push(
-      `Robot AI nâng năng suất 22% và làm giảm thời gian lao động cá biệt trên mỗi sản phẩm. Nhưng lao động sống vẫn là nguồn tạo giá trị thặng dư; AI chỉ chuyển giá trị đã có từ trước.`,
+      `Robot AI nâng năng suất 22% và làm giảm thời gian lao động cá biệt trên mỗi sản phẩm. Lao động sống vẫn là nguồn tạo giá trị thặng dư. AI chỉ chuyển giá trị đã có từ trước.`,
     );
   }
 
   // Quản lý nếu sử dụng
   if (investment.manager) {
     explanations.push(
-      `Quản lý là lao động sống làm thuê: tiền trả cho quản lý thuộc vốn biến đổi. Trong game, quản lý vừa cộng vào giá trị lao động sống vừa cải thiện tổ chức công việc, nâng hiệu quả tổng thể 14%.`,
+      `Quản lý sản xuất là lao động sống làm thuê: tiền trả cho người này thuộc vốn biến đổi. Trong game, quản lý sản xuất vừa cộng vào giá trị lao động sống vừa cải thiện tổ chức công việc, nâng hiệu quả tổng thể 14%.`,
     );
   }
 

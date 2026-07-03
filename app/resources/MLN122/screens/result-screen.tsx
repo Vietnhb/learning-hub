@@ -74,10 +74,10 @@ function ProductionSummary({
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs font-bold uppercase tracking-wide text-[#f5cf72]">
-            Sản lượng nông sản
+            Sản lượng
           </p>
           <h3 className="mt-1 text-3xl font-black text-white">
-            {result.output} bao thóc
+            {result.output} đơn vị
           </h3>
         </div>
         <Sprout className="h-12 w-12 text-[#7fc66a] opacity-75" />
@@ -134,9 +134,8 @@ function RevenueSection({ result }: { result: Calculation }) {
         </div>
       </div>
       <p className="text-xs leading-relaxed text-[#fff5cf]/75">
-        Doanh thu từ {result.output} bao thóc. Trong game, giá thị trường
-        lấy đất xấu làm mốc; nếu lô đất của bạn làm ra nhiều hơn, phần chênh
-        lệch trở thành lợi nhuận phụ trội {money(result.surplusProfit)}.
+        Doanh thu từ sản lượng {result.output} theo giá chuẩn của game. Phần
+        vượt chuẩn tạo lợi nhuận phụ trội {money(result.surplusProfit)}.
       </p>
     </div>
   );
@@ -207,8 +206,8 @@ function SurplusValueCard({ result }: { result: Calculation }) {
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-[#fff5cf]/80">
               Giá trị mới do lao động sống tạo ra vượt quá chi phí tiền lương.
-              Quản lý thuê ngoài cũng là lao động sống tổ chức sản xuất; máy
-              móc, công cụ và AI chỉ chuyển giá trị cũ và nâng năng suất.
+              Quản lý sản xuất cũng là lao động sống. Máy móc, công cụ và AI chỉ
+              chuyển giá trị cũ và nâng năng suất.
             </p>
           </div>
           <div className="flex h-full flex-col items-end justify-start text-right md:items-center md:justify-center">
@@ -283,9 +282,9 @@ function GroundRentSection({
         </h3>
         <p className="mb-4 text-sm leading-relaxed text-[#fff5cf]/80">
           Trong mô hình này, nhà tư bản được ưu tiên giữ lợi nhuận bình quân.
-          Phần vượt mức bình quân được phân bổ thành tô điền cho chủ đất.
-          Tô vi phân đến từ đất tốt hơn hoặc
-          đầu tư thâm canh; tô tuyệt đối đến từ quyền sở hữu ruộng đất.
+          Phần vượt mức bình quân được phân bổ thành tô điền cho chủ đất. Tô vi
+          phân đến từ lợi thế đất hoặc đầu tư thâm canh; tô tuyệt đối đến từ
+          quyền sở hữu ruộng đất.
         </p>
       </div>
 
@@ -293,17 +292,17 @@ function GroundRentSection({
         <RentBox
           title="Tô điền vi phân I"
           value={result.differentialRentI}
-          text="Lợi nhuận thêm từ độ phì nhiêu tự nhiên và vị trí tốt hơn so với đất xấu."
+          text="Lợi nhuận thêm từ độ phì nhiêu và vị trí thuận lợi."
         />
         <RentBox
           title="Tô điền vi phân II"
           value={result.differentialRentII}
-          text="Lợi nhuận thêm từ đầu tư vốn bổ sung trên cùng một lô đất."
+          text="Lợi nhuận thêm từ công cụ hoặc AI trên cùng lô đất."
         />
         <RentBox
           title="Tô điền tuyệt đối"
           value={result.absoluteRent}
-          text="Khoản tô bắt nguồn từ quyền sở hữu đất; trong game gồm mức cơ sở và phần vượt bình quân chưa phân vào tô vi phân."
+          text="Khoản tô từ quyền sở hữu đất."
         />
       </div>
 
@@ -314,6 +313,10 @@ function GroundRentSection({
           </p>
           <p className="mt-1 font-mono text-3xl font-black text-white">
             {money(result.groundRent)}
+          </p>
+          <p className="mt-1 text-xs font-bold text-white/75">
+            {money(result.differentialRentI)} +{" "}
+            {money(result.differentialRentII)} + {money(result.absoluteRent)}
           </p>
         </div>
         <Factory className="h-12 w-12 text-white/60" />

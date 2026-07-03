@@ -271,11 +271,11 @@ function calculateDifferentialSurplusProfits(
   const marketUnitValue = calculateMarketUnitValue(investment);
   const marketValue = Math.round(output * marketUnitValue);
   const surplusProfit = Math.max(0, marketValue - commodityValue);
-  const minimumInvestment = getMinimumInvestment(investment);
-  const naturalOutput = calculateOutput(plot, minimumInvestment);
+  const rentIReferenceInvestment = getRentIReferenceInvestment(investment);
+  const naturalOutput = calculateOutput(plot, rentIReferenceInvestment);
   const naturalCommodityValue =
-    calculateConstantCapital(minimumInvestment) +
-    calculateLivingLaborValue(minimumInvestment);
+    calculateConstantCapital(rentIReferenceInvestment) +
+    calculateLivingLaborValue(rentIReferenceInvestment);
   const naturalMarketValue = Math.round(naturalOutput * marketUnitValue);
   const naturalSurplusProfit = Math.max(
     0,
@@ -315,6 +315,16 @@ function getMinimumInvestment(investment: InvestmentState): InvestmentState {
   };
 }
 
+function getRentIReferenceInvestment(
+  investment: InvestmentState,
+): InvestmentState {
+  return {
+    ...investment,
+    tools: 1,
+    aiRobot: false,
+  };
+}
+
 function calculateRentComponents(
   plot: Plot,
   rentBudget: number,
@@ -335,10 +345,7 @@ function calculateRentComponents(
     [differentialSurplusProfitI, differentialSurplusProfitII],
     differentialRentBudget,
   );
-  // Any surplus above average profit that is not explained by differential
-  // rent still belongs to land ownership in this simplified model.
-  const absoluteRent =
-    rentBudget - differentialRentI - differentialRentII;
+  const absoluteRent = rentBudget - differentialRentI - differentialRentII;
 
   return {
     absoluteRent,

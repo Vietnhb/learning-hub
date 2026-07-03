@@ -450,9 +450,9 @@ function StoryScreen() {
       </div>
       <TheoryNote>
         Ý tưởng chính: giá trị thặng dư đến từ lao động sống trong sản xuất.
-        Quản lý thuê ngoài cũng là lao động sống tổ chức sản xuất; công cụ và
-        AI chỉ hỗ trợ nâng năng suất, không thay thế lao động làm nguồn giá trị
-        mới.
+        Quản lý sản xuất thuê ngoài cũng là lao động sống tổ chức sản xuất công
+        cụ và AI chỉ hỗ trợ nâng năng suất, không thay thế lao động làm nguồn
+        giá trị mới.
       </TheoryNote>
     </div>
   );
@@ -538,7 +538,7 @@ function FarmingScreen({
       <ScreenHeading
         eyebrow="Trồng trọt và thu hoạch"
         title="Nông sản phát triển qua lao động và đầu tư"
-        text="Xem quá trình sản xuất. Công nhân tạo ra giá trị, đầu tư định hình năng suất."
+        text="Xem quá trình sản xuất. Lao động sống tạo ra giá trị, đầu tư định hình năng suất."
       />
 
       <FarmingScene plot={plot} investment={investment} farmType={farmType} />
@@ -557,7 +557,7 @@ function TheoryScreen({
 }) {
   return (
     <div className="grid gap-5">
-      <ValueFlowDiagram result={result} />
+      <ValueFlowDiagram result={result} investment={investment} />
       <TheoryExplanation plot={plot} investment={investment} result={result} />
     </div>
   );
@@ -575,8 +575,8 @@ function SummaryScreen({ result }: { result: Calculation }) {
           Mùa vụ hoàn thành
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#fff5cf]/82">
-          Công nhân tạo ra giá trị mới. Vốn và công nghệ định hình năng suất.
-          Địa chủ nhận được tô điền vì sở hữu đất đai.
+          Lao động sống tạo ra giá trị mới. Vốn và công nghệ định hình năng
+          suất. Địa chủ nhận được tô điền vì sở hữu đất đai.
         </p>
       </div>
       <div className="mx-auto grid w-full max-w-3xl gap-3 md:grid-cols-3">
@@ -709,7 +709,10 @@ function getControlPanelLines(
     case "investment":
       return [
         { label: "Công nhân", value: String(investment.workers) },
-        { label: "Quản lý", value: investment.manager ? "Lao động sống" : "Không thuê" },
+        {
+          label: "Quản lý SX",
+          value: investment.manager ? "Lao động sống" : "Không thuê",
+        },
         { label: "Vốn không đổi", value: money(constantCapital) },
         { label: "Tổng vốn", value: money(totalCapital) },
       ];
