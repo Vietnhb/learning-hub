@@ -277,7 +277,7 @@ export default function HelpChatWidget() {
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-3 opacity-0",
         )}
-        aria-hidden={open ? undefined : "true"}
+        hidden={!open}
       >
         <div className="flex items-center justify-between border-b px-4 py-3 dark:border-white/10">
           <div className="flex items-center gap-2">
@@ -324,7 +324,6 @@ export default function HelpChatWidget() {
         disabled={authLoading}
         className="group pointer-events-auto relative ml-auto grid h-16 w-16 place-items-center overflow-visible rounded-full bg-transparent p-0 transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 disabled:cursor-wait disabled:opacity-70 sm:h-20 sm:w-20"
         aria-label="Mở khung nhắn tin với admin"
-        aria-expanded={open ? "true" : "false"}
       >
         <HelpModel />
       </button>
