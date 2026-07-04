@@ -8,19 +8,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChatMessageRow } from "../../types";
 import { formatTimeAgo } from "../../utils/formatters";
 import { cn } from "@/lib/utils";
-import { getCachedUser } from "@/lib/userCache";
-import { getUsernameStyleByFrame } from "@/lib/designSystem";
+import { getUsernameStyleByFrame } from "@/lib/services/designSystem";
 
 function ChatBubbleText({ userId, isMe, content }: { userId?: string | null, isMe: boolean, content?: string | null }) {
-  const [frameId, useState_setFrameId] = useState<any>(null);
+  const [frameId, setFrameId] = useState<any>(null);
 
   useEffect(() => {
     if (!userId) return;
     let mounted = true;
-    import("@/lib/userCache").then(({ fetchUserCacheAsync }) => {
+    import("@/lib/services/userCache").then(({ fetchUserCacheAsync }) => {
       fetchUserCacheAsync(userId).then(cached => {
         if (mounted && cached) {
-          useState_setFrameId(cached.frameId);
+          setFrameId(cached.frameId);
         }
       });
     });

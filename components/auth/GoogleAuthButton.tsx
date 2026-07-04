@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
-import { supabase } from "@/lib/supabase";
-import { getUserSafeError } from "@/lib/errorHandler";
+import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth/auth-config";
+import { supabase } from "@/lib/supabase/client";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
+import { blocksGoogleOAuthInCurrentBrowser } from "@/lib/auth/oauth-browser";
 import { cn } from "@/lib/utils";
 
 /**
@@ -43,6 +44,14 @@ export function GoogleAuthButton({
     onError?.("");
 
     try {
+      if (blocksGoogleOAuthInCurrentBrowser()) {
+        onError?.(
+          "Google khong cho dang nhap trong trinh duyet nhung cua app. Hay mo link bang Safari hoac Chrome roi dang nhap lai.",
+        );
+        setLoading(false);
+        return;
+      }
+
       const { oauthCallback } = getAuthRedirectUrls(
         getSafeRedirectPath(redirectPath),
       );

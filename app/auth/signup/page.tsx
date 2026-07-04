@@ -1,18 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import { useCooldown } from "@/hooks/useCooldown";
-import { getUserSafeError } from "@/lib/errorHandler";
-import { getAuthRedirectUrls } from "@/lib/auth-config";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
+import { getAuthRedirectUrls } from "@/lib/auth/auth-config";
 import {
   validateEmail,
   validatePassword,
   validateFullName,
-} from "@/lib/validation";
-import { GoogleAuthButton } from "@/components/GoogleAuthButton";
-import { GithubAuthButton } from "@/components/GithubAuthButton";
-import { DotPatternBackground } from "@/components/DotPatternBackground";
+} from "@/lib/auth/validation";
+import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
+import { GithubAuthButton } from "@/components/auth/GithubAuthButton";
+import { DotPatternBackground } from "@/components/effects/DotPatternBackground";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";

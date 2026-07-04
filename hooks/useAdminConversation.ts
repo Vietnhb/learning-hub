@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
-import { getOrCreateConversation } from "@/lib/chatService";
+import { getOrCreateConversation } from "@/lib/services/chatService";
 
 type UseAdminConversationOptions = {
   enabled?: boolean;

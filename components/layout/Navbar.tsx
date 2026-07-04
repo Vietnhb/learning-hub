@@ -20,8 +20,8 @@ import {
   User,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { NavbarAvatar } from "@/components/UserAvatar";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { NavbarAvatar } from "@/components/profile/UserAvatar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -33,8 +33,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/contexts/AuthContext";
 import { useUserNotifications } from "@/hooks/useUserNotifications";
-import { isUserAdmin } from "@/lib/authHelper";
-import { supabase } from "@/lib/supabase";
+import { isUserAdmin } from "@/lib/auth/authHelper";
+import { supabase } from "@/lib/supabase/client";
 
 type NavLink = {
   href: string;

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 import kotobaData from "./vocabulary/kotoba.json";
 import kanjiData from "./kanji/kanji.json";
 import grammarData from "./grammar/gramar.json";

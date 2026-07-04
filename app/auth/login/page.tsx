@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Mail, Lock, AlertCircle, Loader2, LogIn } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import { useCooldown } from "@/hooks/useCooldown";
-import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
-import { getUserSafeError } from "@/lib/errorHandler";
-import { validateEmail, validatePassword } from "@/lib/validation";
-import { GoogleAuthButton } from "@/components/GoogleAuthButton";
-import { DotPatternBackground } from "@/components/DotPatternBackground";
+import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth/auth-config";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
+import { validateEmail, validateLoginPassword } from "@/lib/auth/validation";
+import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
+import { DotPatternBackground } from "@/components/effects/DotPatternBackground";
 import { Button } from "@/components/ui/button";
 
 function LoginPageContent() {
@@ -56,7 +56,7 @@ function LoginPageContent() {
       return;
     }
 
-    const passwordError = validatePassword(password);
+    const passwordError = validateLoginPassword(password);
     if (passwordError) {
       setError(passwordError);
       setLoading(false);

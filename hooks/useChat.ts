@@ -2,13 +2,13 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Message } from "@/types";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import {
   getMessages,
   sendMessage,
   markMessagesAsRead,
   subscribeToMessages,
-} from "@/lib/chatService";
+} from "@/lib/services/chatService";
 
 export function useChat(conversationId: string | null) {
   const [messages, setMessages] = useState<Message[]>([]);

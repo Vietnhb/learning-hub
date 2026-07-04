@@ -23,7 +23,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 import rawQuiz from "./quiz.json";
 
 interface QuizQuestion {
@@ -305,7 +305,7 @@ export default function SYB302cPage() {
 
       return {
         ...prev,
-        [currentIndex]: next.sort(),
+        [currentIndex]: next.sort((a, b) => a.localeCompare(b)),
       };
     });
   };

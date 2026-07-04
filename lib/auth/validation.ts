@@ -1,17 +1,15 @@
 export const validateEmail = (email: string): string | null => {
   if (!email || email.trim().length === 0) {
-    return "Email không được để trống";
+    return "Email khong duoc de trong";
   }
 
-  // Regex kiểm tra email cơ bản
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return "Email không đúng định dạng";
+    return "Email khong dung dinh dang";
   }
 
-  // Kiểm tra độ dài
   if (email.length > 254) {
-    return "Email quá dài (tối đa 254 ký tự)";
+    return "Email qua dai (toi da 254 ky tu)";
   }
 
   return null;
@@ -19,15 +17,39 @@ export const validateEmail = (email: string): string | null => {
 
 export const validatePassword = (password: string): string | null => {
   if (!password || password.length === 0) {
-    return "Mật khẩu không được để trống";
+    return "Mat khau khong duoc de trong";
   }
 
-  if (password.length < 6) {
-    return "Mật khẩu phải có ít nhất 6 ký tự";
+  if (password.length < 8) {
+    return "Mat khau phai co it nhat 8 ky tu";
   }
 
   if (password.length > 72) {
-    return "Mật khẩu quá dài (tối đa 72 ký tự)";
+    return "Mat khau qua dai (toi da 72 ky tu)";
+  }
+
+  if (!/[a-z]/.test(password)) {
+    return "Mat khau phai co it nhat 1 chu thuong";
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    return "Mat khau phai co it nhat 1 chu hoa";
+  }
+
+  if (!/\d/.test(password)) {
+    return "Mat khau phai co it nhat 1 chu so";
+  }
+
+  return null;
+};
+
+export const validateLoginPassword = (password: string): string | null => {
+  if (!password || password.length === 0) {
+    return "Mat khau khong duoc de trong";
+  }
+
+  if (password.length > 72) {
+    return "Mat khau qua dai (toi da 72 ky tu)";
   }
 
   return null;
@@ -35,11 +57,13 @@ export const validatePassword = (password: string): string | null => {
 
 export const validateFullName = (name: string): string | null => {
   if (!name || name.trim().length === 0) {
-    return "Họ và tên không được để trống";
+    return "Ho va ten khong duoc de trong";
   }
+
   if (name.trim().length < 2) {
-    return "Họ và tên phải có ít nhất 2 ký tự";
+    return "Ho va ten phai co it nhat 2 ky tu";
   }
+
   return null;
 };
 
@@ -48,29 +72,25 @@ export const validateDateOfBirth = (
   minAge: number = 13,
 ): string | null => {
   if (!date) {
-    return "Ngày sinh không được để trống";
+    return "Ngay sinh khong duoc de trong";
   }
 
-  // Kiểm tra format YYYY-MM-DD
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(date)) {
-    return "Ngày sinh phải đúng định dạng YYYY-MM-DD";
+    return "Ngay sinh phai dung dinh dang YYYY-MM-DD";
   }
 
   const birthDate = new Date(date);
   const today = new Date();
 
-  // Kiểm tra ngày hợp lệ
-  if (isNaN(birthDate.getTime())) {
-    return "Ngày sinh không hợp lệ";
+  if (Number.isNaN(birthDate.getTime())) {
+    return "Ngay sinh khong hop le";
   }
 
-  // Kiểm tra không phải ngày tương lai
   if (birthDate > today) {
-    return "Ngày sinh không thể là ngày tương lai";
+    return "Ngay sinh khong the la ngay tuong lai";
   }
 
-  // Tính tuổi
   let age = today.getFullYear() - birthDate.getFullYear();
   const monthDiff = today.getMonth() - birthDate.getMonth();
   if (
@@ -81,11 +101,11 @@ export const validateDateOfBirth = (
   }
 
   if (age < minAge) {
-    return `Bạn phải từ ${minAge} tuổi trở lên`;
+    return `Ban phai tu ${minAge} tuoi tro len`;
   }
 
   if (age > 120) {
-    return "Ngày sinh không hợp lệ";
+    return "Ngay sinh khong hop le";
   }
 
   return null;

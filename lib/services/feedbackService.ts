@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { supabase } from "@/lib/supabase/client";
 import { Feedback, CreateFeedbackData } from "@/types";
 
 function getFriendlyFeedbackError(err: unknown): string {

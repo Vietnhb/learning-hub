@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
-import { getSiteUrl } from "@/lib/site-url";
+import { getSiteUrl } from "@/lib/config/site-url";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import AppChrome from "@/components/AppChrome";
+import AppChrome from "@/components/layout/AppChrome";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();

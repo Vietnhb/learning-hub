@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
-import { validatePassword } from "@/lib/validation";
-import { getUserSafeError } from "@/lib/errorHandler";
+import { supabase } from "@/lib/supabase/client";
+import { validatePassword } from "@/lib/auth/validation";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {

@@ -1,4 +1,4 @@
-import { getSiteUrl } from "./site-url";
+import { getSiteUrl } from "@/lib/config/site-url";
 
 /**
  * Get the appropriate callback URL based on the current environment

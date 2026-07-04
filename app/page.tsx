@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -18,20 +19,37 @@ import {
   Target,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import AnimatedContent from "@/components/AnimatedContent";
-import Aurora from "@/components/Aurora";
-import CountUp from "@/components/CountUp";
-import Lightfall from "@/components/Lightfall";
-import ElectricBorder from "@/components/ElectricBorder";
-import GlareHover from "@/components/GlareHover";
-import { MascotScene } from "@/components/MascotScene";
-import ShinyText from "@/components/ShinyText";
-import SpotlightCard from "@/components/SpotlightCard";
-import StarBorder from "@/components/StarBorder";
+import AnimatedContent from "@/components/effects/AnimatedContent";
+import CountUp from "@/components/effects/CountUp";
+import ElectricBorder from "@/components/effects/ElectricBorder";
+import GlareHover from "@/components/effects/GlareHover";
+import ShinyText from "@/components/effects/ShinyText";
+import SpotlightCard from "@/components/effects/SpotlightCard";
+import StarBorder from "@/components/effects/StarBorder";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { useResourceFavorites } from "@/hooks/useResourceFavorites";
 import { cn } from "@/lib/utils";
+
+const Aurora = dynamic(() => import("@/components/effects/Aurora"), {
+  ssr: false,
+  loading: () => null,
+});
+
+const Lightfall = dynamic(() => import("@/components/effects/Lightfall"), {
+  ssr: false,
+  loading: () => null,
+});
+
+const MascotScene = dynamic(
+  () => import("@/components/effects/MascotScene").then((mod) => mod.MascotScene),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-full min-h-[320px] w-full rounded-[2rem] bg-slate-100/60 dark:bg-slate-900/40" />
+    ),
+  },
+);
 
 type FeaturedResource = {
   title: string;

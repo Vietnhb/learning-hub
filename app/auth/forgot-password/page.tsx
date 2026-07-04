@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import { useCooldown } from "@/hooks/useCooldown";
-import { getAuthRedirectUrls } from "@/lib/auth-config";
-import { getUserSafeError } from "@/lib/errorHandler";
-import { validateEmail } from "@/lib/validation";
+import { getAuthRedirectUrls } from "@/lib/auth/auth-config";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
+import { validateEmail } from "@/lib/auth/validation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {

@@ -36,7 +36,7 @@ import {
   deleteUser,
   adminUpdateUserProfile,
   setUserBanStatus,
-} from "@/lib/adminService";
+} from "@/lib/services/adminService";
 
 interface UserTableProps {
   users: UserWithRole[];

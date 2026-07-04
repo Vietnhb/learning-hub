@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { UserAvatar } from "@/components/UserAvatar";
+import { UserAvatar } from "@/components/profile/UserAvatar";
 import { getInitials } from "../../utils/formatters";
 
 export function Avatar({

@@ -3,9 +3,9 @@
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AlertCircle, Loader2 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
-import { getSafeRedirectPath } from "@/lib/auth-config";
-import { handleOAuthError, logAuthError } from "@/lib/errorHandler";
+import { supabase } from "@/lib/supabase/client";
+import { getSafeRedirectPath } from "@/lib/auth/auth-config";
+import { handleOAuthError, logAuthError } from "@/lib/auth/errorHandler";
 import { Button } from "@/components/ui/button";
 import {
   Card,

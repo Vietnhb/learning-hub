@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { getUserSafeError } from "@/lib/errorHandler";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
 import { motion } from "framer-motion";
 import {
   User,
@@ -20,8 +20,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
-import { completeUserProfile, isProfileComplete } from "@/lib/userService";
-import { validateUserProfile } from "@/lib/validation";
+import { completeUserProfile, isProfileComplete } from "@/lib/services/userService";
+import { validateUserProfile } from "@/lib/auth/validation";
 
 export default function CompleteProfilePage() {
   const router = useRouter();

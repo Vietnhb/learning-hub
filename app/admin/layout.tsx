@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminSidebar from "./components/AdminSidebar";
-import { isUserAdmin } from "@/lib/authHelper";
+import { isUserAdmin } from "@/lib/auth/authHelper";
 import { useAuth } from "@/contexts/AuthContext";
 
 export default function AdminLayout({

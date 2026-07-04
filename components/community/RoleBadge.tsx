@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ROLE_BADGES, type RoleBadgeId } from "@/lib/designSystem";
+import { ROLE_BADGES, type RoleBadgeId } from "@/lib/services/designSystem";
 
 interface RoleBadgeProps {
   roleId: RoleBadgeId;

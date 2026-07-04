@@ -1,13 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { supabase } from "@/lib/supabase";
-import { getResourceFavoriteCounts } from "@/lib/resourceFavoriteService";
+import { supabase } from "@/lib/supabase/client";
+import { getResourceFavoriteCounts } from "@/lib/services/resourceFavoriteService";
 
 export function useResourceFavoriteCounts(resourceIds: string[]) {
   const [counts, setCounts] = useState<Record<string, number>>({});
   const stableIds = useMemo(
-    () => Array.from(new Set(resourceIds.filter(Boolean))).sort(),
+    () =>
+      Array.from(new Set(resourceIds.filter(Boolean))).sort((a, b) =>
+        a.localeCompare(b),
+      ),
     [resourceIds],
   );
 
@@ -44,4 +47,3 @@ export function useResourceFavoriteCounts(resourceIds: string[]) {
 
   return { counts, refetch: fetchCounts };
 }
-

@@ -15,7 +15,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   DEFAULT_INVESTMENT,

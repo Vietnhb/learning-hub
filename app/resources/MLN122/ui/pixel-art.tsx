@@ -900,7 +900,6 @@ export function PixelStyles() {
       .sprite-container,
       .sprite-inner {
         image-rendering: pixelated;
-        image-rendering: -moz-crisp-edges;
         image-rendering: -webkit-optimize-contrast;
       }
 

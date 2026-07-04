@@ -14,12 +14,12 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useAuth } from "@/contexts/AuthContext";
 import { useOnlineUsers } from "@/hooks/useOnlineUsers";
 import { useUserNotifications } from "@/hooks/useUserNotifications";
-import { isUserAdmin } from "@/lib/authHelper";
-import { storage } from "@/lib/firebase";
-import { supabase } from "@/lib/supabase";
-import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
-import { getUserProfile } from "@/lib/userService";
-import { getSiteUrl } from "@/lib/site-url";
+import { isUserAdmin } from "@/lib/auth/authHelper";
+import { storage } from "@/lib/config/firebase";
+import { supabase } from "@/lib/supabase/client";
+import { setRealtimeAuthFromSession } from "@/lib/realtime/realtimeAuth";
+import { getUserProfile } from "@/lib/services/userService";
+import { getSiteUrl } from "@/lib/config/site-url";
 
 import { ActiveMember, ChatMessageRow } from "./types";
 import { getDisplayName } from "./utils/formatters";

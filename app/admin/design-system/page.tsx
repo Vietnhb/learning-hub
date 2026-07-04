@@ -6,7 +6,7 @@ import {
   ROLE_BADGES,
   USERNAME_STYLES,
   PREMIUM_DECORATIONS,
-} from "@/lib/designSystem";
+} from "@/lib/services/designSystem";
 import {
   AvatarFrame,
   AVATAR_PRESETS,

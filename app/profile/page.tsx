@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { getUserSafeError } from "@/lib/errorHandler";
+import { getUserSafeError } from "@/lib/auth/errorHandler";
 import { motion } from "framer-motion";
 import {
   User,
@@ -25,20 +25,20 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
-import { getUserProfile, updateUserProfile } from "@/lib/userService";
-import { validateUserProfile } from "@/lib/validation";
+import { getUserProfile, updateUserProfile } from "@/lib/services/userService";
+import { validateUserProfile } from "@/lib/auth/validation";
 import { User as UserType } from "@/types/user";
-import { ChangePasswordModal } from "@/components/ChangePasswordModal";
+import { ChangePasswordModal } from "@/components/auth/ChangePasswordModal";
 import Link from "next/link";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { storage } from "@/lib/firebase";
-import { supabase } from "@/lib/supabase";
+import { storage } from "@/lib/config/firebase";
+import { supabase } from "@/lib/supabase/client";
 import { Crown, Sparkles, Palette } from "lucide-react";
-import { PremiumAvatarPaymentModal } from "@/components/PremiumAvatarPaymentModal";
+import { PremiumAvatarPaymentModal } from "@/components/profile/PremiumAvatarPaymentModal";
 import { AvatarFrameShop } from "@/components/community/AvatarFrameShop";
-import { ProfileAvatar } from "@/components/UserAvatar";
+import { ProfileAvatar } from "@/components/profile/UserAvatar";
 import { Username } from "@/components/community/Username";
-import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
+import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/services/designSystem";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -245,8 +245,16 @@ export default function ProfilePage() {
                 <div className="h-24 bg-gradient-to-r from-blue-600 to-indigo-600" />
                 <CardContent className="pt-0 -mt-12 text-center pb-6">
                   <div
+                    role="button"
+                    tabIndex={0}
                     className="relative mx-auto mb-4 group cursor-pointer inline-block"
                     onClick={() => fileInputRef.current?.click()}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        fileInputRef.current?.click();
+                      }
+                    }}
                   >
                     <ProfileAvatar
                       userId={authUser?.id}

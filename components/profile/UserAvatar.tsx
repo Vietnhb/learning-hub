@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import { AvatarFrame } from "@/components/community/AvatarFrame";
-import { type AvatarFrameId } from "@/lib/designSystem";
+import { type AvatarFrameId } from "@/lib/services/designSystem";
 import { User } from "lucide-react";
-import { getCachedUser, setCachedUser, clearUserCache, fetchUserCacheAsync } from "@/lib/userCache";
+import { getCachedUser, setCachedUser, clearUserCache, fetchUserCacheAsync } from "@/lib/services/userCache";
 
 interface UserAvatarProps {
   userId?: string;
@@ -127,6 +127,14 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
       <div
         className={`${className} ${onClick ? "cursor-pointer" : "cursor-default"}`}
         onClick={onClick}
+        onKeyDown={(event) => {
+          if (onClick && (event.key === "Enter" || event.key === " ")) {
+            event.preventDefault();
+            onClick();
+          }
+        }}
+        role={onClick ? "button" : undefined}
+        tabIndex={onClick ? 0 : undefined}
       >
         <AvatarFrame
           frameId={frameId}
@@ -152,6 +160,14 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     <div
       className={`${sizeClasses[size]} rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-300 dark:border-gray-600 ${className} ${onClick ? "cursor-pointer" : "cursor-default"}`}
       onClick={onClick}
+      onKeyDown={(event) => {
+        if (onClick && (event.key === "Enter" || event.key === " ")) {
+          event.preventDefault();
+          onClick();
+        }
+      }}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
     >
       {avatarContent}
     </div>

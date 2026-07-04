@@ -2,9 +2,9 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";
-import { supabase } from "@/lib/supabase";
-import { startOnlinePresence, stopOnlinePresence } from "@/lib/onlinePresenceStore";
-import { DailyLoginRewardModal } from "@/components/DailyLoginRewardModal";
+import { supabase } from "@/lib/supabase/client";
+import { startOnlinePresence, stopOnlinePresence } from "@/lib/realtime/onlinePresenceStore";
+import { DailyLoginRewardModal } from "@/components/auth/DailyLoginRewardModal";
 
 interface AuthContextType {
   user: User | null;

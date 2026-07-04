@@ -44,3 +44,5 @@ next-env.d.ts
 .gitattributes
 
 supabase
+sonar-project.properties
+.scannerwork

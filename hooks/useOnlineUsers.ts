@@ -4,7 +4,7 @@ import { useSyncExternalStore } from "react";
 import {
   getOnlinePresenceSnapshot,
   subscribeOnlinePresence,
-} from "@/lib/onlinePresenceStore";
+} from "@/lib/realtime/onlinePresenceStore";
 
 function normalizeId(value?: string | null): string {
   return (value || "").trim().toLowerCase();

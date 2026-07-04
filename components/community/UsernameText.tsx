@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { USERNAME_STYLES, type UsernameStyleId } from "@/lib/designSystem";
+import { USERNAME_STYLES, type UsernameStyleId } from "@/lib/services/designSystem";
 
 interface UsernameTextProps {
   username: string;

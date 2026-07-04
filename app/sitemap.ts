@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/lib/site-url";
+import { getSiteUrl } from "@/lib/config/site-url";
 
 const siteUrl = getSiteUrl();
 

@@ -6,7 +6,7 @@ import {
   getAllConversations,
   subscribeToConversations,
   subscribeToMessageChanges,
-} from "@/lib/chatService";
+} from "@/lib/services/chatService";
 
 export function useConversations() {
   const [conversations, setConversations] = useState<ConversationWithDetails[]>(

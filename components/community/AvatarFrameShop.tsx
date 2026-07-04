@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { UserAvatar } from "@/components/UserAvatar";
+import { UserAvatar } from "@/components/profile/UserAvatar";
 import { Username } from "@/components/community/Username";
 import { useAuth } from "@/contexts/AuthContext";
 import {
@@ -19,7 +19,7 @@ import {
   getAllFrames,
   type AvatarFrameId,
   type RarityType,
-} from "@/lib/designSystem";
+} from "@/lib/services/designSystem";
 import { cn } from "@/lib/utils";
 import {
   Check,

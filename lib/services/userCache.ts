@@ -1,5 +1,5 @@
 import { AvatarFrameId } from "./designSystem";
-import { supabase } from "./supabase";
+import { supabase } from "@/lib/supabase/client";
 
 export interface CachedUserData {
   frameId: AvatarFrameId | null;

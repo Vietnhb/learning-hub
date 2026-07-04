@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { updateFeedback } from "@/lib/adminService";
+import { updateFeedback } from "@/lib/services/adminService";
 import { RefreshCw } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { UpdateFeedbackData } from "@/types";

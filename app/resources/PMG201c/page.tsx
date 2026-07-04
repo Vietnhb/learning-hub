@@ -22,7 +22,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 import rawQuiz from "./quiz.json";
 
 interface QuizQuestion {
@@ -285,7 +285,7 @@ export default function PMG201cPage() {
       const isSelected = current.includes(choiceId);
       const next = isSelected
         ? current.filter((item) => item !== choiceId)
-        : [...current, choiceId].sort();
+        : [...current, choiceId].sort((a, b) => a.localeCompare(b));
 
       return {
         ...prev,

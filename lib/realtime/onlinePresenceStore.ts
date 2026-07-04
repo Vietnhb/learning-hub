@@ -1,6 +1,6 @@
-import { supabase } from "@/lib/supabase";
-import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtimeChannels";
-import { setRealtimeAuthFromSession } from "@/lib/realtimeAuth";
+import { supabase } from "@/lib/supabase/client";
+import { USERS_ONLINE_PRESENCE_CHANNEL } from "@/lib/realtime/realtimeChannels";
+import { setRealtimeAuthFromSession } from "@/lib/realtime/realtimeAuth";
 
 export type PresenceConnectionStatus =
   | "idle"

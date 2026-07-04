@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import AdminHeader from "../components/AdminHeader";
 import { useConversations } from "@/hooks/useConversations";
 import { useChat } from "@/hooks/useChat";
-import { assignConversationToCurrentAdmin } from "@/lib/chatService";
+import { assignConversationToCurrentAdmin } from "@/lib/services/chatService";
 import ChatMessage from "@/components/admin/ChatMessage";
 import MessageInput from "@/components/admin/MessageInput";
 import { Badge } from "@/components/ui/badge";

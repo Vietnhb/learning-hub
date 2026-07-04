@@ -5,9 +5,9 @@ import {
   AVATAR_FRAMES,
   type AvatarFrameId,
   getUsernameStyleByFrame,
-} from "@/lib/designSystem";
+} from "@/lib/services/designSystem";
 import { cn } from "@/lib/utils";
-import { fetchUserCacheAsync } from "@/lib/userCache";
+import { fetchUserCacheAsync } from "@/lib/services/userCache";
 
 interface UsernameProps {
   userId?: string | null;

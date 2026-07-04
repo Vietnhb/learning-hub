@@ -17,7 +17,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 
 import EnergyBeams from "./components/EnergyBeams";
 import ReactorCore from "./components/ReactorCore";

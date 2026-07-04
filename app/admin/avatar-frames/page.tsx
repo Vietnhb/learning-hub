@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import {
   AVATAR_FRAMES,
   ROLE_BADGES,
   getAllFrames,
   type AvatarFrameId,
-} from "@/lib/designSystem";
+} from "@/lib/services/designSystem";
 import { AvatarFrame } from "@/components/community/AvatarFrame";
 import { RoleBadge, RoleBadges } from "@/components/community/RoleBadge";
 import { Button } from "@/components/ui/button";

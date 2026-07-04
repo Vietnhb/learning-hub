@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Lock, Eye, EyeOff, AlertCircle, CheckCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/lib/supabase";
-import { validatePassword } from "@/lib/validation";
+import { supabase } from "@/lib/supabase/client";
+import { validatePassword } from "@/lib/auth/validation";
 
 interface ChangePasswordModalProps {
   show: boolean;

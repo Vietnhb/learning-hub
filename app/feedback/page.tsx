@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { createFeedback } from "@/lib/feedbackService";
+import { createFeedback } from "@/lib/services/feedbackService";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { useMyFeedback } from "@/hooks/useMyFeedback";

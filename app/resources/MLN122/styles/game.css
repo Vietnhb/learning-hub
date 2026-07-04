@@ -8,7 +8,6 @@
 .pixel-game-container,
 .pixel-game-container * {
   /* Force sharp pixel rendering across all browsers */
-  image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
 
@@ -18,7 +17,6 @@
 }
 
 .pixelated {
-  image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
 }

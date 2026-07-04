@@ -1,12 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import {
   addResourceFavorite,
   getMyResourceFavorites,
   removeResourceFavorite,
-} from "@/lib/resourceFavoriteService";
+} from "@/lib/services/resourceFavoriteService";
 
 export function useResourceFavorites(userId?: string) {
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);

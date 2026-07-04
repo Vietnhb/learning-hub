@@ -1,10 +1,15 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import HelpChatWidget from "@/components/HelpChatWidget";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+const HelpChatWidget = dynamic(() => import("@/components/chat/HelpChatWidget"), {
+  ssr: false,
+  loading: () => null,
+});
 
 interface AppChromeProps {
   children: React.ReactNode;

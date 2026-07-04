@@ -1,6 +1,11 @@
 "use client";
-import PixelBlast from "@/components/PixelBlast";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
+
+const PixelBlast = dynamic(() => import("@/components/effects/PixelBlast"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export function DotPatternBackground({ className }: { className?: string }) {
   return (

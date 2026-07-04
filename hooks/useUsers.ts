@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { UserWithRole } from "@/types";
-import { getAllUsers } from "@/lib/adminService";
+import { getAllUsers } from "@/lib/services/adminService";
 
 interface UseUsersOptions {
   autoRefreshMs?: number;

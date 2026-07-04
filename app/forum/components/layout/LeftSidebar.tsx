@@ -4,9 +4,9 @@ import { Avatar } from "../shared/Avatar";
 import { HubCard } from "../shared/HubCard";
 import { ActiveMember } from "../../types";
 import { useAuth } from "@/contexts/AuthContext";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase/client";
 import { AvatarFrameShop } from "@/components/community/AvatarFrameShop";
-import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
+import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/services/designSystem";
 
 export function LeftSidebar({
   displayedOnlineCount,

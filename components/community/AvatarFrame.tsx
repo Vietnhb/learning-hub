@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/designSystem";
+import { AVATAR_FRAMES, type AvatarFrameId } from "@/lib/services/designSystem";
 import { cn } from "@/lib/utils";
 
 interface AvatarFrameProps {

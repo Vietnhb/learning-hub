@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import Link from "next/link";
-import { AuthRequiredModal } from "@/components/AuthRequiredModal";
+import { AuthRequiredModal } from "@/components/auth/AuthRequiredModal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";

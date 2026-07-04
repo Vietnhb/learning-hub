@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth-config";
-import { supabase } from "@/lib/supabase";
+import { getAuthRedirectUrls, getSafeRedirectPath } from "@/lib/auth/auth-config";
+import { supabase } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils";
 
 interface GithubAuthButtonProps {

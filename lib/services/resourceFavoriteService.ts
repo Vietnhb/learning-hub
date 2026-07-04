@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { supabase } from "@/lib/supabase/client";
 
 export async function getMyResourceFavorites(): Promise<{
   data: string[] | null;

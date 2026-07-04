@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { FeedbackWithUser, FeedbackStatus } from "@/types";
-import { getAllFeedback, getFeedbackByStatus } from "@/lib/adminService";
+import { getAllFeedback, getFeedbackByStatus } from "@/lib/services/adminService";
 
 export function useFeedback(status?: FeedbackStatus) {
   const [feedback, setFeedback] = useState<FeedbackWithUser[]>([]);
