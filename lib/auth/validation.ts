@@ -1,15 +1,15 @@
 export const validateEmail = (email: string): string | null => {
   if (!email || email.trim().length === 0) {
-    return "Email khong duoc de trong";
+    return "Email không được để trống";
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return "Email khong dung dinh dang";
+    return "Email không đúng định dạng";
   }
 
   if (email.length > 254) {
-    return "Email qua dai (toi da 254 ky tu)";
+    return "Email quá dài (tối đa 254 ký tự)";
   }
 
   return null;
@@ -17,27 +17,27 @@ export const validateEmail = (email: string): string | null => {
 
 export const validatePassword = (password: string): string | null => {
   if (!password || password.length === 0) {
-    return "Mat khau khong duoc de trong";
+    return "Mật khẩu không được để trống";
   }
 
   if (password.length < 8) {
-    return "Mat khau phai co it nhat 8 ky tu";
+    return "Mật khẩu phải có ít nhất 8 ký tự";
   }
 
   if (password.length > 72) {
-    return "Mat khau qua dai (toi da 72 ky tu)";
+    return "Mật khẩu quá dài (tối đa 72 ký tự)";
   }
 
   if (!/[a-z]/.test(password)) {
-    return "Mat khau phai co it nhat 1 chu thuong";
+    return "Mật khẩu phải có ít nhất 1 chữ thường";
   }
 
   if (!/[A-Z]/.test(password)) {
-    return "Mat khau phai co it nhat 1 chu hoa";
+    return "Mật khẩu phải có ít nhất 1 chữ hoa";
   }
 
   if (!/\d/.test(password)) {
-    return "Mat khau phai co it nhat 1 chu so";
+    return "Mật khẩu phải có ít nhất 1 chữ số";
   }
 
   return null;
@@ -45,11 +45,11 @@ export const validatePassword = (password: string): string | null => {
 
 export const validateLoginPassword = (password: string): string | null => {
   if (!password || password.length === 0) {
-    return "Mat khau khong duoc de trong";
+    return "Mật khẩu không được để trống";
   }
 
   if (password.length > 72) {
-    return "Mat khau qua dai (toi da 72 ky tu)";
+    return "Mật khẩu quá dài (tối đa 72 ký tự)";
   }
 
   return null;
@@ -57,11 +57,11 @@ export const validateLoginPassword = (password: string): string | null => {
 
 export const validateFullName = (name: string): string | null => {
   if (!name || name.trim().length === 0) {
-    return "Ho va ten khong duoc de trong";
+    return "Họ và tên không được để trống";
   }
 
   if (name.trim().length < 2) {
-    return "Ho va ten phai co it nhat 2 ky tu";
+    return "Họ và tên phải có ít nhất 2 ký tự";
   }
 
   return null;
@@ -72,27 +72,28 @@ export const validateDateOfBirth = (
   minAge: number = 13,
 ): string | null => {
   if (!date) {
-    return "Ngay sinh khong duoc de trong";
+    return "Ngày sinh không được để trống";
   }
 
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(date)) {
-    return "Ngay sinh phai dung dinh dang YYYY-MM-DD";
+    return "Ngày sinh phải đúng định dạng YYYY-MM-DD";
   }
 
   const birthDate = new Date(date);
   const today = new Date();
 
   if (Number.isNaN(birthDate.getTime())) {
-    return "Ngay sinh khong hop le";
+    return "Ngày sinh không hợp lệ";
   }
 
   if (birthDate > today) {
-    return "Ngay sinh khong the la ngay tuong lai";
+    return "Ngày sinh không thể là ngày trong tương lai";
   }
 
   let age = today.getFullYear() - birthDate.getFullYear();
   const monthDiff = today.getMonth() - birthDate.getMonth();
+
   if (
     monthDiff < 0 ||
     (monthDiff === 0 && today.getDate() < birthDate.getDate())
@@ -101,11 +102,11 @@ export const validateDateOfBirth = (
   }
 
   if (age < minAge) {
-    return `Ban phai tu ${minAge} tuoi tro len`;
+    return `Bạn phải từ ${minAge} tuổi trở lên`;
   }
 
   if (age > 120) {
-    return "Ngay sinh khong hop le";
+    return "Ngày sinh không hợp lệ";
   }
 
   return null;

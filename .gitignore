@@ -43,6 +43,6 @@ next-env.d.ts
 .editorconfig
 .gitattributes
 
-supabase
+/supabase/
 sonar-project.properties
 .scannerwork
