@@ -6215,6 +6215,109 @@
           ]
         }
       ]
+    },
+    {
+      "id": 51,
+      "title": "Dịch - Do - Tịch - Khiếm",
+      "kanji": [
+        {
+          "character": "訳",
+          "meaning": "Dịch, phiên dịch, lý do",
+          "onyomi": "ヤク",
+          "kunyomi": "わけ",
+          "examples": [
+            {
+              "word": "通訳",
+              "reading": "つうやく",
+              "meaning": "Thông dịch, phiên dịch"
+            },
+            {
+              "word": "言い訳",
+              "reading": "いいわけ",
+              "meaning": "Lời biện minh, lời bào chữa"
+            }
+          ]
+        },
+        {
+          "character": "由",
+          "meaning": "Do, nguyên nhân, lý do",
+          "onyomi": "ユ、ユウ、ユイ",
+          "kunyomi": "よし",
+          "examples": [
+            {
+              "word": "由",
+              "reading": "よし",
+              "meaning": "Lý do, nguyên do"
+            },
+            {
+              "word": "経由",
+              "reading": "けいゆ",
+              "meaning": "Đi qua, thông qua"
+            },
+            {
+              "word": "理由",
+              "reading": "りゆう",
+              "meaning": "Lý do"
+            }
+          ]
+        },
+        {
+          "character": "席",
+          "meaning": "Tịch, chỗ ngồi, ghế",
+          "onyomi": "セキ",
+          "kunyomi": "むしろ",
+          "examples": [
+            {
+              "word": "座席",
+              "reading": "ざせき",
+              "meaning": "Chỗ ngồi"
+            },
+            {
+              "word": "席",
+              "reading": "せき",
+              "meaning": "Chỗ ngồi"
+            },
+            {
+              "word": "欠席",
+              "reading": "けっせき",
+              "meaning": "Vắng mặt"
+            },
+            {
+              "word": "出席",
+              "reading": "しゅっせき",
+              "meaning": "Có mặt, tham dự"
+            },
+            {
+              "word": "着席",
+              "reading": "ちゃくせき",
+              "meaning": "Ngồi xuống, vào chỗ ngồi"
+            }
+          ]
+        },
+        {
+          "character": "欠",
+          "meaning": "Khiếm, thiếu, khuyết",
+          "onyomi": "ケツ",
+          "kunyomi": "か-ける、か-く",
+          "examples": [
+            {
+              "word": "欠席",
+              "reading": "けっせき",
+              "meaning": "Vắng mặt"
+            },
+            {
+              "word": "欠ける",
+              "reading": "かける",
+              "meaning": "Thiếu, bị khuyết"
+            },
+            {
+              "word": "欠点",
+              "reading": "けってん",
+              "meaning": "Khuyết điểm"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
