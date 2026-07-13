@@ -6112,6 +6112,109 @@
           ]
         }
       ]
+    },
+    {
+      "id": 50,
+      "title": "Nghiệp - Tốt - Thụ - Cấp",
+      "kanji": [
+        {
+          "character": "業",
+          "meaning": "Nghiệp, nghề, công việc, thành tựu",
+          "onyomi": "ギョウ、ゴウ",
+          "kunyomi": "わざ",
+          "examples": [
+            {
+              "word": "手業",
+              "reading": "てわざ",
+              "meaning": "Kỹ xảo, kỹ năng"
+            },
+            {
+              "word": "業績",
+              "reading": "ぎょうせき",
+              "meaning": "Thành tích, kết quả công việc"
+            },
+            {
+              "word": "残業",
+              "reading": "ざんぎょう",
+              "meaning": "Làm thêm giờ"
+            },
+            {
+              "word": "卒業式",
+              "reading": "そつぎょうしき",
+              "meaning": "Lễ tốt nghiệp"
+            }
+          ]
+        },
+        {
+          "character": "卒",
+          "meaning": "Tốt, kết thúc, tốt nghiệp",
+          "onyomi": "ソツ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "脳卒中",
+              "reading": "のうそっちゅう",
+              "meaning": "Đột quỵ"
+            },
+            {
+              "word": "新卒",
+              "reading": "しんそつ",
+              "meaning": "Sinh viên mới tốt nghiệp"
+            },
+            {
+              "word": "卒業式",
+              "reading": "そつぎょうしき",
+              "meaning": "Lễ tốt nghiệp"
+            }
+          ]
+        },
+        {
+          "character": "授",
+          "meaning": "Thụ, truyền, trao, ban cho",
+          "onyomi": "ジュ",
+          "kunyomi": "さず-かる、さず-ける",
+          "examples": [
+            {
+              "word": "授かる",
+              "reading": "さずかる",
+              "meaning": "Được ban cho, được nhận"
+            },
+            {
+              "word": "授ける",
+              "reading": "さずける",
+              "meaning": "Trao cho, ban cho, dạy cho"
+            }
+          ]
+        },
+        {
+          "character": "級",
+          "meaning": "Cấp, hạng, bậc",
+          "onyomi": "キュウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "初級",
+              "reading": "しょきゅう",
+              "meaning": "Sơ cấp"
+            },
+            {
+              "word": "上級",
+              "reading": "じょうきゅう",
+              "meaning": "Cao cấp"
+            },
+            {
+              "word": "中級",
+              "reading": "ちゅうきゅう",
+              "meaning": "Trung cấp"
+            },
+            {
+              "word": "高級",
+              "reading": "こうきゅう",
+              "meaning": "Cao cấp, hạng cao"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
