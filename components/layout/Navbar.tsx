@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import {
   Bell,
   CheckCheck,
@@ -136,10 +135,7 @@ export default function Navbar() {
   const profileName = profileDisplayName || user?.email || "User";
 
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <nav
       className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 shadow-md backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/80"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -381,6 +377,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }

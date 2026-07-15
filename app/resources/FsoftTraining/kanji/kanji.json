@@ -6318,6 +6318,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 52,
+      "title": "Tục - Nỗ - Vong - Giác",
+      "kanji": [
+        {
+          "character": "続",
+          "meaning": "Tục, tiếp tục, nối tiếp",
+          "onyomi": "ゾク",
+          "kunyomi": "つづ-く、つづ-ける",
+          "examples": [
+            {
+              "word": "続く",
+              "reading": "つづく",
+              "meaning": "Tiếp tục, kéo dài"
+            },
+            {
+              "word": "続ける",
+              "reading": "つづける",
+              "meaning": "Tiếp tục làm"
+            },
+            {
+              "word": "接続",
+              "reading": "せつぞく",
+              "meaning": "Kết nối"
+            }
+          ]
+        },
+        {
+          "character": "努",
+          "meaning": "Nỗ, cố gắng, nỗ lực",
+          "onyomi": "ド",
+          "kunyomi": "つと-める",
+          "examples": [
+            {
+              "word": "努力",
+              "reading": "どりょく",
+              "meaning": "Nỗ lực, cố gắng"
+            },
+            {
+              "word": "努める",
+              "reading": "つとめる",
+              "meaning": "Cố gắng, nỗ lực"
+            }
+          ]
+        },
+        {
+          "character": "忘",
+          "meaning": "Vong, quên",
+          "onyomi": "ボウ",
+          "kunyomi": "わす-れる",
+          "examples": [
+            {
+              "word": "忘れる",
+              "reading": "わすれる",
+              "meaning": "Quên"
+            },
+            {
+              "word": "忘れ物",
+              "reading": "わすれもの",
+              "meaning": "Đồ bỏ quên"
+            }
+          ]
+        },
+        {
+          "character": "覚",
+          "meaning": "Giác, nhớ, tỉnh, cảm nhận",
+          "onyomi": "カク",
+          "kunyomi": "おぼ-える、さ-ます",
+          "examples": [
+            {
+              "word": "覚える",
+              "reading": "おぼえる",
+              "meaning": "Ghi nhớ, học thuộc"
+            },
+            {
+              "word": "覚ます",
+              "reading": "さます",
+              "meaning": "Làm tỉnh, đánh thức"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

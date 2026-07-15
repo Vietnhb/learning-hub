@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        japanese: ["Noto Sans JP", "sans-serif"],
-        "japanese-serif": ["Noto Serif JP", "serif"],
+        japanese: ["var(--font-noto-sans-jp)", "sans-serif"],
+        "japanese-serif": ["var(--font-noto-serif-jp)", "serif"],
       },
       backgroundImage: {
         seigaiha:

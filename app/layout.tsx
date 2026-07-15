@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
 import { getSiteUrl } from "@/lib/config/site-url";
@@ -7,6 +8,20 @@ import AppChrome from "@/components/layout/AppChrome";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
+
+const notoSansJp = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
+});
+
+const notoSerifJp = Noto_Serif_JP({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-serif-jp",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -78,19 +93,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="flex flex-col min-h-screen font-japanese bg-background text-foreground transition-colors">
+      <body
+        className={`${notoSansJp.variable} ${notoSerifJp.variable} flex min-h-screen flex-col bg-background font-japanese text-foreground transition-colors`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

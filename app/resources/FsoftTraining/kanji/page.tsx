@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -53,52 +52,39 @@ export default function FsoftTrainingKanjiPage() {
   const currentLesson = lessons[selectedLesson];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100 px-3 py-6 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 sm:px-4 sm:py-12">
       <div className="max-w-7xl mx-auto">
         {/* Back Button */}
-        <motion.div
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          className="mb-8"
-        >
+        <div className="mb-5 sm:mb-8">
           <Link href="/resources/FsoftTraining">
             <Button
               variant="outline"
-              className="gap-2 bg-white/90 backdrop-blur border-orange-300 hover:border-orange-500 hover:bg-orange-50 shadow-md"
+              className="h-auto min-h-10 gap-2 whitespace-normal bg-white/90 text-left backdrop-blur border-orange-300 hover:border-orange-500 hover:bg-orange-50 shadow-md"
             >
               <ArrowLeft className="w-4 h-4" />
               Quay lại FPT Software Training
             </Button>
           </Link>
-        </motion.div>
+        </div>
 
         {/* Header */}
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="mb-12 text-center"
-        >
-          <div className="bg-white/95 backdrop-blur border-4 border-orange-400 rounded-3xl px-12 py-8 shadow-2xl">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-5xl">✍️</span>
-              <h1 className="text-5xl font-black bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+        <div className="mb-7 text-center sm:mb-12">
+          <div className="rounded-2xl border-2 border-orange-400 bg-white/95 px-4 py-6 shadow-xl backdrop-blur sm:rounded-3xl sm:border-4 sm:px-12 sm:py-8 sm:shadow-2xl">
+            <div className="mb-4 flex items-center justify-center gap-2 sm:gap-4">
+              <span className="text-3xl sm:text-5xl" aria-hidden="true">✍️</span>
+              <h1 className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-3xl font-black text-transparent sm:text-5xl">
                 漢字 - Chữ Hán
               </h1>
-              <span className="text-5xl">✍️</span>
+              <span className="hidden text-5xl sm:inline" aria-hidden="true">✍️</span>
             </div>
-            <p className="text-lg text-gray-700">
+            <p className="text-sm leading-6 text-gray-700 sm:text-lg">
               FPT Software Training - Học chữ Kanji theo chủ đề
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Lesson Selector */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          className="mb-8"
-        >
+        <div className="mb-8">
           <Card className="border-2 border-orange-300 bg-white/95">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-orange-600">
@@ -113,11 +99,11 @@ export default function FsoftTrainingKanjiPage() {
                     key={lesson.id}
                     variant={selectedLesson === index ? "default" : "outline"}
                     onClick={() => setSelectedLesson(index)}
-                    className={
+                    className={`h-auto min-h-11 whitespace-normal py-2 ${
                       selectedLesson === index
                         ? "bg-gradient-to-r from-orange-500 to-amber-500 text-white border-2 border-orange-400"
                         : "border-2 border-orange-300 hover:border-orange-400"
-                    }
+                    }`}
                   >
                     <span className="font-bold">Bài {lesson.id}:</span>{" "}
                     {lesson.title} ({lesson.kanji.length} chữ)
@@ -126,20 +112,12 @@ export default function FsoftTrainingKanjiPage() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
 
         {/* Current Lesson Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedLesson}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="space-y-6"
-          >
+        <div key={selectedLesson} className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-orange-600 mb-2">
+              <h2 className="mb-2 text-2xl font-bold text-orange-600 sm:text-3xl">
                 📖 Bài {currentLesson.id}: {currentLesson.title}
               </h2>
               <p className="text-gray-600">
@@ -150,15 +128,10 @@ export default function FsoftTrainingKanjiPage() {
             {/* Kanji Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentLesson.kanji.map((kanji, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Card className="border-4 border-orange-300 hover:border-orange-500 transition-all hover:shadow-2xl bg-white/95">
+                <div key={`${kanji.character}-${index}`}>
+                  <Card className="border-2 border-orange-300 bg-white/95 transition-shadow hover:border-orange-500 hover:shadow-xl sm:border-4">
                     <CardHeader className="text-center bg-gradient-to-r from-orange-50 to-amber-50 border-b-2 border-orange-200">
-                      <div className="text-8xl font-bold text-orange-600 mb-4">
+                      <div className="mb-4 text-6xl font-bold text-orange-600 sm:text-8xl">
                         {kanji.character}
                       </div>
                       <CardTitle className="text-2xl text-gray-800">
@@ -212,19 +185,13 @@ export default function FsoftTrainingKanjiPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+        </div>
 
         {/* Bottom Info */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-12 bg-white/95 backdrop-blur rounded-2xl shadow-xl p-6 border-2 border-orange-300"
-        >
+        <div className="mt-8 rounded-2xl border-2 border-orange-300 bg-white/95 p-4 shadow-xl backdrop-blur sm:mt-12 sm:p-6">
           <div className="text-center">
             <p className="text-lg text-gray-700 mb-2">
               💡 <span className="font-bold">Lời khuyên:</span> Hãy luyện viết
@@ -236,7 +203,7 @@ export default function FsoftTrainingKanjiPage() {
               <span>✍️</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

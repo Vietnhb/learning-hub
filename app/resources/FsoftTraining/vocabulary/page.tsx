@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ChevronLeft,
@@ -57,8 +57,11 @@ const data = vocabularyData as VocabItem[];
 
 function shuffleArray<T>(arr: T[]): T[] {
   const clone = [...arr];
+  const randomValue = new Uint32Array(1);
+
   for (let i = clone.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
+    globalThis.crypto.getRandomValues(randomValue);
+    const j = randomValue[0] % (i + 1);
     [clone[i], clone[j]] = [clone[j], clone[i]];
   }
   return clone;
@@ -135,6 +138,7 @@ export default function FsoftTrainingVocabularyPage() {
   const [selectedUnit, setSelectedUnit] = useState<number | "all">("all");
   const [selectedLesson, setSelectedLesson] = useState<string>("all");
   const [search, setSearch] = useState("");
+  const deferredSearch = useDeferredValue(search);
   const [posFilter, setPosFilter] = useState<PosTag | "all">("all");
   const [transFilter, setTransFilter] = useState<TransitivityFilter>("all");
   const [isFlipped, setIsFlipped] = useState(false);
@@ -156,24 +160,19 @@ export default function FsoftTrainingVocabularyPage() {
   }, [selectedUnit]);
 
   const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
+    const q = deferredSearch.trim().toLocaleLowerCase("vi");
     return data
-      .filter((item) =>
-        selectedUnit === "all" ? true : item.unit === selectedUnit,
-      )
-      .filter((item) =>
-        selectedLesson === "all" ? true : item.lesson === selectedLesson,
-      )
-      .filter((item) => (posFilter === "all" ? true : item.pos === posFilter))
-      .filter((item) =>
-        transFilter === "all" ? true : item.transitivity === transFilter,
-      )
       .filter((item) => {
+        if (selectedUnit !== "all" && item.unit !== selectedUnit) return false;
+        if (selectedLesson !== "all" && item.lesson !== selectedLesson) return false;
+        if (posFilter !== "all" && item.pos !== posFilter) return false;
+        if (transFilter !== "all" && item.transitivity !== transFilter) return false;
         if (!q) return true;
+
         return (
-          item.term.toLowerCase().includes(q) ||
-          (item.reading ?? "").toLowerCase().includes(q) ||
-          item.definition.toLowerCase().includes(q)
+          item.term.toLocaleLowerCase("vi").includes(q) ||
+          (item.reading ?? "").toLocaleLowerCase("vi").includes(q) ||
+          item.definition.toLocaleLowerCase("vi").includes(q)
         );
       })
       .sort((a, b) => {
@@ -183,7 +182,7 @@ export default function FsoftTrainingVocabularyPage() {
         if (aOrder !== bOrder) return aOrder - bOrder;
         return a.id.localeCompare(b.id);
       });
-  }, [selectedUnit, selectedLesson, posFilter, transFilter, search]);
+  }, [selectedUnit, selectedLesson, posFilter, transFilter, deferredSearch]);
 
   useEffect(() => {
     const nextDeck = isShuffled ? shuffleArray(filtered) : filtered;
@@ -273,6 +272,10 @@ export default function FsoftTrainingVocabularyPage() {
   }, [deck]);
 
   const groupedListRef = useRef<HTMLDivElement | null>(null);
+  const deckIndexById = useMemo(
+    () => new Map(deck.map((item, index) => [item.id, index])),
+    [deck],
+  );
 
   useEffect(() => {
     if (groupedListRef.current) {
@@ -498,7 +501,7 @@ export default function FsoftTrainingVocabularyPage() {
               >
                 <Card className="p-6 min-h-[260px] border-2 border-orange-300 bg-white hover:shadow-md transition dark:bg-gray-900 dark:border-orange-700">
                   {!isFlipped ? (
-                    <div className="flex gap-6 h-full">
+                    <div className="flex h-full flex-col gap-4 sm:flex-row sm:gap-6">
                       <div className="flex-1 flex flex-col">
                         <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
                           <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
@@ -538,11 +541,11 @@ export default function FsoftTrainingVocabularyPage() {
                       </div>
 
                       {current.image && (
-                        <div className="flex items-center justify-end">
+                        <div className="flex items-center justify-center sm:justify-end">
                           <img
                             src={current.image}
                             alt={current.term}
-                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            className="max-h-40 max-w-full rounded-lg object-contain sm:max-h-[200px] sm:max-w-[200px]"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
                             }}
@@ -551,7 +554,7 @@ export default function FsoftTrainingVocabularyPage() {
                       )}
                     </div>
                   ) : (
-                    <div className="flex gap-6 h-full">
+                    <div className="flex h-full flex-col gap-4 sm:flex-row sm:gap-6">
                       <div className="flex-1 flex flex-col">
                         <div className="flex items-center gap-2 flex-wrap text-xs mb-4">
                           <span className="px-2 py-1 rounded-full border bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-950 dark:text-orange-300 dark:border-orange-800">
@@ -577,11 +580,11 @@ export default function FsoftTrainingVocabularyPage() {
                       </div>
 
                       {current.image && (
-                        <div className="flex items-center justify-end">
+                        <div className="flex items-center justify-center sm:justify-end">
                           <img
                             src={current.image}
                             alt={current.term}
-                            className="max-h-[200px] max-w-[200px] object-contain rounded-lg"
+                            className="max-h-40 max-w-full rounded-lg object-contain sm:max-h-[200px] sm:max-w-[200px]"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
                             }}
@@ -680,7 +683,7 @@ export default function FsoftTrainingVocabularyPage() {
                 </div>
                 <div className="divide-y">
                   {group.items.map((item) => {
-                    const idx = deck.findIndex((x) => x.id === item.id);
+                    const idx = deckIndexById.get(item.id) ?? -1;
                     const active = idx === currentIndex;
                     return (
                       <button

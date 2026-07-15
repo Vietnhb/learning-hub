@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -192,24 +193,44 @@ const itemVariants = {
   },
 };
 
+function useEnhancedVisuals() {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(
+      "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
+    );
+    const update = () => setEnabled(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return enabled;
+}
+
 export default function Home() {
   const { user } = useAuth();
   const { favoriteSet } = useResourceFavorites(user?.id);
   const favoriteCount = favoriteSet.size;
+  const enhancedVisuals = useEnhancedVisuals();
 
   return (
     <div className="min-h-screen bg-[#f7fbff] text-slate-950 dark:bg-[#050815] dark:text-white">
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#040914] text-white">
         <div className="pointer-events-none absolute inset-0">
-          <Lightfall
-            dpr={1}
-            backgroundColor="#040914"
-            colors={["#38bdf8", "#fbbf24", "#f472b6", "#818cf8"]}
-            streakCount={10}
-            glow={0.78}
-            mouseInteraction={false}
-            opacity={0.82}
-          />
+          {enhancedVisuals && (
+            <Lightfall
+              dpr={1}
+              backgroundColor="#040914"
+              colors={["#38bdf8", "#fbbf24", "#f472b6", "#818cf8"]}
+              streakCount={10}
+              glow={0.78}
+              mouseInteraction={false}
+              opacity={0.82}
+            />
+          )}
         </div>
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(4,9,20,0.6)_100%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:56px_56px]" />
@@ -297,13 +318,15 @@ export default function Home() {
             </div>
           </AnimatedContent>
 
-          <AnimatedContent distance={55} duration={0.7} delay={0.06}>
-            <div className="relative mx-auto h-[420px] w-full max-w-[640px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-cyan-950/25 backdrop-blur-[2px] sm:h-[480px] lg:h-[560px]">
-              <div className="pointer-events-none absolute inset-x-8 top-8 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent shadow-[0_0_18px_rgba(244,114,182,0.9)]" />
+          {enhancedVisuals && (
+            <AnimatedContent distance={55} duration={0.7} delay={0.06}>
+              <div className="relative mx-auto h-[560px] w-full max-w-[640px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-cyan-950/25 backdrop-blur-[2px]">
+                <div className="pointer-events-none absolute inset-x-8 top-8 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent shadow-[0_0_18px_rgba(244,114,182,0.9)]" />
 
-              <MascotScene />
-            </div>
-          </AnimatedContent>
+                <MascotScene />
+              </div>
+            </AnimatedContent>
+          )}
         </div>
       </section>
 
@@ -456,12 +479,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-lg border border-white/10 bg-[#08111f] text-white shadow-2xl shadow-slate-950/20">
           <div className="relative">
             <div className="pointer-events-none absolute inset-0 opacity-45">
-              <Aurora
-                colorStops={["#fbbf24", "#38bdf8", "#f472b6"]}
-                amplitude={0.72}
-                blend={0.5}
-                speed={0.5}
-              />
+              {enhancedVisuals && (
+                <Aurora
+                  colorStops={["#fbbf24", "#38bdf8", "#f472b6"]}
+                  amplitude={0.72}
+                  blend={0.5}
+                  speed={0.5}
+                />
+              )}
             </div>
             <div className="relative z-10 grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_0.78fr] lg:p-10">
               <div>
