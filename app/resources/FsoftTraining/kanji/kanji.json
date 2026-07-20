@@ -6401,6 +6401,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": 53,
+      "title": "Chủng - Loại - Tồn - Tại",
+      "kanji": [
+        {
+          "character": "種",
+          "meaning": "Chủng, hạt giống, loại",
+          "onyomi": "シュ",
+          "kunyomi": "たね",
+          "examples": [
+            {
+              "word": "品種",
+              "reading": "ひんしゅ",
+              "meaning": "Chủng loại, giống"
+            },
+            {
+              "word": "人種",
+              "reading": "じんしゅ",
+              "meaning": "Chủng tộc"
+            }
+          ]
+        },
+        {
+          "character": "類",
+          "meaning": "Loại, phân loại",
+          "onyomi": "ルイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "種類",
+              "reading": "しゅるい",
+              "meaning": "Loại, chủng loại"
+            },
+            {
+              "word": "書類",
+              "reading": "しょるい",
+              "meaning": "Tài liệu, giấy tờ"
+            }
+          ]
+        },
+        {
+          "character": "存",
+          "meaning": "Tồn, tồn tại, lưu giữ",
+          "onyomi": "ソン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "存在",
+              "reading": "そんざい",
+              "meaning": "Sự tồn tại"
+            },
+            {
+              "word": "保存",
+              "reading": "ほぞん",
+              "meaning": "Bảo tồn, lưu giữ"
+            }
+          ]
+        },
+        {
+          "character": "在",
+          "meaning": "Tại, ở, tồn tại",
+          "onyomi": "ザイ",
+          "kunyomi": "あ-る",
+          "examples": [
+            {
+              "word": "存在",
+              "reading": "そんざい",
+              "meaning": "Sự tồn tại"
+            },
+            {
+              "word": "在学",
+              "reading": "ざいがく",
+              "meaning": "Đang theo học"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
