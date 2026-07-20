@@ -6479,6 +6479,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 54,
+      "title": "Dương - Băng - Hà - Cự",
+      "kanji": [
+        {
+          "character": "陽",
+          "meaning": "Dương, mặt trời, ánh nắng",
+          "onyomi": "ヨウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "太陽",
+              "reading": "たいよう",
+              "meaning": "Mặt trời"
+            },
+            {
+              "word": "陽気",
+              "reading": "ようき",
+              "meaning": "Thời tiết đẹp, vui vẻ"
+            },
+            {
+              "word": "陽光",
+              "reading": "ようこう",
+              "meaning": "Ánh nắng mặt trời"
+            }
+          ]
+        },
+        {
+          "character": "氷",
+          "meaning": "Băng, nước đá",
+          "onyomi": "ヒョウ",
+          "kunyomi": "こおり",
+          "examples": [
+            {
+              "word": "氷",
+              "reading": "こおり",
+              "meaning": "Nước đá"
+            },
+            {
+              "word": "氷点",
+              "reading": "ひょうてん",
+              "meaning": "Điểm đóng băng"
+            },
+            {
+              "word": "かき氷",
+              "reading": "かきごおり",
+              "meaning": "Đá bào"
+            }
+          ]
+        },
+        {
+          "character": "河",
+          "meaning": "Hà, sông",
+          "onyomi": "カ",
+          "kunyomi": "かわ",
+          "examples": [
+            {
+              "word": "河",
+              "reading": "かわ",
+              "meaning": "Sông"
+            },
+            {
+              "word": "河川",
+              "reading": "かせん",
+              "meaning": "Sông ngòi"
+            }
+          ]
+        },
+        {
+          "character": "巨",
+          "meaning": "Cự, to lớn, khổng lồ",
+          "onyomi": "キョ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "巨大",
+              "reading": "きょだい",
+              "meaning": "Khổng lồ, to lớn"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
