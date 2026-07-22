@@ -6562,6 +6562,94 @@
           ]
         }
       ]
+    },
+    {
+      "id": 55,
+      "title": "Quý - Hậu - Noãn - Lưu",
+      "kanji": [
+        {
+          "character": "季",
+          "meaning": "Quý, mùa",
+          "onyomi": "キ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "四季",
+              "reading": "しき",
+              "meaning": "Bốn mùa"
+            },
+            {
+              "word": "季節",
+              "reading": "きせつ",
+              "meaning": "Mùa"
+            }
+          ]
+        },
+        {
+          "character": "候",
+          "meaning": "Hậu, khí hậu, thời tiết",
+          "onyomi": "コウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "気候",
+              "reading": "きこう",
+              "meaning": "Khí hậu"
+            },
+            {
+              "word": "天候",
+              "reading": "てんこう",
+              "meaning": "Thời tiết"
+            }
+          ]
+        },
+        {
+          "character": "暖",
+          "meaning": "Noãn, ấm, làm ấm",
+          "onyomi": "ダン",
+          "kunyomi": "あたた-める、あたた-まる",
+          "examples": [
+            {
+              "word": "暖める",
+              "reading": "あたためる",
+              "meaning": "Làm ấm"
+            },
+            {
+              "word": "暖まる",
+              "reading": "あたたまる",
+              "meaning": "Ấm lên"
+            },
+            {
+              "word": "暖房",
+              "reading": "だんぼう",
+              "meaning": "Máy sưởi, hệ thống sưởi"
+            }
+          ]
+        },
+        {
+          "character": "流",
+          "meaning": "Lưu, chảy, lưu hành",
+          "onyomi": "リュウ",
+          "kunyomi": "なが-れる、なが-る",
+          "examples": [
+            {
+              "word": "流れる",
+              "reading": "ながれる",
+              "meaning": "Chảy"
+            },
+            {
+              "word": "流行する",
+              "reading": "りゅうこうする",
+              "meaning": "Thịnh hành"
+            },
+            {
+              "word": "流氷",
+              "reading": "りゅうひょう",
+              "meaning": "Băng trôi"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
