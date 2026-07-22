@@ -6650,6 +6650,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 56,
+      "title": "Thâm - Thiển - Hình - Để",
+      "kanji": [
+        {
+          "character": "深",
+          "meaning": "Thâm, sâu",
+          "onyomi": "シン",
+          "kunyomi": "ふか-い",
+          "examples": [
+            {
+              "word": "深夜",
+              "reading": "しんや",
+              "meaning": "Đêm khuya"
+            },
+            {
+              "word": "深刻",
+              "reading": "しんこく",
+              "meaning": "Nghiêm trọng"
+            },
+            {
+              "word": "深い",
+              "reading": "ふかい",
+              "meaning": "Sâu"
+            }
+          ]
+        },
+        {
+          "character": "浅",
+          "meaning": "Thiển, nông",
+          "onyomi": "セン",
+          "kunyomi": "あさ-い",
+          "examples": [
+            {
+              "word": "浅学",
+              "reading": "せんがく",
+              "meaning": "Ít học, kiến thức nông"
+            },
+            {
+              "word": "浅い",
+              "reading": "あさい",
+              "meaning": "Nông"
+            },
+            {
+              "word": "浅海",
+              "reading": "せんかい",
+              "meaning": "Biển nông"
+            }
+          ]
+        },
+        {
+          "character": "形",
+          "meaning": "Hình, hình dạng",
+          "onyomi": "ケイ",
+          "kunyomi": "かたち",
+          "examples": [
+            {
+              "word": "人形",
+              "reading": "にんぎょう",
+              "meaning": "Búp bê"
+            },
+            {
+              "word": "形",
+              "reading": "かたち",
+              "meaning": "Hình dạng"
+            }
+          ]
+        },
+        {
+          "character": "底",
+          "meaning": "Để, đáy",
+          "onyomi": "テイ",
+          "kunyomi": "そこ",
+          "examples": [
+            {
+              "word": "底",
+              "reading": "そこ",
+              "meaning": "Đáy"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
