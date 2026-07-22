@@ -6733,6 +6733,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 57,
+      "title": "Đảo - Ngạn - Pha - Lục",
+      "kanji": [
+        {
+          "character": "島",
+          "meaning": "Đảo",
+          "onyomi": "トウ",
+          "kunyomi": "しま",
+          "examples": [
+            {
+              "word": "島",
+              "reading": "しま",
+              "meaning": "Đảo"
+            },
+            {
+              "word": "島国",
+              "reading": "しまぐに",
+              "meaning": "Quốc đảo"
+            },
+            {
+              "word": "無人島",
+              "reading": "むじんとう",
+              "meaning": "Đảo hoang"
+            }
+          ]
+        },
+        {
+          "character": "岸",
+          "meaning": "Ngạn, bờ",
+          "onyomi": "ガン",
+          "kunyomi": "きし",
+          "examples": [
+            {
+              "word": "海岸",
+              "reading": "かいがん",
+              "meaning": "Bờ biển"
+            },
+            {
+              "word": "岸壁",
+              "reading": "がんぺき",
+              "meaning": "Vách đá ven biển"
+            }
+          ]
+        },
+        {
+          "character": "坂",
+          "meaning": "Pha, dốc",
+          "onyomi": "ハン",
+          "kunyomi": "さか",
+          "examples": [
+            {
+              "word": "急坂",
+              "reading": "きゅうはん",
+              "meaning": "Dốc đứng"
+            },
+            {
+              "word": "坂道",
+              "reading": "さかみち",
+              "meaning": "Đường dốc"
+            }
+          ]
+        },
+        {
+          "character": "陸",
+          "meaning": "Lục, đất liền",
+          "onyomi": "リク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "上陸",
+              "reading": "じょうりく",
+              "meaning": "Đổ bộ, lên bờ"
+            },
+            {
+              "word": "略陸",
+              "reading": "りゃくりく",
+              "meaning": "Lược lục"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
