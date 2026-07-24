@@ -6413,6 +6413,11 @@
           "kunyomi": "たね",
           "examples": [
             {
+              "word": "種",
+              "reading": "たね",
+              "meaning": "Hạt giống"
+            },
+            {
               "word": "品種",
               "reading": "ひんしゅ",
               "meaning": "Chủng loại, giống"
@@ -6421,6 +6426,11 @@
               "word": "人種",
               "reading": "じんしゅ",
               "meaning": "Chủng tộc"
+            },
+            {
+              "word": "種類",
+              "reading": "しゅるい",
+              "meaning": "Chủng loại"
             }
           ]
         },
@@ -6431,9 +6441,14 @@
           "kunyomi": "",
           "examples": [
             {
+              "word": "類",
+              "reading": "るい",
+              "meaning": "Loại"
+            },
+            {
               "word": "種類",
               "reading": "しゅるい",
-              "meaning": "Loại, chủng loại"
+              "meaning": "Chủng loại"
             },
             {
               "word": "書類",
@@ -6457,6 +6472,16 @@
               "word": "保存",
               "reading": "ほぞん",
               "meaning": "Bảo tồn, lưu giữ"
+            },
+            {
+              "word": "存じる",
+              "reading": "ぞんじる",
+              "meaning": "Biết (kính ngữ)"
+            },
+            {
+              "word": "存続",
+              "reading": "そんぞく",
+              "meaning": "Sự tồn tại, duy trì"
             }
           ]
         },
@@ -6475,6 +6500,16 @@
               "word": "在学",
               "reading": "ざいがく",
               "meaning": "Đang theo học"
+            },
+            {
+              "word": "在庫",
+              "reading": "ざいこ",
+              "meaning": "Hàng tồn kho"
+            },
+            {
+              "word": "存続",
+              "reading": "そんぞく",
+              "meaning": "Sự tồn tại, duy trì"
             }
           ]
         }
