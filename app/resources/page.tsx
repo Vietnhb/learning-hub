@@ -130,7 +130,7 @@ function ResourcesPageContent() {
       downloads: 0,
       rating: 5.0,
       description:
-        "96 câu hỏi luyện tập Flutter, Dart, BLoC, API, authentication và testing",
+        "274 câu hỏi luyện tập Flutter, Dart, React Native, API, authentication và testing",
       link: "/resources/PRM393",
     },
   ];

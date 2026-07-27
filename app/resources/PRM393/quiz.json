@@ -958,5 +958,1785 @@
       "D. 500"
     ],
     "answer": "D"
+  },
+  {
+    "question": "What is a key advantage of using the Flutter framework for mobile development?",
+    "choices": [
+      "A. It is limited to command-line tools only.",
+      "B. It requires knowledge of multiple programming languages.",
+      "C. It supports only the iOS platform.",
+      "D. It allows using a single codebase across multiple platforms."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which tool checks Dart code for potential errors and adherence to coding style guidelines?",
+    "choices": [
+      "A. Flutter Inspector",
+      "B. Flutter Doctor",
+      "C. Dart Analyzer",
+      "D. Hot Reload"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What is the primary purpose of the Flutter SDK?",
+    "choices": [
+      "A. To provide tools and libraries for developing Flutter applications",
+      "B. To analyze Dart code for errors",
+      "C. To manage the app state",
+      "D. To simulate mobile devices on the computer."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the key function of Dart in the Flutter toolchain?",
+    "choices": [
+      "A. It manages the app state.",
+      "B. It is the programming language used to write Flutter code.",
+      "C. It is a local database used for storing persistent user data.",
+      "D. It provides a visual representation of the widget tree."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What is the primary purpose of the flutter_test package in Flutter?",
+    "choices": [
+      "A. To manage app state",
+      "B. To analyze Dart code",
+      "C. To help write and run tests",
+      "D. To simulate mobile devices"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which Flutter tool provides detailed information about a widget's size, position, and rendering?",
+    "choices": [
+      "A. Dart Analyzer",
+      "B. Widget Inspector",
+      "C. Hot Reload",
+      "D. Flutter Doctor"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What is a major advantage of using Flutter DevTools?",
+    "choices": [
+      "A. It manages the app state.",
+      "B. It provides a suite of performance and debugging tools.",
+      "C. It analyzes Dart code for errors.",
+      "D. It is responsible for compiling Flutter code to native machine code."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "You're developing a Flutter app and encounter the error message \"Plugin not found.\" How do you troubleshoot and resolve this issue?",
+    "choices": [
+      "A. Test your application on multiple platforms.",
+      "B. Update your dependencies to benefit from bug fixes",
+      "C. Ensure you added it correctly in pubspec.yaml and run flutter pub get",
+      "D. Update all your dependencies"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What are native mobile features?",
+    "choices": [
+      "A. Features that are built into web browsers.",
+      "B. Functionalities provided by the operating system",
+      "C. Cross-platform features that work on both iOS and Android.",
+      "D. Features that are only available on the latest devices."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What is the purpose of the setState() method?",
+    "choices": [
+      "A. Locks the state of the app to prevent further changes",
+      "B. Refreshes the UI without changing anything",
+      "C. Informs the framework that the internal state has been updated",
+      "D. Changes the state of the entire app"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "You've implemented an API call in your app to fetch user data. What should you do to prevent a crash if the API fails?",
+    "choices": [
+      "A. Encapsulate the API call in a try block and handle potential exceptions in a catch block",
+      "B. Encapsulate the API call in a sleep function to delay execution and prevent crashes",
+      "C. Encapsulate the API call in a loop to retry the request until it succeeds",
+      "D. Encapsulate the API call in an if-else block to check the API status before calling"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You need to fetch data from an API and pause code execution until the future value is returned. Which Dart keywords should you use?",
+    "choices": [
+      "A. async and await",
+      "B. try and catch",
+      "C. yield and sync",
+      "D. future and then"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements represent data persistence the best?",
+    "choices": [
+      "A. The ability to erase all data once the app is closed",
+      "B. The ability of data to outlast the process that created it",
+      "C. The process of displaying data on the screen while the app is running",
+      "D. The temporary storage of data during a single user session"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following statements describe the process of serialization and deserialization?",
+    "choices": [
+      "A. The act of saving data to the local storage without any conversion",
+      "B. The encoding and decoding of data to and from JSON when using methods like LocalStorage or files",
+      "C. The process of creating a backup of your app's source code",
+      "D. Serialization is only needed when working with databases, and deserialization is only for network requests"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "You're developing a Flutter app and adding a button to the main screen. What is the primary function of the onPressed event in this scenario?",
+    "choices": [
+      "A. To handle user gestures",
+      "B. To validate form fields",
+      "C. To change the button's appearance",
+      "D. To trigger an action when tapping the button"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "You're building a multi-screen Flutter app and need a way to move between different pages. What is the purpose of stack navigation in this scenario?",
+    "choices": [
+      "A. To navigate to different categories in the app",
+      "B. To transition between screens by stacking them on top of each other",
+      "C. To display multiple tabs on the screen",
+      "D. To manage a drawer menu that slides from the side"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What method is used to style an ElevatedButton in Flutter?",
+    "choices": [
+      "A. buttonStyle",
+      "B. styleText",
+      "C. styleFrom",
+      "D. ThemeStyle"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What is the key benefit of Flutter's hot reload feature?",
+    "choices": [
+      "A. It automatically generates code documentation.",
+      "B. It optimizes the app for different screen sizes.",
+      "C. It helps developers see changes in the app almost instantly.",
+      "D. It increases the app's runtime speed."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "You're developing a Flutter app and want to replace the current screen with a new one without keeping the old screen in the navigation stack. Which routing method would you use in this scenario?",
+    "choices": [
+      "A. Navigator.pushNamed",
+      "B. Navigator.pop",
+      "C. Navigator.popUntil",
+      "D. Navigator.pushReplacement"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which widget is primarily used to display text in Flutter?",
+    "choices": [
+      "A. Text",
+      "B. Container",
+      "C. Column",
+      "D. Stack"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You're designing a social media app with a home feed, search, notifications, and profile sections. Which type of navigation would be most appropriate for this app?",
+    "choices": [
+      "A. Drawer navigation",
+      "B. Grid navigation",
+      "C. Tab navigation",
+      "D. Stack navigation"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What is the role of the dart:convert library in Dart?",
+    "choices": [
+      "A. To manipulate file paths",
+      "B. To perform mathematical operations",
+      "C. To handle asynchronous programming",
+      "D. To encode and decode JSON"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which keyword is used to import a library in Dart?",
+    "choices": [
+      "A. using",
+      "B. require",
+      "C. include",
+      "D. import"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "You're working on a mobile app using Dart and want to optimize its performance for a faster startup and smoother running experience. Which compilation method should you choose to ensure that the code is fully translated into machine code before the app runs?",
+    "choices": [
+      "A. Real-time Compilation",
+      "B. On-demand Compilation",
+      "C. JIT Compilation",
+      "D. AOT Compilation"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is a closure in Dart?",
+    "choices": [
+      "A. A class that encapsulates data",
+      "B. A special type of library",
+      "C. A built-in data type",
+      "D. A function that captures and remembers variables from its lexical scope"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is the List class in Dart used for?",
+    "choices": [
+      "A. To handle asynchronous events",
+      "B. To store and manipulate sequences of characters",
+      "C. To represent a collection of key-value pairs",
+      "D. To manage ordered sequences of items"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following illustrates using a named parameter in Dart?",
+    "choices": [
+      "A. greet{name: 'Alice'}",
+      "B. greet('Alice')",
+      "C. greet[Alice]",
+      "D. greet(name: 'Alice')"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the purpose of the dart:async library in Dart?",
+    "choices": [
+      "A. To handle asynchronous programming",
+      "B. To manipulate file paths",
+      "C. To perform mathematical operations",
+      "D. To encode and decode JSON"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Gemma, a product manager for a language-learning app, wants to use notifications to boost user engagement. Which of the following approaches best aligns with effectively engaging users?",
+    "choices": [
+      "A. Sending reminders to complete daily lessons, especially after a period of inactivity",
+      "B. Limiting notifications only to major app updates",
+      "C. Notifying users about unrelated apps or promotions",
+      "D. Sending multiple daily notifications about new features"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Devon is designing notifications for a fitness app and wants to avoid overwhelming users. Which practice should he apply to ensure notifications remain effective?",
+    "choices": [
+      "A. Allowing users to customize notification frequency and type",
+      "B. Sending generic messages about app improvements daily",
+      "C. Sending notifications about every minor update or feature",
+      "D. Enabling only push notifications without in-app options"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "A mobile app development team is considering different notification tools. They want cross-platform support and user segmentation for targeted messaging. Which tool should they choose?",
+    "choices": [
+      "A. Only SMS notifications for universal device reach",
+      "B. FCM, since it supports both cross-platform notifications and segmentation",
+      "C. Apple Push Notification Service (APNs), since it's optimized for iOS",
+      "D. Local notifications for better device-based functionality"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Omar, a UI/UX designer, is creating a task management app. Which of the following design components would best support a user-centered approach to organizing daily tasks?",
+    "choices": [
+      "A. Creating a simple layout that groups related tasks by priority",
+      "B. Adding animations between screens to keep users engaged",
+      "C. Using small buttons to save screen space for more features",
+      "D. Adding bright colors to make the app visually engaging"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following strategies best aligns with clarity in mobile UI design?",
+    "choices": [
+      "A. Using descriptive labels for main features while minimizing jargon in navigation",
+      "B. Choosing smaller fonts to allow more features in view",
+      "C. Displaying as many features as possible on the main screen to save user time",
+      "D. Using technical terms to maintain brand sophistication in the interface"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Eli is designing a fitness app to motivate and engage users during workouts. Which combination of media elements would best achieve this goal?",
+    "choices": [
+      "A. Playing a background audio track during workouts without additional guidance",
+      "B. Including static images of exercises with minimal guidance",
+      "C. Offering only video tutorials that users must watch before starting the workout",
+      "D. Providing short, guided workout videos with audio cues that keep users focused and motivated throughout each exercise"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following examples best enhances user experience by integrating media with intuitive interaction?",
+    "choices": [
+      "A. A cooking app that embeds videos users can pause and resume while following a recipe",
+      "B. An exercise app that plays videos only before the workout begins",
+      "C. A recipe app that displays only text instructions without interactive options",
+      "D. A music app that requires users to leave the app to view lyrics online"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which app feature best demonstrates a balanced use of media and interactive elements to engage users?",
+    "choices": [
+      "A. An app that automatically plays videos each time users navigate to a new page",
+      "B. An app that displays static images without options for zoom or swipe interactions",
+      "C. An app that provides only text-based information without any visual or interactive elements",
+      "D. An app that integrates media playback with interactive controls, allowing users to navigate and manage content easily"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Sarah is developing an e-commerce app in React Native and needs real-time order updates for users. Which library is best for implementing push notifications?",
+    "choices": [
+      "A. Integrating react-native-push-notification to enable real-time updates",
+      "B. Relying on SMS integration without app-based notifications",
+      "C. Using device-specific settings without React Native integration",
+      "D. Using local notifications limited to in-app alerts only"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "A developer is building an educational app in React Native that needs to display both images and embedded videos for a smooth user experience. Which combination of React Native components should they use?",
+    "choices": [
+      "A. Relying on only text descriptions to keep the app simple and lightweight",
+      "B. Using an image component along with links that open videos in an external app",
+      "C. Using the Image component for images and react-native-video for embedded video playback within the app",
+      "D. Embedding all media links without offline support"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Kathy, a junior mobile app designer, is developing a music streaming app that keeps track of users' playlists and favorite artists. She wants to ensure users can retrieve this information across multiple devices. Which mobile backend service (MBS) function should the app use?",
+    "choices": [
+      "A. User authentication",
+      "B. Server management",
+      "C. Push notifications",
+      "D. Cloud databases"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which Mobile Backend-as-a-Service (MBaaS) platform offers advanced integration capabilities through APIs, allowing enterprise-grade applications to connect with various data sources easily?",
+    "choices": [
+      "A. Progress Kinvey",
+      "B. Amazon Web Services (AWS) Amplify",
+      "C. Heroku",
+      "D. Backendless"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Carlos is a software executive at Hunger Warriors, a food delivery app. He wants to handle specific functions independently to scale the app's order-processing feature during peak hours without affecting other services like user authentication and menu browsing. Which backend deployment strategy will best support this approach?",
+    "choices": [
+      "A. Serverless architecture",
+      "B. Load balancing",
+      "C. Microservices architecture",
+      "D. Single server deployment"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which characteristic of WebSockets allows the client and server to send and receive messages simultaneously?",
+    "choices": [
+      "A. Lightweight messages",
+      "B. Low latency",
+      "C. Persistent connections",
+      "D. Full-duplex communication"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "You're developing a mobile fitness app that stores user workout data and preferences. You want to ensure the app remains functional even when users are offline, providing quick access to their data. Which feature of embedded databases should you prioritize?",
+    "choices": [
+      "A. Enhanced performance",
+      "B. Lightweight design",
+      "C. Ease of use",
+      "D. Local storage"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "A junior mobile app developer is building a contact management app that allows users to store and manage their contacts. He wants to implement functionality that enables users to add new contacts, view existing ones, update details, and remove contacts when necessary. Which CRUD operation should Alex focus on to allow users to retrieve the stored contacts?",
+    "choices": [
+      "A. Create",
+      "B. Update",
+      "C. Delete",
+      "D. Read"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Sarah, a mobile app developer, is creating a travel itinerary application that needs to allow users to access their saved itineraries from any device. She understands the importance of remote databases for managing this feature but is concerned about the dependency on internet connectivity. What is the key advantage of using a remote database for Sarah's app?",
+    "choices": [
+      "A. Local storage",
+      "B. Lower costs",
+      "C. Reduced complexity",
+      "D. Global accessibility"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "David is developing a travel booking app that connects to a remote database to manage flight schedules. He wants to minimize costs while ensuring seamless user experience and real-time updates. Which approach should David prioritize for optimal efficiency in managing data for his app?",
+    "choices": [
+      "A. Utilizing remote databases",
+      "B. Storing all data locally",
+      "C. Implementing heavy data caching",
+      "D. Using only WebSockets"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You are developing a mobile app and want to ensure that you can identify and fix any crashes or errors users might encounter in real time. Which Firebase feature should you implement to achieve this?",
+    "choices": [
+      "A. Firebase Analytics",
+      "B. Crashlytics",
+      "C. Cloud Functions",
+      "D. Real-time database"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "You are developing a Flutter app that requires user authentication and real-time data updates. Which Firebase service will you primarily rely on to ensure that user sign-up is secure and that the app's data syncs seamlessly across devices?",
+    "choices": [
+      "A. Firebase Crashlytics and Firebase Hosting",
+      "B. Firebase Cloud Messaging and Cloud Storage",
+      "C. Firebase Authentication and Cloud Firestore",
+      "D. Firebase Analytics and Firebase Performance Monitoring"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Sophia is preparing to launch her new fitness app on the app stores. She knows that visuals play a crucial role in attracting users. What critical asset should she focus on to effectively convey her app's features and engage potential users?",
+    "choices": [
+      "A. A promotional video showcasing app features",
+      "B. A long list of app features in text format",
+      "C. High-quality screenshots of the app in use",
+      "D. A comprehensive user manual"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Mark is in the process of designing the assets for his newly developed educational app. Which approach should he take to ensure his app store listing stands out and effectively communicates its value?",
+    "choices": [
+      "A. Include as many keywords as possible in the app title",
+      "B. Focus solely on the technical specifications of the app",
+      "C. Use generic images and vague descriptions",
+      "D. Create visually appealing graphics and write compelling descriptions"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Alex has completed his mobile app but needs to prepare it for submission to the app stores. Which essential task should he prioritize to ensure a smooth upload process?",
+    "choices": [
+      "A. Prepare a marketing plan for post-launch promotion",
+      "B. Create user documentation for the app",
+      "C. Design a logo for the app",
+      "D. Conduct thorough testing to fix any bugs and improve performance"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "John is ready to submit his first app to the App Store but realizes he needs to set up his Apple Developer account first. What information is mandatory for him to provide while setting up the developer account?",
+    "choices": [
+      "A. A marketing strategy for the app",
+      "B. An extensive portfolio of his previous apps",
+      "C. A detailed project proposal for his app",
+      "D. A payment method to pay the annual membership fee"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Lisa is preparing to publish her app and needs to ensure she follows all necessary steps. What critical step should she remember when choosing the release type for her app on the Google Play Store?",
+    "choices": [
+      "A. Submitting the app for review without preparing a marketing strategy",
+      "B. Only choosing the beta release to gather feedback from a small audience",
+      "C. Selecting the production release without any prior testing",
+      "D. Thoroughly testing the app before selecting the production release option"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "After launching your travel app, you notice it is struggling to appear in search results on app stores. What key app store optimization element should you prioritize to enhance your app's visibility?",
+    "choices": [
+      "A. Incorporating relevant keywords in your app description.",
+      "B. Offering frequent app updates.",
+      "C. Adding high-resolution images of app features.",
+      "D. Encouraging user reviews and ratings."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "After analyzing user engagement metrics, a developer discovers that users are losing interest in the app due to infrequent updates. What strategy would best help keep users engaged and informed about new features?",
+    "choices": [
+      "A. Only updating the app based on user complaints.",
+      "B. Providing detailed update notes highlighting new features and improvements.",
+      "C. Minimizing the number of updates to avoid overwhelming users.",
+      "D. Releasing updates without prior notification to surprise users."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "A travel app is experiencing an influx of user complaints regarding issues with the latest update. Which customer support tool would be most beneficial for monitoring user feedback and addressing concerns directly within the app?",
+    "choices": [
+      "A. Social media platforms",
+      "B. Phone support lines",
+      "C. Email support systems",
+      "D. In-app feedback tools"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "A development team is preparing to integrate an in-app feedback tool into your mobile app to enhance user support. Which technical consideration should be prioritized to ensure user feedback is captured effectively and can be analyzed for future updates?",
+    "choices": [
+      "A. Prioritize the speed of response over data collection capabilities.",
+      "B. Limit the feedback options to only binary responses.",
+      "C. Focus on the design of the feedback interface for aesthetic appeal.",
+      "D. Implement a robust analytics framework to track user interactions with the feedback tool."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "The support team of a newly launched e-commerce app notices that users frequently report issues with app performance. Which customer support tool should they integrate to gather immediate feedback directly from users within the app?",
+    "choices": [
+      "A. In-app feedback tools",
+      "B. Forums",
+      "C. Email support",
+      "D. Social media"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Liam is developing a weather app and wants to ensure users receive updates on severe weather conditions. Which of the following notification approaches best achieves this?",
+    "choices": [
+      "A. Sending real-time push notifications for severe weather alerts",
+      "B. Using silent notifications that update in the background",
+      "C. Sending weekly weather summaries",
+      "D. Only notifying users when the app is open"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which type of notification is most effective for a social media app to engage users when they receive a new message?",
+    "choices": [
+      "A. Sending silent notifications for all user interactions",
+      "B. Sending push notifications that alert users to specific actions, like new messages",
+      "C. Sending weekly summaries of user activity",
+      "D. Sending general notifications about app usage"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Ava, a fitness app product manager, wants to use notifications to encourage daily exercise. Which strategy would best support this goal?",
+    "choices": [
+      "A. Sending notifications for new features and app updates",
+      "B. Sending weekly summaries of exercise trends and progress",
+      "C. Sending reminders to complete daily goals based on user preferences",
+      "D. Sending reminders as per users' preferred workout times to encourage daily exercise"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which feature in mobile design helps prioritize user needs by organizing content in a clear and structured way?",
+    "choices": [
+      "A. Establishing a visual hierarchy to guide users to important elements",
+      "B. Using subtle animations to enhance engagement on each page",
+      "C. Using small icons to save space",
+      "D. Applying high-contrast colors for all elements"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Jacob, an app designer, is designing a shopping app and wants to let users know when items they saved go on sale. Which notification type is most effective for this purpose?",
+    "choices": [
+      "A. Monthly emails summarizing new sales",
+      "B. Silent notifications updating in the background",
+      "C. In-app alerts only when users open the app",
+      "D. Push notifications that alert users about specific sales"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "In mobile app development, which back-end service is essential for enabling real-time updates to users without requiring them to refresh the app manually?",
+    "choices": [
+      "A. Data encryption",
+      "B. WebSocket connections",
+      "C. Load balancing",
+      "D. Polling mechanisms"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Maya, a social media app developer, wants to store user-generated content in the cloud for easy access across devices. Which feature best supports this?",
+    "choices": [
+      "A. Setting up in-app storage for each session",
+      "B. Storing data in cloud databases for cross-device access",
+      "C. Using push notifications to alert users of content updates",
+      "D. Using local storage on each device"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What advantage does a cloud back-end service offer for a task management app?",
+    "choices": [
+      "A. Allows data to be accessed and synchronized across multiple devices",
+      "B. Reduces the need for user authentication",
+      "C. Limits app access to only one device at a time",
+      "D. Eliminates the need for a secure connection"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which back-end service approach is most effective for ensuring data consistency across multiple devices in a collaborative app?",
+    "choices": [
+      "A. Synchronizing data through a centralized real-time database",
+      "B. Storing data on the user's device for offline access",
+      "C. Using data caching to store local copies of user data",
+      "D. Implementing a version control system for user data"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Sophia, an app developer, is creating a habit-tracking app and wants users to be notified in real time when they complete a task. Which feature would best support this goal?",
+    "choices": [
+      "A. Using WebSockets for real-time task completion updates",
+      "B. Sending weekly email summaries of user progress",
+      "C. Using local storage to save data only on each device",
+      "D. Setting up batch processing for notifications at the end of each day"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Jake is preparing to publish an app on the Google Play Store. What should he include in the app submission to ensure approval?",
+    "choices": [
+      "A. A detailed privacy policy along with app screenshots and descriptions",
+      "B. Only the app's APK file without any documentation",
+      "C. A list of app dependencies only",
+      "D. Source code of the app for review by the Play Store team"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is essential when preparing an iOS app for publication?",
+    "choices": [
+      "A. Using only device-specific features to attract users",
+      "B. Including only high-resolution images without app metadata",
+      "C. Submitting the app without a privacy policy if it doesn't collect user data",
+      "D. Ensuring the app meets Apple's guidelines for user privacy and security"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Karen is launching a customer support tool for her e-commerce app. Which feature would best enhance user satisfaction?",
+    "choices": [
+      "A. Relying solely on user-generated forums for support",
+      "B. Using automated responses for every query without human support",
+      "C. Using email support only with a 48-hour response time",
+      "D. Offering a mix of live chat support and automated responses for quick issue resolution"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which aspect is most critical when preparing an app for Android publishing to ensure it reaches a wide audience?",
+    "choices": [
+      "A. Making the app available in a single language",
+      "B. Releasing the app only in the Play Store's beta program",
+      "C. Disabling all analytics for better performance",
+      "D. Optimizing the app for different devices and screen sizes"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is the best practice for providing updates and support after an app is published?",
+    "choices": [
+      "A. Releasing updates only when users report major bugs",
+      "B. Regularly updating the app with new features and bug fixes based on user feedback",
+      "C. Ignoring user reviews until a major version is released",
+      "D. Releasing an entirely new app version for every small update"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Sarah is preparing a Flutter app for a global release. Which principle should she consider to ensure a smooth launch?",
+    "choices": [
+      "A. Relying on English for all app content",
+      "B. Ensuring compliance with guidelines for both iOS and Android platforms",
+      "C. Optimizing for iOS devices",
+      "D. Disabling localization to simplify content"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which approach aligns with the best practice for sustaining engagement in a React Native app after publication?",
+    "choices": [
+      "A. Ignoring analytics data and relying solely on initial feedback",
+      "B. Focusing solely on app performance metrics without user feedback",
+      "C. Releasing major updates only annually",
+      "D. Using analytics data to understand user behavior and improve the app over time"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which key concept is critical when releasing a React Native app to both iOS and Android stores?",
+    "choices": [
+      "A. Ensuring the app meets both Apple's and Google's publishing requirements",
+      "B. Prioritizing compatibility with the most commonly used devices on each platform",
+      "C. Optimizing the app to perform well across a range of Android devices",
+      "D. Testing the app on devices from each major manufacturer"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "John wants his Flutter app to reach a wide audience on the Google Play Store. Which strategy best supports this goal?",
+    "choices": [
+      "A. Focusing on app performance optimization for low-end devices",
+      "B. Releasing the app in beta to gather user feedback before a global launch",
+      "C. Limiting the app's release to regions with the highest smartphone usage",
+      "D. Optimizing app metadata and keywords to improve search visibility"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "How does leveraging Google Analytics after app publication contribute to success?",
+    "choices": [
+      "A. It provides download counts without user engagement details.",
+      "B. It tracks geographic data for user demographics.",
+      "C. It offers insights into user behavior, helping to refine user flows and improve retention.",
+      "D. It discourages regular updates by focusing on long-term metrics."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "A developer is preparing their Flutter app for release on the App Store. To complete the process, they need to configure the app's metadata and permissions. Which file should the developer edit to specify iOS app permissions, such as camera and location access?",
+    "choices": [
+      "A. AndroidManifest.xml",
+      "B. build.gradle",
+      "C. Info.plist",
+      "D. pubspec.yaml"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "After preparing their app for publication, a Flutter development team must finalize its configuration in the pubspec.yaml file before publishing. The file contains all dependencies, assets, and package versions that the app requires. What should the team focus on to ensure the app is correctly prepared for users?",
+    "choices": [
+      "A. Rename the file to match the app's package name",
+      "B. Remove pubspec.yaml entirely and replace it with a manifest.json file",
+      "C. Add any remaining images, fonts, or files to the assets section of pubspec.yaml",
+      "D. Change the file's format to JSON for compatibility with Android"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "A development team is preparing to release their Flutter app on Google Play and needs to ensure it meets Android's requirements for Android Package Kit (APK) files. Which action will help them avoid potential issues during the upload process?",
+    "choices": [
+      "A. Compile the app directly into an AAB file instead of APK for initial testing",
+      "B. Add all user data storage requirements to pubspec.yaml",
+      "C. Sign the APK file with a unique key to verify the app's authenticity on the Play Store",
+      "D. Use multiple unsigned APK versions for staging and testing"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "A marketing analyst wants to monitor user behavior after launching a new feature in the company's mobile app. They decide to integrate Google Analytics for real-time insights. Which metric should they focus on to see if users engage with the new feature as expected?",
+    "choices": [
+      "A. Behavior flow to understand all age groups interested in the feature",
+      "B. Retention rate to track immediate campaign success",
+      "C. Conversion tracking to monitor how many users engage with the new feature",
+      "D. Custom tagging with Google Tag Manager before adding Firebase analytics"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "A Flutter app development team has completed their app and is ready to prepare it for publishing. Before they proceed, they decide to review the entire project in the Flutter Console for potential improvements and clean up unnecessary code. They also want to optimize the app's assets and reduce its size to ensure faster downloads for end users. Which of the following should they prioritize when preparing the app for publishing?",
+    "choices": [
+      "A. Adjust backend configurations and prepare API documentation",
+      "B. Directly submit the app to both stores without adjustments",
+      "C. Review code for unused imports and optimize image assets",
+      "D. Integrate Firebase analytics before any cleanup steps"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Imagine you are an app developer whose company has asked you to prepare for the app launch on the Google Play Store. Which critical piece of information do you need to include in the store listing?",
+    "choices": [
+      "A. App development timeline",
+      "B. App background music",
+      "C. App name",
+      "D. App source code"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Angela is an app developer at XYZ Corp. Her organization is launching a React Native app on iOS, and the team is discussing the EAS Submission process. What is the primary purpose of the eas.json file in this context?",
+    "choices": [
+      "A. To manage user data privacy",
+      "B. To store app marketing materials",
+      "C. To document code changes",
+      "D. To configure submission parameters for the app"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Imagine you are a lead developer preparing a React Native app for release. You need to ensure that the app meets the required standards before submission to the app stores. What is one essential step you should take to verify that the app is functioning correctly across different devices and screen sizes?",
+    "choices": [
+      "A. Conduct a code review with your team",
+      "B. Run extensive testing on physical devices and emulators",
+      "C. Focus solely on the design elements of the app",
+      "D. Prepare marketing materials for the app launch"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Imagine you are preparing to submit your React Native app to the Google Play Store. What is the significance of the version code in the app's build.gradle file?",
+    "choices": [
+      "A. It affects the app's performance on devices.",
+      "B. It uniquely identifies each release of the app.",
+      "C. It determines the app's user interface design.",
+      "D. It increases the app's security features."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following tool is used to upload apps developed in Expo to the App Store using Transporter?",
+    "choices": [
+      "A. Xcode",
+      "B. React Native CLI",
+      "C. Android Studio",
+      "D. EAS CLI"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following values should \"Repository visibility\" be set to?",
+    "choices": [
+      "A. Public",
+      "B. Encrypted",
+      "C. Temporary",
+      "D. Private"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You are creating a user story on GitHub. What is the format of the text file typically used to store user stories and showcase application features on GitHub?",
+    "choices": [
+      "A. Logfile",
+      "B. Codebase",
+      "C. TaskList",
+      "D. Markdown"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "The user stories for the detailed screen discuss two tabs. Which of the following are they?",
+    "choices": [
+      "A. Overview and FAQ",
+      "B. About and Instructions",
+      "C. Data and Configuration",
+      "D. Features and Resources"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following icon does the lab use to represent Favorite items?",
+    "choices": [
+      "A. Star",
+      "B. Heart",
+      "C. Pin",
+      "D. Bookmark"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "How does the Theme section in Settings help change the app's appearance?",
+    "choices": [
+      "A. Adding animations to buttons",
+      "B. A toggle for enabling dark mode",
+      "C. Adjusting font sizes dynamically",
+      "D. Switching the app's background color"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following best describes the use of Figma in the labs?",
+    "choices": [
+      "A. To manage database schemas",
+      "B. To test the app's performance",
+      "C. To write backend code for the app",
+      "D. To create wireframes for the screens"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following are the placeholders required for the login page?",
+    "choices": [
+      "A. Email and password",
+      "B. Security question and answer",
+      "C. Username and date of birth",
+      "D. Full name and contact number"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following can be used to view a scrollable list of meditation recommendations?",
+    "choices": [
+      "A. Drop-down menu",
+      "B. Modal window",
+      "C. Grid layout",
+      "D. Horizontal list design"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Where will the proposed welcome message appear with the user's name in the app?",
+    "choices": [
+      "A. Login page",
+      "B. Settings screen",
+      "C. Notifications panel",
+      "D. Home screen"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is used to view the \"About\" or \"Instructions\" tabs for a specific meditation?",
+    "choices": [
+      "A. Drop-down menu",
+      "B. Navigation buttons",
+      "C. Settings tab",
+      "D. Floating action button"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which are the four fields recommended in the user story for account registration?",
+    "choices": [
+      "A. Features, About, Name, and Resources",
+      "B. Name, Username, Age, and Country",
+      "C. About, Name, Age, and Instructions",
+      "D. Data, Name, Age, and Configuration"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following values should \"Repository visibility\" be set to?",
+    "choices": [
+      "A. Public",
+      "B. Private",
+      "C. Encrypted",
+      "D. Temporary"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is triaging in the context of the user stories?",
+    "choices": [
+      "A. Assigning user stories to specific team members",
+      "B. Writing detailed descriptions for each user story",
+      "C. Estimating the time required for each user story",
+      "D. Prioritizing and organizing user stories based on their importance and readiness for development"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Where will the personalized welcome message appear in the app?",
+    "choices": [
+      "A. Notifications panel",
+      "B. Home page",
+      "C. Login page",
+      "D. Settings screen"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Why is it recommended to use frames instead of pages to represent each screen?",
+    "choices": [
+      "A. Since pages do not support adding interactive elements",
+      "B. Since the free version of Figma has a limit on the number of pages",
+      "C. Because frames can only be used for web design",
+      "D. To ensure each screen is displayed in 3D for better visualization"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What recommendations should used as placeholders for images, text, and buttons?",
+    "choices": [
+      "A. Icons and logos",
+      "B. Rectangles and simple shapes",
+      "C. Help and support",
+      "D. Account details"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "When creating UX wireframes in Figma, how should you represent each screen of your mobile app (e.g., Login, Home, Menu)?",
+    "choices": [
+      "A. Use overlapping frames for better visualization",
+      "B. Use layers instead of frames for each screen",
+      "C. Use separate frames for each screen",
+      "D. Use a single frame for all screens"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What is Figma used for in the context of the Flutter project?",
+    "choices": [
+      "A. To test the app's performance",
+      "B. To manage database schemas",
+      "C. To write backend code for the app",
+      "D. To create wireframes for the screens"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "You are creating a user story on GitHub. What is the format of the text file typically used to store user stories and showcase application features on GitHub?",
+    "choices": [
+      "A. Markdown",
+      "B. Codebase",
+      "C. Logfile",
+      "D. TaskList"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the recommended use of a floating action button (FAB) in a habit-tracking app when the list is empty?",
+    "choices": [
+      "A. Add new habits",
+      "B. Refresh the app's homepage",
+      "C. Navigate to the app's settings",
+      "D. Display a tutorial video about habits"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is a widget that require a immutable state?",
+    "choices": [
+      "A. StatelessWidget",
+      "B. ContainerWidget",
+      "C. StatefulWidget",
+      "D. DynamicWidget"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following best describes the purpose of SingleChildScrollView?",
+    "choices": [
+      "A. Allows a single widget to be scrollable",
+      "B. Provides lazy-loading of list items",
+      "C. Used to manage animations for UI transitions",
+      "D. Aligns multiple widgets horizontally"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following function perform _usernameController and _passwordController?",
+    "choices": [
+      "A. Dynamically notify any listeners of changes to username and password text fields",
+      "B. Display error messages if fields are left blank",
+      "C. Automatically encrypt the username and password for security",
+      "D. Manage user authentication directly within the app"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following extends the StatefulWidget to build the registration page?",
+    "choices": [
+      "A. RegisterForm",
+      "B. StatefulBuilder",
+      "C. RegistrationHelper",
+      "D. RegisterScreen"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following displays toast messages?",
+    "choices": [
+      "A. toastify_flutter",
+      "B. fluttertoast",
+      "C. snackbar_package",
+      "D. flutteralerts"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "How is Scaffold useful while building a Flutter app?",
+    "choices": [
+      "A. Manages app state across different widgets automatically",
+      "B. Acts as a back-end server to handle API requests",
+      "C. Provides a framework for implementing material design layouts",
+      "D. Provides a default style for all text widgets in the app"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is used to add gradients or background colors to widgets?",
+    "choices": [
+      "A. ClipRect",
+      "B. Decoration",
+      "C. Alignment",
+      "D. Padding"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "What does ListView do?",
+    "choices": [
+      "A. Handles user authentication",
+      "B. Displays messages on the screen",
+      "C. Manages the app's state",
+      "D. Handles network requests"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following stores the list of available colors?",
+    "choices": [
+      "A. _habitColors",
+      "B. availableColors",
+      "C. colorList",
+      "D. colorArray"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is a method in Navigator that replaces the current route with a new one?",
+    "choices": [
+      "A. push()",
+      "B. pop()",
+      "C. pushReplacement()",
+      "D. pushAndRemoveUntil()"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following explains best about APIs?",
+    "choices": [
+      "A. A database for storing application data",
+      "B. startup.js",
+      "C. A set of protocols that allow different applications to communicate with each other.",
+      "D. index.html"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following best describes the purpose of the REST Countries API?",
+    "choices": [
+      "A. Retrieves a list of countries, including names, codes, languages, and currencies in JSON format",
+      "B. Converts currency values between countries",
+      "C. Generates random country names",
+      "D. Retrieves a list of continents"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What does the fetchCountries function use the async and await keywords for?",
+    "choices": [
+      "A. It uses the async and await keywords to call functions without waiting for execution.",
+      "B. It uses the async keyword to perform asynchronous tasks and the await keyword to wait for the HTTP request to complete.",
+      "C. It uses the async and await keywords to perform synchronous tasks faster.",
+      "D. It uses the async and await keywords to pause the function indefinitely until it receives user input."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is a collection data type in Dart used to store multiple values?",
+    "choices": [
+      "A. List",
+      "B. DataStore",
+      "C. KeyPair",
+      "D. MapWidget"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What browser tool or section should you open to confirm the successful API call?",
+    "choices": [
+      "A. Console Editor",
+      "B. Extension Manager",
+      "C. Developer Tools",
+      "D. Style Inspector"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following uses a platform-specific animation to transition between screens?",
+    "choices": [
+      "A. MaterialPageRoute",
+      "B. TransitionWidget",
+      "C. AnimationHandler",
+      "D. ScreenTransitionManager"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is a widget used to indicate loading or progress?",
+    "choices": [
+      "A. LoadingBar",
+      "B. CircularProgressIndicator",
+      "C. ProgressWidget",
+      "D. ProgressLoaderWidget"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Why is storing user credentials in local storage highly discouraged in real-world applications?",
+    "choices": [
+      "A. Local storage restricts JSON data.",
+      "B. Local storage automatically deletes data after a session ends.",
+      "C. Local storage causes performance issues.",
+      "D. Local storage is insecure and is open to potential attacks."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is imported to convert objects into JSON?",
+    "choices": [
+      "A. dart:convert",
+      "B. dart:jsonify",
+      "C. dart:transform",
+      "D. json:dart"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements about SharedPreferences in Flutter is correct?",
+    "choices": [
+      "A. SharedPreferences supports storing key-value pairs for persistent data.",
+      "B. SharedPreferences stores data in a local database.",
+      "C. SharedPreferences data is deleted when the app is closed.",
+      "D. SharedPreferences is used for managing complex relational data."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What will happen if AsyncStorage.getItem throws an error in the loadFavorites function?",
+    "choices": [
+      "A. The function remains as is",
+      "B. The favorites array will have favorite exercises empty",
+      "C. An error message will be logged in the console",
+      "D. The app will crash"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is the purpose of the ActivityIndicator in the component?",
+    "choices": [
+      "A. To display a spinner while loading favorite items",
+      "B. To indicate network connectivity",
+      "C. To show errors if favorites fail to load",
+      "D. To refresh the list of items"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following will be displayed when no favorite items are found?",
+    "choices": [
+      "A. A \"No favorite items found\" text",
+      "B. Nothing is displayed",
+      "C. A default list of items",
+      "D. An error message"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Identify the reason for using useFocusEffect instead of useEffect.",
+    "choices": [
+      "A. It is more efficient for fetching API data.",
+      "B. It prevents unnecessary re-renders.",
+      "C. It ensures the loadFavorites function runs every time the screen is focused.",
+      "D. It ensures the screen reloads the data only once after the app is launched."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following best describes the purpose of using AsyncStorage in the Favourites component?",
+    "choices": [
+      "A. To fetch data from an API",
+      "B. To store temporary data for the session",
+      "C. To manage app navigation state",
+      "D. To persist user data locally across app sessions"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is the primary purpose of the fetch function in JavaScript?",
+    "choices": [
+      "A. To define reusable styles in JavaScript",
+      "B. To execute server-side operations.",
+      "C. To render UI components dynamically",
+      "D. To make asynchronous HTTP requests to retrieve data from a URL"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What does the response.json() method do in the fetchQuote function?",
+    "choices": [
+      "A. Converts the HTTP response into a JavaScript object for easier manipulation.",
+      "B. Renders JSON content directly to the screen",
+      "C. Fetches only JSON responses from the API",
+      "D. Sends JSON data to the API server."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following best describes the purpose of the console.error('Error fetching quote:', response.status) in the code?",
+    "choices": [
+      "A. To display a success message in case the API request succeeds.",
+      "B. To prevent the application from crashing during an error",
+      "C. To log the fetched quote to the console.",
+      "D. To debug by logging an error message if the API response status indicates an issue."
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following statements is true about response.status?",
+    "choices": [
+      "A. It is used to fetch JSON content from the API.",
+      "B. It is a method that sends data back to the server",
+      "C. It is a property that contains the HTTP status code of the response.",
+      "D. It represents the content length of the response."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "If the API URL is incorrect, what would the DailyQuote component do?",
+    "choices": [
+      "A. Display a \"No Internet Connection\" message.",
+      "B. Crash the app immediately.",
+      "C. Log an error message to the console.",
+      "D. Display a default quote."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What is the purpose of the onTap property in a ListTile within a Flutter Drawer?",
+    "choices": [
+      "A. To align the content of the ListTile",
+      "B. To specify the action when the ListTile is tapped",
+      "C. To create a toggle effect within the Drawer",
+      "D. To persist navigation settings for the user"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which widget is commonly used to display a vertical list of navigation options in a Flutter Drawer?",
+    "choices": [
+      "A. ListView",
+      "B. GridView",
+      "C. Column",
+      "D. SwitchListTile"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the purpose of the DrawerHeader in a Flutter Drawer?",
+    "choices": [
+      "A. To manage user authentication directly",
+      "B. To provide a scrollable area within the Drawer",
+      "C. To dynamically update the list of options in the Drawer",
+      "D. To display a fixed header for the Drawer"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which method in the Navigator class removes the current screen and navigates to a new one?",
+    "choices": [
+      "A. push()",
+      "B. pushReplacement()",
+      "C. pushAndRemoveUntil()",
+      "D. pop()"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "How can you pass data back from a navigated screen in Flutter?",
+    "choices": [
+      "A. By directly modifying the widget tree",
+      "B. Storing data in local storage",
+      "C. Using the setState() method",
+      "D. Using the Navigator.pop(context, result) method"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "How can you dynamically toggle a setting, such as enabling notifications in a ListTile?",
+    "choices": [
+      "A. By using a SwitchListTile and updating its state with onChanged",
+      "B. By wrapping the ListTile in a FutureBuilder",
+      "C. By using a TextField within the ListTile",
+      "D. By implementing a custom widget for each toggle"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is a common use case for a FutureBuilder in Flutter?",
+    "choices": [
+      "A. To navigate between screens",
+      "B. To persist data locally",
+      "C. To create a scrollable list of options",
+      "D. To build a widget based on asynchronous data"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following allows users to select one option from a dropdown list in Flutter?",
+    "choices": [
+      "A. SwitchListTile",
+      "B. ListView",
+      "C. FilterChip",
+      "D. DropdownButton"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is the purpose of the onChanged callback in a DropdownButton?",
+    "choices": [
+      "A. To navigate to a new screen based on the selected value",
+      "B. To persist the selected value automatically",
+      "C. To add new items to the dropdown list",
+      "D. To update the state variable with the selected value"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which widget is typically used for displaying a labeled input field in a settings screen?",
+    "choices": [
+      "A. ListView",
+      "B. IconButton",
+      "C. Text",
+      "D. TextFormField"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "What is the purpose of the loadUserDetails function in the Settings component?",
+    "choices": [
+      "A. To display default user data on the screen",
+      "B. To fetch user settings from an API",
+      "C. To log out the user",
+      "D. To retrieve user details stored locally using AsyncStorag"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is the functionality of the TouchableOpacity component in the settings menu?",
+    "choices": [
+      "A. To add animations to the settings menu",
+      "B. To provide clickable buttons that navigate to specific routes",
+      "C. To display a list of static settings options",
+      "D. To display images and icons in the settings list"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Why is the userDetails state parsed using JSON.parse before displaying the username?",
+    "choices": [
+      "A. To check if the username exists in the object",
+      "B. To convert the user details into a string format",
+      "C. To convert the stored string back into an object",
+      "D. To ensure that the username is displayed in uppercase"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What would happen when the handleLogout function is called?",
+    "choices": [
+      "A. A logout confirmation modal appears",
+      "B. The user details are updated with new values",
+      "C. The userDetails data is cleared from AsyncStorage, and the user is redirected to the login screen",
+      "D. The user is redirected to the \"Favourites\" screen"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "What will happen if settings.map is executed with an empty settings array?",
+    "choices": [
+      "A. Nothing will render on the screen for the settings list",
+      "B. An error will be thrown",
+      "C. A default settings option will be displayed",
+      "D. A message will be displayed saying, \"No settings available.\""
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "What is the purpose of the checkLoginState function in the Layout component?",
+    "choices": [
+      "A. To toggle between dark and light themes",
+      "B. To handle navigation between screens",
+      "C. To load the application fonts",
+      "D. To verify if the user is logged in by checking the AsyncStorage"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is the function of toggleTheme in the ThemeChange component?",
+    "choices": [
+      "A. Toggles the application theme between light and dark modes",
+      "B. Changes the navigation stack",
+      "C. Clears user details from AsyncStorage",
+      "D. Switches between different fonts"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Why is the useTheme hook used in the ThemeChange component?",
+    "choices": [
+      "A. To access and modify the current theme context",
+      "B. To initialize the theme for the app",
+      "C. To create a new theme context dynamically",
+      "D. To store the theme setting in AsyncStorage"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following statements determines the initial route in the Layout component?",
+    "choices": [
+      "A. The selected theme from ThemeProvider",
+      "B. The useFonts hook status",
+      "C. The value of the unstable_settings object",
+      "D. Whether the user is logged in or not"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "In the ThemeChange component, what will happen if the toggleTheme function is called when the current theme is \"light\"?",
+    "choices": [
+      "A. The theme will remain unchanged",
+      "B. The theme will change to \"dark,\" and the UI will update accordingly",
+      "C. The app will crash",
+      "D. The theme state will be reset to \"light\""
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following Flutter widget is best suited for displaying a toggle switch that allows users to enable or disable notifications?",
+    "choices": [
+      "A. Drawer",
+      "B. ListTile",
+      "C. FilterChip",
+      "D. SwitchListTile"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is the first step in implementing notifications in a Flutter app?",
+    "choices": [
+      "A. Run the app",
+      "B. Update the habit tracker screen",
+      "C. Test the app",
+      "D. Create the notifications page"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following Flutter widget would you use to store and retrieve simple user preferences, such as selected habits or notification settings, for persistence?",
+    "choices": [
+      "A. TextEditingController",
+      "B. Slider",
+      "C. StatefulWidget",
+      "D. SharedPreferences"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is used to define permissions and app settings in an iOS app?",
+    "choices": [
+      "A. App Bundle",
+      "B. Launch Screen",
+      "C. Info.plist",
+      "D. Application ID"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is the first step in preparing to publish a Flutter app?",
+    "choices": [
+      "A. Add a splash screen",
+      "B. Add an app icon",
+      "C. Set up Android-specific configuration",
+      "D. Configure iOS-specific settings"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following refers to the tools used to store notification settings and preferences persistently?",
+    "choices": [
+      "A. State Management",
+      "B. Local Notifications",
+      "C. AsyncStorage/SharedPreferences",
+      "D. Permissions"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following serves as an app's primary visual identifier, displayed both on users' devices and within app stores, and plays a key role in branding?",
+    "choices": [
+      "A. Splash screen",
+      "B. App icon",
+      "C. Promotional video",
+      "D. Screenshots"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is the first step when drafting a marketplace listing for an app?",
+    "choices": [
+      "A. Prepare media assets",
+      "B. Organize files in README.md",
+      "C. Gather required information",
+      "D. Submit the URL of the repository containing your README.md file"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following helps users discover an app during searches in the app store?",
+    "choices": [
+      "A. Marketplace listing",
+      "B. Keywords",
+      "C. App description",
+      "D. App icon"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is a key functionality in implementing the notifications feature for an app using Flutter?",
+    "choices": [
+      "A. Create a feature to set up user profiles for different devices",
+      "B. Add code to integrate a payment gateway",
+      "C. Set up a database to store user preferences permanently",
+      "D. Allow users to enable or disable notifications for the entire app"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following best describes the purpose of the handleAddReminder function in the notification feature?",
+    "choices": [
+      "A. It adds a new reminder after performing necessary checks and updates the reminders list.",
+      "B. It sends a test notification to verify the notification system works.",
+      "C. It triggers the notification immediately without any checks.",
+      "D. It stores the reminder in a database for permanent storage."
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is the primary purpose of the scheduleNotification function in the notification feature?",
+    "choices": [
+      "A. It checks if notifications are enabled in the user's device settings.",
+      "B. It adds a new reminder to the reminder list.",
+      "C. It schedules a notification based on the reminder's trigger date and sends a reminder notification.",
+      "D. It stores the reminder data in a cloud database for future use."
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is the correct way to ensure proper versioning and unique identification for your Android app when preparing for submission on the Google Play Store?",
+    "choices": [
+      "A. Set the android.package field to the default package name provided by Expo, and leave versionCode unchanged for all releases.",
+      "B. Set the android.package field to a unique identifier and increment the versionCode with each release.",
+      "C. Set the android.package field to any name and set versionCode to 0 for every release.",
+      "D. Use a random string for the android.package field and reset versionCode with each release."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is the primary function of the deleteReminder function in the notification feature?",
+    "choices": [
+      "A. It checks if a reminder's trigger time is valid before deleting it.",
+      "B. It removes a reminder from the list by its ID, updates AsyncStorage, and reflects the changes in the UI.",
+      "C. It schedules a notification for a new reminder based on the trigger date.",
+      "D. It adds a new reminder to the list and saves it in AsyncStorage."
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following steps helps optimize the performance of a React Native Expo app for production?",
+    "choices": [
+      "A. Using expo-optimize to compress and reduce the size of assets",
+      "B. Enabling development mode to allow for quick debugging during deployment",
+      "C. Keeping all unused dependencies in the app to ensure future flexibility",
+      "D. Disabling Hermes to ensure compatibility with all devices"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following serves as the primary visual identifier for an app, displayed both on user' devices and within app stores, and plays a key role in branding?",
+    "choices": [
+      "A. Splash screen",
+      "B. Screenshots",
+      "C. App icon",
+      "D. Promotional video"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following refers to the tools used to store notification settings and preferences persistently?",
+    "choices": [
+      "A. State management",
+      "B. AsyncStorage/SharedPreferences",
+      "C. Permissions",
+      "D. Local notifications"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following helps users discover an app during searches in the app store?",
+    "choices": [
+      "A. Keywords",
+      "B. App description",
+      "C. Marketplace listing",
+      "D. App icon"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following is the first step when drafting a marketplace listing for an app?",
+    "choices": [
+      "A. Submit the URL of the repository containing your README.md file",
+      "B. Gather Required Information",
+      "C. Prepare media assets",
+      "D. Organize Files in README.md"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is the correct sequence of steps to implement alerts in React Native for notifications?",
+    "choices": [
+      "A. Request permissions, install required libraries, build UI for notification settings, schedule notifications, and test notifications",
+      "B. Install required libraries, build UI for notification settings, schedule notifications, request permissions, and test notifications",
+      "C. Install required libraries, request permissions, schedule notifications, test notifications, and build UI for notification settings",
+      "D. Install required libraries, request permissions, build UI for notification settings, schedule notifications, and test notifications"
+    ],
+    "answer": "D"
   }
 ]
