@@ -20,6 +20,9 @@ export default function AppChrome({ children }: AppChromeProps) {
   const isAdminRoute = pathname?.startsWith("/admin");
   const isMLN111Route = pathname?.startsWith("/resources/MLN111");
   const isMLN122Route = pathname?.startsWith("/resources/MLN122");
+  const isPRM393Route = pathname?.startsWith("/resources/PRM393");
+  const hideChrome =
+    isAdminRoute || isMLN111Route || isMLN122Route || isPRM393Route;
   const showHelpWidget =
     pathname === "/" ||
     pathname === "/feedback" ||
@@ -28,10 +31,10 @@ export default function AppChrome({ children }: AppChromeProps) {
 
   return (
     <>
-      {!isAdminRoute && !isMLN111Route && !isMLN122Route && <Navbar />}
+      {!hideChrome && <Navbar />}
       <main className="flex-1">{children}</main>
-      {!isAdminRoute && !isMLN111Route && !isMLN122Route && showHelpWidget && <HelpChatWidget />}
-      {!isAdminRoute && !isMLN111Route && !isMLN122Route && <Footer />}
+      {!hideChrome && showHelpWidget && <HelpChatWidget />}
+      {!hideChrome && <Footer />}
     </>
   );
 }
