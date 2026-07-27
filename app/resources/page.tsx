@@ -121,6 +121,18 @@ function ResourcesPageContent() {
         "Game pixel mô phỏng địa tô tư bản chủ nghĩa: thuê đất, sản xuất và thu tô",
       link: "/resources/MLN122",
     },
+    {
+      id: 9,
+      title: "PRM393 - Mobile Programming",
+      category: "Kỹ thuật phần mềm",
+      type: "Quiz",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "96 câu hỏi luyện tập Flutter, Dart, BLoC, API, authentication và testing",
+      link: "/resources/PRM393",
+    },
   ];
 
   const resourceIds = useMemo(
@@ -197,7 +209,7 @@ function ResourcesPageContent() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật, SWD392, PMG201c, SYB302c và MLN
+            Giáo trình Tiếng Nhật, SWD392, PRM393, PMG201c, SYB302c và MLN
           </p>
         </motion.div>
 

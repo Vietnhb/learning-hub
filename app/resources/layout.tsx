@@ -38,13 +38,19 @@ const itemListJsonLd = {
       name: "PMG201c - Project Management Quiz",
       url: `${siteUrl}/resources/PMG201c`,
     },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "PRM393 - Mobile Programming Quiz",
+      url: `${siteUrl}/resources/PRM393`,
+    },
   ],
 };
 
 export const metadata: Metadata = {
   title: "Learning Hub",
   description:
-    "Resource hub for FPT Source (FPT SRC), JPD316, JPD326, SWD392 and PMG201c practice content.",
+    "Resource hub for FPT Source, JPD316, JPD326, SWD392, PMG201c and PRM393 practice content.",
   keywords: [
     "fpt source",
     "fpt src",
@@ -53,6 +59,7 @@ export const metadata: Metadata = {
     "jpd326",
     "swd392",
     "pmg201c",
+    "prm393",
     "tai nguyen hoc tap",
   ],
   alternates: {
@@ -61,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Learning Hub",
     description:
-      "Resource hub for FPT Source (FPT SRC), JPD316, JPD326, SWD392 and PMG201c practice content.",
+      "Resource hub for FPT Source, JPD316, JPD326, SWD392, PMG201c and PRM393 practice content.",
     url: "/resources",
     type: "website",
   },
