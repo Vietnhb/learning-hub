@@ -11,6 +11,7 @@ import {
   Code2,
   RefreshCw,
   ShieldCheck,
+  Shuffle,
   Smartphone,
   XCircle,
 } from "lucide-react";
@@ -117,6 +118,24 @@ function parseQuestions(items: QuizQuestion[]): ParsedQuestion[] {
   });
 }
 
+function createQuestionOrder(totalQuestions: number): number[] {
+  return Array.from({ length: totalQuestions }, (_, index) => index);
+}
+
+function shuffleArray<T>(items: readonly T[]): T[] {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+
+  return shuffled;
+}
+
 export default function PRM393Page() {
   const { user, loading } = useAuth();
   const [mode, setMode] = useState<"review" | "quiz">("review");
@@ -126,9 +145,16 @@ export default function PRM393Page() {
   );
   const [submitted, setSubmitted] = useState(false);
 
-  const questions = useMemo(
+  const baseQuestions = useMemo(
     () => parseQuestions(rawQuiz as QuizQuestion[]),
     [],
+  );
+  const [questionOrder, setQuestionOrder] = useState(() =>
+    createQuestionOrder(baseQuestions.length),
+  );
+  const questions = useMemo(
+    () => questionOrder.map((index) => baseQuestions[index]),
+    [baseQuestions, questionOrder],
   );
   const currentQuestion = questions[currentIndex];
   const totalQuestions = questions.length;
@@ -157,17 +183,24 @@ export default function PRM393Page() {
     [questions],
   );
 
-  const startQuiz = () => {
-    setMode("quiz");
+  const resetAttempt = () => {
     setCurrentIndex(0);
     setSelectedAnswers({});
     setSubmitted(false);
   };
 
+  const shuffleQuestions = () => {
+    setQuestionOrder((currentOrder) => shuffleArray(currentOrder));
+    resetAttempt();
+  };
+
+  const startQuiz = () => {
+    setMode("quiz");
+    resetAttempt();
+  };
+
   const resetQuiz = () => {
-    setCurrentIndex(0);
-    setSelectedAnswers({});
-    setSubmitted(false);
+    resetAttempt();
   };
 
   if (loading) {
@@ -283,6 +316,15 @@ export default function PRM393Page() {
                 >
                   <ClipboardCheck className="mr-2 h-4 w-4" />
                   Làm quiz
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={shuffleQuestions}
+                  className="border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-500 hover:bg-cyan-950/40 hover:text-cyan-100"
+                >
+                  <Shuffle className="mr-2 h-4 w-4" />
+                  Xáo câu
                 </Button>
               </CardContent>
             </Card>
