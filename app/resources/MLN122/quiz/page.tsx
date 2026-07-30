@@ -9,6 +9,8 @@ import {
   Check,
   CheckCircle2,
   ChevronLeft,
+  Eye,
+  EyeOff,
   Layers3,
   RefreshCw,
   Shuffle,
@@ -140,6 +142,7 @@ export default function MLN122QuizPage() {
   const [topic, setTopic] = useState(ALL_TOPICS);
   const [seed, setSeed] = useState(122);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showReviewAnswers, setShowReviewAnswers] = useState(true);
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<string, string[]>
   >({});
@@ -346,11 +349,32 @@ export default function MLN122QuizPage() {
                       {currentQuestion.topic}
                     </span>
                   </div>
-                  {currentQuestion.answers.length > 1 && (
-                    <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 dark:bg-blue-400/10 dark:text-blue-300">
-                      Chọn {currentQuestion.answers.length} đáp án
-                    </span>
-                  )}
+                  <div className="flex flex-wrap items-center gap-2">
+                    {currentQuestion.answers.length > 1 && (
+                      <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 dark:bg-blue-400/10 dark:text-blue-300">
+                        Chọn {currentQuestion.answers.length} đáp án
+                      </span>
+                    )}
+                    {mode === "review" && (
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        aria-pressed={showReviewAnswers}
+                        onClick={() =>
+                          setShowReviewAnswers((current) => !current)
+                        }
+                        className="gap-2"
+                      >
+                        {showReviewAnswers ? (
+                          <EyeOff className="h-4 w-4" />
+                        ) : (
+                          <Eye className="h-4 w-4" />
+                        )}
+                        {showReviewAnswers ? "Ẩn đáp án" : "Hiện đáp án"}
+                      </Button>
+                    )}
+                  </div>
                 </div>
 
                 <h2 className="mt-6 text-xl font-black leading-relaxed sm:text-2xl">
@@ -363,7 +387,8 @@ export default function MLN122QuizPage() {
                     const choiceCorrect = currentQuestion.answers.includes(
                       choice.id,
                     );
-                    const reveal = mode === "review" || isChecked;
+                    const reveal =
+                      (mode === "review" && showReviewAnswers) || isChecked;
                     const wrongSelection =
                       reveal && choiceSelected && !choiceCorrect;
 
