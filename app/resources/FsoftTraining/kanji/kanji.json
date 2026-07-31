@@ -6851,6 +6851,109 @@
           ]
         }
       ]
+    },
+    {
+      "id": 58,
+      "title": "Chuẩn - Biến - Nghênh - Bị",
+      "kanji": [
+        {
+          "character": "準",
+          "meaning": "Chuẩn, tiêu chuẩn, căn cứ theo",
+          "onyomi": "ジュン",
+          "kunyomi": "じゅん-じる",
+          "examples": [
+            {
+              "word": "準じる",
+              "reading": "じゅんじる",
+              "meaning": "Làm theo, dựa theo"
+            },
+            {
+              "word": "準備",
+              "reading": "じゅんび",
+              "meaning": "Chuẩn bị"
+            },
+            {
+              "word": "基準",
+              "reading": "きじゅん",
+              "meaning": "Tiêu chuẩn"
+            }
+          ]
+        },
+        {
+          "character": "変",
+          "meaning": "Biến, thay đổi, khác thường",
+          "onyomi": "ヘン",
+          "kunyomi": "か-わる、か-える",
+          "examples": [
+            {
+              "word": "変える",
+              "reading": "かえる",
+              "meaning": "Thay đổi"
+            },
+            {
+              "word": "大変",
+              "reading": "たいへん",
+              "meaning": "Vất vả, nghiêm trọng"
+            },
+            {
+              "word": "変な",
+              "reading": "へんな",
+              "meaning": "Kỳ lạ"
+            },
+            {
+              "word": "変更",
+              "reading": "へんこう",
+              "meaning": "Sự thay đổi, sửa đổi"
+            }
+          ]
+        },
+        {
+          "character": "迎",
+          "meaning": "Nghênh, đón, chào đón",
+          "onyomi": "ゲイ",
+          "kunyomi": "むか-える",
+          "examples": [
+            {
+              "word": "迎える",
+              "reading": "むかえる",
+              "meaning": "Đón, chào đón"
+            },
+            {
+              "word": "歓迎",
+              "reading": "かんげい",
+              "meaning": "Hoan nghênh, chào đón"
+            },
+            {
+              "word": "出迎え",
+              "reading": "でむかえ",
+              "meaning": "Sự ra đón"
+            }
+          ]
+        },
+        {
+          "character": "備",
+          "meaning": "Bị, chuẩn bị, trang bị",
+          "onyomi": "ビ",
+          "kunyomi": "そな-える、そな-わる",
+          "examples": [
+            {
+              "word": "設備",
+              "reading": "せつび",
+              "meaning": "Thiết bị, cơ sở vật chất"
+            },
+            {
+              "word": "準備",
+              "reading": "じゅんび",
+              "meaning": "Chuẩn bị"
+            },
+            {
+              "word": "備える",
+              "reading": "そなえる",
+              "meaning": "Chuẩn bị, trang bị"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
