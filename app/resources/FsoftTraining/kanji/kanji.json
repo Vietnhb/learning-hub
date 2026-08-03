@@ -6954,6 +6954,192 @@
           ]
         }
       ]
+    },
+    {
+      "id": 59,
+      "title": "Phi - Đăng - Di - Bạc",
+      "kanji": [
+        {
+          "character": "飛",
+          "meaning": "Phi, bay",
+          "onyomi": "ヒ",
+          "kunyomi": "と-ぶ",
+          "examples": [
+            {
+              "word": "飛ぶ",
+              "reading": "とぶ",
+              "meaning": "Bay"
+            },
+            {
+              "word": "飛行機",
+              "reading": "ひこうき",
+              "meaning": "Máy bay"
+            }
+          ]
+        },
+        {
+          "character": "登",
+          "meaning": "Đăng, leo lên, đăng ký",
+          "onyomi": "トウ、ト",
+          "kunyomi": "のぼ-る",
+          "examples": [
+            {
+              "word": "登山",
+              "reading": "とざん",
+              "meaning": "Leo núi"
+            },
+            {
+              "word": "登る",
+              "reading": "のぼる",
+              "meaning": "Leo lên"
+            },
+            {
+              "word": "山登り",
+              "reading": "やまのぼり",
+              "meaning": "Việc leo núi"
+            },
+            {
+              "word": "登録",
+              "reading": "とうろく",
+              "meaning": "Đăng ký"
+            }
+          ]
+        },
+        {
+          "character": "移",
+          "meaning": "Di, di chuyển, chuyển dời",
+          "onyomi": "イ",
+          "kunyomi": "うつ-る、うつ-す",
+          "examples": [
+            {
+              "word": "移る",
+              "reading": "うつる",
+              "meaning": "Di chuyển, chuyển sang"
+            },
+            {
+              "word": "移動",
+              "reading": "いどう",
+              "meaning": "Di chuyển"
+            },
+            {
+              "word": "移す",
+              "reading": "うつす",
+              "meaning": "Di chuyển, chuyển sang nơi khác"
+            }
+          ]
+        },
+        {
+          "character": "泊",
+          "meaning": "Bạc, ở trọ, lưu lại qua đêm",
+          "onyomi": "ハク",
+          "kunyomi": "と-まる",
+          "examples": [
+            {
+              "word": "泊まる",
+              "reading": "とまる",
+              "meaning": "Ở trọ, ở lại qua đêm"
+            },
+            {
+              "word": "一泊",
+              "reading": "いっぱく",
+              "meaning": "Một đêm"
+            },
+            {
+              "word": "二泊三日",
+              "reading": "にはくみっか",
+              "meaning": "Ba ngày hai đêm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "title": "Đoàn - Trình - Âu - Châu",
+      "kanji": [
+        {
+          "character": "団",
+          "meaning": "Đoàn, nhóm, tập thể",
+          "onyomi": "ダン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "団体",
+              "reading": "だんたい",
+              "meaning": "Đoàn thể, tổ chức"
+            },
+            {
+              "word": "団結",
+              "reading": "だんけつ",
+              "meaning": "Đoàn kết"
+            },
+            {
+              "word": "楽団",
+              "reading": "がくだん",
+              "meaning": "Ban nhạc, dàn nhạc"
+            }
+          ]
+        },
+        {
+          "character": "程",
+          "meaning": "Trình, mức độ, khoảng",
+          "onyomi": "テイ",
+          "kunyomi": "ほど",
+          "examples": [
+            {
+              "word": "先程",
+              "reading": "さきほど",
+              "meaning": "Vừa nãy, lúc nãy"
+            },
+            {
+              "word": "それ程",
+              "reading": "それほど",
+              "meaning": "Đến mức đó, như thế"
+            }
+          ]
+        },
+        {
+          "character": "欧",
+          "meaning": "Âu, châu Âu",
+          "onyomi": "オウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "欧米",
+              "reading": "おうべい",
+              "meaning": "Âu Mỹ, các nước phương Tây"
+            },
+            {
+              "word": "欧化",
+              "reading": "おうか",
+              "meaning": "Âu hóa, Tây hóa"
+            }
+          ]
+        },
+        {
+          "character": "州",
+          "meaning": "Châu, vùng, bang",
+          "onyomi": "シュウ",
+          "kunyomi": "す",
+          "examples": [
+            {
+              "word": "三角州",
+              "reading": "さんかくす",
+              "meaning": "Đồng bằng châu thổ"
+            },
+            {
+              "word": "欧州",
+              "reading": "おうしゅう",
+              "meaning": "Châu Âu"
+            },
+            {
+              "word": "九州",
+              "reading": "きゅうしゅう",
+              "meaning": "Kyushu"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
