@@ -7140,6 +7140,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 61,
+      "title": "Phật - Thần - Hội - Tế",
+      "kanji": [
+        {
+          "character": "仏",
+          "meaning": "Phật, Đức Phật",
+          "onyomi": "ブツ",
+          "kunyomi": "ほとけ",
+          "examples": [
+            {
+              "word": "仏様",
+              "reading": "ほとけさま",
+              "meaning": "Đức Phật"
+            }
+          ]
+        },
+        {
+          "character": "神",
+          "meaning": "Thần, thần linh",
+          "onyomi": "シン、ジン",
+          "kunyomi": "かみ",
+          "examples": [
+            {
+              "word": "神経",
+              "reading": "しんけい",
+              "meaning": "Thần kinh"
+            },
+            {
+              "word": "神社",
+              "reading": "じんじゃ",
+              "meaning": "Đền Thần đạo"
+            },
+            {
+              "word": "神様",
+              "reading": "かみさま",
+              "meaning": "Thần linh"
+            }
+          ]
+        },
+        {
+          "character": "絵",
+          "meaning": "Hội, tranh, hình vẽ",
+          "onyomi": "カイ、エ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "絵",
+              "reading": "え",
+              "meaning": "Tranh, hình vẽ"
+            },
+            {
+              "word": "油絵",
+              "reading": "あぶらえ",
+              "meaning": "Tranh sơn dầu"
+            },
+            {
+              "word": "絵画展",
+              "reading": "かいがてん",
+              "meaning": "Triển lãm tranh"
+            }
+          ]
+        },
+        {
+          "character": "祭",
+          "meaning": "Tế, lễ hội, cúng tế",
+          "onyomi": "サイ",
+          "kunyomi": "まつ-り、まつ-る",
+          "examples": [
+            {
+              "word": "夏祭り",
+              "reading": "なつまつり",
+              "meaning": "Lễ hội mùa hè"
+            },
+            {
+              "word": "祭日",
+              "reading": "さいじつ",
+              "meaning": "Ngày lễ"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
