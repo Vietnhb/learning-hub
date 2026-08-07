@@ -7223,6 +7223,265 @@
           ]
         }
       ]
+    },
+    {
+      "id": 62,
+      "title": "Lộ - Chiết - Khúc - Giác",
+      "kanji": [
+        {
+          "character": "路",
+          "meaning": "Lộ, đường",
+          "onyomi": "ロ",
+          "kunyomi": "じ",
+          "examples": [
+            {
+              "word": "道路",
+              "reading": "どうろ",
+              "meaning": "Đường xá"
+            },
+            {
+              "word": "家路",
+              "reading": "いえじ",
+              "meaning": "Đường về nhà"
+            },
+            {
+              "word": "進路",
+              "reading": "しんろ",
+              "meaning": "Con đường phía trước, hướng đi"
+            }
+          ]
+        },
+        {
+          "character": "折",
+          "meaning": "Chiết, gấp, bẻ",
+          "onyomi": "セツ",
+          "kunyomi": "お-る、お-れる",
+          "examples": [
+            {
+              "word": "折り紙",
+              "reading": "おりがみ",
+              "meaning": "Nghệ thuật gấp giấy, giấy gấp"
+            },
+            {
+              "word": "折れる",
+              "reading": "おれる",
+              "meaning": "Bị gãy, bị gập"
+            },
+            {
+              "word": "右折",
+              "reading": "うせつ",
+              "meaning": "Rẽ phải"
+            }
+          ]
+        },
+        {
+          "character": "曲",
+          "meaning": "Khúc, cong, uốn",
+          "onyomi": "キョク",
+          "kunyomi": "ま-がる、ま-げる",
+          "examples": [
+            {
+              "word": "曲がる",
+              "reading": "まがる",
+              "meaning": "Cong, rẽ"
+            }
+          ]
+        },
+        {
+          "character": "角",
+          "meaning": "Giác, góc",
+          "onyomi": "カク",
+          "kunyomi": "かど、つの",
+          "examples": [
+            {
+              "word": "角",
+              "reading": "かど",
+              "meaning": "Góc"
+            },
+            {
+              "word": "角度",
+              "reading": "かくど",
+              "meaning": "Góc độ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Chuyển - Truy - Đột - Đảo",
+      "kanji": [
+        {
+          "character": "転",
+          "meaning": "Chuyển, xoay, chuyển đổi",
+          "onyomi": "テン",
+          "kunyomi": "ころ-がる、ころ-げる、ころ-ぶ",
+          "examples": [
+            {
+              "word": "転勤",
+              "reading": "てんきん",
+              "meaning": "Chuyển công tác"
+            },
+            {
+              "word": "転がる",
+              "reading": "ころがる",
+              "meaning": "Lăn"
+            }
+          ]
+        },
+        {
+          "character": "追",
+          "meaning": "Truy, đuổi theo",
+          "onyomi": "ツイ",
+          "kunyomi": "お-う",
+          "examples": [
+            {
+              "word": "追う",
+              "reading": "おう",
+              "meaning": "Đuổi theo"
+            },
+            {
+              "word": "追及",
+              "reading": "ついきゅう",
+              "meaning": "Truy cứu, truy xét"
+            }
+          ]
+        },
+        {
+          "character": "突",
+          "meaning": "Đột, đâm, bất ngờ",
+          "onyomi": "トツ",
+          "kunyomi": "つ-く",
+          "examples": [
+            {
+              "word": "衝突",
+              "reading": "しょうとつ",
+              "meaning": "Va chạm, xung đột"
+            },
+            {
+              "word": "突然",
+              "reading": "とつぜん",
+              "meaning": "Đột nhiên"
+            }
+          ]
+        },
+        {
+          "character": "倒",
+          "meaning": "Đảo, ngã, đổ",
+          "onyomi": "トウ",
+          "kunyomi": "たお-れる、たお-す",
+          "examples": [
+            {
+              "word": "倒れる",
+              "reading": "たおれる",
+              "meaning": "Ngã, đổ"
+            },
+            {
+              "word": "倒産",
+              "reading": "とうさん",
+              "meaning": "Phá sản"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "title": "Hoành - Trí - Vị - Ương",
+      "kanji": [
+        {
+          "character": "横",
+          "meaning": "Hoành, ngang, bên cạnh",
+          "onyomi": "オウ",
+          "kunyomi": "よこ",
+          "examples": [
+            {
+              "word": "横書き",
+              "reading": "よこがき",
+              "meaning": "Viết ngang"
+            },
+            {
+              "word": "横断歩道",
+              "reading": "おうだんほどう",
+              "meaning": "Vạch sang đường"
+            },
+            {
+              "word": "横顔",
+              "reading": "よこがお",
+              "meaning": "Khuôn mặt nhìn nghiêng"
+            },
+            {
+              "word": "横になる",
+              "reading": "よこになる",
+              "meaning": "Nằm xuống"
+            },
+            {
+              "word": "横",
+              "reading": "よこ",
+              "meaning": "Ngang, bên cạnh"
+            }
+          ]
+        },
+        {
+          "character": "置",
+          "meaning": "Trí, đặt, để",
+          "onyomi": "チ",
+          "kunyomi": "お-く",
+          "examples": [
+            {
+              "word": "置き場",
+              "reading": "おきば",
+              "meaning": "Nơi để đồ"
+            },
+            {
+              "word": "置き忘れ",
+              "reading": "おきわすれ",
+              "meaning": "Để quên"
+            },
+            {
+              "word": "位置",
+              "reading": "いち",
+              "meaning": "Vị trí"
+            }
+          ]
+        },
+        {
+          "character": "位",
+          "meaning": "Vị, vị trí, địa vị",
+          "onyomi": "イ",
+          "kunyomi": "くらい",
+          "examples": [
+            {
+              "word": "地位",
+              "reading": "ちい",
+              "meaning": "Địa vị"
+            },
+            {
+              "word": "位置",
+              "reading": "いち",
+              "meaning": "Vị trí"
+            }
+          ]
+        },
+        {
+          "character": "央",
+          "meaning": "Ương, trung tâm, giữa",
+          "onyomi": "オウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "中央",
+              "reading": "ちゅうおう",
+              "meaning": "Trung tâm, chính giữa"
+            },
+            {
+              "word": "月央",
+              "reading": "げつおう",
+              "meaning": "Giữa tháng"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
