@@ -7879,6 +7879,104 @@
           ]
         }
       ]
+    },
+    {
+      "id": 67,
+      "title": "Lao - Viên - Quan - Cục",
+      "kanji": [
+        {
+          "character": "労",
+          "meaning": "Lao, lao động, vất vả",
+          "onyomi": "ロウ",
+          "kunyomi": "いたわ-る、ねぎら-う",
+          "examples": [
+            {
+              "word": "苦労",
+              "reading": "くろう",
+              "meaning": "Khổ cực, vất vả"
+            },
+            {
+              "word": "労働",
+              "reading": "ろうどう",
+              "meaning": "Lao động"
+            },
+            {
+              "word": "疲労",
+              "reading": "ひろう",
+              "meaning": "Mệt mỏi, sự mệt mỏi"
+            }
+          ]
+        },
+        {
+          "character": "員",
+          "meaning": "Viên, thành viên, nhân viên",
+          "onyomi": "イン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "店員",
+              "reading": "てんいん",
+              "meaning": "Nhân viên cửa hàng"
+            },
+            {
+              "word": "全員",
+              "reading": "ぜんいん",
+              "meaning": "Tất cả mọi người, toàn thể thành viên"
+            },
+            {
+              "word": "満員",
+              "reading": "まんいん",
+              "meaning": "Đầy người"
+            }
+          ]
+        },
+        {
+          "character": "官",
+          "meaning": "Quan, quan chức, cơ quan nhà nước",
+          "onyomi": "カン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "外交官",
+              "reading": "がいこうかん",
+              "meaning": "Nhà ngoại giao"
+            },
+            {
+              "word": "官民",
+              "reading": "かんみん",
+              "meaning": "Quan và dân, nhà nước và dân"
+            },
+            {
+              "word": "官僚",
+              "reading": "かんりょう",
+              "meaning": "Quan chức, quan liêu"
+            }
+          ]
+        },
+        {
+          "character": "局",
+          "meaning": "Cục, phòng, cơ quan; tình hình",
+          "onyomi": "キョク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "郵便局",
+              "reading": "ゆうびんきょく",
+              "meaning": "Bưu điện"
+            },
+            {
+              "word": "薬局",
+              "reading": "やっきょく",
+              "meaning": "Hiệu thuốc, nhà thuốc"
+            },
+            {
+              "word": "結局",
+              "reading": "けっきょく",
+              "meaning": "Cuối cùng, rốt cuộc"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
