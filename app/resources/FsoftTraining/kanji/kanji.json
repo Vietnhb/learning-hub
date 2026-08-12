@@ -7771,6 +7771,114 @@
           ]
         }
       ]
+    },
+    {
+      "id": 68,
+      "title": "Thường - Thức - Thất - Lễ",
+      "kanji": [
+        {
+          "character": "常",
+          "meaning": "Thường, luôn luôn, bình thường",
+          "onyomi": "ジョウ",
+          "kunyomi": "つね、とこ",
+          "examples": [
+            {
+              "word": "常に",
+              "reading": "つねに",
+              "meaning": "Luôn luôn"
+            },
+            {
+              "word": "日常",
+              "reading": "にちじょう",
+              "meaning": "Hằng ngày, thường ngày"
+            },
+            {
+              "word": "常識",
+              "reading": "じょうしき",
+              "meaning": "Lẽ thường, kiến thức thông thường"
+            },
+            {
+              "word": "通常通り",
+              "reading": "つうじょうどおり",
+              "meaning": "Như thường lệ"
+            }
+          ]
+        },
+        {
+          "character": "識",
+          "meaning": "Thức, nhận biết, kiến thức",
+          "onyomi": "シキ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "知識",
+              "reading": "ちしき",
+              "meaning": "Kiến thức"
+            },
+            {
+              "word": "常識",
+              "reading": "じょうしき",
+              "meaning": "Lẽ thường, kiến thức thông thường"
+            },
+            {
+              "word": "面識",
+              "reading": "めんしき",
+              "meaning": "Có quen biết mặt"
+            }
+          ]
+        },
+        {
+          "character": "失",
+          "meaning": "Thất, mất, đánh mất",
+          "onyomi": "シツ",
+          "kunyomi": "うしな-う",
+          "examples": [
+            {
+              "word": "失う",
+              "reading": "うしなう",
+              "meaning": "Đánh mất, mất"
+            },
+            {
+              "word": "失礼",
+              "reading": "しつれい",
+              "meaning": "Thất lễ, thất lễ"
+            },
+            {
+              "word": "紛失",
+              "reading": "ふんしつ",
+              "meaning": "Làm mất, thất lạc"
+            }
+          ]
+        },
+        {
+          "character": "礼",
+          "meaning": "Lễ, lễ phép, lễ nghi",
+          "onyomi": "レイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "礼儀",
+              "reading": "れいぎ",
+              "meaning": "Lễ nghi, phép lịch sự"
+            },
+            {
+              "word": "礼金",
+              "reading": "れいきん",
+              "meaning": "Tiền lễ, tiền cảm ơn"
+            },
+            {
+              "word": "失礼",
+              "reading": "しつれい",
+              "meaning": "Thất lễ"
+            },
+            {
+              "word": "礼状",
+              "reading": "れいじょう",
+              "meaning": "Thư cảm ơn"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
