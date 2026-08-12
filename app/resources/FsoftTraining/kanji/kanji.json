@@ -7482,6 +7482,177 @@
           ]
         }
       ]
+    },
+    {
+      "id": 65,
+      "title": "Nghịch - Tuyến - Trực - Ngoại",
+      "kanji": [
+        {
+          "character": "逆",
+          "meaning": "Nghịch, ngược lại",
+          "onyomi": "ギャク",
+          "kunyomi": "さか、さか-らう",
+          "examples": [
+            {
+              "word": "逆に",
+              "reading": "ぎゃくに",
+              "meaning": "Ngược lại"
+            },
+            {
+              "word": "逆らう",
+              "reading": "さからう",
+              "meaning": "Chống lại, đi ngược lại"
+            }
+          ]
+        },
+        {
+          "character": "線",
+          "meaning": "Tuyến, đường, dây",
+          "onyomi": "セン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "線",
+              "reading": "せん",
+              "meaning": "Đường, tuyến"
+            },
+            {
+              "word": "線路",
+              "reading": "せんろ",
+              "meaning": "Đường ray, tuyến đường sắt"
+            }
+          ]
+        },
+        {
+          "character": "直",
+          "meaning": "Trực, thẳng, sửa lại",
+          "onyomi": "チョク、ジキ",
+          "kunyomi": "ただ-ちに、なお-す、なお-る",
+          "examples": [
+            {
+              "word": "直接",
+              "reading": "ちょくせつ",
+              "meaning": "Trực tiếp"
+            },
+            {
+              "word": "直る",
+              "reading": "なおる",
+              "meaning": "Được sửa, trở lại bình thường"
+            },
+            {
+              "word": "やり直し",
+              "reading": "やりなおし",
+              "meaning": "Làm lại"
+            }
+          ]
+        },
+        {
+          "character": "外",
+          "meaning": "Ngoại, bên ngoài",
+          "onyomi": "ガイ、ゲ",
+          "kunyomi": "そと、ほか、はず-す、はず-れる",
+          "examples": [
+            {
+              "word": "外側",
+              "reading": "そとがわ",
+              "meaning": "Phía bên ngoài"
+            },
+            {
+              "word": "内側",
+              "reading": "うちがわ",
+              "meaning": "Phía bên trong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "title": "Tiến - Chú - Ý - Kiều",
+      "kanji": [
+        {
+          "character": "進",
+          "meaning": "Tiến, tiến lên",
+          "onyomi": "シン",
+          "kunyomi": "すす-む、すす-める",
+          "examples": [
+            {
+              "word": "進学",
+              "reading": "しんがく",
+              "meaning": "Học lên, tiếp tục học"
+            },
+            {
+              "word": "進歩",
+              "reading": "しんぽ",
+              "meaning": "Tiến bộ"
+            },
+            {
+              "word": "進む",
+              "reading": "すすむ",
+              "meaning": "Tiến lên"
+            },
+            {
+              "word": "進める",
+              "reading": "すすめる",
+              "meaning": "Tiến hành, thúc đẩy"
+            }
+          ]
+        },
+        {
+          "character": "注",
+          "meaning": "Chú, chú ý, đổ vào",
+          "onyomi": "チュウ",
+          "kunyomi": "そそ-ぐ",
+          "examples": [
+            {
+              "word": "注目",
+              "reading": "ちゅうもく",
+              "meaning": "Chú ý, thu hút sự chú ý"
+            },
+            {
+              "word": "注意",
+              "reading": "ちゅうい",
+              "meaning": "Chú ý, cẩn thận"
+            }
+          ]
+        },
+        {
+          "character": "意",
+          "meaning": "Ý, ý định, ý nghĩa",
+          "onyomi": "イ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "注意",
+              "reading": "ちゅうい",
+              "meaning": "Chú ý, cẩn thận"
+            },
+            {
+              "word": "意図",
+              "reading": "いと",
+              "meaning": "Ý định, mục đích"
+            }
+          ]
+        },
+        {
+          "character": "橋",
+          "meaning": "Kiều, cây cầu",
+          "onyomi": "キョウ",
+          "kunyomi": "はし",
+          "examples": [
+            {
+              "word": "橋",
+              "reading": "はし",
+              "meaning": "Cây cầu"
+            },
+            {
+              "word": "架け橋",
+              "reading": "かけはし",
+              "meaning": "Cầu nối"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
