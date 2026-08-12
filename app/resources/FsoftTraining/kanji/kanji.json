@@ -8075,6 +8075,104 @@
           ]
         }
       ]
+    },
+    {
+      "id": 69,
+      "title": "Cấp - Chi - Thu - Hậu",
+      "kanji": [
+        {
+          "character": "給",
+          "meaning": "Cấp, cung cấp, tiền lương",
+          "onyomi": "キュウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "給料",
+              "reading": "きゅうりょう",
+              "meaning": "Tiền lương"
+            },
+            {
+              "word": "時給",
+              "reading": "じきゅう",
+              "meaning": "Lương theo giờ"
+            },
+            {
+              "word": "初任給",
+              "reading": "しょにんきゅう",
+              "meaning": "Lương khởi điểm"
+            }
+          ]
+        },
+        {
+          "character": "支",
+          "meaning": "Chi, hỗ trợ, chi trả",
+          "onyomi": "シ",
+          "kunyomi": "ささ-える",
+          "examples": [
+            {
+              "word": "支出",
+              "reading": "ししゅつ",
+              "meaning": "Chi tiêu, khoản chi"
+            },
+            {
+              "word": "支える",
+              "reading": "ささえる",
+              "meaning": "Hỗ trợ, chống đỡ"
+            },
+            {
+              "word": "支配人",
+              "reading": "しはいにん",
+              "meaning": "Quản lý"
+            }
+          ]
+        },
+        {
+          "character": "収",
+          "meaning": "Thu, thu vào, thu nhập",
+          "onyomi": "シュウ",
+          "kunyomi": "おさ-める、おさ-まる",
+          "examples": [
+            {
+              "word": "収支",
+              "reading": "しゅうし",
+              "meaning": "Thu chi"
+            },
+            {
+              "word": "収める",
+              "reading": "おさめる",
+              "meaning": "Thu, nhận, đạt được"
+            },
+            {
+              "word": "収入",
+              "reading": "しゅうにゅう",
+              "meaning": "Thu nhập"
+            }
+          ]
+        },
+        {
+          "character": "厚",
+          "meaning": "Hậu, dày, hậu đãi",
+          "onyomi": "コウ",
+          "kunyomi": "あつ-い",
+          "examples": [
+            {
+              "word": "厚い",
+              "reading": "あつい",
+              "meaning": "Dày"
+            },
+            {
+              "word": "温厚",
+              "reading": "おんこう",
+              "meaning": "Ôn hòa, hiền hậu"
+            },
+            {
+              "word": "濃厚",
+              "reading": "のうこう",
+              "meaning": "Đậm đặc, nồng đậm"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
