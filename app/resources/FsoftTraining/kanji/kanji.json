@@ -7653,6 +7653,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 67,
+      "title": "Sĩ - Chức - Cầu - Thám",
+      "kanji": [
+        {
+          "character": "仕",
+          "meaning": "Sĩ, làm, phục vụ",
+          "onyomi": "シ",
+          "kunyomi": "つか-える",
+          "examples": [
+            {
+              "word": "仕える",
+              "reading": "つかえる",
+              "meaning": "Phục vụ"
+            },
+            {
+              "word": "仕事",
+              "reading": "しごと",
+              "meaning": "Công việc"
+            },
+            {
+              "word": "仕方",
+              "reading": "しかた",
+              "meaning": "Cách làm"
+            },
+            {
+              "word": "仕送り",
+              "reading": "しおくり",
+              "meaning": "Gửi tiền chu cấp"
+            }
+          ]
+        },
+        {
+          "character": "職",
+          "meaning": "Chức, nghề nghiệp, chức vụ",
+          "onyomi": "ショク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "職",
+              "reading": "しょく",
+              "meaning": "Nghề nghiệp, chức vụ"
+            },
+            {
+              "word": "就職",
+              "reading": "しゅうしょく",
+              "meaning": "Tìm được việc, xin việc"
+            },
+            {
+              "word": "職業",
+              "reading": "しょくぎょう",
+              "meaning": "Nghề nghiệp"
+            },
+            {
+              "word": "転職",
+              "reading": "てんしょく",
+              "meaning": "Chuyển việc"
+            }
+          ]
+        },
+        {
+          "character": "求",
+          "meaning": "Cầu, yêu cầu, tìm kiếm",
+          "onyomi": "キュウ",
+          "kunyomi": "もと-める",
+          "examples": [
+            {
+              "word": "要求",
+              "reading": "ようきゅう",
+              "meaning": "Yêu cầu"
+            },
+            {
+              "word": "求める",
+              "reading": "もとめる",
+              "meaning": "Tìm kiếm, yêu cầu"
+            },
+            {
+              "word": "求人",
+              "reading": "きゅうじん",
+              "meaning": "Tuyển dụng"
+            },
+            {
+              "word": "給仕",
+              "reading": "きゅうじ",
+              "meaning": "Phục vụ"
+            }
+          ]
+        },
+        {
+          "character": "探",
+          "meaning": "Thám, tìm kiếm",
+          "onyomi": "タン",
+          "kunyomi": "さが-す",
+          "examples": [
+            {
+              "word": "探り",
+              "reading": "さぐり",
+              "meaning": "Thăm dò"
+            },
+            {
+              "word": "探検",
+              "reading": "たんけん",
+              "meaning": "Thám hiểm"
+            },
+            {
+              "word": "探す",
+              "reading": "さがす",
+              "meaning": "Tìm kiếm"
+            },
+            {
+              "word": "探しもの",
+              "reading": "さがしもの",
+              "meaning": "Đồ vật cần tìm"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
