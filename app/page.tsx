@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  BrainCircuit,
   BookOpen,
   Briefcase,
   CheckCircle2,
@@ -141,12 +142,24 @@ const featuredResources: FeaturedResource[] = [
     glow: "rgba(20, 184, 166, 0.22)",
     gradient: "from-teal-500 via-violet-400 to-slate-950",
   },
+  {
+    title: "ITE302c",
+    description: "357 câu hỏi về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm.",
+    href: "/resources/ITE302c",
+    category: "Trí tuệ nhân tạo",
+    status: "Sẵn sàng",
+    icon: BrainCircuit,
+    accent:
+      "bg-violet-100 text-violet-700 dark:bg-violet-400/15 dark:text-violet-100",
+    glow: "rgba(139, 92, 246, 0.24)",
+    gradient: "from-violet-500 via-blue-400 to-slate-950",
+  },
 ];
 
 const heroStats = [
-  { label: "Bộ tài liệu", value: 6, detail: "đang có", icon: Library },
-  { label: "Bộ quiz", value: 3, detail: "ôn tập nhanh", icon: ClipboardCheck },
-  { label: "Lĩnh vực", value: 4, detail: "dễ chọn", icon: Sparkles },
+  { label: "Bộ tài liệu", value: 7, detail: "đang có", icon: Library },
+  { label: "Bộ quiz", value: 4, detail: "ôn tập nhanh", icon: ClipboardCheck },
+  { label: "Lĩnh vực", value: 5, detail: "dễ chọn", icon: Sparkles },
 ];
 
 const studySteps: StudyStep[] = [

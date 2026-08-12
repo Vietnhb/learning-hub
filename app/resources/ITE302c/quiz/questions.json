@@ -47,6 +47,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 1
@@ -73,6 +74,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 1
@@ -151,6 +153,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 1
@@ -203,6 +206,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 1
@@ -229,6 +233,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 1
@@ -255,6 +260,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 1
@@ -359,6 +365,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 1
@@ -597,6 +604,7 @@
       }
     ],
     "answers": [
+      "A",
       "C",
       "D"
     ],
@@ -728,6 +736,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 2
@@ -754,7 +763,7 @@
       }
     ],
     "answers": [
-      "D"
+      "A"
     ],
     "sourcePage": 2
   },
@@ -832,6 +841,7 @@
       }
     ],
     "answers": [
+      "A",
       "C",
       "D"
     ],
@@ -911,6 +921,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 2
@@ -963,6 +974,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 2
@@ -1041,6 +1053,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 2
@@ -1149,6 +1162,7 @@
       }
     ],
     "answers": [
+      "A",
       "C",
       "E"
     ],
@@ -1186,7 +1200,11 @@
     "choices": [
       {
         "id": "A",
-        "text": "Beneficence refers to \"do only good\" and non-maleficence refers to \"do no harm.\"Non-maleficence refers only to malevolent artificial general intelligence (AGI), while beneficence can refer to any \"good\" emerging technology."
+        "text": "Beneficence refers to \"do only good\" and non-maleficence refers to \"do no harm.\""
+      },
+      {
+        "id": "B",
+        "text": "Non-maleficence refers only to malevolent artificial general intelligence (AGI), while beneficence can refer to any \"good\" emerging technology."
       },
       {
         "id": "C",
@@ -1224,6 +1242,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 3
@@ -1234,11 +1253,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Follow a code of ethics.|Perform all tasks required of you.|Engage with the public.|Follow ethics by design."
+        "text": "Follow a code of ethics."
+      },
+      {
+        "id": "B",
+        "text": "Perform all tasks required of you."
+      },
+      {
+        "id": "C",
+        "text": "Engage with the public."
+      },
+      {
+        "id": "D",
+        "text": "Follow ethics by design."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 3
   },
@@ -1290,6 +1322,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 3
@@ -1602,6 +1635,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 4
@@ -1836,6 +1870,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 4
@@ -1888,6 +1923,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 4
@@ -1940,6 +1976,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 4
@@ -1992,6 +2029,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 4
@@ -2070,6 +2108,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 4
@@ -2096,6 +2135,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 5
@@ -2122,6 +2162,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 5
@@ -2200,6 +2241,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 5
@@ -2304,6 +2346,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 5
@@ -2357,6 +2400,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 5
@@ -2387,6 +2431,7 @@
       }
     ],
     "answers": [
+      "A",
       "C",
       "E"
     ],
@@ -2415,7 +2460,7 @@
     ],
     "answers": [
       "A",
-      "C"
+      "B"
     ],
     "sourcePage": 5
   },
@@ -2467,6 +2512,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 5
@@ -2701,6 +2747,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 6
@@ -2780,6 +2827,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 6
@@ -2806,6 +2854,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 6
@@ -2832,6 +2881,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 6
@@ -2858,6 +2908,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 6
@@ -2884,6 +2935,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 6
@@ -2962,6 +3014,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 6
@@ -3014,6 +3067,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 6
@@ -3066,6 +3120,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 6
@@ -3092,6 +3147,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 6
@@ -3118,6 +3174,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 6
@@ -3144,6 +3201,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 7
@@ -3300,7 +3358,7 @@
       }
     ],
     "answers": [
-      "C"
+      "A"
     ],
     "sourcePage": 7
   },
@@ -3326,6 +3384,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 7
@@ -3404,6 +3463,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 7
@@ -3612,6 +3672,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 7
@@ -3716,6 +3777,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 8
@@ -3742,6 +3804,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 8
@@ -3794,6 +3857,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 8
@@ -3950,6 +4014,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 8
@@ -3976,6 +4041,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 8
@@ -4028,7 +4094,7 @@
       }
     ],
     "answers": [
-      "C",
+      "A",
       "D"
     ],
     "sourcePage": 8
@@ -4055,6 +4121,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 8
@@ -4081,6 +4148,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 8
@@ -4185,6 +4253,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 9
@@ -4341,6 +4410,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 9
@@ -4367,6 +4437,7 @@
       }
     ],
     "answers": [
+      "A",
       "B"
     ],
     "sourcePage": 9
@@ -4393,6 +4464,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 9
@@ -4524,6 +4596,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 9
@@ -4550,6 +4623,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 9
@@ -4602,6 +4676,7 @@
       }
     ],
     "answers": [
+      "C",
       "D"
     ],
     "sourcePage": 9
@@ -4680,6 +4755,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 9
@@ -4706,6 +4782,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 10
@@ -4732,6 +4809,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 10
@@ -4784,6 +4862,7 @@
       }
     ],
     "answers": [
+      "B",
       "D"
     ],
     "sourcePage": 10
@@ -4876,19 +4955,19 @@
       },
       {
         "id": "B",
-        "text": "The media will be more likely to give the organization the benefit of the doubt in the event of a crisis."
+        "text": "The media will be less likely to accuse the organization of being malicious or negligent in the event of a crisis."
       },
       {
         "id": "C",
-        "text": "The media will be more likely to advocate for your organization in the event of a crisis."
+        "text": "The media will be more likely to give the organization the benefit of the doubt in the event of a crisis."
       },
       {
         "id": "D",
-        "text": "The media will be less likely to accuse the organization of being malicious or negligent in the event of a crisis."
+        "text": "The media will be more likely to advocate for your organization in the event of a crisis."
       }
     ],
     "answers": [
-      "D"
+      "C"
     ],
     "sourcePage": 10
   },
@@ -5408,6 +5487,7 @@
       }
     ],
     "answers": [
+      "A",
       "C"
     ],
     "sourcePage": 11
@@ -5594,6 +5674,7 @@
       }
     ],
     "answers": [
+      "B",
       "D",
       "E"
     ],
@@ -5621,6 +5702,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 11
@@ -5647,6 +5729,7 @@
       }
     ],
     "answers": [
+      "B",
       "C"
     ],
     "sourcePage": 11
@@ -5751,6 +5834,7 @@
       }
     ],
     "answers": [
+      "A",
       "D"
     ],
     "sourcePage": 12
@@ -6111,6 +6195,7 @@
       }
     ],
     "answers": [
+      "A",
       "B",
       "C"
     ],
@@ -6134,6 +6219,7 @@
       }
     ],
     "answers": [
+      "A",
       "B",
       "C"
     ],
@@ -6479,11 +6565,15 @@
       },
       {
         "id": "C",
-        "text": "To have freedom of action D.To be able to know the consequences of action"
+        "text": "To have freedom of action"
+      },
+      {
+        "id": "D",
+        "text": "To be able to know the consequences of action"
       }
     ],
     "answers": [
-      "C"
+      "D"
     ],
     "sourcePage": 13
   },
@@ -6501,11 +6591,15 @@
       },
       {
         "id": "C",
-        "text": "To have freedom of action D.To be able to know the consequences of action"
+        "text": "To have freedom of action"
+      },
+      {
+        "id": "D",
+        "text": "To be able to know the consequences of action"
       }
     ],
     "answers": [
-      "C"
+      "D"
     ],
     "sourcePage": 13
   },
@@ -6531,7 +6625,8 @@
       }
     ],
     "answers": [
-      "B"
+      "B",
+      "D"
     ],
     "sourcePage": 13
   },
@@ -6557,7 +6652,8 @@
       }
     ],
     "answers": [
-      "B"
+      "B",
+      "D"
     ],
     "sourcePage": 13
   },
@@ -6963,7 +7059,7 @@
       }
     ],
     "answers": [
-      "B"
+      "A"
     ],
     "sourcePage": 14
   },
@@ -7146,11 +7242,30 @@
     "choices": [
       {
         "id": "A",
-        "text": "fairness and explicability|respect for human autonomy|prevention of harm|promotion of sustainable solutions|avoidance of mistakes"
+        "text": "fairness and explicability"
+      },
+      {
+        "id": "B",
+        "text": "respect for human autonomy"
+      },
+      {
+        "id": "C",
+        "text": "prevention of harm"
+      },
+      {
+        "id": "D",
+        "text": "promotion of sustainable solutions"
+      },
+      {
+        "id": "E",
+        "text": "avoidance of mistakes"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "sourcePage": 14
   },
@@ -7160,11 +7275,19 @@
     "choices": [
       {
         "id": "A",
-        "text": "racist algorithms|opaque algorithms that cannot be explained|a systematic error in automated processes that causes unfair outcomes for certain individuals or groups"
+        "text": "racist algorithms"
+      },
+      {
+        "id": "B",
+        "text": "opaque algorithms that cannot be explained"
+      },
+      {
+        "id": "C",
+        "text": "a systematic error in automated processes that causes unfair outcomes for certain individuals or groups"
       }
     ],
     "answers": [
-      "A"
+      "C"
     ],
     "sourcePage": 14
   },
@@ -7174,7 +7297,19 @@
     "choices": [
       {
         "id": "A",
-        "text": "a structure designed to serve as a prison|a way of considering privacy as essential only to those who have something to hide|a metaphor to describe the freedom of individuals|a digital tool to spy people"
+        "text": "a structure designed to serve as a prison"
+      },
+      {
+        "id": "B",
+        "text": "a way of considering privacy as essential only to those who have something to hide"
+      },
+      {
+        "id": "C",
+        "text": "a metaphor to describe the freedom of individuals"
+      },
+      {
+        "id": "D",
+        "text": "a digital tool to spy people"
       }
     ],
     "answers": [
@@ -7188,11 +7323,15 @@
     "choices": [
       {
         "id": "A",
-        "text": "False|True"
+        "text": "False"
+      },
+      {
+        "id": "B",
+        "text": "True"
       }
     ],
     "answers": [
-      "A"
+      "B"
     ],
     "sourcePage": 15
   },
@@ -7202,11 +7341,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "moral duties|obligations and norms arising from moral considerations|ethical theories|personal presuppositions"
+        "text": "ethical theories"
+      },
+      {
+        "id": "B",
+        "text": "obligations and norms arising from moral considerations"
+      },
+      {
+        "id": "C",
+        "text": "personal presuppositions"
+      },
+      {
+        "id": "D",
+        "text": "moral duties"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7216,11 +7368,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "morality|ethics|accountability|blameworthiness"
+        "text": "morality"
+      },
+      {
+        "id": "B",
+        "text": "ethics"
+      },
+      {
+        "id": "C",
+        "text": "accountability"
+      },
+      {
+        "id": "D",
+        "text": "blameworthiness"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7230,7 +7395,19 @@
     "choices": [
       {
         "id": "A",
-        "text": "A type of consequentialism, where decisions and actions are evaluated as morally good or bad according to the consequences they bring about|An ethical framework based on the utility principle|A form of ethics based on duties|A moral approach explaining the principle of utility"
+        "text": "A type of consequentialism, where decisions and actions are evaluated as morally good or bad according to the consequences they bring about"
+      },
+      {
+        "id": "B",
+        "text": "An ethical framework based on the utility principle"
+      },
+      {
+        "id": "C",
+        "text": "A form of ethics based on duties"
+      },
+      {
+        "id": "D",
+        "text": "A moral approach explaining the principle of utility"
       }
     ],
     "answers": [
@@ -7244,11 +7421,20 @@
     "choices": [
       {
         "id": "A",
-        "text": "The type of control for which the human controller must have enough information and time to intervene on the autonomous systems|A concept proposed in the last years as a necessary condition for the responsible employment of autonomous weapon systems|A way to describe how autonomous systems work"
+        "text": "The type of control for which the human controller must have enough information and time to intervene on the autonomous systems"
+      },
+      {
+        "id": "B",
+        "text": "A concept proposed in the last years as a necessary condition for the responsible employment of autonomous weapon systems"
+      },
+      {
+        "id": "C",
+        "text": "A way to describe how autonomous systems work"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 15
   },
@@ -7258,11 +7444,20 @@
     "choices": [
       {
         "id": "A",
-        "text": "process data about people and combine human and automated decision making|use today a traditional top-down approach|have the ability to learn from experience"
+        "text": "process data about people and combine human and automated decision making"
+      },
+      {
+        "id": "B",
+        "text": "use today a traditional top-down approach"
+      },
+      {
+        "id": "C",
+        "text": "have the ability to learn from experience"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 15
   },
@@ -7272,11 +7467,23 @@
     "choices": [
       {
         "id": "A",
-        "text": "only protects people who have something to hide|is not overrated|is about intensive tracking and monitoring of behaviors|is totally lost today"
+        "text": "only protects people who have something to hide"
+      },
+      {
+        "id": "B",
+        "text": "is not overrated"
+      },
+      {
+        "id": "C",
+        "text": "is about intensive tracking and monitoring of behaviors"
+      },
+      {
+        "id": "D",
+        "text": "is totally lost today"
       }
     ],
     "answers": [
-      "A"
+      "B"
     ],
     "sourcePage": 15
   },
@@ -7286,11 +7493,23 @@
     "choices": [
       {
         "id": "A",
-        "text": "is the field of ethics devoted to the study of the consequences of technologies|is the attempt to moralize the material environment in which people operate|the deliberate development of technologies in order to shape moral action and moral decision-making|is the design of moral intelligent agents"
+        "text": "is the field of ethics devoted to the study of the consequences of technologies"
+      },
+      {
+        "id": "B",
+        "text": "is the attempt to moralize the material environment in which people operate"
+      },
+      {
+        "id": "C",
+        "text": "the deliberate development of technologies in order to shape moral action and moral decision-making"
+      },
+      {
+        "id": "D",
+        "text": "is the design of moral intelligent agents"
       }
     ],
     "answers": [
-      "A"
+      "C"
     ],
     "sourcePage": 15
   },
@@ -7300,11 +7519,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "involves different stakeholders|has the goal of implementing machines with an ethics|requires a paradigm change|considers AI tools and techniques as dangerous"
+        "text": "involves different stakeholders"
+      },
+      {
+        "id": "B",
+        "text": "has the goal of implementing machines with an ethics"
+      },
+      {
+        "id": "C",
+        "text": "requires a paradigm change"
+      },
+      {
+        "id": "D",
+        "text": "considers AI tools and techniques as dangerous"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 15
   },
@@ -7314,11 +7546,21 @@
     "choices": [
       {
         "id": "A",
-        "text": "Instructor-led or self-paced courses in the exam domains.|The domain domains and objectives in the exam blueprint.|Summative assessments in Coursera preparatory course."
+        "text": "The domain domains and objectives in the exam blueprint."
+      },
+      {
+        "id": "B",
+        "text": "Summative assessments in Coursera preparatory course."
+      },
+      {
+        "id": "C",
+        "text": "Instructor-led or self-paced courses in the exam domains."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B",
+      "C"
     ],
     "sourcePage": 15
   },
@@ -7328,11 +7570,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "If the holders of data are trustworthy entities.|Whether the data was gathered in an ethical manner.|What type of data (audio,visual,etc.) is being collected and/or utilized.|If the data is commercially viable or monetarily valuable."
+        "text": "If the holders of data are trustworthy entities."
+      },
+      {
+        "id": "B",
+        "text": "If the data is commercially viable or monetarily valuable."
+      },
+      {
+        "id": "C",
+        "text": "Whether the data was gathered in an ethical manner."
+      },
+      {
+        "id": "D",
+        "text": "What type of data (audio, visual, etc.) is being collected and/or utilized."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 15
   },
@@ -7342,11 +7597,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Data can be easily monopolized.|Data can fuel algorithmic technologies.|Data can be monetarily valuable.|Data can damage the environment."
+        "text": "Data can be monetarily valuable."
+      },
+      {
+        "id": "B",
+        "text": "Data can damage the environment."
+      },
+      {
+        "id": "C",
+        "text": "Data can be easily monopolized."
+      },
+      {
+        "id": "D",
+        "text": "Data can fuel algorithmic technologies."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7356,11 +7624,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Performance and optimization.|Transparency and explainability,balanced with privacy.|Accountability and management of bias.|The number of layers,tensors,or parameters used in a model."
+        "text": "Accountability and management of bias."
+      },
+      {
+        "id": "B",
+        "text": "Transparency and explainability, balanced with privacy."
+      },
+      {
+        "id": "C",
+        "text": "The number of layers, tensors, or parameters used in a model."
+      },
+      {
+        "id": "D",
+        "text": "Performance and optimization."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 15
   },
@@ -7370,11 +7651,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "They may be able to self-improve by learning from data.|They are exciting and captivating to many people.|They can automate very complex operations.|They can displace workers by performing their jobs more efficiently."
+        "text": "They can automate very complex operations."
+      },
+      {
+        "id": "B",
+        "text": "They may be able to self-improve by learning from data."
+      },
+      {
+        "id": "C",
+        "text": "They are exciting and captivating to many people."
+      },
+      {
+        "id": "D",
+        "text": "They can displace workers by performing their jobs more efficiently."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 15
   },
@@ -7384,11 +7678,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Aggregate data together.|Manipulate data or alter its interpretation.|Change data to another format.|Delete any erroneous data."
+        "text": "Aggregate data together."
+      },
+      {
+        "id": "B",
+        "text": "Change data to another format."
+      },
+      {
+        "id": "C",
+        "text": "Manipulate data or alter its interpretation."
+      },
+      {
+        "id": "D",
+        "text": "Delete any erroneous data."
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7398,11 +7705,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Cleaning and sorting data,and auditing for bias.|Writing new equations to express intelligence.|Building and maintaining computational hardware.|Keeping up with the latest developments and vulnerabilities."
+        "text": "Building and maintaining computational hardware."
+      },
+      {
+        "id": "B",
+        "text": "Writing new equations to express intelligence."
+      },
+      {
+        "id": "C",
+        "text": "Keeping up with the latest developments and vulnerabilities."
+      },
+      {
+        "id": "D",
+        "text": "Cleaning and sorting data, and auditing for bias."
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7412,11 +7732,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Organizations must be proactive in protecting against privacy risks,not reactive.|Organizations must incorporate privacy protections throughout the project lifecycle.|Organizations must not expose the operational practices and technologies used to protect user privacy.|Organizations must keep the focus of privacy protections on the business rather than the user."
+        "text": "Organizations must incorporate privacy protections throughout the project lifecycle."
+      },
+      {
+        "id": "B",
+        "text": "Organizations must keep the focus of privacy protections on the business rather than the user."
+      },
+      {
+        "id": "C",
+        "text": "Organizations must not expose the operational practices and technologies used to protect user privacy."
+      },
+      {
+        "id": "D",
+        "text": "Organizations must be proactive in protecting against privacy risks, not reactive."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7426,11 +7759,29 @@
     "choices": [
       {
         "id": "A",
-        "text": "Cultivating awareness of your own biases.|Obtaining your information from the same one or two media sources that your family and friends access.|Exposing yourself to \"counter-stereotypical\" examples.|Surrounding yourself with others who have similar experiences.|Interacting with diverse groups of people."
+        "text": "Interacting with diverse groups of people."
+      },
+      {
+        "id": "B",
+        "text": "Surrounding yourself with others who have similar experiences."
+      },
+      {
+        "id": "C",
+        "text": "Cultivating awareness of your own biases."
+      },
+      {
+        "id": "D",
+        "text": "Exposing yourself to \"counter-stereotypical\" examples."
+      },
+      {
+        "id": "E",
+        "text": "Obtaining your information from the same one or two media sources that your family and friends access."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7440,11 +7791,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "It can impede socio-political cooperation.|It can lead to groupthink,which can in turn halt forward progress.|It can lead to a diverse set of friends.|It can prevent us from being social with other people."
+        "text": "It can prevent us from being social with other people."
+      },
+      {
+        "id": "B",
+        "text": "It can impede socio-political cooperation."
+      },
+      {
+        "id": "C",
+        "text": "It can lead to a diverse set of friends."
+      },
+      {
+        "id": "D",
+        "text": "It can lead to groupthink, which can in turn halt forward progress."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 15
   },
@@ -7454,11 +7818,25 @@
     "choices": [
       {
         "id": "A",
-        "text": "You have a moral duty to choose your actions based on their potential outcomes.|Each person must use reason to will moral laws.|Act in such a way that your actions may become a universal law.|Don't treat people as a means to an end; treat them always as an end."
+        "text": "Act in such a way that your actions may become a universal law."
+      },
+      {
+        "id": "B",
+        "text": "You have a moral duty to choose your actions based on their potential outcomes."
+      },
+      {
+        "id": "C",
+        "text": "Each person must use reason to will moral laws."
+      },
+      {
+        "id": "D",
+        "text": "Don't treat people as a means to an end; treat them always as an end."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7468,11 +7846,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The moral agent acts in a morally correct manner.|The moral agent is capable of determining right and wrong.|The moral agent can be held responsible for their actions.|The moral agent follows a deontological code of ethics."
+        "text": "The moral agent is capable of determining right and wrong."
+      },
+      {
+        "id": "B",
+        "text": "The moral agent can be held responsible for their actions."
+      },
+      {
+        "id": "C",
+        "text": "The moral agent acts in a morally correct manner."
+      },
+      {
+        "id": "D",
+        "text": "The moral agent follows a deontological code of ethics."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7482,11 +7873,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Moral psychology seeks to understand the nature of what it means to be moral.|Moral psychology seeks to understand why people act morally or immorally.|Moral psychology seeks to understand what the best way to act morally is.|Moral psychology seeks to understand how the human mind develops morality."
+        "text": "Moral psychology seeks to understand why people act morally or immorally."
+      },
+      {
+        "id": "B",
+        "text": "Moral psychology seeks to understand how the human mind develops morality."
+      },
+      {
+        "id": "C",
+        "text": "Moral psychology seeks to understand the nature of what it means to be moral."
+      },
+      {
+        "id": "D",
+        "text": "Moral psychology seeks to understand what the best way to act morally is."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7496,11 +7900,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Inalienable rights are inherent in all human beings.|Inalienable rights cannot be taken away except in extreme circumstances.|Inalienable rights are derived from tradition.|Inalienable rights are conditional."
+        "text": "Inalienable rights are inherent in all human beings."
+      },
+      {
+        "id": "B",
+        "text": "Inalienable rights cannot be taken away except in extreme circumstances."
+      },
+      {
+        "id": "C",
+        "text": "Inalienable rights are conditional."
+      },
+      {
+        "id": "D",
+        "text": "Inalienable rights are derived from tradition."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7510,11 +7927,29 @@
     "choices": [
       {
         "id": "A",
-        "text": "It will reduce your business obligations toward customers and business partners.|It will support the development of strategic partnerships.|It will build customer trust.|It will ensure you comply with regulations.|It will encourage applicants to apply for your company."
+        "text": "It will encourage applicants to apply for your company."
+      },
+      {
+        "id": "B",
+        "text": "It will ensure you comply with regulations."
+      },
+      {
+        "id": "C",
+        "text": "It will support the development of strategic partnerships."
+      },
+      {
+        "id": "D",
+        "text": "It will reduce your business obligations toward customers and business partners."
+      },
+      {
+        "id": "E",
+        "text": "It will build customer trust."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C",
+      "E"
     ],
     "sourcePage": 16
   },
@@ -7524,11 +7959,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "That they would create unfair advantages,as not everyone has access to the same rights.|That individuals would start applying for electronic personalities.|That they will make it more difficult to access information.|That they would absolve manufacturers of liability."
+        "text": "That they would create unfair advantages, as not everyone has access to the same rights."
+      },
+      {
+        "id": "B",
+        "text": "That individuals would start applying for electronic personalities."
+      },
+      {
+        "id": "C",
+        "text": "That they will make it more difficult to access information."
+      },
+      {
+        "id": "D",
+        "text": "That they would absolve manufacturers of liability."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7538,11 +7986,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Weapon systems can limit human autonomy as humans may not have decision-making capability or understand the decision making.|AI systems might impact certain vulnerable groups such as the elderly and children differently than the rest of the population,which could limit those groups' autonomy.|AI systems can assist individuals with automated,repetitive,or dangerous tasks.|AI systems can perform tasks that humans cannot,such as processing millions of data records in a matter of seconds."
+        "text": "Weapon systems can limit human autonomy as humans may not have decision-making capability or understand the decision making."
+      },
+      {
+        "id": "B",
+        "text": "AI systems might impact certain vulnerable groups such as the elderly and children differently than the rest of the population, which could limit those groups' autonomy."
+      },
+      {
+        "id": "C",
+        "text": "AI systems can assist individuals with automated, repetitive, or dangerous tasks."
+      },
+      {
+        "id": "D",
+        "text": "AI systems can perform tasks that humans cannot, such as processing millions of data records in a matter of seconds."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7552,11 +8013,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Reputational harm|Loss of profits|Lack of transparency|User discrimination"
+        "text": "User discrimination"
+      },
+      {
+        "id": "B",
+        "text": "Reputational harm"
+      },
+      {
+        "id": "C",
+        "text": "Lack of transparency"
+      },
+      {
+        "id": "D",
+        "text": "Loss of profits"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 16
   },
@@ -7566,11 +8040,29 @@
     "choices": [
       {
         "id": "A",
-        "text": "Identify prior issues with your product or service.|Obtain feedback from stakeholder focus groups.|Rely on the requirements of government regulations.|Research similar organization's ethical mistakes and concerns.|Rely on your own personal experiences."
+        "text": "Rely on the requirements of government regulations."
+      },
+      {
+        "id": "B",
+        "text": "Obtain feedback from stakeholder focus groups."
+      },
+      {
+        "id": "C",
+        "text": "Rely on your own personal experiences."
+      },
+      {
+        "id": "D",
+        "text": "Identify prior issues with your product or service."
+      },
+      {
+        "id": "E",
+        "text": "Research similar organization's ethical mistakes and concerns."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D",
+      "E"
     ],
     "sourcePage": 16
   },
@@ -7580,11 +8072,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Prescriptive language used in the code of ethics|Comprehensive coverage of areas of concerns by the code of ethics|Lack of clarity in the code of ethics|Lack of awareness of the code of ethics and where it is meant to be applied"
+        "text": "Comprehensive coverage of areas of concerns by the code of ethics"
+      },
+      {
+        "id": "B",
+        "text": "Lack of clarity in the code of ethics"
+      },
+      {
+        "id": "C",
+        "text": "Lack of awareness of the code of ethics and where it is meant to be applied"
+      },
+      {
+        "id": "D",
+        "text": "Prescriptive language used in the code of ethics"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 16
   },
@@ -7594,11 +8099,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Prescriptive language|Subjective language|Plain language|Legal language"
+        "text": "Legal language"
+      },
+      {
+        "id": "B",
+        "text": "Plain language"
+      },
+      {
+        "id": "C",
+        "text": "Prescriptive language"
+      },
+      {
+        "id": "D",
+        "text": "Subjective language"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 16
   },
@@ -7608,11 +8126,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "It compels employees to operate in an ethical and integral manner.|It prevents regulatory scrutiny of the organization's practices.|It lets external stakeholders know that you are an ethical company.|It creates consistency in the ethical practices across the organization,rather than patchy implementation of the practices."
+        "text": "It compels employees to operate in an ethical and integral manner."
+      },
+      {
+        "id": "B",
+        "text": "It prevents regulatory scrutiny of the organization's practices."
+      },
+      {
+        "id": "C",
+        "text": "It lets external stakeholders know that you are an ethical company."
+      },
+      {
+        "id": "D",
+        "text": "It creates consistency in the ethical practices across the organization, rather than patchy implementation of the practices."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7622,11 +8153,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "It helps us consider risk mitigation in terms of universal tactics that apply to all potential kinds of ethical risk.|It ensures that customers and other external stakeholders know that we take ethical risks seriously.|It helps us understand the many complexities involved in different types of ethical risks.|It makes it easier for us to identify and manage different types of risks."
+        "text": "It makes it easier for us to identify and manage different types of risks."
+      },
+      {
+        "id": "B",
+        "text": "It helps us understand the many complexities involved in different types of ethical risks."
+      },
+      {
+        "id": "C",
+        "text": "It helps us consider risk mitigation in terms of universal tactics that apply to all potential kinds of ethical risk."
+      },
+      {
+        "id": "D",
+        "text": "It ensures that customers and other external stakeholders know that we take ethical risks seriously."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7636,11 +8180,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Providing in-depth white papers on the algorithms that underlie data-driven systems.|Providing information about data-driven systems in simple,easy-to-understand terms.|Providing guidelines for how customers can keep their private data secure when using data-driven systems.|Providing prompt responses to customer questions about the decisions made by data-driven systems."
+        "text": "Providing guidelines for how customers can keep their private data secure when using data-driven systems."
+      },
+      {
+        "id": "B",
+        "text": "Providing information about data-driven systems in simple, easy-to-understand terms."
+      },
+      {
+        "id": "C",
+        "text": "Providing in-depth white papers on the algorithms that underlie data-driven systems."
+      },
+      {
+        "id": "D",
+        "text": "Providing prompt responses to customer questions about the decisions made by data-driven systems."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7650,11 +8207,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Provide information only when solicited|Communicate information through a single voice|Communicate information in real time|Disseminate information in multiple formats"
+        "text": "Provide information only when solicited"
+      },
+      {
+        "id": "B",
+        "text": "Disseminate information in multiple formats"
+      },
+      {
+        "id": "C",
+        "text": "Communicate information through a single voice"
+      },
+      {
+        "id": "D",
+        "text": "Communicate information in real time"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7664,11 +8234,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Ensure communication policies are diverse,inclusive,and equitable|Provide access to information on a need-to-know basis|Be culturally sensitive and culturally aware during communication|Limit the flow of information to one direction: organization to public"
+        "text": "Ensure communication policies are diverse, inclusive, and equitable"
+      },
+      {
+        "id": "B",
+        "text": "Provide access to information on a need-to-know basis"
+      },
+      {
+        "id": "C",
+        "text": "Limit the flow of information to one direction: organization to public"
+      },
+      {
+        "id": "D",
+        "text": "Be culturally sensitive and culturally aware during communication"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7678,11 +8261,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Ensure individuals understand the specific details of each risk they are affected by|Ensure individuals feel that they have input into the process|Inform individuals of how they are obligated to mitigate risks to themselves|Communicate to individuals proactively rather than reactively"
+        "text": "Ensure individuals feel that they have input into the process"
+      },
+      {
+        "id": "B",
+        "text": "Ensure individuals understand the specific details of each risk they are affected by"
+      },
+      {
+        "id": "C",
+        "text": "Communicate to individuals proactively rather than reactively"
+      },
+      {
+        "id": "D",
+        "text": "Inform individuals of how they are obligated to mitigate risks to themselves"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 16
   },
@@ -7692,11 +8288,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The effect the campaign has on the organization's bottom line|The risks that will be talked about in the campaign|The time-sensitive nature of communication in the campaign|The environment in which the campaign will be launched"
+        "text": "The effect the campaign has on the organization's bottom line"
+      },
+      {
+        "id": "B",
+        "text": "The environment in which the campaign will be launched"
+      },
+      {
+        "id": "C",
+        "text": "The risks that will be talked about in the campaign"
+      },
+      {
+        "id": "D",
+        "text": "The time-sensitive nature of communication in the campaign"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 16
   },
@@ -7706,11 +8315,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The campaign is continuously improved upon.|The campaign cannot be modified without the consent of the organization.|The campaign fosters a relationship between the organization and its stakeholders.|The campaign must be self-sustaining."
+        "text": "The campaign is continuously improved upon."
+      },
+      {
+        "id": "B",
+        "text": "The campaign fosters a relationship between the organization and its stakeholders."
+      },
+      {
+        "id": "C",
+        "text": "The campaign must be self-sustaining."
+      },
+      {
+        "id": "D",
+        "text": "The campaign cannot be modified without the consent of the organization."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 16
   },
@@ -7720,11 +8342,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Access to adequate resources|Clear direction on the roles and responsibilities of team members|The ability to work independently of the crisis management team|Permission to tell the public what they want to hear"
+        "text": "Permission to tell the public what they want to hear"
+      },
+      {
+        "id": "B",
+        "text": "Access to adequate resources"
+      },
+      {
+        "id": "C",
+        "text": "Clear direction on the roles and responsibilities of team members"
+      },
+      {
+        "id": "D",
+        "text": "The ability to work independently of the crisis management team"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 16
   },
@@ -7734,11 +8369,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Defensive when challenged with difficult situations|Lighthearted when dealing with serious topics|Articulate when communicating important details|Patient when addressing tough questions or concerns"
+        "text": "Defensive when challenged with difficult situations"
+      },
+      {
+        "id": "B",
+        "text": "Patient when addressing tough questions or concerns"
+      },
+      {
+        "id": "C",
+        "text": "Lighthearted when dealing with serious topics"
+      },
+      {
+        "id": "D",
+        "text": "Articulate when communicating important details"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7748,11 +8396,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Rehearsing business continuity tasks|Informing external stakeholders of suspected incidents|Performing a business impact assessment (BIA)|Evaluating the effects that the crisis has on the business"
+        "text": "Informing external stakeholders of suspected incidents"
+      },
+      {
+        "id": "B",
+        "text": "Evaluating the effects that the crisis has on the business"
+      },
+      {
+        "id": "C",
+        "text": "Performing a business impact assessment (BIA)"
+      },
+      {
+        "id": "D",
+        "text": "Rehearsing business continuity tasks"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7762,11 +8423,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Restructuring the response team for future crises|Discussing lessons learned during the crisis|Performing a vulnerability audit of all affected systems|Communicating information about the crisis with stakeholders"
+        "text": "Restructuring the response team for future crises"
+      },
+      {
+        "id": "B",
+        "text": "Communicating information about the crisis with stakeholders"
+      },
+      {
+        "id": "C",
+        "text": "Discussing lessons learned during the crisis"
+      },
+      {
+        "id": "D",
+        "text": "Performing a vulnerability audit of all affected systems"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 17
   },
@@ -7776,11 +8450,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "By reviewing a crisis too soon,you can exasperate the people involved.|By reviewing a crisis too soon,you may not have collected all of the useful details.|By reviewing a crisis too soon,you can unknowingly extend the effects of that crisis.|By reviewing a crisis too soon,you run the risk of violating compliance requirements."
+        "text": "By reviewing a crisis too soon, you may not have collected all of the useful details."
+      },
+      {
+        "id": "B",
+        "text": "By reviewing a crisis too soon, you run the risk of violating compliance requirements."
+      },
+      {
+        "id": "C",
+        "text": "By reviewing a crisis too soon, you can exasperate the people involved."
+      },
+      {
+        "id": "D",
+        "text": "By reviewing a crisis too soon, you can unknowingly extend the effects of that crisis."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 17
   },
@@ -7790,11 +8477,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Mission statement|Public education campaign|Press release|Video briefing"
+        "text": "Mission statement"
+      },
+      {
+        "id": "B",
+        "text": "Video briefing"
+      },
+      {
+        "id": "C",
+        "text": "Press release"
+      },
+      {
+        "id": "D",
+        "text": "Public education campaign"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 17
   },
@@ -7804,11 +8504,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Presenting a face of the organization|Communicating only as needed|Being honest and up front|Focusing on positive feedback"
+        "text": "Communicating only as needed"
+      },
+      {
+        "id": "B",
+        "text": "Presenting a face of the organization"
+      },
+      {
+        "id": "C",
+        "text": "Focusing on positive feedback"
+      },
+      {
+        "id": "D",
+        "text": "Being honest and up front"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7818,11 +8531,29 @@
     "choices": [
       {
         "id": "A",
-        "text": "Analysis|Elimination|Mitigation|Deployment|Identification"
+        "text": "Mitigation"
+      },
+      {
+        "id": "B",
+        "text": "Deployment"
+      },
+      {
+        "id": "C",
+        "text": "Identification"
+      },
+      {
+        "id": "D",
+        "text": "Elimination"
+      },
+      {
+        "id": "E",
+        "text": "Analysis"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C",
+      "E"
     ],
     "sourcePage": 17
   },
@@ -7832,11 +8563,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The tails of a normal distribution are denser than the center.|The mean,median,and mode of all measurements is the same,and all are located at the center of the distribution.|The variable's distribution,when graphed,exhibits a symmetrical bell shape.|Less than half of all measurements fall within one standard deviation of the mean."
+        "text": "Less than half of all measurements fall within one standard deviation of the mean."
+      },
+      {
+        "id": "B",
+        "text": "The mean, median, and mode of all measurements is the same, and all are located at the center of the distribution."
+      },
+      {
+        "id": "C",
+        "text": "The variable's distribution, when graphed, exhibits a symmetrical bell shape."
+      },
+      {
+        "id": "D",
+        "text": "The tails of a normal distribution are denser than the center."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 17
   },
@@ -7846,11 +8590,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Cookies and tokens|Passport numbers|Device IDs|Telephone numbers"
+        "text": "Telephone numbers"
+      },
+      {
+        "id": "B",
+        "text": "Device IDs"
+      },
+      {
+        "id": "C",
+        "text": "Cookies and tokens"
+      },
+      {
+        "id": "D",
+        "text": "Passport numbers"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7860,11 +8617,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Encryption of data makes it harder to process|Additional organizations and processors may now have access to the data|Secondary data may be more expensive|Data applied to secondary purposes may expose private aspects or diminish personal dignity"
+        "text": "Data applied to secondary purposes may expose private aspects or diminish personal dignity"
+      },
+      {
+        "id": "B",
+        "text": "Additional organizations and processors may now have access to the data"
+      },
+      {
+        "id": "C",
+        "text": "Encryption of data makes it harder to process"
+      },
+      {
+        "id": "D",
+        "text": "Secondary data may be more expensive"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 17
   },
@@ -7874,11 +8644,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Granular or modular control over data usage|The format that the data is stored in|Opt-out/opt-in mechanisms|Whether the data is used by a person of a certain gender"
+        "text": "Whether the data is used by a person of a certain gender"
+      },
+      {
+        "id": "B",
+        "text": "The format that the data is stored in"
+      },
+      {
+        "id": "C",
+        "text": "Granular or modular control over data usage"
+      },
+      {
+        "id": "D",
+        "text": "Opt-out/opt-in mechanisms"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7888,11 +8671,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "ISO 9000|CE mark|HIPAA|NIST Privacy Framework"
+        "text": "CE mark"
+      },
+      {
+        "id": "B",
+        "text": "NIST Privacy Framework"
+      },
+      {
+        "id": "C",
+        "text": "ISO 9000"
+      },
+      {
+        "id": "D",
+        "text": "HIPAA"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7902,11 +8698,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Authorization|Reputation|Kindness|Authentication"
+        "text": "Authorization"
+      },
+      {
+        "id": "B",
+        "text": "Kindness"
+      },
+      {
+        "id": "C",
+        "text": "Authentication"
+      },
+      {
+        "id": "D",
+        "text": "Reputation"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 17
   },
@@ -7916,11 +8725,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Analysing an individual's emotional stimulus and response patterns|Discovering new information via inference|Comparing multiple data points or sets|Comparing people of different demographic groups"
+        "text": "Discovering new information via inference"
+      },
+      {
+        "id": "B",
+        "text": "Comparing people of different demographic groups"
+      },
+      {
+        "id": "C",
+        "text": "Analysing an individual's emotional stimulus and response patterns"
+      },
+      {
+        "id": "D",
+        "text": "Comparing multiple data points or sets"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7930,11 +8752,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Keep machines and humans separate.|Consider bias a spectrum.|Solve for many,extend to one.|Leverage customer input to reduce bias."
+        "text": "Leverage customer input to reduce bias."
+      },
+      {
+        "id": "B",
+        "text": "Consider bias a spectrum."
+      },
+      {
+        "id": "C",
+        "text": "Keep machines and humans separate."
+      },
+      {
+        "id": "D",
+        "text": "Solve for many, extend to one."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 17
   },
@@ -7944,11 +8779,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Network intrusion detection alerts|Encrypted personal data|Personnel emails|System event logs"
+        "text": "Personnel emails"
+      },
+      {
+        "id": "B",
+        "text": "Encrypted personal data"
+      },
+      {
+        "id": "C",
+        "text": "System event logs"
+      },
+      {
+        "id": "D",
+        "text": "Network intrusion detection alerts"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7958,11 +8806,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The appropriate length and complexity of employee passwords|How long CCTV camera recordings should be maintained|What methods of attack are legitimate|What systems may be targeted"
+        "text": "What systems may be targeted"
+      },
+      {
+        "id": "B",
+        "text": "How long CCTV camera recordings should be maintained"
+      },
+      {
+        "id": "C",
+        "text": "The appropriate length and complexity of employee passwords"
+      },
+      {
+        "id": "D",
+        "text": "What methods of attack are legitimate"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7972,11 +8833,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Restoring compromised functionality through a system rollback|Optimizing costs of operation|Tracking deviance from norms|Holding employees more accountable"
+        "text": "Optimizing costs of operation"
+      },
+      {
+        "id": "B",
+        "text": "Holding employees more accountable"
+      },
+      {
+        "id": "C",
+        "text": "Tracking deviance from norms"
+      },
+      {
+        "id": "D",
+        "text": "Restoring compromised functionality through a system rollback"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -7986,11 +8860,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "A brief delay in the conveyance of a commercial transaction.|A loss of life resulting from specific circumstances.|The health and well-being of individuals or communities.|The rights of individuals or communities."
+        "text": "A brief delay in the conveyance of a commercial transaction."
+      },
+      {
+        "id": "B",
+        "text": "The health and well-being of individuals or communities."
+      },
+      {
+        "id": "C",
+        "text": "A loss of life resulting from specific circumstances."
+      },
+      {
+        "id": "D",
+        "text": "The rights of individuals or communities."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 17
   },
@@ -8000,11 +8887,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "It supports profitable research innovations and intellectual property.|It supports accountability and makes it more explicit.|It supports improved sales and marketing results.|It supports consistency of behavior and unification of culture."
+        "text": "It supports consistency of behavior and unification of culture."
+      },
+      {
+        "id": "B",
+        "text": "It supports accountability and makes it more explicit."
+      },
+      {
+        "id": "C",
+        "text": "It supports improved sales and marketing results."
+      },
+      {
+        "id": "D",
+        "text": "It supports profitable research innovations and intellectual property."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 17
   },
@@ -8014,11 +8914,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "It demonstrates that the system is functional as early as possible in order to satisfy senior management and investor stakeholders.|It minimizes the impact of any ethical issues which may emerge.|It certifies that a product's developers are legally accountable.|It reveals any gaps in accountability or auditability."
+        "text": "It certifies that a product's developers are legally accountable."
+      },
+      {
+        "id": "B",
+        "text": "It reveals any gaps in accountability or auditability."
+      },
+      {
+        "id": "C",
+        "text": "It minimizes the impact of any ethical issues which may emerge."
+      },
+      {
+        "id": "D",
+        "text": "It demonstrates that the system is functional as early as possible in order to satisfy senior management and investor stakeholders."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "C"
     ],
     "sourcePage": 18
   },
@@ -8028,11 +8941,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Document the audit procedures to be followed.|Provide significant advance notice before an audit.|Specify a purpose for the audit or an agenda to be covered.|Specify and document what precisely is being audited."
+        "text": "Provide significant advance notice before an audit."
+      },
+      {
+        "id": "B",
+        "text": "Specify a purpose for the audit or an agenda to be covered."
+      },
+      {
+        "id": "C",
+        "text": "Specify and document what precisely is being audited."
+      },
+      {
+        "id": "D",
+        "text": "Document the audit procedures to be followed."
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8042,11 +8968,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Earnings before interest,taxes,depreciation,and amortization (EBITDA)|Operating cashflow forecast|Performance metrics,such as accuracy and cost functions|Model training time"
+        "text": "Model training time"
+      },
+      {
+        "id": "B",
+        "text": "Operating cashflow forecast"
+      },
+      {
+        "id": "C",
+        "text": "Performance metrics, such as accuracy and cost functions"
+      },
+      {
+        "id": "D",
+        "text": "Earnings before interest, taxes, depreciation, and amortization (EBITDA)"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 18
   },
@@ -8056,11 +8995,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Data annotation and augmentation tools|Management oversight|Product design lifecycle|Compiled models"
+        "text": "Data annotation and augmentation tools"
+      },
+      {
+        "id": "B",
+        "text": "Compiled models"
+      },
+      {
+        "id": "C",
+        "text": "Management oversight"
+      },
+      {
+        "id": "D",
+        "text": "Product design lifecycle"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 18
   },
@@ -8070,11 +9022,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "The amount of time it took to collect the data.|The relatively large size of a dataset used in training.|Any known bias in the sample data.|Any missing values in the dataset and how they were handled."
+        "text": "The amount of time it took to collect the data."
+      },
+      {
+        "id": "B",
+        "text": "Any missing values in the dataset and how they were handled."
+      },
+      {
+        "id": "C",
+        "text": "The relatively large size of a dataset used in training."
+      },
+      {
+        "id": "D",
+        "text": "Any known bias in the sample data."
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8084,11 +9049,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "LIME is less accurate than SHAP.|LIME supports more programming languages than SHAP.|LIME supports fewer types of models than SHAP.|LIME outputs results faster than SHAP."
+        "text": "LIME outputs results faster than SHAP."
+      },
+      {
+        "id": "B",
+        "text": "LIME is less accurate than SHAP."
+      },
+      {
+        "id": "C",
+        "text": "LIME supports fewer types of models than SHAP."
+      },
+      {
+        "id": "D",
+        "text": "LIME supports more programming languages than SHAP."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 18
   },
@@ -8098,11 +9076,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Explainability|Bias|Privacy|Accountability"
+        "text": "Privacy"
+      },
+      {
+        "id": "B",
+        "text": "Bias"
+      },
+      {
+        "id": "C",
+        "text": "Explainability"
+      },
+      {
+        "id": "D",
+        "text": "Accountability"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8112,11 +9103,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Regulations have legal enforcement behind them.|Regulations are often industry led.|Regulations are flexible in their implementation.|Regulations provide a clear basis for potential litigation."
+        "text": "Regulations provide a clear basis for potential litigation."
+      },
+      {
+        "id": "B",
+        "text": "Regulations have legal enforcement behind them."
+      },
+      {
+        "id": "C",
+        "text": "Regulations are flexible in their implementation."
+      },
+      {
+        "id": "D",
+        "text": "Regulations are often industry led."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 18
   },
@@ -8126,11 +9130,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Data protection audits|Data protection officers|Data protection impact assessments|Data protection analysts"
+        "text": "Data protection audits"
+      },
+      {
+        "id": "B",
+        "text": "Data protection analysts"
+      },
+      {
+        "id": "C",
+        "text": "Data protection officers"
+      },
+      {
+        "id": "D",
+        "text": "Data protection impact assessments"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8140,11 +9157,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Organizations must destroy biometric data in a timely fashion.|Organizations must not transmit biometric data across an unsecured network like the Internet.|Organizations must obtain consent from individuals regarding the collection and use of biometric data.|Organizations must store biometric data in local,on-premises databases."
+        "text": "Organizations must obtain consent from individuals regarding the collection and use of biometric data."
+      },
+      {
+        "id": "B",
+        "text": "Organizations must store biometric data in local, on-premises databases."
+      },
+      {
+        "id": "C",
+        "text": "Organizations must destroy biometric data in a timely fashion."
+      },
+      {
+        "id": "D",
+        "text": "Organizations must not transmit biometric data across an unsecured network like the Internet."
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 18
   },
@@ -8154,11 +9184,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Technology-specific focus and precise implementation instructions|Regulatory weight and legal enforcement|Formal certification processes that provide competitive advantage|International support,recognition,and involvement"
+        "text": "Formal certification processes that provide competitive advantage"
+      },
+      {
+        "id": "B",
+        "text": "Regulatory weight and legal enforcement"
+      },
+      {
+        "id": "C",
+        "text": "Technology-specific focus and precise implementation instructions"
+      },
+      {
+        "id": "D",
+        "text": "International support, recognition, and involvement"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8168,11 +9211,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Emulated empathy|Personnel safety|Fair competition|Machine-readable privacy terms"
+        "text": "Machine-readable privacy terms"
+      },
+      {
+        "id": "B",
+        "text": "Fair competition"
+      },
+      {
+        "id": "C",
+        "text": "Emulated empathy"
+      },
+      {
+        "id": "D",
+        "text": "Personnel safety"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "C"
     ],
     "sourcePage": 18
   },
@@ -8182,11 +9238,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Only compress data that needs to be kept as small as possible|Only keep data for as long as it is needed|Only collect data that is strictly necessary|Only delete data that can be easily replaced"
+        "text": "Only delete data that can be easily replaced"
+      },
+      {
+        "id": "B",
+        "text": "Only collect data that is strictly necessary"
+      },
+      {
+        "id": "C",
+        "text": "Only compress data that needs to be kept as small as possible"
+      },
+      {
+        "id": "D",
+        "text": "Only keep data for as long as it is needed"
       }
     ],
     "answers": [
-      "A"
+      "B",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8196,11 +9265,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Reduced costs of development|Long-term cost savings due to avoiding fines|Reduced time to deployment|Avoidance of reputational damage"
+        "text": "Long-term cost savings due to avoiding fines"
+      },
+      {
+        "id": "B",
+        "text": "Reduced time to deployment"
+      },
+      {
+        "id": "C",
+        "text": "Reduced costs of development"
+      },
+      {
+        "id": "D",
+        "text": "Avoidance of reputational damage"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8210,11 +9292,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Improving the speed of autonomous decision making|Mitigating excessive scope or potential collateral damage|Eliminating the potential for human error in decision making|Balancing the negative effects of an AI system on people with the effects on environments and objects"
+        "text": "Improving the speed of autonomous decision making"
+      },
+      {
+        "id": "B",
+        "text": "Eliminating the potential for human error in decision making"
+      },
+      {
+        "id": "C",
+        "text": "Balancing the negative effects of an AI system on people with the effects on environments and objects"
+      },
+      {
+        "id": "D",
+        "text": "Mitigating excessive scope or potential collateral damage"
       }
     ],
     "answers": [
-      "A"
+      "C",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8224,11 +9319,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Engaging with multiple stakeholders to understand their particular needs|Assuring everyone that their desires can be accommodated without compromise|Prioritizing ethical and safety concerns over business desires in all cases and situations|Managing expectations that not everyone can get what they want,when they want it"
+        "text": "Managing expectations that not everyone can get what they want, when they want it"
+      },
+      {
+        "id": "B",
+        "text": "Prioritizing ethical and safety concerns over business desires in all cases and situations"
+      },
+      {
+        "id": "C",
+        "text": "Assuring everyone that their desires can be accommodated without compromise"
+      },
+      {
+        "id": "D",
+        "text": "Engaging with multiple stakeholders to understand their particular needs"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "sourcePage": 18
   },
@@ -8238,11 +9346,24 @@
     "choices": [
       {
         "id": "A",
-        "text": "Consolidating interests through mergers and acquisitions|Making multiple investments in a similar space to improve the outcomes of success|Locking out smaller players,leading to monopolies or cartels|Spending large sums on corporate branding and marketing"
+        "text": "Consolidating interests through mergers and acquisitions"
+      },
+      {
+        "id": "B",
+        "text": "Locking out smaller players, leading to monopolies or cartels"
+      },
+      {
+        "id": "C",
+        "text": "Spending large sums on corporate branding and marketing"
+      },
+      {
+        "id": "D",
+        "text": "Making multiple investments in a similar space to improve the outcomes of success"
       }
     ],
     "answers": [
-      "A"
+      "A",
+      "B"
     ],
     "sourcePage": 18
   }

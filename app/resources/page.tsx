@@ -133,6 +133,18 @@ function ResourcesPageContent() {
         "274 câu hỏi luyện tập Flutter, Dart, React Native, API, authentication và testing",
       link: "/resources/PRM393",
     },
+    {
+      id: 10,
+      title: "ITE302c - Ethics in AI",
+      category: "Trí tuệ nhân tạo",
+      type: "Quiz",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "357 câu hỏi ôn tập về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm",
+      link: "/resources/ITE302c",
+    },
   ];
 
   const resourceIds = useMemo(
@@ -209,7 +221,7 @@ function ResourcesPageContent() {
             Tài Nguyên Học Tập
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Giáo trình Tiếng Nhật, SWD392, PRM393, PMG201c, SYB302c và MLN
+            Giáo trình Tiếng Nhật, quiz chuyên ngành, AI có trách nhiệm và MLN
           </p>
         </motion.div>
 
