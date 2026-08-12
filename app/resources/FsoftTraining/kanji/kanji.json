@@ -7977,6 +7977,104 @@
           ]
         }
       ]
+    },
+    {
+      "id": 68,
+      "title": "Từ - Thoái - Tích - Chức",
+      "kanji": [
+        {
+          "character": "辞",
+          "meaning": "Từ, từ bỏ,辞職",
+          "onyomi": "ジ",
+          "kunyomi": "や-める",
+          "examples": [
+            {
+              "word": "辞める",
+              "reading": "やめる",
+              "meaning": "Nghỉ, thôi"
+            },
+            {
+              "word": "辞書",
+              "reading": "じしょ",
+              "meaning": "Từ điển"
+            },
+            {
+              "word": "辞職",
+              "reading": "じしょく",
+              "meaning": "Từ chức"
+            }
+          ]
+        },
+        {
+          "character": "退",
+          "meaning": "Thoái, lui, rút lui",
+          "onyomi": "タイ",
+          "kunyomi": "しりぞ-く、しりぞ-ける",
+          "examples": [
+            {
+              "word": "退く",
+              "reading": "しりぞく",
+              "meaning": "Lui, rút lui"
+            },
+            {
+              "word": "退職",
+              "reading": "たいしょく",
+              "meaning": "Nghỉ việc, thôi việc"
+            },
+            {
+              "word": "退学",
+              "reading": "たいがく",
+              "meaning": "Thôi học"
+            }
+          ]
+        },
+        {
+          "character": "積",
+          "meaning": "Tích, chất, tích lũy",
+          "onyomi": "セキ",
+          "kunyomi": "つ-む、つ-もる",
+          "examples": [
+            {
+              "word": "積む",
+              "reading": "つむ",
+              "meaning": "Chất, xếp, tích lũy"
+            },
+            {
+              "word": "積もる",
+              "reading": "つもる",
+              "meaning": "Tích lại, chất lên"
+            },
+            {
+              "word": "積雪量",
+              "reading": "せきせつりょう",
+              "meaning": "Lượng tuyết tích tụ"
+            }
+          ]
+        },
+        {
+          "character": "職",
+          "meaning": "Chức, nghề nghiệp, công việc",
+          "onyomi": "ショク、シキ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "職業",
+              "reading": "しょくぎょう",
+              "meaning": "Nghề nghiệp"
+            },
+            {
+              "word": "就職",
+              "reading": "しゅうしょく",
+              "meaning": "Tìm được việc, đi làm"
+            },
+            {
+              "word": "転職",
+              "reading": "てんしょく",
+              "meaning": "Chuyển việc"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
