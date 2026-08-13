@@ -142,8 +142,8 @@ function ResourcesPageContent() {
       downloads: 0,
       rating: 5.0,
       description:
-        "357 câu hỏi ôn tập về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm",
-      link: "/resources/ITE302c",
+        "518 câu hỏi ôn tập về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm",
+      link: "/resources/ITE302c/quiz",
     },
   ];
 

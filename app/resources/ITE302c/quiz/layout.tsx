@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ITE302c - Quiz ôn tập",
   description:
-    "Bộ 357 câu hỏi ôn tập Ethics in AI, học theo chủ đề và không giới hạn thời gian.",
+    "Bộ 518 câu hỏi ôn tập Ethics in AI, học theo chủ đề và không giới hạn thời gian.",
   keywords: [
     "ite302c",
     "ethics in ai",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ITE302c - Quiz ôn tập",
     description:
-      "Ôn tập 357 câu hỏi ITE302c theo chủ đề, không giới hạn thời gian.",
+      "Ôn tập 518 câu hỏi ITE302c theo chủ đề, không giới hạn thời gian.",
     url: "/resources/ITE302c/quiz",
     type: "website",
   },

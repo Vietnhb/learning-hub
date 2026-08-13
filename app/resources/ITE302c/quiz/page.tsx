@@ -160,7 +160,7 @@ function sameAnswers(selected: string[], answers: string[]): boolean {
 
 export default function ITE302cQuizPage() {
   const { user, loading } = useAuth();
-  const [mode, setMode] = useState<StudyMode>("review");
+  const [mode, setMode] = useState<StudyMode>("quiz");
   const [topic, setTopic] = useState(ALL_TOPICS);
   const [seed, setSeed] = useState(302);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -280,11 +280,11 @@ export default function ITE302cQuizPage() {
     <main className="min-h-screen bg-[#f5f1e8] text-slate-950 dark:bg-slate-950 dark:text-slate-50">
       <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <Link
-          href="/resources/ITE302c"
+          href="/resources"
           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-blue-700 dark:text-slate-300 dark:hover:text-blue-300"
         >
           <ArrowLeft className="h-4 w-4" />
-          ITE302c
+          Resources
         </Link>
 
         <section className="relative overflow-hidden rounded-[2rem] border border-slate-900/10 bg-[#1a1f3a] px-6 py-8 text-white shadow-[0_24px_80px_-42px_rgba(15,23,42,0.8)] sm:px-9 lg:px-12">
@@ -299,12 +299,12 @@ export default function ITE302cQuizPage() {
                 Ethics in AI Quiz
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200 sm:text-lg">
-                357 questions covering AI ethics, privacy, bias, and responsible AI development.
+                {questions.length} questions covering AI ethics, privacy, bias, and responsible AI development.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-1 sm:grid-cols-1 lg:min-w-[430px]">
-              <HeroStat value="357" label="Questions" />
+              <HeroStat value={String(questions.length)} label="Questions" />
             </div>
           </div>
         </section>

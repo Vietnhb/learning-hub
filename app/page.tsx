@@ -144,8 +144,8 @@ const featuredResources: FeaturedResource[] = [
   },
   {
     title: "ITE302c",
-    description: "357 câu hỏi về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm.",
-    href: "/resources/ITE302c",
+    description: "518 câu hỏi về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm.",
+    href: "/resources/ITE302c/quiz",
     category: "Trí tuệ nhân tạo",
     status: "Sẵn sàng",
     icon: BrainCircuit,
