@@ -9366,5 +9366,4023 @@
       "B"
     ],
     "sourcePage": 18
+  },
+  {
+    "id": "ite302c-358",
+    "question": "A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer describes an",
+    "choices": [
+      {
+        "id": "A",
+        "text": "troubleshooting problem"
+      },
+      {
+        "id": "B",
+        "text": "computer program"
+      },
+      {
+        "id": "C",
+        "text": "algorithm"
+      },
+      {
+        "id": "D",
+        "text": "set of inputs"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-359",
+    "question": "To make this algorithm functional, which step would you add to step 4? Scan to find the smallest number Set to 0 in the index in the output array Remove that number from the input array __________________________________________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Divide the array by the index, print the array output"
+      },
+      {
+        "id": "B",
+        "text": "Repeat steps 1-3, but subtract the total from the numbers summated"
+      },
+      {
+        "id": "C",
+        "text": "Print output in the correct order"
+      },
+      {
+        "id": "D",
+        "text": "Repeat steps 1-3, but add 1 to the index number for each loop"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-360",
+    "question": "Take input, get output, use output on next input is an example of a learning algorithm",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-361",
+    "question": "Learning algorithms require large datasets, which means storing identifying information about users",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-362",
+    "question": "A _________ _________ in machine learning is the idea that the algorithm itself influences the next set of inputs that go into the model. The main takeaway is that algorithms sometimes have more influence than a user's initial input.",
+    "choices": [
+      {
+        "id": "A",
+        "text": "false dichotomy"
+      },
+      {
+        "id": "B",
+        "text": "learning algorithm"
+      },
+      {
+        "id": "C",
+        "text": "large dataset"
+      },
+      {
+        "id": "D",
+        "text": "feedback loop"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-363",
+    "question": "Are anonymous datasets truly anonymous?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "No, due to combining data and re-identification"
+      },
+      {
+        "id": "B",
+        "text": "Yes, thanks to machine learning randomness algorithms"
+      },
+      {
+        "id": "C",
+        "text": "Yes, thanks to privacy regulations"
+      },
+      {
+        "id": "D",
+        "text": "No, due to lacking regulations"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-364",
+    "question": "Which of the following best describes what an algorithm is?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a type of computer that calculates problem-solving methods"
+      },
+      {
+        "id": "B",
+        "text": "a list of ingredients a computer uses to generate problems to solve"
+      },
+      {
+        "id": "C",
+        "text": "a recipe that a computer uses to solve problems"
+      },
+      {
+        "id": "D",
+        "text": "a type of process a human uses to write down what steps need to happen to get a problem solved"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-365",
+    "question": "An algorithm that takes an input, tries 10 different sorting techniques, and uses the best fit on the next 100 inputs is best described as a",
+    "choices": [
+      {
+        "id": "A",
+        "text": "data algorithm"
+      },
+      {
+        "id": "B",
+        "text": "implicit algorithm"
+      },
+      {
+        "id": "C",
+        "text": "explicit algorithm"
+      },
+      {
+        "id": "D",
+        "text": "learning algorithm"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-366",
+    "question": "Which of these steps follows the most logical order for a low-to-high sorting algorithm?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Scan to find the smallest number Set to 0 in the index in the output array Remove that number from the input array Repeat steps 1-3, but add 1 to the index number for each loop"
+      },
+      {
+        "id": "B",
+        "text": "Scan to find the smallest number Set the length of the array in the index in the output array Remove that number from the input Repeat steps 1-3, but add 1 to the index number for each loop"
+      },
+      {
+        "id": "C",
+        "text": "Scan to find the smallest number Set to 0 in the index in the output array Remove that number from the input array"
+      },
+      {
+        "id": "D",
+        "text": "Scan to find the largest number Set to 0 in the index in the output array Remove that number from the input array Repeat steps 1-3, but add 1 to the index number for each loop"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-367",
+    "question": "What's the difference between a basic and learning algorithm?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "A basic algorithm takes an input and gets an output, while a learning algorithm takes multiple inputs and gets multiple outputs"
+      },
+      {
+        "id": "B",
+        "text": "A basic algorithm takes an input, while a learning algorithm takes an input and gets an output"
+      },
+      {
+        "id": "C",
+        "text": "A basic algorithm takes an input, gets an output, while a learning algorithm takes multiple inputs and gets multiple outputs"
+      },
+      {
+        "id": "D",
+        "text": "An basic algorithm takes an input and gets an output, while a learning algorithm uses the output on the next input"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-368",
+    "question": "Pseudocode can best be defined as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a middle ground between code and plain writing that can be fed into a computer"
+      },
+      {
+        "id": "B",
+        "text": "a Python library for machine learning"
+      },
+      {
+        "id": "C",
+        "text": "a type of Javascript that is both human and machine-readable"
+      },
+      {
+        "id": "D",
+        "text": "an explainable description of code that is meant for humans, not computers"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-369",
+    "question": "What side effect of learning algorithms creates an ethical dilemma for its users?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Learning algorithms require government regulation, which is bad for software developers"
+      },
+      {
+        "id": "B",
+        "text": "Learning algorithms require large amounts of computing power, which is bad for the environment"
+      },
+      {
+        "id": "C",
+        "text": "Learning algorithms are costly to run, which drives up prices for consumer services"
+      },
+      {
+        "id": "D",
+        "text": "Learning algorithms require large datasets, which means storing identifying information about users"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-370",
+    "question": "How do anonymized datasets fall short of their goal of being anonymous?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Anonymized datasets can be combined with other datasets, which can re-identify individuals"
+      },
+      {
+        "id": "B",
+        "text": "Anonymized datasets can be traced back to the individuals by looking at their browsing history in the app"
+      },
+      {
+        "id": "C",
+        "text": "Anonymized datasets aren't actually anonymous because many of the data fields can identify a user"
+      },
+      {
+        "id": "D",
+        "text": "Anonymized datasets can be re-identifyed by anyone holding the hash key"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-371",
+    "question": "What is a likely outcome for a weather app using a learning algorithm to figure out where to put their future weather stations?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Storing data in an AWS instance with all weather stations in the country"
+      },
+      {
+        "id": "B",
+        "text": "Collecting location data every time the app is opened, potentially learning where a user lives, works, etc."
+      },
+      {
+        "id": "C",
+        "text": "Collecting weather data every time the app is opened, knowing the temperature where the app is being used"
+      },
+      {
+        "id": "D",
+        "text": "Accessing weather forecasts from local broadcasts"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-372",
+    "question": "Which of the following is a good example of a feedback loop in machine learning?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "A shopping app tracks your purchases, and recommends new things to buy"
+      },
+      {
+        "id": "B",
+        "text": "A social media site tracks engagement, uses an algorithm to surface posts you're likely to engage with, which then goes back into the algorithm"
+      },
+      {
+        "id": "C",
+        "text": "A shopping app surfaces new items to buy, which is based on dataset from customers fitting a similar profile. When you buy, you go into that dataset"
+      },
+      {
+        "id": "D",
+        "text": "A social media site surfaces controversial posts, which make users more angry and lead to more angry posts on the network"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-373",
+    "question": "A fact of learning algorithms is that",
+    "choices": [
+      {
+        "id": "A",
+        "text": "even if you haven't shared an direct datapoint about yourself, with enough related datapoints the algorithm can make an educated guess with alarming accuracy"
+      },
+      {
+        "id": "B",
+        "text": "just because they are capable of improving outputs, they don't need more inputs"
+      },
+      {
+        "id": "C",
+        "text": "they only learn when given small amounts of data, and without the proper training sample, the results can be wildly inaccurate"
+      },
+      {
+        "id": "D",
+        "text": "they cannot make predictions with current technology"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-374",
+    "question": "A basic learning model can figure out which of the 10 sorting mechanisms works best for this type of input. A complex model ______________________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "automatically derives its mechanism"
+      },
+      {
+        "id": "B",
+        "text": "automatically scans all inputs"
+      },
+      {
+        "id": "C",
+        "text": "can figure out up to 50 mechanisms"
+      },
+      {
+        "id": "D",
+        "text": "can figure out up to 150 mechanisms"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-375",
+    "question": "A model's error rate is the ratio of incorrect predictions to total predictions",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-376",
+    "question": "The goal of the _______________ is to get the model's error rate as low as possible. To do this, we repeat a cycle of feeding training data, compare predictions to actual outcomes, and adjust the model as needed.",
+    "choices": [
+      {
+        "id": "A",
+        "text": "algorithmic phase"
+      },
+      {
+        "id": "B",
+        "text": "develop phase"
+      },
+      {
+        "id": "C",
+        "text": "deployment phase"
+      },
+      {
+        "id": "D",
+        "text": "training phase"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-377",
+    "question": "As models become more complex, researchers are unable to reason why the decisions are being made. This is called the _________________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "rationality phase"
+      },
+      {
+        "id": "B",
+        "text": "black box problem"
+      },
+      {
+        "id": "C",
+        "text": "false input problem"
+      },
+      {
+        "id": "D",
+        "text": "training phase"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 19
+  },
+  {
+    "id": "ite302c-378",
+    "question": "____________ can often be caused by predicting what someone may or may not do based on data",
+    "choices": [
+      {
+        "id": "A",
+        "text": "dataset collection"
+      },
+      {
+        "id": "B",
+        "text": "retraining scenarios"
+      },
+      {
+        "id": "C",
+        "text": "irrationality"
+      },
+      {
+        "id": "D",
+        "text": "real harm"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-379",
+    "question": "Hedge funds largely rely on predictive models to judge the movement of stocks, bonds, and securities",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-380",
+    "question": "What's the difference between a basic and complex learning algorithm?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "A basic algorithm has a set amount of choices to optimize for, while a complex algorithm is given the freedom to find its own model"
+      },
+      {
+        "id": "B",
+        "text": "A basic algorithm cannot process more than 5 steps in a function, while a complex algorithm can process up to 15"
+      },
+      {
+        "id": "C",
+        "text": "A basic algorithm cannot use computer vision, while a complex algorithm can"
+      },
+      {
+        "id": "D",
+        "text": "A basic algorithm can handle simple inputs like numbers, while a complex algorithm can handle complex inputs like pictures"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-381",
+    "question": "When building a predictive model, what is the goal of the develop phase?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "To specify the type of algorithm the model should use and make sure the data is cleaned/formatted"
+      },
+      {
+        "id": "B",
+        "text": "To plug in 40% of your dataset, testing the model's accuracy"
+      },
+      {
+        "id": "C",
+        "text": "To get the model's error function below an acceptable percentage"
+      },
+      {
+        "id": "D",
+        "text": "To get the model to accept new inputs, train, and repeat training until it finds a better curve"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-382",
+    "question": "When building a predictive model, what is the goal of the training phase?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "To adjust the model based on a subset of data, optimizing for a lower error rate"
+      },
+      {
+        "id": "B",
+        "text": "To use the model in real-world scenarios, monitoring performance"
+      },
+      {
+        "id": "C",
+        "text": "To adjust training methods from backpropagation to supervised learning to see how that affects outputs"
+      },
+      {
+        "id": "D",
+        "text": "To specify the type of algorithm the model should use and make sure the data is cleaned/formatted"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-383",
+    "question": "When building a predictive model, what is the goal of the deployment phase?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "To use the model in real-life predictions, monitoring the error rate and accuracy"
+      },
+      {
+        "id": "B",
+        "text": "To plug in 40% of your dataset, testing the model's accuracy"
+      },
+      {
+        "id": "C",
+        "text": "To specify the type of algorithm the model should use and make sure the data is cleaned/formatted"
+      },
+      {
+        "id": "D",
+        "text": "To get the model to accept new inputs, train, and repeat training until it finds a better curve"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-384",
+    "question": "What are the attributes of an error function when training a predictive model",
+    "choices": [
+      {
+        "id": "A",
+        "text": "the percentage of data that is formatted properly"
+      },
+      {
+        "id": "B",
+        "text": "the ratio of training data to actual data the model has consumed"
+      },
+      {
+        "id": "C",
+        "text": "the percentage of predictions that don't match actual outcomes"
+      },
+      {
+        "id": "D",
+        "text": "the ratio of algorithm to curve in a predictive model"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-385",
+    "question": "In a complex learning function, we will understand the ____, but not the ____",
+    "choices": [
+      {
+        "id": "A",
+        "text": "inputs/outputs, algorithm"
+      },
+      {
+        "id": "B",
+        "text": "algorithm, cause and effect"
+      },
+      {
+        "id": "C",
+        "text": "input data, output data"
+      },
+      {
+        "id": "D",
+        "text": "causal link, correlation"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-386",
+    "question": "What is the black box problem?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "When a model cannot accurately judge shape or color of objects due to missing data"
+      },
+      {
+        "id": "B",
+        "text": "When a model is deployed, but researchers are unable to figure out why it's making decisions"
+      },
+      {
+        "id": "C",
+        "text": "The issue of not having enough data to accurately train a model"
+      },
+      {
+        "id": "D",
+        "text": "The problem created when researchers don't create accurate attributes for a model"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-387",
+    "question": "Which of the following is a negative consequence of a predictive model used in real life?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "A model used by a bank wrongly predicts a person will not be able to pay off a loan"
+      },
+      {
+        "id": "B",
+        "text": "A model used by a lab wrongly predicts a person will not be able to pay their credit card"
+      },
+      {
+        "id": "C",
+        "text": "A model used by a bank accurately predicts a person will not be able to pay off a loan"
+      },
+      {
+        "id": "D",
+        "text": "A model used by a lab indicates a person is in danger"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-388",
+    "question": "How are predictive models used in hedge funds?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "they aid researchers by forecasting financial collapse"
+      },
+      {
+        "id": "B",
+        "text": "they provide predictions to shareholders to estimate returns"
+      },
+      {
+        "id": "C",
+        "text": "they predict whether people will be able to pay off loans, and then provide loans"
+      },
+      {
+        "id": "D",
+        "text": "they predict future movement of stocks and find points to exploit the market moving in either direction"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-389",
+    "question": "What is one possible reason a model may predict a higher crime rate based on datasets used?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "If a dataset isn't properly formatted, crime may be linked to the error function, outputting false data"
+      },
+      {
+        "id": "B",
+        "text": "If drug arrests are historically high in that area, the model may correlate crime with areas of high drug use based on the datasets"
+      },
+      {
+        "id": "C",
+        "text": "If crime is down in an area, a model may predict a parabolic curve which estimates crime is due to rise again"
+      },
+      {
+        "id": "D",
+        "text": "The model's training curve was not provided enough data"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-390",
+    "question": "To measure accuracy, take the number of ________ results and divide over the number of all results",
+    "choices": [
+      {
+        "id": "A",
+        "text": "false positive and false negative"
+      },
+      {
+        "id": "B",
+        "text": "true positive and false negative"
+      },
+      {
+        "id": "C",
+        "text": "false positive and true negative"
+      },
+      {
+        "id": "D",
+        "text": "true positive and true negative"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-391",
+    "question": "A false negative result is one in which the model predicts a result was negative, and in reality it was ___________. It is an _________ prediction",
+    "choices": [
+      {
+        "id": "A",
+        "text": "positive, incorrect"
+      },
+      {
+        "id": "B",
+        "text": "negative, correct"
+      },
+      {
+        "id": "C",
+        "text": "positive, correct"
+      },
+      {
+        "id": "D",
+        "text": "negative, incorrect"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-392",
+    "question": "City and State are correlated data, but a model will measure no variation and the results will not be affected",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-393",
+    "question": "A ________ training set relies on running a final accuracy test before deploying a model. An __________ training set relies on multiple tests to ensure that a model is free of bias",
+    "choices": [
+      {
+        "id": "A",
+        "text": "classic, optimized"
+      },
+      {
+        "id": "B",
+        "text": "optimized, classic"
+      },
+      {
+        "id": "C",
+        "text": "test, classic"
+      },
+      {
+        "id": "D",
+        "text": "sample, optimized"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-394",
+    "question": "An unknown unknown is an example of a cultural reflection of data",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-395",
+    "question": "An ethical predictive model needs to be accurate, _____________, and fair",
+    "choices": [
+      {
+        "id": "A",
+        "text": "explainable"
+      },
+      {
+        "id": "B",
+        "text": "moral"
+      },
+      {
+        "id": "C",
+        "text": "predictable"
+      },
+      {
+        "id": "D",
+        "text": "truthful"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-396",
+    "question": "To measure a predictive model's accuracy, you",
+    "choices": [
+      {
+        "id": "A",
+        "text": "divide the number of correct predictions by the total number of predictions"
+      },
+      {
+        "id": "B",
+        "text": "measure the ratio of the model's error curve"
+      },
+      {
+        "id": "C",
+        "text": "multiply the number of total predictions by the percentage of correct predictions"
+      },
+      {
+        "id": "D",
+        "text": "divide the number of predictions by the total dataset"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-397",
+    "question": "A predictive model's false negative result can be defined as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "the predicted result was positive, and the actual result was positive"
+      },
+      {
+        "id": "B",
+        "text": "the predicted result was negative, and the actual result was negative"
+      },
+      {
+        "id": "C",
+        "text": "the predicted result was negative, and the actual result was positive"
+      },
+      {
+        "id": "D",
+        "text": "the predicted result was positive, and the actual result was negative"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 20
+  },
+  {
+    "id": "ite302c-398",
+    "question": "A predictive model's true positive result can be defined as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "the predicted result was positive, and the actual result was positive"
+      },
+      {
+        "id": "B",
+        "text": "the predicted result was positive, and the actual result was negative"
+      },
+      {
+        "id": "C",
+        "text": "the predicted result was negative, and the actual result was negative"
+      },
+      {
+        "id": "D",
+        "text": "the predicted result was negative, and the actual result was positive"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-399",
+    "question": "Model inputs of address with \"City + State\" as separate inputs from a dataset would violate which accuracy guideline?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "No correlating data"
+      },
+      {
+        "id": "B",
+        "text": "First principles"
+      },
+      {
+        "id": "C",
+        "text": "Domain expertise"
+      },
+      {
+        "id": "D",
+        "text": "Objective summarization"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-400",
+    "question": "Once a dataset has been cleaned, which accuracy guideline ensures your model is looking at the problem correctly?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Dataset verification"
+      },
+      {
+        "id": "B",
+        "text": "First principles"
+      },
+      {
+        "id": "C",
+        "text": "Domain expertise"
+      },
+      {
+        "id": "D",
+        "text": "Objective summarization"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-401",
+    "question": "A good example of cultural reflection in training data is",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a model fails to recognize cultural differences due to incorrect attributes"
+      },
+      {
+        "id": "B",
+        "text": "a predictive model incorporates training data from a variety of sources"
+      },
+      {
+        "id": "C",
+        "text": "a model selects for one demographic less often because of their historical representation"
+      },
+      {
+        "id": "D",
+        "text": "an image recognition model selects one face over another based on sample data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-402",
+    "question": "A good example of empirical reflection in training data is",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a model fails to recognize cultural differences due to incorrect attributes"
+      },
+      {
+        "id": "B",
+        "text": "an image recognition model selects one face over another based on sample data"
+      },
+      {
+        "id": "C",
+        "text": "A true positive result that defies the training data set"
+      },
+      {
+        "id": "D",
+        "text": "an image recognition model cannot tell a difference between a photo of a dog and a photo of a photo of a dog"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-403",
+    "question": "A training set based on feeding 60% of data, validating on 20% of data, and then designing multiple tests for the remaining 20% of data is referred to as an",
+    "choices": [
+      {
+        "id": "A",
+        "text": "classic training set"
+      },
+      {
+        "id": "B",
+        "text": "false positive set"
+      },
+      {
+        "id": "C",
+        "text": "predictive training set"
+      },
+      {
+        "id": "D",
+        "text": "optimized training set"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-404",
+    "question": "Our goals for building an ethical predictive model include making sure the results are",
+    "choices": [
+      {
+        "id": "A",
+        "text": "accurate, precise, fair"
+      },
+      {
+        "id": "B",
+        "text": "precise, methodical, ethical"
+      },
+      {
+        "id": "C",
+        "text": "precise, explainable, predictable"
+      },
+      {
+        "id": "D",
+        "text": "accurate, fair and explainable"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-405",
+    "question": "Unknown Unknowns refer to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "being unsure about the morals of the research team"
+      },
+      {
+        "id": "B",
+        "text": "facing unknown empirical data with an incomplete dataset"
+      },
+      {
+        "id": "C",
+        "text": "lack of explainability and what a model is actually looking at to make it's prediction"
+      },
+      {
+        "id": "D",
+        "text": "an uncertainty of how the data is gathered"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-406",
+    "question": "Narrow AI (ANI) is defined as a specific type of artificial intelligence in which a technology outperforms humans in some defined task.",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-407",
+    "question": "An ethical, evolved predictive model would need to mimic a researcher's ability to _________________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "eliminate bias"
+      },
+      {
+        "id": "B",
+        "text": "self-learn"
+      },
+      {
+        "id": "C",
+        "text": "scrub data"
+      },
+      {
+        "id": "D",
+        "text": "parse through datasets"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-408",
+    "question": "The second evolution of decision-making AI would enable",
+    "choices": [
+      {
+        "id": "A",
+        "text": "predictive models to decide war strategy"
+      },
+      {
+        "id": "B",
+        "text": "predictive models to drive cars"
+      },
+      {
+        "id": "C",
+        "text": "predictive models to approve loans"
+      },
+      {
+        "id": "D",
+        "text": "predictive models to start companies"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-409",
+    "question": "Researchers believe that a general-purpose AI must be available to as many as possible, making it similar to a ________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "government program"
+      },
+      {
+        "id": "B",
+        "text": "utility"
+      },
+      {
+        "id": "C",
+        "text": "system of money"
+      },
+      {
+        "id": "D",
+        "text": "tax plan"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-410",
+    "question": "A perverse instantiation is an unintended negative outcome of programming a goal that is too specific given to general intelligence",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-411",
+    "question": "For-profit colleges tend to use predictive models",
+    "choices": [
+      {
+        "id": "A",
+        "text": "to evaluate the standards of their professors"
+      },
+      {
+        "id": "B",
+        "text": "to see which applicants are most likely to graduate"
+      },
+      {
+        "id": "C",
+        "text": "to see which candidates are most likely to receive government loans."
+      },
+      {
+        "id": "D",
+        "text": "to accelerate their research departments"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-412",
+    "question": "For a model to clean, parse, and self-train it's own dataset while remaining impartial, the model needs",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a test for recency bias"
+      },
+      {
+        "id": "B",
+        "text": "more powerful computing algorithms to auto-scrub data"
+      },
+      {
+        "id": "C",
+        "text": "a list of bias and domain tests to run and adjust for"
+      },
+      {
+        "id": "D",
+        "text": "10x the amount of data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-413",
+    "question": "For a model to make decisions that involve human life, the model needs",
+    "choices": [
+      {
+        "id": "A",
+        "text": "enough computing power to make correct predictions 100% of the time"
+      },
+      {
+        "id": "B",
+        "text": "a moral code of reasoning and priorities"
+      },
+      {
+        "id": "C",
+        "text": "a list of bias tests to run against possible wrong outcomes"
+      },
+      {
+        "id": "D",
+        "text": "programmed reflexive decision making ability"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-414",
+    "question": "A type of artificial intelligence that outperforms humans in some defined task is known as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Special AI"
+      },
+      {
+        "id": "B",
+        "text": "AEI"
+      },
+      {
+        "id": "C",
+        "text": "Narrow AI"
+      },
+      {
+        "id": "D",
+        "text": "General AI"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-415",
+    "question": "A type of artificial intelligence that outperforms humans in all tasks is known as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Outwit AI"
+      },
+      {
+        "id": "B",
+        "text": "Encompassing AI"
+      },
+      {
+        "id": "C",
+        "text": "Specific AI"
+      },
+      {
+        "id": "D",
+        "text": "General AI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-416",
+    "question": "In 2019, ____% of equity-futures and cash-equity trades were executed by algorithms",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1-5%"
+      },
+      {
+        "id": "B",
+        "text": "80-90%"
+      },
+      {
+        "id": "C",
+        "text": "20-30%"
+      },
+      {
+        "id": "D",
+        "text": "11-17%"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-417",
+    "question": "The optimistic view of general AI could be accurately summarized as AI as a ____",
+    "choices": [
+      {
+        "id": "A",
+        "text": "weapon"
+      },
+      {
+        "id": "B",
+        "text": "utility"
+      },
+      {
+        "id": "C",
+        "text": "human right"
+      },
+      {
+        "id": "D",
+        "text": "peace-keeping tool"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 21
+  },
+  {
+    "id": "ite302c-418",
+    "question": "The pessimist view of general AI references a scenario in which advancement is _____",
+    "choices": [
+      {
+        "id": "A",
+        "text": "winner take all"
+      },
+      {
+        "id": "B",
+        "text": "impossible"
+      },
+      {
+        "id": "C",
+        "text": "creating AI for all governments"
+      },
+      {
+        "id": "D",
+        "text": "a potential extinction event"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-419",
+    "question": "An ethical general purpose AI must _____ while not harming the safety of humanity",
+    "choices": [
+      {
+        "id": "A",
+        "text": "be 100% accurate"
+      },
+      {
+        "id": "B",
+        "text": "benefit as many people as possible"
+      },
+      {
+        "id": "C",
+        "text": "keep those in power responsible"
+      },
+      {
+        "id": "D",
+        "text": "not enact hate"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-420",
+    "question": "\"Companies have an obligation to their shareholders\" is part of a view that sees artificial intelligence as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a gimmick for enterprises, unless general intelligence is achieved"
+      },
+      {
+        "id": "B",
+        "text": "an overall good for humanity, no matter the consequences"
+      },
+      {
+        "id": "C",
+        "text": "just another tool that accelerates research, like online advertising"
+      },
+      {
+        "id": "D",
+        "text": "a harmful tool that will bring about the end of capitalism"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-421",
+    "question": "An unintended negative outcome of programming a broad goal into general intelligence is known as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "artificial sanctification"
+      },
+      {
+        "id": "B",
+        "text": "an ethical dilemma"
+      },
+      {
+        "id": "C",
+        "text": "an enduring output"
+      },
+      {
+        "id": "D",
+        "text": "perverse instantiation"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-422",
+    "question": "True or false: The definition of fairness is \"just treatment without bias and contempt\"",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-423",
+    "question": "Statistical parity as a fairness goal makes the most sense when",
+    "choices": [
+      {
+        "id": "A",
+        "text": "distributing randomly, ex. tickets"
+      },
+      {
+        "id": "B",
+        "text": "distributing by merit, ex. loans"
+      },
+      {
+        "id": "C",
+        "text": "distributing by gender, ex. tickets"
+      },
+      {
+        "id": "D",
+        "text": "distributing by error rate, ex. loans"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-424",
+    "question": "Error rate parity means an equal chance of",
+    "choices": [
+      {
+        "id": "A",
+        "text": "approval for each group"
+      },
+      {
+        "id": "B",
+        "text": "prediction rate for each group"
+      },
+      {
+        "id": "C",
+        "text": "mistakes made for each group"
+      },
+      {
+        "id": "D",
+        "text": "outcomes for each group"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-425",
+    "question": "If you know one group is misrepresented in merit by training data, one way to ensure fairness is to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "delete that group's data from the dataset"
+      },
+      {
+        "id": "B",
+        "text": "protect a different group"
+      },
+      {
+        "id": "C",
+        "text": "create a separate threshold for that group"
+      },
+      {
+        "id": "D",
+        "text": "reboot the training data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-426",
+    "question": "True or false: fairness in machine learning cannot protect all individuals within protected groups from harm",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-427",
+    "question": "Our goal in machine learning fairness is to minimize _______ as long as _______ is obtained",
+    "choices": [
+      {
+        "id": "A",
+        "text": "unfairness, equality"
+      },
+      {
+        "id": "B",
+        "text": "accuracy issues, unfairness"
+      },
+      {
+        "id": "C",
+        "text": "equality, error rates"
+      },
+      {
+        "id": "D",
+        "text": "error rates, parity"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-428",
+    "question": "True or false: it is practical to protect all possible subgroups in predictive modeling",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-429",
+    "question": "In machine learning, a pareto curve helps us",
+    "choices": [
+      {
+        "id": "A",
+        "text": "highlight the inequality in our model"
+      },
+      {
+        "id": "B",
+        "text": "select which model will give the best results"
+      },
+      {
+        "id": "C",
+        "text": "pick an optimal threshold for accuracy and error rate"
+      },
+      {
+        "id": "D",
+        "text": "pick an optimal tradeoff between fairness and accuracy"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-430",
+    "question": "True or false: A blind attribute model protects group fairness by not including group membership in predictions",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-431",
+    "question": "An adversarial algorithm is _______________ to identify weaknesses in black box models",
+    "choices": [
+      {
+        "id": "A",
+        "text": "given no data"
+      },
+      {
+        "id": "B",
+        "text": "purposefully fair"
+      },
+      {
+        "id": "C",
+        "text": "trained with large datasets"
+      },
+      {
+        "id": "D",
+        "text": "purposefully biased"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-432",
+    "question": "True or false: our analysis revealed that Word2Vec is not a black box model",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-433",
+    "question": "Which step in the fairness process would be most appropriate to introduce an auditing model?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "post-processing"
+      },
+      {
+        "id": "B",
+        "text": "in-processing"
+      },
+      {
+        "id": "C",
+        "text": "pre-processing"
+      },
+      {
+        "id": "D",
+        "text": "sub-processing"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-434",
+    "question": "True or false: the no free lunch theorem states that we cannot have fair models without giving up something else",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-435",
+    "question": "Which of the following is a good example of sample bias?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "your model is broken because it cannot sample the right attribute"
+      },
+      {
+        "id": "B",
+        "text": "your model is trained to recognize pets, but you only give it photos of dogs"
+      },
+      {
+        "id": "C",
+        "text": "your model is designed to give loans to those who need it, but it is trained with unfair data"
+      },
+      {
+        "id": "D",
+        "text": "your model is trained to avoid bias, but it contains no samples of that bias"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-436",
+    "question": "When cleaning/parsing data removes a potentially important attribute, that is referred to as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "confirmation bias"
+      },
+      {
+        "id": "B",
+        "text": "exclusion bias"
+      },
+      {
+        "id": "C",
+        "text": "automation bias"
+      },
+      {
+        "id": "D",
+        "text": "observer bias"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-437",
+    "question": "Labeling outputs made by predictive models can avoid which feedback issue?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "fairness score bias"
+      },
+      {
+        "id": "B",
+        "text": "re-training bias"
+      },
+      {
+        "id": "C",
+        "text": "predictive loop bias"
+      },
+      {
+        "id": "D",
+        "text": "sample bias"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 22
+  },
+  {
+    "id": "ite302c-438",
+    "question": "True or false: Recommendation engines are not as susceptible to feedback bias due to their constraints on data inputs",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-439",
+    "question": "A \"best response\" in game theory is when",
+    "choices": [
+      {
+        "id": "A",
+        "text": "a user leaves a group setting to pursue individual goals"
+      },
+      {
+        "id": "B",
+        "text": "a user comes up with the best response from the group"
+      },
+      {
+        "id": "C",
+        "text": "a user has no choice but to follow the group dynamic to benefit"
+      },
+      {
+        "id": "D",
+        "text": "a user chooses the least fair option"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-440",
+    "question": "A dataset column that cannot directly identify, like zip code, is called a",
+    "choices": [
+      {
+        "id": "A",
+        "text": "non-sensitive column"
+      },
+      {
+        "id": "B",
+        "text": "personally identifiable column"
+      },
+      {
+        "id": "C",
+        "text": "quasi-identifiable column"
+      },
+      {
+        "id": "D",
+        "text": "sensitive column"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-441",
+    "question": "True or false: k-anonymity protects users from all privacy violations",
+    "choices": [
+      {
+        "id": "A",
+        "text": "true"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-442",
+    "question": "Which of the following is an example of partially obfuscated data?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Had a stroke"
+      },
+      {
+        "id": "B",
+        "text": "94103"
+      },
+      {
+        "id": "C",
+        "text": "60-70 years old"
+      },
+      {
+        "id": "D",
+        "text": "65 years old"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-443",
+    "question": "True or false: a non-sensitive column can endanger user privacy",
+    "choices": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "false"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-444",
+    "question": "Why is it important to limit precise outputs in a predictive model?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "It limits the ability of researchers"
+      },
+      {
+        "id": "B",
+        "text": "It can help users make better decisions"
+      },
+      {
+        "id": "C",
+        "text": "It removes the datasets in danger of violating privacy"
+      },
+      {
+        "id": "D",
+        "text": "It can help limit adversarial attacks"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-445",
+    "question": "Where is a perturbed input used?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "To observe differing outputs"
+      },
+      {
+        "id": "B",
+        "text": "When building a model"
+      },
+      {
+        "id": "C",
+        "text": "To identify an error in a machine learning model"
+      },
+      {
+        "id": "D",
+        "text": "To increase public dataset awareness"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-446",
+    "question": "Which of the following is not a recommended security practice in machine learning?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Create a chain of command"
+      },
+      {
+        "id": "B",
+        "text": "Enact a sound data governance structure"
+      },
+      {
+        "id": "C",
+        "text": "Perform threat modeling"
+      },
+      {
+        "id": "D",
+        "text": "Ensure that all team members/stakeholders have a basic understanding of security"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-447",
+    "question": "True or false: data minimization is the concept of shrinking datasets to only what is required to fulfill a general purpose",
+    "choices": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-448",
+    "question": "A model working at 95% with 100k rows of data and 97% with 500k rows is an example of",
+    "choices": [
+      {
+        "id": "A",
+        "text": "sensitive columns"
+      },
+      {
+        "id": "B",
+        "text": "dataset limitations"
+      },
+      {
+        "id": "C",
+        "text": "accuracy issues"
+      },
+      {
+        "id": "D",
+        "text": "diminishing returns"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-449",
+    "question": "True or false: global differential privacy is added after data is collected",
+    "choices": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-450",
+    "question": "Randomized response in local differential privacy gives its users which of the following?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "plausible deniability"
+      },
+      {
+        "id": "B",
+        "text": "global privacy"
+      },
+      {
+        "id": "C",
+        "text": "k-anonymity"
+      },
+      {
+        "id": "D",
+        "text": "fairness guarantees"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-451",
+    "question": "In reverse-engineering a double coin flip differential model, what would be the amount of falsified \"yes/no\" responses in our dataset?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "75%"
+      },
+      {
+        "id": "B",
+        "text": "50%"
+      },
+      {
+        "id": "C",
+        "text": "25%"
+      },
+      {
+        "id": "D",
+        "text": "100%"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-452",
+    "question": "True or false: a glass box model is traditionally preferred by businesses",
+    "choices": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-453",
+    "question": "An ethical model will be more fair and explainable, at the expense of ________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "recruiting"
+      },
+      {
+        "id": "B",
+        "text": "dataset collection"
+      },
+      {
+        "id": "C",
+        "text": "accuracy"
+      },
+      {
+        "id": "D",
+        "text": "privacy"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-454",
+    "question": "Explainable models can provide _________, which look very similar to auditing models",
+    "choices": [
+      {
+        "id": "A",
+        "text": "attribute weight charts"
+      },
+      {
+        "id": "B",
+        "text": "dataset fairness graphs"
+      },
+      {
+        "id": "C",
+        "text": "privacy protection"
+      },
+      {
+        "id": "D",
+        "text": "model renderings"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-455",
+    "question": "Which of the following is a strategy to improve group outcomes using game theory?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "explainable recommendation systems"
+      },
+      {
+        "id": "B",
+        "text": "ethical predictive sets"
+      },
+      {
+        "id": "C",
+        "text": "privacy-enforcing algorithms"
+      },
+      {
+        "id": "D",
+        "text": "fairness-enforcing methods"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-456",
+    "question": "True or false: glass box models allow agents to re-run them",
+    "choices": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-457",
+    "question": "A differentially private search algorithm would add some ______ at the expense of _______",
+    "choices": [
+      {
+        "id": "A",
+        "text": "accuracy, noise"
+      },
+      {
+        "id": "B",
+        "text": "noise, accuracy"
+      },
+      {
+        "id": "C",
+        "text": "noise, privacy"
+      },
+      {
+        "id": "D",
+        "text": "data points, privacy"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 23
+  },
+  {
+    "id": "ite302c-458",
+    "question": "Fairness is best defined as just treatment without __________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "prejudice and favoritism"
+      },
+      {
+        "id": "B",
+        "text": "discrimination and prejudice"
+      },
+      {
+        "id": "C",
+        "text": "bias and contempt"
+      },
+      {
+        "id": "D",
+        "text": "favoritism or discrimination"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-459",
+    "question": "Which type of fairness would make sense when dividing tickets evenly between groups?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "statistical parity"
+      },
+      {
+        "id": "B",
+        "text": "error rate parity"
+      },
+      {
+        "id": "C",
+        "text": "equality of false positives"
+      },
+      {
+        "id": "D",
+        "text": "equality of prediction rate"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-460",
+    "question": "Which type of fairness fails to address merit while maintaining accuracy?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "equality of prediction rate"
+      },
+      {
+        "id": "B",
+        "text": "statistical parity"
+      },
+      {
+        "id": "C",
+        "text": "equality of false positives"
+      },
+      {
+        "id": "D",
+        "text": "error rate parity"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-461",
+    "question": "A model that prioritizes equality on the outputs uses",
+    "choices": [
+      {
+        "id": "A",
+        "text": "error rate parity"
+      },
+      {
+        "id": "B",
+        "text": "statistical parity"
+      },
+      {
+        "id": "C",
+        "text": "equality of prediction rate"
+      },
+      {
+        "id": "D",
+        "text": "equality of assignment rate"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-462",
+    "question": "Fairness in machine learning can protect groups from bias, but can still harm",
+    "choices": [
+      {
+        "id": "A",
+        "text": "future models"
+      },
+      {
+        "id": "B",
+        "text": "individuals within those groups"
+      },
+      {
+        "id": "C",
+        "text": "researchers"
+      },
+      {
+        "id": "D",
+        "text": "training datasets"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-463",
+    "question": "A goal of a fair model's accuracy standards is to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "minimize the fairness score as long as the error rate isn't affected"
+      },
+      {
+        "id": "B",
+        "text": "minimize the error rate as long as parity is obtained"
+      },
+      {
+        "id": "C",
+        "text": "minimize the quality metrics as long as the quantity metrics aren't affected"
+      },
+      {
+        "id": "D",
+        "text": "minimize the error rate as long as the training data isn't affected"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-464",
+    "question": "A model that makes more mistakes by moving its decision threshold down 40% of its worthiness metric will be potentially",
+    "choices": [
+      {
+        "id": "A",
+        "text": "less fair but more accurate"
+      },
+      {
+        "id": "B",
+        "text": "more accurate and fairer"
+      },
+      {
+        "id": "C",
+        "text": "fairer but less accurate"
+      },
+      {
+        "id": "D",
+        "text": "less accurate and less fair"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-465",
+    "question": "If one group comprises the majority of the training data, they will skew the dataset and give the model",
+    "choices": [
+      {
+        "id": "A",
+        "text": "more fairness for that group"
+      },
+      {
+        "id": "B",
+        "text": "more confidence about that group"
+      },
+      {
+        "id": "C",
+        "text": "less confidence about that group"
+      },
+      {
+        "id": "D",
+        "text": "less fairness for that group"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-466",
+    "question": "If we know one group's worthiness score has been artificially inflated, one solution for fairness is to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "balance the error rate by prioritizing the other group"
+      },
+      {
+        "id": "B",
+        "text": "Add the inflation to the other data"
+      },
+      {
+        "id": "C",
+        "text": "remove that group from the dataset"
+      },
+      {
+        "id": "D",
+        "text": "creating separate decision thresholds for each group"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-467",
+    "question": "An unfair model will by nature",
+    "choices": [
+      {
+        "id": "A",
+        "text": "optimize for making the fewest mistakes"
+      },
+      {
+        "id": "B",
+        "text": "optimize for making the fewest decisions"
+      },
+      {
+        "id": "C",
+        "text": "try to balance groups automatically"
+      },
+      {
+        "id": "D",
+        "text": "optimize for making the most errors"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-468",
+    "question": "A state where resources cannot be reallocated to make one individual better off without making at least one individual worse off is known as a",
+    "choices": [
+      {
+        "id": "A",
+        "text": "prisoner's dilemma"
+      },
+      {
+        "id": "B",
+        "text": "pareto efficiency"
+      },
+      {
+        "id": "C",
+        "text": "aggregate curve"
+      },
+      {
+        "id": "D",
+        "text": "boron letter"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-469",
+    "question": "In machine learning, what do we plot on the X,Y axis to determine a pareto curve?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Rejection rate, subgroup fairness rate"
+      },
+      {
+        "id": "B",
+        "text": "Rejection rate, false-positive rate"
+      },
+      {
+        "id": "C",
+        "text": "Error rate, true positive rate"
+      },
+      {
+        "id": "D",
+        "text": "Error rate, rejection rate"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-470",
+    "question": "Why is it impractical to protect all possible subgroups in predictive models?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Fairness scores won't be high enough to be reasonable"
+      },
+      {
+        "id": "B",
+        "text": "Accuracy will be lowered beyond a reasonable rate"
+      },
+      {
+        "id": "C",
+        "text": "There won't be enough data to reflect each subgroup"
+      },
+      {
+        "id": "D",
+        "text": "Individuals do not need protection from predictive models"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-471",
+    "question": "A model that equalizes the number of mistakes it makes for each subgroup to reduce harm is deciding on",
+    "choices": [
+      {
+        "id": "A",
+        "text": "equality of training data"
+      },
+      {
+        "id": "B",
+        "text": "equality of prediction bias"
+      },
+      {
+        "id": "C",
+        "text": "equality of false negatives"
+      },
+      {
+        "id": "D",
+        "text": "equality of true outcomes"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-472",
+    "question": "A _________ model can still be unfair even though it won't explicitly know which groups are being inputted into the system",
+    "choices": [
+      {
+        "id": "A",
+        "text": "false-negative optimized"
+      },
+      {
+        "id": "B",
+        "text": "biased training"
+      },
+      {
+        "id": "C",
+        "text": "single attribute"
+      },
+      {
+        "id": "D",
+        "text": "blind attribute"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-473",
+    "question": "What tools do researchers have to evaluate the fairness of existing black box models?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Evaluate inputs, evaluate data"
+      },
+      {
+        "id": "B",
+        "text": "Change inputs, evaluate training data"
+      },
+      {
+        "id": "C",
+        "text": "Change training data, evaluate outputs"
+      },
+      {
+        "id": "D",
+        "text": "Change inputs, evaluate outputs"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-474",
+    "question": "A \"purposefully biased\" algorithm used to identify unfair attributes is known as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "an aggregate algorithm"
+      },
+      {
+        "id": "B",
+        "text": "an adversarial algorithm"
+      },
+      {
+        "id": "C",
+        "text": "a predictive model"
+      },
+      {
+        "id": "D",
+        "text": "a discriminatory algorithm"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-475",
+    "question": "In presenting an audit report, a researcher would",
+    "choices": [
+      {
+        "id": "A",
+        "text": "re-train the model"
+      },
+      {
+        "id": "B",
+        "text": "de-bias the results"
+      },
+      {
+        "id": "C",
+        "text": "score the weight of input attributes on output"
+      },
+      {
+        "id": "D",
+        "text": "prevent the model from launching"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-476",
+    "question": "In fixing the Word2Vec model, we have an advantage over a traditional black box model in that",
+    "choices": [
+      {
+        "id": "A",
+        "text": "we can decide which inputs to use"
+      },
+      {
+        "id": "B",
+        "text": "we have access to the training data"
+      },
+      {
+        "id": "C",
+        "text": "we can see the decision-making model"
+      },
+      {
+        "id": "D",
+        "text": "we can generate a fairness score"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-477",
+    "question": "An auditing model is an example of a ______ bias mitigation method",
+    "choices": [
+      {
+        "id": "A",
+        "text": "pre-processing"
+      },
+      {
+        "id": "B",
+        "text": "sub-processing"
+      },
+      {
+        "id": "C",
+        "text": "in-processing"
+      },
+      {
+        "id": "D",
+        "text": "post-processing"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 24
+  },
+  {
+    "id": "ite302c-478",
+    "question": "The __________ theorem states that all models have the same error rate when averaged over all possible data generating distributions.",
+    "choices": [
+      {
+        "id": "A",
+        "text": "biased aggregate"
+      },
+      {
+        "id": "B",
+        "text": "no free lunch"
+      },
+      {
+        "id": "C",
+        "text": "zero handouts"
+      },
+      {
+        "id": "D",
+        "text": "pareto efficiency"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-479",
+    "question": "As a cognitive bias, humans see lack of context/meaning around a piece of information and tend to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "seek authority figures"
+      },
+      {
+        "id": "B",
+        "text": "disagree with their previous beliefs"
+      },
+      {
+        "id": "C",
+        "text": "fill in gaps with existing knowledge"
+      },
+      {
+        "id": "D",
+        "text": "use biased sources of research"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-480",
+    "question": "When your collected data doesn't accurately reflect the full environment, you're experiencing",
+    "choices": [
+      {
+        "id": "A",
+        "text": "prejudice bias"
+      },
+      {
+        "id": "B",
+        "text": "exclusion bias"
+      },
+      {
+        "id": "C",
+        "text": "observer bias"
+      },
+      {
+        "id": "D",
+        "text": "sample bias"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-481",
+    "question": "The tendency to only seek attributes in existing collected data is known as",
+    "choices": [
+      {
+        "id": "A",
+        "text": "observer bias"
+      },
+      {
+        "id": "B",
+        "text": "exclusion bias"
+      },
+      {
+        "id": "C",
+        "text": "availability bias"
+      },
+      {
+        "id": "D",
+        "text": "prejudice bias"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-482",
+    "question": "An example of automation bias is",
+    "choices": [
+      {
+        "id": "A",
+        "text": "using new data over existing data"
+      },
+      {
+        "id": "B",
+        "text": "using biased survey data instead of parsed survey data"
+      },
+      {
+        "id": "C",
+        "text": "using scraped twitter data over survey data"
+      },
+      {
+        "id": "D",
+        "text": "using parsed twitter data over parsed Facebook data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-483",
+    "question": "A ________ is when a model is validated by it's own influence on predictions",
+    "choices": [
+      {
+        "id": "A",
+        "text": "self-fulfilling prediction"
+      },
+      {
+        "id": "B",
+        "text": "false prediction set"
+      },
+      {
+        "id": "C",
+        "text": "dataset scrub"
+      },
+      {
+        "id": "D",
+        "text": "training set error"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-484",
+    "question": "One way to avoid feedback loops in machine learning is to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "investigate exclusion bias"
+      },
+      {
+        "id": "B",
+        "text": "scrub datasets after each decision"
+      },
+      {
+        "id": "C",
+        "text": "destroy previous training data"
+      },
+      {
+        "id": "D",
+        "text": "label outputs to prevent re-training bias"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-485",
+    "question": "Dating algorithms become biased mostly through offering users _________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "unlimited matches per day"
+      },
+      {
+        "id": "B",
+        "text": "access to separate data models"
+      },
+      {
+        "id": "C",
+        "text": "collaborative filtering"
+      },
+      {
+        "id": "D",
+        "text": "different ways to match with users"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-486",
+    "question": "Predictive loops in marketplace models like dating apps are especially susceptible to bias due to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "marketplace forces"
+      },
+      {
+        "id": "B",
+        "text": "engagement levels"
+      },
+      {
+        "id": "C",
+        "text": "fairness quotients"
+      },
+      {
+        "id": "D",
+        "text": "short feedback cycles"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-487",
+    "question": "Game theory states that outcomes that are best for _____ can be obscured by outcomes best for ______",
+    "choices": [
+      {
+        "id": "A",
+        "text": "the dataset, the model"
+      },
+      {
+        "id": "B",
+        "text": "the group, the individual"
+      },
+      {
+        "id": "C",
+        "text": "the model, the individual"
+      },
+      {
+        "id": "D",
+        "text": "the group, the dataset"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-488",
+    "question": "A dataset attribute that is not identifiable but constitutes data about the individual that needs to be protected is known as a",
+    "choices": [
+      {
+        "id": "A",
+        "text": "non-sensitive column"
+      },
+      {
+        "id": "B",
+        "text": "explicitly private column"
+      },
+      {
+        "id": "C",
+        "text": "quasi-identifier"
+      },
+      {
+        "id": "D",
+        "text": "sensitive column"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-489",
+    "question": "K-anonymity in a dataset is achieved when each individual cannot be",
+    "choices": [
+      {
+        "id": "A",
+        "text": "hidden from a quasi-identifier column as long as K individuals belong"
+      },
+      {
+        "id": "B",
+        "text": "distinguished from at least K individuals who are also in the dataset"
+      },
+      {
+        "id": "C",
+        "text": "harmed from datasets with K individuals belonging to the sensitive class"
+      },
+      {
+        "id": "D",
+        "text": "reidentified in K datasets"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-490",
+    "question": "A major downside to k-anonymity is that re-identification is possible with",
+    "choices": [
+      {
+        "id": "A",
+        "text": "database leaks"
+      },
+      {
+        "id": "B",
+        "text": "expanding k values"
+      },
+      {
+        "id": "C",
+        "text": "sensitive columns"
+      },
+      {
+        "id": "D",
+        "text": "multiple datasets"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-491",
+    "question": "A hospital dataset protects whether an individual has had either a stroke, heart attack, or staph infection. The individual may still be harmed via dataset",
+    "choices": [
+      {
+        "id": "A",
+        "text": "k-anonymity"
+      },
+      {
+        "id": "B",
+        "text": "security issues"
+      },
+      {
+        "id": "C",
+        "text": "privacy columns"
+      },
+      {
+        "id": "D",
+        "text": "group inclusion"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-492",
+    "question": "A non-sensitive column may become sensitive or even identifiable when viewed through the lens of",
+    "choices": [
+      {
+        "id": "A",
+        "text": "community privacy violations"
+      },
+      {
+        "id": "B",
+        "text": "human privacy violations"
+      },
+      {
+        "id": "C",
+        "text": "societal privacy violations"
+      },
+      {
+        "id": "D",
+        "text": "algorithmic privacy violations"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-493",
+    "question": "An example of a public dataset at risk of an algorithmic privacy violation is the",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Google Maps satellite view dataset"
+      },
+      {
+        "id": "B",
+        "text": "Google search view dataset"
+      },
+      {
+        "id": "C",
+        "text": "Stanford hospital dataset"
+      },
+      {
+        "id": "D",
+        "text": "Fidelity Bank lending dataset"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-494",
+    "question": "The Netflix prize privacy scandal is an example of reidentification through",
+    "choices": [
+      {
+        "id": "A",
+        "text": "sensitive columns"
+      },
+      {
+        "id": "B",
+        "text": "multiple datasets"
+      },
+      {
+        "id": "C",
+        "text": "database leaks"
+      },
+      {
+        "id": "D",
+        "text": "k-anonymity"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-495",
+    "question": "The nature of a predictive model may reveal ___________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "the researchers behind it"
+      },
+      {
+        "id": "B",
+        "text": "the data it is trained on"
+      },
+      {
+        "id": "C",
+        "text": "the ethics of the individual inputs"
+      },
+      {
+        "id": "D",
+        "text": "the algorithm's bias"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-496",
+    "question": "An adversarial model relies on using __________ to observe different outputs",
+    "choices": [
+      {
+        "id": "A",
+        "text": "perturbed inputs"
+      },
+      {
+        "id": "B",
+        "text": "sensitive columns"
+      },
+      {
+        "id": "C",
+        "text": "algorithm detection"
+      },
+      {
+        "id": "D",
+        "text": "pressure inputs"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-497",
+    "question": "One way to counter a potential adversarial algorithm is by",
+    "choices": [
+      {
+        "id": "A",
+        "text": "limiting precise outputs"
+      },
+      {
+        "id": "B",
+        "text": "banning model updates"
+      },
+      {
+        "id": "C",
+        "text": "improving model transparency"
+      },
+      {
+        "id": "D",
+        "text": "changing the datasets"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 25
+  },
+  {
+    "id": "ite302c-498",
+    "question": "Which of the following is a recommended security practice for machine learning datasets?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ensure your team is full of different perspectives"
+      },
+      {
+        "id": "B",
+        "text": "Perform threat modeling with beneficial algorithms"
+      },
+      {
+        "id": "C",
+        "text": "Enact a sound data governance structure"
+      },
+      {
+        "id": "D",
+        "text": "Create a chain of command"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-499",
+    "question": "The Data minimization principle requires that you limit data collection to only what is __________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "necessary for differential privacy"
+      },
+      {
+        "id": "B",
+        "text": "optional for a chain of command"
+      },
+      {
+        "id": "C",
+        "text": "needed to have k-anonymity"
+      },
+      {
+        "id": "D",
+        "text": "required to fulfill a specific purpose"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-500",
+    "question": "Delete unused data __________ is a method of data minimization",
+    "choices": [
+      {
+        "id": "A",
+        "text": "before modeling"
+      },
+      {
+        "id": "B",
+        "text": "after fairness preparations"
+      },
+      {
+        "id": "C",
+        "text": "before threat modeling"
+      },
+      {
+        "id": "D",
+        "text": "early and often"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-501",
+    "question": "GDPR states that \"Personal data shall be adequate, relevant and __________ in relation to the purpose or purposes for which they are processed.\"",
+    "choices": [
+      {
+        "id": "A",
+        "text": "broadly applicable"
+      },
+      {
+        "id": "B",
+        "text": "thoroughly vetted"
+      },
+      {
+        "id": "C",
+        "text": "not excessive"
+      },
+      {
+        "id": "D",
+        "text": "highly specified"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-502",
+    "question": "What can be learned from a predictive model should not change if the _________ is either included or excluded in the training set",
+    "choices": [
+      {
+        "id": "A",
+        "text": "biased dataset"
+      },
+      {
+        "id": "B",
+        "text": "model fairness score"
+      },
+      {
+        "id": "C",
+        "text": "individual's data"
+      },
+      {
+        "id": "D",
+        "text": "dataset filter"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-503",
+    "question": "Differential privacy works by adding what to a dataset?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "fairness scoring"
+      },
+      {
+        "id": "B",
+        "text": "filters"
+      },
+      {
+        "id": "C",
+        "text": "noise"
+      },
+      {
+        "id": "D",
+        "text": "k-anonymity"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-504",
+    "question": "If a coin is flipped, which of the following would ensure \"yes/no\" data is private while still remaining useful?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "heads for fake answer, tails for true answer"
+      },
+      {
+        "id": "B",
+        "text": "heads for true answer, tails for random answer"
+      },
+      {
+        "id": "C",
+        "text": "heads for random answer, tails for yes"
+      },
+      {
+        "id": "D",
+        "text": "heads for yes, tails for no"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-505",
+    "question": "At which level of differential privacy is the outcome secured from even the people collecting answers?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "global"
+      },
+      {
+        "id": "B",
+        "text": "premium"
+      },
+      {
+        "id": "C",
+        "text": "k-anonymous"
+      },
+      {
+        "id": "D",
+        "text": "local"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-506",
+    "question": "Plausible deniability refers to the ability of the individual to ______",
+    "choices": [
+      {
+        "id": "A",
+        "text": "doubt the results of a study"
+      },
+      {
+        "id": "B",
+        "text": "remove themselves from a machine learning dataset"
+      },
+      {
+        "id": "C",
+        "text": "claim their score was randomized response"
+      },
+      {
+        "id": "D",
+        "text": "express their participation in a study"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-507",
+    "question": "In reverse-engineering a double coin flip differential model, what would be the amount of truthful \"yes/no\" responses in our dataset?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "25%"
+      },
+      {
+        "id": "B",
+        "text": "50%"
+      },
+      {
+        "id": "C",
+        "text": "100%"
+      },
+      {
+        "id": "D",
+        "text": "75%"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-508",
+    "question": "Ethical models are _________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "accurate, explainable, and fair"
+      },
+      {
+        "id": "B",
+        "text": "precise, explainable, and fair"
+      },
+      {
+        "id": "C",
+        "text": "precise, explainable, and private"
+      },
+      {
+        "id": "D",
+        "text": "accurate, methodical, and fair"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-509",
+    "question": "A _____ model is preferred by businesses because they see less competition as a benefit",
+    "choices": [
+      {
+        "id": "A",
+        "text": "black box"
+      },
+      {
+        "id": "B",
+        "text": "ethical"
+      },
+      {
+        "id": "C",
+        "text": "precise"
+      },
+      {
+        "id": "D",
+        "text": "fair"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-510",
+    "question": "One benefit of an explainable model is",
+    "choices": [
+      {
+        "id": "A",
+        "text": "recruiting leverage"
+      },
+      {
+        "id": "B",
+        "text": "the model is more accurate"
+      },
+      {
+        "id": "C",
+        "text": "less competition"
+      },
+      {
+        "id": "D",
+        "text": "privacy is preserved"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-511",
+    "question": "The Strava dataset example illustrates that while differential privacy can protect individuals, it can still harm _______",
+    "choices": [
+      {
+        "id": "A",
+        "text": "certain individuals"
+      },
+      {
+        "id": "B",
+        "text": "those outside the dataset"
+      },
+      {
+        "id": "C",
+        "text": "researchers"
+      },
+      {
+        "id": "D",
+        "text": "groups"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-512",
+    "question": "The explainable AI movement states that cooperation between agents, in this case, algorithms and humans, depends on which of the following?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "privacy"
+      },
+      {
+        "id": "B",
+        "text": "human rights"
+      },
+      {
+        "id": "C",
+        "text": "trust"
+      },
+      {
+        "id": "D",
+        "text": "competition"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-513",
+    "question": "A benefit of glass-box models is that if an attribute is skewing the fairness of a decision, a human agent may choose to",
+    "choices": [
+      {
+        "id": "A",
+        "text": "ignore it"
+      },
+      {
+        "id": "B",
+        "text": "trust it"
+      },
+      {
+        "id": "C",
+        "text": "alert the team"
+      },
+      {
+        "id": "D",
+        "text": "re-run the algorithm without it"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-514",
+    "question": "_____ algorithms are a challenge to explainable AI, as their complexity makes it difficult to weigh attribute importance",
+    "choices": [
+      {
+        "id": "A",
+        "text": "deep learning"
+      },
+      {
+        "id": "B",
+        "text": "ethical"
+      },
+      {
+        "id": "C",
+        "text": "explainable"
+      },
+      {
+        "id": "D",
+        "text": "malicious"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-515",
+    "question": "When used in recommendation engines, explainable algorithms can help answer the question of ____",
+    "choices": [
+      {
+        "id": "A",
+        "text": "who?"
+      },
+      {
+        "id": "B",
+        "text": "what?"
+      },
+      {
+        "id": "C",
+        "text": "how?"
+      },
+      {
+        "id": "D",
+        "text": "why?"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-516",
+    "question": "Group outcomes being improved through explainable recommendation systems is an example of using _______ to modify outcomes",
+    "choices": [
+      {
+        "id": "A",
+        "text": "government"
+      },
+      {
+        "id": "B",
+        "text": "privacy"
+      },
+      {
+        "id": "C",
+        "text": "competition"
+      },
+      {
+        "id": "D",
+        "text": "game theory"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-517",
+    "question": "A major limitation of using explainable, adjustable algorithms is that users tend to make _____ decisions",
+    "choices": [
+      {
+        "id": "A",
+        "text": "selfish"
+      },
+      {
+        "id": "B",
+        "text": "private"
+      },
+      {
+        "id": "C",
+        "text": "socially conscious"
+      },
+      {
+        "id": "D",
+        "text": "malicious"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 26
+  },
+  {
+    "id": "ite302c-518",
+    "question": "To make this algorithm functional, which step would you add to step 4?Scan to find the smallest numberSet to 0 in the index in the output arrayRemove that number from the input array __________________________________________",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Repeat steps 1-3,but add 1 to the index number for each loop"
+      },
+      {
+        "id": "B",
+        "text": "Divide the array by the index,print the array output"
+      },
+      {
+        "id": "C",
+        "text": "Repeat steps 1-3,but subtract the total from the numbers summated"
+      },
+      {
+        "id": "D",
+        "text": "Print output in the correct order"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 27
   }
 ]
