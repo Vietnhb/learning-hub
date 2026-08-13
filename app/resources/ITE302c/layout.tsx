@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ITE302c - Ethics in AI",
-    description: "Bộ 518 câu hỏi ôn tập ITE302c về Ethics in AI.",
+    description: "Bộ 501 câu hỏi ôn tập ITE302c về Ethics in AI.",
     url: "/resources/ITE302c/quiz",
     type: "website",
   },
