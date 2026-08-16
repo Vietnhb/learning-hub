@@ -20,9 +20,7 @@
         "text": "Not being able to know how something crashed or failed"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -46,10 +44,7 @@
         "text": "What type of data (audio, visual, etc.) is being collected and/or utilized."
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 1
   },
   {
@@ -73,10 +68,7 @@
         "text": "Data can fuel algorithmic technologies."
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 1
   },
   {
@@ -100,9 +92,7 @@
         "text": "Once an ethical issue has received negative feedback in public media."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -126,9 +116,7 @@
         "text": "Data that can be transformed into multiple forms, e.g. extracting audio from a video file."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -152,10 +140,7 @@
         "text": "Performance and optimization."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 1
   },
   {
@@ -179,9 +164,7 @@
         "text": "Perceptrons"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 1
   },
   {
@@ -205,10 +188,7 @@
         "text": "They can displace workers by performing their jobs more efficiently."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 1
   },
   {
@@ -232,10 +212,7 @@
         "text": "Delete any erroneous data."
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 1
   },
   {
@@ -259,10 +236,7 @@
         "text": "Cleaning and sorting data, and auditing for bias."
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 1
   },
   {
@@ -286,9 +260,7 @@
         "text": "A user's home address"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 1
   },
   {
@@ -312,9 +284,7 @@
         "text": "Organizations are legally not allowed to collect information about these groups."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 1
   },
   {
@@ -338,9 +308,7 @@
         "text": "Data about the user is automatically collected unless that user explicitly states that you should not do so."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 1
   },
   {
@@ -364,10 +332,7 @@
         "text": "Organizations must be proactive in protecting against privacy risks, not reactive."
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 1
   },
   {
@@ -391,9 +356,7 @@
         "text": "To ensure the data is completely confidential and cannot be read by unauthorized parties."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 1
   },
   {
@@ -417,9 +380,7 @@
         "text": "The moral duty one has to take action."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -443,9 +404,7 @@
         "text": "One party is forced into using the service after agreeing."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -469,9 +428,7 @@
         "text": "End-user license agreement (EULA)"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 1
   },
   {
@@ -495,9 +452,7 @@
         "text": "Smart contracts are more effective than traditional contracts."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 1
   },
   {
@@ -521,9 +476,7 @@
         "text": "The use of pictures explains the contract in greater detail than a written contract, making it easier for anyone to understand the particulars."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 1
   },
   {
@@ -547,9 +500,7 @@
         "text": "Biases are learned from our families, our social groups, and the media."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 2
   },
   {
@@ -573,9 +524,7 @@
         "text": "When you incorrectly assume a cause and effect relationship for two correlated variables."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 2
   },
   {
@@ -603,11 +552,7 @@
         "text": "Obtaining your information from the same one or two media sources that your family and friends access."
       }
     ],
-    "answers": [
-      "A",
-      "C",
-      "D"
-    ],
+    "answers": ["A", "C", "D"],
     "sourcePage": 2
   },
   {
@@ -631,9 +576,7 @@
         "text": "Sampling bias"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 2
   },
   {
@@ -657,9 +600,7 @@
         "text": "Anchoring bias"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 2
   },
   {
@@ -683,9 +624,7 @@
         "text": "No, it is designed with intention to be unfair."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 2
   },
   {
@@ -709,9 +648,7 @@
         "text": "Implicit bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 2
   },
   {
@@ -735,10 +672,7 @@
         "text": "It can lead to groupthink, which can in turn halt forward progress."
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 2
   },
   {
@@ -762,9 +696,7 @@
         "text": "When you incorrectly assume a cause and effect relationship because two variables are correlated."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 2
   },
   {
@@ -788,9 +720,7 @@
         "text": "They help us think logically instead of emotionally."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 2
   },
   {
@@ -814,9 +744,7 @@
         "text": "Virtue ethics"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 2
   },
   {
@@ -840,11 +768,7 @@
         "text": "Don't treat people as a means to an end; treat them always as an end."
       }
     ],
-    "answers": [
-      "A",
-      "C",
-      "D"
-    ],
+    "answers": ["A", "C", "D"],
     "sourcePage": 2
   },
   {
@@ -868,9 +792,7 @@
         "text": "All events are predestined to happen by a supernatural force."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 2
   },
   {
@@ -894,9 +816,7 @@
         "text": "Morals are collective; norms are more personal."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 2
   },
   {
@@ -920,10 +840,7 @@
         "text": "The moral agent follows a deontological code of ethics."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 2
   },
   {
@@ -947,9 +864,7 @@
         "text": "Human decision making is often influenced by emotion and not logic."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 2
   },
   {
@@ -973,10 +888,7 @@
         "text": "Moral psychology seeks to understand what the best way to act morally is."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 2
   },
   {
@@ -1000,9 +912,7 @@
         "text": "Pluralism"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 2
   },
   {
@@ -1026,9 +936,7 @@
         "text": "Engineering ethics"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 2
   },
   {
@@ -1052,10 +960,7 @@
         "text": "Inalienable rights are derived from tradition."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 2
   },
   {
@@ -1079,9 +984,7 @@
         "text": "A reference to one of the tenets of engineering activism."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 3
   },
   {
@@ -1105,9 +1008,7 @@
         "text": "It enables you to explain a system for shareholder purposes."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1131,9 +1032,7 @@
         "text": "Personhood is an individual's right to freedom."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 3
   },
   {
@@ -1161,11 +1060,7 @@
         "text": "It will build customer trust."
       }
     ],
-    "answers": [
-      "A",
-      "C",
-      "E"
-    ],
+    "answers": ["A", "C", "E"],
     "sourcePage": 3
   },
   {
@@ -1189,9 +1084,7 @@
         "text": "Beneficence is the promotion of well-being, not just for moral agents like humans, but of animals, the environment, and societies."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 3
   },
   {
@@ -1215,9 +1108,7 @@
         "text": "Beneficence and non-maleficence are quite similar and often interchangeable."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 3
   },
   {
@@ -1241,10 +1132,7 @@
         "text": "That they would absolve manufacturers of liability."
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 3
   },
   {
@@ -1268,10 +1156,7 @@
         "text": "Follow ethics by design."
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 3
   },
   {
@@ -1295,9 +1180,7 @@
         "text": "AI can automate many of the clerical tasks involved in the justice system."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1321,10 +1204,7 @@
         "text": "AI systems can perform tasks that humans cannot, such as processing millions of data records in a matter of seconds."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 3
   },
   {
@@ -1348,9 +1228,7 @@
         "text": "Virtue ethics"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1374,9 +1252,7 @@
         "text": "Individuals"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 3
   },
   {
@@ -1400,9 +1276,7 @@
         "text": "Transparency and explainability"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 3
   },
   {
@@ -1426,9 +1300,7 @@
         "text": "The Beijing AI Principles"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 3
   },
   {
@@ -1452,9 +1324,7 @@
         "text": "Given a lack of consensus, we should avoid strong assumptions regarding upper limits on future AI capabilities."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 3
   },
   {
@@ -1478,9 +1348,7 @@
         "text": "Transparency enables human observers to understand the decision-making process of an AI system."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1504,9 +1372,7 @@
         "text": "The IEEE Ethically Aligned Design's discussion on classical ethics"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1530,9 +1396,7 @@
         "text": "The Beijing AI Principles"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 3
   },
   {
@@ -1556,9 +1420,7 @@
         "text": "Personal protection"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 3
   },
   {
@@ -1582,9 +1444,7 @@
         "text": "Ethical frameworks seek to mitigate ethical concerns by creating actionable steps."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 3
   },
   {
@@ -1608,9 +1468,7 @@
         "text": "There are so many potential outcomes that it becomes difficult to choose one that is most ethical."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 4
   },
   {
@@ -1634,10 +1492,7 @@
         "text": "Accountability"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 4
   },
   {
@@ -1661,9 +1516,7 @@
         "text": "Bias"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1687,9 +1540,7 @@
         "text": "The system, as designed, acts counter to the well-being of the users."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 4
   },
   {
@@ -1713,9 +1564,7 @@
         "text": "They are used in the privacy of homes rather than in public settings, like other products or services."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1739,9 +1588,7 @@
         "text": "Architectural design analysis"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1765,9 +1612,7 @@
         "text": "It prevents the development of monopolies in terms of content creators."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1791,9 +1636,7 @@
         "text": "These rights necessitate that robots become sentient entities, which is currently not feasible."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 4
   },
   {
@@ -1817,9 +1660,7 @@
         "text": "They usurp a person's likeness and can then be weaponized against them."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 4
   },
   {
@@ -1843,9 +1684,7 @@
         "text": "They can be broken by combining this data with other publicly available data."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 4
   },
   {
@@ -1869,10 +1708,7 @@
         "text": "Regulations are often industry led."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 4
   },
   {
@@ -1896,9 +1732,7 @@
         "text": "COPPA"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1922,10 +1756,7 @@
         "text": "Data protection impact assessments"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 4
   },
   {
@@ -1949,9 +1780,7 @@
         "text": "FERPA"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -1975,10 +1804,7 @@
         "text": "Organizations must not transmit biometric data across an unsecured network like the Internet."
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 4
   },
   {
@@ -2002,9 +1828,7 @@
         "text": "Anyone between 5 and 13 years old"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 4
   },
   {
@@ -2028,10 +1852,7 @@
         "text": "International support, recognition, and involvement"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 4
   },
   {
@@ -2055,9 +1876,7 @@
         "text": "The early date of its inauguration"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 4
   },
   {
@@ -2081,9 +1900,7 @@
         "text": "Security tools"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 4
   },
   {
@@ -2107,10 +1924,7 @@
         "text": "Personnel safety"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 4
   },
   {
@@ -2134,10 +1948,7 @@
         "text": "Only keep data for as long as it is needed"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 5
   },
   {
@@ -2161,10 +1972,7 @@
         "text": "Avoidance of reputational damage"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 5
   },
   {
@@ -2188,9 +1996,7 @@
         "text": "Increasing AI performance sometimes removes human-in-the-loop (HITL) methods, making it more difficult to explain decision-making processes."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 5
   },
   {
@@ -2214,9 +2020,7 @@
         "text": "Increased efficiency tends to create cost savings"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 5
   },
   {
@@ -2240,10 +2044,7 @@
         "text": "Mitigating excessive scope or potential collateral damage"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 5
   },
   {
@@ -2267,9 +2068,7 @@
         "text": "By acting virtuous, the public respects Big Tech more and more."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 5
   },
   {
@@ -2293,9 +2092,7 @@
         "text": "Cultural mores"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 5
   },
   {
@@ -2319,10 +2116,7 @@
         "text": "Engaging with multiple stakeholders to understand their particular needs"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 5
   },
   {
@@ -2346,10 +2140,7 @@
         "text": "Enabling government agencies to have a personalized interface with software"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 5
   },
   {
@@ -2373,10 +2164,7 @@
         "text": "Making multiple investments in a similar space to improve the outcomes of success"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 5
   },
   {
@@ -2404,11 +2192,7 @@
         "text": "Analysis"
       }
     ],
-    "answers": [
-      "A",
-      "C",
-      "E"
-    ],
+    "answers": ["A", "C", "E"],
     "sourcePage": 5
   },
   {
@@ -2432,10 +2216,7 @@
         "text": "Semi-quantitative analysis"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["D", "B"],
     "sourcePage": 5
   },
   {
@@ -2459,9 +2240,7 @@
         "text": "Avoid"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 5
   },
   {
@@ -2485,10 +2264,7 @@
         "text": "The tails of a normal distribution are denser than the center."
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 5
   },
   {
@@ -2512,9 +2288,7 @@
         "text": "Variance measures the error between predicted values and actual values."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 5
   },
   {
@@ -2523,7 +2297,7 @@
     "choices": [
       {
         "id": "A",
-        "text": "There is a weak positive correlation between both variables. X"
+        "text": "There is a weak positive correlation between both variables."
       },
       {
         "id": "B",
@@ -2538,9 +2312,7 @@
         "text": "There is a weak negative correlation between both variables."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 5
   },
   {
@@ -2564,9 +2336,7 @@
         "text": "By estimating the likelihood of some event happening without input data"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 5
   },
   {
@@ -2590,9 +2360,7 @@
         "text": "Classification"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 5
   },
   {
@@ -2616,9 +2384,7 @@
         "text": "Confusion matrix"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 5
   },
   {
@@ -2642,9 +2408,7 @@
         "text": "Accuracy"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 6
   },
   {
@@ -2668,9 +2432,7 @@
         "text": "The emotional impression that a customer has about a product or category of goods"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 6
   },
   {
@@ -2694,9 +2456,7 @@
         "text": "Being made aware of when the battery in a product is past its zero point"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 6
   },
   {
@@ -2720,10 +2480,7 @@
         "text": "Passport numbers"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 6
   },
   {
@@ -2747,10 +2504,7 @@
         "text": "A request for consent to perform an action"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 6
   },
   {
@@ -2774,9 +2528,7 @@
         "text": "A method of performing operations on encrypted data."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 6
   },
   {
@@ -2800,10 +2552,7 @@
         "text": "Secondary data may be more expensive"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 6
   },
   {
@@ -2827,10 +2576,7 @@
         "text": "Opt-out/opt-in mechanisms"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 6
   },
   {
@@ -2854,10 +2600,7 @@
         "text": "HIPAA"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 6
   },
   {
@@ -2881,10 +2624,7 @@
         "text": "Reputation"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 6
   },
   {
@@ -2908,10 +2648,7 @@
         "text": "Comparing multiple data points or sets"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 6
   },
   {
@@ -2935,9 +2672,7 @@
         "text": "Responsible, Accountable, Consulted, Informed"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 6
   },
   {
@@ -2961,9 +2696,7 @@
         "text": "Transferring defendants from one jurisdiction to another for trial."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 6
   },
   {
@@ -2987,10 +2720,7 @@
         "text": "The rights of individuals or communities."
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 6
   },
   {
@@ -3014,9 +2744,7 @@
         "text": "Bias enabled or perpetuated by machine learning."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 6
   },
   {
@@ -3040,10 +2768,7 @@
         "text": "It supports profitable research innovations and intellectual property."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 6
   },
   {
@@ -3067,9 +2792,7 @@
         "text": "If the model is expressed in an annotated visual form."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 6
   },
   {
@@ -3093,10 +2816,7 @@
         "text": "It demonstrates that the system is functional as early as possible in order to satisfy senior management and investor stakeholders."
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 6
   },
   {
@@ -3120,10 +2840,7 @@
         "text": "Document the audit procedures to be followed."
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 6
   },
   {
@@ -3147,10 +2864,7 @@
         "text": "Earnings before interest, taxes, depreciation, and amortization (EBITDA)"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 6
   },
   {
@@ -3174,10 +2888,7 @@
         "text": "Product design lifecycle"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 7
   },
   {
@@ -3201,9 +2912,7 @@
         "text": "Self-learning models can corrupt data or otherwise make it unreadable."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 7
   },
   {
@@ -3227,9 +2936,7 @@
         "text": "Closed source software may not be accessible to independent auditors."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3253,9 +2960,7 @@
         "text": "A user logs in one day to find that they are able to post, but receive no direct responses."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3279,9 +2984,7 @@
         "text": "Neural networks"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 7
   },
   {
@@ -3305,9 +3008,7 @@
         "text": "Provide a drop-down menu of feedback categories that users can select from, with a promise that you'll follow up via email."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 7
   },
   {
@@ -3331,9 +3032,7 @@
         "text": "At the point of training the model."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 7
   },
   {
@@ -3357,10 +3056,7 @@
         "text": "Any known bias in the sample data."
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 7
   },
   {
@@ -3384,9 +3080,7 @@
         "text": "Perturbation"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 7
   },
   {
@@ -3410,9 +3104,7 @@
         "text": "LIME"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 7
   },
   {
@@ -3436,10 +3128,7 @@
         "text": "LIME supports more programming languages than SHAP."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 7
   },
   {
@@ -3463,9 +3152,7 @@
         "text": "Implicit bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 7
   },
   {
@@ -3489,9 +3176,7 @@
         "text": "Because the model has a temporal bias."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 7
   },
   {
@@ -3515,9 +3200,7 @@
         "text": "Outliers"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3541,9 +3224,7 @@
         "text": "To evaluate the organization's project management structure for the AI project."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 7
   },
   {
@@ -3567,9 +3248,7 @@
         "text": "The persona may represent groups of people that could be susceptible to bias."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3593,9 +3272,7 @@
         "text": "Disparate mistreatment"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 7
   },
   {
@@ -3619,9 +3296,7 @@
         "text": "To perform a strategic analysis of how external environments impact business operations."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3645,10 +3320,7 @@
         "text": "Solve for many, extend to one."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 7
   },
   {
@@ -3672,9 +3344,7 @@
         "text": "An open source library that evaluates models for bias and provides mitigation tactics to reduce that bias."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 7
   },
   {
@@ -3698,9 +3368,7 @@
         "text": "Radioactive data tracing makes the modification perceptible to human beings."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 8
   },
   {
@@ -3724,9 +3392,7 @@
         "text": "Security information and event management"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -3750,10 +3416,7 @@
         "text": "Network intrusion detection alerts"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 8
   },
   {
@@ -3777,10 +3440,7 @@
         "text": "What methods of attack are legitimate"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 8
   },
   {
@@ -3804,9 +3464,7 @@
         "text": "Red team"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 8
   },
   {
@@ -3830,10 +3488,7 @@
         "text": "Restoring compromised functionality through a system rollback"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 8
   },
   {
@@ -3857,9 +3512,7 @@
         "text": "Criminal exploitation"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 8
   },
   {
@@ -3883,9 +3536,7 @@
         "text": "Confidentiality, integrity, availability"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -3909,9 +3560,7 @@
         "text": "Computer forensics tools"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 8
   },
   {
@@ -3935,9 +3584,7 @@
         "text": "Cybersecurity incident response team"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -3961,9 +3608,7 @@
         "text": "Threat modeling or analysis tools"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -3987,10 +3632,7 @@
         "text": "It ensures that customers and other external stakeholders know that we take ethical risks seriously."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 8
   },
   {
@@ -4014,10 +3656,7 @@
         "text": "Providing prompt responses to customer questions about the decisions made by data-driven systems."
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 8
   },
   {
@@ -4041,9 +3680,7 @@
         "text": "It lets stakeholders know that the organization cannot address ethical risks in data-driven systems without input from stakeholders first."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 8
   },
   {
@@ -4067,10 +3704,7 @@
         "text": "The organization's AI product has a defect and needs to be recalled."
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 8
   },
   {
@@ -4094,10 +3728,7 @@
         "text": "Communicate information in real time"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 8
   },
   {
@@ -4121,10 +3752,7 @@
         "text": "Be culturally sensitive and culturally aware during communication"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 8
   },
   {
@@ -4148,9 +3776,7 @@
         "text": "They are more likely to be candid and give forthright responses."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 8
   },
   {
@@ -4174,9 +3800,7 @@
         "text": "The products or services the organization creates will have less of an impact in the marketplace."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -4200,9 +3824,7 @@
         "text": "Compliance audit"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 8
   },
   {
@@ -4226,10 +3848,7 @@
         "text": "Inform individuals of how they are obligated to mitigate risks to themselves"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 9
   },
   {
@@ -4253,9 +3872,7 @@
         "text": "Promote an organizational culture that embraces these values"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 9
   },
   {
@@ -4279,9 +3896,7 @@
         "text": "Putting ethical principles into practice"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 9
   },
   {
@@ -4305,9 +3920,7 @@
         "text": "Department heads"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 9
   },
   {
@@ -4331,9 +3944,7 @@
         "text": "It demonstrates that the organization has a commitment to openness."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 9
   },
   {
@@ -4357,9 +3968,7 @@
         "text": "Where the data used in the report comes from and how accurate it is"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 9
   },
   {
@@ -4383,10 +3992,7 @@
         "text": "The time-sensitive nature of communication in the campaign"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 9
   },
   {
@@ -4410,15 +4016,12 @@
         "text": "The campaign cannot be modified without the consent of the organization."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 9
   },
   {
     "id": "ite302c-168",
-    "question": "Which of the following is a best practice when participating in media inquiries? (Select two.) ????????????",
+    "question": "Which of the following is a best practice when participating in media inquiries? (Select two.)",
     "choices": [
       {
         "id": "A",
@@ -4437,10 +4040,7 @@
         "text": "Ensure your message is consistent"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 9
   },
   {
@@ -4464,9 +4064,7 @@
         "text": "The conference will be easily accessible to all willing participants."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 9
   },
   {
@@ -4490,10 +4088,7 @@
         "text": "It's delivered on a single platform"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 9
   },
   {
@@ -4517,9 +4112,7 @@
         "text": "A crisis with low likelihood tends to have moderate impact."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 9
   },
   {
@@ -4543,9 +4136,7 @@
         "text": "The public's perception of a crisis"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 9
   },
   {
@@ -4569,10 +4160,7 @@
         "text": "The ability to work independently of the crisis management team"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 9
   },
   {
@@ -4596,10 +4184,7 @@
         "text": "Articulate when communicating important details"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 9
   },
   {
@@ -4623,9 +4208,7 @@
         "text": "Lessons learned report"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 9
   },
   {
@@ -4649,10 +4232,7 @@
         "text": "Rehearsing business continuity tasks"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 9
   },
   {
@@ -4676,9 +4256,7 @@
         "text": "By using AI decision-making systems to decide whether or not a DRP is necessary for your organization."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 9
   },
   {
@@ -4702,9 +4280,7 @@
         "text": "Taking feedback from customers"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 9
   },
   {
@@ -4728,10 +4304,7 @@
         "text": "Performing a vulnerability audit of all affected systems"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 9
   },
   {
@@ -4755,10 +4328,7 @@
         "text": "By reviewing a crisis too soon, you can unknowingly extend the effects of that crisis."
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 10
   },
   {
@@ -4782,10 +4352,7 @@
         "text": "Public education campaign"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 10
   },
   {
@@ -4809,9 +4376,7 @@
         "text": "To retain the services of specific media outlets"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 10
   },
   {
@@ -4835,10 +4400,7 @@
         "text": "Being honest and up front"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 10
   },
   {
@@ -4862,9 +4424,7 @@
         "text": "To demonstrate compliance"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 10
   },
   {
@@ -4888,9 +4448,7 @@
         "text": "Security risk"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 10
   },
   {
@@ -4914,9 +4472,7 @@
         "text": "Set the tone of what is to follow"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -4940,9 +4496,7 @@
         "text": "The media will be more likely to advocate for your organization in the event of a crisis."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 10
   },
   {
@@ -4966,9 +4520,7 @@
         "text": "It is easier to disseminate a message through legacy media channels"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 10
   },
   {
@@ -4992,9 +4544,7 @@
         "text": "Put all of the information out there at once"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -5018,9 +4568,7 @@
         "text": "It can determine how to construct a message that influences users to be more positive about the organization or technology."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 10
   },
   {
@@ -5044,9 +4592,7 @@
         "text": "Genuine ethical action gets replaced by superficial promises."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -5070,9 +4616,7 @@
         "text": "No, because an open door policy does not ensure employees feel heard."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -5096,9 +4640,7 @@
         "text": "Employees might be less interested in their careers."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 10
   },
   {
@@ -5122,9 +4664,7 @@
         "text": "\"It is what it is.\""
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 10
   },
   {
@@ -5148,9 +4688,7 @@
         "text": "A collective term for all approaches to prepare, support, and help individuals, teams, and organizations in making organizational change."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -5174,9 +4712,7 @@
         "text": "Financial resources"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 10
   },
   {
@@ -5200,9 +4736,7 @@
         "text": "An Ethics Board can help maintain an organization's profit margins and increase transparency into how they increase their profits."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 10
   },
   {
@@ -5226,9 +4760,7 @@
         "text": "Employees will feel a sense of responsibility and loyalty."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 10
   },
   {
@@ -5252,9 +4784,7 @@
         "text": "The likelihood of employees voicing their concerns about the company because they want to improve company performance."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 10
   },
   {
@@ -5278,9 +4808,7 @@
         "text": "To help employees develop their ability to identify potential misconduct in the workplace and report those incidents to the proper departments."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5304,9 +4832,7 @@
         "text": "It helps the organization have a document to point towards in case an ethical violation occurs."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5330,9 +4856,7 @@
         "text": "Deployment"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 11
   },
   {
@@ -5356,9 +4880,7 @@
         "text": "Humanity"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 11
   },
   {
@@ -5382,9 +4904,7 @@
         "text": "Consolidating products and services under a single organization"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5408,9 +4928,7 @@
         "text": "FAIR"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 11
   },
   {
@@ -5434,9 +4952,7 @@
         "text": "Collecting returns on investments made in research and development."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5460,10 +4976,7 @@
         "text": "Loss of profits"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 11
   },
   {
@@ -5487,9 +5000,7 @@
         "text": "They allow an organization to deliver its products and services in a larger number of markets."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5513,9 +5024,7 @@
         "text": "Data-driven technologies directly impact living things via displacement."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 11
   },
   {
@@ -5539,9 +5048,7 @@
         "text": "The organization would like to avoid having to deal with union concerns."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 11
   },
   {
@@ -5565,9 +5072,7 @@
         "text": "Developers of the data-driven technology system"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 11
   },
   {
@@ -5591,9 +5096,7 @@
         "text": "Policymakers"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 11
   },
   {
@@ -5617,9 +5120,7 @@
         "text": "Business managers"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 11
   },
   {
@@ -5647,11 +5148,7 @@
         "text": "Research similar organization's ethical mistakes and concerns."
       }
     ],
-    "answers": [
-      "B",
-      "D",
-      "E"
-    ],
+    "answers": ["B", "D", "E"],
     "sourcePage": 11
   },
   {
@@ -5675,10 +5172,7 @@
         "text": "Prescriptive language used in the code of ethics"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 11
   },
   {
@@ -5702,10 +5196,7 @@
         "text": "Subjective language"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 11
   },
   {
@@ -5729,9 +5220,7 @@
         "text": "The pilot phase helps to identify gaps in the current code of ethics."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 11
   },
   {
@@ -5755,9 +5244,7 @@
         "text": "It signals that you care about ethics to internal and external stakeholders."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 11
   },
   {
@@ -5781,9 +5268,7 @@
         "text": "Including the code of ethics in the legal documents signed by the employees."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 11
   },
   {
@@ -5807,10 +5292,7 @@
         "text": "It creates consistency in the ethical practices across the organization, rather than patchy implementation of the practices."
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 12
   },
   {
@@ -5834,9 +5316,7 @@
         "text": "Developing procedures first and then creating policies that reflect those procedures."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -5860,9 +5340,7 @@
         "text": "They can help to bring the right internal and external stakeholders together to help draft these ethics policies."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 12
   },
   {
@@ -5886,9 +5364,7 @@
         "text": "It provides examples of possible ethical pitfalls that the organization should avoid."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 12
   },
   {
@@ -5912,9 +5388,7 @@
         "text": "It helps to reinforce the cultural and contextual values of the employees by getting external validation."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 12
   },
   {
@@ -5938,9 +5412,7 @@
         "text": "Documenting the assumptions and choices made in the drafting of the policies"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 12
   },
   {
@@ -5964,9 +5436,7 @@
         "text": "A designated ethics lead who is solely responsible for the implementation of said procedures."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 12
   },
   {
@@ -5990,9 +5460,7 @@
         "text": "Daily communications"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -6016,9 +5484,7 @@
         "text": "It helps demonstrate to senior management that work is being done on the internal and external ethics policies."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 12
   },
   {
@@ -6042,9 +5508,7 @@
         "text": "They can provide more data through structured information gathering."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -6068,9 +5532,7 @@
         "text": "It can help provide transparency around the efforts to improve the policies."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 12
   },
   {
@@ -6094,9 +5556,7 @@
         "text": "They are statistically shown to have greater intelligence than their peers without professional certifications."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -6120,9 +5580,7 @@
         "text": "Have your video camera on and set to the correct aspect ratio."
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 12
   },
   {
@@ -6146,9 +5604,7 @@
         "text": "Certifications can be accredited."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -6168,11 +5624,7 @@
         "text": "Instructor-led or self-paced courses in the exam domains."
       }
     ],
-    "answers": [
-      "A",
-      "B",
-      "C"
-    ],
+    "answers": ["A", "B", "C"],
     "sourcePage": 12
   },
   {
@@ -6196,9 +5648,7 @@
         "text": "Time and date of your exam"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 12
   },
   {
@@ -6222,9 +5672,7 @@
         "text": "Display your Coursera Professional Certificate on social platforms such as LinkedIn."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 12
   },
   {
@@ -6248,9 +5696,7 @@
         "text": "Check that you have the government-issued ID that you used during registration."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 12
   },
   {
@@ -6274,9 +5720,7 @@
         "text": "List of subject matter experts that contributed to the job task analysis"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 12
   },
   {
@@ -6300,9 +5744,7 @@
         "text": "Consider whether you have the required degree or licensure to successfully pass the exam."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 13
   },
   {
@@ -6326,9 +5768,7 @@
         "text": "Post evidence of your accomplishments on your Accredible profile"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 13
   },
   {
@@ -6344,9 +5784,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 13
   },
   {
@@ -6370,9 +5808,7 @@
         "text": "It is an ethical approach in professional life"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 13
   },
   {
@@ -6396,10 +5832,7 @@
         "text": "moral duties"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 13
   },
   {
@@ -6423,10 +5856,7 @@
         "text": "moral duties"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 13
   },
   {
@@ -6442,9 +5872,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 13
   },
   {
@@ -6468,10 +5896,7 @@
         "text": "Blameworthiness"
       }
     ],
-    "answers": [
-      "A",
-      "D"
-    ],
+    "answers": ["A", "D"],
     "sourcePage": 13
   },
   {
@@ -6495,9 +5920,7 @@
         "text": "To be able to know the consequences of action"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 13
   },
   {
@@ -6521,10 +5944,7 @@
         "text": "to realize some positive consequences of technology"
       }
     ],
-    "answers": [
-      "B",
-      "D"
-    ],
+    "answers": ["B", "D"],
     "sourcePage": 13
   },
   {
@@ -6540,9 +5960,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 13
   },
   {
@@ -6566,10 +5984,7 @@
         "text": "A moral approach explaining the principle of utility"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 13
   },
   {
@@ -6585,9 +6000,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 13
   },
   {
@@ -6611,9 +6024,7 @@
         "text": "It means designing autonomous weapons to avoid negative consequences"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 13
   },
   {
@@ -6633,10 +6044,7 @@
         "text": "A way to describe how autonomous systems work"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 13
   },
   {
@@ -6652,9 +6060,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6674,9 +6080,7 @@
         "text": "to consider both the numerical value of their environmental impact and their social value"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 14
   },
   {
@@ -6700,9 +6104,7 @@
         "text": "To combat hackers"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 14
   },
   {
@@ -6722,10 +6124,7 @@
         "text": "process data about people and combine human and automated decision making"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 14
   },
   {
@@ -6741,9 +6140,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6767,10 +6164,7 @@
         "text": "they hide their internal logic to the user"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 14
   },
   {
@@ -6790,9 +6184,7 @@
         "text": "it lacks appropriate biases"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6808,9 +6200,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6834,10 +6224,7 @@
         "text": "...is totally lost today"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 14
   },
   {
@@ -6853,9 +6240,7 @@
         "text": "True"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6879,9 +6264,7 @@
         "text": "A metaphor to describe the freedom of individuals"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 14
   },
   {
@@ -6905,10 +6288,7 @@
         "text": "the field of ethics devoted to the study of the consequences of technologies"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 14
   },
   {
@@ -6932,9 +6312,7 @@
         "text": "technologies requiring the involvement of experimentalists to be designed"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 14
   },
   {
@@ -6950,9 +6328,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 14
   },
   {
@@ -6976,10 +6352,7 @@
         "text": "...try to use mathematical formulas to express the responsibilities of professionals"
       }
     ],
-    "answers": [
-      "B",
-      "C"
-    ],
+    "answers": ["B", "C"],
     "sourcePage": 14
   },
   {
@@ -6999,9 +6372,7 @@
         "text": "it means integrating technical solutions into broader ethical and social frameworks"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 14
   },
   {
@@ -7025,10 +6396,7 @@
         "text": "...considers AI tools and techniques as dangerous"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 14
   },
   {
@@ -7056,12 +6424,7 @@
         "text": "avoidance of mistakes"
       }
     ],
-    "answers": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
+    "answers": ["A", "B", "C", "D"],
     "sourcePage": 14
   },
   {
@@ -7081,9 +6444,7 @@
         "text": "a systematic error in automated processes that causes unfair outcomes for certain individuals or groups"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 14
   },
   {
@@ -7107,9 +6468,7 @@
         "text": "a digital tool to spy people"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 15
   },
   {
@@ -7125,9 +6484,7 @@
         "text": "True"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 15
   },
   {
@@ -7151,10 +6508,7 @@
         "text": "blameworthiness"
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 15
   },
   {
@@ -7178,9 +6532,7 @@
         "text": "A moral approach explaining the principle of utility"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 15
   },
   {
@@ -7200,10 +6552,7 @@
         "text": "A way to describe how autonomous systems work"
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 15
   },
   {
@@ -7223,10 +6572,7 @@
         "text": "have the ability to learn from experience"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 15
   },
   {
@@ -7250,9 +6596,7 @@
         "text": "is totally lost today"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 15
   },
   {
@@ -7276,9 +6620,7 @@
         "text": "is the design of moral intelligent agents"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 15
   },
   {
@@ -7302,10 +6644,7 @@
         "text": "considers AI tools and techniques as dangerous"
       }
     ],
-    "answers": [
-      "A",
-      "C"
-    ],
+    "answers": ["A", "C"],
     "sourcePage": 15
   },
   {
@@ -7329,9 +6668,7 @@
         "text": "set of inputs"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 19
   },
   {
@@ -7355,9 +6692,7 @@
         "text": "Repeat steps 1-3, but add 1 to the index number for each loop"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 19
   },
   {
@@ -7373,9 +6708,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7391,9 +6724,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7417,9 +6748,7 @@
         "text": "feedback loop"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7443,9 +6772,7 @@
         "text": "No, due to lacking regulations"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7469,9 +6796,7 @@
         "text": "a type of process a human uses to write down what steps need to happen to get a problem solved"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 19
   },
   {
@@ -7495,9 +6820,7 @@
         "text": "learning algorithm"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7521,9 +6844,7 @@
         "text": "Scan to find the largest number Set to 0 in the index in the output array Remove that number from the input array Repeat steps 1-3, but add 1 to the index number for each loop"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7547,9 +6868,7 @@
         "text": "An basic algorithm takes an input and gets an output, while a learning algorithm uses the output on the next input"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7573,9 +6892,7 @@
         "text": "an explainable description of code that is meant for humans, not computers"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7599,9 +6916,7 @@
         "text": "Learning algorithms require large datasets, which means storing identifying information about users"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7625,9 +6940,7 @@
         "text": "Anonymized datasets can be re-identifyed by anyone holding the hash key"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7651,9 +6964,7 @@
         "text": "Accessing weather forecasts from local broadcasts"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 19
   },
   {
@@ -7677,9 +6988,7 @@
         "text": "A social media site surfaces controversial posts, which make users more angry and lead to more angry posts on the network"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 19
   },
   {
@@ -7703,9 +7012,7 @@
         "text": "they cannot make predictions with current technology"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7729,9 +7036,7 @@
         "text": "can figure out up to 150 mechanisms"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7747,9 +7052,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 19
   },
   {
@@ -7773,9 +7076,7 @@
         "text": "training phase"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 19
   },
   {
@@ -7799,9 +7100,7 @@
         "text": "training phase"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 19
   },
   {
@@ -7825,9 +7124,7 @@
         "text": "real harm"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 20
   },
   {
@@ -7843,9 +7140,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -7869,9 +7164,7 @@
         "text": "A basic algorithm can handle simple inputs like numbers, while a complex algorithm can handle complex inputs like pictures"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -7895,9 +7188,7 @@
         "text": "To get the model to accept new inputs, train, and repeat training until it finds a better curve"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -7921,9 +7212,7 @@
         "text": "To specify the type of algorithm the model should use and make sure the data is cleaned/formatted"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -7947,9 +7236,7 @@
         "text": "To get the model to accept new inputs, train, and repeat training until it finds a better curve"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -7973,9 +7260,7 @@
         "text": "the ratio of algorithm to curve in a predictive model"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 20
   },
   {
@@ -7999,9 +7284,7 @@
         "text": "causal link, correlation"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8025,9 +7308,7 @@
         "text": "The problem created when researchers don't create accurate attributes for a model"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 20
   },
   {
@@ -8051,9 +7332,7 @@
         "text": "A model used by a lab indicates a person is in danger"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8077,9 +7356,7 @@
         "text": "they predict future movement of stocks and find points to exploit the market moving in either direction"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 20
   },
   {
@@ -8103,9 +7380,7 @@
         "text": "The model's training curve was not provided enough data"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 20
   },
   {
@@ -8129,9 +7404,7 @@
         "text": "true positive and true negative"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 20
   },
   {
@@ -8155,9 +7428,7 @@
         "text": "negative, incorrect"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8173,9 +7444,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 20
   },
   {
@@ -8199,9 +7468,7 @@
         "text": "sample, optimized"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8217,9 +7484,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 20
   },
   {
@@ -8243,9 +7508,7 @@
         "text": "truthful"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8269,9 +7532,7 @@
         "text": "divide the number of predictions by the total dataset"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 20
   },
   {
@@ -8295,9 +7556,7 @@
         "text": "the predicted result was positive, and the actual result was negative"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 20
   },
   {
@@ -8321,9 +7580,7 @@
         "text": "the predicted result was negative, and the actual result was positive"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 21
   },
   {
@@ -8347,9 +7604,7 @@
         "text": "Objective summarization"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 21
   },
   {
@@ -8373,9 +7628,7 @@
         "text": "Objective summarization"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8399,9 +7652,7 @@
         "text": "an image recognition model selects one face over another based on sample data"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8425,9 +7676,7 @@
         "text": "an image recognition model cannot tell a difference between a photo of a dog and a photo of a photo of a dog"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 21
   },
   {
@@ -8451,9 +7700,7 @@
         "text": "optimized training set"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 21
   },
   {
@@ -8477,9 +7724,7 @@
         "text": "accurate, fair and explainable"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 21
   },
   {
@@ -8503,9 +7748,7 @@
         "text": "an uncertainty of how the data is gathered"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8521,9 +7764,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 21
   },
   {
@@ -8547,9 +7788,7 @@
         "text": "parse through datasets"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 21
   },
   {
@@ -8573,9 +7812,7 @@
         "text": "predictive models to start companies"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 21
   },
   {
@@ -8599,9 +7836,7 @@
         "text": "tax plan"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 21
   },
   {
@@ -8617,9 +7852,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 21
   },
   {
@@ -8643,9 +7876,7 @@
         "text": "to accelerate their research departments"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8669,9 +7900,7 @@
         "text": "10x the amount of data"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8695,9 +7924,7 @@
         "text": "programmed reflexive decision making ability"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 21
   },
   {
@@ -8721,9 +7948,7 @@
         "text": "General AI"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 21
   },
   {
@@ -8747,9 +7972,7 @@
         "text": "General AI"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 21
   },
   {
@@ -8773,9 +7996,7 @@
         "text": "11-17%"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 21
   },
   {
@@ -8799,9 +8020,7 @@
         "text": "peace-keeping tool"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 21
   },
   {
@@ -8825,9 +8044,7 @@
         "text": "a potential extinction event"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 22
   },
   {
@@ -8851,9 +8068,7 @@
         "text": "not enact hate"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -8877,9 +8092,7 @@
         "text": "a harmful tool that will bring about the end of capitalism"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 22
   },
   {
@@ -8903,9 +8116,7 @@
         "text": "perverse instantiation"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 22
   },
   {
@@ -8921,9 +8132,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -8947,9 +8156,7 @@
         "text": "distributing by error rate, ex. loans"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 22
   },
   {
@@ -8973,9 +8180,7 @@
         "text": "outcomes for each group"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 22
   },
   {
@@ -8999,9 +8204,7 @@
         "text": "reboot the training data"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 22
   },
   {
@@ -9017,9 +8220,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 22
   },
   {
@@ -9043,9 +8244,7 @@
         "text": "error rates, parity"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 22
   },
   {
@@ -9061,9 +8260,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9087,9 +8284,7 @@
         "text": "pick an optimal tradeoff between fairness and accuracy"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 22
   },
   {
@@ -9105,9 +8300,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9131,9 +8324,7 @@
         "text": "purposefully biased"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 22
   },
   {
@@ -9149,9 +8340,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 22
   },
   {
@@ -9175,9 +8364,7 @@
         "text": "sub-processing"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9193,9 +8380,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9219,9 +8404,7 @@
         "text": "your model is trained to avoid bias, but it contains no samples of that bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9245,9 +8428,7 @@
         "text": "observer bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9271,9 +8452,7 @@
         "text": "sample bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 22
   },
   {
@@ -9289,9 +8468,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 23
   },
   {
@@ -9315,9 +8492,7 @@
         "text": "a user chooses the least fair option"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 23
   },
   {
@@ -9341,9 +8516,7 @@
         "text": "sensitive column"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 23
   },
   {
@@ -9359,9 +8532,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 23
   },
   {
@@ -9385,9 +8556,7 @@
         "text": "65 years old"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 23
   },
   {
@@ -9403,9 +8572,7 @@
         "text": "false"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9429,9 +8596,7 @@
         "text": "It can help limit adversarial attacks"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 23
   },
   {
@@ -9455,9 +8620,7 @@
         "text": "To increase public dataset awareness"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9481,9 +8644,7 @@
         "text": "Ensure that all team members/stakeholders have a basic understanding of security"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9499,9 +8660,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9525,9 +8684,7 @@
         "text": "diminishing returns"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 23
   },
   {
@@ -9543,9 +8700,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9569,9 +8724,7 @@
         "text": "fairness guarantees"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9595,9 +8748,7 @@
         "text": "100%"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 23
   },
   {
@@ -9613,9 +8764,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 23
   },
   {
@@ -9639,9 +8788,7 @@
         "text": "privacy"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 23
   },
   {
@@ -9665,9 +8812,7 @@
         "text": "model renderings"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9691,9 +8836,7 @@
         "text": "fairness-enforcing methods"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9709,9 +8852,7 @@
         "text": "False"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 23
   },
   {
@@ -9735,9 +8876,7 @@
         "text": "data points, privacy"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 23
   },
   {
@@ -9761,9 +8900,7 @@
         "text": "favoritism or discrimination"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 24
   },
   {
@@ -9787,9 +8924,7 @@
         "text": "equality of prediction rate"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 24
   },
   {
@@ -9813,9 +8948,7 @@
         "text": "error rate parity"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -9839,9 +8972,7 @@
         "text": "equality of assignment rate"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 24
   },
   {
@@ -9865,9 +8996,7 @@
         "text": "training datasets"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -9891,9 +9020,7 @@
         "text": "minimize the error rate as long as the training data isn't affected"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -9917,9 +9044,7 @@
         "text": "less accurate and less fair"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 24
   },
   {
@@ -9943,9 +9068,7 @@
         "text": "less fairness for that group"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -9969,9 +9092,7 @@
         "text": "creating separate decision thresholds for each group"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 24
   },
   {
@@ -9995,9 +9116,7 @@
         "text": "optimize for making the most errors"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 24
   },
   {
@@ -10021,9 +9140,7 @@
         "text": "boron letter"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -10047,9 +9164,7 @@
         "text": "Error rate, rejection rate"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 24
   },
   {
@@ -10073,9 +9188,7 @@
         "text": "Individuals do not need protection from predictive models"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -10099,9 +9212,7 @@
         "text": "equality of true outcomes"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 24
   },
   {
@@ -10125,9 +9236,7 @@
         "text": "blind attribute"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 24
   },
   {
@@ -10151,9 +9260,7 @@
         "text": "Change inputs, evaluate outputs"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 24
   },
   {
@@ -10177,9 +9284,7 @@
         "text": "a discriminatory algorithm"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -10203,9 +9308,7 @@
         "text": "prevent the model from launching"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 24
   },
   {
@@ -10229,9 +9332,7 @@
         "text": "we can generate a fairness score"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 24
   },
   {
@@ -10255,9 +9356,7 @@
         "text": "post-processing"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 24
   },
   {
@@ -10281,9 +9380,7 @@
         "text": "pareto efficiency"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 25
   },
   {
@@ -10307,9 +9404,7 @@
         "text": "use biased sources of research"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 25
   },
   {
@@ -10333,9 +9428,7 @@
         "text": "sample bias"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10359,9 +9452,7 @@
         "text": "prejudice bias"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 25
   },
   {
@@ -10385,9 +9476,7 @@
         "text": "using parsed twitter data over parsed Facebook data"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 25
   },
   {
@@ -10411,9 +9500,7 @@
         "text": "training set error"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 25
   },
   {
@@ -10437,9 +9524,7 @@
         "text": "label outputs to prevent re-training bias"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10463,9 +9548,7 @@
         "text": "different ways to match with users"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 25
   },
   {
@@ -10489,9 +9572,7 @@
         "text": "short feedback cycles"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10515,9 +9596,7 @@
         "text": "the group, the dataset"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 25
   },
   {
@@ -10541,9 +9620,7 @@
         "text": "sensitive column"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10567,9 +9644,7 @@
         "text": "reidentified in K datasets"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 25
   },
   {
@@ -10593,9 +9668,7 @@
         "text": "multiple datasets"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10619,9 +9692,7 @@
         "text": "group inclusion"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10645,9 +9716,7 @@
         "text": "algorithmic privacy violations"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 25
   },
   {
@@ -10671,9 +9740,7 @@
         "text": "Fidelity Bank lending dataset"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 25
   },
   {
@@ -10697,9 +9764,7 @@
         "text": "k-anonymity"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 25
   },
   {
@@ -10723,9 +9788,7 @@
         "text": "the algorithm's bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 25
   },
   {
@@ -10749,9 +9812,7 @@
         "text": "pressure inputs"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 25
   },
   {
@@ -10775,9 +9836,7 @@
         "text": "changing the datasets"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 25
   },
   {
@@ -10801,9 +9860,7 @@
         "text": "Create a chain of command"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -10827,9 +9884,7 @@
         "text": "required to fulfill a specific purpose"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -10853,9 +9908,7 @@
         "text": "early and often"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -10879,9 +9932,7 @@
         "text": "highly specified"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -10905,9 +9956,7 @@
         "text": "dataset filter"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -10931,9 +9980,7 @@
         "text": "k-anonymity"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -10957,9 +10004,7 @@
         "text": "heads for yes, tails for no"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 26
   },
   {
@@ -10983,9 +10028,7 @@
         "text": "local"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11009,9 +10052,7 @@
         "text": "express their participation in a study"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -11035,9 +10076,7 @@
         "text": "75%"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11061,9 +10100,7 @@
         "text": "accurate, methodical, and fair"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 26
   },
   {
@@ -11087,9 +10124,7 @@
         "text": "fair"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 26
   },
   {
@@ -11113,9 +10148,7 @@
         "text": "privacy is preserved"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 26
   },
   {
@@ -11139,9 +10172,7 @@
         "text": "groups"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11165,9 +10196,7 @@
         "text": "competition"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 26
   },
   {
@@ -11191,9 +10220,7 @@
         "text": "re-run the algorithm without it"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11217,9 +10244,7 @@
         "text": "malicious"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 26
   },
   {
@@ -11243,9 +10268,7 @@
         "text": "why?"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11269,9 +10292,7 @@
         "text": "game theory"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 26
   },
   {
@@ -11295,9 +10316,7 @@
         "text": "malicious"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 26
   },
   {
@@ -11321,9 +10340,7 @@
         "text": "Unit test"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -11347,9 +10364,7 @@
         "text": "A model very famous and can be apply to all domain."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11373,9 +10388,7 @@
         "text": "Models automatically improve when tested in the same context"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11399,9 +10412,7 @@
         "text": "Develop marketing strategies, execute campaigns, evaluate outcomes, adjust tactics"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11425,9 +10436,7 @@
         "text": "The data was broken."
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11451,9 +10460,7 @@
         "text": "It creates conflicting viewpoints only"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11477,9 +10484,7 @@
         "text": "Reducing transparency in strategy"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -11503,9 +10508,7 @@
         "text": "Lower training costs"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11529,9 +10532,7 @@
         "text": "Standardizing all messages"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11555,9 +10556,7 @@
         "text": "It improves transparency instantly"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -11581,9 +10580,7 @@
         "text": "Focuses solely on aesthetic appeal"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11603,10 +10600,7 @@
         "text": "Narrow AI is dependent on hand-coding of its algorithms."
       }
     ],
-    "answers": [
-      "A",
-      "B"
-    ],
+    "answers": ["A", "B"],
     "sourcePage": 0
   },
   {
@@ -11630,9 +10624,7 @@
         "text": "Liability and accountability are the same, whereas responsibility is irrelevant in business"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11656,9 +10648,7 @@
         "text": "Only robotics"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11682,9 +10672,7 @@
         "text": "Make development more complex"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11708,9 +10696,7 @@
         "text": "They guarantee privacy and security in all data processes"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11734,10 +10720,7 @@
         "text": "Promote collaboration."
       }
     ],
-    "answers": [
-      "C",
-      "D"
-    ],
+    "answers": ["C", "D"],
     "sourcePage": 0
   },
   {
@@ -11761,9 +10744,7 @@
         "text": "HIPAA"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -11787,9 +10768,7 @@
         "text": "Network security protocols"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11813,9 +10792,7 @@
         "text": "By limiting diversity in teams"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -11839,9 +10816,7 @@
         "text": "Relying solely on external audit reports"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11865,9 +10840,7 @@
         "text": "Fair competition provides service choice to users."
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11891,9 +10864,7 @@
         "text": "More hierarchical power structure"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11917,9 +10888,7 @@
         "text": "It prevents communication"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11943,9 +10912,7 @@
         "text": "Technical performance metrics only"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -11969,9 +10936,7 @@
         "text": "By prioritizing profit over ethical standards"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -11995,9 +10960,7 @@
         "text": "Availability bias"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12021,9 +10984,7 @@
         "text": "To control product pricing strategies"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12047,9 +11008,7 @@
         "text": "We should keep limits on on what artificial general intelligence (AGI) is capable of"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12073,9 +11032,7 @@
         "text": "Disabling all tracking features"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12099,9 +11056,7 @@
         "text": "Basic Al"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12125,9 +11080,7 @@
         "text": "Release information only to major news networks"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12151,9 +11104,7 @@
         "text": "99%"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12177,9 +11128,7 @@
         "text": "Better customer loyalty"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12203,9 +11152,7 @@
         "text": "By guaranteeing that some event will occur with 100% likelihood"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12229,9 +11176,7 @@
         "text": "Reducing system complexity"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12255,9 +11200,7 @@
         "text": "The principle of having security risk"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12281,9 +11224,7 @@
         "text": "Social contract theory"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12307,9 +11248,7 @@
         "text": "Fastest processing speed"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12333,9 +11272,7 @@
         "text": "By focusing solely on compliance"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12359,9 +11296,7 @@
         "text": "It boosts marketing campaigns"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12385,9 +11320,7 @@
         "text": "It demonstrates that the organization is committed to accountability and transparency in their data-driven systems"
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 0
   },
   {
@@ -12411,9 +11344,7 @@
         "text": "Virtue Ethics"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12437,9 +11368,7 @@
         "text": "Ignore ethics until legally required"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12463,9 +11392,7 @@
         "text": "Trojan horse"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12489,9 +11416,7 @@
         "text": "By predicting future crises through historical data analysis"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12515,9 +11440,7 @@
         "text": "Optimized resource allocation"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12541,9 +11464,7 @@
         "text": "Distrust in human judgment"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12567,9 +11488,7 @@
         "text": "To create a slow transition through training"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12593,9 +11512,7 @@
         "text": "Higher profit margins"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   },
   {
@@ -12619,9 +11536,7 @@
         "text": "Simplified development processes"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12645,9 +11560,7 @@
         "text": "Understandability"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12671,9 +11584,7 @@
         "text": "By encouraging the concealment of ethical concerns"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12697,9 +11608,7 @@
         "text": "Hosting annual policy workshops"
       }
     ],
-    "answers": [
-      "B"
-    ],
+    "answers": ["B"],
     "sourcePage": 0
   },
   {
@@ -12723,9 +11632,7 @@
         "text": "An oversight committee focus on frameworks"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12749,9 +11656,7 @@
         "text": "The desire for social change."
       }
     ],
-    "answers": [
-      "D"
-    ],
+    "answers": ["D"],
     "sourcePage": 0
   },
   {
@@ -12775,9 +11680,7 @@
         "text": "Minimizing leadership roles"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12801,9 +11704,7 @@
         "text": "The law often difficult to understand"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12827,9 +11728,7 @@
         "text": "Consequentialism is newer than deontology"
       }
     ],
-    "answers": [
-      "A"
-    ],
+    "answers": ["A"],
     "sourcePage": 0
   },
   {
@@ -12853,9 +11752,7 @@
         "text": "Product development timelines"
       }
     ],
-    "answers": [
-      "C"
-    ],
+    "answers": ["C"],
     "sourcePage": 0
   }
 ]
