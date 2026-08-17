@@ -8516,6 +8516,99 @@
           ]
         }
       ]
+    },
+    {
+      "id": 71,
+      "title": "Chỉ - Thị - Tương - Đàm",
+      "kanji": [
+        {
+          "character": "指",
+          "meaning": "Chỉ, chỉ vào",
+          "onyomi": "シ",
+          "kunyomi": "ゆび、さ-す",
+          "examples": [
+            {
+              "word": "指示",
+              "reading": "しじ",
+              "meaning": "Chỉ thị, hướng dẫn"
+            },
+            {
+              "word": "指す",
+              "reading": "さす",
+              "meaning": "Chỉ, chỉ vào"
+            },
+            {
+              "word": "指導",
+              "reading": "しどう",
+              "meaning": "Chỉ đạo, hướng dẫn"
+            }
+          ]
+        },
+        {
+          "character": "示",
+          "meaning": "Thị, chỉ ra, biểu thị",
+          "onyomi": "ジ、シ",
+          "kunyomi": "しめ-す",
+          "examples": [
+            {
+              "word": "指示",
+              "reading": "しじ",
+              "meaning": "Chỉ thị, hướng dẫn"
+            },
+            {
+              "word": "示す",
+              "reading": "しめす",
+              "meaning": "Chỉ ra, biểu thị"
+            }
+          ]
+        },
+        {
+          "character": "相",
+          "meaning": "Tương, lẫn nhau, đối phương",
+          "onyomi": "ソウ、ショウ",
+          "kunyomi": "あい",
+          "examples": [
+            {
+              "word": "相談",
+              "reading": "そうだん",
+              "meaning": "Tư vấn, trao đổi"
+            },
+            {
+              "word": "相手",
+              "reading": "あいて",
+              "meaning": "Đối phương, người đối diện"
+            },
+            {
+              "word": "相変わらず",
+              "reading": "あいかわらず",
+              "meaning": "Vẫn như thường lệ, vẫn không thay đổi"
+            },
+            {
+              "word": "首相",
+              "reading": "しゅしょう",
+              "meaning": "Thủ tướng"
+            }
+          ]
+        },
+        {
+          "character": "談",
+          "meaning": "Đàm, nói chuyện, bàn bạc",
+          "onyomi": "ダン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "相談",
+              "reading": "そうだん",
+              "meaning": "Tư vấn, trao đổi"
+            },
+            {
+              "word": "冗談",
+              "reading": "じょうだん",
+              "meaning": "Đùa, nói đùa"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
