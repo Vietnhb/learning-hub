@@ -8246,6 +8246,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": 70,
+      "title": "Khẳng - Phủ - Bảo - Lưu",
+      "kanji": [
+        {
+          "character": "肯",
+          "meaning": "Khẳng, đồng ý, chấp nhận",
+          "onyomi": "コウ",
+          "kunyomi": "がえんじる",
+          "examples": [
+            {
+              "word": "肯定",
+              "reading": "こうてい",
+              "meaning": "Khẳng định, công nhận"
+            }
+          ]
+        },
+        {
+          "character": "否",
+          "meaning": "Phủ, phủ định, từ chối",
+          "onyomi": "ヒ",
+          "kunyomi": "いな",
+          "examples": [
+            {
+              "word": "否定",
+              "reading": "ひてい",
+              "meaning": "Phủ định"
+            },
+            {
+              "word": "拒否",
+              "reading": "きょひ",
+              "meaning": "Từ chối, cự tuyệt"
+            }
+          ]
+        },
+        {
+          "character": "保",
+          "meaning": "Bảo, giữ, bảo vệ",
+          "onyomi": "ホ、ホウ",
+          "kunyomi": "たも-つ",
+          "examples": [
+            {
+              "word": "保つ",
+              "reading": "たもつ",
+              "meaning": "Giữ, duy trì"
+            },
+            {
+              "word": "保存",
+              "reading": "ほぞん",
+              "meaning": "Bảo quản, lưu giữ"
+            },
+            {
+              "word": "保護",
+              "reading": "ほご",
+              "meaning": "Bảo vệ"
+            }
+          ]
+        },
+        {
+          "character": "留",
+          "meaning": "Lưu, giữ lại, ở lại",
+          "onyomi": "リュウ、ル",
+          "kunyomi": "と-める、と-まる",
+          "examples": [
+            {
+              "word": "留守",
+              "reading": "るす",
+              "meaning": "Vắng nhà"
+            },
+            {
+              "word": "保留",
+              "reading": "ほりゅう",
+              "meaning": "Bảo lưu, tạm giữ"
+            },
+            {
+              "word": "留学",
+              "reading": "りゅうがく",
+              "meaning": "Du học"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
