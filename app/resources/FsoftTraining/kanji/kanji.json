@@ -8329,6 +8329,104 @@
           ]
         }
       ]
+    },
+    {
+      "id": 71,
+      "title": "Phán - Đoạn - Nhận - Xác",
+      "kanji": [
+        {
+          "character": "判",
+          "meaning": "Phán, phán đoán, phán định",
+          "onyomi": "ハン、バン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "判断",
+              "reading": "はんだん",
+              "meaning": "Phán đoán, quyết định"
+            },
+            {
+              "word": "判定",
+              "reading": "はんてい",
+              "meaning": "Phán định, đánh giá"
+            },
+            {
+              "word": "判決",
+              "reading": "はんけつ",
+              "meaning": "Phán quyết"
+            }
+          ]
+        },
+        {
+          "character": "断",
+          "meaning": "Đoạn, cắt, từ chối, ngăn cách",
+          "onyomi": "ダン",
+          "kunyomi": "た-つ、ことわ-る",
+          "examples": [
+            {
+              "word": "断る",
+              "reading": "ことわる",
+              "meaning": "Từ chối"
+            },
+            {
+              "word": "中断",
+              "reading": "ちゅうだん",
+              "meaning": "Gián đoạn"
+            },
+            {
+              "word": "断定",
+              "reading": "だんてい",
+              "meaning": "Khẳng định, kết luận"
+            }
+          ]
+        },
+        {
+          "character": "認",
+          "meaning": "Nhận, công nhận, xác nhận",
+          "onyomi": "ニン",
+          "kunyomi": "みと-める",
+          "examples": [
+            {
+              "word": "認識",
+              "reading": "にんしき",
+              "meaning": "Nhận thức"
+            },
+            {
+              "word": "認める",
+              "reading": "みとめる",
+              "meaning": "Công nhận, thừa nhận"
+            },
+            {
+              "word": "承認",
+              "reading": "しょうにん",
+              "meaning": "Phê duyệt, công nhận"
+            }
+          ]
+        },
+        {
+          "character": "確",
+          "meaning": "Xác, chắc chắn, chính xác",
+          "onyomi": "カク",
+          "kunyomi": "たし-か、たし-かめる",
+          "examples": [
+            {
+              "word": "確認",
+              "reading": "かくにん",
+              "meaning": "Xác nhận, kiểm tra"
+            },
+            {
+              "word": "正確",
+              "reading": "せいかく",
+              "meaning": "Chính xác"
+            },
+            {
+              "word": "確かめる",
+              "reading": "たしかめる",
+              "meaning": "Xác nhận, kiểm tra"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
