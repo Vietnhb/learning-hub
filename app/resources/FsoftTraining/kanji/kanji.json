@@ -8427,6 +8427,95 @@
           ]
         }
       ]
+    },
+
+    {
+      "id": 72,
+      "title": "Báo - Cáo - Liên - Lạc",
+      "kanji": [
+        {
+          "character": "報",
+          "meaning": "Báo, báo cáo, thông báo",
+          "onyomi": "ホウ",
+          "kunyomi": "むく-いる",
+          "examples": [
+            {
+              "word": "報告",
+              "reading": "ほうこく",
+              "meaning": "Báo cáo"
+            },
+            {
+              "word": "報いる",
+              "reading": "むくいる",
+              "meaning": "Đền đáp"
+            }
+          ]
+        },
+        {
+          "character": "告",
+          "meaning": "Cáo, báo cho biết, thông báo",
+          "onyomi": "コク",
+          "kunyomi": "つ-げる",
+          "examples": [
+            {
+              "word": "告げる",
+              "reading": "つげる",
+              "meaning": "Báo cho biết, thông báo"
+            },
+            {
+              "word": "告白",
+              "reading": "こくはく",
+              "meaning": "Thú nhận, tỏ tình"
+            },
+            {
+              "word": "広告",
+              "reading": "こうこく",
+              "meaning": "Quảng cáo"
+            }
+          ]
+        },
+        {
+          "character": "連",
+          "meaning": "Liên, liên kết, liên lạc, tiếp nối",
+          "onyomi": "レン",
+          "kunyomi": "つら-なる、つら-ねる、つ-れる",
+          "examples": [
+            {
+              "word": "連絡",
+              "reading": "れんらく",
+              "meaning": "Liên lạc"
+            },
+            {
+              "word": "連れる",
+              "reading": "つれる",
+              "meaning": "Dẫn theo"
+            },
+            {
+              "word": "連続",
+              "reading": "れんぞく",
+              "meaning": "Liên tục"
+            }
+          ]
+        },
+        {
+          "character": "絡",
+          "meaning": "Lạc, liên kết, vướng vào",
+          "onyomi": "ラク",
+          "kunyomi": "から-む、から-まる",
+          "examples": [
+            {
+              "word": "連絡",
+              "reading": "れんらく",
+              "meaning": "Liên lạc"
+            },
+            {
+              "word": "絡む",
+              "reading": "からむ",
+              "meaning": "Vướng vào, liên quan"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
