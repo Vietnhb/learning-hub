@@ -3069,6 +3069,83 @@
       ]
     },
     {
+      "id": "072-grammar",
+      "pattern": "ご + Vます (bỏ ます) + いただきました",
+      "meaning": "Đã được (ai đó) làm gì cho một cách lịch sự; lời cảm ơn/kính ngữ.",
+      "note": "Dùng ご + động từ Hán Nhật dạng ます bỏ ます + いただきました để cảm ơn hoặc nói một cách khiêm nhường về việc mình đã nhận được sự giúp đỡ.",
+      "examples": [
+        { "jp": "部長に資料をご確認いただきました。", "vi": "Tôi đã được trưởng phòng kiểm tra tài liệu giúp." },
+        { "jp": "先生に推薦状をご作成いただきました。", "vi": "Tôi đã được thầy/cô viết thư giới thiệu giúp." },
+        { "jp": "本日はお忙しい中、ご参加いただきありがとうございました。", "vi": "Cảm ơn anh/chị đã tham gia hôm nay dù đang bận." }
+      ]
+    },
+    {
+      "id": "073-grammar",
+      "pattern": "Vていました → Vてました",
+      "meaning": "Dạng rút gọn trong hội thoại lịch sự của Vていました.",
+      "note": "Trong hội thoại, い trong ていました thường được lược bỏ thành てました. Cách nói này tự nhiên nhưng vẫn giữ sắc thái lịch sự.",
+      "examples": [
+        { "jp": "先ほど電話してました。", "vi": "Lúc nãy tôi đang gọi điện ạ." },
+        { "jp": "昨日は何をしてましたか。", "vi": "Hôm qua bạn đã làm gì vậy?" },
+        { "jp": "駅で友達を待ってました。", "vi": "Tôi đã đang đợi bạn ở ga." }
+      ]
+    },
+    {
+      "id": "074-grammar",
+      "pattern": "Nを + 存じ上げる",
+      "meaning": "Biết N (khiêm nhường ngữ, dùng với người/vật liên quan đến đối phương).",
+      "note": "存じ上げる là khiêm nhường ngữ đặc biệt của 知っています khi nói về người. Không dùng để nói về bản thân người nói.",
+      "examples": [
+        { "jp": "田中様のお名前は存じ上げております。", "vi": "Tôi có biết tên ông/bà Tanaka ạ." },
+        { "jp": "先生のご活躍は存じ上げております。", "vi": "Tôi có biết về những hoạt động nổi bật của thầy/cô ạ." },
+        { "jp": "あの方のことはよく存じ上げません。", "vi": "Tôi không biết rõ về vị đó ạ." }
+      ]
+    },
+    {
+      "id": "075-grammar",
+      "pattern": "お + Vます (bỏ ます) + です",
+      "meaning": "Ngài/anh/chị đang… (kính ngữ của Vています).",
+      "note": "Dùng お + động từ nhóm 1, 2 dạng ます bỏ ます + です để kính trọng hành động đang diễn ra của người khác. Với động từ nhóm 3 thường dùng ご + Hán ngữ + です.",
+      "examples": [
+        { "jp": "社長は今、お帰りです。", "vi": "Giám đốc hiện đang về ạ." },
+        { "jp": "先生は何をお探しですか。", "vi": "Thầy/cô đang tìm gì ạ?" },
+        { "jp": "お客様がお待ちです。", "vi": "Quý khách đang đợi ạ." }
+      ]
+    },
+    {
+      "id": "076-grammar",
+      "pattern": "Thể thông thường + でしょうか",
+      "meaning": "Liệu có… không ạ?; cách hỏi hoặc nhờ vả lịch sự.",
+      "note": "Dùng でしょうか để làm câu hỏi, lời xác nhận hoặc lời nhờ vả mềm mại và lịch sự hơn.",
+      "examples": [
+        { "jp": "こちらでよろしいでしょうか。", "vi": "Như thế này có được không ạ?" },
+        { "jp": "何時ごろお越しになるでしょうか。", "vi": "Khoảng mấy giờ anh/chị sẽ đến ạ?" },
+        { "jp": "少々お待ちいただけるでしょうか。", "vi": "Anh/chị có thể vui lòng đợi một lát được không ạ?" }
+      ]
+    },
+    {
+      "id": "077-grammar",
+      "pattern": "N + でいらっしゃる",
+      "meaning": "Là… (kính ngữ của です/である).",
+      "note": "Dùng でいらっしゃる để nói kính trọng về thân phận, nghề nghiệp hoặc trạng thái của người khác.",
+      "examples": [
+        { "jp": "田中様は先生でいらっしゃいます。", "vi": "Ông/bà Tanaka là giáo viên ạ." },
+        { "jp": "こちらが新しい担当者でいらっしゃいますか。", "vi": "Đây có phải là người phụ trách mới không ạ?" },
+        { "jp": "お元気でいらっしゃいますか。", "vi": "Dạo này ông/bà vẫn khỏe chứ ạ?" }
+      ]
+    },
+    {
+      "id": "078-grammar",
+      "pattern": "Vさせていただきます",
+      "meaning": "Xin phép được…; tôi xin được… (khiêm nhường và lịch sự).",
+      "note": "Dùng khi xin phép thực hiện một hành động, thường trong công việc hoặc tình huống trang trọng. Về cấu tạo, dùng thể sai khiến + ていただきます.",
+      "examples": [
+        { "jp": "私から説明させていただきます。", "vi": "Xin phép cho tôi được giải thích ạ." },
+        { "jp": "本日の発表を始めさせていただきます。", "vi": "Xin phép được bắt đầu phần thuyết trình hôm nay ạ." },
+        { "jp": "こちらで確認させていただきます。", "vi": "Xin phép để tôi kiểm tra lại ạ." }
+      ]
+    },
+    {
       "id": "079-grammar",
       "pattern": "Vて + からでなければ／からでないと",
       "meaning": "Nếu chưa… thì không thể…",
