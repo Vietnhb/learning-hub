@@ -8528,6 +8528,11 @@
           "kunyomi": "ゆび、さ-す",
           "examples": [
             {
+              "word": "指",
+              "reading": "ゆび",
+              "meaning": "Ngón tay"
+            },
+            {
               "word": "指示",
               "reading": "しじ",
               "meaning": "Chỉ thị, hướng dẫn"
