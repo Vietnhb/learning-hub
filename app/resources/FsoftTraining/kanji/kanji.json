@@ -8173,6 +8173,79 @@
           ]
         }
       ]
+    },
+    {
+      "id": 70,
+      "title": "Đối - Phản - Tán - Vi",
+      "kanji": [
+        {
+          "character": "対",
+          "meaning": "Đối, đối diện, đối với",
+          "onyomi": "タイ、ツイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "対立",
+              "reading": "たいりつ",
+              "meaning": "Đối lập, đối nghịch"
+            },
+            {
+              "word": "対する",
+              "reading": "たいする",
+              "meaning": "Đối với, đối lại"
+            }
+          ]
+        },
+        {
+          "character": "反",
+          "meaning": "Phản, ngược lại, chống lại",
+          "onyomi": "ハン、ホン、タン",
+          "kunyomi": "そ-る、そ-らす",
+          "examples": [
+            {
+              "word": "反対",
+              "reading": "はんたい",
+              "meaning": "Phản đối, trái ngược"
+            },
+            {
+              "word": "反る",
+              "reading": "そる",
+              "meaning": "Cong, uốn cong"
+            },
+            {
+              "word": "反らす",
+              "reading": "そらす",
+              "meaning": "Uốn cong, ngửa ra sau"
+            }
+          ]
+        },
+        {
+          "character": "賛",
+          "meaning": "Tán, tán thành, đồng ý",
+          "onyomi": "サン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "賛同",
+              "reading": "さんどう",
+              "meaning": "Tán đồng, đồng ý"
+            }
+          ]
+        },
+        {
+          "character": "違",
+          "meaning": "Vi, khác, sai, trái",
+          "onyomi": "イ",
+          "kunyomi": "ちが-う、ちが-える",
+          "examples": [
+            {
+              "word": "違反",
+              "reading": "いはん",
+              "meaning": "Vi phạm"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
