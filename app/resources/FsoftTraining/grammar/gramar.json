@@ -3071,7 +3071,7 @@
     {
       "id": "072-grammar",
       "pattern": "ご + Vます (bỏ ます) + いただきました",
-      "meaning": "Đã được (ai đó) làm gì cho một cách lịch sự; lời cảm ơn/kính ngữ.",
+      "meaning": "Khiêm nhường ngữ, diễn tả việc được ai đó làm gì cho một cách lịch sự.",
       "note": "Dùng ご + động từ Hán Nhật dạng ます bỏ ます + いただきました để cảm ơn hoặc nói một cách khiêm nhường về việc mình đã nhận được sự giúp đỡ.",
       "examples": [
         { "jp": "部長に資料をご確認いただきました。", "vi": "Tôi đã được trưởng phòng kiểm tra tài liệu giúp." },

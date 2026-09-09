@@ -8614,6 +8614,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 72,
+      "title": "Tối - Quản - Phó - Giả",
+      "kanji": [
+        {
+          "character": "最",
+          "meaning": "Tối, nhất",
+          "onyomi": "サイ",
+          "kunyomi": "もっと-も",
+          "examples": [
+            {
+              "word": "最も",
+              "reading": "もっとも",
+              "meaning": "Nhất, nhất là"
+            },
+            {
+              "word": "最大",
+              "reading": "さいだい",
+              "meaning": "Lớn nhất"
+            },
+            {
+              "word": "最短",
+              "reading": "さいたん",
+              "meaning": "Ngắn nhất"
+            },
+            {
+              "word": "最後",
+              "reading": "さいご",
+              "meaning": "Cuối cùng"
+            },
+            {
+              "word": "最近",
+              "reading": "さいきん",
+              "meaning": "Gần đây"
+            },
+            {
+              "word": "最高",
+              "reading": "さいこう",
+              "meaning": "Cao nhất, tuyệt nhất"
+            }
+          ]
+        },
+        {
+          "character": "管",
+          "meaning": "Quản, ống, quản lý",
+          "onyomi": "カン",
+          "kunyomi": "くだ",
+          "examples": [
+            {
+              "word": "水道管",
+              "reading": "すいどうかん",
+              "meaning": "Ống nước"
+            },
+            {
+              "word": "管理職",
+              "reading": "かんりしょく",
+              "meaning": "Chức vụ quản lý"
+            },
+            {
+              "word": "保管",
+              "reading": "ほかん",
+              "meaning": "Bảo quản, cất giữ"
+            }
+          ]
+        },
+        {
+          "character": "副",
+          "meaning": "Phó, phụ",
+          "onyomi": "フク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "副賞",
+              "reading": "ふくしょう",
+              "meaning": "Giải thưởng phụ"
+            },
+            {
+              "word": "副社長",
+              "reading": "ふくしゃちょう",
+              "meaning": "Phó giám đốc"
+            },
+            {
+              "word": "副作用",
+              "reading": "ふくさよう",
+              "meaning": "Tác dụng phụ"
+            }
+          ]
+        },
+        {
+          "character": "者",
+          "meaning": "Giả, người",
+          "onyomi": "シャ",
+          "kunyomi": "もの",
+          "examples": [
+            {
+              "word": "記者",
+              "reading": "きしゃ",
+              "meaning": "Phóng viên"
+            },
+            {
+              "word": "若者",
+              "reading": "わかもの",
+              "meaning": "Người trẻ"
+            },
+            {
+              "word": "医者",
+              "reading": "いしゃ",
+              "meaning": "Bác sĩ"
+            },
+            {
+              "word": "人気者",
+              "reading": "にんきもの",
+              "meaning": "Người được yêu thích, người nổi tiếng"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
