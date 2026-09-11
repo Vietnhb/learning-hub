@@ -8732,6 +8732,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 73,
+      "title": "Hiện - Tích - Cựu - Thứ",
+      "kanji": [
+        {
+          "character": "現",
+          "meaning": "Hiện, xuất hiện, hiện tại",
+          "onyomi": "ゲン",
+          "kunyomi": "あらわ-す、あらわ-れる",
+          "examples": [
+            {
+              "word": "現す",
+              "reading": "あらわす",
+              "meaning": "Biểu hiện, làm hiện ra"
+            },
+            {
+              "word": "現れる",
+              "reading": "あらわれる",
+              "meaning": "Xuất hiện"
+            },
+            {
+              "word": "現行",
+              "reading": "げんこう",
+              "meaning": "Hiện hành"
+            },
+            {
+              "word": "出現",
+              "reading": "しゅつげん",
+              "meaning": "Xuất hiện"
+            },
+            {
+              "word": "現在",
+              "reading": "げんざい",
+              "meaning": "Hiện tại"
+            },
+            {
+              "word": "現実的",
+              "reading": "げんじつてき",
+              "meaning": "Thực tế, mang tính thực tế"
+            }
+          ]
+        },
+        {
+          "character": "昔",
+          "meaning": "Tích, xưa, ngày xưa",
+          "onyomi": "セキ、シャク",
+          "kunyomi": "むかし",
+          "examples": [
+            {
+              "word": "昔",
+              "reading": "むかし",
+              "meaning": "Ngày xưa"
+            },
+            {
+              "word": "昔話",
+              "reading": "むかしばなし",
+              "meaning": "Chuyện ngày xưa, truyện cổ"
+            }
+          ]
+        },
+        {
+          "character": "旧",
+          "meaning": "Cựu, cũ",
+          "onyomi": "キュウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "旧姓",
+              "reading": "きゅうせい",
+              "meaning": "Họ cũ"
+            },
+            {
+              "word": "旧家",
+              "reading": "きゅうか",
+              "meaning": "Gia đình lâu đời, nhà cũ"
+            },
+            {
+              "word": "旧式",
+              "reading": "きゅうしき",
+              "meaning": "Kiểu cũ, kiểu lỗi thời"
+            },
+            {
+              "word": "旧正月",
+              "reading": "きゅうしょうがつ",
+              "meaning": "Tết âm lịch"
+            }
+          ]
+        },
+        {
+          "character": "次",
+          "meaning": "Thứ, tiếp theo",
+          "onyomi": "ジ、シ",
+          "kunyomi": "つぎ、つ-ぐ",
+          "examples": [
+            {
+              "word": "次",
+              "reading": "つぎ",
+              "meaning": "Tiếp theo"
+            },
+            {
+              "word": "次第",
+              "reading": "しだい",
+              "meaning": "Thứ tự, tùy theo"
+            },
+            {
+              "word": "次回",
+              "reading": "じかい",
+              "meaning": "Lần sau, lần tiếp theo"
+            },
+            {
+              "word": "席次表",
+              "reading": "せきじひょう",
+              "meaning": "Sơ đồ thứ tự chỗ ngồi"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
