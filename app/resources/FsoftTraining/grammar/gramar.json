@@ -3734,6 +3734,42 @@
       ]
     },
     {
+      "id": "094-grammar",
+      "pattern": "Thể thông thường + かと思ったら",
+      "meaning": "Cứ tưởng là… ai dè…; cứ ngỡ… hóa ra…",
+      "note": "Sử dụng khi kết quả khác với những gì bạn đã nghĩ ban đầu, hoặc bạn đã hiểu nhầm.",
+      "examples": [
+        {
+          "jp": "A:あの人、新しく来た課長さんよ。\nB:え、本当！？若そうだから、新入社員かと思ったよ。",
+          "vi": "Người kia, là trưởng phòng mới tới đó.\nẾ, thật sao!? Vì nhìn trẻ thế, nên tớ cứ tưởng là nhân viên mới chứ."
+        },
+        {
+          "jp": "A:遅れてごめん。寝坊しちゃった。\nB:いいけど...。約束、忘れちゃったかと思った。",
+          "vi": "Xin lỗi vì đến muộn, ngủ muộn mất ạ.\nKhông sao nhưng cứ tưởng là anh quên cuộc hẹn rồi chứ."
+        },
+        {
+          "jp": "100 点取って、先生に呼ばれたから、ほめられるかと思ったら、遅刻が多いと注\n意された。",
+          "vi": "Lấy 100 điểm, vì được thầy gọi, nên cứ tưởng là được khen rồi, ai dè bị nhắc nhở vì đi\nmuộn quá nhiều."
+        },
+        {
+          "jp": "10 キロも走らされて、死ぬかと思ったよ。",
+          "vi": "Bị bắt chạy 10 cây số, cứ tưởng là chết luôn chứ."
+        },
+        {
+          "jp": "やっと帰ってきたかと思ったら、また出かけるの？",
+          "vi": "Cứ tưởng là cuối cùng đã về rồi, hóa ra lại ra ngoài nữa rồi sao?"
+        },
+        {
+          "jp": "勉強しているかと思ったら、マンガを読んでいる。",
+          "vi": "Cứ ngỡ là nó đang học bài, ai dè đang đọc manga."
+        },
+        {
+          "jp": "今日は雨が降っているかと思ったら、一日中ずっと晴れだった。",
+          "vi": "Cứ tưởng là hôm nay có mưa, ai dè nắng suốt cả ngày."
+        }
+      ]
+    },
+    {
       "id": "095-grammar",
       "pattern": "Thể thông thường／なA + な／N + の + くせに",
       "meaning": "Vậy mà; mặc dù…",
