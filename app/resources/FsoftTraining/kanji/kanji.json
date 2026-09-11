@@ -8850,6 +8850,196 @@
           ]
         }
       ]
+    },
+    {
+      "id": 74,
+      "title": "Phí - Triệu - Toán - Ức",
+      "kanji": [
+        {
+          "character": "費",
+          "meaning": "Phí, chi phí, tiêu tốn",
+          "onyomi": "ヒ",
+          "kunyomi": "つい-やす、つい-える",
+          "examples": [
+            {
+              "word": "費やす",
+              "reading": "ついやす",
+              "meaning": "Tiêu tốn, dành ra"
+            },
+            {
+              "word": "学費",
+              "reading": "がくひ",
+              "meaning": "Học phí"
+            },
+            {
+              "word": "消費者",
+              "reading": "しょうひしゃ",
+              "meaning": "Người tiêu dùng"
+            },
+            {
+              "word": "食費",
+              "reading": "しょくひ",
+              "meaning": "Chi phí ăn uống"
+            },
+            {
+              "word": "費用",
+              "reading": "ひよう",
+              "meaning": "Chi phí"
+            },
+            {
+              "word": "費える",
+              "reading": "ついえる",
+              "meaning": "Bị tiêu tốn, bị hao phí"
+            }
+          ]
+        },
+        {
+          "character": "兆",
+          "meaning": "Triệu, dấu hiệu, điềm báo",
+          "onyomi": "チョウ",
+          "kunyomi": "きざ-す、きざ-し",
+          "examples": [
+            {
+              "word": "兆す",
+              "reading": "きざす",
+              "meaning": "Có dấu hiệu, báo hiệu"
+            },
+            {
+              "word": "前兆",
+              "reading": "ぜんちょう",
+              "meaning": "Điềm báo, dấu hiệu báo trước"
+            },
+            {
+              "word": "兆し",
+              "reading": "きざし",
+              "meaning": "Dấu hiệu, điềm báo"
+            }
+          ]
+        },
+        {
+          "character": "算",
+          "meaning": "Toán, tính toán",
+          "onyomi": "サン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "算数",
+              "reading": "さんすう",
+              "meaning": "Số học, môn toán"
+            },
+            {
+              "word": "暗算",
+              "reading": "あんざん",
+              "meaning": "Tính nhẩm"
+            },
+            {
+              "word": "計算",
+              "reading": "けいさん",
+              "meaning": "Tính toán"
+            },
+            {
+              "word": "予算",
+              "reading": "よさん",
+              "meaning": "Ngân sách, dự toán"
+            }
+          ]
+        },
+        {
+          "character": "億",
+          "meaning": "Ức, một trăm triệu",
+          "onyomi": "オク",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "一億円",
+              "reading": "いちおくえん",
+              "meaning": "Một trăm triệu yên"
+            },
+            {
+              "word": "一億",
+              "reading": "いちおく",
+              "meaning": "Một trăm triệu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "title": "Cung - Thuế",
+      "kanji": [
+        {
+          "character": "供",
+          "meaning": "Cung, cung cấp, dâng",
+          "onyomi": "キョウ、ク",
+          "kunyomi": "そな-える、とも",
+          "examples": [
+            {
+              "word": "供",
+              "reading": "とも",
+              "meaning": "Người đi cùng, tùy tùng"
+            },
+            {
+              "word": "供える",
+              "reading": "そなえる",
+              "meaning": "Dâng, cúng"
+            },
+            {
+              "word": "試供品",
+              "reading": "しきょうひん",
+              "meaning": "Sản phẩm dùng thử"
+            },
+            {
+              "word": "提供",
+              "reading": "ていきょう",
+              "meaning": "Cung cấp"
+            },
+            {
+              "word": "供給",
+              "reading": "きょうきゅう",
+              "meaning": "Cung cấp, cung ứng"
+            },
+            {
+              "word": "自供",
+              "reading": "じきょう",
+              "meaning": "Tự thú, tự khai"
+            }
+          ]
+        },
+        {
+          "character": "税",
+          "meaning": "Thuế",
+          "onyomi": "ゼイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "増税",
+              "reading": "ぞうぜい",
+              "meaning": "Tăng thuế"
+            },
+            {
+              "word": "関税",
+              "reading": "かんぜい",
+              "meaning": "Thuế quan"
+            },
+            {
+              "word": "消費税",
+              "reading": "しょうひぜい",
+              "meaning": "Thuế tiêu dùng"
+            },
+            {
+              "word": "減税",
+              "reading": "げんぜい",
+              "meaning": "Giảm thuế"
+            },
+            {
+              "word": "税関",
+              "reading": "ぜいかん",
+              "meaning": "Hải quan"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
