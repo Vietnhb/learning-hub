@@ -9158,6 +9158,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 77,
+      "title": "Cơ - Giới - Nguy - Hiểm",
+      "kanji": [
+        {
+          "character": "機",
+          "meaning": "Cơ, máy móc, cơ hội",
+          "onyomi": "キ",
+          "kunyomi": "はた",
+          "examples": [
+            {
+              "word": "機",
+              "reading": "はた",
+              "meaning": "Máy dệt"
+            },
+            {
+              "word": "機能",
+              "reading": "きのう",
+              "meaning": "Chức năng"
+            },
+            {
+              "word": "機会",
+              "reading": "きかい",
+              "meaning": "Cơ hội"
+            },
+            {
+              "word": "機関",
+              "reading": "きかん",
+              "meaning": "Cơ quan, tổ chức"
+            },
+            {
+              "word": "機械",
+              "reading": "きかい",
+              "meaning": "Máy móc"
+            }
+          ]
+        },
+        {
+          "character": "械",
+          "meaning": "Giới, máy móc, dụng cụ",
+          "onyomi": "カイ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "機械",
+              "reading": "きかい",
+              "meaning": "Máy móc"
+            },
+            {
+              "word": "器械",
+              "reading": "きかい",
+              "meaning": "Dụng cụ, thiết bị"
+            }
+          ]
+        },
+        {
+          "character": "危",
+          "meaning": "Nguy, nguy hiểm",
+          "onyomi": "キ",
+          "kunyomi": "あぶ-ない、あや-うい、あや-ぶむ",
+          "examples": [
+            {
+              "word": "危ぶむ",
+              "reading": "あやぶむ",
+              "meaning": "Lo ngại, e ngại"
+            },
+            {
+              "word": "危うい",
+              "reading": "あやうい",
+              "meaning": "Nguy hiểm, nguy cấp"
+            },
+            {
+              "word": "危ない",
+              "reading": "あぶない",
+              "meaning": "Nguy hiểm"
+            },
+            {
+              "word": "危険",
+              "reading": "きけん",
+              "meaning": "Nguy hiểm"
+            },
+            {
+              "word": "危機",
+              "reading": "きき",
+              "meaning": "Nguy cơ, khủng hoảng"
+            }
+          ]
+        },
+        {
+          "character": "険",
+          "meaning": "Hiểm, nguy hiểm, hiểm trở",
+          "onyomi": "ケン",
+          "kunyomi": "けわ-しい",
+          "examples": [
+            {
+              "word": "危険",
+              "reading": "きけん",
+              "meaning": "Nguy hiểm"
+            },
+            {
+              "word": "険しい",
+              "reading": "けわしい",
+              "meaning": "Hiểm trở, gay gắt"
+            },
+            {
+              "word": "保険",
+              "reading": "ほけん",
+              "meaning": "Bảo hiểm"
+            },
+            {
+              "word": "険悪",
+              "reading": "けんあく",
+              "meaning": "Căng thẳng, xấu đi"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
