@@ -9040,6 +9040,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": 76,
+      "title": "Sản - Nông - Mậu - Thương",
+      "kanji": [
+        {
+          "character": "産",
+          "meaning": "Sản, sinh sản, sản xuất",
+          "onyomi": "サン",
+          "kunyomi": "う-む、う-まれる",
+          "examples": [
+            {
+              "word": "産まれる",
+              "reading": "うまれる",
+              "meaning": "Được sinh ra"
+            },
+            {
+              "word": "出産",
+              "reading": "しゅっさん",
+              "meaning": "Sinh con, sinh nở"
+            },
+            {
+              "word": "倒産",
+              "reading": "とうさん",
+              "meaning": "Phá sản"
+            },
+            {
+              "word": "不動産",
+              "reading": "ふどうさん",
+              "meaning": "Bất động sản"
+            },
+            {
+              "word": "生産者",
+              "reading": "せいさんしゃ",
+              "meaning": "Nhà sản xuất, người sản xuất"
+            },
+            {
+              "word": "土産",
+              "reading": "みやげ",
+              "meaning": "Quà lưu niệm, quà mang về"
+            }
+          ]
+        },
+        {
+          "character": "農",
+          "meaning": "Nông, nông nghiệp",
+          "onyomi": "ノウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "農家",
+              "reading": "のうか",
+              "meaning": "Nông dân, hộ làm nông"
+            },
+            {
+              "word": "農民",
+              "reading": "のうみん",
+              "meaning": "Nông dân"
+            },
+            {
+              "word": "農業",
+              "reading": "のうぎょう",
+              "meaning": "Nông nghiệp"
+            },
+            {
+              "word": "農学部",
+              "reading": "のうがくぶ",
+              "meaning": "Khoa nông nghiệp"
+            }
+          ]
+        },
+        {
+          "character": "貿",
+          "meaning": "Mậu, buôn bán, thương mại",
+          "onyomi": "ボウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "貿易",
+              "reading": "ぼうえき",
+              "meaning": "Mậu dịch, thương mại quốc tế"
+            }
+          ]
+        },
+        {
+          "character": "商",
+          "meaning": "Thương, buôn bán, kinh doanh",
+          "onyomi": "ショウ",
+          "kunyomi": "あきな-う",
+          "examples": [
+            {
+              "word": "商う",
+              "reading": "あきなう",
+              "meaning": "Buôn bán, kinh doanh"
+            },
+            {
+              "word": "商品",
+              "reading": "しょうひん",
+              "meaning": "Hàng hóa, sản phẩm"
+            },
+            {
+              "word": "商売",
+              "reading": "しょうばい",
+              "meaning": "Buôn bán, kinh doanh"
+            },
+            {
+              "word": "商業",
+              "reading": "しょうぎょう",
+              "meaning": "Thương nghiệp, thương mại"
+            },
+            {
+              "word": "商店街",
+              "reading": "しょうてんがい",
+              "meaning": "Phố mua sắm, khu phố thương mại"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
