@@ -9276,6 +9276,823 @@
           ]
         }
       ]
+    },
+    {
+      "id": 78,
+      "title": "Biên - Miên - Bố - Bì",
+      "kanji": [
+        {
+          "character": "編",
+          "meaning": "Biên, đan, biên tập",
+          "onyomi": "ヘン",
+          "kunyomi": "あ-む",
+          "examples": [
+            {
+              "word": "編む",
+              "reading": "あむ",
+              "meaning": "Đan, bện"
+            },
+            {
+              "word": "編み物",
+              "reading": "あみもの",
+              "meaning": "Đồ đan, việc đan"
+            },
+            {
+              "word": "編集",
+              "reading": "へんしゅう",
+              "meaning": "Biên tập"
+            },
+            {
+              "word": "前編",
+              "reading": "ぜんぺん",
+              "meaning": "Phần trước"
+            },
+            {
+              "word": "後編",
+              "reading": "こうへん",
+              "meaning": "Phần sau"
+            }
+          ]
+        },
+        {
+          "character": "綿",
+          "meaning": "Miên, bông",
+          "onyomi": "メン",
+          "kunyomi": "わた",
+          "examples": [
+            {
+              "word": "綿菓子",
+              "reading": "わたがし",
+              "meaning": "Kẹo bông"
+            },
+            {
+              "word": "綿",
+              "reading": "わた",
+              "meaning": "Bông"
+            }
+          ]
+        },
+        {
+          "character": "布",
+          "meaning": "Bố, vải",
+          "onyomi": "フ",
+          "kunyomi": "ぬの",
+          "examples": [
+            {
+              "word": "布",
+              "reading": "ぬの",
+              "meaning": "Vải"
+            },
+            {
+              "word": "配布",
+              "reading": "はいふ",
+              "meaning": "Phân phát"
+            },
+            {
+              "word": "毛布",
+              "reading": "もうふ",
+              "meaning": "Chăn"
+            },
+            {
+              "word": "布団",
+              "reading": "ふとん",
+              "meaning": "Chăn đệm Futon"
+            }
+          ]
+        },
+        {
+          "character": "皮",
+          "meaning": "Bì, da",
+          "onyomi": "ヒ",
+          "kunyomi": "かわ",
+          "examples": [
+            {
+              "word": "皮",
+              "reading": "かわ",
+              "meaning": "Da, vỏ"
+            },
+            {
+              "word": "毛皮",
+              "reading": "けがわ",
+              "meaning": "Da lông thú"
+            },
+            {
+              "word": "脱皮",
+              "reading": "だっぴ",
+              "meaning": "Lột da, lột xác"
+            },
+            {
+              "word": "皮肉",
+              "reading": "ひにく",
+              "meaning": "Châm biếm, mỉa mai"
+            },
+            {
+              "word": "皮膚科",
+              "reading": "ひふか",
+              "meaning": "Khoa da liễu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "title": "Phạm - Tội - Dung - Nghi",
+      "kanji": [
+        {
+          "character": "犯",
+          "meaning": "Phạm, phạm tội",
+          "onyomi": "ハン",
+          "kunyomi": "おか-す",
+          "examples": [
+            {
+              "word": "犯す",
+              "reading": "おかす",
+              "meaning": "Phạm, vi phạm"
+            },
+            {
+              "word": "犯人",
+              "reading": "はんにん",
+              "meaning": "Thủ phạm"
+            },
+            {
+              "word": "防犯",
+              "reading": "ぼうはん",
+              "meaning": "Phòng chống tội phạm"
+            },
+            {
+              "word": "主犯",
+              "reading": "しゅはん",
+              "meaning": "Kẻ chủ mưu, thủ phạm chính"
+            },
+            {
+              "word": "犯罪",
+              "reading": "はんざい",
+              "meaning": "Tội phạm"
+            }
+          ]
+        },
+        {
+          "character": "罪",
+          "meaning": "Tội, tội lỗi",
+          "onyomi": "ザイ",
+          "kunyomi": "つみ",
+          "examples": [
+            {
+              "word": "罪",
+              "reading": "つみ",
+              "meaning": "Tội, tội lỗi"
+            },
+            {
+              "word": "犯罪",
+              "reading": "はんざい",
+              "meaning": "Tội phạm"
+            },
+            {
+              "word": "罪悪感",
+              "reading": "ざいあくかん",
+              "meaning": "Cảm giác tội lỗi"
+            },
+            {
+              "word": "功罪",
+              "reading": "こうざい",
+              "meaning": "Công và tội, ưu và khuyết điểm"
+            }
+          ]
+        },
+        {
+          "character": "容",
+          "meaning": "Dung, chứa đựng",
+          "onyomi": "ヨウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "内容",
+              "reading": "ないよう",
+              "meaning": "Nội dung"
+            },
+            {
+              "word": "容量",
+              "reading": "ようりょう",
+              "meaning": "Dung lượng"
+            },
+            {
+              "word": "美容院",
+              "reading": "びよういん",
+              "meaning": "Tiệm làm đẹp, salon"
+            },
+            {
+              "word": "収容人数",
+              "reading": "しゅうようにんずう",
+              "meaning": "Sức chứa, số người có thể chứa"
+            },
+            {
+              "word": "容疑者",
+              "reading": "ようぎしゃ",
+              "meaning": "Nghi phạm"
+            }
+          ]
+        },
+        {
+          "character": "疑",
+          "meaning": "Nghi, nghi ngờ",
+          "onyomi": "ギ",
+          "kunyomi": "うたが-う",
+          "examples": [
+            {
+              "word": "疑う",
+              "reading": "うたがう",
+              "meaning": "Nghi ngờ"
+            },
+            {
+              "word": "疑問",
+              "reading": "ぎもん",
+              "meaning": "Nghi vấn, thắc mắc"
+            },
+            {
+              "word": "容疑者",
+              "reading": "ようぎしゃ",
+              "meaning": "Nghi phạm"
+            },
+            {
+              "word": "半信半疑",
+              "reading": "はんしんはんぎ",
+              "meaning": "Nửa tin nửa ngờ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "title": "Tranh - Biên - Bại - Binh - Quân",
+      "kanji": [
+        {
+          "character": "争",
+          "meaning": "Tranh, tranh giành",
+          "onyomi": "ソウ",
+          "kunyomi": "あらそ-う",
+          "examples": [
+            {
+              "word": "争う",
+              "reading": "あらそう",
+              "meaning": "Tranh giành, tranh đấu"
+            },
+            {
+              "word": "戦争",
+              "reading": "せんそう",
+              "meaning": "Chiến tranh"
+            },
+            {
+              "word": "争点",
+              "reading": "そうてん",
+              "meaning": "Điểm tranh luận"
+            }
+          ]
+        },
+        {
+          "character": "編",
+          "meaning": "Biên, phần, biên tập",
+          "onyomi": "ヘン",
+          "kunyomi": "あ-む",
+          "examples": [
+            {
+              "word": "後編",
+              "reading": "こうへん",
+              "meaning": "Phần sau"
+            }
+          ]
+        },
+        {
+          "character": "敗",
+          "meaning": "Bại, thất bại",
+          "onyomi": "ハイ",
+          "kunyomi": "やぶ-れる",
+          "examples": [
+            {
+              "word": "敗れる",
+              "reading": "やぶれる",
+              "meaning": "Bị đánh bại, thất bại"
+            },
+            {
+              "word": "勝敗",
+              "reading": "しょうはい",
+              "meaning": "Thắng bại"
+            },
+            {
+              "word": "不敗",
+              "reading": "ふはい",
+              "meaning": "Bất bại"
+            },
+            {
+              "word": "失敗",
+              "reading": "しっぱい",
+              "meaning": "Thất bại"
+            },
+            {
+              "word": "敗退",
+              "reading": "はいたい",
+              "meaning": "Bị loại, thất bại"
+            }
+          ]
+        },
+        {
+          "character": "兵",
+          "meaning": "Binh, binh lính",
+          "onyomi": "ヘイ、ヒョウ",
+          "kunyomi": "つわもの",
+          "examples": [
+            {
+              "word": "兵士",
+              "reading": "へいし",
+              "meaning": "Binh sĩ"
+            },
+            {
+              "word": "兵器",
+              "reading": "へいき",
+              "meaning": "Vũ khí"
+            }
+          ]
+        },
+        {
+          "character": "軍",
+          "meaning": "Quân, quân đội",
+          "onyomi": "グン",
+          "kunyomi": "いくさ",
+          "examples": [
+            {
+              "word": "将軍",
+              "reading": "しょうぐん",
+              "meaning": "Tướng quân"
+            },
+            {
+              "word": "軍隊",
+              "reading": "ぐんたい",
+              "meaning": "Quân đội"
+            },
+            {
+              "word": "海軍",
+              "reading": "かいぐん",
+              "meaning": "Hải quân"
+            },
+            {
+              "word": "空軍",
+              "reading": "くうぐん",
+              "meaning": "Không quân"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "title": "Dịch - Thần",
+      "kanji": [
+        {
+          "character": "役",
+          "meaning": "Dịch, vai trò, chức vụ",
+          "onyomi": "ヤク、エキ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "役所",
+              "reading": "やくしょ",
+              "meaning": "Cơ quan hành chính"
+            },
+            {
+              "word": "役員",
+              "reading": "やくいん",
+              "meaning": "Cán bộ, thành viên ban quản trị"
+            },
+            {
+              "word": "役割",
+              "reading": "やくわり",
+              "meaning": "Vai trò"
+            },
+            {
+              "word": "使役形",
+              "reading": "しえきけい",
+              "meaning": "Thể sai khiến"
+            }
+          ]
+        },
+        {
+          "character": "臣",
+          "meaning": "Thần, bề tôi",
+          "onyomi": "シン、ジン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "副大臣",
+              "reading": "ふくだいじん",
+              "meaning": "Thứ trưởng"
+            },
+            {
+              "word": "外務大臣",
+              "reading": "がいむだいじん",
+              "meaning": "Bộ trưởng Ngoại giao"
+            },
+            {
+              "word": "内閣総理大臣",
+              "reading": "ないかくそうりだいじん",
+              "meaning": "Thủ tướng"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "title": "Kỹ - Thuật",
+      "kanji": [
+        {
+          "character": "技",
+          "meaning": "Kỹ, kỹ năng",
+          "onyomi": "ギ",
+          "kunyomi": "わざ",
+          "examples": [
+            {
+              "word": "技を磨く",
+              "reading": "わざをみがく",
+              "meaning": "Trau dồi kỹ năng"
+            },
+            {
+              "word": "技師",
+              "reading": "ぎし",
+              "meaning": "Kỹ sư, kỹ thuật viên"
+            },
+            {
+              "word": "球技",
+              "reading": "きゅうぎ",
+              "meaning": "Môn thể thao dùng bóng"
+            },
+            {
+              "word": "演技",
+              "reading": "えんぎ",
+              "meaning": "Diễn xuất, biểu diễn"
+            },
+            {
+              "word": "技術",
+              "reading": "ぎじゅつ",
+              "meaning": "Kỹ thuật, công nghệ"
+            }
+          ]
+        },
+        {
+          "character": "術",
+          "meaning": "Thuật, kỹ thuật, phương pháp",
+          "onyomi": "ジュツ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "技術",
+              "reading": "ぎじゅつ",
+              "meaning": "Kỹ thuật, công nghệ"
+            },
+            {
+              "word": "手術",
+              "reading": "しゅじゅつ",
+              "meaning": "Phẫu thuật"
+            },
+            {
+              "word": "芸術",
+              "reading": "げいじゅつ",
+              "meaning": "Nghệ thuật"
+            },
+            {
+              "word": "美術館",
+              "reading": "びじゅつかん",
+              "meaning": "Bảo tàng mỹ thuật"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "title": "Bần - Phú - Phong - Đẳng",
+      "kanji": [
+        {
+          "character": "貧",
+          "meaning": "Bần, nghèo",
+          "onyomi": "ヒン、ビン",
+          "kunyomi": "まず-しい",
+          "examples": [
+            {
+              "word": "貧しい",
+              "reading": "まずしい",
+              "meaning": "Nghèo"
+            },
+            {
+              "word": "貧乏",
+              "reading": "びんぼう",
+              "meaning": "Nghèo khó"
+            },
+            {
+              "word": "貧血",
+              "reading": "ひんけつ",
+              "meaning": "Thiếu máu"
+            },
+            {
+              "word": "貧富",
+              "reading": "ひんぷ",
+              "meaning": "Giàu nghèo"
+            }
+          ]
+        },
+        {
+          "character": "富",
+          "meaning": "Phú, giàu có",
+          "onyomi": "フ、フウ",
+          "kunyomi": "と-む、とみ",
+          "examples": [
+            {
+              "word": "富む",
+              "reading": "とむ",
+              "meaning": "Giàu có, phong phú"
+            },
+            {
+              "word": "貧富",
+              "reading": "ひんぷ",
+              "meaning": "Giàu nghèo"
+            },
+            {
+              "word": "富士山",
+              "reading": "ふじさん",
+              "meaning": "Núi Phú Sĩ"
+            },
+            {
+              "word": "豊富",
+              "reading": "ほうふ",
+              "meaning": "Phong phú, dồi dào"
+            }
+          ]
+        },
+        {
+          "character": "豊",
+          "meaning": "Phong, phong phú",
+          "onyomi": "ホウ",
+          "kunyomi": "ゆた-か",
+          "examples": [
+            {
+              "word": "豊か",
+              "reading": "ゆたか",
+              "meaning": "Phong phú, giàu có"
+            },
+            {
+              "word": "豊富",
+              "reading": "ほうふ",
+              "meaning": "Phong phú, dồi dào"
+            }
+          ]
+        },
+        {
+          "character": "等",
+          "meaning": "Đẳng, bằng nhau",
+          "onyomi": "トウ",
+          "kunyomi": "ひと-しい",
+          "examples": [
+            {
+              "word": "等しい",
+              "reading": "ひとしい",
+              "meaning": "Bằng nhau"
+            },
+            {
+              "word": "対等",
+              "reading": "たいとう",
+              "meaning": "Bình đẳng, ngang hàng"
+            },
+            {
+              "word": "同等",
+              "reading": "どうとう",
+              "meaning": "Tương đương"
+            },
+            {
+              "word": "均等",
+              "reading": "きんとう",
+              "meaning": "Đồng đều"
+            },
+            {
+              "word": "上等",
+              "reading": "じょうとう",
+              "meaning": "Hạng tốt, cao cấp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Pháp - Luật - Quy - Tắc",
+      "kanji": [
+        {
+          "character": "法",
+          "meaning": "Pháp, luật, phương pháp",
+          "onyomi": "ホウ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "方法",
+              "reading": "ほうほう",
+              "meaning": "Phương pháp"
+            },
+            {
+              "word": "文法",
+              "reading": "ぶんぽう",
+              "meaning": "Ngữ pháp"
+            },
+            {
+              "word": "立法機関",
+              "reading": "りっぽうきかん",
+              "meaning": "Cơ quan lập pháp"
+            },
+            {
+              "word": "法律",
+              "reading": "ほうりつ",
+              "meaning": "Pháp luật"
+            },
+            {
+              "word": "法則",
+              "reading": "ほうそく",
+              "meaning": "Quy luật"
+            }
+          ]
+        },
+        {
+          "character": "律",
+          "meaning": "Luật, quy luật, kỷ luật",
+          "onyomi": "リツ、リチ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "法律",
+              "reading": "ほうりつ",
+              "meaning": "Pháp luật"
+            },
+            {
+              "word": "自律",
+              "reading": "じりつ",
+              "meaning": "Tự chủ, tự giác"
+            },
+            {
+              "word": "規律正しい",
+              "reading": "きりつただしい",
+              "meaning": "Có kỷ luật, quy củ"
+            },
+            {
+              "word": "律儀",
+              "reading": "りちぎ",
+              "meaning": "Ngay thẳng, nghiêm túc"
+            },
+            {
+              "word": "規律",
+              "reading": "きりつ",
+              "meaning": "Kỷ luật"
+            }
+          ]
+        },
+        {
+          "character": "規",
+          "meaning": "Quy, quy định, tiêu chuẩn",
+          "onyomi": "キ",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "規律正しい",
+              "reading": "きりつただしい",
+              "meaning": "Có kỷ luật, quy củ"
+            },
+            {
+              "word": "規律",
+              "reading": "きりつ",
+              "meaning": "Kỷ luật"
+            },
+            {
+              "word": "規格",
+              "reading": "きかく",
+              "meaning": "Quy cách, tiêu chuẩn"
+            },
+            {
+              "word": "新規",
+              "reading": "しんき",
+              "meaning": "Mới, mới được tạo"
+            },
+            {
+              "word": "規則",
+              "reading": "きそく",
+              "meaning": "Quy tắc"
+            }
+          ]
+        },
+        {
+          "character": "則",
+          "meaning": "Tắc, quy tắc",
+          "onyomi": "ソク",
+          "kunyomi": "のっと-る",
+          "examples": [
+            {
+              "word": "規則",
+              "reading": "きそく",
+              "meaning": "Quy tắc"
+            },
+            {
+              "word": "原則",
+              "reading": "げんそく",
+              "meaning": "Nguyên tắc"
+            },
+            {
+              "word": "本則",
+              "reading": "ほんそく",
+              "meaning": "Quy tắc chính"
+            },
+            {
+              "word": "法則",
+              "reading": "ほうそく",
+              "meaning": "Quy luật"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "title": "Cấm - Hứa - Kiện",
+      "kanji": [
+        {
+          "character": "禁",
+          "meaning": "Cấm, ngăn cấm",
+          "onyomi": "キン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "禁止",
+              "reading": "きんし",
+              "meaning": "Cấm, nghiêm cấm"
+            },
+            {
+              "word": "禁酒",
+              "reading": "きんしゅ",
+              "meaning": "Kiêng rượu, cấm uống rượu"
+            },
+            {
+              "word": "禁じる",
+              "reading": "きんじる",
+              "meaning": "Cấm"
+            }
+          ]
+        },
+        {
+          "character": "許",
+          "meaning": "Hứa, cho phép",
+          "onyomi": "キョ",
+          "kunyomi": "ゆる-す",
+          "examples": [
+            {
+              "word": "許す",
+              "reading": "ゆるす",
+              "meaning": "Cho phép, tha thứ"
+            },
+            {
+              "word": "免許",
+              "reading": "めんきょ",
+              "meaning": "Giấy phép"
+            },
+            {
+              "word": "許可",
+              "reading": "きょか",
+              "meaning": "Cho phép, sự cho phép"
+            }
+          ]
+        },
+        {
+          "character": "件",
+          "meaning": "Kiện, vụ việc, trường hợp",
+          "onyomi": "ケン",
+          "kunyomi": "",
+          "examples": [
+            {
+              "word": "事件",
+              "reading": "じけん",
+              "meaning": "Sự việc, vụ án"
+            },
+            {
+              "word": "用件",
+              "reading": "ようけん",
+              "meaning": "Công việc, việc cần giải quyết"
+            },
+            {
+              "word": "件数",
+              "reading": "けんすう",
+              "meaning": "Số lượng vụ, số trường hợp"
+            },
+            {
+              "word": "物件",
+              "reading": "ぶっけん",
+              "meaning": "Tài sản, bất động sản, vật件"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
