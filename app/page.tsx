@@ -44,7 +44,8 @@ const Lightfall = dynamic(() => import("@/components/effects/Lightfall"), {
 });
 
 const MascotScene = dynamic(
-  () => import("@/components/effects/MascotScene").then((mod) => mod.MascotScene),
+  () =>
+    import("@/components/effects/MascotScene").then((mod) => mod.MascotScene),
   {
     ssr: false,
     loading: () => (
@@ -75,7 +76,8 @@ type StudyStep = {
 const featuredResources: FeaturedResource[] = [
   {
     title: "JPD316",
-    description: "Từ vựng, ngữ pháp và Kanji cho lộ trình tiếng Nhật trung cấp.",
+    description:
+      "Từ vựng, ngữ pháp và Kanji cho lộ trình tiếng Nhật trung cấp.",
     href: "/resources/JPD316",
     category: "Tiếng Nhật",
     status: "Sẵn sàng",
@@ -98,7 +100,8 @@ const featuredResources: FeaturedResource[] = [
   },
   {
     title: "FPT Software Training",
-    description: "Bộ học liệu tiếng Nhật cho chương trình đào tạo FPT Software.",
+    description:
+      "Bộ học liệu tiếng Nhật cho chương trình đào tạo FPT Software.",
     href: "/resources/FsoftTraining",
     category: "Đào tạo",
     status: "Đang cập nhật",
@@ -133,7 +136,8 @@ const featuredResources: FeaturedResource[] = [
   },
   {
     title: "SYB302c",
-    description: "Quiz khởi nghiệp: opportunity, innovation, customer value và fundraising.",
+    description:
+      "Quiz khởi nghiệp: opportunity, innovation, customer value và fundraising.",
     href: "/resources/SYB302c",
     category: "Kinh doanh",
     status: "Sẵn sàng",
@@ -144,7 +148,8 @@ const featuredResources: FeaturedResource[] = [
   },
   {
     title: "ITE302c",
-    description: "501 câu hỏi về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm.",
+    description:
+      "501 câu hỏi về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm.",
     href: "/resources/ITE302c/quiz",
     category: "Trí tuệ nhân tạo",
     status: "Sẵn sàng",
@@ -154,12 +159,24 @@ const featuredResources: FeaturedResource[] = [
     glow: "rgba(139, 92, 246, 0.24)",
     gradient: "from-violet-500 via-blue-400 to-slate-950",
   },
+  {
+    title: "HCM202",
+    description:
+      "Câu hỏi ôn tập Tư tưởng Hồ Chí Minh, kèm đáp án và các kiểu hỏi khác.",
+    href: "/resources/HCM202/quiz",
+    category: "Tư tưởng Hồ Chí Minh",
+    status: "Sẵn sàng",
+    icon: BookOpen,
+    accent: "bg-rose-100 text-rose-700 dark:bg-rose-400/15 dark:text-rose-100",
+    glow: "rgba(244, 63, 94, 0.22)",
+    gradient: "from-rose-500 via-orange-400 to-slate-950",
+  },
 ];
 
 const heroStats = [
-  { label: "Bộ tài liệu", value: 7, detail: "đang có", icon: Library },
-  { label: "Bộ quiz", value: 4, detail: "ôn tập nhanh", icon: ClipboardCheck },
-  { label: "Lĩnh vực", value: 5, detail: "dễ chọn", icon: Sparkles },
+  { label: "Bộ tài liệu", value: 8, detail: "đang có", icon: Library },
+  { label: "Bộ quiz", value: 5, detail: "ôn tập nhanh", icon: ClipboardCheck },
+  { label: "Lĩnh vực", value: 6, detail: "dễ chọn", icon: Sparkles },
 ];
 
 const studySteps: StudyStep[] = [
@@ -183,7 +200,8 @@ const studySteps: StudyStep[] = [
   },
   {
     title: "Góp ý",
-    description: "Báo thiếu, sai hoặc cần bổ sung để nội dung ngày càng tốt hơn.",
+    description:
+      "Báo thiếu, sai hoặc cần bổ sung để nội dung ngày càng tốt hơn.",
     icon: MessageSquare,
     color: "text-rose-500",
   },
@@ -258,8 +276,8 @@ export default function Home() {
               </h1>
 
               <p className="mt-4 max-w-3xl text-base leading-8 text-cyan-50/82 sm:text-lg">
-                Chọn môn đang học, mở tài liệu hoặc quiz. Các mục đã đánh dấu nằm
-                trong phần Yêu thích.
+                Chọn môn đang học, mở tài liệu hoặc quiz. Các mục đã đánh dấu
+                nằm trong phần Yêu thích.
               </p>
 
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
@@ -392,23 +410,33 @@ export default function Home() {
                     spotlightColor={resource.glow}
                     className="group h-full rounded-lg border-slate-200 bg-white p-0 shadow-sm shadow-slate-950/5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-950/10 dark:border-white/10 dark:bg-slate-950/70"
                   >
-                    <Link href={resource.href} className="relative z-10 block h-full p-5">
+                    <Link
+                      href={resource.href}
+                      className="relative z-10 block h-full p-5"
+                    >
                       <div
                         className={cn(
                           "mb-5 flex h-32 items-end justify-between overflow-hidden rounded-lg bg-gradient-to-br p-4 text-white",
-                          resource.gradient
+                          resource.gradient,
                         )}
                       >
                         <div>
                           <div className="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-white/15 backdrop-blur">
                             <Icon className="h-5 w-5" />
                           </div>
-                          <p className="text-2xl font-black">{resource.title}</p>
+                          <p className="text-2xl font-black">
+                            {resource.title}
+                          </p>
                         </div>
                         <ArrowRight className="h-5 w-5 opacity-70 transition-transform group-hover:translate-x-1" />
                       </div>
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className={cn("rounded-md px-2.5 py-1 text-xs font-bold", resource.accent)}>
+                        <span
+                          className={cn(
+                            "rounded-md px-2.5 py-1 text-xs font-bold",
+                            resource.accent,
+                          )}
+                        >
                           {resource.category}
                         </span>
                         <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:bg-white/10 dark:text-slate-300">

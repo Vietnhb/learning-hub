@@ -145,6 +145,18 @@ function ResourcesPageContent() {
         "501 câu hỏi ôn tập về đạo đức AI, quyền riêng tư, thiên kiến và AI có trách nhiệm",
       link: "/resources/ITE302c/quiz",
     },
+    {
+      id: 11,
+      title: "HCM202 - Tư tưởng Hồ Chí Minh",
+      category: "Tư tưởng Hồ Chí Minh",
+      type: "Quiz",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Câu hỏi ôn tập Tư tưởng Hồ Chí Minh, kèm đáp án và các kiểu hỏi khác trong tài liệu",
+      link: "/resources/HCM202/quiz",
+    },
   ];
 
   const resourceIds = useMemo(
