@@ -1,3 +1,4 @@
+import { quizCounts } from "@/lib/quiz-counts.server";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "MLN122 - Kinh tế chính trị Mác - Lênin",
-    description: "Game mô phỏng và bộ 526 câu hỏi ôn tập MLN122.",
+    description: `Game mô phỏng và bộ ${quizCounts.MLN122} câu hỏi ôn tập MLN122.`,
     url: "/resources/MLN122",
     type: "website",
   },

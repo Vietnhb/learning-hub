@@ -277,12 +277,12 @@ export default function MLN122QuizPage() {
                 Quiz ôn tập Kinh tế chính trị
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200 sm:text-lg">
-                526 câu hỏi, học theo chủ đề và tự kiểm tra từng câu.
+                {questions.length} câu hỏi, học theo chủ đề và tự kiểm tra từng câu.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-1 sm:grid-cols-1 lg:min-w-[430px]">
-              <HeroStat value="526" label="Câu hỏi" />
+              <HeroStat value={String(questions.length)} label="Câu hỏi" />
             </div>
           </div>
         </section>

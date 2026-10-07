@@ -87,7 +87,7 @@ export default function HCM202QuizPage() {
   const { user, loading } = useAuth();
   const [mode, setMode] = useState<StudyMode>("quiz");
   const [topic, setTopic] = useState(ALL_TOPICS);
-  const [seed, setSeed] = useState(202);
+  const [seed, setSeed] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showReviewAnswers, setShowReviewAnswers] = useState(true);
   const [selectedAnswers, setSelectedAnswers] = useState<
@@ -117,7 +117,7 @@ export default function HCM202QuizPage() {
   );
 
   const sessionQuestions = useMemo(
-    () => seededShuffle(questionPool, seed),
+    () => seed === 0 ? questionPool : seededShuffle(questionPool, seed),
     [questionPool, seed],
   );
 

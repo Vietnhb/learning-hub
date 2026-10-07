@@ -1,3 +1,4 @@
+import { quizCounts } from "@/lib/quiz-counts.server";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -22,8 +23,8 @@ const sections = [
     eyebrow: "Folder 2",
     title: "Quiz ôn tập",
     description:
-      "526 câu hỏi theo chủ đề, kiểm tra từng câu và không giới hạn thời gian.",
-    detail: "526 câu hỏi",
+      `${quizCounts.MLN122} câu hỏi theo chủ đề, kiểm tra từng câu và không giới hạn thời gian.`,
+    detail: `${quizCounts.MLN122} câu hỏi`,
     icon: BookOpenCheck,
     accent: "bg-amber-400",
   },

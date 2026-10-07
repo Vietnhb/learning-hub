@@ -1,9 +1,10 @@
+import { quizCounts } from "@/lib/quiz-counts.server";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ITE302c - Quiz ôn tập",
   description:
-    "Bộ 501 câu hỏi ôn tập Ethics in AI, học theo chủ đề và không giới hạn thời gian.",
+    `Bộ ${quizCounts.ITE302c} câu hỏi ôn tập Ethics in AI, học theo chủ đề và không giới hạn thời gian.`,
   keywords: [
     "ite302c",
     "ethics in ai",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ITE302c - Quiz ôn tập",
     description:
-      "Ôn tập 501 câu hỏi ITE302c theo chủ đề, không giới hạn thời gian.",
+      `Ôn tập ${quizCounts.ITE302c} câu hỏi ITE302c theo chủ đề, không giới hạn thời gian.`,
     url: "/resources/ITE302c/quiz",
     type: "website",
   },

@@ -16945,5 +16945,788 @@
     ],
     "sourcePage": 126,
     "notes": ""
+  },
+  {
+    "id": "hcm202-657",
+    "question": "Hồ Chí Minh coi yếu tố nào là gốc rễ, là nền tảng không thể thiếu của người cán bộ cách mạng?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Năng lực lãnh đạo quản lý giỏi"
+      },
+      {
+        "id": "B",
+        "text": "Trình độ chuyên môn nghiệp vụ cao"
+      },
+      {
+        "id": "C",
+        "text": "Đạo đức cách mạng trong sáng"
+      },
+      {
+        "id": "D",
+        "text": "Khả năng vận động quần chúng tốt"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-658",
+    "question": "Theo Luật Phòng, chống tham nhũng năm 2018, đối với khu vực ngoài Nhà nước, Luật quy định xử lý bao nhiêu loại hành vi tham nhũng cụ thể?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "12 hành vi,tương đương khu vực nhà nước"
+      },
+      {
+        "id": "B",
+        "text": "3 hành vi: tham ô tài sản; nhận hối lộ; đưa hối lộ,môi giới hối lộ"
+      },
+      {
+        "id": "C",
+        "text": "Toàn bộ 12 hành vi khu vực nhà nước cộng thêm hành vi đặc thù"
+      },
+      {
+        "id": "D",
+        "text": "Chỉ xử lý hành vi đưa và nhận hối lộ"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-659",
+    "question": "Chủ tịch Hồ Chí Minh đã nghiêm khắc cảnh báo căn bệnh \"mặc kệ, thấy đúng không bảo vệ, thấy sai không đấu tranh\" trong cán bộ và giới trẻ là biểu hiện của điều gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Phong cách làm việc chín chắn,thận trọng và nhường nhịn đồng chí của mình."
+      },
+      {
+        "id": "B",
+        "text": "Thái độ tôn trọng quyền tự do cá nhân và đời sống riêng tư của người khác."
+      },
+      {
+        "id": "C",
+        "text": "Sự dung túng gián tiếp cho cái xấu,cái ác nảy nở và làm băng hoại sức chiến đấu của tổ chức."
+      },
+      {
+        "id": "D",
+        "text": "Lối sống khiêm tốn,giản dị,không thích phô trương của thế hệ trẻ."
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-660",
+    "question": "Đảng ta ví các cơ quan làm công tác nội chính (kiểm tra, thanh tra, điều tra...) như những biểu tượng nào?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ánh sáng chân lý và ngọn cờ dẫn đầu"
+      },
+      {
+        "id": "B",
+        "text": "Thanh bảo kiếm sắc bén,lá chắn vững chắc"
+      },
+      {
+        "id": "C",
+        "text": "Lực lượng tiên phong và nòng cốt chủ lực"
+      },
+      {
+        "id": "D",
+        "text": "Ngọn đèn pha soi sáng và thế trận lòng dân"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-661",
+    "question": "Theo ngôn từ mộc mạc mà Chủ tịch Hồ Chí Minh thường dùng, thực chất của hành vi tham nhũng (tham ô) là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hành vi suy thoái đạo đức lối sống của cán bộ"
+      },
+      {
+        "id": "B",
+        "text": "Hành vi ăn cắp của công làm của tư"
+      },
+      {
+        "id": "C",
+        "text": "Việc lợi dụng chức quyền nhận hối lộ của dân"
+      },
+      {
+        "id": "D",
+        "text": "Sự vi phạm nghiêm trọng các quy định pháp luật"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-662",
+    "question": "Theo tư tưởng Hồ Chí Minh, văn hóa có mối quan hệ như thế nào với chính trị?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bên cạnh chính trị"
+      },
+      {
+        "id": "B",
+        "text": "Ở trong chính trị"
+      },
+      {
+        "id": "C",
+        "text": "Đứng sau chính trị"
+      },
+      {
+        "id": "D",
+        "text": "Dẫn dắt toàn bộ nền chính trị"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-663",
+    "question": "Nhà nước của nhân dân nghĩa là mọi quyền lực thuộc về ai?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Quân đội"
+      },
+      {
+        "id": "B",
+        "text": "Nhân dân"
+      },
+      {
+        "id": "C",
+        "text": "Đảng viên"
+      },
+      {
+        "id": "D",
+        "text": "Các đại biểu Quốc hội bầu"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-664",
+    "question": "Nhân tố chủ quan quan trọng nhất giúp Hồ Chí Minh vận dụng sáng tạo chủ nghĩa Mác - Lênin là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bản lĩnh tư duy độc lập,tự chủ và sáng tạo"
+      },
+      {
+        "id": "B",
+        "text": "Ý chí,nghị lực to lớn và tinh thần vượt qua mọi gian khổ"
+      },
+      {
+        "id": "C",
+        "text": "Tình cảm yêu nước thương dân sâu sắc và hoài bão lớn"
+      },
+      {
+        "id": "D",
+        "text": "Kinh nghiệm hoạt động thực tiễn phong phú ở nhiều quốc gia"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-665",
+    "question": "Tác phẩm kiệt tác nào được xuất bản năm 1927?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Đường cách mệnh"
+      },
+      {
+        "id": "B",
+        "text": "Bản án chế độ thực dân Pháp"
+      },
+      {
+        "id": "C",
+        "text": "Nhật ký trong tù"
+      },
+      {
+        "id": "D",
+        "text": "Tuyên ngôn độc lập"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-666",
+    "question": "Theo tư tưởng Hồ Chí Minh, giai cấp công nhân Việt Nam khi mới ra đời đã phải gánh chịu sự áp bức, bóc lột nặng nề từ những thế lực nào?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Thế lực thực dân,tư sản,phong kiến"
+      },
+      {
+        "id": "B",
+        "text": "Thế lực đế quốc,tư sản,đại địa chủ"
+      },
+      {
+        "id": "C",
+        "text": "Thế lực thực dân,tư sản,bọn tay sai"
+      },
+      {
+        "id": "D",
+        "text": "Thế lực đế quốc,phong kiến,bọn tay sai"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-667",
+    "question": "Nguyên tắc cơ bản nhất trong đoàn kết quốc tế là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Độc lập tự chủ"
+      },
+      {
+        "id": "B",
+        "text": "Dựa vào viện trợ"
+      },
+      {
+        "id": "C",
+        "text": "Nhượng bộ lợi ích"
+      },
+      {
+        "id": "D",
+        "text": "Tuân thủ tuyệt đối ngoại bang"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-668",
+    "question": "Hồ Chí Minh khẳng định lý luận phải được đúc kết từ đâu?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Sách vở kinh điển"
+      },
+      {
+        "id": "B",
+        "text": "Hoạt động thực tiễn"
+      },
+      {
+        "id": "C",
+        "text": "Kinh nghiệm nước ngoài"
+      },
+      {
+        "id": "D",
+        "text": "Truyền thống văn hóa dân tộc"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-669",
+    "question": "Khái niệm \"hiện thực hóa\" hệ thống quan điểm của Người được dùng để chỉ quá trình nào dưới đây?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Quá trình hệ thống quan điểm của Hồ Chí Minh vận động trong thực tiễn"
+      },
+      {
+        "id": "B",
+        "text": "Quá trình hệ thống quan điểm của Hồ Chí Minh truyền bá trong công nhân"
+      },
+      {
+        "id": "C",
+        "text": "Quá trình hệ thống quan điểm của Hồ Chí Minh lan tỏa ra toàn thế giới"
+      },
+      {
+        "id": "D",
+        "text": "Quá trình hệ thống quan điểm của Hồ Chí Minh lưu truyền trong sử sách"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-670",
+    "question": "Vai trò của con người trong cách mạng vừa là mục tiêu, vừa là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hạt nhân"
+      },
+      {
+        "id": "B",
+        "text": "Công cụ"
+      },
+      {
+        "id": "C",
+        "text": "Động lực"
+      },
+      {
+        "id": "D",
+        "text": "Lực lượng dự bị chiến lược"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-671",
+    "question": "Trong tư tưởng Hồ Chí Minh, nguyên tắc vì dân là việc gì có hại cho dân thì phải làm sao?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tránh"
+      },
+      {
+        "id": "B",
+        "text": "Suy nghĩ kỹ"
+      },
+      {
+        "id": "C",
+        "text": "Cứ làm"
+      },
+      {
+        "id": "D",
+        "text": "Xin ý kiến cấp trên trước"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-672",
+    "question": "Trong thực tiễn phòng, chống tham nhũng và tiêu cực hiện nay ở nước ta, phương châm hành động \"xử lý nghiêm một vài người để cứu muôn người\" đã vận dụng đúng đắn lời chỉ dẫn nào sau đây của Chủ tịch Hồ Chí Minh?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "\"Trị tham nhũng là phải trị từ gốc - trị cái thói cá nhân chủ nghĩa ẩn nấp bên trong mỗi con người\""
+      },
+      {
+        "id": "B",
+        "text": "\"Cắt bỏ một vài cành cây sâu mọt để cứu cả cái cây\""
+      },
+      {
+        "id": "C",
+        "text": "\"Sông thì có nguồn mới có nước... Người cách mạng phải có đạo đức\""
+      },
+      {
+        "id": "D",
+        "text": "\"Bệnh quan liêu đã ấp ủ,dung túng,che chở cho nạn tham ô,lãng phí\""
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-673",
+    "question": "Quan điểm chỉ đạo xuyên suốt trong xử lý sai phạm về tham nhũng của Đảng ta hiện nay là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ưu tiên xử lý nội bộ để bảo vệ uy tín"
+      },
+      {
+        "id": "B",
+        "text": "Không có vùng cấm,không có ngoại lệ"
+      },
+      {
+        "id": "C",
+        "text": "Xử lý hành chính trước,hình sự sau"
+      },
+      {
+        "id": "D",
+        "text": "Chỉ xử lý khi có dư luận xã hội bức xúc"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-674",
+    "question": "Theo chiến lược quản trị quốc gia hiện nay ở nước ta, giải pháp nào dưới đây được xác định là mang tính gốc rễ, nền tảng nhất giúp người cán bộ tự giác đạt tới trạng thái \"Không muốn\" tham nhũng?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hoàn thiện cơ chế phòng ngừa chặt chẽ"
+      },
+      {
+        "id": "B",
+        "text": "Phát hiện,xử lý kịp thời,nghiêm minh"
+      },
+      {
+        "id": "C",
+        "text": "Cải cách chính sách đãi ngộ,tiền lương"
+      },
+      {
+        "id": "D",
+        "text": "Xây dựng văn hóa liêm chính,bồi dưỡng đạo đức cách mạng"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-675",
+    "question": "Theo thực tiễn phòng, chống tham nhũng được giảng dạy trong học phần, việc sinh viên rèn luyện sự công tâm từ những vị trí nhỏ (như làm nhóm trưởng bài tập thảo luận) có ý nghĩa gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Chỉ là việc phân chia công việc hành chính tạm thời,không có giá trị rèn luyện đạo đức."
+      },
+      {
+        "id": "B",
+        "text": "Là bước tập dượt giúp sinh viên xây dựng bản lĩnh liêm chính để tự miễn dịch với sự tha hóa quyền lực sau này."
+      },
+      {
+        "id": "C",
+        "text": "Là phương tiện để lấy lòng các thành viên nhằm mưu cầu lợi ích bỏ phiếu tín nhiệm."
+      },
+      {
+        "id": "D",
+        "text": "Giúp sinh viên nhanh chóng thăng tiến trong các hội nhóm của trường."
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-676",
+    "question": "Thực hành chữ \"Kiệm\" và chống lãng phí của sinh viên theo tư tưởng Hồ Chí Minh cần được thực hiện như thế nào cho đúng đắn?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Sống bủn xỉn,kẹt xỉ,ép xác đối với các nhu cầu sinh hoạt tối thiểu hằng ngày."
+      },
+      {
+        "id": "B",
+        "text": "Chỉ tiết kiệm tiền của của cá nhân mình,còn cơ sở vật chất của nhà trường thì có thể tùy ý phung phí."
+      },
+      {
+        "id": "C",
+        "text": "Tiết kiệm tiền của,thì giờ,tránh xa thói đua đòi xa xỉ,biết trân quý mồ hôi nước mắt của gia đình."
+      },
+      {
+        "id": "D",
+        "text": "Cho phép tiêu dùng thoải mái,lãng phí khi gia đình có điều kiện kinh tế khá giả."
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-677",
+    "question": "Thông qua môn học, sinh viên được giáo dục và định hướng để thường xuyên tu dưỡng, rèn luyện thực hành điều gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Thực hành đạo đức cách mạng"
+      },
+      {
+        "id": "B",
+        "text": "Thực hành kỹ xảo nghề nghiệp"
+      },
+      {
+        "id": "C",
+        "text": "Thực hành tư duy phản biện"
+      },
+      {
+        "id": "D",
+        "text": "Thực hành chuyên môn nghiệp vụ"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-678",
+    "question": "Theo tư tưởng Hồ Chí Minh, tu dưỡng đạo đức cách mạng phải diễn ra như thế nào?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tập trung vào giai đoạn còn trẻ và đang học tập"
+      },
+      {
+        "id": "B",
+        "text": "Chủ yếu thông qua các phong trào thi đua yêu nước"
+      },
+      {
+        "id": "C",
+        "text": "Thường xuyên,liên tục suốt đời"
+      },
+      {
+        "id": "D",
+        "text": "Thực hiện định kỳ theo kỳ kiểm điểm của tổ chức Đảng"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-679",
+    "question": "Trong chiến lược \"trồng người\", Hồ Chí Minh xác định yếu tố nào giữ vai trò nền tảng trong việc cải tạo con người?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Kinh tế"
+      },
+      {
+        "id": "B",
+        "text": "Pháp luật"
+      },
+      {
+        "id": "C",
+        "text": "Giáo dục"
+      },
+      {
+        "id": "D",
+        "text": "Môi trường gia đình văn hóa"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-680",
+    "question": "Nhiệm vụ giải phóng dân tộc phải đặt ở vị trí nào so với giải phóng giai cấp?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ngang bằng"
+      },
+      {
+        "id": "B",
+        "text": "Đặt phía sau"
+      },
+      {
+        "id": "C",
+        "text": "Lên hàng đầu"
+      },
+      {
+        "id": "D",
+        "text": "Hoàn toàn độc lập tách biệt"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-681",
+    "question": "Thời kỳ trước năm 1911 hình thành tư tưởng gì ở Bác?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Cách mạng vô sản"
+      },
+      {
+        "id": "B",
+        "text": "Chủ nghĩa quốc tế"
+      },
+      {
+        "id": "C",
+        "text": "Tư tưởng yêu nước"
+      },
+      {
+        "id": "D",
+        "text": "Tư tưởng giải phóng giai cấp"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-682",
+    "question": "Nguyên tắc hoạt động của Mặt trận Dân tộc thống nhất là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Mệnh lệnh chỉ thị"
+      },
+      {
+        "id": "B",
+        "text": "Biểu quyết đa số"
+      },
+      {
+        "id": "C",
+        "text": "Hiệp thương dân chủ"
+      },
+      {
+        "id": "D",
+        "text": "Áp đặt từ cơ quan lãnh đạo"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-683",
+    "question": "Việc nhìn nhận các luận điểm của Hồ Chí Minh trong chỉnh thể thống nhất thuộc nguyên tắc nào?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Nguyên tắc lịch sử"
+      },
+      {
+        "id": "B",
+        "text": "Toàn diện hệ thống"
+      },
+      {
+        "id": "C",
+        "text": "Kế thừa phát triển"
+      },
+      {
+        "id": "D",
+        "text": "Thống nhất tính đảng khoa học"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-684",
+    "question": "Theo Hồ Chí Minh, chữ Kiệm tuyệt đối KHÔNG có nghĩa là gì?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tiêu ít"
+      },
+      {
+        "id": "B",
+        "text": "Bủn xỉn"
+      },
+      {
+        "id": "C",
+        "text": "Khắt khe"
+      },
+      {
+        "id": "D",
+        "text": "Giữ gìn của cải quá mức"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "sourcePage": 0,
+    "notes": ""
+  },
+  {
+    "id": "hcm202-685",
+    "question": "Môn Tư tưởng Hồ Chí Minh thuộc chuyên ngành khoa học nào?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Khoa học lịch sử"
+      },
+      {
+        "id": "B",
+        "text": "Khoa học xã hội"
+      },
+      {
+        "id": "C",
+        "text": "Khoa học chính trị"
+      },
+      {
+        "id": "D",
+        "text": "Khoa học nhân văn đại cương"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "sourcePage": 0,
+    "notes": ""
   }
 ]
