@@ -159,6 +159,18 @@ function ResourcesPageContent({ counts }: { counts: QuizCounts }) {
         "Câu hỏi ôn tập Tư tưởng Hồ Chí Minh, kèm đáp án và các kiểu hỏi khác trong tài liệu",
       link: "/resources/HCM202/quiz",
     },
+    {
+      id: 12,
+      title: "VNR202 - Lịch sử Đảng Cộng sản Việt Nam",
+      category: "Lịch sử Đảng",
+      type: "Folder",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description:
+        "Bảo tàng số: mạng lưới sự kiện, nhân vật, văn kiện lịch sử Đảng 1920 – 2021 kèm ảnh tư liệu gốc có nguồn",
+      link: "/resources/VNR202",
+    },
   ];
 
   const resourceIds = useMemo(

@@ -21,8 +21,13 @@ export default function AppChrome({ children }: AppChromeProps) {
   const isMLN111Route = pathname?.startsWith("/resources/MLN111");
   const isMLN122Route = pathname?.startsWith("/resources/MLN122");
   const isPRM393Route = pathname?.startsWith("/resources/PRM393");
+  const isVNR202Route = pathname?.startsWith("/resources/VNR202");
   const hideChrome =
-    isAdminRoute || isMLN111Route || isMLN122Route || isPRM393Route;
+    isAdminRoute ||
+    isMLN111Route ||
+    isMLN122Route ||
+    isPRM393Route ||
+    isVNR202Route;
   const showHelpWidget =
     pathname === "/" ||
     pathname === "/feedback" ||

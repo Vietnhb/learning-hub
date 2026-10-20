@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   ClipboardCheck,
   GraduationCap,
+  Landmark,
   Languages,
   Library,
   MessageSquare,
@@ -173,12 +174,25 @@ const getFeaturedResources = (counts: QuizCounts): FeaturedResource[] => [
     glow: "rgba(244, 63, 94, 0.22)",
     gradient: "from-rose-500 via-orange-400 to-slate-950",
   },
+  {
+    title: "VNR202",
+    description:
+      "Bảo tàng số: mạng lưới sự kiện lịch sử Đảng 1920 – 2021 với ảnh tư liệu gốc.",
+    href: "/resources/VNR202",
+    category: "Lịch sử Đảng",
+    status: "Sẵn sàng",
+    icon: Landmark,
+    accent:
+      "bg-amber-100 text-amber-800 dark:bg-amber-400/15 dark:text-amber-100",
+    glow: "rgba(201, 164, 92, 0.24)",
+    gradient: "from-amber-700 via-red-800 to-stone-950",
+  },
 ];
 
 const heroStats = [
-  { label: "Bộ tài liệu", value: 8, detail: "đang có", icon: Library },
+  { label: "Bộ tài liệu", value: 9, detail: "đang có", icon: Library },
   { label: "Bộ quiz", value: 5, detail: "ôn tập nhanh", icon: ClipboardCheck },
-  { label: "Lĩnh vực", value: 6, detail: "dễ chọn", icon: Sparkles },
+  { label: "Lĩnh vực", value: 7, detail: "dễ chọn", icon: Sparkles },
 ];
 
 const studySteps: StudyStep[] = [

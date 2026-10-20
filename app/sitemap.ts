@@ -23,6 +23,7 @@ const routes: Array<{
   { path: "/resources/SWD392", changeFrequency: "weekly", priority: 0.95 },
   { path: "/resources/PRM393", changeFrequency: "weekly", priority: 0.95 },
   { path: "/resources/HCM202/quiz", changeFrequency: "weekly", priority: 0.95 },
+  { path: "/resources/VNR202", changeFrequency: "monthly", priority: 0.9 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
