@@ -25,6 +25,7 @@ import {
   X,
 } from "lucide-react";
 import type { ArchivePhoto } from "./photos";
+import VnrChat from "./VnrChat";
 import {
   allNodes,
   entities,
@@ -779,6 +780,8 @@ export default function HistoryMuseum() {
           />
         )}
       </AnimatePresence>
+
+      <VnrChat />
 
       <AnimatePresence>
         {lightbox && <Lightbox key="lightbox" photo={lightbox} onClose={() => setLightbox(null)} />}
