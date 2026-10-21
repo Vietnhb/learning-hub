@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { AlertTriangle, BookOpen, Loader2, MessageCircleQuestion, Send, X } from "lucide-react";
+import { AlertTriangle, BookOpen, Loader2, MessageCircleQuestion, Send, ShieldCheck, X } from "lucide-react";
 
 interface Source {
   n: number;
@@ -17,6 +17,8 @@ interface Message {
   sources?: Source[];
   unverified?: string[];
   grounded?: boolean;
+  mode?: "generated" | "extractive" | "none";
+  removed?: number;
   error?: boolean;
 }
 
@@ -86,6 +88,8 @@ export default function VnrChat() {
           sources: data.sources,
           unverified: data.unverified,
           grounded: data.grounded,
+          mode: data.mode,
+          removed: data.removed,
         },
       ]);
     } catch (error) {
@@ -165,6 +169,20 @@ export default function VnrChat() {
                     >
                       {renderAnswer(m.content)}
                     </div>
+                    {m.mode === "generated" && (
+                      <p className="flex gap-2 text-xs leading-5 text-[#9fbf8f]">
+                        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" />
+                        {m.removed
+                          ? `Đã đối chiếu từng câu với tài liệu; ẩn ${m.removed} câu không kiểm chứng được.`
+                          : "Đã đối chiếu từng câu với tài liệu được trích."}
+                      </p>
+                    )}
+                    {m.mode === "extractive" && (
+                      <p className="flex gap-2 rounded-lg border border-[#c9a45c]/40 bg-[#c9a45c]/10 px-3 py-2 text-xs leading-5 text-[#e6d3ad]">
+                        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
+                        Lời giải thích của AI không khớp đủ với tài liệu nên không hiển thị. Dưới đây là trích nguyên văn giáo trình.
+                      </p>
+                    )}
                     {!!m.unverified?.length && (
                       <p className="flex gap-2 rounded-lg border border-[#c9a45c]/40 bg-[#c9a45c]/10 px-3 py-2 text-xs leading-5 text-[#e6d3ad]">
                         <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />

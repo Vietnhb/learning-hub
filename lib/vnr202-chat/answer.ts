@@ -1,12 +1,13 @@
-import { isRelevant, normalize, retrieve, type Retrieved } from "./retrieval";
+import { isRelevant, retrieve, type Retrieved } from "./retrieval";
+import { extractiveAnswer, verifyAnswer } from "./verify";
 
 // ---------------------------------------------------------------------------
 // Trả lời câu hỏi VNR202 CHỈ dựa trên các đoạn lấy từ kho tri thức.
 // Ba lớp chặn để AI không bịa:
 //   1. Không tìm thấy đoạn liên quan → trả lời "không có trong tài liệu", không gọi AI.
 //   2. Lời nhắn hệ thống bắt AI chỉ dùng các đoạn được đánh số và trích [n].
-//   3. Kiểm tra lại câu trả lời: phải có trích dẫn hợp lệ, mọi con số / ngày tháng
-//      phải xuất hiện trong đoạn được trích; nếu không thì cảnh báo.
+//   3. Kiểm chứng từng câu (verify.ts): câu không khớp đoạn được trích bị bỏ; bỏ quá nhiều
+//      thì không dùng lời AI mà chỉ trích nguyên văn tài liệu.
 // ---------------------------------------------------------------------------
 
 export const NOT_FOUND =
@@ -35,7 +36,13 @@ export interface AnswerOut {
   sources: SourceOut[];
   unverified: string[];
   grounded: boolean;
+  /** generated: lời AI đã qua kiểm chứng từng câu · extractive: trích nguyên văn · none: không trả lời */
+  mode: "generated" | "extractive" | "none";
+  /** Số câu của AI bị bỏ vì không đối chiếu được với tài liệu */
+  removed: number;
 }
+
+const base: Omit<AnswerOut, "answer" | "sources"> = { unverified: [], grounded: false, mode: "none", removed: 0 };
 
 const SYSTEM_PROMPT = `Bạn là trợ lý ôn tập môn Lịch sử Đảng Cộng sản Việt Nam (VNR202) cho sinh viên.
 
@@ -46,24 +53,14 @@ QUY TẮC BẮT BUỘC:
 4. Nếu các đoạn tài liệu không đủ để trả lời, chỉ trả lời đúng một câu: "KHÔNG_ĐỦ_TÀI_LIỆU".
 5. Ưu tiên trích các đoạn có nhãn "Giáo trình". Khi đoạn giáo trình và đoạn slide/kịch bản/trang web khác nhau, theo giáo trình và nói rõ điều đó.
 6. Nội dung slide, kịch bản là phần trình bày của nhóm sinh viên, không phải nguyên văn giáo trình.
-7. Trả lời bằng tiếng Việt, ngắn gọn (tối đa khoảng 180 từ), văn bản thường, không dùng bảng, không dùng tiêu đề markdown.`;
+7. Nếu câu hỏi chứa tiền đề trái với tài liệu (ví dụ xuyên tạc, quy chụp), nói rõ tiền đề đó không đúng theo tài liệu rồi dẫn chứng; không lặp lại hay khuếch đại lời quy chụp.
+8. Không nêu ý kiến cá nhân. Với câu hỏi "theo bạn", chỉ trình bày những gì tài liệu đánh giá.
+9. Giữ đúng chủ thể của từng việc (Đảng, Chính phủ, Chủ tịch Hồ Chí Minh, Mặt trận Việt Minh, quân Pháp...) và gọi văn kiện bằng đúng tên đầy đủ trong tài liệu.
+10. Đọc hết mọi đoạn trước khi kết luận. Chỉ khi không đoạn nào nhắc tới điều được hỏi mới nói "tài liệu không nêu…", không khẳng định điều đó có hay không có trên thực tế.
+11. Trả lời bằng tiếng Việt, ngắn gọn (tối đa khoảng 180 từ), văn bản thường, không dùng bảng, không dùng tiêu đề markdown.`;
 
 function sourceText(sources: Retrieved[]): string {
   return sources.map((s, i) => `[${i + 1}] (${s.label})\n${s.text}`).join("\n\n");
-}
-
-/** Con số, ngày tháng trong câu trả lời phải có trong đoạn được trích */
-function checkNumbers(answer: string, cited: Retrieved[]): string[] {
-  const haystack = normalize(cited.map((c) => c.text).join(" ")).replace(/\s+/g, " ");
-  const found = answer.match(/\d{1,2}\s*[/-]\s*\d{1,2}\s*[/-]\s*\d{4}|\d{1,2}\s*[/-]\s*\d{4}|\d{1,3}(?:[.,]\d{3})+|\d+(?:[.,]\d+)?\s*%|\b\d{2,4}\b/g) ?? [];
-  const missing: string[] = [];
-  for (const raw of Array.from(new Set(found))) {
-    const n = normalize(raw).replace(/\s+/g, " ").trim();
-    // Chấp nhận cả 6-1-1946 / 6/1/1946 và ngày có số 0 đứng đầu
-    const variants = [n, n.replace(/\b0(\d)/g, "$1")];
-    if (!variants.some((v) => haystack.includes(v))) missing.push(raw.trim());
-  }
-  return missing;
 }
 
 function cleanAnswer(text: string): string {
@@ -117,10 +114,10 @@ export async function answerQuestion(question: string, history: ChatTurn[]): Pro
   const results = retrieve(question, lastUser);
 
   if (!isRelevant(results)) {
-    return { answer: NOT_FOUND, sources: [], unverified: [], grounded: false };
+    return { ...base, answer: NOT_FOUND, sources: [] };
   }
 
-  const sources = results.slice(0, 7);
+  const sources = results.slice(0, 8);
   const sourcesOut: SourceOut[] = sources.map((s, i) => ({
     n: i + 1,
     kind: s.kind,
@@ -174,28 +171,36 @@ export async function answerQuestion(question: string, history: ChatTurn[]): Pro
   // Có trích dẫn hợp lệ thì bỏ dấu "không đủ" lẫn trong câu; không có gì thì từ chối
   if (validCitations(raw).length) raw = raw.replace(/KHÔNG_ĐỦ_TÀI_LIỆU\.?/g, "").trim();
   if (!raw || /^KHÔNG_ĐỦ_TÀI_LIỆU/.test(raw) || (raw.includes("KHÔNG_ĐỦ_TÀI_LIỆU") && !validCitations(raw).length)) {
-    return { answer: NOT_FOUND, sources: sourcesOut, unverified: [], grounded: false };
+    return { ...base, answer: NOT_FOUND, sources: sourcesOut };
   }
 
-  // Chỉ giữ trích dẫn trỏ tới đoạn thật; câu trả lời không có trích dẫn nào thì không tin
+  // Chỉ giữ trích dẫn trỏ tới đoạn thật
   const valid = validCitations(raw);
-  const answer = raw.replace(/\[(\d+)\]/g, (m, n) => (valid.includes(Number(n)) ? m : ""));
+  const cleaned = raw.replace(/\[(\d+)\]/g, (m, n) => (valid.includes(Number(n)) ? m : ""));
+  const verified = valid.length ? verifyAnswer(cleaned, sources, question) : null;
+  const total = verified ? verified.kept + verified.removed : 0;
 
-  if (!valid.length) {
+  // Không trích dẫn, hoặc phải bỏ quá 1/3 số câu → không dùng lời AI, chỉ trích nguyên văn tài liệu
+  if (!verified || !verified.answer || verified.removed / Math.max(total, 1) > 1 / 3) {
+    const quote = extractiveAnswer(question, sources);
+    if (!quote.answer) return { ...base, answer: NOT_FOUND, sources: sourcesOut };
     return {
-      answer:
-        "AI chưa đưa ra được câu trả lời có trích dẫn rõ ràng, nên mình không hiển thị để tránh sai. Bạn đọc trực tiếp các đoạn tài liệu liên quan bên dưới nhé.",
-      sources: sourcesOut,
-      unverified: [],
-      grounded: false,
+      ...base,
+      answer: quote.answer,
+      sources: sourcesOut.filter((s) => quote.used.includes(s.n)),
+      mode: "extractive",
+      removed: verified?.removed ?? 0,
+      grounded: true,
     };
   }
 
-  const cited = valid.map((n) => sources[n - 1]);
+  const usedNums = validCitations(verified.answer);
   return {
-    answer,
-    sources: sourcesOut.filter((s) => valid.includes(s.n)),
-    unverified: checkNumbers(answer, cited),
+    ...base,
+    answer: verified.answer,
+    sources: sourcesOut.filter((s) => usedNums.includes(s.n)),
+    mode: "generated",
+    removed: verified.removed,
     grounded: true,
   };
 }

@@ -49,8 +49,12 @@ function buildChunks(): KnowledgeChunk[] {
 
   // Gộp đoạn quá ngắn (tiêu đề mục) vào đoạn sau; nối câu bị cắt ngang giữa hai trang
   const blocks: { text: string; from: number; to: number }[] = [];
+  const footnotes: { text: string; from: number; to: number }[] = [];
   let carry = null as { text: string; page: number } | null;
-  for (const { page, paragraphs } of giaoTrinh as { page: number; paragraphs: string[] }[]) {
+  for (const { page, paragraphs: all } of giaoTrinh as { page: number; paragraphs: string[] }[]) {
+    // Chú thích cuối trang tách riêng để không chen vào giữa câu bị ngắt sang trang sau
+    const paragraphs = all.filter((p) => !p.startsWith("Chú thích:"));
+    all.filter((p) => p.startsWith("Chú thích:")).forEach((p) => footnotes.push({ text: p, from: page, to: page }));
     for (let i = 0; i < paragraphs.length; i += 1) {
       const p = paragraphs[i];
       const prev = blocks[blocks.length - 1];
@@ -70,6 +74,7 @@ function buildChunks(): KnowledgeChunk[] {
     }
   }
   if (carry) blocks.push({ text: carry.text, from: carry.page, to: carry.page });
+  blocks.push(...footnotes);
 
   const counter = new Map<number, number>();
   for (const block of blocks) {
@@ -194,7 +199,7 @@ function expand(question: string): string {
   return [question, ...EXPANSIONS.filter(([re]) => re.test(n)).map(([, add]) => add)].join(" ");
 }
 
-export function retrieve(question: string, context = "", k = 6): Retrieved[] {
+export function retrieve(question: string, context = "", k = 8): Retrieved[] {
   const idx = getIndex();
   const N = idx.chunks.length;
   const qMain = Array.from(new Set(terms(question)));
@@ -238,11 +243,13 @@ export function retrieve(question: string, context = "", k = 6): Retrieved[] {
     };
   });
 
-  const ranked = scored.filter((c) => c.score > 0).sort((a, b) => b.score - a.score);
-  // Luôn đưa 3 đoạn giáo trình liên quan nhất lên đầu, rồi mới tới slide, kịch bản, trang web
-  const textbook = ranked.filter((c) => c.kind === "giao-trinh").slice(0, 3);
-  const others = ranked.filter((c) => !textbook.includes(c)).slice(0, Math.max(0, k - textbook.length));
-  return [...textbook, ...others].sort((a, b) => (a.kind === "giao-trinh" ? 0 : 1) - (b.kind === "giao-trinh" ? 0 : 1) || b.score - a.score);
+  // Xếp hạng theo điểm BM25 nhân với độ phủ ý của câu hỏi (đoạn chỉ trùng một cụm chung chung bị hạ)
+  const rank = (c: Retrieved) => c.score * (0.5 + c.coverage);
+  const ranked = scored.filter((c) => c.score > 0).sort((a, b) => rank(b) - rank(a));
+  // Giáo trình luôn được ưu tiên: tới 5 đoạn giáo trình, rồi 3 đoạn slide / kịch bản / trang web
+  const textbook = ranked.filter((c) => c.kind === "giao-trinh").slice(0, 5);
+  const others = ranked.filter((c) => c.kind !== "giao-trinh").slice(0, Math.max(0, k - textbook.length));
+  return [...textbook, ...others];
 }
 
 /** Đoạn lấy ra có đủ liên quan để AI được phép trả lời không */
