@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 import { answerQuestion, type ChatTurn } from "@/lib/vnr202-chat/answer";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 // Giới hạn tần suất đơn giản theo IP (bộ nhớ của từng instance) vì không yêu cầu đăng nhập
 const WINDOW_MS = 60_000;
 const PER_MINUTE = 6;
