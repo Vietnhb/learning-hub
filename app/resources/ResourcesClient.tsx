@@ -171,6 +171,28 @@ function ResourcesPageContent({ counts }: { counts: QuizCounts }) {
         "Bảo tàng số: mạng lưới sự kiện, nhân vật, văn kiện lịch sử Đảng 1920 – 2021 kèm ảnh tư liệu gốc có nguồn",
       link: "/resources/VNR202",
     },
+    {
+      id: 13,
+      title: "VNR202 - Quiz Lịch sử Đảng",
+      category: "Lịch sử Đảng",
+      type: "Quiz",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description: `${counts.VNR202} câu hỏi ôn tập Lịch sử Đảng Cộng sản Việt Nam, chia theo giai đoạn, kèm đáp án`,
+      link: "/resources/VNR202/quiz",
+    },
+    {
+      id: 14,
+      title: "MLN131 - Chủ nghĩa xã hội khoa học",
+      category: "Chủ nghĩa xã hội khoa học",
+      type: "Quiz",
+      size: "Đã hoàn thành",
+      downloads: 0,
+      rating: 5.0,
+      description: `${counts.MLN131} câu hỏi ôn tập Chủ nghĩa xã hội khoa học, chia theo chương, kèm đáp án và các kiểu hỏi khác`,
+      link: "/resources/MLN131/quiz",
+    },
   ];
 
   const resourceIds = useMemo(

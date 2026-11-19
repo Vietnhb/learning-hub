@@ -187,11 +187,35 @@ const getFeaturedResources = (counts: QuizCounts): FeaturedResource[] => [
     glow: "rgba(201, 164, 92, 0.24)",
     gradient: "from-amber-700 via-red-800 to-stone-950",
   },
+  {
+    title: "VNR202 Quiz",
+    description:
+      `${counts.VNR202} câu hỏi ôn tập Lịch sử Đảng, chia theo từng giai đoạn.`,
+    href: "/resources/VNR202/quiz",
+    category: "Lịch sử Đảng",
+    status: "Sẵn sàng",
+    icon: ClipboardCheck,
+    accent: "bg-red-100 text-red-700 dark:bg-red-400/15 dark:text-red-100",
+    glow: "rgba(220, 38, 38, 0.22)",
+    gradient: "from-red-600 via-amber-500 to-slate-950",
+  },
+  {
+    title: "MLN131",
+    description:
+      `${counts.MLN131} câu hỏi Chủ nghĩa xã hội khoa học, chia theo chương giáo trình.`,
+    href: "/resources/MLN131/quiz",
+    category: "Chủ nghĩa xã hội khoa học",
+    status: "Sẵn sàng",
+    icon: GraduationCap,
+    accent: "bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-100",
+    glow: "rgba(14, 165, 233, 0.22)",
+    gradient: "from-sky-500 via-indigo-400 to-slate-950",
+  },
 ];
 
 const heroStats = [
-  { label: "Bộ tài liệu", value: 9, detail: "đang có", icon: Library },
-  { label: "Bộ quiz", value: 5, detail: "ôn tập nhanh", icon: ClipboardCheck },
+  { label: "Bộ tài liệu", value: 11, detail: "đang có", icon: Library },
+  { label: "Bộ quiz", value: 7, detail: "ôn tập nhanh", icon: ClipboardCheck },
   { label: "Lĩnh vực", value: 7, detail: "dễ chọn", icon: Sparkles },
 ];
 
